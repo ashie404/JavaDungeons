@@ -1,9 +1,3 @@
-# Fabric Example Mod
+# JavaDungeons
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+JavaDungeons is a Fabric mod that adds the custom blocks from Minecraft Dungeons into Minecraft: Java Edition. No textures are made by me, and they were obtained from Minecraft: Dungeons.
