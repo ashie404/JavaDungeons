@@ -14,7 +14,7 @@ public class CWCreeperRenderer extends MobEntityRenderer<CWCreeper, CreeperEntit
 
     @Override
     public Identifier getTexture(CWCreeper entity) {
-        return new Identifier("dungeons:textures/entity/CwCreeper/Cw_Creeper.png");
+        return new Identifier("dungeons:textures/entity/cw_creeper/cw_creeper.png");
     }
 
 }
