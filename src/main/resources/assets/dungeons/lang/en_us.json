@@ -4,8 +4,10 @@
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
 
     "block.dungeons.floor_tile": "Floor Tile",
+    "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
     "block.dungeons.crate": "Crate",
     "block.dungeons.dirt": "Dirt",
+    "block.dungeons.ash_planks": "Ash Planks",
 
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
     "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
