@@ -1,1 +1,0 @@
-gource -f -1620x1080 --seconds-per-day 10 --key --bloom-multiplier 1.2 --bloom-intensity 0.8 -hide mouse,progress --title "Java Dungeons" --hash-seed 106021 -e 0.07 --auto-skip-seconds 10 --logo src\main\resources\assets\dungeons\icon.png --user-image-dir avatar/
