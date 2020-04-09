@@ -1,6 +1,10 @@
 {
     "itemGroup.dungeons.generic": "Generic Dungeons Blocks",
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
+    "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
+
+    "block.dungeons.floor_tile": "Floor Tile",
+    "block.dungeons.crate": "Crate",
 
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
     "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
@@ -18,6 +22,11 @@
     "block.dungeons.cw_sanded_andesite_bricks": "Sanded Andesite Bricks",
     "block.dungeons.cw_chiseled_sanded_andesite": "Chiseled Sanded Andesite",
 
-    "block.dungeons.floor_tile": "Floor Tile",
-    "block.dungeons.crate": "Crate"
+    "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
+    "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
+    "block.dungeons.dt_chiseled_sandy_andesite_2": "Chiseled Sandy Andesite",
+    "block.dungeons.dt_sandy_andesite_pillar": "Sandy Andesite Pillar",
+    "block.dungeons.dt_sandy_stone_bricks": "Sandy Stone Bricks",
+    "block.dungeons.dt_sandy_stone_tiles": "Sandy Stone Tiles",
+    "block.dungeons.dt_chiseled_sandy_stone": "Chiseled Sandy Stone"
 }
