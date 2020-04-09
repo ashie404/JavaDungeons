@@ -15,6 +15,9 @@
   "entrypoints": {
     "main": [
       "j0sh.javadungeons.JavaDungeons"
+    ],
+    "client": [
+      "j0sh.javadungeons.JavaDungeonsClient"
     ]
   },
 

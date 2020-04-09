@@ -5,7 +5,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import net.minecraft.entity.Entity;
@@ -13,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -25,7 +23,7 @@ import j0sh.javadungeons.content.Sounds;
 
 public class DungeonsGlowMushroom extends SeaPickleBlock {
 
-    // generic block
+    // glow mushroom block block
 
     public BlockItem blockItem;
     
