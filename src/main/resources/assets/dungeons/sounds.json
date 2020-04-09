@@ -1,0 +1,11 @@
+{
+    "cw_glow_mushroom_step": {
+      "sounds": [
+        "dungeons:step/cw_glow_mushroom_0",
+        "dungeons:step/cw_glow_mushroom_1",
+        "dungeons:step/cw_glow_mushroom_2",
+        "dungeons:step/cw_glow_mushroom_3"
+      ]
+    }
+  }
+
