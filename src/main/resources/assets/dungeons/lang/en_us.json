@@ -1,0 +1,18 @@
+{
+    "itemGroup.dungeons.creeper_woods": "Creeper Woods",
+    "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
+    "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
+    "block.dungeons.cw_mossy_dark_andesite": "Mossy Dark Andesite",
+    "block.dungeons.cw_mossy_dark_andesite_tiles": "Mossy Dark Andesite Tiles",
+    "block.dungeons.cw_dark_andesite_tiles": "Dark Andesite Tiles",
+    "block.dungeons.cw_dark_chiseled_andesite": "Dark Chiseled Andesite",
+    "block.dungeons.cw_dark_chiseled_andesite_2": "Dark Chiseled Andesite",
+    "block.dungeons.cw_dark_andesite_pillar": "Dark Andesite Pillar",
+    "block.dungeons.cw_polished_granite": "Polished Granite",
+    "block.dungeons.cw_chiseled_granite": "Chiseled Granite",
+    "block.dungeons.cw_polished_granite_slab": "Polished Granite Slab",
+    "block.dungeons.cw_sanded_andesite": "Sanded Andesite",
+    "block.dungeons.cw_sanded_andesite_tiles": "Sanded Andesite Tiles",
+    "block.dungeons.cw_sanded_andesite_bricks": "Sanded Andesite Bricks",
+    "block.dungeons.cw_chiseled_sanded_andesite": "Chiseled Sanded Andesite"
+}
