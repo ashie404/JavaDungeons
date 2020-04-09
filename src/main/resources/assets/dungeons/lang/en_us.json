@@ -34,5 +34,7 @@
     "block.dungeons.dt_sandy_andesite_pillar": "Sandy Andesite Pillar",
     "block.dungeons.dt_sandy_stone_bricks": "Sandy Stone Bricks",
     "block.dungeons.dt_sandy_stone_tiles": "Sandy Stone Tiles",
-    "block.dungeons.dt_chiseled_sandy_stone": "Chiseled Sandy Stone"
+    "block.dungeons.dt_chiseled_sandy_stone": "Chiseled Sandy Stone",
+
+    "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed"
 }
