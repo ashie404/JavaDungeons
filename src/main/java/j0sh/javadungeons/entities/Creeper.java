@@ -1,4 +1,4 @@
-package j0sh.javadungeons.entity;
+package j0sh.javadungeons.entities;
 
 import net.fabricmc.fabric.api.entity.FabricEntityTypeBuilder;
 
@@ -12,12 +12,12 @@ import net.minecraft.world.World;
 
 import j0sh.javadungeons.JavaDungeons;
 
-public class CWCreeper extends CreeperEntity {
+public class Creeper extends CreeperEntity {
 
-    public CWCreeper(EntityType<? extends CreeperEntity> entityType, World world) {
+    public Creeper(EntityType<? extends CreeperEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public static final EntityType<CWCreeper> Cw_Creeper = Registry.register(Registry.ENTITY_TYPE,new Identifier(JavaDungeons.MOD_ID, "Creeper"),FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, CWCreeper::new).size(EntityDimensions.fixed(1, 2)).build());
+    public static final EntityType<Creeper> Cw_Creeper = Registry.register(Registry.ENTITY_TYPE,new Identifier(JavaDungeons.MOD_ID, "Creeper"),FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, Creeper::new).size(EntityDimensions.fixed(1, 2)).build());
    
 }
