@@ -7,9 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ItemGroup;
 
-import j0sh.javadungeons.content.CreeperWoodsBlocks;
-import j0sh.javadungeons.content.GenericBlocks;
-import j0sh.javadungeons.content.DesertTempleBlocks;
+import j0sh.javadungeons.content.*;
 
 public class JavaDungeons implements ModInitializer {
 
@@ -23,6 +21,7 @@ public class JavaDungeons implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Sounds.init();
 		GenericBlocks.init();
 		CreeperWoodsBlocks.init();
 		DesertTempleBlocks.init();
