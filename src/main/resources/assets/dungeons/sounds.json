@@ -1,5 +1,6 @@
 {
     "cw_glow_mushroom_step": {
+      "subtitle": "subtitles.dungeons.cw_glow_mushroom_step",
       "sounds": [
         "dungeons:step/cw_glow_mushroom_0",
         "dungeons:step/cw_glow_mushroom_1",
