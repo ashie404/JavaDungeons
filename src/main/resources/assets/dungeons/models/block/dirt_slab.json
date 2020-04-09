@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "dungeons:block/dirt",
+        "top": "dungeons:block/dirt",
+        "side": "dungeons:block/dirt"
+    }
+}
