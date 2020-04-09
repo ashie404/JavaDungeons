@@ -30,9 +30,6 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_SANDED_ANDESITE_BRICKS;
     public static DungeonsBlock CW_CHISELED_SANDED_ANDESITE;
 
-    // other custom blocks
-    public static DungeonsBlock CW_FLOOR_TILE;
-
     public static void init() {
         // stone variants
         CW_MOSSY_STONE_BRICKS = new DungeonsBlock(Blocks.MOSSY_STONE_BRICKS, JavaDungeons.CREEPER_WOODS, "cw_mossy_stone_bricks");
@@ -56,8 +53,5 @@ public class CreeperWoodsBlocks {
         CW_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, JavaDungeons.CREEPER_WOODS, "cw_sanded_andesite_tiles");
         CW_SANDED_ANDESITE_BRICKS = new DungeonsBlock(Blocks.POLISHED_ANDESITE, JavaDungeons.CREEPER_WOODS, "cw_sanded_andesite_bricks");
         CW_CHISELED_SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, JavaDungeons.CREEPER_WOODS, "cw_chiseled_sanded_andesite");
-
-        // other custom blocks
-        CW_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.CREEPER_WOODS, "cw_floor_tile");
     }
 }
