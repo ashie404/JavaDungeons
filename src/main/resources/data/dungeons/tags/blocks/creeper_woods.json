@@ -1,0 +1,19 @@
+{
+    "values": [
+        "dungeons:cw_mossy_stone_bricks",
+        "dungeons:cw_dark_polished_andesite",
+        "dungeons:cw_mossy_dark_andesite",
+        "dungeons:cw_mossy_dark_andesite_tiles",
+        "dungeons:cw_dark_andesite_tiles",
+        "dungeons:cw_dark_chiseled_andesite",
+        "dungeons:cw_dark_chiseled_andesite_2",
+        "dungeons:cw_dark_andesite_pillar",
+        "dungeons:cw_polished_granite",
+        "dungeons:cw_chiseled_granite",
+        "dungeons:cw_polished_granite_slab",
+        "dungeons:cw_sanded_andesite",
+        "dungeons:cw_sanded_andesite_tiles",
+        "dungeons:cw_sanded_andesite_bricks",
+        "dungeons:cw_chiseled_sanded_andesite"
+    ]
+}
