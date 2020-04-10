@@ -45,6 +45,9 @@ public class GenericBlocks {
     public static DungeonsPlant GRASS_CLUMP;
     public static DungeonsWaterPlant WATER_PLANT;
 
+    // redstone related
+    public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
+
     // custom blocks not in MC: Dungeons
     public static DimensionalRectifier DIMENSIONAL_RECTIFIER;
 
@@ -85,6 +88,9 @@ public class GenericBlocks {
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
         GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "grass_clump");
         WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "water_plant");
+
+        // redstone related
+        LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Blocks.REDSTONE_LAMP, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "lighthouse_lamp");
 
         // custom blocks not in mc: dungeons
         DIMENSIONAL_RECTIFIER = new DimensionalRectifier();
