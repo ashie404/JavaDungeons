@@ -9,17 +9,19 @@ import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Identifier;
 import net.minecraft.client.MinecraftClient;
 
 import j0sh.javadungeons.blocks.DimensionalRectifier;
 import j0sh.javadungeons.container.DimensionalRectifierContainer;
 import j0sh.javadungeons.gui.DimensionalRectifierScreen;
 import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.fluids.DungeonsWaterFluid;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
+    private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
 
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
@@ -59,5 +61,18 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.WATER_PLANT,
             GenericBlocks.DIMENSIONAL_RECTIFIER
         );
-    }
+
+        // set up fluid rendering
+        BlockRenderLayerMap.INSTANCE.putFluids(
+            TRANSLUCENT_BLOCK_LAYER,
+            Fluids.DUNGEONS_WATER_FLOWING,
+            Fluids.DUNGEONS_WATER_STILL
+        );
+        DungeonsWaterFluid.setupFluidRendering(
+            Fluids.DUNGEONS_WATER_STILL, // still fluid object
+            Fluids.DUNGEONS_WATER_FLOWING, // flowing fluid object
+            new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
+            0xFFFFFF // tint color (white because water is colored in its file)
+        );
+    }    
 }

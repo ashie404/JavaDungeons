@@ -26,7 +26,7 @@ public class Fluids {
     public static void init() {
         DUNGEONS_WATER_STILL = Registry.register(Registry.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new DungeonsWaterFluid.Still());
         DUNGEONS_WATER_FLOWING = Registry.register(Registry.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_flowing_water"), new DungeonsWaterFluid.Flowing());
-        DUNGEONS_WATER_BUCKET = Registry.register(Registry.ITEM, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_bucket"), new BucketItem(DUNGEONS_WATER_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+        DUNGEONS_WATER_BUCKET = Registry.register(Registry.ITEM, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_bucket"), new BucketItem(DUNGEONS_WATER_STILL, new Item.Settings().group(JavaDungeons.GENERIC).recipeRemainder(Items.BUCKET).maxCount(1)));
         DUNGEONS_WATER = Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new FluidBlock(DUNGEONS_WATER_STILL, FabricBlockSettings.copy(Blocks.WATER).build()){});
     }
 }
