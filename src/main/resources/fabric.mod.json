@@ -15,8 +15,15 @@
   "entrypoints": {
     "main": [
       "j0sh.javadungeons.JavaDungeons"
+    ],
+    "client": [
+      "j0sh.javadungeons.JavaDungeonsClient"
     ]
   },
+
+  "mixins": [
+    "mixins.dungeons.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",

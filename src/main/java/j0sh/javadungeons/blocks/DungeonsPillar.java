@@ -14,7 +14,7 @@ import j0sh.javadungeons.JavaDungeons;
 
 public class DungeonsPillar extends PillarBlock {
 
-    // generic block
+    // pillar block
 
     public BlockItem blockItem;
 
