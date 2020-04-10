@@ -2,6 +2,8 @@
     "itemGroup.dungeons.generic": "Generic Dungeons Blocks",
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
+    "itemGroup.dungeons.misc": "Dungeons Misc",
+
 
     "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
     "block.dungeons.dimensional_rectifier": "Dimensional Rectifier",
