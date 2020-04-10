@@ -11,6 +11,7 @@
     "block.dungeons.crate": "Crate",
     "block.dungeons.dirt": "Dirt",
     "block.dungeons.dirt_slab": "Dirt Slab",
+    "block.dungeons.dirt_path": "Dirt Path",
     "block.dungeons.rocky_dirt": "Rocky Dirt",
     "block.dungeons.sparse_grassy_dirt": "Sparse Grassy Dirt",
     "block.dungeons.grassy_dirt": "Grassy Dirt",
@@ -29,6 +30,7 @@
     "block.dungeons.orange_food_box": "Orange Food Box",
     "block.dungeons.fish_food_box": "Fish Food Box",
     "block.dungeons.corn_food_box": "Corn Food Box",
+    "block.dungeons.floorboards": "Floorboards",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 

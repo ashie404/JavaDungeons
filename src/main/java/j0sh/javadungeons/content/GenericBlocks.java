@@ -25,6 +25,7 @@ public class GenericBlocks {
     // ground related
     public static DungeonsBlock DIRT;
     public static DungeonsSlab DIRT_SLAB;
+    public static DungeonsPath DIRT_PATH;
     public static DungeonsBlock ROCKY_DIRT;
     public static DungeonsBlock DENSE_GRASSY_DIRT;
     public static DungeonsBlock GRASSY_DIRT;
@@ -32,6 +33,7 @@ public class GenericBlocks {
 
     // wood related
     public static DungeonsBlock ASH_PLANKS;
+    public static DungeonsBlock FLOORBOARDS;
 
     // stone-brick related
     public static DungeonsBlock DARK_STONE_BRICKS;
@@ -64,6 +66,7 @@ public class GenericBlocks {
         // ground related
         DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt");
         DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_slab");
+        DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_path");
         ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt");
         DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dense_grassy_dirt");
         GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grassy_dirt");
@@ -71,6 +74,7 @@ public class GenericBlocks {
 
         // wood related
         ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "ash_planks");
+        FLOORBOARDS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "floorboards");
 
         // stone brick related
         DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dark_stone_bricks");
