@@ -1,0 +1,8 @@
+{
+    "variants": {"": [
+        {"model": "dungeons:block/cw_grass_block"},
+        {"model": "dungeons:block/cw_grass_block", "y":90},
+        {"model": "dungeons:block/cw_grass_block", "y":180},
+        {"model": "dungeons:block/cw_grass_block", "y":270}
+    ]}
+}

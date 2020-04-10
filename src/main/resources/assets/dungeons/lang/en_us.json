@@ -13,7 +13,11 @@
     "block.dungeons.crate": "Crate",
     "block.dungeons.dirt": "Dirt",
     "block.dungeons.dirt_slab": "Dirt Slab",
+    "block.dungeons.dirt_path": "Dirt Path",
     "block.dungeons.rocky_dirt": "Rocky Dirt",
+    "block.dungeons.sparse_grassy_dirt": "Sparse Grassy Dirt",
+    "block.dungeons.grassy_dirt": "Grassy Dirt",
+    "block.dungeons.dense_grassy_dirt": "Dense Grassy Dirt",
     "block.dungeons.ash_planks": "Ash Planks",
     "block.dungeons.short_grass": "Short Grass",
     "block.dungeons.grass_clump": "Grass Clump",
@@ -28,6 +32,7 @@
     "block.dungeons.orange_food_box": "Orange Food Box",
     "block.dungeons.fish_food_box": "Fish Food Box",
     "block.dungeons.corn_food_box": "Corn Food Box",
+    "block.dungeons.floorboards": "Floorboards",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
@@ -47,6 +52,7 @@
     "block.dungeons.cw_sanded_andesite_bricks": "Sanded Andesite Bricks",
     "block.dungeons.cw_chiseled_sanded_andesite": "Chiseled Sanded Andesite",
     "block.dungeons.cw_glow_mushroom": "Glow Mushroom",
+    "block.dungeons.cw_grass_block": "Grass Block",
 
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
