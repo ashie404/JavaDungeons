@@ -13,7 +13,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.SoundCategory;
-
+import net.minecraft.tag.Tag;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
 import java.util.Random;
@@ -71,8 +71,8 @@ public class DungeonsGlowMushroom extends SeaPickleBlock {
         super.onSteppedOn(world, pos, entity);
     }
 
-    public DungeonsGlowMushroom(Block base, ItemGroup group, String id) {
-        super(FabricBlockSettings.copy(base).collidable(false).build());
+    public DungeonsGlowMushroom(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
+        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).collidable(false).build());
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:grass_clump"
+      }
+    ],
+    "result": {
+      "item": "dungeons:short_grass",
+      "count": 2
+    }
+  }
