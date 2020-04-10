@@ -1,0 +1,6 @@
+{
+    "parent": "dungeons:block/food_box/base",
+    "textures": {
+        "food": "dungeons:block/apples"
+    }
+}

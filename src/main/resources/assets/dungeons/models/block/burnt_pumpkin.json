@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/burnt_pumpkin_top",
+        "side": "dungeons:block/burnt_pumpkin_side"
+    }
+}

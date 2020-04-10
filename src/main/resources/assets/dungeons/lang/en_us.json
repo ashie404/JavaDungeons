@@ -21,6 +21,13 @@
     "block.dungeons.water_plant": "Water Plant",
     "block.dungeons.barrel_closed": "Closed Barrel",
     "block.dungeons.fish_barrel": "Fish Barrel",
+    "block.dungeons.burnt_pumpkin": "Burnt Pumpkin",
+    "block.dungeons.apple_food_box": "Apple Food Box",
+    "block.dungeons.orange_food_box": "Orange Food Box",
+    "block.dungeons.fish_food_box": "Fish Food Box",
+    "block.dungeons.corn_food_box": "Corn Food Box",
+
+    "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
     "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
