@@ -14,6 +14,7 @@ public class GenericBlocks {
     public static DungeonsBlock CRATE;
     public static DungeonsBlock BARREL_CLOSED;
     public static DungeonsBlock FISH_BARREL;
+    public static DungeonsBlock BURNT_PUMPKIN;
 
     // ground related
     public static DungeonsBlock DIRT;
@@ -43,6 +44,7 @@ public class GenericBlocks {
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
         BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
         FISH_BARREL = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "fish_barrel");
+        BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "burnt_pumpkin");
 
         // ground related
         DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt");
