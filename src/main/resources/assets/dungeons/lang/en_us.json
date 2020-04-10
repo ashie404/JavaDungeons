@@ -2,8 +2,7 @@
     "itemGroup.dungeons.generic": "Generic Dungeons Blocks",
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
-    "itemGroup.dungeons.misc": "Dungeons Misc",
-
+    "itemGroup.dungeons.misc": "Non-Dungeons Blocks",
 
     "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
     "block.dungeons.dimensional_rectifier": "Dimensional Rectifier",
@@ -33,6 +32,7 @@
     "block.dungeons.fish_food_box": "Fish Food Box",
     "block.dungeons.corn_food_box": "Corn Food Box",
     "block.dungeons.floorboards": "Floorboards",
+    "block.dungeons.lighthouse_lamp": "Lighthouse Lamp",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
