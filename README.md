@@ -10,7 +10,7 @@ JavaDungeons is a Fabric mod that adds the custom blocks from Minecraft Dungeons
 
 ### Texture Rights
 
-Most textures are ripped from Minecraft: Dungeons. All rights go to the MC: Dungeons team. Some have to be composited together manually by me due to how they handle texturing and materials in Dungeons, and there are a few textures that I've partially handcrafted based on what I've seen in the game because I can't find a texture file or material definition for it. All models are either based off model definitions from the game, or estimated from what they look like in the game.
+Most textures are ripped from Minecraft: Dungeons. All Dungeons texture rights go to the MC: Dungeons team (except for custom textures like seen in the Dimensional Rectifier). Some have to be composited together manually by me due to how they handle texturing and materials in Dungeons, and there are a few textures that I've partially handcrafted based on what I've seen in the game because I can't find a texture file or material definition for it. All models are either based off model definitions from the game, or estimated from what they look like in the game. 
 
 ### Naming of blocks
 
@@ -18,4 +18,4 @@ All blocks are named based on what I think they're closest to in Minecraft, unle
 
 ### What will be added from Dungeons?
 
-Primarily blocks, with a few entities maybe. I will not add a block if it's too close to vanilla, so blocks with very slight variations in color or slight changes to the shape won't be added. Some entities might be added, if they have slight variations from vanilla (like the creeper) or if I just think they're cool. They'll probably behave identical to their vanilla counterparts.
+Primarily blocks, with a few entities maybe. I will not add a block if it's too close to vanilla, so blocks with very slight variations in color or slight changes to the shape won't be added. Some entities might be added, if they have slight variations from vanilla (like the creeper) or if I just think they're cool. They'll probably behave identical to their vanilla counterparts. There will also be a few custom blocks for survival functionality, like the Dimensional Rectifier, used for changing vanilla stones into Dungeons stones.
