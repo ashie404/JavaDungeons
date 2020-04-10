@@ -31,6 +31,7 @@ public class JavaDungeons implements ModInitializer {
 	public void onInitialize() {
 		new BBlocks();
 		Sounds.init();
+		Recipes.init();
 		GenericBlocks.init();
 		CreeperWoodsBlocks.init();
 		DesertTempleBlocks.init();
