@@ -1,1 +1,8 @@
-{"variants": {"": {"model": "dungeons:block/grassy_dirt"}}}
+{
+    "variants": {"": [
+        {"model": "dungeons:block/grassy_dirt"},
+        {"model": "dungeons:block/grassy_dirt", "y":90},
+        {"model": "dungeons:block/grassy_dirt", "y":180},
+        {"model": "dungeons:block/grassy_dirt", "y":270}
+    ]}
+}
