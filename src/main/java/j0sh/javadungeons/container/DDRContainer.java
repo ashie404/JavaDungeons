@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import j0sh.javadungeons.block.BBlocks;
+import j0sh.javadungeons.blocks.BBlocks;
 import j0sh.javadungeons.recipe.DDRRecipe;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -118,7 +118,7 @@ public class DDRContainer extends Container {
    }
 
    public boolean canUse(final PlayerEntity player) {
-      return canUse(this.context, player, BBlocks.DDR);
+      return canUse(this.context, player, BBlocks.Dimensional_Rectifier);
    }
 
    public boolean onButtonClick(final PlayerEntity player, final int id) {

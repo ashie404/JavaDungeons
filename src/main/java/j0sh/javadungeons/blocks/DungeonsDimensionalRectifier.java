@@ -54,8 +54,8 @@ class DDRBlock extends Block
         return world.getBlockState(pos).createContainerFactory(player.world, pos).createMenu(syncId, player.inventory, player);
     });
 
-      Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "Dimensional"), this);
-      Registry.register(Registry.ITEM,new Identifier(MOD_ID, "sawmill"), blockItem = new BlockItem(this, new Item.Settings().group(GENERIC)));
+      Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dimensional_rectifier"), this);
+      Registry.register(Registry.ITEM,new Identifier(MOD_ID, "dimensional_rectifier"), blockItem = new BlockItem(this, new Item.Settings().group(GENERIC)));
    }
 
    public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -73,7 +73,7 @@ class DDRBlock extends Block
 
    public NameableContainerFactory createContainerFactory(BlockState state, World world, BlockPos pos) {
       return new SimpleNamedContainerFactory((i, playerInventory, playerEntity) -> {
-         return new SawmillContainer(i, playerInventory, BlockContext.create(world, pos));
+         return new DDRContainer(i, playerInventory, BlockContext.create(world, pos));
       }, CONTAINER_NAME);
    }
 

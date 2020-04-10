@@ -12,7 +12,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class DDRRecipe implements Recipe<Inventory> {
-    public static final Identifier ID = new Identifier("betterstairs", "DDR");
+    public static final Identifier ID = new Identifier("dungeons", "ddr");
     public static final Type TYPE = new Type();
     public static final Serializer SERIALIZER = new Serializer();
 

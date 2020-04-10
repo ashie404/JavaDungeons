@@ -32,5 +32,8 @@ public class GenericBlocks {
         // plants
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "short_grass");
         GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "grass_clump");
+
+        // crafting
+        
     }
 }
