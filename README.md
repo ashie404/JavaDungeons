@@ -10,7 +10,7 @@ JavaDungeons is a Fabric mod that adds the custom blocks from Minecraft Dungeons
 
 ### Texture Rights
 
-Most textures are ripped from Minecraft: Dungeons. All rights go to the MC: Dungeons team. Some have to be composited together manually by me due to how they handle texturing and materials in Dungeons, and there are a few textures that I've partially handcrafted based on what I've seen in the game because I can't find a texture file or material definition for it.
+Most textures are ripped from Minecraft: Dungeons. All rights go to the MC: Dungeons team. Some have to be composited together manually by me due to how they handle texturing and materials in Dungeons, and there are a few textures that I've partially handcrafted based on what I've seen in the game because I can't find a texture file or material definition for it. All models are either based off model definitions from the game, or estimated from what they look like in the game.
 
 ### Naming of blocks
 
