@@ -45,7 +45,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(
             PLANT_BLOCK_LAYER,
             GenericBlocks.SHORT_GRASS,
-            GenericBlocks.GRASS_CLUMP
+            GenericBlocks.GRASS_CLUMP,
+            GenericBlocks.WATER_PLANT
         );
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
