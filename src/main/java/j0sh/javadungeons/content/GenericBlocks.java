@@ -12,9 +12,15 @@ public class GenericBlocks {
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
     public static DungeonsBlock CRATE;
+    public static DungeonsBlock BURNT_PUMPKIN;
+
+    // food related
     public static DungeonsBlock BARREL_CLOSED;
     public static DungeonsBlock FISH_BARREL;
-    public static DungeonsBlock BURNT_PUMPKIN;
+    public static DungeonsFoodBox APPLE_FOOD_BOX;
+    public static DungeonsFoodBox ORANGE_FOOD_BOX;
+    public static DungeonsFoodBox FISH_FOOD_BOX;
+    public static DungeonsFoodBox CORN_FOOD_BOX;
 
     // ground related
     public static DungeonsBlock DIRT;
@@ -42,9 +48,15 @@ public class GenericBlocks {
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
         DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
+        BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "burnt_pumpkin");
+
+        // food related items
         BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
         FISH_BARREL = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "fish_barrel");
-        BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "burnt_pumpkin");
+        APPLE_FOOD_BOX = new DungeonsFoodBox(Blocks.SPRUCE_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "apple_food_box");
+        ORANGE_FOOD_BOX = new DungeonsFoodBox(Blocks.SPRUCE_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "orange_food_box");
+        FISH_FOOD_BOX = new DungeonsFoodBox(Blocks.SPRUCE_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "fish_food_box");
+        CORN_FOOD_BOX = new DungeonsFoodBox(Blocks.SPRUCE_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "corn_food_box");
 
         // ground related
         DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt");
