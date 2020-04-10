@@ -19,6 +19,9 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_DARK_CHISELED_ANDESITE;
     public static DungeonsBlock CW_DARK_CHISELED_ANDESITE_2;
     public static DungeonsPillar CW_DARK_ANDESITE_PILLAR;
+    
+    // ground related
+    public static DungeonsBlock CW_GRASS_BLOCK;
 
     // creeper woods granite variant
     public static DungeonsBlock CW_POLISHED_GRANITE;
@@ -46,6 +49,9 @@ public class CreeperWoodsBlocks {
         CW_DARK_CHISELED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_chiseled_andesite");
         CW_DARK_CHISELED_ANDESITE_2 = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_chiseled_andesite_2");
         CW_DARK_ANDESITE_PILLAR = new DungeonsPillar(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_pillar");
+
+        // ground related
+        CW_GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
 
         // creeper woods granite variant
         CW_POLISHED_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite");
