@@ -2,6 +2,7 @@
     "itemGroup.dungeons.generic": "Generic Dungeons Blocks",
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
+    "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
     "itemGroup.dungeons.misc": "Non-Dungeons Blocks",
 
     "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
@@ -61,6 +62,16 @@
     "block.dungeons.dt_sandy_stone_bricks": "Sandy Stone Bricks",
     "block.dungeons.dt_sandy_stone_tiles": "Sandy Stone Tiles",
     "block.dungeons.dt_chiseled_sandy_stone": "Chiseled Sandy Stone",
+
+    "block.dungeons.pm_yellow_autumnal_leaves": "Yellow Autumnal Leaves",
+    "block.dungeons.pm_red_autumnal_leaves": "Red Autumnal Leaves",
+    "block.dungeons.pm_autumnal_grass": "Autumnal Grass",
+    "block.dungeons.pm_autumnal_short_grass": "Short Autumnal Grass",
+    "block.dungeons.pm_autumnal_grass_clump": "Autumnal Grass Clump",
+    "block.dungeons.pm_autumnal_grass_block": "Autumnal Grass Block",
+    "block.dungeons.pm_dense_autumnal_grassy_dirt": "Dense Autumnal Grassy Dirt",
+    "block.dungeons.pm_autumnal_grassy_dirt": "Autumnal Grassy Dirt",
+    "block.dungeons.pm_sparse_autumnal_grassy_dirt": "Sparse Autumnal Grassy Dirt",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed"
 }
