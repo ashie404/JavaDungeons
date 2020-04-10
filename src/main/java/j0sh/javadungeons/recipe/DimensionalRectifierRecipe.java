@@ -1,5 +1,7 @@
 package j0sh.javadungeons.recipe;
 
+import j0sh.javadungeons.JavaDungeons;
+
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
@@ -11,8 +13,9 @@ import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
-public class DDRRecipe implements Recipe<Inventory> {
-    public static final Identifier ID = new Identifier("dungeons", "ddr");
+public class DimensionalRectifierRecipe implements Recipe<Inventory> {
+    
+    public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dimensional_rectifier");
     public static final Type TYPE = new Type();
     public static final Serializer SERIALIZER = new Serializer();
 
@@ -20,7 +23,7 @@ public class DDRRecipe implements Recipe<Inventory> {
     private Ingredient input;
     private ItemStack output;
 
-    private DDRRecipe(Identifier id, Ingredient input, ItemStack output) {
+    private DimensionalRectifierRecipe(Identifier id, Ingredient input, ItemStack output) {
         this.id = id;
         this.input = input;
         this.output = output;
@@ -66,19 +69,19 @@ public class DDRRecipe implements Recipe<Inventory> {
         return DefaultedList.copyOf(Ingredient.EMPTY, this.input);
     }
 
-    public static class Type implements RecipeType<DDRRecipe> {
+    public static class Type implements RecipeType<DimensionalRectifierRecipe> {
         @Override
         public String toString() {
             return ID.toString();
         }
     }
 
-    public static class Serializer implements RecipeSerializer<DDRRecipe> {
+    public static class Serializer implements RecipeSerializer<DimensionalRectifierRecipe> {
 
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public DDRRecipe read(Identifier id, JsonObject jsonObject) {
+        public DimensionalRectifierRecipe read(Identifier id, JsonObject jsonObject) {
             Ingredient ingredient2;
             if (JsonHelper.hasArray(jsonObject, "ingredient")) {
                 ingredient2 = Ingredient.fromJson(JsonHelper.getArray(jsonObject, "ingredient"));
@@ -89,18 +92,18 @@ public class DDRRecipe implements Recipe<Inventory> {
             String string2 = JsonHelper.getString(jsonObject, "result");
             int i = JsonHelper.getInt(jsonObject, "count");
             ItemStack itemStack = new ItemStack(Registry.ITEM.get(new Identifier(string2)), i);
-            return new DDRRecipe(id, ingredient2, itemStack);
+            return new DimensionalRectifierRecipe(id, ingredient2, itemStack);
         }
 
         @Override
-        public DDRRecipe read(Identifier id, PacketByteBuf packetByteBuf) {
+        public DimensionalRectifierRecipe read(Identifier id, PacketByteBuf packetByteBuf) {
             Ingredient ingredient = Ingredient.fromPacket(packetByteBuf);
             ItemStack itemStack = packetByteBuf.readItemStack();
-            return new DDRRecipe(id, ingredient, itemStack);
+            return new DimensionalRectifierRecipe(id, ingredient, itemStack);
         }
 
         @Override
-        public void write(PacketByteBuf packetByteBuf, DDRRecipe recipe) {
+        public void write(PacketByteBuf packetByteBuf, DimensionalRectifierRecipe recipe) {
             recipe.input.write(packetByteBuf);
             packetByteBuf.writeItemStack(recipe.output);
         }

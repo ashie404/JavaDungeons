@@ -33,6 +33,9 @@ public class GenericBlocks {
     public static DungeonsPlant GRASS_CLUMP;
     public static DungeonsWaterPlant WATER_PLANT;
 
+    // custom blocks not in MC: Dungeons
+    public static DimensionalRectifier DIMENSIONAL_RECTIFIER;
+
     public static void init() {
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
@@ -58,5 +61,8 @@ public class GenericBlocks {
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
         GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "grass_clump");
         WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "water_plant");
+
+        // custom blocks not in mc: dungeons
+        DIMENSIONAL_RECTIFIER = new DimensionalRectifier();
     }
 }

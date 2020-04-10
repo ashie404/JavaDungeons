@@ -1,10 +1,9 @@
 package j0sh.javadungeons.blocks;
 
-import static j0sh.javadungeons.JavaDungeons.DDR_IDENTIFIER;
-import static j0sh.javadungeons.JavaDungeons.GENERIC;
-import static net.minecraft.block.Blocks.STONECUTTER;
+import j0sh.javadungeons.JavaDungeons;
+import net.minecraft.block.Blocks;
 
-import j0sh.javadungeons.container.DDRContainer;
+import j0sh.javadungeons.container.DimensionalRectifierContainer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.Block;
@@ -36,26 +35,26 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-class DDRBlock extends Block
+public class DimensionalRectifier extends Block
 {
-    public static final String MOD_ID = "dungeons";
-    private static final TranslatableText CONTAINER_NAME = new TranslatableText("dungeons.container.ddr", new Object[0]);
+   public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dimensional_rectifier");
+   public static final TranslatableText CONTAINER_NAME = new TranslatableText("container.dungeons.dimensional_rectifier", new Object[0]);
    public static final DirectionProperty FACING;
    protected static final VoxelShape SHAPE;
    public static BlockItem blockItem;
 
-   public DDRBlock() {
-      super(FabricBlockSettings.copy(STONECUTTER).build());
+   public DimensionalRectifier() {
+      super(FabricBlockSettings.copy(Blocks.STONECUTTER).build());
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
 
-      ContainerProviderRegistry.INSTANCE.registerFactory(DDR_IDENTIFIER, (syncId, identifier, player, buf) -> {
+      ContainerProviderRegistry.INSTANCE.registerFactory(ID, (syncId, identifier, player, buf) -> {
         final World world = player.world;
         final BlockPos pos = buf.readBlockPos();
         return world.getBlockState(pos).createContainerFactory(player.world, pos).createMenu(syncId, player.inventory, player);
-    });
+      });
 
-      Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dimensional_rectifier"), this);
-      Registry.register(Registry.ITEM,new Identifier(MOD_ID, "dimensional_rectifier"), blockItem = new BlockItem(this, new Item.Settings().group(GENERIC)));
+      Registry.register(Registry.BLOCK, ID, this);
+      Registry.register(Registry.ITEM, ID, blockItem = new BlockItem(this, new Item.Settings().group(JavaDungeons.GENERIC)));
    }
 
    public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -66,14 +65,14 @@ class DDRBlock extends Block
       if (world.isClient) {
          return ActionResult.SUCCESS;
       } else {
-         ContainerProviderRegistry.INSTANCE.openContainer(DDR_IDENTIFIER, player, buf -> buf.writeBlockPos(pos));
+         ContainerProviderRegistry.INSTANCE.openContainer(ID, player, buf -> buf.writeBlockPos(pos));
          return ActionResult.SUCCESS;
       }
    }
 
    public NameableContainerFactory createContainerFactory(BlockState state, World world, BlockPos pos) {
       return new SimpleNamedContainerFactory((i, playerInventory, playerEntity) -> {
-         return new DDRContainer(i, playerInventory, BlockContext.create(world, pos));
+         return new DimensionalRectifierContainer(i, playerInventory, BlockContext.create(world, pos));
       }, CONTAINER_NAME);
    }
 

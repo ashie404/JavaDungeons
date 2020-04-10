@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import j0sh.javadungeons.blocks.BBlocks;
-import j0sh.javadungeons.recipe.DDRRecipe;
+import j0sh.javadungeons.content.GenericBlocks;
+import j0sh.javadungeons.recipe.DimensionalRectifierRecipe;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.container.BlockContext;
@@ -24,11 +24,11 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
-public class DDRContainer extends Container {
+public class DimensionalRectifierContainer extends Container {
    private final BlockContext context;
    private final Property selectedRecipe;
    private final World world;
-   private List<DDRRecipe> availableRecipes;
+   private List<DimensionalRectifierRecipe> availableRecipes;
    private ItemStack inputStack;
    private long lastTakeTime;
    final Slot inputSlot;
@@ -37,11 +37,11 @@ public class DDRContainer extends Container {
    public final Inventory inventory;
    private final CraftingResultInventory field_19173;
 
-   public DDRContainer(final int syncId, final PlayerInventory playerInventory) {
+   public DimensionalRectifierContainer(final int syncId, final PlayerInventory playerInventory) {
       this(syncId, playerInventory, BlockContext.EMPTY);
    }
 
-   public DDRContainer(final int syncId, final PlayerInventory playerInventory, final BlockContext blockContext) {
+   public DimensionalRectifierContainer(final int syncId, final PlayerInventory playerInventory, final BlockContext blockContext) {
       super(null, syncId);
       this.selectedRecipe = Property.create();
       this.availableRecipes = Lists.newArrayList();
@@ -51,8 +51,8 @@ public class DDRContainer extends Container {
       this.inventory = new BasicInventory(1) {
          public void markDirty() {
             super.markDirty();
-            DDRContainer.this.onContentChanged(this);
-            DDRContainer.this.contentsChangedListener.run();
+            DimensionalRectifierContainer.this.onContentChanged(this);
+            DimensionalRectifierContainer.this.contentsChangedListener.run();
          }
       };
       this.field_19173 = new CraftingResultInventory();
@@ -65,17 +65,17 @@ public class DDRContainer extends Container {
          }
 
          public ItemStack onTakeItem(final PlayerEntity player, final ItemStack stack) {
-            final ItemStack itemStack = DDRContainer.this.inputSlot.takeStack(1);
+            final ItemStack itemStack = DimensionalRectifierContainer.this.inputSlot.takeStack(1);
             if (!itemStack.isEmpty()) {
-               DDRContainer.this.populateResult();
+               DimensionalRectifierContainer.this.populateResult();
             }
 
             stack.getItem().onCraft(stack, player.world, player);
             blockContext.run((world, blockPos) -> {
                final long l = world.getTime();
-               if (DDRContainer.this.lastTakeTime != l) {
+               if (DimensionalRectifierContainer.this.lastTakeTime != l) {
                   world.playSound((PlayerEntity)null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                  DDRContainer.this.lastTakeTime = l;
+                  DimensionalRectifierContainer.this.lastTakeTime = l;
                }
 
             });
@@ -103,7 +103,7 @@ public class DDRContainer extends Container {
    }
 
    @Environment(EnvType.CLIENT)
-   public List<DDRRecipe> getAvailableRecipes() {
+   public List<DimensionalRectifierRecipe> getAvailableRecipes() {
       return this.availableRecipes;
    }
 
@@ -118,7 +118,7 @@ public class DDRContainer extends Container {
    }
 
    public boolean canUse(final PlayerEntity player) {
-      return canUse(this.context, player, BBlocks.Dimensional_Rectifier);
+      return canUse(this.context, player, GenericBlocks.DIMENSIONAL_RECTIFIER);
    }
 
    public boolean onButtonClick(final PlayerEntity player, final int id) {
@@ -144,15 +144,15 @@ public class DDRContainer extends Container {
       this.selectedRecipe.set(-1);
       this.outputSlot.setStack(ItemStack.EMPTY);
       if (!itemStack.isEmpty()) {
-         this.availableRecipes = this.world.getRecipeManager().getAllMatches(DDRRecipe.TYPE, inventory, this.world);
+         this.availableRecipes = this.world.getRecipeManager().getAllMatches(DimensionalRectifierRecipe.TYPE, inventory, this.world);
       }
 
    }
 
    private void populateResult() {
       if (!this.availableRecipes.isEmpty()) {
-         final DDRRecipe DDRRecipe = (DDRRecipe)this.availableRecipes.get(this.selectedRecipe.get());
-         this.outputSlot.setStack(DDRRecipe.craft(this.inventory));
+         final DimensionalRectifierRecipe DimensionalRectifierRecipe = (DimensionalRectifierRecipe)this.availableRecipes.get(this.selectedRecipe.get());
+         this.outputSlot.setStack(DimensionalRectifierRecipe.craft(this.inventory));
       } else {
          this.outputSlot.setStack(ItemStack.EMPTY);
       }
@@ -191,7 +191,7 @@ public class DDRContainer extends Container {
             if (!this.insertItem(itemStack2, 2, 38, false)) {
                return ItemStack.EMPTY;
             }
-         } else if (this.world.getRecipeManager().getFirstMatch(DDRRecipe.TYPE, new BasicInventory(new ItemStack[]{itemStack2}), this.world).isPresent()) {
+         } else if (this.world.getRecipeManager().getFirstMatch(DimensionalRectifierRecipe.TYPE, new BasicInventory(new ItemStack[]{itemStack2}), this.world).isPresent()) {
             if (!this.insertItem(itemStack2, 0, 1, false)) {
                return ItemStack.EMPTY;
             }
