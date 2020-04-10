@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:seagrass"
+      },
+      {
+        "item": "minecraft:lily_pad"
+      }
+    ],
+    "result": {
+      "item": "dungeons:water_plant",
+      "count": 1
+    }
+  }

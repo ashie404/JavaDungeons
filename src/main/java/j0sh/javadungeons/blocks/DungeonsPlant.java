@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.tag.Tag;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -17,8 +18,8 @@ public class DungeonsPlant extends PlantBlock {
 
     public BlockItem blockItem;
 
-    public DungeonsPlant(Block base, ItemGroup group, String id) {
-        super(FabricBlockSettings.copy(base).build());
+    public DungeonsPlant(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
+        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

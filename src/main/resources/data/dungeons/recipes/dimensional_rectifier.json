@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SSS",
+      "AHA",
+      "GRG"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:string"
+      },
+      "A": {
+        "item": "minecraft:polished_andesite_slab"
+      },
+      "H": {
+        "item": "minecraft:heart_of_the_sea"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "R": {
+        "item": "minecraft:repeater"
+      }
+    },
+    "result": {
+      "item": "dungeons:dimensional_rectifier"
+    }
+  }

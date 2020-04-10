@@ -1,5 +1,6 @@
 package j0sh.javadungeons.content;
 
+import net.fabricmc.fabric.api.tools.FabricToolTags;
 import net.minecraft.block.Blocks;
 
 import j0sh.javadungeons.blocks.*;
@@ -34,28 +35,28 @@ public class GenericBlocks {
 
     public static void init() {
         // dungeons blocks that aren't in mc
-        FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.GENERIC, "floor_tile");
-        DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.GENERIC, "dirty_floor_tile");
-        CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, JavaDungeons.GENERIC, "crate");
-        BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, JavaDungeons.GENERIC, "barrel_closed");
-        FISH_BARREL = new DungeonsBlock(Blocks.BARREL, JavaDungeons.GENERIC, "fish_barrel");
+        FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
+        DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
+        CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
+        BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
+        FISH_BARREL = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "fish_barrel");
 
         // ground related
-        DIRT = new DungeonsBlock(Blocks.DIRT, JavaDungeons.GENERIC, "dirt");
-        DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, JavaDungeons.GENERIC, "dirt_slab");
-        ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, JavaDungeons.GENERIC, "rocky_dirt");
+        DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt");
+        DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_slab");
+        ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt");
 
         // wood related
-        ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, JavaDungeons.GENERIC, "ash_planks");
+        ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "ash_planks");
 
         // stone brick related
-        DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, JavaDungeons.GENERIC, "dark_stone_bricks");
-        DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
-        CHISELED_DARK_STONE = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, JavaDungeons.GENERIC, "chiseled_dark_stone");
+        DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dark_stone_bricks");
+        DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
+        CHISELED_DARK_STONE = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "chiseled_dark_stone");
 
         // plants
-        SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "short_grass");
-        GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "grass_clump");
-        WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, JavaDungeons.GENERIC, "water_plant");
+        SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
+        GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "grass_clump");
+        WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "water_plant");
     }
 }

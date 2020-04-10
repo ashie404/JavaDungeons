@@ -11,10 +11,13 @@ import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
 import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.blocks.BBlocks;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
     private static final RenderLayer PLANT_BLOCK_LAYER = RenderLayer.getCutout();
+
+    private static final RenderLayer SYNTH_BLOCK_LAYER = RenderLayer.getCutout();
 
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
@@ -44,6 +47,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.SHORT_GRASS,
             GenericBlocks.GRASS_CLUMP,
             GenericBlocks.WATER_PLANT
+        );
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(
+            SYNTH_BLOCK_LAYER,
+            BBlocks.Dimensional_Rectifier
         );
     }
 }
