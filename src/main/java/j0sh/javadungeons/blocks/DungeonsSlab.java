@@ -11,9 +11,11 @@ import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
+import virtuoel.towelette.api.Fluidloggable;
+
 import j0sh.javadungeons.JavaDungeons;
 
-public class DungeonsSlab extends SlabBlock {
+public class DungeonsSlab extends SlabBlock implements Fluidloggable {
 
     // slab block
 

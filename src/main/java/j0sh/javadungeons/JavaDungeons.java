@@ -23,8 +23,6 @@ public class JavaDungeons implements ModInitializer {
 	public static final ItemGroup DESERT_TEMPLE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "desert_temple"), () -> new ItemStack(DesertTempleBlocks.DT_CHISELED_SANDY_ANDESITE));
 	public static final ItemGroup CUSTOM_VARIENTS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "misc"), () -> new ItemStack(GenericBlocks.DIMENSIONAL_RECTIFIER));
 
-	
-
 	@Override
 	public void onInitialize() {
 		Sounds.init();

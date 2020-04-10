@@ -16,12 +16,14 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.tag.Tag;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
+import virtuoel.towelette.api.Fluidloggable;
+
 import java.util.Random;
 
 import j0sh.javadungeons.JavaDungeons;
 import j0sh.javadungeons.content.Sounds;
 
-public class DungeonsGlowMushroom extends SeaPickleBlock {
+public class DungeonsGlowMushroom extends SeaPickleBlock implements Fluidloggable {
 
     // glow mushroom block block
 
