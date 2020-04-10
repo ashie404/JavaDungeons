@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/lighthouse_lamp_top",
+        "side": "dungeons:block/lighthouse_lamp_on"
+    }
+}
