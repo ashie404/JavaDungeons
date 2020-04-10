@@ -43,14 +43,22 @@ public class JavaDungeonsClient implements ClientModInitializer {
         ColorProviderRegistry.BLOCK.register(
             GRASS_BLOCK_COLORS, 
             GenericBlocks.SHORT_GRASS, 
-            GenericBlocks.GRASS_CLUMP
+            GenericBlocks.GRASS_CLUMP,
+            GenericBlocks.DENSE_GRASSY_DIRT,
+            GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.SPARSE_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_GRASS_BLOCK
         );
 
         // register color providers for grass items
         ColorProviderRegistry.ITEM.register(
             GRASS_ITEM_COLORS,
             GenericBlocks.SHORT_GRASS.blockItem,
-            GenericBlocks.GRASS_CLUMP.blockItem
+            GenericBlocks.GRASS_CLUMP.blockItem,
+            GenericBlocks.DENSE_GRASSY_DIRT.blockItem,
+            GenericBlocks.GRASSY_DIRT.blockItem,
+            GenericBlocks.SPARSE_GRASSY_DIRT.blockItem,
+            CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem
         );
 
         // register render layers
@@ -59,7 +67,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.SHORT_GRASS,
             GenericBlocks.GRASS_CLUMP,
             GenericBlocks.WATER_PLANT,
-            GenericBlocks.DIMENSIONAL_RECTIFIER
+            GenericBlocks.DIMENSIONAL_RECTIFIER,
+            GenericBlocks.DENSE_GRASSY_DIRT,
+            GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.SPARSE_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_GRASS_BLOCK
         );
 
         // set up fluid rendering
