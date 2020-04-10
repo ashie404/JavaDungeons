@@ -3,6 +3,8 @@
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
 
+    "block.dungeons.dimensional_rectifier": "Dimensional Rectifier",
+
     "block.dungeons.floor_tile": "Floor Tile",
     "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
     "block.dungeons.crate": "Crate",
