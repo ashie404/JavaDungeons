@@ -47,24 +47,26 @@ public class DungeonsGlowMushroom extends SeaPickleBlock {
                 if (!velocity.equals(new Vec3d(0.0, -0.0, 0.0))) {
                     // random seed based on player velocity
                     Random rand = new Random(Math.round(velocity.x*4 + velocity.y*4 + velocity.z*4));
+                    Random randpitch = new Random();
                     world.playSound(
                             null, // Player - if non-null, will play sound for every nearby player *except* the specified player
                             pos, // The position of where the sound will come from
                             Sounds.CW_GLOW_MUSHROOM_STEP, // The sound that will play, in this case, the sound the anvil plays when it lands.
                             SoundCategory.BLOCKS, // This determines which of the volume sliders affect this sound
-                            rand.nextFloat()*0.15f, //Random volume multiplier (multiplied by 0.15 to avoid ear explosion)
-                            1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+                            (rand.nextFloat()*0.13f), //Random volume multiplier (multiplied by 0.15 to avoid ear explosion)
+                            0.98f + (rand.nextFloat()/10) + (randpitch.nextFloat()/50) // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
                     );
                     soundsPlayed++;
                 }
             }
             else {
-                if (waitCounter <= 15) {
+                if (waitCounter <= 17) {
                     waitCounter++;
                 } else {
                     soundsPlayed = 0;
                     waitCounter = 0;
                 }
+                
             }
         }
         

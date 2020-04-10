@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dimensional_rectifier",
+    "ingredient": {
+      "item": "dungeons:dt_sandy_andesite"
+    },
+    "result": "minecraft:polished_andesite",
+    "count": 1
+  }
