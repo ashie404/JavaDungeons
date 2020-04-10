@@ -28,6 +28,7 @@ public class GenericBlocks {
     // generic plants
     public static DungeonsPlant SHORT_GRASS;
     public static DungeonsPlant GRASS_CLUMP;
+    public static DungeonsWaterPlant WATER_PLANT;
 
     public static void init() {
         // dungeons blocks that aren't in mc
@@ -51,5 +52,6 @@ public class GenericBlocks {
         // plants
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "short_grass");
         GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "grass_clump");
+        WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, JavaDungeons.GENERIC, "water_plant");
     }
 }
