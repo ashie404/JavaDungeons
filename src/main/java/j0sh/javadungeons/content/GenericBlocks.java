@@ -11,6 +11,8 @@ public class GenericBlocks {
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
     public static DungeonsBlock CRATE;
+    public static DungeonsBlock BARREL_CLOSED;
+    public static DungeonsBlock FISH_BARREL;
 
     // ground related
     public static DungeonsBlock DIRT;
@@ -35,6 +37,8 @@ public class GenericBlocks {
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.GENERIC, "floor_tile");
         DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.GENERIC, "dirty_floor_tile");
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, JavaDungeons.GENERIC, "crate");
+        BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, JavaDungeons.GENERIC, "barrel_closed");
+        FISH_BARREL = new DungeonsBlock(Blocks.BARREL, JavaDungeons.GENERIC, "fish_barrel");
 
         // ground related
         DIRT = new DungeonsBlock(Blocks.DIRT, JavaDungeons.GENERIC, "dirt");
