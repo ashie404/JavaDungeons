@@ -7,6 +7,7 @@ import j0sh.javadungeons.JavaDungeons;
 
 public class GenericBlocks {
 
+    // generic blocks
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
     public static DungeonsBlock CRATE;
@@ -14,6 +15,10 @@ public class GenericBlocks {
     public static DungeonsSlab DIRT_SLAB;
     public static DungeonsBlock ROCKY_DIRT;
     public static DungeonsBlock ASH_PLANKS;
+
+    // generic plants
+    public static DungeonsPlant SHORT_GRASS;
+    public static DungeonsPlant GRASS_CLUMP;
 
     public static void init() {
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, JavaDungeons.GENERIC, "floor_tile");
@@ -23,5 +28,9 @@ public class GenericBlocks {
         DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, JavaDungeons.GENERIC, "dirt_slab");
         ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, JavaDungeons.GENERIC, "rocky_dirt");
         ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, JavaDungeons.GENERIC, "ash_planks");
+
+        // plants
+        SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "short_grass");
+        GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, JavaDungeons.GENERIC, "grass_clump");
     }
 }

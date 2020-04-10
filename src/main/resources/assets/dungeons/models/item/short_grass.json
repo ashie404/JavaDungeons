@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "dungeons:item/cw_glow_mushroom"
+        "layer0": "dungeons:block/short_grass"
     }
 }
