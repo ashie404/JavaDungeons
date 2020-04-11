@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "bottom": "dungeons:block/pm_charred_planks",
+        "top": "dungeons:block/pm_charred_planks",
+        "side": "dungeons:block/pm_charred_planks"
+    }
+}

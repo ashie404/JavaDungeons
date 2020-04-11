@@ -29,7 +29,6 @@
     "block.dungeons.water_plant": "Water Plant",
     "block.dungeons.barrel_closed": "Closed Barrel",
     "block.dungeons.fish_barrel": "Fish Barrel",
-    "block.dungeons.burnt_pumpkin": "Burnt Pumpkin",
     "block.dungeons.apple_food_box": "Apple Food Box",
     "block.dungeons.orange_food_box": "Orange Food Box",
     "block.dungeons.fish_food_box": "Fish Food Box",
@@ -37,6 +36,7 @@
     "block.dungeons.floorboards": "Floorboards",
     "block.dungeons.lighthouse_lamp": "Lighthouse Lamp",
     "block.dungeons.emblemed_andesite": "Emblemed Andesite",
+    "block.dungeons.cracked_andesite": "Cracked Andesite",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
@@ -77,6 +77,21 @@
     "block.dungeons.pm_dense_autumnal_grassy_dirt": "Dense Autumnal Grassy Dirt",
     "block.dungeons.pm_autumnal_grassy_dirt": "Autumnal Grassy Dirt",
     "block.dungeons.pm_sparse_autumnal_grassy_dirt": "Sparse Autumnal Grassy Dirt",
+    "block.dungeons.pm_burnt_pumpkin": "Burnt Pumpkin",
+    "block.dungeons.pm_rotted_pumpkin": "Rotted Pumpkin",
+    "block.dungeons.pm_charred_dirt": "Charred Dirt",
+    "block.dungeons.pm_charred_stone": "Charred Stone",
+    "block.dungeons.pm_charred_cobblestone": "Charred Cobblestone",
+    "block.dungeons.pm_charred_stone_bricks": "Charred Stone Bricks",
+    "block.dungeons.pm_cracked_charred_stone_bricks": "Cracked Charred Stone Bricks",
+    "block.dungeons.pm_charred_log": "Charred Log",
+    "block.dungeons.pm_charred_wood": "Charred Wood",
+    "block.dungeons.pm_charred_planks": "Charred Planks",
+    "block.dungeons.pm_charred_stairs": "Charred Stairs",
+    "block.dungeons.pm_charred_slab": "Charred Slab",
+    "block.dungeons.pm_charred_grass": "Charred Grass",
+    "block.dungeons.pm_charred_short_grass": "Charred Short Grass",
+    "block.dungeons.pm_charred_grass_clump": "Charred Grass Clump",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed"
 }

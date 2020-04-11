@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
+	"parent": "minecraft:block/block",
 	"textures": {
 		"0": "dungeons:block/dimensional_rectifier/n",
 		"1": "dungeons:block/dimensional_rectifier/s",

@@ -42,6 +42,7 @@ public class GenericBlocks {
 
     // andesite related
     public static DungeonsBlock EMBLEMED_ANDESITE;
+    public static DungeonsBlock CRACKED_ANDESITE;
 
     // generic plants
     public static DungeonsPlant SHORT_GRASS;
@@ -89,6 +90,7 @@ public class GenericBlocks {
 
         // andesite related
         EMBLEMED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "emblemed_andesite");
+        CRACKED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "cracked_andesite");
 
         // plants
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
