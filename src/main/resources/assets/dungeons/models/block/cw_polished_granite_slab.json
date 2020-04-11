@@ -1,5 +1,5 @@
 {
-    "parent": "block/slab",
+    "parent": "minecraft:block/slab",
     "textures": {
         "bottom": "dungeons:block/cw_polished_granite",
         "top": "dungeons:block/cw_polished_granite",

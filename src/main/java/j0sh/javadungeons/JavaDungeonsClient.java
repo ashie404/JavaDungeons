@@ -23,27 +23,37 @@ public class JavaDungeonsClient implements ClientModInitializer {
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
 
+    // biome based colors
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
     };
 
+    private static final ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
+
+    // static colors
     private static final BlockColorProvider RED_AUTUMNAL_COLORS = (state, view, pos, tintIndex) -> {
         return 0xEF3C2E;
-    };
-
-    private static final BlockColorProvider YELLOW_AUTUMNAL_COLORS = (state, view, pos, tintIndex) -> {
-        return 0xFBC02D;
     };
 
     private static final ItemColorProvider RED_AUTUMNAL_ITEM_COLORS = (item, layer) -> {
         return 0xEF3C2E;
     };
 
-    private static final ItemColorProvider YELLOW_AUTUMNAL_ITEM_COLORS = (item, layer) -> {
-        return 0xFBC02D;
+    private static final BlockColorProvider YELLOW_AUTUMNAL_COLORS = (state, view, pos, tintIndex) -> {
+        return 0xFFCA18;
     };
 
-    private static final ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
+    private static final ItemColorProvider YELLOW_AUTUMNAL_ITEM_COLORS = (item, layer) -> {
+        return 0xFFCA18;
+    };
+
+    private static final BlockColorProvider CHARRED_COLORS = (sate, view, pos, tintIndex) -> {
+        return 0x56556E;
+    };
+
+    private static final ItemColorProvider CHARRED_ITEM_COLORS = (item, layer) -> {
+        return 0x56556E;
+    };
 
     @Override
     public void onInitializeClient() {
@@ -110,6 +120,20 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.blockItem
         );
 
+        ColorProviderRegistry.BLOCK.register(
+            CHARRED_COLORS,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS,
+            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP
+        );
+
+        ColorProviderRegistry.ITEM.register(
+            CHARRED_ITEM_COLORS,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS.blockItem,
+            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS.blockItem,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP.blockItem
+        );
+
         // register render layers
         BlockRenderLayerMap.INSTANCE.putBlocks(
             CUTOUT_BLOCK_LAYER,
@@ -129,7 +153,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_AUTUMNAL_GRASSY_DIRT,
             PumpkinPasturesBlocks.PM_SPARSE_AUTUMNAL_GRASSY_DIRT,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
-            PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES
+            PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS,
+            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS,
+            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,

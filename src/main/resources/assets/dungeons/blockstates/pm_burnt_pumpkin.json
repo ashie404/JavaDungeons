@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "dungeons:block/burnt_pumpkin" }
+        "": { "model": "dungeons:block/pm_burnt_pumpkin" }
     }
 }
