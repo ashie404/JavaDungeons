@@ -2,7 +2,7 @@
 
 # JavaDungeons
 
-[![](https://img.shields.io/github/license/TheJSHuA/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/thejshua/javadungeons)](https://github.com/TheJSHuA/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.15.2-green)
+[![](https://img.shields.io/github/license/TheJSHuA/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/thejshua/javadungeons)](https://github.com/TheJSHuA/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.15.2-green) [![](https://cf.way2muchnoise.eu/title/javadungeons_Get_on%20Curseforge.svg)](https://www.curseforge.com/minecraft/mc-mods/javadungeons)
 
 <br/>
 
