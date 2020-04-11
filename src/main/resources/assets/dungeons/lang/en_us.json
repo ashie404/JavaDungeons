@@ -2,8 +2,8 @@
     "itemGroup.dungeons.generic": "Generic Dungeons Blocks",
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
-    "itemGroup.dungeons.misc": "Dungeons Misc",
-
+    "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
+    "itemGroup.dungeons.misc": "Non-Dungeons Blocks",
 
     "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
     "block.dungeons.dimensional_rectifier": "Dimensional Rectifier",
@@ -24,6 +24,8 @@
     "block.dungeons.dark_stone_bricks": "Dark Stone Bricks",
     "block.dungeons.dirty_dark_stone_bricks": "Dirty Dark Stone Bricks",
     "block.dungeons.chiseled_dark_stone": "Chiseled Dark Stone",
+    "block.dungeons.stone_tiles": "Stone Tiles",
+    "block.dungeons.dirty_stone_tiles": "Dirty Stone Tiles",
     "block.dungeons.water_plant": "Water Plant",
     "block.dungeons.barrel_closed": "Closed Barrel",
     "block.dungeons.fish_barrel": "Fish Barrel",
@@ -33,10 +35,13 @@
     "block.dungeons.fish_food_box": "Fish Food Box",
     "block.dungeons.corn_food_box": "Corn Food Box",
     "block.dungeons.floorboards": "Floorboards",
+    "block.dungeons.lighthouse_lamp": "Lighthouse Lamp",
+    "block.dungeons.emblemed_andesite": "Emblemed Andesite",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
+    "block.dungeons.cw_mossy_andesite": "Mossy Andesite",
     "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
     "block.dungeons.cw_mossy_dark_andesite": "Mossy Dark Andesite",
     "block.dungeons.cw_mossy_dark_andesite_tiles": "Mossy Dark Andesite Tiles",
@@ -49,6 +54,7 @@
     "block.dungeons.cw_polished_granite_slab": "Polished Granite Slab",
     "block.dungeons.cw_sanded_andesite": "Sanded Andesite",
     "block.dungeons.cw_sanded_andesite_tiles": "Sanded Andesite Tiles",
+    "block.dungeons.cw_mossy_sanded_andesite_tiles": "Mossy Sanded Andesite Tiles",
     "block.dungeons.cw_sanded_andesite_bricks": "Sanded Andesite Bricks",
     "block.dungeons.cw_chiseled_sanded_andesite": "Chiseled Sanded Andesite",
     "block.dungeons.cw_glow_mushroom": "Glow Mushroom",
@@ -61,6 +67,16 @@
     "block.dungeons.dt_sandy_stone_bricks": "Sandy Stone Bricks",
     "block.dungeons.dt_sandy_stone_tiles": "Sandy Stone Tiles",
     "block.dungeons.dt_chiseled_sandy_stone": "Chiseled Sandy Stone",
+
+    "block.dungeons.pm_yellow_autumnal_leaves": "Yellow Autumnal Leaves",
+    "block.dungeons.pm_red_autumnal_leaves": "Red Autumnal Leaves",
+    "block.dungeons.pm_autumnal_grass": "Autumnal Grass",
+    "block.dungeons.pm_autumnal_short_grass": "Short Autumnal Grass",
+    "block.dungeons.pm_autumnal_grass_clump": "Autumnal Grass Clump",
+    "block.dungeons.pm_autumnal_grass_block": "Autumnal Grass Block",
+    "block.dungeons.pm_dense_autumnal_grassy_dirt": "Dense Autumnal Grassy Dirt",
+    "block.dungeons.pm_autumnal_grassy_dirt": "Autumnal Grassy Dirt",
+    "block.dungeons.pm_sparse_autumnal_grassy_dirt": "Sparse Autumnal Grassy Dirt",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed"
 }

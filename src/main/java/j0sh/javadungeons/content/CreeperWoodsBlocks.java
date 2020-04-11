@@ -11,6 +11,9 @@ public class CreeperWoodsBlocks {
     // stone variants
     public static DungeonsBlock CW_MOSSY_STONE_BRICKS;
 
+    // andesite variants
+    public static DungeonsBlock CW_MOSSY_ANDESITE;
+
     // dark andesite
     public static DungeonsBlock CW_DARK_POLISHED_ANDESITE;
     public static DungeonsBlock CW_MOSSY_DARK_ANDESITE;
@@ -31,6 +34,7 @@ public class CreeperWoodsBlocks {
     // sanded andesite
     public static DungeonsBlock CW_SANDED_ANDESITE;
     public static DungeonsBlock CW_SANDED_ANDESITE_TILES;
+    public static DungeonsBlock CW_MOSSY_SANDED_ANDESITE_TILES;
     public static DungeonsBlock CW_SANDED_ANDESITE_BRICKS;
     public static DungeonsBlock CW_CHISELED_SANDED_ANDESITE;
 
@@ -40,6 +44,9 @@ public class CreeperWoodsBlocks {
     public static void init() {
         // stone variants
         CW_MOSSY_STONE_BRICKS = new DungeonsBlock(Blocks.MOSSY_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_stone_bricks");
+
+        // andesite variants
+        CW_MOSSY_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_andesite");
 
         // dark andesite
         CW_DARK_POLISHED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_polished_andesite");
@@ -61,6 +68,7 @@ public class CreeperWoodsBlocks {
         // sanded andesite
         CW_SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_sanded_andesite");
         CW_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_sanded_andesite_tiles");
+        CW_MOSSY_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_sanded_andesite_tiles");
         CW_SANDED_ANDESITE_BRICKS = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_sanded_andesite_bricks");
         CW_CHISELED_SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_chiseled_sanded_andesite");
 

@@ -54,7 +54,7 @@ public class DimensionalRectifier extends Block
       });
 
       Registry.register(Registry.BLOCK, ID, this);
-      Registry.register(Registry.ITEM, ID, blockItem = new BlockItem(this, new Item.Settings().group(JavaDungeons.CUSTOM_VARIENTS)));
+      Registry.register(Registry.ITEM, ID, blockItem = new BlockItem(this, new Item.Settings().group(JavaDungeons.CUSTOM_VARIANTS)));
    }
 
    public BlockState getPlacementState(ItemPlacementContext ctx) {

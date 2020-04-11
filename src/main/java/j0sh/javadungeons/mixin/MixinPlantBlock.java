@@ -22,11 +22,7 @@ public class MixinPlantBlock {
 	protected void hookPlantOnTop(BlockState state, BlockView view, BlockPos pos, CallbackInfoReturnable<Boolean> callback) {
 		Block block = state.getBlock();
 
-		if(block == GenericBlocks.DIRT || 
-		block == GenericBlocks.GRASSY_DIRT || 
-		block == GenericBlocks.DENSE_GRASSY_DIRT || 
-		block == GenericBlocks.SPARSE_GRASSY_DIRT ||
-		block == CreeperWoodsBlocks.CW_GRASS_BLOCK) {
+		if (block.matches(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}
 	}

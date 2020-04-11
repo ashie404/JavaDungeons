@@ -12,7 +12,6 @@ public class GenericBlocks {
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
     public static DungeonsBlock CRATE;
-    public static DungeonsBlock BURNT_PUMPKIN;
 
     // food related
     public static DungeonsBlock BARREL_CLOSED;
@@ -32,18 +31,25 @@ public class GenericBlocks {
     public static DungeonsBlock SPARSE_GRASSY_DIRT;
 
     // wood related
-    public static DungeonsBlock ASH_PLANKS;
     public static DungeonsBlock FLOORBOARDS;
 
     // stone-brick related
     public static DungeonsBlock DARK_STONE_BRICKS;
     public static DungeonsBlock DIRTY_DARK_STONE_BRICKS;
     public static DungeonsBlock CHISELED_DARK_STONE;
+    public static DungeonsBlock STONE_TILES;
+    public static DungeonsBlock DIRTY_STONE_TILES;
+
+    // andesite related
+    public static DungeonsBlock EMBLEMED_ANDESITE;
 
     // generic plants
     public static DungeonsPlant SHORT_GRASS;
     public static DungeonsPlant GRASS_CLUMP;
     public static DungeonsWaterPlant WATER_PLANT;
+
+    // redstone related
+    public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
     // custom blocks not in MC: Dungeons
     public static DimensionalRectifier DIMENSIONAL_RECTIFIER;
@@ -53,7 +59,6 @@ public class GenericBlocks {
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
         DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
-        BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "burnt_pumpkin");
 
         // food related items
         BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
@@ -73,19 +78,26 @@ public class GenericBlocks {
         SPARSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "sparse_grassy_dirt");
 
         // wood related
-        ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "ash_planks");
         FLOORBOARDS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "floorboards");
 
         // stone brick related
         DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dark_stone_bricks");
         DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
         CHISELED_DARK_STONE = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "chiseled_dark_stone");
+        STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "stone_tiles");
+        DIRTY_STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles");
+
+        // andesite related
+        EMBLEMED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "emblemed_andesite");
 
         // plants
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
         GRASS_CLUMP = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "grass_clump");
         WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "water_plant");
-   
+      
+        // redstone related
+        LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Blocks.REDSTONE_LAMP, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "lighthouse_lamp");
+      
         // custom blocks not in mc: dungeons
         DIMENSIONAL_RECTIFIER = new DimensionalRectifier();
     }

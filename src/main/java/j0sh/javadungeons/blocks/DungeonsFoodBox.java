@@ -12,7 +12,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
+
 import j0sh.javadungeons.JavaDungeons;
 
 public class DungeonsFoodBox extends Block {
