@@ -14,8 +14,8 @@ Most textures are ripped from Minecraft: Dungeons. All Dungeons texture rights g
 
 ### Naming of blocks
 
-All blocks are named based on what I think they're closest to in Minecraft, unless they have a name in Dungeons or are just obvious as to what they are. Blocks are categorized under what category they're put under in the game files (so files tagged creeper woods will be put in the creeper woods category, etc.) 
+All blocks are named based on what I think they're closest to in Minecraft, unless they have a name in Dungeons or are just obvious as to what they are. Blocks are categorized under what category they're put under in the game files (so files tagged creeper woods will be put in the creeper woods category, etc.), or where they're most found ingame.
 
 ### What will be added from Dungeons?
 
-Primarily blocks, with a few entities maybe. I will not add a block if it's too close to vanilla, so blocks with very slight variations in color or slight changes to the shape won't be added. Some entities might be added, if they have slight variations from vanilla (like the creeper) or if I just think they're cool. They'll probably behave identical to their vanilla counterparts. There will also be a few custom blocks for survival functionality, like the Dimensional Rectifier, used for changing vanilla stones into Dungeons stones.
+Primarily blocks, with a few entities maybe. I will not add a block if it's too close to vanilla, so blocks with very slight variations in color or slight changes to the shape won't be added. Some entities might be added, if they have slight variations from vanilla (like the creeper) or if I just think they're cool. They'll probably behave identical to their vanilla counterparts. There will also be a few custom blocks for survival functionality, so you can obtain the blocks in survival.
