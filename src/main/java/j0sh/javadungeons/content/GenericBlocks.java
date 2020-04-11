@@ -39,6 +39,11 @@ public class GenericBlocks {
     public static DungeonsBlock DARK_STONE_BRICKS;
     public static DungeonsBlock DIRTY_DARK_STONE_BRICKS;
     public static DungeonsBlock CHISELED_DARK_STONE;
+    public static DungeonsBlock STONE_TILES;
+    public static DungeonsBlock DIRTY_STONE_TILES;
+
+    // andesite related
+    public static DungeonsBlock EMBLEMED_ANDESITE;
 
     // generic plants
     public static DungeonsPlant SHORT_GRASS;
@@ -83,6 +88,11 @@ public class GenericBlocks {
         DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dark_stone_bricks");
         DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
         CHISELED_DARK_STONE = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "chiseled_dark_stone");
+        STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "stone_tiles");
+        DIRTY_STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles");
+
+        // andesite related
+        EMBLEMED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "emblemed_andesite");
 
         // plants
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
