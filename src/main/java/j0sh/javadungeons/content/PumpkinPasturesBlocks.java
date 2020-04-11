@@ -56,5 +56,8 @@ public class PumpkinPasturesBlocks {
         // wood related
         PM_CHARRED_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "pm_charred_planks");
         // TODO: Add other charred wood blocks
+        // TODO: Add charred grass types and charred dirt
+        // TODO: Add autumnal tree saplings?
+        // TODO: Brighten yellow autumnal colors
     }
 }
