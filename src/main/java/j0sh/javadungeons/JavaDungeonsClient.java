@@ -73,7 +73,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.SPARSE_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_GRASS_BLOCK
         );
-
+        BlockRenderLayerMap.INSTANCE.putBlocks(
+            TRANSLUCENT_BLOCK_LAYER,
+            CreeperWoodsBlocks.CW_GLOW_MUSHROOM
+        );
         // set up fluid rendering
         BlockRenderLayerMap.INSTANCE.putFluids(
             TRANSLUCENT_BLOCK_LAYER,

@@ -1,7 +1,9 @@
 {
 	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
 	"textures": {
 		"0": "dungeons:block/cw_glow_mushroom",
+		"1": "dungeons:block/cw_mushroom_ground",
 		"particle": "dungeons:block/cw_glow_mushroom"
 	},
 	"elements": [
@@ -28,6 +30,25 @@
 				"up": {"uv": [4, 8, 7.5, 11.5], "texture": "#0"},
 				"down": {"uv": [7.5, 8, 11, 11.5], "texture": "#0"}
 			}
+		},
+		{
+			"from": [5, 0.125, 5],
+			"to": [11, 0.125, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 6, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"up": {"uv": [2.5, 13, 5.5, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 1, 1], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "0",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2]
 		}
 	]
 }
