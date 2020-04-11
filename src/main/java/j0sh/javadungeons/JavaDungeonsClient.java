@@ -158,7 +158,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP
         );
-
+        BlockRenderLayerMap.INSTANCE.putBlocks(
+            TRANSLUCENT_BLOCK_LAYER,
+            CreeperWoodsBlocks.CW_GLOW_MUSHROOM
+        );
         // set up fluid rendering
         BlockRenderLayerMap.INSTANCE.putFluids(
             TRANSLUCENT_BLOCK_LAYER,
