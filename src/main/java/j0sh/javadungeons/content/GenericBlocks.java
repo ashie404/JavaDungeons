@@ -12,7 +12,6 @@ public class GenericBlocks {
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
     public static DungeonsBlock CRATE;
-    public static DungeonsBlock BURNT_PUMPKIN;
 
     // food related
     public static DungeonsBlock BARREL_CLOSED;
@@ -32,7 +31,6 @@ public class GenericBlocks {
     public static DungeonsBlock SPARSE_GRASSY_DIRT;
 
     // wood related
-    public static DungeonsBlock ASH_PLANKS;
     public static DungeonsBlock FLOORBOARDS;
 
     // stone-brick related
@@ -61,7 +59,6 @@ public class GenericBlocks {
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
         DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
-        BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "burnt_pumpkin");
 
         // food related items
         BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
@@ -81,7 +78,6 @@ public class GenericBlocks {
         SPARSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "sparse_grassy_dirt");
 
         // wood related
-        ASH_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "ash_planks");
         FLOORBOARDS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "floorboards");
 
         // stone brick related
