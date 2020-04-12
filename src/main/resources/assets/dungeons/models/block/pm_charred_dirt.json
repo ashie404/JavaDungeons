@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/pm_charred_dirt"}}
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/pumpkin_pastures/pm_charred_dirt"}}

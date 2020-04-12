@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "dungeons:block/cw_dark_andesite_pillar_top",
-        "side": "dungeons:block/cw_dark_andesite_pillar"
+        "end": "dungeons:block/creeper_woods/cw_dark_andesite_pillar_top",
+        "side": "dungeons:block/creeper_woods/cw_dark_andesite_pillar"
     }
 }

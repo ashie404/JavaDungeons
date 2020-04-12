@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "dungeons:block/redstone_crystals/short", "y": 270 },
+        "facing=west": { "model": "dungeons:block/redstone_crystals/short"},
+        "facing=north": { "model": "dungeons:block/redstone_crystals/short", "y": 270},
+        "facing=east": { "model": "dungeons:block/redstone_crystals/short" }
+    }
+}

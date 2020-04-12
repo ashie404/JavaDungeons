@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/cw_mossy_andesite"}}
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/creeper_woods/cw_mossy_andesite"}}

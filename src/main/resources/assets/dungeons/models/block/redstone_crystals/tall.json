@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "Desktop/redstone_crystal_atlas"
+		"1": "dungeons:block/redstone_mines/redstone_crystals/redstone_crystal_atlas",
+		"particle":"dungeons:block/redstone_mines/redstone_crystals/redstone_crystal_atlas"
 	},
 	"elements": [
 		{
