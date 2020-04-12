@@ -3,7 +3,7 @@
     "ingredient": {
       "tag": "dungeons:recipe_planks"
     },
-    "result": "dungeons:ash_planks",
+    "result": "dungeons:pm_charred_planks",
     "experience": 0.02,
     "cookingtime": 80
   }
