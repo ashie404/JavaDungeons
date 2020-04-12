@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/cube_column",
     "textures": {
-        "end": "dungeons:block/cw_polished_granite",
-        "side": "dungeons:block/cw_polished_granite_slab"
+        "end": "dungeons:block/creeper_woods/cw_polished_granite",
+        "side": "dungeons:block/creeper_woods/cw_polished_granite_slab"
     }
 }

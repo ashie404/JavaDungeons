@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/cw_chiseled_granite"}}
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/creeper_woods/cw_chiseled_granite"}}

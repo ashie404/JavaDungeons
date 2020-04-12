@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "dungeons:block/cw_mossy_stone_bricks"
+        "all": "dungeons:block/creeper_woods/cw_mossy_stone_bricks"
     }
 }
