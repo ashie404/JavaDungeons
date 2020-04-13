@@ -23,38 +23,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
 
-    // biome based colors
-    private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
-        return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
-    };
-
-    private static final ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
-
-    // static colors
-    private static final BlockColorProvider RED_AUTUMNAL_COLORS = (state, view, pos, tintIndex) -> {
-        return 0xEF3C2E;
-    };
-
-    private static final ItemColorProvider RED_AUTUMNAL_ITEM_COLORS = (item, layer) -> {
-        return 0xEF3C2E;
-    };
-
-    private static final BlockColorProvider YELLOW_AUTUMNAL_COLORS = (state, view, pos, tintIndex) -> {
-        return 0xFFCA18;
-    };
-
-    private static final ItemColorProvider YELLOW_AUTUMNAL_ITEM_COLORS = (item, layer) -> {
-        return 0xFFCA18;
-    };
-
-    private static final BlockColorProvider CHARRED_COLORS = (sate, view, pos, tintIndex) -> {
-        return 0x56556E;
-    };
-
-    private static final ItemColorProvider CHARRED_ITEM_COLORS = (item, layer) -> {
-        return 0x56556E;
-    };
-
     @Override
     public void onInitializeClient() {
 
@@ -65,86 +33,16 @@ public class JavaDungeonsClient implements ClientModInitializer {
             DimensionalRectifier.CONTAINER_NAME
         ));
 
-        // register color providers for grass blocks
-        ColorProviderRegistry.BLOCK.register(
-            GRASS_BLOCK_COLORS, 
-            GenericBlocks.SHORT_GRASS, 
-            GenericBlocks.GRASS_CLUMP,
-            GenericBlocks.DENSE_GRASSY_DIRT,
-            GenericBlocks.GRASSY_DIRT,
-            GenericBlocks.SPARSE_GRASSY_DIRT,
-            CreeperWoodsBlocks.CW_GRASS_BLOCK
-        );
-
-        // register color providers for grass items
-        ColorProviderRegistry.ITEM.register(
-            GRASS_ITEM_COLORS,
-            GenericBlocks.SHORT_GRASS.blockItem,
-            GenericBlocks.GRASS_CLUMP.blockItem,
-            GenericBlocks.DENSE_GRASSY_DIRT.blockItem,
-            GenericBlocks.GRASSY_DIRT.blockItem,
-            GenericBlocks.SPARSE_GRASSY_DIRT.blockItem,
-            CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem
-        );
-
-        // register color providers for autumnal stuff
-        ColorProviderRegistry.BLOCK.register(
-            YELLOW_AUTUMNAL_COLORS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_SHORT_GRASS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_CLUMP,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_BLOCK,
-            PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
-            PumpkinPasturesBlocks.PM_DENSE_AUTUMNAL_GRASSY_DIRT,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASSY_DIRT,
-            PumpkinPasturesBlocks.PM_SPARSE_AUTUMNAL_GRASSY_DIRT
-        );
-        ColorProviderRegistry.BLOCK.register(
-            RED_AUTUMNAL_COLORS,
-            PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES
-        );
-
-        ColorProviderRegistry.ITEM.register(
-            YELLOW_AUTUMNAL_ITEM_COLORS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS.blockItem,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_SHORT_GRASS.blockItem,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_CLUMP.blockItem,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_BLOCK.blockItem,
-            PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES.blockItem,
-            PumpkinPasturesBlocks.PM_DENSE_AUTUMNAL_GRASSY_DIRT.blockItem,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASSY_DIRT.blockItem,
-            PumpkinPasturesBlocks.PM_SPARSE_AUTUMNAL_GRASSY_DIRT.blockItem
-        );
-        ColorProviderRegistry.ITEM.register(
-            RED_AUTUMNAL_ITEM_COLORS,
-            PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.blockItem
-        );
-
-        ColorProviderRegistry.BLOCK.register(
-            CHARRED_COLORS,
-            PumpkinPasturesBlocks.PM_CHARRED_GRASS,
-            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS,
-            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP
-        );
-
-        ColorProviderRegistry.ITEM.register(
-            CHARRED_ITEM_COLORS,
-            PumpkinPasturesBlocks.PM_CHARRED_GRASS.blockItem,
-            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS.blockItem,
-            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP.blockItem
-        );
-
         // register render layers
         BlockRenderLayerMap.INSTANCE.putBlocks(
             CUTOUT_BLOCK_LAYER,
             GenericBlocks.SHORT_GRASS,
-            GenericBlocks.GRASS_CLUMP,
+            GenericBlocks.GRASS,
             GenericBlocks.WATER_PLANT,
             GenericBlocks.DIMENSIONAL_RECTIFIER,
             RedstoneMinesBlocks.REDSTONE_CRYSTAL_VEIN,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
-            GenericBlocks.SPARSE_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS,
             PumpkinPasturesBlocks.PM_AUTUMNAL_SHORT_GRASS,
@@ -152,7 +50,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_BLOCK,
             PumpkinPasturesBlocks.PM_DENSE_AUTUMNAL_GRASSY_DIRT,
             PumpkinPasturesBlocks.PM_AUTUMNAL_GRASSY_DIRT,
-            PumpkinPasturesBlocks.PM_SPARSE_AUTUMNAL_GRASSY_DIRT,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,

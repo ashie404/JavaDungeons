@@ -29,7 +29,6 @@ public class PumpkinPasturesBlocks {
     public static DungeonsBlock PM_AUTUMNAL_GRASS_BLOCK;
     public static DungeonsBlock PM_DENSE_AUTUMNAL_GRASSY_DIRT;
     public static DungeonsBlock PM_AUTUMNAL_GRASSY_DIRT;
-    public static DungeonsBlock PM_SPARSE_AUTUMNAL_GRASSY_DIRT;
 
     // charred stones
     public static DungeonsBlock PM_CHARRED_STONE;

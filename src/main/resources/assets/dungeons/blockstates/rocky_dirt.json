@@ -1,9 +1,6 @@
 {"variants": 
     {
-        "": [
-            {"model": "dungeons:block/rocky_dirt/0", "weight": 50},
-            {"model": "dungeons:block/rocky_dirt/1", "weight": 25},
-            {"model": "dungeons:block/rocky_dirt/2", "weight": 25}
-        ]
+        "":
+            {"model": "dungeons:block/rocky_dirt"}
     }
 }

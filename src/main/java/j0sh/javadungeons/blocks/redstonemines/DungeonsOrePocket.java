@@ -92,4 +92,5 @@ public class DungeonsOrePocket extends RedstoneBlock {
         MAIN_CRYSTAL_X = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
         CRYSTAL_X = VoxelShapes.union(MAIN_CRYSTAL_X);
     }
+
 }
