@@ -4,8 +4,10 @@ import j0sh.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.RedstoneBlock;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.EntityContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -22,6 +24,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.WorldView;
 
 public class DungeonsRedstoneCrystalShort extends RedstoneBlock {
 
@@ -42,7 +46,6 @@ public class DungeonsRedstoneCrystalShort extends RedstoneBlock {
         return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing().rotateYClockwise());
      }
     
-    @Override
     public int getWeakRedstonePower(BlockState state, BlockView view, BlockPos pos, Direction facing) {
         return POWER;
     }
@@ -53,18 +56,31 @@ public class DungeonsRedstoneCrystalShort extends RedstoneBlock {
         return direction.getAxis() == Direction.Axis.X ? CRYSTAL_X : CRYSTAL_Z;
     }
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(3.0D, 0.0D, 2.0D, 11.0D, 12.5D, 11.0D);
-
-    public DungeonsRedstoneCrystalShort(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, int power, String id) {
-        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
+    public DungeonsRedstoneCrystalShort(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, int power, int lightLevel, String id) {
+        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).lightLevel(lightLevel).build());
         POWER = power;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
 
+    //this looks to see if you can place the block, it wont if there is air below
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, IWorld world, BlockPos pos, BlockPos neighborPos) {
+        return !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState downState = world.getBlockState(pos.down());
+        return (downState  == Blocks.STONE.getDefaultState() || downState == Blocks.GRANITE.getDefaultState() || downState == Blocks.DIORITE.getDefaultState() || downState == Blocks.ANDESITE.getDefaultState() || downState == Blocks.COBBLESTONE.getDefaultState() || downState == Blocks.MOSSY_COBBLESTONE.getDefaultState() || downState == Blocks.BEDROCK.getDefaultState() || downState == Blocks.SMOOTH_STONE.getDefaultState() || downState == Blocks.GRAVEL.getDefaultState());
+    }
+
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
     }
+
+    public PistonBehavior getPistonBehavior(BlockState state) {
+        return PistonBehavior.DESTROY;
+     }
     
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);

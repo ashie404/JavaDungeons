@@ -1,0 +1,82 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "dungeons:block/redstone_mines/redstone_crystals/redstone_crystal_atlas_0",
+		"particle": "dungeons:block/redstone_mines/redstone_crystals/redstone_crystal_atlas_0"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 16, 12],
+			"faces": {
+				"north": {"uv": [12, 8, 16, 16], "texture": "#0"},
+				"east": {"uv": [12, 0, 16, 8], "texture": "#0"},
+				"south": {"uv": [12, 8, 16, 16], "texture": "#0"},
+				"west": {"uv": [12, 0, 16, 8], "texture": "#0"},
+				"up": {"uv": [8, 12, 12, 16], "texture": "#0"},
+				"down": {"uv": [8, 12, 12, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [11, 0.025, 3],
+			"to": [14, 7.025, 6],
+			"faces": {
+				"north": {"uv": [3, 0, 4.5, 3.5], "texture": "#0"},
+				"east": {"uv": [0, 3.5, 1.5, 7], "texture": "#0"},
+				"south": {"uv": [3, 3.5, 4.5, 7], "texture": "#0"},
+				"west": {"uv": [0, 0, 1.5, 3.5], "texture": "#0"},
+				"up": {"uv": [9, 10.5, 10.5, 12], "texture": "#0"},
+				"down": {"uv": [10.5, 10.5, 12, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, -0.225, 3],
+			"to": [6, 10.775, 6],
+			"faces": {
+				"north": {"uv": [6.5, 0, 8, 5.5], "texture": "#0"},
+				"east": {"uv": [9.5, 0, 11, 5.5], "texture": "#0"},
+				"south": {"uv": [9, 0, 10.5, 5.5], "texture": "#0"},
+				"west": {"uv": [6.5, 0, 8, 5.5], "texture": "#0"},
+				"up": {"uv": [0, 7, 1.5, 8.5], "texture": "#0"},
+				"down": {"uv": [10.5, 10.5, 12, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 0, 12],
+			"to": [9, 7, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 1.5, 3.5], "texture": "#0"},
+				"east": {"uv": [7, 9, 8, 12.5], "texture": "#0"},
+				"south": {"uv": [6.5, 12.5, 8, 16], "texture": "#0"},
+				"west": {"uv": [6, 9, 7, 12.5], "texture": "#0"},
+				"up": {"uv": [2, 13.5, 3.5, 14.5], "texture": "#0"},
+				"down": {"uv": [2, 14.5, 3.5, 15.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [12, 0, 9.5],
+			"to": [13, 9, 10.5],
+			"faces": {
+				"north": {"uv": [5, 0.5, 5.5, 5], "texture": "#0"},
+				"east": {"uv": [10.5, 0, 11, 4.5], "texture": "#0"},
+				"south": {"uv": [11, 1, 11.5, 5.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0.5, 4.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0.5], "texture": "#0"},
+				"down": {"uv": [5, 14.5, 5.5, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10.5, 6.75, 3.25],
+			"to": [11.5, 7.75, 4.25],
+			"faces": {
+				"north": {"uv": [0, 1.5, 0.5, 2], "texture": "#0"},
+				"east": {"uv": [0, 1.5, 0.5, 2], "texture": "#0"},
+				"south": {"uv": [0, 0, 0.5, 0.5], "texture": "#0"},
+				"west": {"uv": [0, 1.5, 0.5, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0.5], "texture": "#0"},
+				"down": {"uv": [0, 2.5, 0.5, 3], "texture": "#0"}
+			}
+		}
+	]
+}

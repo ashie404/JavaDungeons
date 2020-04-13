@@ -141,6 +141,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.GRASS_CLUMP,
             GenericBlocks.WATER_PLANT,
             GenericBlocks.DIMENSIONAL_RECTIFIER,
+            RedstoneMinesBlocks.REDSTONE_CRYSTAL_VEIN,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
             GenericBlocks.SPARSE_GRASSY_DIRT,

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "dungeons:block/redstone_crystals/vein" },
+        "facing=west": { "model": "dungeons:block/redstone_crystals/vein", "y": 90 },
+        "facing=north": { "model": "dungeons:block/redstone_crystals/vein" },
+        "facing=east": { "model": "dungeons:block/redstone_crystals/vein", "y": 90 }
+    }
+}

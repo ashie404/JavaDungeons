@@ -8,6 +8,9 @@ import j0sh.javadungeons.JavaDungeons;
 
 public class GenericBlocks {
 
+    //A Block Used To Test (makes it easier to fine out wher errors come from)
+    public static DebugBlock DEBUGGING_BLOCK;
+
     // generic blocks that aren't in mc
     public static DungeonsBlock FLOOR_TILE;
     public static DungeonsBlock DIRTY_FLOOR_TILE; 
@@ -56,6 +59,9 @@ public class GenericBlocks {
     public static DimensionalRectifier DIMENSIONAL_RECTIFIER;
 
     public static void init() {
+        //Debug
+        DEBUGGING_BLOCK = new DebugBlock(Blocks.DRAGON_EGG, false, FabricToolTags.SWORDS, JavaDungeons.CUSTOM_VARIANTS, "0null");
+
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
         DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
