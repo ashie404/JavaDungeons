@@ -65,8 +65,6 @@ public class PumpkinPasturesBlocks {
         PM_AUTUMNAL_GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_autumnal_grass_block");
         PM_DENSE_AUTUMNAL_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_dense_autumnal_grassy_dirt");
         PM_AUTUMNAL_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_autumnal_grassy_dirt");
-        PM_SPARSE_AUTUMNAL_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_sparse_autumnal_grassy_dirt");
-        
         // charred stones
         PM_CHARRED_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
         PM_CHARRED_COBBLESTONE = new DungeonsBlock(Blocks.COBBLESTONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
