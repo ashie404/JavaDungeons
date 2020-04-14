@@ -28,15 +28,22 @@ public class JavaDungeons implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// other stuff
 		Tags.init();
 		Sounds.init();
 		Recipes.init();
 		Fluids.init();
+
+		// blocks
 		GenericBlocks.init();
 		CreeperWoodsBlocks.init();
 		DesertTempleBlocks.init();
 		PumpkinPasturesBlocks.init();
 		RedstoneMinesBlocks.init();
+
+		// worldgen
+		Features.init();
+		Biomes.init();
 
 		log.info("JavaDungeons initialized!");
 	}

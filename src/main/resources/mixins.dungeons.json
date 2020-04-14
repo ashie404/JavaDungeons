@@ -3,7 +3,8 @@
     "package": "j0sh.javadungeons.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-      "MixinPlantBlock"
+      "MixinPlantBlock",
+      "MixinFeature"
     ],
     "injectors": {
       "defaultRequire": 1

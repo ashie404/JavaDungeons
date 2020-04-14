@@ -103,5 +103,7 @@
     "block.dungeons.pm_charred_grass_block": "Charred Grass Block",
     "block.dungeons.pm_charred_farmland": "Charred Farmland",
 
-    "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed"
+    "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
+
+    "biome.dungeons.creeper_woods": "Creeper Woods"
 }

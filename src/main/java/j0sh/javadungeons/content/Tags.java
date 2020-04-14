@@ -4,6 +4,7 @@ import net.minecraft.tag.Tag;
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.SeaPickleFeature;
 
 import j0sh.javadungeons.JavaDungeons;
 
