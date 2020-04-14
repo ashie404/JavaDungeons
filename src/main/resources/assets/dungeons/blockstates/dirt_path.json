@@ -1,8 +1,5 @@
 {
-    "variants": {"": [
-        {"model": "dungeons:block/dirt_path"},
-        {"model": "dungeons:block/dirt_path", "y":90},
-        {"model": "dungeons:block/dirt_path", "y":180},
-        {"model": "dungeons:block/dirt_path", "y":270}
-    ]}
+    "variants": {
+        "": {"model": "dungeons:block/dirt_path"}
+    }
 }

@@ -1,7 +1,7 @@
 {
     "variants": {
-        "axis=y":  { "model": "dungeons:block/dt_sandy_andesite_pillar" },
-        "axis=z":  { "model": "dungeons:block/dt_sandy_andesite_pillar", "x": 90 },
-        "axis=x":  { "model": "dungeons:block/dt_sandy_andesite_pillar", "x": 90, "y": 90 }
+        "axis=y": { "model": "dungeons:block/desert_temple/sandy_andesite_pillar" },
+        "axis=z": { "model": "dungeons:block/desert_temple/sandy_andesite_pillar", "x": 90 },
+        "axis=x": { "model": "dungeons:block/desert_temple/sandy_andesite_pillar", "x": 90, "y": 90 }
     }
 }

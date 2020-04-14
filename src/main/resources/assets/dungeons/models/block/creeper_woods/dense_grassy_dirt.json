@@ -1,0 +1,7 @@
+{
+    "parent": "dungeons:block/base/grassy_dirt",
+    "textures": {
+        "base": "dungeons:block/creeper_woods/dirt",
+        "overlay": "dungeons:block/dense_grassy_dirt_overlay"
+    }
+}

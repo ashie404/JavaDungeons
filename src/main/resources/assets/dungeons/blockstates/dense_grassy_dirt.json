@@ -1,8 +1,5 @@
 {
-    "variants": {"": [
-        {"model": "dungeons:block/dense_grassy_dirt"},
-        {"model": "dungeons:block/dense_grassy_dirt", "y":90},
-        {"model": "dungeons:block/dense_grassy_dirt", "y":180},
-        {"model": "dungeons:block/dense_grassy_dirt", "y":270}
-    ]}
+    "variants": {
+        "": {"model": "dungeons:block/dense_grassy_dirt"}
+    }
 }

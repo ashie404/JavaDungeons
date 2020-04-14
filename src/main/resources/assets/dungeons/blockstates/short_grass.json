@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "dungeons:block/short_grass" }
+        "": {"model": "dungeons:block/short_grass"}
     }
 }

@@ -1,7 +1,7 @@
 {
     "variants": {
-        "type=bottom": { "model": "dungeons:block/cw_polished_granite_slab" },
-        "type=top": { "model":    "dungeons:block/cw_polished_granite_slab_top" },
-        "type=double": { "model": "dungeons:block/cw_polished_granite_slab_double" }
+        "type=bottom": { "model": "dungeons:block/creeper_woods/polished_granite_slab" },
+        "type=top": { "model":    "dungeons:block/creeper_woods/polished_granite_slab_top" },
+        "type=double": { "model": "dungeons:block/creeper_woods/polished_granite_slab_double" }
     }
 }

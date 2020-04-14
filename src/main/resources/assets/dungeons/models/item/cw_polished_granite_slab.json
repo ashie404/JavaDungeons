@@ -1,1 +1,3 @@
-{"parent": "dungeons:block/cw_polished_granite_slab"}
+{
+    "parent": "dungeons:block/creeper_woods/polished_granite_slab"
+}

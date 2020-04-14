@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/slab_top",
-    "textures": {
-        "bottom": "dungeons:block/creeper_woods/cw_polished_granite",
-        "top": "dungeons:block/creeper_woods/cw_polished_granite",
-        "side": "dungeons:block/creeper_woods/cw_polished_granite_slab"
-    }
-}

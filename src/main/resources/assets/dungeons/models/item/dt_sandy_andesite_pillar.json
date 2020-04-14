@@ -1,1 +1,3 @@
-{"parent": "dungeons:block/dt_sandy_andesite_pillar"}
+{
+    "parent": "dungeons:block/desert_temple/sandy_andesite_pillar"
+}

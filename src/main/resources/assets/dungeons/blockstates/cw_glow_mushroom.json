@@ -1,28 +1,28 @@
 {
     "variants": {
         "pickles=1": [
-            { "model": "dungeons:block/cw_glow_mushroom/0" },
-            { "model": "dungeons:block/cw_glow_mushroom/0", "y": 90 },
-            { "model": "dungeons:block/cw_glow_mushroom/0", "y": 180 },
-            { "model": "dungeons:block/cw_glow_mushroom/0", "y": 270 }
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/0" },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/0", "y": 90 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/0", "y": 180 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/0", "y": 270 }
         ],
         "pickles=2": [
-            { "model": "dungeons:block/cw_glow_mushroom/1" },
-            { "model": "dungeons:block/cw_glow_mushroom/1", "y": 90 },
-            { "model": "dungeons:block/cw_glow_mushroom/1", "y": 180 },
-            { "model": "dungeons:block/cw_glow_mushroom/1", "y": 270 }
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/1" },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/1", "y": 90 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/1", "y": 180 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/1", "y": 270 }
         ],
         "pickles=3": [
-            { "model": "dungeons:block/cw_glow_mushroom/2" },
-            { "model": "dungeons:block/cw_glow_mushroom/2", "y": 90 },
-            { "model": "dungeons:block/cw_glow_mushroom/2", "y": 180 },
-            { "model": "dungeons:block/cw_glow_mushroom/2", "y": 270 }
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/2" },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/2", "y": 90 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/2", "y": 180 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/2", "y": 270 }
         ],
         "pickles=4": [
-            { "model": "dungeons:block/cw_glow_mushroom/3" },
-            { "model": "dungeons:block/cw_glow_mushroom/3", "y": 90 },
-            { "model": "dungeons:block/cw_glow_mushroom/3", "y": 180 },
-            { "model": "dungeons:block/cw_glow_mushroom/3", "y": 270 }
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/3" },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/3", "y": 90 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/3", "y": 180 },
+            { "model": "dungeons:block/creeper_woods/glow_mushroom/3", "y": 270 }
         ]
   }
 }

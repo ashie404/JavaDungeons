@@ -2,35 +2,46 @@ import argparse
 import json
 
 parser = argparse.ArgumentParser(description='Generates basic models and blockstate defs for Minecraft')
-parser.add_argument('type', metavar='type', help='Type of model\n * basic: basic block with same texture on all sides\n * pillar: pillar block with same top and bottom texture, but different sides (texture order: top,side)\n * pillardiff: pillar block with different top, bottom, and side textures. (texture order: top,bottom,side)')
-parser.add_argument('textures', metavar='tex', help='Texture list, seperated by commas if there are multiple textures')
-parser.add_argument('id', metavar='id', help='ID of block, used for item model and blockstate definition.')
-parser.add_argument('modelname', metavar='mname', help='Name/path of block model.')
-args = parser.parseargs()
+parser.add_argument('area', metavar='area', help='Area of model\n * none: No area/generic block\n * cw: Creeper Woods\n * dt: Desert Temple\n * pm: Pumpkin Pastures')
+parser.add_argument('id', metavar='id', help='ID of block, without area affix.')
+args = parser.parse_args()
 
-model = open("assets/dungeons/models/block/" + args.modelname + ".json", "w")
-item = open("assets/dungeons/models/item/" + args.id + ".json", "w")
-state = open("assets/dungeons/blockstates/" + args.id + ".json", "w")
+if args.area == 'none':
+    item = open("assets/dungeons/models/item/{}.json".format(args.id), "w")
+    state = open("assets/dungeons/blockstates/{}.json".format(args.id), "w")
+else:
+    item = open("assets/dungeons/models/item/{}_{}.json".format(args.area, args.id), "w")
+    state = open("assets/dungeons/blockstates/{}_{}.json".format(args.area, args.id), "w")
+
+if args.area == 'none':
+    model = open("assets/dungeons/models/block/" + args.id + ".json", "w")
+    textureaffix = ''
+if args.area == 'cw':
+    model = open("assets/dungeons/models/block/creeper_woods/" + args.id + ".json", "w")
+    textureaffix = 'creeper_woods/'
+if args.area == 'dt':
+    model = open("assets/dungeons/models/block/desert_temple/" + args.id + ".json", "w")
+    textureaffix = 'desert_temple/'
+if args.area == 'pm':
+    model = open("assets/dungeons/models/block/pumpkin_pastures/" + args.id + ".json", "w")
+    textureaffix = 'pumpkin_pastures/'
 
 datablock = {}
 dataitem = {}
 datastate = {}
 
-if args.type == 'basic':
-    #block data
-    datablock['parent'] = "minecraft:block/cube_all"
-    datablock['textures'] = {
-        "all": "dungeons:block/" + sys.argv[1]
-    }
+#block data
+datablock['parent'] = "minecraft:block/cube_all"
+datablock['textures'] = {
+    "all": "dungeons:block/" + textureaffix + args.id
+}
+# item data
+dataitem['parent'] = "dungeons:block/" + textureaffix + args.id
+# state data
+datastate['variants'] = {
+    "": {"model": "dungeons:block/" + textureaffix + args.id}
+}
 
-    # item data
-    dataitem['parent'] = "dungeons:block/" + sys.argv[1]
-
-    # state data
-    datastate['variants'] = {
-        "": {"model": "dungeons:block/" + sys.argv[1]}
-    }
-
-json.dump(datadef, model)
+json.dump(datablock, model)
 json.dump(dataitem, item)
 json.dump(datastate, state)

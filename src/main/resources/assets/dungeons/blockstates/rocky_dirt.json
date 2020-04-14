@@ -1,6 +1,1 @@
-{"variants": 
-    {
-        "":
-            {"model": "dungeons:block/rocky_dirt"}
-    }
-}
+{"variants": {"": {"model": "dungeons:block/rocky_dirt"}}}

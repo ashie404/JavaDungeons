@@ -31,7 +31,9 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_GRASSY_DIRT;
     public static DungeonsBlock CW_DENSE_GRASSY_DIRT;
     public static DungeonsBlock CW_DIRT;
+    public static DungeonsPath CW_DIRT_PATH;
     public static DungeonsBlock CW_ROCKY_DIRT;
+    public static DungeonsPath CW_ROCKY_DIRT_PATH;
 
     // creeper woods granite variant
     public static DungeonsBlock CW_POLISHED_GRANITE;
@@ -46,11 +48,7 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_DIRTY_FLOOR_TILE;
 
     // plants
-    public static DungeonsPlant CW_GRASS;
-    public static DungeonsPlant CW_SHORT_GRASS;
-    public static DungeonsPlant CW_FERN;
     public static DungeonsPlant CW_SHRUB;
-    public static DungeonsBlock CW_OAK_LEAVES;
 
     // custom dungeons blocks
     public static DungeonsGlowMushroom CW_GLOW_MUSHROOM;
@@ -81,7 +79,9 @@ public class CreeperWoodsBlocks {
         CW_GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_grassy_dirt");
         CW_DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dense_grassy_dirt");
         CW_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt");
+        CW_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
         CW_ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
+        CW_ROCKY_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt_path");
 
         // creeper woods granite variant
         CW_POLISHED_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite");
@@ -89,15 +89,11 @@ public class CreeperWoodsBlocks {
         CW_POLISHED_GRANITE_SLAB = new DungeonsSlab(Blocks.POLISHED_GRANITE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite_slab");
 
         // plants
-        CW_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_grass");
-        CW_SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_short_grass");
-        CW_FERN = new DungeonsPlant(Blocks.FERN, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_fern");
         CW_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_shrub");
-        CW_OAK_LEAVES = new DungeonsBlock(Blocks.OAK_LEAVES, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_oak_leaves");
 
         // custom dungeons blocks
         CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Blocks.SEA_PICKLE, true, FabricToolTags.SWORDS, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");
         CW_GLOW_MELON = new DungeonsEmissive(Blocks.MELON, true, FabricToolTags.AXES, JavaDungeons.CREEPER_WOODS, "cw_glow_melon");
-        CW_GLOW_MELON_ROOTS = new DungeonsBlock(Blocks.GRASS, true, FabricToolTags.AXES, JavaDungeons.CREEPER_WOODS, "cw_glow_melon_roots");
+        CW_GLOW_MELON_ROOTS = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.AXES, JavaDungeons.CREEPER_WOODS, "cw_glow_melon_roots");
     }
 }

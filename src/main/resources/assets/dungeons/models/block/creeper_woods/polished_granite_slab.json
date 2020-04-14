@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "top": "dungeons:block/creeper_woods/polished_granite",
+        "side": "dungeons:block/creeper_woods/polished_granite_slab"
+    }
+}

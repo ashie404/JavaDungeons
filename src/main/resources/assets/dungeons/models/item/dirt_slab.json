@@ -1,1 +1,3 @@
-{"parent": "dungeons:block/dirt_slab"}
+{
+    "parent": "dungeons:block/dirt_slab"
+}

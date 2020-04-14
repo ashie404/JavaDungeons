@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "side": "dungeons:block/creeper_woods/polished_granite_slab",
+        "end": "dungeons:block/creeper_woods/polished_granite"
+    }
+}

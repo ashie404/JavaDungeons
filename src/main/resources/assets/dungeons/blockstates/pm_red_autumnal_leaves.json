@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "": {"model": "minecraft:block/oak_leaves"}
-    }
-}
+{"variants": {"": {"model": "dungeons:block/pumpkin_pastures/red_autumnal_leaves"}}}

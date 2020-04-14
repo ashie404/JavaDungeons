@@ -1,1 +1,3 @@
-{"parent": "dungeons:block/lighthouse_lamp"}
+{
+    "parent": "dungeons:block/lighthouse_lamp_off"
+}

@@ -1,6 +1,6 @@
 {
     "variants": {
-        "lit=false": {"model": "dungeons:block/lighthouse_lamp"},
+        "lit=false": {"model": "dungeons:block/lighthouse_lamp_off"},
         "lit=true": {"model": "dungeons:block/lighthouse_lamp_on"}
     }
 }

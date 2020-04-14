@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "side": "dungeons:block/desert_temple/sandy_andesite_pillar",
+        "end": "dungeons:block/desert_temple/sandy_andesite_pillar_top"
+    }
+}

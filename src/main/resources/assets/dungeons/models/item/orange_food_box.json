@@ -1,5 +1,5 @@
 {
-    "parent":"dungeons:block/food_box/orange",
+    "parent": "dungeons:block/food_box/orange",
     "display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

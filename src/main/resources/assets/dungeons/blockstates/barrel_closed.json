@@ -1,1 +1,5 @@
-{"variants": {"": {"model": "dungeons:block/barrel_closed"}}}
+{
+    "variants": {
+        "": {"model": "dungeons:block/barrel_closed"}
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "bottom": "dungeons:block/creeper_woods/glow_melon_roots_top",
+        "top": "dungeons:block/creeper_woods/glow_melon_top",
+        "side": "dungeons:block/creeper_woods/glow_melon_side"
+    }
+}

@@ -23,6 +23,12 @@ public class JavaDungeonsClient implements ClientModInitializer {
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
 
+    private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
+        return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
+    };
+
+    private static final ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
+
     @Override
     public void onInitializeClient() {
 
@@ -33,27 +39,51 @@ public class JavaDungeonsClient implements ClientModInitializer {
             DimensionalRectifier.CONTAINER_NAME
         ));
 
+        // register color providers
+        ColorProviderRegistry.BLOCK.register(
+            GRASS_BLOCK_COLORS,
+            GenericBlocks.SHORT_GRASS,
+            GenericBlocks.FERN,
+            GenericBlocks.DENSE_GRASSY_DIRT,
+            GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.GRASS_BLOCK,
+            CreeperWoodsBlocks.CW_GRASS_BLOCK,
+            CreeperWoodsBlocks.CW_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT
+        );
+
+        ColorProviderRegistry.ITEM.register(
+            GRASS_ITEM_COLORS,
+            GenericBlocks.SHORT_GRASS.blockItem,
+            GenericBlocks.FERN.blockItem,
+            GenericBlocks.DENSE_GRASSY_DIRT.blockItem,
+            GenericBlocks.GRASSY_DIRT.blockItem,
+            GenericBlocks.GRASS_BLOCK.blockItem,
+            CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
+            CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
+            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem
+        );
+
         // register render layers
         BlockRenderLayerMap.INSTANCE.putBlocks(
             CUTOUT_BLOCK_LAYER,
             GenericBlocks.SHORT_GRASS,
-            GenericBlocks.GRASS,
+            GenericBlocks.FERN,
+            GenericBlocks.BERRY_BUSH_BLOCK,
             GenericBlocks.WATER_PLANT,
             GenericBlocks.DIMENSIONAL_RECTIFIER,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.GRASS_BLOCK,
+            GenericBlocks.SHRUB,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_SHORT_GRASS,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_CLUMP,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASS_BLOCK,
-            PumpkinPasturesBlocks.PM_DENSE_AUTUMNAL_GRASSY_DIRT,
-            PumpkinPasturesBlocks.PM_AUTUMNAL_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_SHRUB,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,
-            PumpkinPasturesBlocks.PM_CHARRED_SHORT_GRASS,
-            PumpkinPasturesBlocks.PM_CHARRED_GRASS_CLUMP
+            PumpkinPasturesBlocks.PM_SHRUB
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,

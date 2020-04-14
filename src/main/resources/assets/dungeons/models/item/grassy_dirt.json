@@ -1,1 +1,3 @@
-{"parent": "dungeons:block/grassy_dirt"}
+{
+    "parent": "dungeons:block/grassy_dirt"
+}

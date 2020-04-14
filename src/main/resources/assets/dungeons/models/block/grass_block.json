@@ -1,0 +1,10 @@
+{
+    "parent": "minecraft:block/grass_block",
+    "textures": {
+        "particle": "dungeons:block/dirt",
+        "bottom": "dungeons:block/dirt",
+        "top": "dungeons:block/grass_block_top",
+        "side": "dungeons:block/grass_block_side",
+        "overlay": "dungeons:block/grass_block_side_overlay"
+    }
+}

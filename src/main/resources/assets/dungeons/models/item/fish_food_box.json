@@ -1,5 +1,5 @@
 {
-    "parent":"dungeons:block/food_box/fish",
+    "parent": "dungeons:block/food_box/fish",
     "display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

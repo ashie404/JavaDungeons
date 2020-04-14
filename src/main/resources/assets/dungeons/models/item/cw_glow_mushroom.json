@@ -1,5 +1,5 @@
 {
-    "parent": "dungeons:block/cw_glow_mushroom/0",
+    "parent": "dungeons:block/creeper_woods/glow_mushroom/0",
     "display": {
         "gui": {
             "rotation": [ 30, 225, 0 ],

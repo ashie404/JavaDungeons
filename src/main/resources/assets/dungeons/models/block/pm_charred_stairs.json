@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/stairs",
-    "textures": {
-        "bottom": "dungeons:block/pumpkin_pastures/pm_charred_planks",
-        "top": "dungeons:block/pumpkin_pastures/pm_charred_planks",
-        "side": "dungeons:block/pumpkin_pastures/pm_charred_planks"
-    }
-}

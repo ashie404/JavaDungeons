@@ -1,7 +1,1 @@
-{
-    "variants": {
-        "axis=y":  { "model": "dungeons:block/cw_dark_andesite_pillar" },
-        "axis=z":  { "model": "dungeons:block/cw_dark_andesite_pillar", "x": 90 },
-        "axis=x":  { "model": "dungeons:block/cw_dark_andesite_pillar", "x": 90, "y": 90 }
-    }
-}
+{"variants": {"": {"model": "dungeons:block/creeper_woods/dark_andesite_pillar"}}}

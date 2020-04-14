@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/cube_column",
-    "textures": {
-        "end": "dungeons:block/pumpkin_pastures/pm_rotted_pumpkin_top",
-        "side": "dungeons:block/pumpkin_pastures/pm_rotted_pumpkin_side"
-    }
-}

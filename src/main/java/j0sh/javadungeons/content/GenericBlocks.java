@@ -26,6 +26,7 @@ public class GenericBlocks {
     public static DungeonsSlab DIRT_SLAB;
     public static DungeonsPath DIRT_PATH;
     public static DungeonsBlock ROCKY_DIRT;
+    public static DungeonsPath ROCKY_DIRT_PATH;
     public static DungeonsBlock DENSE_GRASSY_DIRT;
     public static DungeonsBlock GRASSY_DIRT;
     public static DungeonsBlock GRASS_BLOCK;
@@ -47,11 +48,9 @@ public class GenericBlocks {
 
     // generic plants
     public static DungeonsBlock BERRY_BUSH_BLOCK;
-    public static DungeonsPlant GRASS;
     public static DungeonsPlant SHORT_GRASS;
     public static DungeonsPlant FERN;
     public static DungeonsPlant SHRUB;
-    public static DungeonsBlock OAK_LEAVES;
     public static DungeonsWaterPlant WATER_PLANT;
 
     // sanded andesite
@@ -86,6 +85,7 @@ public class GenericBlocks {
         DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_slab");
         DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_path");
         ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt");
+        ROCKY_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt_path");
         DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dense_grassy_dirt");
         GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grassy_dirt");
         GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grass_block");
@@ -107,12 +107,10 @@ public class GenericBlocks {
 
         // plants
         BERRY_BUSH_BLOCK = new DungeonsBlock(Blocks.OAK_LEAVES, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "berry_bush_block");
-        GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "grass");
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
         FERN = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "shrub");
         WATER_PLANT = new DungeonsWaterPlant(Blocks.SEAGRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "water_plant");
-        OAK_LEAVES = new DungeonsBlock(Blocks.OAK_LEAVES, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "oak_leaves");
 
         // sanded andesite
         SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "sanded_andesite");

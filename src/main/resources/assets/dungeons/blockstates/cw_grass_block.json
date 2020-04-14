@@ -1,8 +1,10 @@
 {
-    "variants": {"": [
-        {"model": "dungeons:block/cw_grass_block"},
-        {"model": "dungeons:block/cw_grass_block", "y":90},
-        {"model": "dungeons:block/cw_grass_block", "y":180},
-        {"model": "dungeons:block/cw_grass_block", "y":270}
-    ]}
+    "variants": {
+        "": [
+            { "model": "dungeons:block/creeper_woods/grass_block" },
+            { "model": "dungeons:block/creeper_woods/grass_block", "y": 90 },
+            { "model": "dungeons:block/creeper_woods/grass_block", "y": 180 },
+            { "model": "dungeons:block/creeper_woods/grass_block", "y": 270 }
+        ]
+    }
 }

@@ -1,32 +1,7 @@
 {
-    "parent": "minecraft:block/block", 
+    "parent": "dungeons:block/base/grassy_dirt",
     "textures": {
-        "block": "dungeons:block/dirt",
-        "overlay": "dungeons:block/grass_overlay_2",
-        "particle": "dungeons:block/dirt"
-    },
-    "elements": [
-        {   "from": [ 0, 0, 0 ],
-            "to": [ 16, 16, 16 ],
-            "faces": {
-                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#block"},
-                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#block"},
-                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#block"},
-                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#block"},
-                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#block"},
-                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#block"}
-            }
-        },
-        {   "from": [ 0, 0, 0 ],
-            "to": [ 16, 16, 16 ],
-            "faces": {
-                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0},
-                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0},
-                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0},
-                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0},
-                "up": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0},
-                "down": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "tintindex": 0}
-            }
-        }
-    ]
+        "base": "dungeons:block/dirt",
+        "overlay": "dungeons:block/dense_grassy_dirt_overlay"
+    }
 }
