@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/pumpkin_pastures/charred_log_top",
+        "side": "dungeons:block/pumpkin_pastures/charred_log"
+    }
+}

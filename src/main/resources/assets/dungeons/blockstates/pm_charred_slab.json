@@ -1,7 +1,7 @@
 {
     "variants": {
-        "type=bottom": { "model": "dungeons:block/pm_charred_slab" },
-        "type=top": { "model":    "dungeons:block/pm_charred_slab_top" },
-        "type=double": { "model": "dungeons:block/pm_charred_planks" }
+        "type=bottom": { "model": "dungeons:block/pumpkin_pastures/charred_slab" },
+        "type=top": { "model":    "dungeons:block/pumpkin_pastures/charred_slab_top" },
+        "type=double": { "model": "dungeons:block/pumpkin_pastures/charred_planks" }
     }
 }

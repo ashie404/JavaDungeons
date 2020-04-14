@@ -1,7 +1,7 @@
 {
     "variants": {
-        "axis=y": { "model": "dungeons:block/pm_charred_log" },
-        "axis=z": { "model": "dungeons:block/pm_charred_log", "x": 90 },
-        "axis=x": { "model": "dungeons:block/pm_charred_log", "x": 90, "y": 90 }
+        "axis=y": { "model": "dungeons:block/pumpkin_pastures/charred_log" },
+        "axis=z": { "model": "dungeons:block/pumpkin_pastures/charred_log", "x": 90 },
+        "axis=x": { "model": "dungeons:block/pumpkin_pastures/charred_log", "x": 90, "y": 90 }
     }
 }
