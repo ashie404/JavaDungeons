@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "bottom": "dungeons:block/pumpkin_pastures/charred_dirt",
+        "side": "dungeons:block/pumpkin_pastures/charred_grass_block_side",
+        "top": "dungeons:block/pumpkin_pastures/charred_grass_block_top"
+    }
+}

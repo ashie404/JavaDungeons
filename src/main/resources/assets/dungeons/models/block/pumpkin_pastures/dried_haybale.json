@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "side": "dungeons:block/pumpkin_pastures/dried_haybale_side",
+        "end": "dungeons:block/pumpkin_pastures/dried_haybale_top"
+    }
+}

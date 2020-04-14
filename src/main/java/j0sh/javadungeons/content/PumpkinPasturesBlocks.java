@@ -19,9 +19,12 @@ public class PumpkinPasturesBlocks {
     // plants
     public static DungeonsBlock PM_BURNT_PUMPKIN;
     public static DungeonsBlock PM_ROTTED_PUMPKIN;
+    public static DungeonsPillar PM_DRIED_HAYBALE;
 
     // ground related
+    public static DungeonsBlock PM_CHARRED_GRASS_BLOCK;
     public static DungeonsBlock PM_CHARRED_DIRT;
+    public static DungeonsPath PM_CHARRED_FARMLAND;
 
     // charred stones
     public static DungeonsBlock PM_CHARRED_STONE;
@@ -44,13 +47,16 @@ public class PumpkinPasturesBlocks {
         // plants
         PM_BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
         PM_ROTTED_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
+        PM_DRIED_HAYBALE = new DungeonsPillar(Blocks.HAY_BLOCK, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
 
         // grass
         PM_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
         PM_CHARRED_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
 
         // ground related
+        PM_CHARRED_GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass_block");
         PM_CHARRED_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt");
+        PM_CHARRED_FARMLAND = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_farmland");
         
         // charred stones
         PM_CHARRED_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");

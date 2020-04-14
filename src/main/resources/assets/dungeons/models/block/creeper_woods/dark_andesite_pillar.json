@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/creeper_woods/dark_andesite_pillar"}}
+{"parent": "minecraft:block/cube_column", "textures": {"side": "dungeons:block/creeper_woods/dark_andesite_pillar", "end": "dungeons:block/creeper_woods/dark_andesite_pillar_top"}}

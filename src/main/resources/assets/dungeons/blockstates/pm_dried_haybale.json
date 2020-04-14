@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "dungeons:block/pumpkin_pastures/dried_haybale" },
+        "axis=z": { "model": "dungeons:block/pumpkin_pastures/dried_haybale", "x": 90 },
+        "axis=x": { "model": "dungeons:block/pumpkin_pastures/dried_haybale", "x": 90, "y": 90 }
+    }
+}

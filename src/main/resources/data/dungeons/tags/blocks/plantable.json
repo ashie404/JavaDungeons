@@ -3,12 +3,12 @@
         "dungeons:dirt",
         "dungeons:grassy_dirt",
         "dungeons:dense_grassy_dirt",
-        "dungeons:sparse_grassy_dirt",
+        "dungeons:grass_block",
+        "dungeons:cw_dirt",
+        "dungeons:cw_grassy_dirt",
+        "dungeons:cw_dense_grassy_dirt",
         "dungeons:cw_grass_block",
-        "dungeons:pm_autumnal_grass_block",
-        "dungeons:pm_autumnal_grassy_dirt",
-        "dungeons:pm_dense_autumnal_grassy_dirt",
-        "dungeons:pm_sparse_autumnal_grassy_dirt",
-        "dungeons:pm_charred_dirt"
+        "dungeons:pm_charred_dirt",
+        "dungeons:pm_charred_grass_block"
     ]
 }

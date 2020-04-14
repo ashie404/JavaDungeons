@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/template_farmland",
+    "textures": {
+        "particle": "dungeons:block/pumpkin_pastures/charred_dirt",
+        "dirt":     "dungeons:block/pumpkin_pastures/charred_dirt",
+        "top":      "dungeons:block/pumpkin_pastures/charred_farmland"
+    }
+}
