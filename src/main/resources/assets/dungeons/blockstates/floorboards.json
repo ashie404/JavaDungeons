@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/floorboards"}}}
+{"variants": 
+    {"": [
+        {"model": "dungeons:block/floorboards"},
+        {"model": "dungeons:block/floorboards_1"}
+    ]}
+}

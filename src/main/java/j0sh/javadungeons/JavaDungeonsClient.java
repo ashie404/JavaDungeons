@@ -80,6 +80,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_SHRUB,
+            CreeperWoodsBlocks.CW_POP_FLOWER,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,

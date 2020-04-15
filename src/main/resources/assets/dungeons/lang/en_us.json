@@ -45,10 +45,14 @@
     "block.dungeons.sanded_andesite_bricks": "Sanded Andesite Bricks",
     "block.dungeons.chiseled_sanded_andesite": "Chiseled Sanded Andesite",
     "block.dungeons.rocky_dirt_path": "Rocky Dirt Path",
+    "block.dungeons.bookshelf": "Bookshelf",
+    "block.dungeons.dusty_bookshelf": "Dusty Bookshelf",
+    "block.dungeons.bridge_planks": "Bridge Planks",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
+    "block.dungeons.cw_mossy_chiseled_stone_bricks": "Mossy Chiseled Stone Bricks",
     "block.dungeons.cw_mossy_andesite": "Mossy Andesite",
     "block.dungeons.cw_dark_polished_andesite": "Dark Polished Andesite",
     "block.dungeons.cw_mossy_dark_andesite": "Mossy Dark Andesite",
@@ -74,6 +78,8 @@
     "block.dungeons.cw_glow_melon_roots": "Glow Melon Roots",
     "block.dungeons.cw_dirt_path": "Dirt Path",
     "block.dungeons.cw_rocky_dirt_path": "Rocky Dirt Path",
+    "block.dungeons.cw_cobwebbed_dirt": "Cobwebbed Dirt",
+    "block.dungeons.cw_pop_flower": "Pop Flower",
 
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
@@ -102,6 +108,7 @@
     "block.dungeons.pm_dried_haybale": "Dried Haybale",
     "block.dungeons.pm_charred_grass_block": "Charred Grass Block",
     "block.dungeons.pm_charred_farmland": "Charred Farmland",
+    "block.dungeons.pm_charred_dirt_embers": "Charred Dirt Embers",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 

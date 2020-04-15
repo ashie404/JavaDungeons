@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            {"model": "dungeons:block/creeper_woods/pop_flower/0"},
+            {"model": "dungeons:block/creeper_woods/pop_flower/1"},
+            {"model": "dungeons:block/creeper_woods/pop_flower/2"},
+            {"model": "dungeons:block/creeper_woods/pop_flower/3"}
+        ]
+    }
+}
