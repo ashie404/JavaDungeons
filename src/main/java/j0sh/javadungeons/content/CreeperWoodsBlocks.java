@@ -27,12 +27,12 @@ public class CreeperWoodsBlocks {
     public static DungeonsPillar CW_DARK_ANDESITE_PILLAR;
     
     // ground related
-    public static DungeonsBlock CW_GRASS_BLOCK;
+    public static DungeonsPathable CW_GRASS_BLOCK;
     public static DungeonsBlock CW_GRASSY_DIRT;
     public static DungeonsBlock CW_DENSE_GRASSY_DIRT;
-    public static DungeonsBlock CW_DIRT;
+    public static DungeonsPathable CW_DIRT;
     public static DungeonsPath CW_DIRT_PATH;
-    public static DungeonsBlock CW_ROCKY_DIRT;
+    public static DungeonsPathable CW_ROCKY_DIRT;
     public static DungeonsPath CW_ROCKY_DIRT_PATH;
 
     // creeper woods granite variant
@@ -75,13 +75,13 @@ public class CreeperWoodsBlocks {
         CW_DARK_ANDESITE_PILLAR = new DungeonsPillar(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_pillar");
 
         // ground related
-        CW_GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
+        CW_GRASS_BLOCK = new DungeonsPathable(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, Blocks.GRASS_PATH, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
         CW_GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_grassy_dirt");
         CW_DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dense_grassy_dirt");
-        CW_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt");
         CW_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
-        CW_ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
+        CW_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, CW_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_dirt");
         CW_ROCKY_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt_path");
+        CW_ROCKY_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, CW_ROCKY_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
 
         // creeper woods granite variant
         CW_POLISHED_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite");

@@ -4,7 +4,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.BranchedTreeFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;

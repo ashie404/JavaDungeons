@@ -22,14 +22,14 @@ public class GenericBlocks {
     public static DungeonsFoodBox CORN_FOOD_BOX;
 
     // ground related
-    public static DungeonsBlock DIRT;
+    public static DungeonsPathable DIRT;
     public static DungeonsSlab DIRT_SLAB;
     public static DungeonsPath DIRT_PATH;
-    public static DungeonsBlock ROCKY_DIRT;
+    public static DungeonsPathable ROCKY_DIRT;
     public static DungeonsPath ROCKY_DIRT_PATH;
     public static DungeonsBlock DENSE_GRASSY_DIRT;
     public static DungeonsBlock GRASSY_DIRT;
-    public static DungeonsBlock GRASS_BLOCK;
+    public static DungeonsPathable GRASS_BLOCK;
 
     // wood related
     public static DungeonsBlock FLOORBOARDS;
@@ -81,14 +81,14 @@ public class GenericBlocks {
         CORN_FOOD_BOX = new DungeonsFoodBox(Blocks.SPRUCE_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "corn_food_box");
 
         // ground related
-        DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt");
-        DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_slab");
         DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_path");
-        ROCKY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt");
+        DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
+        DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dirt_slab");
         ROCKY_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_dirt_path");
+        ROCKY_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
         DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dense_grassy_dirt");
         GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grassy_dirt");
-        GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grass_block");
+        GRASS_BLOCK = new DungeonsPathable(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
 
         // wood related
         FLOORBOARDS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "floorboards");

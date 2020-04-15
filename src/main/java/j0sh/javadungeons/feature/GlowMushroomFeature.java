@@ -7,14 +7,12 @@ import j0sh.javadungeons.content.*;
 import java.util.Random;
 import java.util.function.Function;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
-import net.minecraft.world.gen.feature.SeaPickleFeature;
 import net.minecraft.world.gen.feature.Feature;
 
 public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
@@ -36,7 +34,7 @@ public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
                 .with(SeaPickleBlock.PICKLES, random.nextInt(4) + 1);
 
             // check if the block below is plantable on
-            if (iWorld.getBlockState(new BlockPos(blockPos2.getX(), blockPos2.getY()-1, blockPos2.getZ())).getBlock().matches(Tags.PLANTABLE) 
+            if (iWorld.getBlockState(blockPos2.down()).getBlock().matches(Tags.PLANTABLE) 
             && blockState.canPlaceAt(iWorld, blockPos2))
                 iWorld.setBlockState(blockPos2, blockState, 2);
 
