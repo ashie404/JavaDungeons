@@ -47,7 +47,7 @@ public class GenericBlocks {
     public static DungeonsBlock CRACKED_ANDESITE;
 
     // generic plants
-    public static DungeonsBlock BERRY_BUSH_BLOCK;
+    public static DungeonsLeaves BERRY_BUSH_BLOCK;
     public static DungeonsPlant SHORT_GRASS;
     public static DungeonsPlant FERN;
     public static DungeonsPlant SHRUB;
@@ -106,7 +106,7 @@ public class GenericBlocks {
         CRACKED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "cracked_andesite");
 
         // plants
-        BERRY_BUSH_BLOCK = new DungeonsBlock(Blocks.OAK_LEAVES, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "berry_bush_block");
+        BERRY_BUSH_BLOCK = new DungeonsLeaves(Blocks.OAK_LEAVES, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "berry_bush_block");
         SHORT_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "short_grass");
         FERN = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.SWORDS, JavaDungeons.GENERIC, "shrub");

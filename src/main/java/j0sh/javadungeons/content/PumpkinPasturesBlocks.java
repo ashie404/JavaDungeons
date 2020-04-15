@@ -9,8 +9,8 @@ import j0sh.javadungeons.JavaDungeons;
 public class PumpkinPasturesBlocks {
 
     // foliage
-    public static DungeonsBlock PM_YELLOW_AUTUMNAL_LEAVES;
-    public static DungeonsBlock PM_RED_AUTUMNAL_LEAVES;
+    public static DungeonsLeaves PM_YELLOW_AUTUMNAL_LEAVES;
+    public static DungeonsLeaves PM_RED_AUTUMNAL_LEAVES;
 
     // grass
     public static DungeonsPlant PM_SHRUB;
@@ -41,8 +41,8 @@ public class PumpkinPasturesBlocks {
 
     public static void init() {
         // foliage
-        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsBlock(Blocks.BIRCH_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
-        PM_RED_AUTUMNAL_LEAVES = new DungeonsBlock(Blocks.OAK_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
+        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(Blocks.BIRCH_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
+        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(Blocks.OAK_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
 
         // plants
         PM_BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
