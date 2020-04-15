@@ -10,16 +10,19 @@ import net.minecraft.world.gen.decorator.ChanceHeightmapDecorator;
 import net.minecraft.world.gen.decorator.CountExtraChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.DecoratorConfig;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.RandomFeatureConfig;
 import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.feature.VillageFeatureConfig;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
+import net.minecraft.block.Blocks;
 
 import com.google.common.collect.ImmutableList;
 
@@ -46,12 +49,24 @@ public class CreeperWoodsBiome extends Biome {
         
         DefaultBiomeFeatures.addLandCarvers(this);
         DefaultBiomeFeatures.addDefaultStructures(this);
+
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
 		    Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
             .createDecoratedFeature(Decorator.WATER_LAKE.configure(new ChanceDecoratorConfig(10))));
+            
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addForestFlowers(this);
-        DefaultBiomeFeatures.addMineables(this);
+
+        //DefaultBiomeFeatures.addMineables(this);
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, CreeperWoodsBlocks.CW_DIRT.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 256))));
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.GRAVEL.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(8, 0, 0, 256))));
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.GRANITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.DIORITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.ANDESITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
+        this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, 
+            Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, CreeperWoodsBlocks.CW_MOSSY_STONE.getDefaultState(), 33))
+            .createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 128))));
+
         DefaultBiomeFeatures.addDefaultOres(this);
         DefaultBiomeFeatures.addDefaultDisks(this);
         DefaultBiomeFeatures.addForestTrees(this);
