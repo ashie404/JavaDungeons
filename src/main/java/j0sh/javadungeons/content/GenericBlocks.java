@@ -60,7 +60,9 @@ public class GenericBlocks {
     // sanded andesite
     public static DungeonsBlock SANDED_ANDESITE;
     public static DungeonsBlock SANDED_ANDESITE_TILES;
+    public static DungeonsBlock SHADOWED_SANDED_ANDESITE_TILES;
     public static DungeonsBlock MOSSY_SANDED_ANDESITE_TILES;
+    public static DungeonsBlock MOSSY_SHADOWED_SANDED_ANDESITE_TILES;
     public static DungeonsBlock SANDED_ANDESITE_BRICKS;
     public static DungeonsBlock CHISELED_SANDED_ANDESITE;
 
@@ -123,7 +125,9 @@ public class GenericBlocks {
         // sanded andesite
         SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "sanded_andesite");
         SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "sanded_andesite_tiles");
+        SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "shadowed_sanded_andesite_tiles");
         MOSSY_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "mossy_sanded_andesite_tiles");
+        MOSSY_SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "mossy_shadowed_sanded_andesite_tiles");
         SANDED_ANDESITE_BRICKS = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "sanded_andesite_bricks");
         CHISELED_SANDED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "chiseled_sanded_andesite");
       

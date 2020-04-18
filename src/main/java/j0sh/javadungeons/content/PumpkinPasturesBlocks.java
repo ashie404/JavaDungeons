@@ -33,6 +33,9 @@ public class PumpkinPasturesBlocks {
     public static DungeonsBlock PM_CHARRED_STONE_BRICKS;
     public static DungeonsBlock PM_CRACKED_CHARRED_STONE_BRICKS;
 
+    // stone related
+    public static DungeonsBlock PM_MOSSY_STONE_BRICKS;
+
     // wood related
     public static DungeonsPillar PM_CHARRED_LOG;
     public static DungeonsPillar PM_CHARRED_WOOD;
@@ -65,6 +68,9 @@ public class PumpkinPasturesBlocks {
         PM_CHARRED_COBBLESTONE = new DungeonsBlock(Blocks.COBBLESTONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
         PM_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks");
         PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.CRACKED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
+
+        // stone related
+        PM_MOSSY_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_mossy_stone_bricks");
 
         // wood related
         PM_CHARRED_LOG = new DungeonsPillar(Blocks.OAK_LOG, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");

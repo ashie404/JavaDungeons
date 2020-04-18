@@ -13,6 +13,7 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_MOSSY_STONE;
     public static DungeonsBlock CW_MOSSY_STONE_BRICKS;
     public static DungeonsBlock CW_MOSSY_CHISELED_STONE_BRICKS;
+    public static DungeonsBlock CW_SLOTTED_STONE;
 
     // andesite variants
     public static DungeonsBlock CW_MOSSY_ANDESITE;
@@ -65,6 +66,7 @@ public class CreeperWoodsBlocks {
         CW_MOSSY_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_stone");
         CW_MOSSY_STONE_BRICKS = new DungeonsBlock(Blocks.MOSSY_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_stone_bricks");
         CW_MOSSY_CHISELED_STONE_BRICKS = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_chiseled_stone_bricks");
+        CW_SLOTTED_STONE = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_slotted_stone");
 
         // andesite variants
         CW_MOSSY_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_andesite");
