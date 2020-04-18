@@ -47,9 +47,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
             GenericBlocks.GRASS_BLOCK,
+            GenericBlocks.ROCKY_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
-            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT
+            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
+            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT
         );
 
         ColorProviderRegistry.ITEM.register(
@@ -59,9 +61,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.DENSE_GRASSY_DIRT.blockItem,
             GenericBlocks.GRASSY_DIRT.blockItem,
             GenericBlocks.GRASS_BLOCK.blockItem,
+            GenericBlocks.ROCKY_GRASSY_DIRT.blockItem,
             CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
             CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
-            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem
+            CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem,
+            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem
         );
 
         // register render layers
@@ -74,6 +78,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.DIMENSIONAL_RECTIFIER,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.ROCKY_GRASSY_DIRT,
             GenericBlocks.GRASS_BLOCK,
             GenericBlocks.SHRUB,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
@@ -81,6 +86,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_SHRUB,
             CreeperWoodsBlocks.CW_POP_FLOWER,
+            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,

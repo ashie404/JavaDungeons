@@ -29,6 +29,7 @@ public class GenericBlocks {
     public static DungeonsPath ROCKY_DIRT_PATH;
     public static DungeonsBlock DENSE_GRASSY_DIRT;
     public static DungeonsBlock GRASSY_DIRT;
+    public static DungeonsBlock ROCKY_GRASSY_DIRT;
     public static DungeonsPathable GRASS_BLOCK;
 
     // wood related
@@ -91,6 +92,7 @@ public class GenericBlocks {
         ROCKY_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
         DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "dense_grassy_dirt");
         GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "grassy_dirt");
+        ROCKY_GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.GENERIC, "rocky_grassy_dirt");
         GRASS_BLOCK = new DungeonsPathable(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
 
         // wood related

@@ -43,20 +43,19 @@ public class DungeonsGlowMushroom extends SeaPickleBlock implements Fluidloggabl
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (!world.isClient) {
-            // -0.0 on y axis because minecraft entity velocity big dumb
             if (soundsPlayed <= 5) {
                 Vec3d velocity = entity.getVelocity();
+                // -0.0 on y axis because minecraft entity velocity big dumb
                 if (!velocity.equals(new Vec3d(0.0, -0.0, 0.0))) {
                     // random seed based on player velocity
                     Random rand = new Random(Math.round(velocity.x*4 + velocity.y*4 + velocity.z*4));
-                    Random randpitch = new Random();
                     world.playSound(
                             null, // Player - if non-null, will play sound for every nearby player *except* the specified player
                             pos, // The position of where the sound will come from
                             Sounds.CW_GLOW_MUSHROOM_STEP, // The sound that will play, in this case, the sound the anvil plays when it lands.
-                            SoundCategory.BLOCKS, // This determines which of the volume sliders affect this sound
-                            (rand.nextFloat()*0.13f), //Random volume multiplier (multiplied by 0.15 to avoid ear explosion)
-                            0.98f + (rand.nextFloat()/10) + (randpitch.nextFloat()/50) // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
+                            SoundCategory.BLOCKS, // volume slider category
+                            rand.nextFloat()*0.13f, //Random volume multiplier (multiplied by 0.13 to avoid ear explosion)
+                            1.0f // Pitch multiplier
                     );
                     soundsPlayed++;
                 }

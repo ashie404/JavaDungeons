@@ -48,6 +48,7 @@
     "block.dungeons.bookshelf": "Bookshelf",
     "block.dungeons.dusty_bookshelf": "Dusty Bookshelf",
     "block.dungeons.bridge_planks": "Bridge Planks",
+    "block.dungeons.rocky_grassy_dirt": "Rocky Grassy Dirt",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
@@ -80,6 +81,7 @@
     "block.dungeons.cw_rocky_dirt_path": "Rocky Dirt Path",
     "block.dungeons.cw_cobwebbed_dirt": "Cobwebbed Dirt",
     "block.dungeons.cw_pop_flower": "Pop Flower",
+    "block.dungeons.cw_rocky_grassy_dirt": "Rocky Grassy Dirt",
 
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
