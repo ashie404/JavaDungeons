@@ -15,9 +15,15 @@ import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
+import net.minecraft.world.gen.placer.SimpleBlockPlacer;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.feature.RandomPatchFeature;
+import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.block.Blocks;
+
+import com.google.common.collect.ImmutableSet;
 
 import j0sh.javadungeons.content.*;
 
@@ -56,6 +62,8 @@ public class CreeperWoodsBiome extends Biome {
         this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.GRANITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
         this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.DIORITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
         this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, Blocks.ANDESITE.getDefaultState(), 33)).createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 80))));
+        
+        // mossy stone
         this.addFeature(GenerationStep.Feature.UNDERGROUND_ORES, 
             Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Target.NATURAL_STONE, CreeperWoodsBlocks.CW_MOSSY_STONE.getDefaultState(), 33))
             .createDecoratedFeature(Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(10, 0, 0, 128))));
@@ -65,9 +73,26 @@ public class CreeperWoodsBiome extends Biome {
         DefaultBiomeFeatures.addForestTrees(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
 
+        // glow shrooms
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
             Features.GLOW_PLANTS.configure(new SeaPickleFeatureConfig(4))
             .createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP.configure(new ChanceDecoratorConfig(3))));
+
+        // pop flower and flower patches
+        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+                new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_POP_FLOWER.getDefaultState()),
+                new SimpleBlockPlacer())
+            .tries(64).whitelist(ImmutableSet.of(CreeperWoodsBlocks.CW_GRASS_BLOCK))
+            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(1)))
+        );
+        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+                new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_FLOWER_PATCH.getDefaultState()),
+                new SimpleBlockPlacer())
+            .tries(64).whitelist(ImmutableSet.of(CreeperWoodsBlocks.CW_GRASS_BLOCK))
+            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(1)))
+        );
 
         DefaultBiomeFeatures.addForestGrass(this);
         DefaultBiomeFeatures.addDefaultMushrooms(this);
