@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            {"model": "dungeons:block/creeper_woods/flower_patch"},
+            {"model": "dungeons:block/creeper_woods/flower_patch", "y": 90},
+            {"model": "dungeons:block/creeper_woods/flower_patch", "y": 180},
+            {"model": "dungeons:block/creeper_woods/flower_patch", "y": 270}
+        ]
+    }
+}

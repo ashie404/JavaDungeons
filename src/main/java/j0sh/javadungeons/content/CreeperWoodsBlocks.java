@@ -54,6 +54,7 @@ public class CreeperWoodsBlocks {
     // plants
     public static DungeonsPlant CW_SHRUB;
     public static DungeonsGlowingPlant CW_POP_FLOWER;
+    public static DungeonsPlant CW_FLOWER_PATCH;
 
     // custom dungeons blocks
     public static DungeonsGlowMushroom CW_GLOW_MUSHROOM;
@@ -100,6 +101,7 @@ public class CreeperWoodsBlocks {
         // plants
         CW_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_shrub");
         CW_POP_FLOWER = new DungeonsGlowingPlant(Blocks.TALL_GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
+        CW_FLOWER_PATCH = new DungeonsPlant(Blocks.DANDELION, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_flower_patch");
 
         // custom dungeons blocks
         CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Blocks.SEA_PICKLE, true, FabricToolTags.SWORDS, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");
