@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "top":    "dungeons:block/stone_tiles",
+        "side":   "dungeons:block/stone_tiles",
+        "bottom": "dungeons:block/stone_tiles"
+    }
+}

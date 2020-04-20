@@ -44,8 +44,11 @@ public class GenericBlocks {
     public static DungeonsBlock DIRTY_DARK_STONE_BRICKS;
     public static DungeonsBlock CHISELED_DARK_STONE;
     public static DungeonsBlock STONE_TILES;
+    public static DungeonsSlab STONE_TILES_SLAB;
     public static DungeonsBlock DIRTY_STONE_TILES;
     public static DungeonsBlock DIRTY_STONE_TILES_1;
+    public static DungeonsSlab DIRTY_STONE_TILES_SLAB;
+    public static DungeonsSlab DIRTY_STONE_TILES_SLAB_1;
 
     // stone related
     public static DungeonsBlock DIRTY_STONE;
@@ -113,8 +116,11 @@ public class GenericBlocks {
         DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
         CHISELED_DARK_STONE = new DungeonsBlock(Blocks.CHISELED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "chiseled_dark_stone");
         STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "stone_tiles");
+        STONE_TILES_SLAB = new DungeonsSlab(Blocks.STONE_BRICK_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "stone_tiles_slab");
         DIRTY_STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles");
         DIRTY_STONE_TILES_1 = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles_1");
+        DIRTY_STONE_TILES_SLAB = new DungeonsSlab(Blocks.STONE_BRICK_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles_slab");
+        DIRTY_STONE_TILES_SLAB_1 = new DungeonsSlab(Blocks.STONE_BRICK_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles_slab_1");
 
         // stone related
         DIRTY_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone");

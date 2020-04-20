@@ -53,6 +53,9 @@
     "block.dungeons.mossy_shadowed_sanded_andesite_tiles": "Mossy Shadowed Sanded Andesite Tiles",
     "block.dungeons.dirty_stone": "Dirty Stone",
     "block.dungeons.empty_bookshelf": "Empty Bookshelf",
+    "block.dungeons.stone_tiles_slab": "Stone Tiles Slab",
+    "block.dungeons.dirty_stone_tiles_slab": "Dirty Stone Tiles Slab",
+    "block.dungeons.dirty_stone_tiles_slab_1": "Dirty Stone Tiles Slab",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
