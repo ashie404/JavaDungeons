@@ -30,7 +30,11 @@ public class PumpkinPasturesBlocks {
     // charred stones
     public static DungeonsBlock PM_CHARRED_STONE;
     public static DungeonsBlock PM_CHARRED_COBBLESTONE;
+    public static DungeonsSlab PM_CHARRED_COBBLESTONE_SLAB;
+    public static DungeonsStairs PM_CHARRED_COBBLESTONE_STAIRS;
     public static DungeonsBlock PM_CHARRED_STONE_BRICKS;
+    public static DungeonsSlab PM_CHARRED_STONE_BRICK_SLAB;
+    public static DungeonsStairs PM_CHARRED_STONE_BRICK_STAIRS;
     public static DungeonsBlock PM_CRACKED_CHARRED_STONE_BRICKS;
 
     // stone related
@@ -66,7 +70,11 @@ public class PumpkinPasturesBlocks {
         // charred stones
         PM_CHARRED_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
         PM_CHARRED_COBBLESTONE = new DungeonsBlock(Blocks.COBBLESTONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
+        PM_CHARRED_COBBLESTONE_SLAB = new DungeonsSlab(Blocks.COBBLESTONE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_slab");
+        PM_CHARRED_COBBLESTONE_STAIRS = new DungeonsStairs(Blocks.COBBLESTONE_STAIRS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_stairs");
         PM_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks");
+        PM_CHARRED_STONE_BRICK_SLAB = new DungeonsSlab(Blocks.STONE_BRICK_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_slab");
+        PM_CHARRED_STONE_BRICK_STAIRS = new DungeonsStairs(Blocks.STONE_BRICK_STAIRS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_stairs");
         PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.CRACKED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
 
         // stone related

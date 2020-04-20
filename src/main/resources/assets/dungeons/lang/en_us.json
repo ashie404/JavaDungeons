@@ -52,6 +52,7 @@
     "block.dungeons.shadowed_sanded_andesite_tiles": "Shadowed Sanded Andesite Tiles",
     "block.dungeons.mossy_shadowed_sanded_andesite_tiles": "Mossy Shadowed Sanded Andesite Tiles",
     "block.dungeons.dirty_stone": "Dirty Stone",
+    "block.dungeons.empty_bookshelf": "Empty Bookshelf",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
@@ -88,6 +89,7 @@
     "block.dungeons.cw_slotted_stone": "Slotted Stone",
     "block.dungeons.cw_dark_andesite_slab": "Dark Andesite Slab",
     "block.dungeons.cw_dirty_granite": "Dirty Granite",
+    "block.dungeons.cw_flower_patch": "Flower Patch",
 
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
@@ -118,7 +120,10 @@
     "block.dungeons.pm_charred_farmland": "Charred Farmland",
     "block.dungeons.pm_charred_dirt_embers": "Charred Dirt Embers",
     "block.dungeons.pm_mossy_stone_bricks": "Mossy Stone Bricks",
-    "block.dungeons.cw_flower_patch": "Flower Patch",
+    "block.dungeons.pm_charred_cobblestone_slab": "Charred Cobblestone Slab",
+    "block.dungeons.pm_charred_cobblestone_stairs": "Charred Cobblestone Stairs",
+    "block.dungeons.pm_charred_stone_brick_slab": "Charred Stone Brick Slab",
+    "block.dungeons.pm_charred_stone_brick_stairs": "Charred Stone Brick Stairs",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 

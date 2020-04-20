@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "top":    "dungeons:block/pumpkin_pastures/charred_cobblestone",
+        "side":   "dungeons:block/pumpkin_pastures/charred_cobblestone",
+        "bottom": "dungeons:block/pumpkin_pastures/charred_cobblestone"
+    }
+}
