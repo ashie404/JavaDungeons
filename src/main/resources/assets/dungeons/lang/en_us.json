@@ -51,6 +51,7 @@
     "block.dungeons.rocky_grassy_dirt": "Rocky Grassy Dirt",
     "block.dungeons.shadowed_sanded_andesite_tiles": "Shadowed Sanded Andesite Tiles",
     "block.dungeons.mossy_shadowed_sanded_andesite_tiles": "Mossy Shadowed Sanded Andesite Tiles",
+    "block.dungeons.dirty_stone": "Dirty Stone",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
@@ -85,6 +86,8 @@
     "block.dungeons.cw_pop_flower": "Pop Flower",
     "block.dungeons.cw_rocky_grassy_dirt": "Rocky Grassy Dirt",
     "block.dungeons.cw_slotted_stone": "Slotted Stone",
+    "block.dungeons.cw_dark_andesite_slab": "Dark Andesite Slab",
+    "block.dungeons.cw_dirty_granite": "Dirty Granite",
 
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",

@@ -46,6 +46,9 @@ public class GenericBlocks {
     public static DungeonsBlock DIRTY_STONE_TILES;
     public static DungeonsBlock DIRTY_STONE_TILES_1;
 
+    // stone related
+    public static DungeonsBlock DIRTY_STONE;
+
     // andesite related
     public static DungeonsBlock EMBLEMED_ANDESITE;
     public static DungeonsBlock CRACKED_ANDESITE;
@@ -110,6 +113,9 @@ public class GenericBlocks {
         STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "stone_tiles");
         DIRTY_STONE_TILES = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles");
         DIRTY_STONE_TILES_1 = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone_tiles_1");
+
+        // stone related
+        DIRTY_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_stone");
 
         // andesite related
         EMBLEMED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "emblemed_andesite");

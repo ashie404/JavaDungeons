@@ -21,6 +21,7 @@ public class CreeperWoodsBlocks {
 
     // dark andesite
     public static DungeonsBlock CW_DARK_POLISHED_ANDESITE;
+    public static DungeonsSlab CW_DARK_ANDESITE_SLAB;
     public static DungeonsBlock CW_MOSSY_DARK_ANDESITE;
     public static DungeonsBlock CW_MOSSY_DARK_ANDESITE_TILES;
     public static DungeonsBlock CW_DARK_ANDESITE_TILES;
@@ -41,6 +42,7 @@ public class CreeperWoodsBlocks {
 
     // creeper woods granite variant
     public static DungeonsBlock CW_POLISHED_GRANITE;
+    public static DungeonsBlock CW_DIRTY_GRANITE;
     public static DungeonsBlock CW_CHISELED_GRANITE;
     public static DungeonsSlab CW_POLISHED_GRANITE_SLAB;
 
@@ -75,6 +77,7 @@ public class CreeperWoodsBlocks {
 
         // dark andesite
         CW_DARK_POLISHED_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_polished_andesite");
+        CW_DARK_ANDESITE_SLAB = new DungeonsSlab(Blocks.POLISHED_ANDESITE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_slab");
         CW_MOSSY_DARK_ANDESITE = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_dark_andesite");
         CW_MOSSY_DARK_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_mossy_dark_andesite_tiles");
         CW_DARK_ANDESITE_TILES = new DungeonsBlock(Blocks.POLISHED_ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_tiles");
@@ -97,7 +100,8 @@ public class CreeperWoodsBlocks {
         CW_POLISHED_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite");
         CW_CHISELED_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_chiseled_granite");
         CW_POLISHED_GRANITE_SLAB = new DungeonsSlab(Blocks.POLISHED_GRANITE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite_slab");
-
+        CW_DIRTY_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dirty_granite");
+        
         // plants
         CW_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_shrub");
         CW_POP_FLOWER = new DungeonsGlowingPlant(Blocks.TALL_GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
