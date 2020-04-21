@@ -102,6 +102,9 @@ public class CreeperWoodsBlocks {
         CW_POLISHED_GRANITE_SLAB = new DungeonsSlab(Blocks.POLISHED_GRANITE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_polished_granite_slab");
         CW_DIRTY_GRANITE = new DungeonsBlock(Blocks.POLISHED_GRANITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dirty_granite");
         
+        // floor tiles
+        CW_DIRTY_FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.CREEPER_WOODS, "cw_dirty_floor_tile");
+
         // plants
         CW_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_shrub");
         CW_POP_FLOWER = new DungeonsGlowingPlant(Blocks.TALL_GRASS, true, FabricToolTags.HOES, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
