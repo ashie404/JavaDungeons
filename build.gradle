@@ -28,7 +28,7 @@ dependencies {
 
 	// Towelette, used for custom dungeons fluid waterlogging things
 	modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
-	include("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
+	include("com.github.Virtuoel:Towelette:${project.towelette}")
 }
 
 processResources {
