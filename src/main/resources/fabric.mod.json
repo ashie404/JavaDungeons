@@ -8,6 +8,11 @@
   "authors": [
     "J0SH"
   ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/javadungeons",
+    "sources": "https://github.com/TheJSHuA/JavaDungeons",
+    "issues": "https://github.com/TheJSHuA/JavaDungeons/issues"
+  },
   "license": "MIT",
   "icon": "assets/dungeons/icon.png",
 
@@ -29,7 +34,7 @@
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.15.x",
-    "towelette": "*"
+    "towelette": ">=3.0.0"
   },
   "suggests": {
     "flamingo": "*"
