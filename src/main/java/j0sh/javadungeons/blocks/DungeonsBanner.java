@@ -66,7 +66,7 @@ public class DungeonsBanner extends Block {
     }
 
     public DungeonsBanner(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
-        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
+        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).collidable(false).build());
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(ROTATION, 0));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
