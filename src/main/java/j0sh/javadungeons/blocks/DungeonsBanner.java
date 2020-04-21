@@ -74,6 +74,6 @@ public class DungeonsBanner extends Block {
 
     static {
         ROTATION = Properties.ROTATION;
-        SHAPE = Block.createCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
+        SHAPE = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     }
 }
