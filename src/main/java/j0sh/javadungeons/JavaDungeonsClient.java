@@ -81,6 +81,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.ROCKY_GRASSY_DIRT,
             GenericBlocks.GRASS_BLOCK,
             GenericBlocks.SHRUB,
+            GenericBlocks.RIPPED_BANNER,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,

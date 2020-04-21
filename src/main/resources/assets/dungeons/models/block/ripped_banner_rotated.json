@@ -1,0 +1,49 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "dungeons:block/ripped_banner",
+		"particle": "dungeons:block/ripped_banner"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 32, 9],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 15, 16, 16], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [0, 13, 16, 14], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 13, 16, 14], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [0, 14.25, 16, 15.25], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [0.75, 12.25, 1.5, 13], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 12.25, 0.75, 13], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 27, 5],
+			"to": [16, 29, 7],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [6.75, 1.25, 14.75, 2.25], "texture": "#0"},
+				"east": {"uv": [14.75, 0.75, 15.5, 1.5], "texture": "#0"},
+				"south": {"uv": [6.75, 0.5, 14.75, 1.5], "texture": "#0"},
+				"west": {"uv": [14.75, 1.5, 15.5, 2.25], "texture": "#0"},
+				"up": {"uv": [6.75, 0, 14.75, 1], "texture": "#0"},
+				"down": {"uv": [6.75, 1.5, 14.75, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1.5, 4, 6],
+			"to": [15, 27, 6],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 6.75, 11.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 6.75], "texture": "#missing"},
+				"south": {"uv": [0, 0, 6.75, 11.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 6.75], "texture": "#missing"},
+				"up": {"uv": [0, 0, 4, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 4, 0], "texture": "#missing"}
+			}
+		}
+	]
+}
