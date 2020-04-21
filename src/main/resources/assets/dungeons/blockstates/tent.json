@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/tent" },
+        "facing=south": { "model": "dungeons:block/tent", "y": 180 },
+        "facing=east": { "model": "dungeons:block/tent", "y": 90 },
+        "facing=west": { "model": "dungeons:block/tent", "y": 270 }
+    }
+}
