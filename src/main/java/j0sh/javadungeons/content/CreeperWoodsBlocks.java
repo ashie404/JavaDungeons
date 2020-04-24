@@ -34,6 +34,7 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_GRASSY_DIRT;
     public static DungeonsBlock CW_DENSE_GRASSY_DIRT;
     public static DungeonsPathable CW_DIRT;
+    public static DungeonsSlab CW_DIRT_SLAB;
     public static DungeonsPath CW_DIRT_PATH;
     public static DungeonsPathable CW_ROCKY_DIRT;
     public static DungeonsPath CW_ROCKY_DIRT_PATH;
@@ -91,6 +92,7 @@ public class CreeperWoodsBlocks {
         CW_DENSE_GRASSY_DIRT = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dense_grassy_dirt");
         CW_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
         CW_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, CW_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_dirt");
+        CW_DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_dirt_slab");
         CW_ROCKY_DIRT_PATH = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt_path");
         CW_ROCKY_DIRT = new DungeonsPathable(Blocks.DIRT, true, FabricToolTags.SHOVELS, CW_ROCKY_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
         CW_ROCKY_GRASSY_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.CREEPER_WOODS, "cw_rocky_grassy_dirt");

@@ -20,6 +20,8 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
+import com.google.common.collect.ImmutableSet;
+
 import j0sh.javadungeons.content.*;
 
 public class DungeonsPlainsBiome extends Biome {
@@ -71,6 +73,15 @@ public class DungeonsPlainsBiome extends Biome {
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(GenericBlocks.SHRUB.getDefaultState()), new SimpleBlockPlacer())).tries(16).build()
         ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));     
+
+        // add berry bush blocks
+        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+                new SimpleBlockStateProvider(GenericBlocks.BERRY_BUSH_BLOCK.getDefaultState()),
+                new SimpleBlockPlacer())
+            .tries(64).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
+            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(1)))
+        );
 
         DefaultBiomeFeatures.addPlainsTallGrass(this);
         DefaultBiomeFeatures.addSprings(this);
