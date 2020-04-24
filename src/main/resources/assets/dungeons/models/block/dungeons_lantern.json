@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "dungeons:block/dungeons_lantern",
+		"all": "dungeons:block/dungeons_lantern"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 7, 11],
+			"faces": {
+				"north": {"uv": [0, 2, 6, 9], "texture": "#all"},
+				"east": {"uv": [0, 2, 6, 9], "texture": "#all"},
+				"south": {"uv": [0, 2, 6, 9], "texture": "#all"},
+				"west": {"uv": [0, 2, 6, 9], "texture": "#all"},
+				"up": {"uv": [0, 9, 6, 15], "texture": "#all"},
+				"down": {"uv": [0, 9, 6, 15], "texture": "#all", "cullface": "down"}
+			}
+		},
+		{
+			"from": [5, 7, 5],
+			"to": [11, 9, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"east": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"south": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"west": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"up": {"uv": [0, 9, 6, 15], "texture": "#all"}
+			}
+		},
+		{
+			"from": [6.5, 9, 8],
+			"to": [9.5, 11, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [11, 1, 14, 3], "texture": "#all"},
+				"south": {"uv": [11, 1, 14, 3], "texture": "#all"}
+			}
+		},
+		{
+			"from": [8, 9, 6.5],
+			"to": [8, 11, 9.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [11, 10, 14, 12], "texture": "#all"},
+				"west": {"uv": [11, 10, 14, 12], "texture": "#all"}
+			}
+		}
+	]
+}

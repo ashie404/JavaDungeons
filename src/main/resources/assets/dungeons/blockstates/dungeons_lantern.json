@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "hanging=true": { "model":  "dungeons:block/dungeons_hanging_lantern"},
+        "hanging=false": { "model": "dungeons:block/dungeons_lantern"}
+  }
+}
