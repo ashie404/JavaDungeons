@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/fence_post",
     "textures": {
-        "texture": "dungeons:block/rope_fence"
+        "texture": "dungeons:block/dungeons_planks"
     }
 }
