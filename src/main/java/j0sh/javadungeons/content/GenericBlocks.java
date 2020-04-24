@@ -14,6 +14,7 @@ public class GenericBlocks {
     public static DungeonsBlock CRATE;
     public static DungeonsBanner RIPPED_BANNER;
     public static DungeonsTent TENT;
+    public static DungeonsFence ROPE_FENCE;
 
     // food related
     public static DungeonsBlock BARREL_CLOSED;
@@ -88,6 +89,7 @@ public class GenericBlocks {
         CRATE = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
         RIPPED_BANNER = new DungeonsBanner(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "ripped_banner");
         TENT = new DungeonsTent(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "tent");
+        ROPE_FENCE = new DungeonsFence(Blocks.OAK_FENCE, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "rope_fence");
 
         // food related items
         BARREL_CLOSED = new DungeonsBlock(Blocks.BARREL, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
