@@ -39,7 +39,7 @@ public class GenericBlocks {
     public static DungeonsBlock BOOKSHELF;
     public static DungeonsBlock DUSTY_BOOKSHELF;
     public static DungeonsBlock EMPTY_BOOKSHELF;
-    public static DungeonsBlock BRIDGE_PLANKS;
+    public static DungeonsTopSlab BRIDGE_PLANKS;
 
     // stone-brick related
     public static DungeonsBlock DARK_STONE_BRICKS;
@@ -113,7 +113,7 @@ public class GenericBlocks {
         BOOKSHELF = new DungeonsBlock(Blocks.BOOKSHELF, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "bookshelf");
         DUSTY_BOOKSHELF = new DungeonsBlock(Blocks.BOOKSHELF, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "dusty_bookshelf");
         EMPTY_BOOKSHELF = new DungeonsBlock(Blocks.BOOKSHELF, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "empty_bookshelf");
-        BRIDGE_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "bridge_planks");
+        BRIDGE_PLANKS = new DungeonsTopSlab(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.GENERIC, "bridge_planks");
 
         // stone brick related
         DARK_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dark_stone_bricks");
