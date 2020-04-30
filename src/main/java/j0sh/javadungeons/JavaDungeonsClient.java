@@ -13,9 +13,6 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.minecraft.client.MinecraftClient;
 
-import j0sh.javadungeons.blocks.DimensionalRectifier;
-import j0sh.javadungeons.container.DimensionalRectifierContainer;
-import j0sh.javadungeons.gui.DimensionalRectifierScreen;
 import j0sh.javadungeons.content.*;
 import j0sh.javadungeons.entities.*;
 import j0sh.javadungeons.entities.renderers.*;
@@ -34,13 +31,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
-        // register dimensional rectifier container and GUI
-        ScreenProviderRegistry.INSTANCE.<DimensionalRectifierContainer>registerFactory(DimensionalRectifier.ID, (container) -> new DimensionalRectifierScreen(
-            container, 
-            MinecraftClient.getInstance().player.inventory, 
-            DimensionalRectifier.CONTAINER_NAME
-        ));
 
         // register color providers
         ColorProviderRegistry.BLOCK.register(
@@ -78,7 +68,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.FERN,
             GenericBlocks.BERRY_BUSH_BLOCK,
             GenericBlocks.WATER_PLANT,
-            GenericBlocks.DIMENSIONAL_RECTIFIER,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
             GenericBlocks.ROCKY_GRASSY_DIRT,

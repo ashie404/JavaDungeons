@@ -81,9 +81,6 @@ public class GenericBlocks {
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
-    // custom blocks not in MC: Dungeons
-    public static DimensionalRectifier DIMENSIONAL_RECTIFIER;
-
     public static void init() {
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new DungeonsBlock(Blocks.ANDESITE, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
@@ -157,8 +154,5 @@ public class GenericBlocks {
       
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Blocks.REDSTONE_LAMP, false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "lighthouse_lamp");
-      
-        // custom blocks not in mc: dungeons
-        DIMENSIONAL_RECTIFIER = new DimensionalRectifier();
     }
 }
