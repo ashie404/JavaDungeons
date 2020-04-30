@@ -23,8 +23,8 @@ public class JavaDungeons implements ModInitializer {
 	public static final ItemGroup DESERT_TEMPLE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "desert_temple"), () -> new ItemStack(DesertTempleBlocks.DT_CHISELED_SANDY_STONE));
 	public static final ItemGroup PUMPKIN_PASTURES = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "pumpkin_pastures"), () -> new ItemStack(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES));
 	public static final ItemGroup REDSTONE_MINES = null;//FabricItemGroupBuilder.build(new Identifier(MOD_ID, "redstone_mines"), () -> new ItemStack(RedstoneMinesBlocks.TALL_REDSTONE_CRYSTAL));
+	public static final ItemGroup WEAPONS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "weapons"), () -> new ItemStack(Weapons.BRONZE_AXE));
 	public static final ItemGroup CUSTOM_VARIANTS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "misc"), () -> new ItemStack(GenericBlocks.DIMENSIONAL_RECTIFIER));
-
 
 	@Override
 	public void onInitialize() {
@@ -33,6 +33,7 @@ public class JavaDungeons implements ModInitializer {
 		Sounds.init();
 		Recipes.init();
 		Fluids.init();
+		//Entities.init();
 
 		// blocks
 		GenericBlocks.init();
@@ -40,6 +41,9 @@ public class JavaDungeons implements ModInitializer {
 		DesertTempleBlocks.init();
 		PumpkinPasturesBlocks.init();
 		//RedstoneMinesBlocks.init();
+
+		// items
+		Weapons.init();
 
 		// worldgen
 		Features.init();

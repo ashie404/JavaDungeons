@@ -2,6 +2,7 @@ package j0sh.javadungeons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.minecraft.client.color.block.BlockColorProvider;
@@ -16,6 +17,8 @@ import j0sh.javadungeons.blocks.DimensionalRectifier;
 import j0sh.javadungeons.container.DimensionalRectifierContainer;
 import j0sh.javadungeons.gui.DimensionalRectifierScreen;
 import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.entities.*;
+import j0sh.javadungeons.entities.renderers.*;
 import j0sh.javadungeons.fluids.DungeonsWaterFluid;
 
 public class JavaDungeonsClient implements ClientModInitializer {
@@ -112,5 +115,9 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
+
+        // setup entity renderers
+        /*EntityRendererRegistry.INSTANCE.register(Entities.GLAIVE_ENTITY, 
+        (entityRenderDispatcher, context) -> new GlaiveEntityRenderer(entityRenderDispatcher));*/
     }    
 }

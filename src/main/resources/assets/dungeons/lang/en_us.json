@@ -3,6 +3,7 @@
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
     "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
+    "itemGroup.dungeons.weapons": "Dungeons Weapons",
     "itemGroup.dungeons.misc": "Non-Dungeons Blocks",
 
     "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
@@ -140,5 +141,27 @@
 
     "biome.dungeons.creeper_woods": "Creeper Woods",
     "biome.dungeons.pumpkin_pastures": "Pumpkin Pastures",
-    "biome.dungeons.dungeons_plains": "Dungeons Plains"
+    "biome.dungeons.dungeons_plains": "Dungeons Plains",
+
+    "item.dungeons.iron_axe": "Iron Axe",
+    "item.dungeons.bronze_axe": "Bronze Axe",
+    "item.dungeons.double_axe": "Double Axe",
+
+    "item.dungeons.steel_pickaxe": "Steel Pickaxe",
+
+    "item.dungeons.claymore": "Claymore",
+    "item.dungeons.crimson_core": "Crimson Core",
+    "item.dungeons.cutlass": "Cutlass",
+    "item.dungeons.broadsword": "Broadsword",
+    "item.dungeons.katana": "Katana",
+    "item.dungeons.crimson_katana": "Crimson Katana",
+    "item.dungeons.steel_sword": "Steel Sword",
+
+    "item.dungeons.stone_hammer": "Stone Hammer",
+
+    "item.dungeons.dagger": "Dagger",
+    "item.dungeons.frost_dagger": "Frost Dagger",
+
+    "item.dungeons.sickle": "Sickle",
+    "item.dungeons.obsidian_sickle": "Obsidian Sickle"
 }

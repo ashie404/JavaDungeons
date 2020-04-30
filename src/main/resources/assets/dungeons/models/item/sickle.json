@@ -1,0 +1,6 @@
+{
+    "parent": "dungeons:item/base/handheld_flipped",
+    "textures": {
+        "layer0": "dungeons:item/sickle"
+    }
+}
