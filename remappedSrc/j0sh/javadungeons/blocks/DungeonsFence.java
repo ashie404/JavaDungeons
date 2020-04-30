@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import virtuoel.towelette.api.Fluidloggable;
+
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
 import j0sh.javadungeons.JavaDungeons;
 
-public class DungeonsFence extends FenceBlock implements Fluidloggable {
+public class DungeonsFence extends FenceBlock  {
 
     // fence block
 

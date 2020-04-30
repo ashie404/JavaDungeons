@@ -17,11 +17,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
-import virtuoel.towelette.api.Fluidloggable;
+
 
 import j0sh.javadungeons.JavaDungeons;
 
-public class DungeonsWaterPlant extends PlantBlock implements Fluidloggable {
+public class DungeonsWaterPlant extends PlantBlock  {
 
     // water plant block
 

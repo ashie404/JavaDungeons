@@ -11,11 +11,11 @@ import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
-import virtuoel.towelette.api.Fluidloggable;
+
 
 import j0sh.javadungeons.JavaDungeons;
 
-public class DungeonsStairs extends StairsBlock implements Fluidloggable {
+public class DungeonsStairs extends StairsBlock  {
 
     // stairs block
 

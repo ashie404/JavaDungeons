@@ -14,11 +14,11 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 
-import virtuoel.towelette.api.Fluidloggable;
+
 
 import j0sh.javadungeons.JavaDungeons;
 
-public class DungeonsTopSlab extends Block implements Fluidloggable {
+public class DungeonsTopSlab extends Block  {
 
     // slab block
 

@@ -31,10 +31,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.8.0",
     "fabric": "*",
-    "minecraft": "1.16-alpha.20.18.a",
-    "towelette": ">=3.0.0"
+    "minecraft": "1.16-alpha.20.18.a"
   },
   "suggests": {
     "flamingo": "*"

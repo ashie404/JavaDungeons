@@ -26,9 +26,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// Towelette, used for custom fluid waterlogging
-	modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
-	include("com.github.Virtuoel:Towelette:${project.towelette}")
+	// Towelette, used for custom fluid waterlogging (Currently incompatible in 20w18a)
+	//modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
+	//include("com.github.Virtuoel:Towelette:${project.towelette}")
 }
 
 processResources {
