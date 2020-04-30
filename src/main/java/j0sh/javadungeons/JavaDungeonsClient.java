@@ -2,23 +2,15 @@ package j0sh.javadungeons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import net.minecraft.client.MinecraftClient;
 
-import j0sh.javadungeons.blocks.DimensionalRectifier;
-import j0sh.javadungeons.container.DimensionalRectifierContainer;
-import j0sh.javadungeons.gui.DimensionalRectifierScreen;
 import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.entities.*;
-import j0sh.javadungeons.entities.renderers.*;
 import j0sh.javadungeons.fluids.DungeonsWaterFluid;
 
 public class JavaDungeonsClient implements ClientModInitializer {
@@ -34,13 +26,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
-        // register dimensional rectifier container and GUI
-        ScreenProviderRegistry.INSTANCE.<DimensionalRectifierContainer>registerFactory(DimensionalRectifier.ID, (container) -> new DimensionalRectifierScreen(
-            container, 
-            MinecraftClient.getInstance().player.inventory, 
-            DimensionalRectifier.CONTAINER_NAME
-        ));
 
         // register color providers
         ColorProviderRegistry.BLOCK.register(
@@ -78,7 +63,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.FERN,
             GenericBlocks.BERRY_BUSH_BLOCK,
             GenericBlocks.WATER_PLANT,
-            GenericBlocks.DIMENSIONAL_RECTIFIER,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,
             GenericBlocks.ROCKY_GRASSY_DIRT,

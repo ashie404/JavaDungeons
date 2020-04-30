@@ -12,7 +12,7 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundTag;
@@ -28,7 +28,7 @@ import net.minecraft.world.World;
 import j0sh.javadungeons.content.Weapons;
 import j0sh.javadungeons.content.Entities;
 
-public class GlaiveEntity extends ProjectileEntity {
+public class GlaiveEntity extends PersistentProjectileEntity {
     private static final TrackedData<Byte> LOYALTY;
     private static final TrackedData<Boolean> HAS_GLINT;
     private ItemStack glaiveStack;
@@ -69,7 +69,7 @@ public class GlaiveEntity extends ProjectileEntity {
        if ((this.dealtDamage || this.isNoClip()) && entity != null) {
           int i = (Byte)this.dataTracker.get(LOYALTY);
           if (i > 0 && !this.isOwnerAlive()) {
-             if (!this.world.isClient && this.pickupType == ProjectileEntity.PickupPermission.ALLOWED) {
+             if (!this.world.isClient && this.pickupType == PersistentProjectileEntity.PickupPermission.ALLOWED) {
                 this.dropStack(this.asItemStack(), 0.1F);
              }
 
@@ -190,7 +190,7 @@ public class GlaiveEntity extends ProjectileEntity {
 
     public void age() {
        int i = (Byte)this.dataTracker.get(LOYALTY);
-       if (this.pickupType != ProjectileEntity.PickupPermission.ALLOWED || i <= 0) {
+       if (this.pickupType != PersistentProjectileEntity.PickupPermission.ALLOWED || i <= 0) {
           super.age();
        }
 

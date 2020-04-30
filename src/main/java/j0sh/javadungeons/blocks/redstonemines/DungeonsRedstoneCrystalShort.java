@@ -2,11 +2,7 @@ package j0sh.javadungeons.blocks.redstonemines;
 
 import j0sh.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.RedstoneBlock;
-import net.minecraft.entity.EntityContext;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -48,7 +44,7 @@ public class DungeonsRedstoneCrystalShort extends RedstoneBlock {
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         Direction direction = (Direction)state.get(FACING);
         return direction.getAxis() == Direction.Axis.X ? CRYSTAL_X : CRYSTAL_Z;
     }

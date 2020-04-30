@@ -3,9 +3,11 @@ package j0sh.javadungeons.biome;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
+import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.BranchedTreeFeatureConfig;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
@@ -13,8 +15,10 @@ import net.minecraft.world.gen.feature.RandomFeatureConfig;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.feature.MineshaftFeature;
-import net.minecraft.world.gen.feature.VillageFeatureConfig;
+import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
@@ -30,6 +34,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
 import j0sh.javadungeons.content.*;
+import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import java.util.OptionalInt;
 
 public class PumpkinPasturesBiome extends Biome {
 
@@ -41,12 +49,14 @@ public class PumpkinPasturesBiome extends Biome {
                 GenericBlocks.DIRT.getDefaultState()
             ))
             .precipitation(Biome.Precipitation.RAIN).category(Biome.Category.PLAINS)
-            .depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F)
-            .waterColor(4159204).waterFogColor(329011)
+            .depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder())
+            .waterColor(4159204).waterFogColor(329011).fogColor(12638463)
+            .moodSound(BiomeMoodSound.CAVE).build()).parent((String)null)
+            .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
             .parent((String)null
         ));
         
-        this.addStructureFeature(Feature.VILLAGE.configure(new VillageFeatureConfig("village/plains/town_centers", 6)));
+        this.addStructureFeature(Feature.VILLAGE.configure(new StructurePoolFeatureConfig("village/plains/town_centers", 6)));
         this.addStructureFeature(Feature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));
         this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
         this.addStructureFeature(Feature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
@@ -85,28 +95,28 @@ public class PumpkinPasturesBiome extends Biome {
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.configure(
             new RandomFeatureConfig(
                 ImmutableList.of(
-                    Feature.NORMAL_TREE.configure(
-                        (new BranchedTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BIRCH_LOG.getDefaultState()), 
-                        new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES.getDefaultState()), 
-                        new BlobFoliagePlacer(2, 0)))
-                        .baseHeight(4).heightRandA(2).foliageHeight(3)
-                        .noVines().treeDecorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F))).build()
-                    ).withChance(0.2F), 
-                    Feature.FANCY_TREE.configure(
-                        (new BranchedTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()), 
-                        new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()), 
-                        new BlobFoliagePlacer(2, 0)))
-                        .baseHeight(4).heightRandA(2).foliageHeight(3)
-                        .noVines().treeDecorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F))).build()
-                    ).withChance(0.2F)
-                ), 
-                Feature.NORMAL_TREE.configure(
-                    (new BranchedTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()), 
-                    new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()), 
-                    new BlobFoliagePlacer(2, 0)))
-                    .baseHeight(4).heightRandA(2).foliageHeight(3)
-                    .noVines().treeDecorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F))).build()
-                )
+                    Feature.TREE.configure(
+                            (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BIRCH_LOG.getDefaultState()),
+                                    new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES.getDefaultState()),
+                                    new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                                    new StraightTrunkPlacer(4, 2, 0),
+                                    new TwoLayersFeatureSize(1, 0, 1))).method_27374().build()
+                    ).withChance(0.2F),
+                        Feature.TREE.configure(
+                                (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
+                                        new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
+                                        new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                                        new StraightTrunkPlacer(4, 2, 0),
+                                        new TwoLayersFeatureSize(1, 0, 1))).method_27374().build()
+                        ).withChance(0.2F)
+                ),
+                    Feature.TREE.configure(
+                            (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
+                                    new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
+                                    new LargeOakFoliagePlacer(2, 0, 4, 0, 4),
+                                    new LargeOakTrunkPlacer(3, 11, 0),
+                                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).method_27374().build()
+                    )
             )
         ).createDecoratedFeature(Decorator.COUNT_EXTRA_HEIGHTMAP.configure(new CountExtraChanceDecoratorConfig(2, 0.1F, 1))));
 

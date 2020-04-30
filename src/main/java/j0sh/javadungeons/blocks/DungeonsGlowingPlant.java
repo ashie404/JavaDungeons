@@ -20,14 +20,9 @@ public class DungeonsGlowingPlant extends PlantBlock {
     public BlockItem blockItem;
 
     public DungeonsGlowingPlant(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
-        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
+        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).lightLevel(12).build());
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
-    }
-
-    @Override
-    public int getLuminance(BlockState state) {
-        return 12;
     }
 
 }

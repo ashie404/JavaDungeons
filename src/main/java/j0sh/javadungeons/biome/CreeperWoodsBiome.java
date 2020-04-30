@@ -2,7 +2,9 @@ package j0sh.javadungeons.biome;
 
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
+import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
@@ -23,6 +25,7 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.block.Blocks;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
 import j0sh.javadungeons.content.*;
@@ -36,8 +39,10 @@ public class CreeperWoodsBiome extends Biome {
                 CreeperWoodsBlocks.CW_DIRT.getDefaultState()
             ))
             .precipitation(Biome.Precipitation.RAIN).category(Biome.Category.FOREST)
-            .depth(0.1F).scale(0.2F).temperature(0.7F).downfall(0.8F)
-            .waterColor(4159204).waterFogColor(329011)
+            .depth(0.1F).scale(0.2F).temperature(0.7F).downfall(0.8F).effects((new BiomeEffects.Builder())
+                    .waterColor(4159204).waterFogColor(329011).fogColor(12638463)
+                    .moodSound(BiomeMoodSound.CAVE).build()).parent((String)null)
+                    .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
             .parent((String)null
         ));
 

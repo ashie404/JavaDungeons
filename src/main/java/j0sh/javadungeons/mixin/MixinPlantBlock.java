@@ -22,7 +22,7 @@ public class MixinPlantBlock {
 	protected void hookPlantOnTop(BlockState state, BlockView view, BlockPos pos, CallbackInfoReturnable<Boolean> callback) {
 		Block block = state.getBlock();
 
-		if (block.matches(Tags.PLANTABLE)) {
+		if (block.isIn(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}
 	}

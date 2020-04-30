@@ -3,8 +3,8 @@ package j0sh.javadungeons.content;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.block.FluidBlock;
-import net.minecraft.fluid.BaseFluid;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -18,8 +18,8 @@ public class Fluids {
 
     public static Item DUNGEONS_WATER_BUCKET;
 
-    public static BaseFluid DUNGEONS_WATER_STILL;
-    public static BaseFluid DUNGEONS_WATER_FLOWING;
+    public static FlowableFluid DUNGEONS_WATER_STILL;
+    public static FlowableFluid DUNGEONS_WATER_FLOWING;
 
     public static Block DUNGEONS_WATER;
 

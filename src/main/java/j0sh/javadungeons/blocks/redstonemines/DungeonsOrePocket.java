@@ -2,11 +2,8 @@ package j0sh.javadungeons.blocks.redstonemines;
 
 import j0sh.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.RedstoneBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.entity.EntityContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -24,8 +21,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.WorldView;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.HorizontalFacingBlock;
 
 public class DungeonsOrePocket extends RedstoneBlock {
 
@@ -45,7 +40,7 @@ public class DungeonsOrePocket extends RedstoneBlock {
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return CRYSTAL_X;
     }
 

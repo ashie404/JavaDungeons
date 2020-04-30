@@ -14,7 +14,7 @@ import j0sh.javadungeons.content.Tags;
 public class MixinFeature {
 	@Inject(method = "isDirt", at = @At("HEAD"), cancellable = true)
 	private static void hookIsDirt(Block block, CallbackInfoReturnable<Boolean> callback) {
-		if (block.matches(Tags.PLANTABLE)) {
+		if (block.isIn(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}
 	}

@@ -3,16 +3,16 @@ package j0sh.javadungeons.fluids;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.BaseFluid;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.WorldView;
 
-public abstract class DungeonsBaseFluid extends BaseFluid {
+public abstract class DungeonsBaseFluid extends FlowableFluid {
    /**
     * @return is the given fluid an instance of this fluid?
     */
@@ -53,13 +53,10 @@ public abstract class DungeonsBaseFluid extends BaseFluid {
    {
       return false;
    }
-   
-   /**
-    * Possibly related to the distance checks for flowing into nearby holes?
-    * Water returns 4. Lava returns 2 in the Overworld and 4 in the Nether.
-    */
+
+
    @Override
-   protected int method_15733(WorldView worldView)
+   protected int getFlowSpeed(WorldView worldView)
    {
       return 4;
    }

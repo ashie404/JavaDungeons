@@ -3,7 +3,7 @@ package j0sh.javadungeons.items;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
-import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -43,7 +43,7 @@ public class DungeonsGlaive extends TridentItem {
                   final GlaiveEntity glaiveEntity = new GlaiveEntity(world, playerEntity, stack);
                   glaiveEntity.setProperties(playerEntity, playerEntity.pitch, playerEntity.yaw, 0.0F, 2.5F, 1.0F);
                   if (playerEntity.abilities.creativeMode) {
-                     glaiveEntity.pickupType = ProjectileEntity.PickupPermission.CREATIVE_ONLY;
+                     glaiveEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
                   }
                   world.spawnEntity(glaiveEntity);
                   world.playSoundFromEntity((PlayerEntity)null, glaiveEntity, SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.PLAYERS, 1.0F, 1.0F);
