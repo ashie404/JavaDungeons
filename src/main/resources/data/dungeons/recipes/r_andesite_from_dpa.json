@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dimensional_rectifier",
-    "ingredient": {
-      "item": "dungeons:cw_dark_polished_andesite"
-    },
-    "result": "minecraft:polished_andesite",
-    "count": 1
-  }

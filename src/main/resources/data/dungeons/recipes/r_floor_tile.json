@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dimensional_rectifier",
-    "ingredient": {
-      "item": "dungeons:dirty_floor_tile"
-    },
-    "result": "dungeons:floor_tile",
-    "count": 2
-  }

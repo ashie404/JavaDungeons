@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dimensional_rectifier",
-    "ingredient": {
-      "item": "minecraft:dirt"
-    },
-    "result": "dungeons:dirt",
-    "count": 1
-  }
