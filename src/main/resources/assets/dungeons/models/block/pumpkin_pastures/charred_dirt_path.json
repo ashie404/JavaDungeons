@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/grass_path",
+    "textures": {
+        "particle": "dungeons:block/pumpkin_pastures/charred_dirt",
+        "top": "dungeons:block/pumpkin_pastures/charred_dirt",
+        "side": "dungeons:block/pumpkin_pastures/charred_dirt",
+        "bottom": "dungeons:block/pumpkin_pastures/charred_dirt"
+    }
+}
