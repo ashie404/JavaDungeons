@@ -1,18 +1,16 @@
 package j0sh.javadungeons.mixin;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.PlantBlock;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
-import net.minecraft.block.PlantBlock;
-
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.content.Tags;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 
 // mixin so that plants can be planted on custom soil blocks
 

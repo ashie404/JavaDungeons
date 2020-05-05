@@ -37,7 +37,7 @@ public class CreeperWoodsBiome extends Biome {
             ))
             .precipitation(Biome.Precipitation.RAIN).category(Biome.Category.FOREST)
             .depth(0.1F).scale(0.2F).temperature(0.7F).downfall(0.8F)
-            .waterColor(4159204).waterFogColor(329011)
+                .waterColor(4159204).waterFogColor(329011)
             .parent((String)null
         ));
 

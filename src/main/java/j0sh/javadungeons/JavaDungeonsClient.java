@@ -2,20 +2,15 @@ package j0sh.javadungeons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import net.minecraft.client.MinecraftClient;
 
 import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.entities.*;
-import j0sh.javadungeons.entities.renderers.*;
 import j0sh.javadungeons.fluids.DungeonsWaterFluid;
 
 public class JavaDungeonsClient implements ClientModInitializer {

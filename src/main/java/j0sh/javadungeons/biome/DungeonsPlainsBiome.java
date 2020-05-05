@@ -13,13 +13,14 @@ import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
-import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.feature.VillageFeatureConfig;
+import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
 import j0sh.javadungeons.content.*;
@@ -33,8 +34,7 @@ public class DungeonsPlainsBiome extends Biome {
                 GenericBlocks.DIRT.getDefaultState()
             ))
             .precipitation(Biome.Precipitation.RAIN).category(Biome.Category.PLAINS)
-            .depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F)
-            .waterColor(4159204).waterFogColor(329011)
+            .depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).waterColor(4159204).waterFogColor(329011)
             .parent((String)null
         ));
 

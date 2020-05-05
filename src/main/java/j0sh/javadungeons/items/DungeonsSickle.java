@@ -5,7 +5,6 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ToolMaterial;
@@ -17,9 +16,9 @@ import j0sh.javadungeons.JavaDungeons;
 public class DungeonsSickle extends HoeItem {
 
     private final float attackSpeed;
-    private final float attackDamage;
+    private final int attackDamage;
 
-    public DungeonsSickle(ToolMaterial material, float attackDamage, float attackSpeed, String id) {
+    public DungeonsSickle(ToolMaterial material, int attackDamage, float attackSpeed, String id) {
         super(material, attackSpeed, new Item.Settings().group(JavaDungeons.WEAPONS));
         this.attackSpeed = attackSpeed;
         this.attackDamage = attackDamage;

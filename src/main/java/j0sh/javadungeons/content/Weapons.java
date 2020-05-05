@@ -63,8 +63,8 @@ public class Weapons {
         FROST_DAGGER = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "frost_dagger");
 
         // Sickles
-        SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1.5F, -2.0F, "sickle");
-        OBSIDIAN_SICKLE = new DungeonsSickle(ToolMaterials.DIAMOND, 2.25F, -1.7F, "obsidian_sickle");
+        SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
+        OBSIDIAN_SICKLE = new DungeonsSickle(ToolMaterials.DIAMOND, 2, -1.7F, "obsidian_sickle");
 
         // Glaive (currently non-functional)
         //GLAIVE = new DungeonsGlaive("glaive");
