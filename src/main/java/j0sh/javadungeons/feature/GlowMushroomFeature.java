@@ -1,6 +1,5 @@
 package j0sh.javadungeons.feature;
 
-import com.ibm.icu.impl.coll.FCDIterCollationIterator;
 import com.mojang.datafixers.Dynamic;
 
 import j0sh.javadungeons.content.*;
@@ -15,7 +14,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
-import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 

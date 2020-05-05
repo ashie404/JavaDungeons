@@ -1,28 +1,24 @@
 package j0sh.javadungeons.blocks;
 
+import j0sh.javadungeons.JavaDungeons;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.tag.Tag;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
-
-
-
-import j0sh.javadungeons.JavaDungeons;
-
-public class DungeonsStairs extends StairsBlock  {
+public class DungeonsStairs extends StairsBlock {
 
     // stairs block
 
     public BlockItem blockItem;
 
-    public DungeonsStairs(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
-        super(base.getDefaultState(), FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
+    public DungeonsStairs(Material material, Block base, ItemGroup group, String id) {
+        super(base.getDefaultState(), FabricBlockSettings.of(material));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

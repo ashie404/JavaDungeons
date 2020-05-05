@@ -1,5 +1,14 @@
 package j0sh.javadungeons.biome;
 
+import java.util.OptionalInt;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+
+import j0sh.javadungeons.content.Features;
+import j0sh.javadungeons.content.Fluids;
+import j0sh.javadungeons.content.GenericBlocks;
+import j0sh.javadungeons.content.PumpkinPasturesBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
@@ -7,15 +16,20 @@ import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.CountDecoratorConfig;
+import net.minecraft.world.gen.decorator.CountExtraChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
 import net.minecraft.world.gen.feature.RandomFeatureConfig;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
-import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
@@ -23,21 +37,8 @@ import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.BeehiveTreeDecorator;
-import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
-import net.minecraft.world.gen.decorator.CountDecoratorConfig;
-import net.minecraft.world.gen.decorator.CountExtraChanceDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-
-import j0sh.javadungeons.content.*;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-
-import java.util.OptionalInt;
 
 public class PumpkinPasturesBiome extends Biome {
 

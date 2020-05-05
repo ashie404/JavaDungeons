@@ -1,10 +1,11 @@
 package j0sh.javadungeons.content;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.block.Material;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -27,6 +28,6 @@ public class Fluids {
         DUNGEONS_WATER_STILL = Registry.register(Registry.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new DungeonsWaterFluid.Still());
         DUNGEONS_WATER_FLOWING = Registry.register(Registry.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_flowing_water"), new DungeonsWaterFluid.Flowing());
         DUNGEONS_WATER_BUCKET = Registry.register(Registry.ITEM, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_bucket"), new BucketItem(DUNGEONS_WATER_STILL, new Item.Settings().group(JavaDungeons.GENERIC).recipeRemainder(Items.BUCKET).maxCount(1)));
-        DUNGEONS_WATER = Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new FluidBlock(DUNGEONS_WATER_STILL, FabricBlockSettings.copy(Blocks.WATER).build()){});
+        DUNGEONS_WATER = Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new FluidBlock(DUNGEONS_WATER_STILL, FabricBlockSettings.of(Material.WATER)){});
     }
 }

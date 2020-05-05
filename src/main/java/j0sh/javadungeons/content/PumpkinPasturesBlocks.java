@@ -1,10 +1,16 @@
 package j0sh.javadungeons.content;
 
-import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.Blocks;
-
-import j0sh.javadungeons.blocks.*;
 import j0sh.javadungeons.JavaDungeons;
+import j0sh.javadungeons.blocks.DungeonsBlock;
+import j0sh.javadungeons.blocks.DungeonsLeaves;
+import j0sh.javadungeons.blocks.DungeonsPath;
+import j0sh.javadungeons.blocks.DungeonsPathable;
+import j0sh.javadungeons.blocks.DungeonsPillar;
+import j0sh.javadungeons.blocks.DungeonsPlant;
+import j0sh.javadungeons.blocks.DungeonsSlab;
+import j0sh.javadungeons.blocks.DungeonsStairs;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 
 public class PumpkinPasturesBlocks {
 
@@ -23,7 +29,8 @@ public class PumpkinPasturesBlocks {
 
     // ground related
     public static DungeonsBlock PM_CHARRED_GRASS_BLOCK;
-    public static DungeonsBlock PM_CHARRED_DIRT;
+    public static DungeonsPath PM_CHARRED_DIRT_PATH;
+    public static DungeonsPathable PM_CHARRED_DIRT;
     public static DungeonsSlab PM_CHARRED_DIRT_SLAB;
     public static DungeonsBlock PM_CHARRED_DIRT_EMBERS;
     public static DungeonsPath PM_CHARRED_FARMLAND;
@@ -50,43 +57,44 @@ public class PumpkinPasturesBlocks {
 
     public static void init() {
         // foliage
-        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(Blocks.BIRCH_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
-        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(Blocks.OAK_LEAVES, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
+        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
+        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
 
         // plants
-        PM_BURNT_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
-        PM_ROTTED_PUMPKIN = new DungeonsBlock(Blocks.PUMPKIN, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
-        PM_DRIED_HAYBALE = new DungeonsPillar(Blocks.HAY_BLOCK, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
+        PM_BURNT_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
+        PM_ROTTED_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
+        PM_DRIED_HAYBALE = new DungeonsPillar(Material.ORGANIC, JavaDungeons.PUMPKIN_PASTURES, "dried_haybale");
 
         // grass
-        PM_SHRUB = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
-        PM_CHARRED_GRASS = new DungeonsPlant(Blocks.GRASS, true, FabricToolTags.HOES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
+        PM_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
+        PM_CHARRED_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
 
         // ground related
-        PM_CHARRED_GRASS_BLOCK = new DungeonsBlock(Blocks.GRASS_BLOCK, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass_block");
-        PM_CHARRED_DIRT = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt");
-        PM_CHARRED_DIRT_SLAB = new DungeonsSlab(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_slab");
-        PM_CHARRED_DIRT_EMBERS = new DungeonsBlock(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_embers");
-        PM_CHARRED_FARMLAND = new DungeonsPath(Blocks.DIRT, true, FabricToolTags.SHOVELS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_farmland");
+        PM_CHARRED_GRASS_BLOCK = new DungeonsBlock(Material.ORGANIC, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass_block");
+        PM_CHARRED_DIRT_PATH = new DungeonsPath(Material.EARTH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_path");
+        PM_CHARRED_DIRT = new DungeonsPathable(Material.EARTH, PM_CHARRED_DIRT_PATH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt");
+        PM_CHARRED_DIRT_SLAB = new DungeonsSlab(Material.EARTH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_slab");
+        PM_CHARRED_DIRT_EMBERS = new DungeonsBlock(Material.EARTH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_embers");
+        PM_CHARRED_FARMLAND = new DungeonsPath(Material.EARTH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_farmland");
         
         // charred stones
-        PM_CHARRED_STONE = new DungeonsBlock(Blocks.STONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
-        PM_CHARRED_COBBLESTONE = new DungeonsBlock(Blocks.COBBLESTONE, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
-        PM_CHARRED_COBBLESTONE_SLAB = new DungeonsSlab(Blocks.COBBLESTONE_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_slab");
-        PM_CHARRED_COBBLESTONE_STAIRS = new DungeonsStairs(Blocks.COBBLESTONE_STAIRS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_stairs");
-        PM_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks");
-        PM_CHARRED_STONE_BRICK_SLAB = new DungeonsSlab(Blocks.STONE_BRICK_SLAB, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_slab");
-        PM_CHARRED_STONE_BRICK_STAIRS = new DungeonsStairs(Blocks.STONE_BRICK_STAIRS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_stairs");
-        PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Blocks.CRACKED_STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
+        PM_CHARRED_STONE = new DungeonsBlock(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
+        PM_CHARRED_COBBLESTONE = new DungeonsBlock(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
+        PM_CHARRED_COBBLESTONE_SLAB = new DungeonsSlab(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_slab");
+        PM_CHARRED_COBBLESTONE_STAIRS = new DungeonsStairs(Material.STONE, Blocks.COBBLESTONE_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_stairs");
+        PM_CHARRED_STONE_BRICKS = new DungeonsBlock(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks");
+        PM_CHARRED_STONE_BRICK_SLAB = new DungeonsSlab(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_slab");
+        PM_CHARRED_STONE_BRICK_STAIRS = new DungeonsStairs(Material.STONE, Blocks.STONE_BRICK_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_stairs");
+        PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
 
         // stone related
-        PM_MOSSY_STONE_BRICKS = new DungeonsBlock(Blocks.STONE_BRICKS, false, FabricToolTags.PICKAXES, JavaDungeons.PUMPKIN_PASTURES, "pm_mossy_stone_bricks");
+        PM_MOSSY_STONE_BRICKS = new DungeonsBlock(Material.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_mossy_stone_bricks");
 
         // wood related
-        PM_CHARRED_LOG = new DungeonsPillar(Blocks.OAK_LOG, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");
-        PM_CHARRED_WOOD = new DungeonsPillar(Blocks.OAK_WOOD, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_wood");
-        PM_CHARRED_PLANKS = new DungeonsBlock(Blocks.OAK_PLANKS, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks");
-        PM_CHARRED_STAIRS = new DungeonsStairs(Blocks.OAK_STAIRS, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stairs");
-        PM_CHARRED_SLAB = new DungeonsSlab(Blocks.OAK_SLAB, true, FabricToolTags.AXES, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_slab");
+        PM_CHARRED_LOG = new DungeonsPillar(Material.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");
+        PM_CHARRED_WOOD = new DungeonsPillar(Material.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_wood");
+        PM_CHARRED_PLANKS = new DungeonsBlock(Material.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks");
+        PM_CHARRED_STAIRS = new DungeonsStairs(Material.WOOD, Blocks.OAK_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stairs");
+        PM_CHARRED_SLAB = new DungeonsSlab(Material.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_slab");
     }
 }

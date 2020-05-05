@@ -1,16 +1,14 @@
 package j0sh.javadungeons.blocks;
 
-import net.minecraft.block.Block;
+import j0sh.javadungeons.JavaDungeons;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Material;
 import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.tag.Tag;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import j0sh.javadungeons.JavaDungeons;
+import net.minecraft.util.registry.Registry;
 
 public class DungeonsPoweredEmissive extends RedstoneLampBlock {
 
@@ -18,8 +16,8 @@ public class DungeonsPoweredEmissive extends RedstoneLampBlock {
 
     public BlockItem blockItem;
 
-    public DungeonsPoweredEmissive(Block base, Boolean byHand, Tag<Item> tool, ItemGroup group, String id) {
-        super(FabricBlockSettings.copy(base).breakByHand(byHand).breakByTool(tool).build());
+    public DungeonsPoweredEmissive(Material material, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

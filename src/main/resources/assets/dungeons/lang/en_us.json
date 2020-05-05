@@ -4,10 +4,6 @@
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
     "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
-    "itemGroup.dungeons.misc": "Non-Dungeons Blocks",
-
-    "container.dungeons.dimensional_rectifier": "Dimensional Rectifier",
-    "block.dungeons.dimensional_rectifier": "Dimensional Rectifier",
 
     "block.dungeons.floor_tile": "Floor Tile",
     "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
@@ -136,6 +132,7 @@
     "block.dungeons.pm_charred_stone_brick_slab": "Charred Stone Brick Slab",
     "block.dungeons.pm_charred_stone_brick_stairs": "Charred Stone Brick Stairs",
     "block.dungeons.pm_charred_dirt_slab": "Charred Dirt Slab",
+    "block.dungeons.pm_charred_dirt_path": "Charred Dirt Path",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 
