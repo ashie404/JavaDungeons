@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class DungeonsTopSlab extends Block  {
 
@@ -22,8 +23,8 @@ public class DungeonsTopSlab extends Block  {
     public BlockItem blockItem;
     public VoxelShape SHAPE = Block.createCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
 
-    public DungeonsTopSlab(Material material, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material));
+    public DungeonsTopSlab(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
