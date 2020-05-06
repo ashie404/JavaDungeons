@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "dungeons:item/frost_dagger"
+        "layer0": "dungeons:item/masters_katana"
     }
 }

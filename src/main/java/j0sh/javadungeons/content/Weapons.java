@@ -7,8 +7,8 @@ import net.minecraft.item.ToolMaterials;
 public class Weapons {
 
     // Axes
-    public static DungeonsAxe IRON_AXE;
-    public static DungeonsAxe BRONZE_AXE;
+    public static DungeonsAxe AXE;
+    public static DungeonsAxe FIREBRAND;
     public static DungeonsAxe DOUBLE_AXE;
 
     // Pickaxes
@@ -16,11 +16,11 @@ public class Weapons {
 
     // Swords
     public static DungeonsSword CLAYMORE;
-    public static DungeonsSword CRIMSON_CORE;
+    public static DungeonsSword HEARTSTEALER;
     public static DungeonsSword CUTLASS;
     public static DungeonsSword BROADSWORD;
     public static DungeonsSword KATANA;
-    public static DungeonsSword CRIMSON_KATANA;
+    public static DungeonsSword MASTERS_KATANA;
     public static DungeonsSword STEEL_SWORD;
 
     // Hammers
@@ -28,19 +28,19 @@ public class Weapons {
 
     // Daggers
     public static DungeonsSword DAGGER;
-    public static DungeonsSword FROST_DAGGER;
+    public static DungeonsSword FANGS_OF_FROST;
 
     // Sickles
     public static DungeonsSickle SICKLE;
-    public static DungeonsSickle OBSIDIAN_SICKLE;
+    public static DungeonsSickle NAMELESS_BLADE;
 
     // Glaive
     public static DungeonsGlaive GLAIVE;
 
     public static void init() {
         // Axes
-        IRON_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "iron_axe");
-        BRONZE_AXE = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "bronze_axe");
+        AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "axe");
+        FIREBRAND = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "firebrand");
         DOUBLE_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "double_axe");
 
         // Pickaxes
@@ -48,11 +48,11 @@ public class Weapons {
 
         // Swords
         CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
-        CRIMSON_CORE = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "crimson_core");
+        HEARTSTEALER = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "heartstealer");
         CUTLASS = new DungeonsSword(ToolMaterials.IRON, 3, -2.1F, "cutlass");
         BROADSWORD = new DungeonsSword(ToolMaterials.IRON, 5, -3.4F, "broadsword");
         KATANA = new DungeonsSword(ToolMaterials.IRON, 2, -1.5F, "katana");
-        CRIMSON_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "crimson_katana");
+        MASTERS_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "masters_katana");
         STEEL_SWORD = new DungeonsSword(ToolMaterials.IRON, 4, -2.4F, "steel_sword");
 
         // Hammers
@@ -60,11 +60,11 @@ public class Weapons {
 
         // Daggers
         DAGGER = new DungeonsSword(ToolMaterials.IRON, 2, -1.3F, "dagger");
-        FROST_DAGGER = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "frost_dagger");
+        FANGS_OF_FROST = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "fangs_of_frost");
 
         // Sickles
         SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
-        OBSIDIAN_SICKLE = new DungeonsSickle(ToolMaterials.DIAMOND, 2, -1.7F, "obsidian_sickle");
+        NAMELESS_BLADE = new DungeonsSickle(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
 
         // Glaive (currently non-functional)
         //GLAIVE = new DungeonsGlaive("glaive");

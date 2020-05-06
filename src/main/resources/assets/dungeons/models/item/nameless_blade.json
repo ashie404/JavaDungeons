@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "dungeons:item/iron_axe"
+        "layer0": "dungeons:item/nameless_blade"
     }
 }

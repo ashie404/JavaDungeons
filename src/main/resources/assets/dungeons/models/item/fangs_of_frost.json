@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "dungeons:item/bronze_axe"
+        "layer0": "dungeons:item/fangs_of_frost"
     }
 }
