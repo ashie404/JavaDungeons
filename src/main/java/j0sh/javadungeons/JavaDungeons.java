@@ -30,7 +30,6 @@ public class JavaDungeons implements ModInitializer {
 		Tags.init();
 		Sounds.init();
 		Fluids.init();
-		//Entities.init();
 
 		// blocks
 		GenericBlocks.init();
