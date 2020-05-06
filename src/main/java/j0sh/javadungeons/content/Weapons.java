@@ -35,8 +35,8 @@ public class Weapons {
     // Sickles
     public static DungeonsSickle SICKLE;
 
-    // Glaive
-    public static DungeonsGlaive GLAIVE;
+    // Spears
+    public static DungeonsSword GLAIVE;
 
     public static void init() {
         // Axes
@@ -68,8 +68,8 @@ public class Weapons {
         // Sickles
         SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
 
-        // Glaive (currently non-functional)
-        //GLAIVE = new DungeonsGlaive("glaive");
+        // Spears
+        
     }
 
 }
