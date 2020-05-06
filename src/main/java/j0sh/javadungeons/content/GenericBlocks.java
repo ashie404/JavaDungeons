@@ -138,11 +138,10 @@ public class GenericBlocks {
 
         // plants
         BERRY_BUSH_BLOCK = new DungeonsLeaves(Material.LEAVES, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "berry_bush_block");
-        SHORT_GRASS = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
-        FERN = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
-        SHRUB = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
+        SHORT_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
+        FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
+        SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
         WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
-
         // sanded andesite
         SANDED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite");
         SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_tiles");

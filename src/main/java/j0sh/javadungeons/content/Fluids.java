@@ -3,9 +3,9 @@ package j0sh.javadungeons.content;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
 import net.minecraft.block.Block;
-import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.Material;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

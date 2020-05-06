@@ -116,12 +116,12 @@ public class CreeperWoodsBlocks {
         CW_DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dirty_floor_tile");
 
         // plants
-        CW_SHRUB = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_shrub");
-        CW_POP_FLOWER = new DungeonsGlowingPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
-        CW_FLOWER_PATCH = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_flower_patch");
+        CW_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_shrub");
+        CW_POP_FLOWER = new DungeonsGlowingPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
+        CW_FLOWER_PATCH = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_flower_patch");
 
         // custom dungeons blocks
-        CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");
+        CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Material.PLANT, BlockSoundGroup.SLIME, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");
         CW_GLOW_MELON = new DungeonsEmissive(Material.PUMPKIN, BlockSoundGroup.WOOD, JavaDungeons.CREEPER_WOODS, "cw_glow_melon");
         CW_GLOW_MELON_ROOTS = new DungeonsBlock(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_glow_melon_roots");
     }
