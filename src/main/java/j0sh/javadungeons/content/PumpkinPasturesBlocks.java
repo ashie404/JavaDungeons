@@ -64,7 +64,7 @@ public class PumpkinPasturesBlocks {
         // plants
         PM_BURNT_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
         PM_ROTTED_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
-        PM_DRIED_HAYBALE = new DungeonsPillar(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "dried_haybale");
+        PM_DRIED_HAYBALE = new DungeonsPillar(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
 
         // grass
         PM_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
