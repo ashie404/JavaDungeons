@@ -4,6 +4,7 @@ import j0sh.javadungeons.JavaDungeons;
 import j0sh.javadungeons.blocks.DungeonsBlock;
 import j0sh.javadungeons.blocks.DungeonsPillar;
 import net.minecraft.block.Material;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class DesertTempleBlocks {
 
@@ -20,14 +21,14 @@ public class DesertTempleBlocks {
 
     public static void init() {
         // andesite related
-        DT_SANDY_ANDESITE = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_andesite");
-        DT_CHISELED_SANDY_ANDESITE = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_andesite");
-        DT_CHISELED_SANDY_ANDESITE_2 = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_andesite_2");
-        DT_SANDY_ANDESITE_PILLAR = new DungeonsPillar(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_andesite_pillar");
+        DT_SANDY_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_andesite");
+        DT_CHISELED_SANDY_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_andesite");
+        DT_CHISELED_SANDY_ANDESITE_2 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_andesite_2");
+        DT_SANDY_ANDESITE_PILLAR = new DungeonsPillar(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_andesite_pillar");
 
         // stone brick related
-        DT_SANDY_STONE_BRICKS = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_stone_bricks");
-        DT_SANDY_STONE_TILES = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_stone_tiles");
-        DT_CHISELED_SANDY_STONE = new DungeonsBlock(Material.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_stone");
+        DT_SANDY_STONE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_stone_bricks");
+        DT_SANDY_STONE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_sandy_stone_tiles");
+        DT_CHISELED_SANDY_STONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.DESERT_TEMPLE, "dt_chiseled_sandy_stone");
     }
 }

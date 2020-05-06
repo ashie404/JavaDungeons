@@ -141,6 +141,7 @@
     "biome.dungeons.dungeons_plains": "Dungeons Plains",
 
     "item.dungeons.axe": "Axe",
+    "item.dungeons.highland_axe": "Highland Axe",
     "item.dungeons.firebrand": "Firebrand",
     "item.dungeons.double_axe": "Double Axe",
 
@@ -149,6 +150,7 @@
     "item.dungeons.claymore": "Claymore",
     "item.dungeons.heartstealer": "Heartstealer",
     "item.dungeons.cutlass": "Cutlass",
+    "item.dungeons.nameless_blade": "Nameless Blade",
     "item.dungeons.broadsword": "Broadsword",
     "item.dungeons.katana": "Katana",
     "item.dungeons.masters_katana": "Master's Katana",
@@ -159,6 +161,6 @@
     "item.dungeons.dagger": "Dagger",
     "item.dungeons.fangs_of_frost": "Fangs of Frost",
 
-    "item.dungeons.sickle": "Sickle",
-    "item.dungeons.nameless_blade": "Nameless Blade"
+    "item.dungeons.sickle": "Sickle"
+    
 }

@@ -8,6 +8,7 @@ public class Weapons {
 
     // Axes
     public static DungeonsAxe AXE;
+    public static DungeonsAxe HIGHLAND_AXE;
     public static DungeonsAxe FIREBRAND;
     public static DungeonsAxe DOUBLE_AXE;
 
@@ -18,6 +19,7 @@ public class Weapons {
     public static DungeonsSword CLAYMORE;
     public static DungeonsSword HEARTSTEALER;
     public static DungeonsSword CUTLASS;
+    public static DungeonsSword NAMELESS_BLADE;
     public static DungeonsSword BROADSWORD;
     public static DungeonsSword KATANA;
     public static DungeonsSword MASTERS_KATANA;
@@ -32,7 +34,6 @@ public class Weapons {
 
     // Sickles
     public static DungeonsSickle SICKLE;
-    public static DungeonsSickle NAMELESS_BLADE;
 
     // Glaive
     public static DungeonsGlaive GLAIVE;
@@ -40,6 +41,7 @@ public class Weapons {
     public static void init() {
         // Axes
         AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "axe");
+        HIGHLAND_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "highland_axe");
         FIREBRAND = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "firebrand");
         DOUBLE_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "double_axe");
 
@@ -50,6 +52,7 @@ public class Weapons {
         CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
         HEARTSTEALER = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "heartstealer");
         CUTLASS = new DungeonsSword(ToolMaterials.IRON, 3, -2.1F, "cutlass");
+        NAMELESS_BLADE = new DungeonsSword(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
         BROADSWORD = new DungeonsSword(ToolMaterials.IRON, 5, -3.4F, "broadsword");
         KATANA = new DungeonsSword(ToolMaterials.IRON, 2, -1.5F, "katana");
         MASTERS_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "masters_katana");
@@ -64,7 +67,6 @@ public class Weapons {
 
         // Sickles
         SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
-        NAMELESS_BLADE = new DungeonsSickle(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
 
         // Glaive (currently non-functional)
         //GLAIVE = new DungeonsGlaive("glaive");

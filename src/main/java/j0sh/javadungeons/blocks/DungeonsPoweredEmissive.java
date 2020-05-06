@@ -8,6 +8,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 
 public class DungeonsPoweredEmissive extends RedstoneLampBlock {
@@ -16,8 +17,8 @@ public class DungeonsPoweredEmissive extends RedstoneLampBlock {
 
     public BlockItem blockItem;
 
-    public DungeonsPoweredEmissive(Material material, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material));
+    public DungeonsPoweredEmissive(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.BlockView;
 
 public class DungeonsFoodBox extends Block {
@@ -28,8 +29,8 @@ public class DungeonsFoodBox extends Block {
 		return SHAPE;
 	}
 
-    public DungeonsFoodBox(Material material, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material));
+    public DungeonsFoodBox(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

@@ -18,6 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.World;
 
 public class DungeonsPathable extends Block {
@@ -27,8 +28,8 @@ public class DungeonsPathable extends Block {
     public BlockItem blockItem;
     public Block pathBlock;
 
-    public DungeonsPathable(Material material, Block pathBlock, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material));
+    public DungeonsPathable(Material material, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
         this.pathBlock = pathBlock;
