@@ -16,6 +16,7 @@ public class GenericBlocks {
     public static DungeonsTent TENT;
     public static DungeonsFence ROPE_FENCE;
     public static DungeonsLantern DUNGEONS_LANTERN;
+    public static DungeonsSack SACK;
 
     // food related
     public static DungeonsBlock BARREL_CLOSED;
@@ -90,6 +91,7 @@ public class GenericBlocks {
         TENT = new DungeonsTent(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tent");
         ROPE_FENCE = new DungeonsFence(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "rope_fence");
         DUNGEONS_LANTERN = new DungeonsLantern(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "dungeons_lantern");
+        SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "sack");
 
         // food related items
         BARREL_CLOSED = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "barrel_closed");
