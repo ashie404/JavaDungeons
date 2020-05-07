@@ -53,6 +53,7 @@ public class GenericBlocks {
     public static DungeonsSlab STONE_TILES_SLAB;
     public static DungeonsBlock DIRTY_STONE_TILES;
     public static DungeonsBlock DIRTY_STONE_TILES_1;
+    public static DungeonsBlock DIRTY_STONE_TILES_2;
     public static DungeonsSlab DIRTY_STONE_TILES_SLAB;
     public static DungeonsSlab DIRTY_STONE_TILES_SLAB_1;
 
@@ -128,6 +129,7 @@ public class GenericBlocks {
         STONE_TILES_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "stone_tiles_slab");
         DIRTY_STONE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles");
         DIRTY_STONE_TILES_1 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_1");
+        DIRTY_STONE_TILES_2 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_2");
         DIRTY_STONE_TILES_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_slab");
         DIRTY_STONE_TILES_SLAB_1 = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_slab_1");
 

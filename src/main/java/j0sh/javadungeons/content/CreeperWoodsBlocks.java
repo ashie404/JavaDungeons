@@ -58,6 +58,7 @@ public class CreeperWoodsBlocks {
     // stone tiles
     public static DungeonsBlock CW_DIRTY_STONE_TILES;
     public static DungeonsBlock CW_DIRTY_STONE_TILES_1;
+    public static DungeonsBlock CW_DIRTY_STONE_TILES_2;
 
     // floor tiles
     public static DungeonsBlock CW_DIRTY_FLOOR_TILE;
@@ -111,6 +112,11 @@ public class CreeperWoodsBlocks {
         CW_CHISELED_GRANITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_chiseled_granite");
         CW_POLISHED_GRANITE_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_polished_granite_slab");
         CW_DIRTY_GRANITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dirty_granite");
+
+        // stone tiles
+        CW_DIRTY_STONE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles");
+        CW_DIRTY_STONE_TILES_1 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_1");
+        CW_DIRTY_STONE_TILES_2 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_2");
         
         // floor tiles
         CW_DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dirty_floor_tile");
