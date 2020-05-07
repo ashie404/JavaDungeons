@@ -36,6 +36,7 @@ public class GenericBlocks {
     public static DungeonsBlock GRASSY_DIRT;
     public static DungeonsBlock ROCKY_GRASSY_DIRT;
     public static DungeonsPathable GRASS_BLOCK;
+    public static DungeonsBlock DARK_ROCKY_DIRT;
 
     // wood related
     public static DungeonsBlock FLOORBOARDS;
@@ -112,6 +113,7 @@ public class GenericBlocks {
         GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
         ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
         GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
+        DARK_ROCKY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
 
         // wood related
         FLOORBOARDS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "floorboards");

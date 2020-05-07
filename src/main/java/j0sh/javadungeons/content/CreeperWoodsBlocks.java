@@ -48,7 +48,7 @@ public class CreeperWoodsBlocks {
     public static DungeonsPath CW_ROCKY_DIRT_PATH;
     public static DungeonsBlock CW_ROCKY_GRASSY_DIRT;
     public static DungeonsBlock CW_COBWEBBED_DIRT;
-
+    
     // creeper woods granite variant
     public static DungeonsBlock CW_POLISHED_GRANITE;
     public static DungeonsBlock CW_DIRTY_GRANITE;
