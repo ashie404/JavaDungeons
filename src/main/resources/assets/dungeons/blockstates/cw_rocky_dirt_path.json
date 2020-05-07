@@ -1,5 +1,10 @@
 {
     "variants": {
-        "": {"model": "dungeons:block/creeper_woods/rocky_dirt_path"}
+        "": [ 
+           { "model": "dungeons:block/creeper_woods/rocky_dirt_path" },
+           { "model": "dungeons:block/creeper_woods/rocky_dirt_path_1" },
+           { "model": "dungeons:block/creeper_woods/rocky_dirt_path_2" },
+           { "model": "dungeons:block/creeper_woods/rocky_dirt_path_3" }
+        ]
     }
 }

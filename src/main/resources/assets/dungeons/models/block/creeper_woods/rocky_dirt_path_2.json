@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/grass_path",
+    "textures": {
+        "particle": "dungeons:block/creeper_woods/rocky_dirt_2",
+        "top": "dungeons:block/creeper_woods/rocky_dirt_2",
+        "side": "dungeons:block/creeper_woods/rocky_dirt_2",
+        "bottom": "dungeons:block/creeper_woods/rocky_dirt_2"
+    }
+}

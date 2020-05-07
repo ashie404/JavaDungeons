@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [ 
+           { "model": "dungeons:block/dark_rocky_dirt" },
+           { "model": "dungeons:block/dark_rocky_dirt_1" },
+           { "model": "dungeons:block/dark_rocky_dirt_2" },
+           { "model": "dungeons:block/dark_rocky_dirt_3" }
+        ]
+    }
+}
