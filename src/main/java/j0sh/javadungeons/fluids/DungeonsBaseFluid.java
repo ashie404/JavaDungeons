@@ -9,7 +9,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public abstract class DungeonsBaseFluid extends FlowableFluid {
@@ -36,7 +36,7 @@ public abstract class DungeonsBaseFluid extends FlowableFluid {
     * the block's loot table. Lava plays the "block.lava.extinguish" sound.
     */
    @Override
-   protected void beforeBreakingBlock(IWorld world, BlockPos pos, BlockState state)
+   protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state)
    {
       final BlockEntity blockEntity = state.getBlock().hasBlockEntity() ? world.getBlockEntity(pos) : null;
       Block.dropStacks(state, world.getWorld(), pos, blockEntity);

@@ -10,10 +10,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
 import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 
@@ -23,7 +22,7 @@ public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
     }
 
     @Override
-    public boolean generate(IWorld world, StructureAccessor accessor, ChunkGenerator<? extends ChunkGeneratorConfig> generator, Random random, BlockPos pos, SeaPickleFeatureConfig config) {
+    public boolean generate(ServerWorldAccess world, StructureAccessor accessor, ChunkGenerator generator, Random random, BlockPos pos, SeaPickleFeatureConfig config) {
         int i = 0;
 
         for(int j = 0; j < config.count; ++j) {
