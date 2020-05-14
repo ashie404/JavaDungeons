@@ -19,13 +19,17 @@ public class PumpkinPasturesBlocks {
     public static DungeonsLeaves PM_YELLOW_AUTUMNAL_LEAVES;
     public static DungeonsLeaves PM_RED_AUTUMNAL_LEAVES;
 
-    // grass
+    // plants
     public static DungeonsPlant PM_SHRUB;
     public static DungeonsPlant PM_CHARRED_GRASS;
+    public static DungeonsPlant PM_FERN;
+    public static DungeonsPlant PM_DEAD_SAPLING;
 
-    // plants
+    // melons
     public static DungeonsBlock PM_BURNT_PUMPKIN;
     public static DungeonsBlock PM_ROTTED_PUMPKIN;
+
+    // haybale
     public static DungeonsPillar PM_DRIED_HAYBALE;
 
     // ground related
@@ -61,14 +65,18 @@ public class PumpkinPasturesBlocks {
         PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
         PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
 
-        // plants
+        // melons
         PM_BURNT_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
         PM_ROTTED_PUMPKIN = new DungeonsBlock(Material.PUMPKIN, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
+
+        // haybale
         PM_DRIED_HAYBALE = new DungeonsPillar(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
 
-        // grass
+        // plants
         PM_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
         PM_CHARRED_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
+        PM_FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_fern");
+        PM_DEAD_SAPLING = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dead_sapling");
 
         // ground related
         PM_CHARRED_GRASS_BLOCK = new DungeonsBlock(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass_block");

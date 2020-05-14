@@ -81,7 +81,9 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES,
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,
-            PumpkinPasturesBlocks.PM_SHRUB
+            PumpkinPasturesBlocks.PM_SHRUB,
+            PumpkinPasturesBlocks.PM_DEAD_SAPLING,
+            PumpkinPasturesBlocks.PM_FERN
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
@@ -99,9 +101,5 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
-
-        // setup entity renderers
-        /*EntityRendererRegistry.INSTANCE.register(Entities.GLAIVE_ENTITY, 
-        (entityRenderDispatcher, context) -> new GlaiveEntityRenderer(entityRenderDispatcher));*/
     }    
 }
