@@ -83,7 +83,6 @@ public class GenericBlocks {
 
     // glass related
     public static DungeonsTranslucent GLASS;
-    public static DungeonsBlock FROSTED_GLASS;
 
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
