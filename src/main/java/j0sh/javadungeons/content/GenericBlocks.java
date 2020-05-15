@@ -84,6 +84,22 @@ public class GenericBlocks {
     // glass related
     public static DungeonsTranslucent GLASS;
 
+    public static DungeonsTranslucent BLUE_GLASS;
+    public static DungeonsTranslucent BROWN_GLASS;
+    public static DungeonsTranslucent BLACK_GLASS;
+    public static DungeonsTranslucent GREEN_GLASS;
+    public static DungeonsTranslucent YELLOW_GLASS;
+    public static DungeonsTranslucent RED_GLASS;
+    public static DungeonsTranslucent LIME_GLASS;
+    public static DungeonsTranslucent LIGHT_GRAY_GLASS;
+    public static DungeonsTranslucent PINK_GLASS;
+    public static DungeonsTranslucent MAGENTA_GLASS;
+    public static DungeonsTranslucent LIGHT_BLUE_GLASS;
+    public static DungeonsTranslucent ORANGE_GLASS;
+    public static DungeonsTranslucent GRAY_GLASS;
+    public static DungeonsTranslucent PURPLE_GLASS;
+    public static DungeonsTranslucent CYAN_GLASS;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -162,6 +178,22 @@ public class GenericBlocks {
       
         // glass related
         GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "glass");
+
+        BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "blue_glass");
+        BROWN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "brown_glass");
+        BLACK_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "black_glass");
+        GREEN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "green_glass");
+        YELLOW_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "yellow_glass");
+        RED_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "red_glass");
+        LIME_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "lime_glass");
+        LIGHT_GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_gray_glass");
+        PINK_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "pink_glass");
+        MAGENTA_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "magenta_glass");
+        LIGHT_BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_blue_glass");
+        ORANGE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "orange_glass");
+        GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "gray_glass");
+        PURPLE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "purple_glass");
+        CYAN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "cyan_glass");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
