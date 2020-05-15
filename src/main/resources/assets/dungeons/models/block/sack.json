@@ -1,6 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
+	"ambientocclusion": false,
 	"textures": {
 		"0": "dungeons:block/sack",
 		"particle": "dungeons:block/sack"
