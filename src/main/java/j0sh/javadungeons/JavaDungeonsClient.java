@@ -88,6 +88,21 @@ public class JavaDungeonsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
             GenericBlocks.GLASS,
+            GenericBlocks.BLUE_GLASS,
+            GenericBlocks.BROWN_GLASS,
+            GenericBlocks.BLACK_GLASS,
+            GenericBlocks.GREEN_GLASS,
+            GenericBlocks.YELLOW_GLASS,
+            GenericBlocks.RED_GLASS,
+            GenericBlocks.LIME_GLASS,
+            GenericBlocks.LIGHT_GRAY_GLASS,
+            GenericBlocks.PINK_GLASS,
+            GenericBlocks.MAGENTA_GLASS,
+            GenericBlocks.LIGHT_BLUE_GLASS,
+            GenericBlocks.ORANGE_GLASS,
+            GenericBlocks.GRAY_GLASS,
+            GenericBlocks.PURPLE_GLASS,
+            GenericBlocks.CYAN_GLASS,
             CreeperWoodsBlocks.CW_GLOW_MUSHROOM
         );
         // set up fluid rendering
