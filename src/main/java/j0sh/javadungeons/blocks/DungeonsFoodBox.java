@@ -15,8 +15,9 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.BlockView;
+import virtuoel.towelette.api.Fluidloggable;
 
-public class DungeonsFoodBox extends Block {
+public class DungeonsFoodBox extends Block implements Fluidloggable {
 
     // food box block
 

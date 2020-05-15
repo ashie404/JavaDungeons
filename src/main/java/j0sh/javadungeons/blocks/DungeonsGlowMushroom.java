@@ -18,9 +18,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsGlowMushroom extends SeaPickleBlock  {
+public class DungeonsGlowMushroom extends SeaPickleBlock implements Fluidloggable {
 
     // glow mushroom block block
 
@@ -70,5 +71,4 @@ public class DungeonsGlowMushroom extends SeaPickleBlock  {
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
-
 }

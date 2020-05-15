@@ -16,9 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.WorldAccess;
+import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsWaterPlant extends PlantBlock  {
+public class DungeonsWaterPlant extends PlantBlock implements Fluidloggable {
 
     // water plant block
 

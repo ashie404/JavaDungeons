@@ -19,9 +19,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsTent extends Block {
+public class DungeonsTent extends Block implements Fluidloggable {
 
     // tent block
 

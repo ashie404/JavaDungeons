@@ -11,8 +11,9 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
+import virtuoel.towelette.api.Fluidloggable;
 
-public class DungeonsStairs extends StairsBlock {
+public class DungeonsStairs extends StairsBlock implements Fluidloggable {
 
     // stairs block
 

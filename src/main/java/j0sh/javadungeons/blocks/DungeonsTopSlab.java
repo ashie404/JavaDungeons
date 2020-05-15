@@ -14,9 +14,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsTopSlab extends Block  {
+public class DungeonsTopSlab extends Block implements Fluidloggable {
 
     // slab block
 
