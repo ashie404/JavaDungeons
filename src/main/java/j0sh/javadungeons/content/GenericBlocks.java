@@ -81,6 +81,10 @@ public class GenericBlocks {
     public static DungeonsBlock SANDED_ANDESITE_BRICKS;
     public static DungeonsBlock CHISELED_SANDED_ANDESITE;
 
+    // glass related
+    public static DungeonsTranslucent GLASS;
+    public static DungeonsBlock FROSTED_GLASS;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -157,6 +161,9 @@ public class GenericBlocks {
         SANDED_ANDESITE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_bricks");
         CHISELED_SANDED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "chiseled_sanded_andesite");
       
+        // glass related
+        GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "glass");
+
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
     }
