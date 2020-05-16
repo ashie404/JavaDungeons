@@ -77,6 +77,11 @@
     "block.dungeons.gray_glass": "Gray Glass",
     "block.dungeons.purple_glass": "Purple Glass",
     "block.dungeons.cyan_glass": "Cyan Glass",
+    "block.dungeons.beet_shelf": "Beet Shelf",
+    "block.dungeons.book_shelf": "Book Shelf",
+    "block.dungeons.carrot_shelf": "Carrot Shelf",
+    "block.dungeons.chest_shelf": "Chest Shelf",
+    "block.dungeons.empty_shelf": "Empty Shelf",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 

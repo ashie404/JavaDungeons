@@ -100,6 +100,13 @@ public class GenericBlocks {
     public static DungeonsTranslucent PURPLE_GLASS;
     public static DungeonsTranslucent CYAN_GLASS;
 
+    // shelves
+    public static DungeonsBlock BEET_SHELF;
+    public static DungeonsBlock BOOK_SHELF;
+    public static DungeonsBlock CARROT_SHELF;
+    public static DungeonsBlock CHEST_SHELF;
+    public static DungeonsBlock EMPTY_SHELF;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -194,6 +201,13 @@ public class GenericBlocks {
         GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "gray_glass");
         PURPLE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "purple_glass");
         CYAN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "cyan_glass");
+
+        // shelves
+        BEET_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "beet_shelf");
+        BOOK_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "book_shelf");
+        CARROT_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "carrot_shelf");
+        CHEST_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "chest_shelf");
+        EMPTY_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_shelf");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");

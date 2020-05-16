@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/shelf_top",
+        "side": "dungeons:block/empty_shelf"
+    }
+}
