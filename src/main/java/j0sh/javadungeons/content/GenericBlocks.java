@@ -70,6 +70,7 @@ public class GenericBlocks {
     public static DungeonsPlant SHORT_GRASS;
     public static DungeonsPlant FERN;
     public static DungeonsPlant SHRUB;
+    public static DungeonsPlant YELLOW_TULIP;
     public static DungeonsWaterPlant WATER_PLANT;
     public static DungeonsHangingPlant HANGING_ROSES;
 
@@ -174,6 +175,7 @@ public class GenericBlocks {
         SHORT_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
         FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
+        YELLOW_TULIP = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "yellow_tulip");
         WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
         HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
 
