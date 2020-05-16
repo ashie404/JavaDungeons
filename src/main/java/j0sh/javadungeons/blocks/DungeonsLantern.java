@@ -18,7 +18,7 @@ public class DungeonsLantern extends LanternBlock {
     public BlockItem blockItem;
 
     public DungeonsLantern(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds));
+        super(FabricBlockSettings.of(material).sounds(sounds).lightLevel(15));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
