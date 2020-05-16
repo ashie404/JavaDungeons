@@ -71,6 +71,7 @@ public class GenericBlocks {
     public static DungeonsPlant FERN;
     public static DungeonsPlant SHRUB;
     public static DungeonsWaterPlant WATER_PLANT;
+    public static DungeonsHangingPlant HANGING_ROSES;
 
     // sanded andesite
     public static DungeonsBlock SANDED_ANDESITE;
@@ -174,6 +175,8 @@ public class GenericBlocks {
         FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
         WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
+        HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
+
         // sanded andesite
         SANDED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite");
         SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_tiles");
