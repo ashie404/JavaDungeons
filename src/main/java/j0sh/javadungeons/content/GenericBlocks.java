@@ -109,6 +109,11 @@ public class GenericBlocks {
     public static DungeonsBlock CHEST_SHELF;
     public static DungeonsBlock EMPTY_SHELF;
 
+    // braziers
+    public static DungeonsBrazier UNLIT_BRAZIER;
+    public static DungeonsBrazier LIT_BRAZIER;
+    public static DungeonsBrazier GREEN_LIT_BRAZIER;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -213,6 +218,11 @@ public class GenericBlocks {
         CARROT_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "carrot_shelf");
         CHEST_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "chest_shelf");
         EMPTY_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_shelf");
+
+        // braziers
+        UNLIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "unlit", "unlit_brazier");
+        LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "lit", "lit_brazier");
+        GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
