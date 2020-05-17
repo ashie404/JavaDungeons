@@ -84,6 +84,9 @@
     "block.dungeons.empty_shelf": "Empty Shelf",
     "block.dungeons.hanging_roses": "Hanging Roses",
     "block.dungeons.yellow_tulip": "Yellow Tulip",
+    "block.dungeons.unlit_brazier": "Unlit Brazier",
+    "block.dungeons.lit_brazier": "Lit Brazier",
+    "block.dungeons.green_lit_brazier": "Green Lit Brazier",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
