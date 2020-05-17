@@ -114,6 +114,10 @@ public class GenericBlocks {
     public static DungeonsBrazier LIT_BRAZIER;
     public static DungeonsBrazier GREEN_LIT_BRAZIER;
 
+    // books
+    public static DungeonsBook CLOSED_BOOK;
+    public static DungeonsBook OPEN_BOOK;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -223,6 +227,10 @@ public class GenericBlocks {
         UNLIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "unlit", "unlit_brazier");
         LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "lit", "lit_brazier");
         GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
+
+        // books
+        CLOSED_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");
+        OPEN_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "open_book");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
