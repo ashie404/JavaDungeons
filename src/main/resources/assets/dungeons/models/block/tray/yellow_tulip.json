@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "dungeons:block/tray",
 		"1": "dungeons:block/yellow_tulip",
