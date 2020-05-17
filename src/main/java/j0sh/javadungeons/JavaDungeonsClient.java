@@ -2,16 +2,20 @@ package j0sh.javadungeons;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.util.Identifier;
 
 import j0sh.javadungeons.content.*;
 import j0sh.javadungeons.fluids.DungeonsWaterFluid;
+import j0sh.javadungeons.particles.GreenFlameParticle;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
@@ -73,6 +77,9 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.DUNGEONS_LANTERN,
             GenericBlocks.HANGING_ROSES,
             GenericBlocks.YELLOW_TULIP,
+            GenericBlocks.UNLIT_BRAZIER,
+            GenericBlocks.LIT_BRAZIER,
+            GenericBlocks.GREEN_LIT_BRAZIER,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
@@ -113,6 +120,13 @@ public class JavaDungeonsClient implements ClientModInitializer {
             Fluids.DUNGEONS_WATER_FLOWING,
             Fluids.DUNGEONS_WATER_STILL
         );
+
+        // set up particles
+        ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
+        ClientSpriteRegistryCallback.event(SpriteAtlasTexture.PARTICLE_ATLAS_TEX).register((atlasTexture, registry) -> {
+            registry.register(new Identifier(JavaDungeons.MOD_ID, "particle/green_flame"));
+        });
+
         DungeonsWaterFluid.setupFluidRendering(
             Fluids.DUNGEONS_WATER_STILL, // still fluid object
             Fluids.DUNGEONS_WATER_FLOWING, // flowing fluid object
