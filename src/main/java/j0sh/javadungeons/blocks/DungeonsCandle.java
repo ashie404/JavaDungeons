@@ -3,7 +3,6 @@ package j0sh.javadungeons.blocks;
 import java.util.Random;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

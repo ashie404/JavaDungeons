@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/teapot" },
+        "facing=south": { "model": "dungeons:block/teapot", "y": 180 },
+        "facing=east": { "model":  "dungeons:block/teapot", "y": 90 },
+        "facing=west": { "model":  "dungeons:block/teapot", "y": 270 }
+    }
+}
