@@ -121,6 +121,9 @@ public class GenericBlocks {
     // candle
     public static DungeonsCandle CANDLE;
 
+    // tray
+    public static DungeonsTray TRAY;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -237,6 +240,9 @@ public class GenericBlocks {
 
         // candle
         CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle");
+
+        // tray
+        TRAY = new DungeonsTray(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tray");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
