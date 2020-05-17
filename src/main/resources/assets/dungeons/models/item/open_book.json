@@ -1,0 +1,30 @@
+{
+    "parent": "dungeons:block/book/open_0",
+    "display": {
+        "gui": {
+            "rotation": [ 32, 132, 0 ],
+            "translation": [ -0.5, 5.25, 0],
+            "scale":[ 1, 1, 1 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 4.75, 0],
+            "scale":[ 1, 1, 1 ]
+        },
+        "fixed": {
+            "rotation": [ -90, 0, 0 ],
+            "translation": [ 0, 0, -7.5],
+            "scale":[ 1, 1, 1 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 0, -90, -2 ],
+            "translation": [ 0, 3, -2 ],
+            "scale": [ 0.75, 0.75, 0.75 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 1, -76, -13 ],
+            "translation": [ 3, 7.75, 0 ],
+            "scale": [ 1, 1, 1 ]
+        }
+    }
+}

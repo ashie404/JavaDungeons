@@ -87,6 +87,8 @@
     "block.dungeons.unlit_brazier": "Unlit Brazier",
     "block.dungeons.lit_brazier": "Lit Brazier",
     "block.dungeons.green_lit_brazier": "Green Lit Brazier",
+    "block.dungeons.open_book": "Open Book",
+    "block.dungeons.closed_book": "Closed Book",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
 
