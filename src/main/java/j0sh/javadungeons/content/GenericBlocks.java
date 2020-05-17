@@ -118,6 +118,9 @@ public class GenericBlocks {
     public static DungeonsBook CLOSED_BOOK;
     public static DungeonsBook OPEN_BOOK;
 
+    // candle
+    public static DungeonsCandle CANDLE;
+
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
@@ -231,6 +234,9 @@ public class GenericBlocks {
         // books
         CLOSED_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");
         OPEN_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "open_book");
+
+        // candle
+        CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle");
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");

@@ -13,7 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class DungeonsLantern extends LanternBlock {
 
-    // generic block
+    // lantern block
 
     public BlockItem blockItem;
 
