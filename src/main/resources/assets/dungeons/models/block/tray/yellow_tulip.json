@@ -1,0 +1,49 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "dungeons:block/tray",
+		"1": "dungeons:block/yellow_tulip",
+		"particle": "dungeons:block/tray"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 3],
+			"to": [13, 4, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 8, 11]},
+			"faces": {
+				"north": {"uv": [3, 11, 13, 15], "texture": "#0"},
+				"east": {"uv": [3, 11, 13, 15], "texture": "#0"},
+				"south": {"uv": [3, 11, 13, 15], "texture": "#0"},
+				"west": {"uv": [3, 11, 13, 15], "texture": "#0"},
+				"up": {"uv": [3, 1, 13, 11], "texture": "#0"},
+				"down": {"uv": [4, 2, 5, 3], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 4, 0],
+			"to": [8, 20, 16],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 12, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [8, 4, 0],
+			"to": [8, 20, 16],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 12, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "CONTAINS=empty": {"model": "dungeons:block/tray/empty"},
+        "CONTAINS=yellow_tulip": {"model": "dungeons:block/tray/yellow_tulip"}
+    }
+}
