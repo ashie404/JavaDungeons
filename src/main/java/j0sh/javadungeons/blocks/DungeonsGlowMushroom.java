@@ -18,10 +18,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
-import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsGlowMushroom extends SeaPickleBlock implements Fluidloggable {
+public class DungeonsGlowMushroom extends SeaPickleBlock {
 
     // glow mushroom block block
 

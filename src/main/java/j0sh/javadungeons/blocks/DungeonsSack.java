@@ -6,7 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.entity.EntityContext;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,17 +19,20 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.WorldView;
-import virtuoel.towelette.api.Fluidloggable;
 
-public class DungeonsSack extends Block implements Fluidloggable {
+public class DungeonsSack extends Block implements Waterloggable {
 
     // sack block
 
     public BlockItem blockItem;
-
+    public static final BooleanProperty WATERLOGGED;
+    
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
     @Override
@@ -39,15 +45,31 @@ public class DungeonsSack extends Block implements Fluidloggable {
         return sideCoversSmallSquare(world, pos.down(), Direction.UP);
     }
 
-    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(WATERLOGGED);
+    }
+  
+    public FluidState getFluidState(BlockState state) {
+       return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+    }
+
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, IWorld world, BlockPos pos, BlockPos neighborPos) {
-        return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
+       if ((Boolean)state.get(WATERLOGGED)) {
+          world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+       }
+
+       return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
     public DungeonsSack(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
         super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque());
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    }
+
+    static {
+        WATERLOGGED = Properties.WATERLOGGED;
     }
 
 }

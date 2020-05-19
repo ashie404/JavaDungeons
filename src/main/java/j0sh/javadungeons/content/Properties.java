@@ -23,6 +23,6 @@ public class Properties {
     public static EnumProperty<Contains> CONTAINS;
 
     public static void init() {
-        CONTAINS = EnumProperty.of("CONTAINS", Contains.class);
+        CONTAINS = EnumProperty.of("contains", Contains.class);
     }
 }
