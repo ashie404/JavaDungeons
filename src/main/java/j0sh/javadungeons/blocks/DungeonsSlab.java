@@ -9,10 +9,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import virtuoel.towelette.api.Fluidloggable;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsSlab extends SlabBlock implements Fluidloggable {
+public class DungeonsSlab extends SlabBlock {
 
     // slab block
 

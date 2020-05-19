@@ -5,7 +5,12 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
+<<<<<<< HEAD
 import net.minecraft.block.ShapeContext;
+=======
+import net.minecraft.block.Waterloggable;
+import net.minecraft.entity.EntityContext;
+>>>>>>> b167af3... remove towelette dependency, need further testing
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -15,9 +20,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.BlockView;
-import virtuoel.towelette.api.Fluidloggable;
 
-public class DungeonsFoodBox extends Block implements Fluidloggable {
+public class DungeonsFoodBox extends Block implements Waterloggable {
 
     // food box block
 
