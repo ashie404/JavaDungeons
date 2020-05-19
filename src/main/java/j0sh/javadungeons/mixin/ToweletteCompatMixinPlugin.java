@@ -24,8 +24,10 @@ public class ToweletteCompatMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        // if this is a compatibility mixin and not just a normal mixin, check to see if towelette is loaded
-        if (mixinClassName.substring(0, 4) != "Mixin") {
+        // if this is a compatibility mixin (injects into my mod instead of into minecraft) and not just a normal mixin, check to see if towelette is loaded
+        // if towelette is loaded, load compat mixins
+        if (targetClassName.indexOf("j0sh") != -1) {
+            System.out.println(targetClassName);
             return FabricLoader.getInstance().isModLoaded("towelette");
         } else {
             return true;
