@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "|#|",
+      "---"
+    ],
+    "key": {
+      "-": {
+        "item": "minecraft:spruce_planks"
+      },
+      "|": {
+        "item": "minecraft:spruce_slab"
+      },
+      "#": {
+        "item": "minecraft:apple"    
+      }
+    },
+    "result": {
+      "item": "dungeons:apple_food_box",
+      "count": 1
+    }
+  }

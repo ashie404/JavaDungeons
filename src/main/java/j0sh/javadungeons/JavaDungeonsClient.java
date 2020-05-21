@@ -29,7 +29,6 @@ import net.minecraft.resource.ResourceType;
 import java.util.function.Function;
 
 import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.fluids.DungeonsWaterFluid;
 import j0sh.javadungeons.particles.GreenFlameParticle;
 
 public class JavaDungeonsClient implements ClientModInitializer {
