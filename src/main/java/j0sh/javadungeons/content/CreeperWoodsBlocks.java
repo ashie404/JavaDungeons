@@ -1,15 +1,7 @@
 package j0sh.javadungeons.content;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.blocks.DungeonsBlock;
-import j0sh.javadungeons.blocks.DungeonsEmissive;
-import j0sh.javadungeons.blocks.DungeonsGlowMushroom;
-import j0sh.javadungeons.blocks.DungeonsGlowingPlant;
-import j0sh.javadungeons.blocks.DungeonsPath;
-import j0sh.javadungeons.blocks.DungeonsPathable;
-import j0sh.javadungeons.blocks.DungeonsPillar;
-import j0sh.javadungeons.blocks.DungeonsPlant;
-import j0sh.javadungeons.blocks.DungeonsSlab;
+import j0sh.javadungeons.blocks.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
