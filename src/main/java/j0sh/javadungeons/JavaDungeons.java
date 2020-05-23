@@ -38,6 +38,7 @@ public class JavaDungeons implements ModInitializer {
 		CreeperWoodsBlocks.init();
 		DesertTempleBlocks.init();
 		PumpkinPasturesBlocks.init();
+		CactiCanyonBlocks.init();
 
 		// items
 		Weapons.init();
