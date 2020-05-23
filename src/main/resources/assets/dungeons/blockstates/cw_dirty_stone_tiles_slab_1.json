@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/creeper_woods/dirty_stone_tiles_slab_1" },
+        "type=top": { "model":    "dungeons:block/creeper_woods/dirty_stone_tiles_slab_1_top" },
+        "type=double": { "model": "dungeons:block/creeper_woods/dirty_stone_tiles_1" }
+    }
+}
