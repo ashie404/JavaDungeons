@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/sunflower_top",
+    "textures": {
+        "particle": "dungeons:block/cacti_canyon/tall_cactus_front",
+        "cross": "dungeons:block/cacti_canyon/tall_cactus_top",
+        "back": "dungeons:block/cacti_canyon/tall_cactus_back",
+        "front": "dungeons:block/cacti_canyon/tall_cactus_front"
+    }
+}

@@ -26,6 +26,14 @@ public class CactiCanyonBlocks {
     public static DungeonsBlock CC_PURPLE_SANDSTONE;
     public static DungeonsBlock CC_RED_SANDSTONE;
     public static DungeonsBlock CC_YELLOW_SANDSTONE;
+
+    // plant related
+    public static DungeonsDesertPlant CC_CACTUS;
+    public static DungeonsDesertPlant CC_SMALL_CACTUS;
+    public static DungeonsDesertPlant CC_FERN;
+    public static DungeonsDesertPlant CC_FLOWERS;
+    public static DungeonsDesertTallPlant CC_YUCCA;
+    public static DungeonsDesertTallPlant CC_TALL_CACTUS;
     
     public static void init() {
         // sand related
@@ -46,6 +54,14 @@ public class CactiCanyonBlocks {
         CC_PURPLE_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_purple_sandstone");
         CC_RED_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_red_sandstone");
         CC_YELLOW_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_yellow_sandstone");
+
+        // plant related
+        CC_CACTUS = new DungeonsDesertPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_cactus");
+        CC_SMALL_CACTUS = new DungeonsDesertPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_small_cactus");
+        CC_FERN = new DungeonsDesertPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_fern");
+        CC_FLOWERS = new DungeonsDesertPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_flowers");
+        CC_YUCCA = new DungeonsDesertTallPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_yucca");
+        CC_TALL_CACTUS = new DungeonsDesertTallPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_tall_cactus");
     }
 
 }

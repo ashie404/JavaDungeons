@@ -10,8 +10,10 @@ import j0sh.javadungeons.JavaDungeons;
 public class Tags {
 
     public static Tag<Block> PLANTABLE;
+    public static Tag<Block> DESERT_PLANTABLE;
 
     public static void init() {
         PLANTABLE = TagRegistry.block(new Identifier(JavaDungeons.MOD_ID, "plantable"));
+        DESERT_PLANTABLE = TagRegistry.block(new Identifier(JavaDungeons.MOD_ID, "desert_plantable"));
     }
 }

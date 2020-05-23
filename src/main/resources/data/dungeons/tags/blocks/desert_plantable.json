@@ -1,0 +1,29 @@
+{
+    "values": [
+        "dungeons:cc_sand",
+        "dungeons:cc_dense_sandy_dirt",
+        "dungeons:cc_sandy_dirt",
+        "dungeons:cc_sandstone",
+        "dungeons:cc_blue_sandstone",
+        "dungeons:cc_brown_sandstone",
+        "dungeons:cc_dark_brown_sandstone",
+        "dungeons:cc_gray_sandstone",
+        "dungeons:cc_green_sandstone",
+        "dungeons:cc_light_green_sandstone",
+        "dungeons:cc_orange_sandstone",
+        "dungeons:cc_pink_sandstone",
+        "dungeons:cc_purple_sandstone",
+        "dungeons:cc_red_sandstone",
+        "dungeons:cc_yellow_sandstone",
+        "minecraft:sand",
+        "minecraft:red_sand",
+        "minecraft:sandstone",
+        "minecraft:chiseled_sandstone",
+        "minecraft:cut_sandstone",
+        "minecraft:smooth_sandstone",
+        "minecraft:red_sandstone",
+        "minecraft:chiseled_red_sandstone",
+        "minecraft:cut_red_sandstone",
+        "minecraft:smooth_red_sandstone"
+    ]
+}

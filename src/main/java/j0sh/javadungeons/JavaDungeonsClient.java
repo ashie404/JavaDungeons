@@ -108,7 +108,13 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,
             PumpkinPasturesBlocks.PM_SHRUB,
             PumpkinPasturesBlocks.PM_DEAD_SAPLING,
-            PumpkinPasturesBlocks.PM_FERN
+            PumpkinPasturesBlocks.PM_FERN,
+            CactiCanyonBlocks.CC_CACTUS,
+            CactiCanyonBlocks.CC_SMALL_CACTUS,
+            CactiCanyonBlocks.CC_FERN,
+            CactiCanyonBlocks.CC_FLOWERS,
+            CactiCanyonBlocks.CC_YUCCA,
+            CactiCanyonBlocks.CC_TALL_CACTUS
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
