@@ -1,10 +1,14 @@
 package j0sh.javadungeons;
 
+import j0sh.javadungeons.client.renderer.item.HammerItemRenderer;
+import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.particles.GreenFlameParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -12,8 +16,8 @@ import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
@@ -27,10 +31,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockRenderView;
 
 import java.util.function.Function;
-
-import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.fluids.DungeonsWaterFluid;
-import j0sh.javadungeons.particles.GreenFlameParticle;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
@@ -150,6 +150,9 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
+
+		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.STONE_HAMMER,
+				new HammerItemRenderer(new Identifier(JavaDungeons.MOD_ID, "textures/item/model/stone_hammer.png")));
     }    
 
     public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color)

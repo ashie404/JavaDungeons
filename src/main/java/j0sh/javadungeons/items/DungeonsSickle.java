@@ -14,4 +14,5 @@ public class DungeonsSickle extends HoeItem {
         super(material, attackDamage, attackSpeed, new Item.Settings().group(JavaDungeons.WEAPONS));
         Registry.register(Registry.ITEM, new Identifier(JavaDungeons.MOD_ID, id), this);
     }
+
 }

@@ -31,7 +31,7 @@ public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
             int m = world.getTopY(Heightmap.Type.WORLD_SURFACE, pos.getX() + k, pos.getZ() + l);
             BlockPos blockPos2 = new BlockPos(pos.getX() + k, m, pos.getZ() + l);
 
-            BlockState blockState = (BlockState)CreeperWoodsBlocks.CW_GLOW_MUSHROOM.getDefaultState()
+            BlockState blockState = CreeperWoodsBlocks.CW_GLOW_MUSHROOM.getDefaultState()
                     .with(SeaPickleBlock.WATERLOGGED, false)
                     .with(SeaPickleBlock.PICKLES, random.nextInt(4) + 1);
 

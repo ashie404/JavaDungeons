@@ -1,17 +1,14 @@
 package j0sh.javadungeons.biome;
 
-import java.util.OptionalInt;
-
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-
 import j0sh.javadungeons.content.Features;
 import j0sh.javadungeons.content.Fluids;
 import j0sh.javadungeons.content.GenericBlocks;
 import j0sh.javadungeons.content.PumpkinPasturesBlocks;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
@@ -21,15 +18,7 @@ import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountExtraChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.MineshaftFeature;
-import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
-import net.minecraft.world.gen.feature.RandomFeatureConfig;
-import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
-import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
-import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
@@ -39,6 +28,8 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import java.util.OptionalInt;
 
 public class PumpkinPasturesBiome extends Biome {
 
@@ -54,8 +45,8 @@ public class PumpkinPasturesBiome extends Biome {
             .waterColor(4159204).waterFogColor(329011).fogColor(12638463)
             .moodSound(BiomeMoodSound.CAVE).build()).parent((String)null)
             .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
-            .parent((String)null
-        ));
+            .parent((String)null)
+        );
         
         this.addStructureFeature(Feature.VILLAGE.configure(new StructurePoolFeatureConfig("village/plains/town_centers", 6)));
         this.addStructureFeature(Feature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));

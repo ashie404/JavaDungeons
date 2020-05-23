@@ -29,8 +29,6 @@ public class DungeonsGlowMushroom extends SeaPickleBlock {
     int soundsPlayed = 0;
     int waitCounter = 0;
 
-    boolean stepping = false;
-    
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (!world.isClient) {

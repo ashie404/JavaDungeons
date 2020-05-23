@@ -8,32 +8,32 @@ import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 
-public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
+public abstract class SoggySwampWaterFluid extends DungeonsBaseFluid {
    @Override
 	public Fluid getStill()
 	{
-		return Fluids.DUNGEONS_WATER_STILL;
+		return Fluids.SOGGY_SWAMP_WATER_STILL;
 	}
  
 	@Override
 	public Fluid getFlowing()
 	{
-		return Fluids.DUNGEONS_WATER_FLOWING;
+		return Fluids.SOGGY_SWAMP_WATER_FLOWING;
 	}
  
 	@Override
 	public Item getBucketItem()
 	{
-		return Fluids.DUNGEONS_WATER_BUCKET;
+		return Fluids.SOGGY_SWAMP_WATER_BUCKET;
     }
 
     @Override
 	protected BlockState toBlockState(FluidState fluidState) {
 		// method_15741 converts the LEVEL_1_8 of the fluid state to the LEVEL_15 the fluid block uses
-		return Fluids.DUNGEONS_WATER.getDefaultState().with(Properties.LEVEL_15, method_15741(fluidState));
+		return Fluids.SOGGY_SWAMP_WATER.getDefaultState().with(Properties.LEVEL_15, method_15741(fluidState));
 	}
     
-    public static class Flowing extends DungeonsWaterFluid {
+    public static class Flowing extends SoggySwampWaterFluid {
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
            super.appendProperties(builder);
            builder.add(LEVEL);
@@ -41,7 +41,7 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
         
         @Override
         public int getLevel(FluidState state) {
-           return (Integer)state.get(LEVEL);
+           return state.get(LEVEL);
         }
         
         @Override
@@ -50,7 +50,7 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
         }
     }
   
-    public static class Still extends DungeonsWaterFluid {
+    public static class Still extends SoggySwampWaterFluid {
         @Override
         public int getLevel(FluidState state) {
            return 8;
