@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/inner_stairs",
+    "textures": {
+        "bottom": "dungeons:block/desert_temple/sandy_stone_bricks",
+        "top":    "dungeons:block/desert_temple/sandy_stone_bricks",
+        "side":   "dungeons:block/desert_temple/sandy_stone_bricks"
+    }
+}
