@@ -1,10 +1,7 @@
 package j0sh.javadungeons.content;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.biome.CreeperWoodsBiome;
-import j0sh.javadungeons.biome.DungeonsPlainsBiome;
-import j0sh.javadungeons.biome.PumpkinPasturesBiome;
-import j0sh.javadungeons.biome.DungeonsSoggySwampBiome;
+import j0sh.javadungeons.biome.*;
 import net.fabricmc.fabric.api.biomes.v1.FabricBiomes;
 import net.fabricmc.fabric.api.biomes.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biomes.v1.OverworldClimate;
@@ -15,6 +12,7 @@ public class Biomes {
 
     public static CreeperWoodsBiome CREEPER_WOODS_BIOME;
     public static PumpkinPasturesBiome PUMPKIN_PASTURES_BIOME;
+    public static CharredPumpkinPasturesBiome CHARRED_PUMPKIN_PASTURES_BIOME;
     public static DungeonsPlainsBiome DUNGEONS_PLAINS_BIOME;
     public static DungeonsSoggySwampBiome SOGGY_SWAMP_BIOME;
 
@@ -22,6 +20,7 @@ public class Biomes {
         // register biomes
         CREEPER_WOODS_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "creeper_woods"), new CreeperWoodsBiome());
         PUMPKIN_PASTURES_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"), new PumpkinPasturesBiome());
+        CHARRED_PUMPKIN_PASTURES_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "charred_pumpkin_pastures"), new CharredPumpkinPasturesBiome());
         DUNGEONS_PLAINS_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "dungeons_plains"), new DungeonsPlainsBiome());
         SOGGY_SWAMP_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), new DungeonsSoggySwampBiome());
 
@@ -29,11 +28,15 @@ public class Biomes {
         OverworldBiomes.addContinentalBiome(CREEPER_WOODS_BIOME, OverworldClimate.TEMPERATE, 2D);
         OverworldBiomes.addContinentalBiome(PUMPKIN_PASTURES_BIOME, OverworldClimate.TEMPERATE, 2.25D);
         OverworldBiomes.addContinentalBiome(DUNGEONS_PLAINS_BIOME, OverworldClimate.TEMPERATE, 3D);
+        OverworldBiomes.addContinentalBiome(SOGGY_SWAMP_BIOME, OverworldClimate.TEMPERATE, 2.25D);
+
+        OverworldBiomes.addHillsBiome(PUMPKIN_PASTURES_BIOME, CHARRED_PUMPKIN_PASTURES_BIOME, 2.25D);
 
         // add biomes that are spawnable in
         FabricBiomes.addSpawnBiome(CREEPER_WOODS_BIOME);
         FabricBiomes.addSpawnBiome(PUMPKIN_PASTURES_BIOME);
         FabricBiomes.addSpawnBiome(DUNGEONS_PLAINS_BIOME);
+        FabricBiomes.addSpawnBiome(SOGGY_SWAMP_BIOME);
     }
 
 }

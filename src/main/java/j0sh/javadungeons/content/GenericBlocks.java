@@ -112,7 +112,8 @@ public class GenericBlocks {
     // braziers
     public static DungeonsBrazier UNLIT_BRAZIER;
     public static DungeonsBrazier LIT_BRAZIER;
-    public static DungeonsBrazier GREEN_LIT_BRAZIER;
+    public static DungeonsBrazier LIT_GREEN_BRAZIER;
+    public static DungeonsBrazier LIT_SOUL_BRAZIER;
 
     // books
     public static DungeonsBook CLOSED_BOOK;
@@ -235,7 +236,8 @@ public class GenericBlocks {
         // braziers
         UNLIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "unlit", "unlit_brazier");
         LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "lit", "lit_brazier");
-        GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
+        LIT_GREEN_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
+        LIT_SOUL_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "soul_lit", "soul_lit_brazier");
 
         // books
         CLOSED_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");

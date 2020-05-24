@@ -20,10 +20,11 @@ public class SoggySwampSurfaceBuilder  extends SurfaceBuilder<TernarySurfaceConf
 
     @Override
     public void generate(Random random, Chunk chunk, Biome biome, int x, int z, int height, double noise, BlockState defaultBlock, BlockState defaultFluid, int seaLevel, long seed, TernarySurfaceConfig ternarySurfaceConfig) {
-        double e = Biome.FOLIAGE_NOISE.sample((double)x * 0.5D, (double)z * 0.5D, true);
         int n = x & 15;
         int o = z & 15;
         BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        SurfaceBuilder.DEFAULT.generate(random, chunk, biome, x, z, height, noise, defaultBlock, defaultFluid, seaLevel, seed, ternarySurfaceConfig);
 
         for(int p = height; p >= 0; --p) {
             mutable.set(n, p, o);
@@ -38,7 +39,5 @@ public class SoggySwampSurfaceBuilder  extends SurfaceBuilder<TernarySurfaceConf
                 break;
             }
         }
-
-        SurfaceBuilder.DEFAULT.generate(random, chunk, biome, x, z, height, noise, defaultBlock, defaultFluid, seaLevel, seed, ternarySurfaceConfig);
     }
 }

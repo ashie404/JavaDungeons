@@ -41,7 +41,7 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
         
         @Override
         public int getLevel(FluidState state) {
-           return (Integer)state.get(LEVEL);
+           return state.get(LEVEL);
         }
         
         @Override

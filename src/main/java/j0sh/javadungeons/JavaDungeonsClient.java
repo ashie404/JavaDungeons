@@ -94,7 +94,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.YELLOW_TULIP,
             GenericBlocks.UNLIT_BRAZIER,
             GenericBlocks.LIT_BRAZIER,
-            GenericBlocks.GREEN_LIT_BRAZIER,
+            GenericBlocks.LIT_GREEN_BRAZIER,
+			GenericBlocks.LIT_SOUL_BRAZIER,
             GenericBlocks.TRAY,
             GenericBlocks.TEAPOT,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
@@ -137,6 +138,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             Fluids.DUNGEONS_WATER_FLOWING,
             Fluids.DUNGEONS_WATER_STILL
         );
+		BlockRenderLayerMap.INSTANCE.putFluids(
+				TRANSLUCENT_BLOCK_LAYER,
+				Fluids.SOGGY_SWAMP_WATER_FLOWING,
+				Fluids.SOGGY_SWAMP_WATER_STILL
+		);
 
         // set up particles
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
@@ -150,6 +156,13 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
+
+		setupFluidRendering(
+				Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
+				Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
+				new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water"), // texture identifier
+				0xFFFFFF // tint color (white because water is colored in its file)
+		);
 
 		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.STONE_HAMMER,
 				new HammerItemRenderer(new Identifier(JavaDungeons.MOD_ID, "textures/item/model/stone_hammer.png")));
