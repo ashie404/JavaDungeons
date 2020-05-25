@@ -127,6 +127,9 @@ public class GenericBlocks {
     // redstone related
     public static DungeonsPoweredEmissive LIGHTHOUSE_LAMP;
 
+    // chains
+    public static DungeonsChains CHAINS;
+
     public static void init() {
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "floor_tile");
@@ -246,5 +249,8 @@ public class GenericBlocks {
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
+
+        // chains
+        CHAINS = new DungeonsChains(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
     }
 }
