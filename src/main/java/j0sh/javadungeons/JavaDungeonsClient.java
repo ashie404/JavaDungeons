@@ -57,7 +57,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT
+            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT,
+            CactiCanyonBlocks.CC_GRASS_BLOCK,
+            CactiCanyonBlocks.CC_GRASSY_DIRT,
+            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT
         );
 
         ColorProviderRegistry.ITEM.register(
@@ -71,7 +74,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
             CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem
+            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem,
+            CactiCanyonBlocks.CC_GRASS_BLOCK.blockItem,
+            CactiCanyonBlocks.CC_GRASSY_DIRT.blockItem,
+            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT.blockItem
         );
 
         // register render layers
@@ -115,7 +121,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CactiCanyonBlocks.CC_FERN,
             CactiCanyonBlocks.CC_FLOWERS,
             CactiCanyonBlocks.CC_YUCCA,
-            CactiCanyonBlocks.CC_TALL_CACTUS
+            CactiCanyonBlocks.CC_TALL_CACTUS,
+            CactiCanyonBlocks.CC_GRASS_BLOCK,
+            CactiCanyonBlocks.CC_GRASSY_DIRT,
+            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
+            CactiCanyonBlocks.CC_DESERT_GRASS
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,

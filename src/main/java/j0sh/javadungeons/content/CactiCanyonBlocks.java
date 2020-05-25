@@ -8,6 +8,18 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class CactiCanyonBlocks {
 
+    // grass related
+    public static DungeonsPathable CC_GRASS_BLOCK;
+
+    // dirt related
+    public static DungeonsBlock CC_DENSE_GRASSY_DIRT;
+    public static DungeonsBlock CC_GRASSY_DIRT;
+    public static DungeonsPath CC_DIRT_PATH;
+    public static DungeonsPathable CC_DIRT;
+    public static DungeonsSlab CC_DIRT_SLAB;
+    public static DungeonsPath CC_ROCKY_DIRT_PATH;
+    public static DungeonsPathable CC_ROCKY_DIRT;
+
     // sand related
     public static DungeonsFallingBlock CC_SAND;
     public static DungeonsBlock CC_DENSE_SANDY_DIRT;
@@ -28,6 +40,7 @@ public class CactiCanyonBlocks {
     public static DungeonsBlock CC_YELLOW_SANDSTONE;
 
     // plant related
+    public static DungeonsDesertPlant CC_DESERT_GRASS;
     public static DungeonsDesertPlant CC_CACTUS;
     public static DungeonsDesertPlant CC_SMALL_CACTUS;
     public static DungeonsDesertPlant CC_FERN;
@@ -36,6 +49,19 @@ public class CactiCanyonBlocks {
     public static DungeonsDesertTallPlant CC_TALL_CACTUS;
     
     public static void init() {
+
+        // grass related
+        CC_GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.CACTI_CANYON, "cc_grass_block");
+
+        // dirt related
+        CC_DENSE_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_grassy_dirt");
+        CC_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_grassy_dirt");
+        CC_DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_path");
+        CC_DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, CC_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_dirt");
+        CC_DIRT_SLAB = new DungeonsSlab(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_slab");
+        CC_ROCKY_DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt_path");
+        CC_ROCKY_DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, CC_ROCKY_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt");
+
         // sand related
         CC_SAND = new DungeonsFallingBlock(Material.SAND, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand");
         CC_DENSE_SANDY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_sandy_dirt");
@@ -56,6 +82,7 @@ public class CactiCanyonBlocks {
         CC_YELLOW_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_yellow_sandstone");
 
         // plant related
+        CC_DESERT_GRASS = new DungeonsDesertPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_desert_grass");
         CC_CACTUS = new DungeonsDesertPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_cactus");
         CC_SMALL_CACTUS = new DungeonsDesertPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_small_cactus");
         CC_FERN = new DungeonsDesertPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_fern");

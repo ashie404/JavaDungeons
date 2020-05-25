@@ -219,12 +219,22 @@
     "block.dungeons.cc_flowers": "Flowers",
     "block.dungeons.cc_yucca": "Yucca",
     "block.dungeons.cc_tall_cactus": "Tall Cactus",
+    "block.dungeons.cc_grass_block": "Grass Block",
+    "block.dungeons.cc_dense_grassy_dirt": "Dense Grassy Dirt",
+    "block.dungeons.cc_grassy_dirt": "Grassy Dirt",
+    "block.dungeons.cc_dirt_path": "Dirt Path",
+    "block.dungeons.cc_dirt": "Dirt",
+    "block.dungeons.cc_dirt_slab": "Dirt Slab",
+    "block.dungeons.cc_rocky_dirt_path": "Rocky Dirt Path",
+    "block.dungeons.cc_rocky_dirt": "Rocky Dirt",
+    "block.dungeons.cc_desert_grass": "Desert Grass",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 
     "biome.dungeons.creeper_woods": "Creeper Woods",
     "biome.dungeons.pumpkin_pastures": "Pumpkin Pastures",
     "biome.dungeons.dungeons_plains": "Dungeons Plains",
+    "biome.dungeons.cacti_canyon": "Cacti Canyon",
 
     "item.dungeons.axe": "Axe",
     "item.dungeons.highland_axe": "Highland Axe",
