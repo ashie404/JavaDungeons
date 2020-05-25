@@ -1,15 +1,7 @@
 package j0sh.javadungeons.content;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.blocks.DungeonsBlock;
-import j0sh.javadungeons.blocks.DungeonsEmissive;
-import j0sh.javadungeons.blocks.DungeonsGlowMushroom;
-import j0sh.javadungeons.blocks.DungeonsGlowingPlant;
-import j0sh.javadungeons.blocks.DungeonsPath;
-import j0sh.javadungeons.blocks.DungeonsPathable;
-import j0sh.javadungeons.blocks.DungeonsPillar;
-import j0sh.javadungeons.blocks.DungeonsPlant;
-import j0sh.javadungeons.blocks.DungeonsSlab;
+import j0sh.javadungeons.blocks.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -28,11 +20,11 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_CRACKED_ANDESITE;
 
     // dark andesite
-    public static DungeonsBlock CW_DARK_POLISHED_ANDESITE;
-    public static DungeonsSlab CW_DARK_ANDESITE_SLAB;
+
+    public static DungeonsSlabStairBlock CW_DARK_POLISHED_ANDESITE;
     public static DungeonsBlock CW_MOSSY_DARK_ANDESITE;
     public static DungeonsBlock CW_MOSSY_DARK_ANDESITE_TILES;
-    public static DungeonsBlock CW_DARK_ANDESITE_TILES;
+    public static DungeonsSlabStairBlock CW_DARK_ANDESITE_TILES;
     public static DungeonsBlock CW_DARK_CHISELED_ANDESITE;
     public static DungeonsBlock CW_DARK_CHISELED_ANDESITE_2;
     public static DungeonsPillar CW_DARK_ANDESITE_PILLAR;
@@ -50,15 +42,14 @@ public class CreeperWoodsBlocks {
     public static DungeonsBlock CW_COBWEBBED_DIRT;
     
     // creeper woods granite variant
-    public static DungeonsBlock CW_POLISHED_GRANITE;
+    public static DungeonsSlabStairBlock CW_POLISHED_GRANITE;
     public static DungeonsBlock CW_DIRTY_GRANITE;
     public static DungeonsBlock CW_CHISELED_GRANITE;
-    public static DungeonsSlab CW_POLISHED_GRANITE_SLAB;
 
     // stone tiles
-    public static DungeonsBlock CW_DIRTY_STONE_TILES;
-    public static DungeonsBlock CW_DIRTY_STONE_TILES_1;
-    public static DungeonsBlock CW_DIRTY_STONE_TILES_2;
+    public static DungeonsSlabStairBlock CW_DIRTY_STONE_TILES;
+    public static DungeonsSlabStairBlock CW_DIRTY_STONE_TILES_1;
+    public static DungeonsSlabStairBlock CW_DIRTY_STONE_TILES_2;
 
     // floor tiles
     public static DungeonsBlock CW_DIRTY_FLOOR_TILE;
@@ -86,11 +77,10 @@ public class CreeperWoodsBlocks {
         CW_CRACKED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_cracked_andesite");
 
         // dark andesite
-        CW_DARK_POLISHED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_polished_andesite");
-        CW_DARK_ANDESITE_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_slab");
+        CW_DARK_POLISHED_ANDESITE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_polished_andesite", "cw_dark_andesite_slab", "cw_dark_andesite_stairs");
         CW_MOSSY_DARK_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_mossy_dark_andesite");
         CW_MOSSY_DARK_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_mossy_dark_andesite_tiles");
-        CW_DARK_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_tiles");
+        CW_DARK_ANDESITE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_tiles", "cw_dark_andesite_tiles_slab", "cw_dark_andesite_tiles_stairs");
         CW_DARK_CHISELED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_chiseled_andesite");
         CW_DARK_CHISELED_ANDESITE_2 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_chiseled_andesite_2");
         CW_DARK_ANDESITE_PILLAR = new DungeonsPillar(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_pillar");
@@ -108,16 +98,15 @@ public class CreeperWoodsBlocks {
         CW_COBWEBBED_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_cobwebbed_dirt");
 
         // creeper woods granite variant
-        CW_POLISHED_GRANITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_polished_granite");
+        CW_POLISHED_GRANITE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_polished_granite", "cw_polished_granite_slab", "cw_polished_granite_stairs");
         CW_CHISELED_GRANITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_chiseled_granite");
-        CW_POLISHED_GRANITE_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_polished_granite_slab");
         CW_DIRTY_GRANITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dirty_granite");
 
         // stone tiles
-        CW_DIRTY_STONE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles");
-        CW_DIRTY_STONE_TILES_1 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_1");
-        CW_DIRTY_STONE_TILES_2 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_2");
-        
+        CW_DIRTY_STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles", "cw_dirty_stone_tiles_slab", "cw_dirty_stone_tiles_stairs");
+        CW_DIRTY_STONE_TILES_1 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_1", "cw_dirty_stone_tiles_slab_1", "cw_dirty_stone_tiles_stairs_1");
+        CW_DIRTY_STONE_TILES_2 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_dirty_stone_tiles_2", "cw_dirty_stone_tiles_slab_2", "cw_dirty_stone_tiles_stairs_2");
+
         // floor tiles
         CW_DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dirty_floor_tile");
 

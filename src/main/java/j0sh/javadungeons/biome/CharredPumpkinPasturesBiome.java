@@ -2,10 +2,7 @@ package j0sh.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import j0sh.javadungeons.content.Features;
-import j0sh.javadungeons.content.Fluids;
-import j0sh.javadungeons.content.GenericBlocks;
-import j0sh.javadungeons.content.PumpkinPasturesBlocks;
+import j0sh.javadungeons.content.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -32,7 +29,7 @@ import java.util.OptionalInt;
 public class CharredPumpkinPasturesBiome extends Biome {
 
     public CharredPumpkinPasturesBiome() {
-        super(new Settings().configureSurfaceBuilder(SurfaceBuilder.DEFAULT,
+        super(new Settings().configureSurfaceBuilder(SurfaceBuilders.CHARRED_PUMPKIN_PASTURES,
             new TernarySurfaceConfig(
                 PumpkinPasturesBlocks.PM_CHARRED_GRASS_BLOCK.getDefaultState(),
                 PumpkinPasturesBlocks.PM_CHARRED_DIRT.getDefaultState(),
@@ -62,7 +59,6 @@ public class CharredPumpkinPasturesBiome extends Biome {
         DefaultBiomeFeatures.addMineables(this);
         DefaultBiomeFeatures.addDefaultOres(this);
         DefaultBiomeFeatures.addDefaultDisks(this);
-//        DefaultBiomeFeatures.addDefaultGrass(this);
 
         // add dungeons vegetation
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(

@@ -66,7 +66,7 @@ public abstract class DungeonsBaseFluid extends FlowableFluid {
     * 
     * @return if the given Fluid can flow into this FluidState?
     */
-   @Overridek
+   @Override
    protected boolean canBeReplacedWith(FluidState fluidState, BlockView blocView, BlockPos blockPos, Fluid fluid, Direction direction) {
       return direction == Direction.DOWN && !fluid.isIn(FluidTags.WATER);
    }
