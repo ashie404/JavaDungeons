@@ -1,49 +1,41 @@
 package j0sh.javadungeons.biome;
 
-import net.minecraft.block.BlockState;
+import j0sh.javadungeons.content.CactiCanyonBlocks;
+import j0sh.javadungeons.content.Features;
+import j0sh.javadungeons.content.Fluids;
+import j0sh.javadungeons.content.SurfaceBuilders;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
-import net.minecraft.util.WeightedList;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.BlockPileFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
-import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
-import net.minecraft.world.gen.feature.VillageFeatureConfig;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
+import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.placer.DoublePlantPlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
-import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-
-import j0sh.javadungeons.content.*;
 
 public class CactiCanyonBiome extends Biome {
     public CactiCanyonBiome() {
-        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilder.DEFAULT, 
+        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilders.CACTI_CANYON, 
             new TernarySurfaceConfig(
                 CactiCanyonBlocks.CC_GRASS_BLOCK.getDefaultState(), 
-                CactiCanyonBlocks.CC_DIRT.getDefaultState(), 
+                CactiCanyonBlocks.CC_SANDSTONE.getDefaultState(), 
                 CactiCanyonBlocks.CC_DIRT.getDefaultState()
             ))
-            .precipitation(Biome.Precipitation.NONE).category(Biome.Category.SAVANNA)
-            .depth(0.4F).scale(0.05F).temperature(2.0F).downfall(0.0F).waterColor(4159204).waterFogColor(329011)
+            .precipitation(Biome.Precipitation.NONE).category(Biome.Category.MESA)
+            .depth(0.1F).scale(0.2F).temperature(2.0F).downfall(0.0F).waterColor(4159204).waterFogColor(329011)
             .parent((String)null
         ));
-
-
-        this.addStructureFeature(Feature.VILLAGE.configure(new VillageFeatureConfig("village/plains/town_centers", 6)));
-        this.addStructureFeature(Feature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));
-        this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
+        
         this.addStructureFeature(Feature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
         
         DefaultBiomeFeatures.addLandCarvers(this);
@@ -56,26 +48,6 @@ public class CactiCanyonBiome extends Biome {
             
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addMineables(this);
-
-        // add cacti canyon sandstone hills
-        WeightedBlockStateProvider sandstones = new WeightedBlockStateProvider();
-        sandstones.addState(CactiCanyonBlocks.CC_SANDSTONE.getDefaultState(), 30);
-        sandstones.addState(CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_GRAY_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_ORANGE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState(),5);
-
-        this.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES,
-            Feature.BLOCK_PILE.configure(new BlockPileFeatureConfig(sandstones)
-        ).withChance(0.7F).feature
-        );
 
         DefaultBiomeFeatures.addDefaultOres(this);
         DefaultBiomeFeatures.addDefaultDisks(this);
@@ -111,7 +83,6 @@ public class CactiCanyonBiome extends Biome {
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_TALL_CACTUS.getDefaultState()), new DoublePlantPlacer())).tries(1).build()
         ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));  
 
-        DefaultBiomeFeatures.addPlainsTallGrass(this);
         DefaultBiomeFeatures.addSprings(this);
         DefaultBiomeFeatures.addFrozenTopLayer(this);
 

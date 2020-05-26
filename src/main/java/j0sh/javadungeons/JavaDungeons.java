@@ -45,6 +45,7 @@ public class JavaDungeons implements ModInitializer {
 		Weapons.init();
 
 		// worldgen
+		SurfaceBuilders.init();
 		Features.init();
 		Biomes.init();
 
