@@ -1,13 +1,16 @@
 package j0sh.javadungeons.biome;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
+import net.minecraft.util.WeightedList;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.feature.BlockPileFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.FeatureConfig;
@@ -18,10 +21,9 @@ import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.placer.DoublePlantPlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-
-import com.google.common.collect.ImmutableSet;
 
 import j0sh.javadungeons.content.*;
 
@@ -54,6 +56,27 @@ public class CactiCanyonBiome extends Biome {
             
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addMineables(this);
+
+        // add cacti canyon sandstone hills
+        WeightedBlockStateProvider sandstones = new WeightedBlockStateProvider();
+        sandstones.addState(CactiCanyonBlocks.CC_SANDSTONE.getDefaultState(), 30);
+        sandstones.addState(CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_GRAY_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_ORANGE_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(), 5);
+        sandstones.addState(CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState(),5);
+
+        this.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES,
+            Feature.BLOCK_PILE.configure(new BlockPileFeatureConfig(sandstones)
+        ).withChance(0.7F).feature
+        );
+
         DefaultBiomeFeatures.addDefaultOres(this);
         DefaultBiomeFeatures.addDefaultDisks(this);
         DefaultBiomeFeatures.addDefaultMushrooms(this);
