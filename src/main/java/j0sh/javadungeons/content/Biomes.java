@@ -31,7 +31,7 @@ public class Biomes {
         OverworldBiomes.addContinentalBiome(PUMPKIN_PASTURES_BIOME, OverworldClimate.TEMPERATE, 2.25D);
         OverworldBiomes.addContinentalBiome(DUNGEONS_PLAINS_BIOME, OverworldClimate.TEMPERATE, 3D);
         OverworldBiomes.addContinentalBiome(CACTI_CANYON_BIOME, OverworldClimate.DRY, 2.5D);
-        OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME, CACTI_CANYON_DESERT_BIOME, 0.4D, OverworldClimate.DRY);
+        OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME, CACTI_CANYON_DESERT_BIOME, 0.6D, OverworldClimate.DRY);
 
         // add biomes that are spawnable in
         FabricBiomes.addSpawnBiome(CREEPER_WOODS_BIOME);
