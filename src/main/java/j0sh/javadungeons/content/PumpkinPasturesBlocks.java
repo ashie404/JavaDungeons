@@ -46,8 +46,6 @@ public class PumpkinPasturesBlocks {
     public static DungeonsPillar PM_CHARRED_LOG;
     public static DungeonsPillar PM_CHARRED_WOOD;
     public static DungeonsSlabStairBlock PM_CHARRED_PLANKS;
-    public static DungeonsStairs PM_CHARRED_STAIRS;
-    public static DungeonsSlab PM_CHARRED_SLAB;
 
     public static void init() {
         // foliage
@@ -88,7 +86,5 @@ public class PumpkinPasturesBlocks {
         PM_CHARRED_LOG = new DungeonsPillar(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");
         PM_CHARRED_WOOD = new DungeonsPillar(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_wood");
         PM_CHARRED_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
-        PM_CHARRED_STAIRS = new DungeonsStairs(Material.WOOD, BlockSoundGroup.WOOD, Blocks.OAK_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stairs");
-        PM_CHARRED_SLAB = new DungeonsSlab(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_slab");
     }
 }

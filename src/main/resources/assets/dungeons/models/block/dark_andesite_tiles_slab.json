@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "top":    "dungeons:block/creeper_woods/dark_andesite_tiles",
+        "side":   "dungeons:block/creeper_woods/dark_andesite_tiles",
+        "bottom": "dungeons:block/creeper_woods/dark_andesite_tiles"
+    }
+}

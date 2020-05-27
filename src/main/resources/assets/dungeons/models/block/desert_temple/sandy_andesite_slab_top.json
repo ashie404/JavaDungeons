@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "top":    "dungeons:block/desert_temple/sandy_andesite",
+        "side":   "dungeons:block/desert_temple/sandy_andesite",
+        "bottom": "dungeons:block/desert_temple/sandy_andesite"
+    }
+}
