@@ -24,6 +24,7 @@ public class CactiCanyonBlocks {
     public static DungeonsFallingBlock CC_SAND;
     public static DungeonsBlock CC_DENSE_SANDY_DIRT;
     public static DungeonsBlock CC_SANDY_DIRT;
+    public static DungeonsLayeringBlock CC_SAND_LAYER;
 
     // sandstone related
     public static DungeonsBlock CC_SANDSTONE;
@@ -66,6 +67,7 @@ public class CactiCanyonBlocks {
         CC_SAND = new DungeonsFallingBlock(Material.SAND, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand");
         CC_DENSE_SANDY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_sandy_dirt");
         CC_SANDY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_sandy_dirt");
+        CC_SAND_LAYER = new DungeonsLayeringBlock(Material.SAND, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand_layer");
         
         // sandstone related
         CC_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_sandstone");

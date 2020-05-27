@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "layers=1":  { "model": "dungeons:block/cacti_canyon/sand_height2" },
+        "layers=2":  { "model": "dungeons:block/cacti_canyon/sand_height4" },
+        "layers=3":  { "model": "dungeons:block/cacti_canyon/sand_height6" },
+        "layers=4":  { "model": "dungeons:block/cacti_canyon/sand_height8" },
+        "layers=5":  { "model": "dungeons:block/cacti_canyon/sand_height10" },
+        "layers=6":  { "model": "dungeons:block/cacti_canyon/sand_height12" },
+        "layers=7":  { "model": "dungeons:block/cacti_canyon/sand_height14" },
+        "layers=8":  { "model": "dungeons:block/cacti_canyon/sand" }
+    }
+}
