@@ -11,6 +11,10 @@
         "dungeons:cw_rocky_grassy_dirt",
         "dungeons:cw_grass_block",
         "dungeons:pm_charred_dirt",
-        "dungeons:pm_charred_grass_block"
+        "dungeons:pm_charred_grass_block",
+        "dungeons:cc_grass_block",
+        "dungeons:cc_dirt",
+        "dungeons:cc_grassy_dirt",
+        "dungeons:cc_dense_grassy_dirt"
     ]
 }

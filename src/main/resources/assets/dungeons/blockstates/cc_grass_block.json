@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/cacti_canyon/grass_block" },
+            { "model": "dungeons:block/cacti_canyon/grass_block", "y": 90 },
+            { "model": "dungeons:block/cacti_canyon/grass_block", "y": 180 },
+            { "model": "dungeons:block/cacti_canyon/grass_block", "y": 270 }
+        ]
+    }
+}

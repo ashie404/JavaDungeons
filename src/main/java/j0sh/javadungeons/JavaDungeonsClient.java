@@ -1,5 +1,6 @@
 package j0sh.javadungeons;
 
+import j0sh.javadungeons.blocks.BBlocks;
 import j0sh.javadungeons.client.renderer.item.HammerItemRenderer;
 import j0sh.javadungeons.content.*;
 import j0sh.javadungeons.particles.GreenFlameParticle;
@@ -37,6 +38,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
 
+	private static final RenderLayer SYNTH_BLOCK_LAYER = RenderLayer.getCutout();
+
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
     };
@@ -58,7 +61,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT
+			CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_GRASS_BLOCK,
+			CactiCanyonBlocks.CC_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT
         );
 
         ColorProviderRegistry.ITEM.register(
@@ -72,7 +78,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
             CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem
+			CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem,
+			CactiCanyonBlocks.CC_GRASS_BLOCK.blockItem,
+			CactiCanyonBlocks.CC_GRASSY_DIRT.blockItem,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT.blockItem
         );
 
         // register render layers
@@ -98,6 +107,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 			GenericBlocks.LIT_SOUL_BRAZIER,
             GenericBlocks.TRAY,
             GenericBlocks.TEAPOT,
+			GenericBlocks.CHAINS,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
@@ -110,7 +120,17 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,
             PumpkinPasturesBlocks.PM_SHRUB,
             PumpkinPasturesBlocks.PM_DEAD_SAPLING,
-            PumpkinPasturesBlocks.PM_FERN
+			PumpkinPasturesBlocks.PM_FERN,
+			CactiCanyonBlocks.CC_CACTUS,
+			CactiCanyonBlocks.CC_SMALL_CACTUS,
+			CactiCanyonBlocks.CC_FERN,
+			CactiCanyonBlocks.CC_FLOWERS,
+			CactiCanyonBlocks.CC_YUCCA,
+			CactiCanyonBlocks.CC_TALL_CACTUS,
+			CactiCanyonBlocks.CC_GRASS_BLOCK,
+			CactiCanyonBlocks.CC_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DESERT_GRASS
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
@@ -142,6 +162,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
 				TRANSLUCENT_BLOCK_LAYER,
 				Fluids.SOGGY_SWAMP_WATER_FLOWING,
 				Fluids.SOGGY_SWAMP_WATER_STILL
+		);
+
+		BlockRenderLayerMap.INSTANCE.putBlocks(
+				SYNTH_BLOCK_LAYER,
+				BBlocks.Dimensional_Rectifier
 		);
 
         // set up particles

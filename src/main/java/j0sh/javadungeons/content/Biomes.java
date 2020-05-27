@@ -15,6 +15,8 @@ public class Biomes {
     public static CharredPumpkinPasturesBiome CHARRED_PUMPKIN_PASTURES_BIOME;
     public static DungeonsPlainsBiome DUNGEONS_PLAINS_BIOME;
     public static DungeonsSoggySwampBiome SOGGY_SWAMP_BIOME;
+    public static CactiCanyonBiome CACTI_CANYON_BIOME;
+    public static CactiCanyonDesertBiome CACTI_CANYON_DESERT_BIOME;
 
     public static void init() {
         // register biomes
@@ -23,12 +25,16 @@ public class Biomes {
         CHARRED_PUMPKIN_PASTURES_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "charred_pumpkin_pastures"), new CharredPumpkinPasturesBiome());
         DUNGEONS_PLAINS_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "dungeons_plains"), new DungeonsPlainsBiome());
         SOGGY_SWAMP_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), new DungeonsSoggySwampBiome());
+        CACTI_CANYON_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), new CactiCanyonBiome());
+        CACTI_CANYON_DESERT_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon_desert"), new CactiCanyonDesertBiome());
 
         // add biomes to worldgen
         OverworldBiomes.addContinentalBiome(CREEPER_WOODS_BIOME, OverworldClimate.TEMPERATE, 2D);
         OverworldBiomes.addContinentalBiome(PUMPKIN_PASTURES_BIOME, OverworldClimate.TEMPERATE, 2.25D);
         OverworldBiomes.addContinentalBiome(DUNGEONS_PLAINS_BIOME, OverworldClimate.TEMPERATE, 3D);
         OverworldBiomes.addContinentalBiome(SOGGY_SWAMP_BIOME, OverworldClimate.TEMPERATE, 2.25D);
+        OverworldBiomes.addContinentalBiome(CACTI_CANYON_BIOME, OverworldClimate.DRY, 2.5D);
+        OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME, CACTI_CANYON_DESERT_BIOME, 0.4D, OverworldClimate.DRY);
 
         OverworldBiomes.addHillsBiome(PUMPKIN_PASTURES_BIOME, CHARRED_PUMPKIN_PASTURES_BIOME, 2.25D);
 
@@ -37,6 +43,8 @@ public class Biomes {
         FabricBiomes.addSpawnBiome(PUMPKIN_PASTURES_BIOME);
         FabricBiomes.addSpawnBiome(DUNGEONS_PLAINS_BIOME);
         FabricBiomes.addSpawnBiome(SOGGY_SWAMP_BIOME);
+        FabricBiomes.addSpawnBiome(CACTI_CANYON_BIOME);
+        FabricBiomes.addSpawnBiome(CACTI_CANYON_DESERT_BIOME);
     }
 
 }

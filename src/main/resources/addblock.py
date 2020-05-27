@@ -2,7 +2,7 @@ import argparse
 import json
 
 parser = argparse.ArgumentParser(description='Generates basic models and blockstate defs for Minecraft')
-parser.add_argument('area', metavar='area', help='Area of model\n * none: No area/generic block\n * cw: Creeper Woods\n * dt: Desert Temple\n * pm: Pumpkin Pastures')
+parser.add_argument('area', metavar='area', help='Area of model\n * none: No area/generic block\n * cw: Creeper Woods\n * dt: Desert Temple\n * pm: Pumpkin Pastures\n * cc: Cacti Canyon')
 parser.add_argument('id', metavar='id', help='ID of block, without area affix.')
 args = parser.parse_args()
 
@@ -25,6 +25,9 @@ if args.area == 'dt':
 if args.area == 'pm':
     model = open("assets/dungeons/models/block/pumpkin_pastures/" + args.id + ".json", "w")
     textureaffix = 'pumpkin_pastures/'
+if args.area == 'cc':
+    model = open("assets/dungeons/models/block/cacti_canyon/" + args.id + ".json", "w")
+    textureaffix = 'cacti_canyon/
 
 datablock = {}
 dataitem = {}
