@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/stairs_outer",
+    "parent": "minecraft:block/outer_stairs",
     "textures": {
         "bottom": "dungeons:block/desert_temple/sandy_stone_tiles",
         "top":    "dungeons:block/desert_temple/sandy_stone_tiles",

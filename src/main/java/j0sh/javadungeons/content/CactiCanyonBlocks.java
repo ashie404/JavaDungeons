@@ -24,6 +24,7 @@ public class CactiCanyonBlocks {
     public static DungeonsFallingBlock CC_SAND;
     public static DungeonsBlock CC_DENSE_SANDY_DIRT;
     public static DungeonsBlock CC_SANDY_DIRT;
+    public static DungeonsLayeringBlock CC_SAND_LAYER;
 
     // sandstone related
     public static DungeonsBlock CC_SANDSTONE;
@@ -38,6 +39,11 @@ public class CactiCanyonBlocks {
     public static DungeonsBlock CC_PURPLE_SANDSTONE;
     public static DungeonsBlock CC_RED_SANDSTONE;
     public static DungeonsBlock CC_YELLOW_SANDSTONE;
+
+    public static DungeonsSlabStairBlock CC_NORMAL_SANDSTONE;
+    public static DungeonsSlabStairBlock CC_CUT_SANDSTONE;
+    public static DungeonsSlabStairBlock CC_SMOOTH_SANDSTONE;
+    public static DungeonsBlock CC_CHISELED_SANDSTONE;
 
     // plant related
     public static DungeonsDesertPlant CC_DESERT_GRASS;
@@ -65,6 +71,7 @@ public class CactiCanyonBlocks {
         CC_SAND = new DungeonsFallingBlock(Material.SAND, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand");
         CC_DENSE_SANDY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_sandy_dirt");
         CC_SANDY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_sandy_dirt");
+        CC_SAND_LAYER = new DungeonsLayeringBlock(Material.SAND, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand_layer");
 
         // sandstone related
         CC_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_sandstone");
@@ -79,6 +86,11 @@ public class CactiCanyonBlocks {
         CC_PURPLE_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_purple_sandstone");
         CC_RED_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_red_sandstone");
         CC_YELLOW_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_yellow_sandstone");
+
+        CC_NORMAL_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_normal_sandstone", "cc_normal_sandstone_slab", "cc_normal_sandstone_stairs");
+        CC_CUT_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_cut_sandstone", "cc_cut_sandstone_slab", "cc_cut_sandstone_stairs");
+        CC_SMOOTH_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_smooth_sandstone", "cc_smooth_sandstone_slab", "cc_smooth_sandstone_stairs");
+        CC_CHISELED_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_chiseled_sandstone");
 
         // plant related
         CC_DESERT_GRASS = new DungeonsDesertPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_desert_grass");

@@ -49,7 +49,7 @@ public final class CactiCanyonDesertBiome extends Biome {
       DefaultBiomeFeatures.addDefaultMushrooms(this);
       DefaultBiomeFeatures.addDesertVegetation(this);
       // add cacti canyon vegatation
-      this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+      /*this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
         (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_DESERT_GRASS.getDefaultState()), new SimpleBlockPlacer())).tries(2).build()
     ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP.configure(new CountDecoratorConfig(1))));
 
@@ -75,7 +75,7 @@ public final class CactiCanyonDesertBiome extends Biome {
 
     this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
         (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_TALL_CACTUS.getDefaultState()), new DoublePlantPlacer())).tries(1).build()
-    ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP.configure(new CountDecoratorConfig(1))));  
+    ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP.configure(new CountDecoratorConfig(1))));  */
       DefaultBiomeFeatures.addSprings(this);
       DefaultBiomeFeatures.addDesertFeatures(this);
       DefaultBiomeFeatures.addFrozenTopLayer(this);

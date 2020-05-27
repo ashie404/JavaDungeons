@@ -4,7 +4,6 @@
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
     "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
     "itemGroup.dungeons.cacti_canyon": "Cacti Canyon Blocks",
-    "itemGroup.dungeons.soggy_swamp": "Soggy Swamp Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
 
     "block.dungeons.floor_tile": "Floor Tile",
@@ -229,14 +228,23 @@
     "block.dungeons.cc_rocky_dirt_path": "Rocky Dirt Path",
     "block.dungeons.cc_rocky_dirt": "Rocky Dirt",
     "block.dungeons.cc_desert_grass": "Desert Grass",
+    "block.dungeons.cc_sand_layer": "Sand Layer",
+    "block.dungeons.cc_normal_sandstone": "Normal Sandstone",
+    "block.dungeons.cc_normal_sandstone_stairs": "Normal Sandstone Stairs",
+    "block.dungeons.cc_normal_sandstone_slab": "Normal Sandstone Slab",
+    "block.dungeons.cc_cut_sandstone": "Cut Sandstone",
+    "block.dungeons.cc_cut_sandstone_stairs": "Cut Sandstone Stairs",
+    "block.dungeons.cc_cut_sandstone_slab": "Cut Sandstone Slab",
+    "block.dungeons.cc_smooth_sandstone": "Smooth Sandstone",
+    "block.dungeons.cc_smooth_sandstone_stairs": "Smooth Sandstone Stairs",
+    "block.dungeons.cc_smooth_sandstone_slab": "Smooth Sandstone Slab",
+    "block.dungeons.cc_chiseled_sandstone": "Chiseled Sandstone",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 
     "biome.dungeons.creeper_woods": "Creeper Woods",
     "biome.dungeons.pumpkin_pastures": "Pumpkin Pastures",
-    "biome.dungeons.charred_pumpkin_pastures": "Charred Pumpkin Pastures",
     "biome.dungeons.dungeons_plains": "Dungeons Plains",
-    "biome.dungeons.soggy_swamp": "Soggy Swamp",
     "biome.dungeons.cacti_canyon": "Cacti Canyon",
     "biome.dungeons.cacti_canyon_desert": "Cacti Canyon Desert",
 

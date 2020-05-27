@@ -34,7 +34,7 @@ public class Biomes {
         OverworldBiomes.addContinentalBiome(DUNGEONS_PLAINS_BIOME, OverworldClimate.TEMPERATE, 3D);
         OverworldBiomes.addContinentalBiome(SOGGY_SWAMP_BIOME, OverworldClimate.TEMPERATE, 2.25D);
         OverworldBiomes.addContinentalBiome(CACTI_CANYON_BIOME, OverworldClimate.DRY, 2.5D);
-        OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME, CACTI_CANYON_DESERT_BIOME, 0.4D, OverworldClimate.DRY);
+        OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME, CACTI_CANYON_DESERT_BIOME, 0.6D, OverworldClimate.DRY);
 
         OverworldBiomes.addHillsBiome(PUMPKIN_PASTURES_BIOME, CHARRED_PUMPKIN_PASTURES_BIOME, 2.25D);
 
