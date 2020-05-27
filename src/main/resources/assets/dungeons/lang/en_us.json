@@ -229,6 +229,16 @@
     "block.dungeons.cc_rocky_dirt": "Rocky Dirt",
     "block.dungeons.cc_desert_grass": "Desert Grass",
     "block.dungeons.cc_sand_layer": "Sand Layer",
+    "block.dungeons.cc_normal_sandstone": "Normal Sandstone",
+    "block.dungeons.cc_normal_sandstone_stairs": "Normal Sandstone Stairs",
+    "block.dungeons.cc_normal_sandstone_slab": "Normal Sandstone Slab",
+    "block.dungeons.cc_cut_sandstone": "Cut Sandstone",
+    "block.dungeons.cc_cut_sandstone_stairs": "Cut Sandstone Stairs",
+    "block.dungeons.cc_cut_sandstone_slab": "Cut Sandstone Slab",
+    "block.dungeons.cc_smooth_sandstone": "Smooth Sandstone",
+    "block.dungeons.cc_smooth_sandstone_stairs": "Smooth Sandstone Stairs",
+    "block.dungeons.cc_smooth_sandstone_slab": "Smooth Sandstone Slab",
+    "block.dungeons.cc_chiseled_sandstone": "Chiseled Sandstone",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 

@@ -40,6 +40,11 @@ public class CactiCanyonBlocks {
     public static DungeonsBlock CC_RED_SANDSTONE;
     public static DungeonsBlock CC_YELLOW_SANDSTONE;
 
+    public static DungeonsSlabStairBlock CC_NORMAL_SANDSTONE;
+    public static DungeonsSlabStairBlock CC_CUT_SANDSTONE;
+    public static DungeonsSlabStairBlock CC_SMOOTH_SANDSTONE;
+    public static DungeonsBlock CC_CHISELED_SANDSTONE;
+
     // plant related
     public static DungeonsDesertPlant CC_DESERT_GRASS;
     public static DungeonsDesertPlant CC_CACTUS;
@@ -82,6 +87,11 @@ public class CactiCanyonBlocks {
         CC_PURPLE_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_purple_sandstone");
         CC_RED_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_red_sandstone");
         CC_YELLOW_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_yellow_sandstone");
+
+        CC_NORMAL_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_normal_sandstone", "cc_normal_sandstone_slab", "cc_normal_sandstone_stairs");
+        CC_CUT_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_cut_sandstone", "cc_cut_sandstone_slab", "cc_cut_sandstone_stairs");
+        CC_SMOOTH_SANDSTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_smooth_sandstone", "cc_smooth_sandstone_slab", "cc_smooth_sandstone_stairs");
+        CC_CHISELED_SANDSTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.CACTI_CANYON, "cc_chiseled_sandstone");
 
         // plant related
         CC_DESERT_GRASS = new DungeonsDesertPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.CACTI_CANYON, "cc_desert_grass");
