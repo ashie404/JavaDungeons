@@ -1,14 +1,7 @@
 package j0sh.javadungeons.content;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.blocks.DungeonsBlock;
-import j0sh.javadungeons.blocks.DungeonsLeaves;
-import j0sh.javadungeons.blocks.DungeonsPath;
-import j0sh.javadungeons.blocks.DungeonsPathable;
-import j0sh.javadungeons.blocks.DungeonsPillar;
-import j0sh.javadungeons.blocks.DungeonsPlant;
-import j0sh.javadungeons.blocks.DungeonsSlab;
-import j0sh.javadungeons.blocks.DungeonsStairs;
+import j0sh.javadungeons.blocks.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -42,12 +35,8 @@ public class PumpkinPasturesBlocks {
 
     // charred stones
     public static DungeonsBlock PM_CHARRED_STONE;
-    public static DungeonsBlock PM_CHARRED_COBBLESTONE;
-    public static DungeonsSlab PM_CHARRED_COBBLESTONE_SLAB;
-    public static DungeonsStairs PM_CHARRED_COBBLESTONE_STAIRS;
-    public static DungeonsBlock PM_CHARRED_STONE_BRICKS;
-    public static DungeonsSlab PM_CHARRED_STONE_BRICK_SLAB;
-    public static DungeonsStairs PM_CHARRED_STONE_BRICK_STAIRS;
+    public static DungeonsSlabStairBlock PM_CHARRED_COBBLESTONE;
+    public static DungeonsSlabStairBlock PM_CHARRED_STONE_BRICKS;
     public static DungeonsBlock PM_CRACKED_CHARRED_STONE_BRICKS;
 
     // stone related
@@ -56,9 +45,7 @@ public class PumpkinPasturesBlocks {
     // wood related
     public static DungeonsPillar PM_CHARRED_LOG;
     public static DungeonsPillar PM_CHARRED_WOOD;
-    public static DungeonsBlock PM_CHARRED_PLANKS;
-    public static DungeonsStairs PM_CHARRED_STAIRS;
-    public static DungeonsSlab PM_CHARRED_SLAB;
+    public static DungeonsSlabStairBlock PM_CHARRED_PLANKS;
 
     public static void init() {
         // foliage
@@ -88,12 +75,8 @@ public class PumpkinPasturesBlocks {
         
         // charred stones
         PM_CHARRED_STONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
-        PM_CHARRED_COBBLESTONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone");
-        PM_CHARRED_COBBLESTONE_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_slab");
-        PM_CHARRED_COBBLESTONE_STAIRS = new DungeonsStairs(Material.STONE, BlockSoundGroup.STONE, Blocks.COBBLESTONE_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone_stairs");
-        PM_CHARRED_STONE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks");
-        PM_CHARRED_STONE_BRICK_SLAB = new DungeonsSlab(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_slab");
-        PM_CHARRED_STONE_BRICK_STAIRS = new DungeonsStairs(Material.STONE, BlockSoundGroup.STONE, Blocks.STONE_BRICK_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_brick_stairs");
+        PM_CHARRED_COBBLESTONE = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone", "pm_charred_cobblestone_slab", "pm_charred_cobblestone_stairs");
+        PM_CHARRED_STONE_BRICKS = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks", "pm_charred_stone_brick_slab", "pm_charred_stone_brick_stairs");
         PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
 
         // stone related
@@ -102,8 +85,6 @@ public class PumpkinPasturesBlocks {
         // wood related
         PM_CHARRED_LOG = new DungeonsPillar(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");
         PM_CHARRED_WOOD = new DungeonsPillar(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_wood");
-        PM_CHARRED_PLANKS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks");
-        PM_CHARRED_STAIRS = new DungeonsStairs(Material.WOOD, BlockSoundGroup.WOOD, Blocks.OAK_STAIRS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stairs");
-        PM_CHARRED_SLAB = new DungeonsSlab(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_slab");
+        PM_CHARRED_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
     }
 }

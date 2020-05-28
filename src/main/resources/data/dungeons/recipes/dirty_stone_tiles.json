@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:dirt"
+      },
+      {
+        "item": "dungeons:stone_tiles"
+      }
+    ],
+    "result": {
+      "item": "dungeons:dirty_stone_tiles",
+      "count": 1
+    }
+  }

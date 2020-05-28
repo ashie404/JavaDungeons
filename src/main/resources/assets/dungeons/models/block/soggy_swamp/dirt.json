@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/soggy_swamp/dirt_top",
+        "side": "dungeons:block/soggy_swamp/dirt"
+    }
+}

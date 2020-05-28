@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "dungeons:block/redstone_mines/tall_redstone_crystals", "y": 270 },
+        "facing=west": { "model": "dungeons:block/redstone_mines/tall_redstone_crystals"},
+        "facing=north": { "model": "dungeons:block/redstone_mines/tall_redstone_crystals", "y": 270},
+        "facing=east": { "model": "dungeons:block/redstone_mines/tall_redstone_crystals" }
+    }
+}

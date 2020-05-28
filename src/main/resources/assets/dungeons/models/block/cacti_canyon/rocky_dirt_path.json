@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/grass_path",
+    "textures": {
+        "particle": "dungeons:block/cacti_canyon/rocky_dirt",
+        "top": "dungeons:block/cacti_canyon/rocky_dirt",
+        "side": "dungeons:block/cacti_canyon/rocky_dirt",
+        "bottom": "dungeons:block/cacti_canyon/rocky_dirt"
+    }
+}

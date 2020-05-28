@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/desert_temple/sandy_stone_tiles_slab" },
+        "type=top": { "model":    "dungeons:block/desert_temple/sandy_stone_tiles_slab_top" },
+        "type=double": { "model": "dungeons:block/desert_temple/sandy_stone_tiles" }
+    }
+}

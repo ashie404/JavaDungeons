@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:dirt"
+      },
+      {
+        "item": "dungeons:floor_tile"
+      }
+    ],
+    "result": {
+      "item": "dungeons:dirty_floor_tile",
+      "count": 2
+    }
+  }

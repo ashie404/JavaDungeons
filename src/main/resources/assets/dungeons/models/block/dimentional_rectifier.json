@@ -1,0 +1,61 @@
+{
+    "credit": "Made with Blockbench",
+    "parent": "block/block",
+    "textures": {
+        "0": "dungeons:block/dimensional_rectifier/n",
+        "1": "dungeons:block/dimensional_rectifier/s",
+        "2": "dungeons:block/dimensional_rectifier/ew",
+        "3": "dungeons:block/dimensional_rectifier/thing",
+        "4": "dungeons:block/dimensional_rectifier/top",
+        "5": "dungeons:block/dimensional_rectifier/base",
+        "particle": "dungeons:block/dimensional_rectifier/base"
+    },
+    "elements": [
+        {
+            "from": [0, 0, 0],
+            "to": [16, 9, 16],
+            "faces": {
+                "north": {"uv": [0, 7, 16, 16], "texture": "#0", "cullface": "north"},
+                "east": {"uv": [0, 7, 16, 16], "texture": "#2", "cullface": "east"},
+                "south": {"uv": [0, 7, 16, 16], "texture": "#1", "cullface": "south"},
+                "west": {"uv": [0, 7, 16, 16], "texture": "#2", "cullface": "west"},
+                "up": {"uv": [0, 0, 16, 16], "texture": "#4"},
+                "down": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "down"}
+            }
+        },
+        {
+            "from": [1, 9, 8],
+            "to": [15, 16, 8],
+            "faces": {
+                "north": {"uv": [1, 9, 15, 16], "texture": "#3", "tintindex": 0},
+                "south": {"uv": [15, 9, 1, 16], "texture": "#3", "tintindex": 0}
+            }
+        },
+        {
+            "from": [8, 9, 1],
+            "to": [8, 16, 15],
+            "faces": {
+                "east": {"uv": [15, 9, 1, 16], "texture": "#3", "tintindex": 0},
+                "west": {"uv": [1, 9, 15, 16], "texture": "#3", "tintindex": 0}
+            }
+        },
+        {
+            "from": [1, 9, 8],
+            "to": [15, 16, 8],
+            "rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+            "faces": {
+                "north": {"uv": [15, 9, 1, 16], "texture": "#3", "tintindex": 0},
+                "south": {"uv": [1, 9, 15, 16], "texture": "#3", "tintindex": 0}
+            }
+        },
+        {
+            "from": [1, 9, 8],
+            "to": [15, 16, 8],
+            "rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
+            "faces": {
+                "north": {"uv": [15, 9, 1, 16], "texture": "#3", "tintindex": 0},
+                "south": {"uv": [1, 9, 15, 16], "texture": "#3", "tintindex": 0}
+            }
+        }
+    ]
+}

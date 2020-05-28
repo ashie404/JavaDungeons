@@ -1,10 +1,15 @@
 package j0sh.javadungeons;
 
+import j0sh.javadungeons.blocks.BBlocks;
+import j0sh.javadungeons.client.renderer.item.HammerItemRenderer;
+import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.particles.GreenFlameParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -12,8 +17,8 @@ import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
@@ -28,14 +33,12 @@ import net.minecraft.world.BlockRenderView;
 
 import java.util.function.Function;
 
-import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.fluids.DungeonsWaterFluid;
-import j0sh.javadungeons.particles.GreenFlameParticle;
-
 public class JavaDungeonsClient implements ClientModInitializer {
 
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
+
+	private static final RenderLayer SYNTH_BLOCK_LAYER = RenderLayer.getCutout();
 
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
@@ -58,7 +61,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT
+			CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_GRASS_BLOCK,
+			CactiCanyonBlocks.CC_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT
         );
 
         ColorProviderRegistry.ITEM.register(
@@ -72,7 +78,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
             CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT.blockItem,
-            CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem
+			CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem,
+			CactiCanyonBlocks.CC_GRASS_BLOCK.blockItem,
+			CactiCanyonBlocks.CC_GRASSY_DIRT.blockItem,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT.blockItem
         );
 
         // register render layers
@@ -94,9 +103,11 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.YELLOW_TULIP,
             GenericBlocks.UNLIT_BRAZIER,
             GenericBlocks.LIT_BRAZIER,
-            GenericBlocks.GREEN_LIT_BRAZIER,
+            GenericBlocks.LIT_GREEN_BRAZIER,
+			GenericBlocks.LIT_SOUL_BRAZIER,
             GenericBlocks.TRAY,
             GenericBlocks.TEAPOT,
+			GenericBlocks.CHAINS,
             CreeperWoodsBlocks.CW_GRASS_BLOCK,
             CreeperWoodsBlocks.CW_GRASSY_DIRT,
             CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT,
@@ -109,7 +120,17 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_CHARRED_GRASS,
             PumpkinPasturesBlocks.PM_SHRUB,
             PumpkinPasturesBlocks.PM_DEAD_SAPLING,
-            PumpkinPasturesBlocks.PM_FERN
+			PumpkinPasturesBlocks.PM_FERN,
+			CactiCanyonBlocks.CC_CACTUS,
+			CactiCanyonBlocks.CC_SMALL_CACTUS,
+			CactiCanyonBlocks.CC_FERN,
+			CactiCanyonBlocks.CC_FLOWERS,
+			CactiCanyonBlocks.CC_YUCCA,
+			CactiCanyonBlocks.CC_TALL_CACTUS,
+			CactiCanyonBlocks.CC_GRASS_BLOCK,
+			CactiCanyonBlocks.CC_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
+			CactiCanyonBlocks.CC_DESERT_GRASS
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
@@ -137,6 +158,16 @@ public class JavaDungeonsClient implements ClientModInitializer {
             Fluids.DUNGEONS_WATER_FLOWING,
             Fluids.DUNGEONS_WATER_STILL
         );
+		BlockRenderLayerMap.INSTANCE.putFluids(
+				TRANSLUCENT_BLOCK_LAYER,
+				Fluids.SOGGY_SWAMP_WATER_FLOWING,
+				Fluids.SOGGY_SWAMP_WATER_STILL
+		);
+
+		BlockRenderLayerMap.INSTANCE.putBlocks(
+				SYNTH_BLOCK_LAYER,
+				BBlocks.Dimensional_Rectifier
+		);
 
         // set up particles
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
@@ -150,6 +181,16 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
+
+		setupFluidRendering(
+				Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
+				Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
+				new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water"), // texture identifier
+				0xFFFFFF // tint color (white because water is colored in its file)
+		);
+
+		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.STONE_HAMMER,
+				new HammerItemRenderer(new Identifier(JavaDungeons.MOD_ID, "textures/item/model/stone_hammer.png")));
     }    
 
     public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color)
