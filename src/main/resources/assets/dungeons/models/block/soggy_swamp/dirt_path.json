@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/grass_path",
+    "textures": {
+        "particle": "dungeons:block/soggy_swamp/dirt",
+        "top": "dungeons:block/soggy_swamp/dirt_top",
+        "side": "dungeons:block/soggy_swamp/dirt",
+        "bottom": "dungeons:block/soggy_swamp/dirt_top"
+    }
+}

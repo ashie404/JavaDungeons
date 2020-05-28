@@ -10,8 +10,10 @@ import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 public class SurfaceBuilders {
     
     public static SurfaceBuilder<TernarySurfaceConfig> CACTI_CANYON;
+    public static SurfaceBuilder<TernarySurfaceConfig> SOGGY_SWAMP;
 
     public static void init() {
         CACTI_CANYON = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), new CactiCanyonSurfaceBuilder(TernarySurfaceConfig::deserialize));
+        SOGGY_SWAMP = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), new SoggySwampSurfaceBuilder(TernarySurfaceConfig::deserialize));
     }
 }

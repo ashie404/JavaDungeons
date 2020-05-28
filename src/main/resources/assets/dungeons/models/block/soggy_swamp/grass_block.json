@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "dungeons:block/soggy_swamp/dirt",
+        "north": "dungeons:block/soggy_swamp/grass_side",
+        "south": "dungeons:block/soggy_swamp/grass_side",
+        "east": "dungeons:block/soggy_swamp/grass_side",
+        "west": "dungeons:block/soggy_swamp/grass_side",
+        "up": "dungeons:block/soggy_swamp/grass_top",
+        "down": "dungeons:block/soggy_swamp/dirt"
+    }
+}
