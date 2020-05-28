@@ -15,9 +15,10 @@ public class CompatMixinWaterPlant implements Fluidloggable {
      * @author juniebyte
      * @reason prevent fluid-logging with a fluid
      * other than water still being water
-     */
+     *//*
+
     @Overwrite
     public FluidState getFluidState(BlockState state) {
         return FluidUtils.getFluidState(state);
     }
-}
+}*/

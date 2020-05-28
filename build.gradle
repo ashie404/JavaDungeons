@@ -25,9 +25,10 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	implementation 'com.github.javafaker:javafaker:1.0.2'
 
 	// Towelette. Optional dependency, but has to be here for the compat mixins to compile correctly.
-	modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
+//	modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
 }
 
 processResources {

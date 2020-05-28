@@ -2,6 +2,7 @@ package juniebyte.javadungeons.blocks;
 
 import juniebyte.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -10,6 +11,7 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
@@ -35,6 +37,10 @@ public class DungeonsPlant extends PlantBlock {
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
 
-    
+    public DungeonsPlant(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque().collidable(false).breakByHand(true).breakByTool(FabricToolTags.PICKAXES));
+        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
+        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    }
 
 }

@@ -52,4 +52,4 @@ public class ToweletteCompatMixinPlugin implements IMixinConfigPlugin {
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
         
     }
-}
+}*/
