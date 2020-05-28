@@ -2,7 +2,10 @@ package j0sh.javadungeons.surface;
 
 import com.mojang.datafixers.Dynamic;
 import j0sh.javadungeons.content.Fluids;
+import j0sh.javadungeons.content.PumpkinPasturesBlocks;
+import j0sh.javadungeons.content.SoggySwampBlocks;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
@@ -37,6 +40,9 @@ public class SoggySwampSurfaceBuilder  extends SurfaceBuilder<TernarySurfaceConf
                     chunk.setBlockState(mutable, Fluids.SOGGY_SWAMP_WATER.getDefaultState(), false);
                 }
                 break;
+            }
+            if(chunk.getBlockState(mutable).isOf(Blocks.STONE)) {
+                chunk.setBlockState(mutable, SoggySwampBlocks.SS_MOSSY_STONE.getDefaultState(), false);
             }
         }
     }

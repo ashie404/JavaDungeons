@@ -30,11 +30,8 @@ public class CharredPumpkinPasturesSurfaceBuilder extends SurfaceBuilder<Ternary
 
         for(int p = height; p >= 0; --p) {
             mutable.set(n, p, o);
-            if (!chunk.getBlockState(mutable).isAir()) {
-                if(chunk.getBlockState(mutable).isOf(Blocks.STONE)) {
-                    chunk.setBlockState(mutable, PumpkinPasturesBlocks.PM_CHARRED_STONE.getDefaultState(), false);
-                }
-                break;
+            if(chunk.getBlockState(mutable).isOf(Blocks.STONE)) {
+                chunk.setBlockState(mutable, PumpkinPasturesBlocks.PM_CHARRED_STONE.getDefaultState(), false);
             }
         }
     }

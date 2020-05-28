@@ -185,7 +185,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 		setupFluidRendering(
 				Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
 				Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
-				new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water"), // texture identifier
+				new Identifier(JavaDungeons.MOD_ID, "soggy_swamp/soggy_swamp_water"), // texture identifier
 				0xFFFFFF // tint color (white because water is colored in its file)
 		);
 
