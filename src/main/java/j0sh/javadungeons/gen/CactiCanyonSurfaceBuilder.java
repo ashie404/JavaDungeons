@@ -12,7 +12,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.noise.OctaveSimplexNoiseSampler;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.ChunkRandom;
@@ -40,8 +39,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
      double e = 0.0D;
      double f = Math.min(Math.abs(d), this.heightCutoffNoise.sample((double)i * 0.25D, (double)j * 0.25D, false) * 15.0D);
      if (f > 0.0D) {
-        double g = 0.001953125D;
-        double h = Math.abs(this.heightNoise.sample((double)i * 0.001953125D, (double)j * 0.001953125D, false));
+        double h = Math.abs(this.heightNoise.sample((double) i * 0.001953125D, (double) j * 0.001953125D, false));
         e = f * f * 2.5D;
         double n = Math.ceil(h * 50.0D) + 14.0D;
         if (e > n) {

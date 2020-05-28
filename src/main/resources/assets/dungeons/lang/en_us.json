@@ -3,6 +3,7 @@
     "itemGroup.dungeons.creeper_woods": "Creeper Woods Blocks",
     "itemGroup.dungeons.desert_temple": "Desert Temple Blocks",
     "itemGroup.dungeons.pumpkin_pastures": "Pumpkin Pastures Blocks",
+    "itemGroup.dungeons.soggy_swamp": "Soggy Swamp Blocks",
     "itemGroup.dungeons.cacti_canyon": "Cacti Canyon Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
 
@@ -197,6 +198,19 @@
     "block.dungeons.pm_charred_dirt_path": "Charred Dirt Path",
     "block.dungeons.pm_fern": "Fern",
     "block.dungeons.pm_dead_sapling": "Dead Sapling",
+
+    "block.dungeons.ss_grass_block": "Grass Block",
+    "block.dungeons.ss_dirt_path": "Dirt Path",
+    "block.dungeons.ss_dirt": "Dirt",
+    "block.dungeons.ss_mossy_stone": "Mossy Stone",
+    "block.dungeons.ss_mossy_cobblestone": "Mossy Cobblestone",
+    "block.dungeons.ss_mossy_stone_bricks": "Mossy Stone Bricks",
+    "block.dungeons.ss_mossy_chiseled_stone_bricks": "Mossy Chiseled Stone Bricks",
+    "block.dungeons.ss_swamp_log": "Swamp Log",
+    "block.dungeons.ss_swamp_leaves": "Swamp Leaves",
+    "block.dungeons.ss_swamp_planks": "Swamp Planks",
+    "block.dungeons.ss_swamp_planks_stairs": "Swamp Planks Stairs",
+    "block.dungeons.ss_swamp_planks_slab": "Swamp Planks Slab",
 
     "block.dungeons.cc_sand": "Sand",
     "block.dungeons.cc_dense_sandy_dirt": "Dense Sandy Dirt",
