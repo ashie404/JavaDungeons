@@ -1,3 +1,4 @@
+/*
 package j0sh.javadungeons.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,4 +14,4 @@ import virtuoel.towelette.api.Fluidloggable;
     DungeonsTopSlab.class
 })
 public class CompatMixinFluidloggable implements Fluidloggable {
-}
+}*/

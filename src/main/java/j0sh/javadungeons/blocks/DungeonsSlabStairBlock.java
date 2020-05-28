@@ -1,5 +1,6 @@
 package j0sh.javadungeons.blocks;
 
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Material;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
@@ -13,7 +14,7 @@ public class DungeonsSlabStairBlock {
     public DungeonsStairs stairs;
 
     public DungeonsSlabStairBlock(Material material, BlockSoundGroup sounds, ItemGroup group, String id, String slabId, String stairsId) {
-        base = new DungeonsBlock(material, sounds, group, id);
+        base = new DungeonsBlock(material, sounds,false, FabricToolTags.PICKAXES, group, id);
         slab = new DungeonsSlab(material, sounds, group, slabId);
         stairs = new DungeonsStairs(material, sounds, base, group, stairsId);
     }

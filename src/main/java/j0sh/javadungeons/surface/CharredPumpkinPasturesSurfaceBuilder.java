@@ -1,7 +1,6 @@
 package j0sh.javadungeons.surface;
 
-import com.mojang.datafixers.Dynamic;
-import j0sh.javadungeons.content.Fluids;
+import com.mojang.serialization.Codec;
 import j0sh.javadungeons.content.PumpkinPasturesBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -12,11 +11,10 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
 import java.util.Random;
-import java.util.function.Function;
 
 public class CharredPumpkinPasturesSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConfig> {
 
-    public CharredPumpkinPasturesSurfaceBuilder(Function<Dynamic<?>, ? extends TernarySurfaceConfig> function) {
+    public CharredPumpkinPasturesSurfaceBuilder(Codec<TernarySurfaceConfig> function) {
         super(function);
     }
 

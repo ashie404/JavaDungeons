@@ -16,9 +16,9 @@ public class SurfaceBuilders {
     public static SurfaceBuilder<TernarySurfaceConfig> CACTI_CANYON;
 
     public static void init() {
-        SOGGY_SWAMP = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_surface_builder"), new SoggySwampSurfaceBuilder(TernarySurfaceConfig::deserialize));
-        CHARRED_PUMPKIN_PASTURES = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "charred_pumpkin_pastures"), new CharredPumpkinPasturesSurfaceBuilder(TernarySurfaceConfig::deserialize));
-        CACTI_CANYON = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), new CactiCanyonSurfaceBuilder(TernarySurfaceConfig::deserialize));
+        SOGGY_SWAMP = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_surface_builder"), new SoggySwampSurfaceBuilder(TernarySurfaceConfig.CODEC));
+        CHARRED_PUMPKIN_PASTURES = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "charred_pumpkin_pastures"), new CharredPumpkinPasturesSurfaceBuilder(TernarySurfaceConfig.CODEC));
+        CACTI_CANYON = Registry.register(Registry.SURFACE_BUILDER, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), new CactiCanyonSurfaceBuilder(TernarySurfaceConfig.CODEC));
     }
 
 }

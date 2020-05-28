@@ -1,6 +1,6 @@
 package j0sh.javadungeons.surface;
 
-import com.mojang.datafixers.Dynamic;
+import com.mojang.serialization.Codec;
 import j0sh.javadungeons.content.Fluids;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -10,11 +10,10 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
 import java.util.Random;
-import java.util.function.Function;
 
 public class SoggySwampSurfaceBuilder  extends SurfaceBuilder<TernarySurfaceConfig> {
 
-    public SoggySwampSurfaceBuilder(Function<Dynamic<?>, ? extends TernarySurfaceConfig> function) {
+    public SoggySwampSurfaceBuilder(Codec<TernarySurfaceConfig> function) {
         super(function);
     }
 
