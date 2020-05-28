@@ -1,6 +1,6 @@
 package j0sh.javadungeons.surface;
 
-import com.mojang.datafixers.Dynamic;
+import com.mojang.serialization.Codec;
 import j0sh.javadungeons.content.CactiCanyonBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,7 +15,6 @@ import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.function.Function;
 import java.util.stream.IntStream;
 
 public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConfig> {
@@ -32,7 +31,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
    protected OctaveSimplexNoiseSampler heightNoise;
    protected OctaveSimplexNoiseSampler layerNoise;
 
-   public CactiCanyonSurfaceBuilder(Function<Dynamic<?>, ? extends TernarySurfaceConfig> function) {
+   public CactiCanyonSurfaceBuilder(Codec<TernarySurfaceConfig> function) {
       super(function);
    }
 

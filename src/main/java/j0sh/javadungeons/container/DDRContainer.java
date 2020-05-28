@@ -7,9 +7,9 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.BasicInventory;
 import net.minecraft.inventory.CraftingResultInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.Property;
@@ -47,7 +47,7 @@ public class DDRContainer extends ScreenHandler {
       this.inputStack = ItemStack.EMPTY;
       this.contentsChangedListener = () -> {
       };
-      this.inventory = new BasicInventory(1) {
+      this.inventory = new SimpleInventory(1) {
          public void markDirty() {
             super.markDirty();
             DDRContainer.this.onContentChanged(this);
@@ -190,7 +190,7 @@ public class DDRContainer extends ScreenHandler {
             if (!this.insertItem(itemStack2, 2, 38, false)) {
                return ItemStack.EMPTY;
             }
-         } else if (this.world.getRecipeManager().getFirstMatch(DDRRecipe.TYPE, new BasicInventory(itemStack2), this.world).isPresent()) {
+         } else if (this.world.getRecipeManager().getFirstMatch(DDRRecipe.TYPE, new SimpleInventory(itemStack2), this.world).isPresent()) {
             if (!this.insertItem(itemStack2, 0, 1, false)) {
                return ItemStack.EMPTY;
             }

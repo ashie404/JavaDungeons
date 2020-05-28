@@ -1,5 +1,6 @@
 package j0sh.javadungeons.content;
 
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -134,9 +135,9 @@ public class GenericBlocks {
 
     public static void init() {
         // dungeons blocks that aren't in mc
-        FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "floor_tile");
-        DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_floor_tile");
-        CRATE = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "crate");
+        FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "floor_tile");
+        DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE,false, FabricToolTags.PICKAXES, JavaDungeons.GENERIC, "dirty_floor_tile");
+        CRATE = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD,false, FabricToolTags.AXES, JavaDungeons.GENERIC, "crate");
         RIPPED_BANNER = new DungeonsBanner(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "ripped_banner");
         TENT = new DungeonsTent(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tent");
         ROPE_FENCE = new DungeonsFence(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "rope_fence");
@@ -145,24 +146,24 @@ public class GenericBlocks {
         LAMP_BASE = new DungeonsLampBase();
 
         // food related items
-        BARREL_CLOSED = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "barrel_closed");
-        FISH_BARREL = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_barrel");
+        BARREL_CLOSED = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD,false, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
+        FISH_BARREL = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD,false, FabricToolTags.AXES, JavaDungeons.GENERIC, "fish_barrel");
         APPLE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "apple_food_box");
         ORANGE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "orange_food_box");
         FISH_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_food_box");
         CORN_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "corn_food_box");
 
         // ground related
-        DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
-        DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
-        DIRT_SLAB = new DungeonsSlab(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
-        ROCKY_DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
-        ROCKY_DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
-        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
-        GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
-        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
-        GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
-        DARK_ROCKY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
+        DIRT_PATH = new DungeonsPath(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
+        DIRT = new DungeonsPathable(Material.SOIL, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
+        DIRT_SLAB = new DungeonsSlab(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
+        ROCKY_DIRT_PATH = new DungeonsPath(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
+        ROCKY_DIRT = new DungeonsPathable(Material.SOIL, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
+        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.SOLID_ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
+        GRASSY_DIRT = new DungeonsBlock(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
+        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
+        GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
+        DARK_ROCKY_DIRT = new DungeonsBlock(Material.SOIL, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
 
         // wood related
         FLOORBOARDS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "floorboards");
@@ -194,7 +195,7 @@ public class GenericBlocks {
         FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
         YELLOW_TULIP = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "yellow_tulip");
-        WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
+        WATER_PLANT = new DungeonsWaterPlant(Material.UNDERWATER_PLANT, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
         HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
 
         // sanded andesite

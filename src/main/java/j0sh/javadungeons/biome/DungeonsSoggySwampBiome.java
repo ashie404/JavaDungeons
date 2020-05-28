@@ -45,11 +45,11 @@ public final class DungeonsSoggySwampBiome extends Biome {
                 ).parent(null)
                 .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
         );
-        this.addStructureFeature(Feature.SWAMP_HUT.configure(FeatureConfig.DEFAULT));
-        this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, Type.NORMAL)));
-        this.addStructureFeature(Feature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(net.minecraft.world.gen.feature.RuinedPortalFeature.Type.SWAMP)));
+        this.addStructureFeature(StructureFeature.field_24851.configure(FeatureConfig.DEFAULT));
+        this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, Type.NORMAL)));
+        this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(net.minecraft.world.gen.feature.RuinedPortalFeature.Type.SWAMP)));
         DefaultBiomeFeatures.addLandCarvers(this);
-        DefaultBiomeFeatures.addDefaultStructures(this);
+        DefaultBiomeFeatures.method_28440(this);
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addMineables(this);
         DefaultBiomeFeatures.addDefaultOres(this);

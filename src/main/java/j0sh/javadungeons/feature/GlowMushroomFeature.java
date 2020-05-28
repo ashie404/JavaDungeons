@@ -1,11 +1,8 @@
 package j0sh.javadungeons.feature;
 
-import com.mojang.datafixers.Dynamic;
-
-import j0sh.javadungeons.content.*;
-
-import java.util.Random;
-import java.util.function.Function;
+import com.mojang.serialization.Codec;
+import j0sh.javadungeons.content.CreeperWoodsBlocks;
+import j0sh.javadungeons.content.Tags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.util.math.BlockPos;
@@ -13,11 +10,13 @@ import net.minecraft.world.Heightmap;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.SeaPickleFeatureConfig;
+
+import java.util.Random;
 
 public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
-    public GlowMushroomFeature(Function<Dynamic<?>, ? extends SeaPickleFeatureConfig> configFactory) {
+    public GlowMushroomFeature(Codec<SeaPickleFeatureConfig> configFactory) {
         super(configFactory);
     }
 
