@@ -14,7 +14,7 @@ public class Biomes {
     public static PumpkinPasturesBiome PUMPKIN_PASTURES_BIOME;
     public static CharredPumpkinPasturesBiome CHARRED_PUMPKIN_PASTURES_BIOME;
     public static DungeonsPlainsBiome DUNGEONS_PLAINS_BIOME;
-    public static DungeonsSoggySwampBiome SOGGY_SWAMP_BIOME;
+    public static SoggySwampBiome SOGGY_SWAMP_BIOME;
     public static CactiCanyonBiome CACTI_CANYON_BIOME;
     public static CactiCanyonDesertBiome CACTI_CANYON_DESERT_BIOME;
 
@@ -24,7 +24,7 @@ public class Biomes {
         PUMPKIN_PASTURES_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"), new PumpkinPasturesBiome());
         CHARRED_PUMPKIN_PASTURES_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "charred_pumpkin_pastures"), new CharredPumpkinPasturesBiome());
         DUNGEONS_PLAINS_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "dungeons_plains"), new DungeonsPlainsBiome());
-        SOGGY_SWAMP_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), new DungeonsSoggySwampBiome());
+        SOGGY_SWAMP_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), new SoggySwampBiome());
         CACTI_CANYON_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), new CactiCanyonBiome());
         CACTI_CANYON_DESERT_BIOME = Registry.register(Registry.BIOME, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon_desert"), new CactiCanyonDesertBiome());
 

@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "bottom": "dungeons:block/soggy_swamp/swamp_planks",
+        "top":    "dungeons:block/soggy_swamp/swamp_planks",
+        "side":   "dungeons:block/soggy_swamp/swamp_planks"
+    }
+}

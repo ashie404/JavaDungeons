@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "dungeons:block/soggy_swamp/swamp_log" },
+        "axis=z": { "model": "dungeons:block/soggy_swamp/swamp_log", "x": 90 },
+        "axis=x": { "model": "dungeons:block/soggy_swamp/swamp_log", "x": 90, "y": 90 }
+    }
+}
