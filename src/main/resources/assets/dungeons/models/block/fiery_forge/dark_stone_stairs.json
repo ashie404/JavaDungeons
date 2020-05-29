@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/stairs",
+    "textures": {
+        "top":    "dungeons:block/fiery_forge/dark_stone",
+        "side":   "dungeons:block/fiery_forge/dark_stone",
+        "bottom": "dungeons:block/fiery_forge/dark_stone"
+    }
+}
