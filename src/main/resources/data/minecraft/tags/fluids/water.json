@@ -1,7 +1,6 @@
 {
     "replace": false,
-    "values":
-    [
+    "values": [
         "dungeons:dungeons_water",
         "dungeons:dungeons_flowing_water",
         "dungeons:soggy_swamp_water",
