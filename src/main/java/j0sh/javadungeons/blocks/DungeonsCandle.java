@@ -7,6 +7,7 @@ import j0sh.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -42,8 +43,8 @@ public class DungeonsCandle extends Block {
 		return SHAPE;
 	}
 
-    public DungeonsCandle(Material material, BlockSoundGroup sounds, ItemGroup group, String id, boolean isGreen) {
-        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque().lightLevel(15));
+    public DungeonsCandle(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean isGreen) {
+        super(FabricBlockSettings.of(new FabricMaterialBuilder(material.getColor()).destroyedByPiston().build()).strength(hardness, resistance).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(15));
         this.isGreen = isGreen;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

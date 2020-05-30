@@ -35,8 +35,8 @@ public class DungeonsTopSlab extends Block implements Waterloggable {
     public VoxelShape SHAPE = Block.createCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     public static final BooleanProperty WATERLOGGED;
 
-    public DungeonsTopSlab(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds));
+    public DungeonsTopSlab(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

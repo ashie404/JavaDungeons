@@ -70,8 +70,8 @@ public class DungeonsSack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsSack(Material material, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
-        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque());
+    public DungeonsSack(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

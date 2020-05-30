@@ -128,121 +128,121 @@ public class GenericBlocks {
 
     public static void init() {
         // dungeons blocks that aren't in mc
-        FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "floor_tile");
-        DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_floor_tile");
-        CRATE = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "crate");
-        RIPPED_BANNER = new DungeonsBanner(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "ripped_banner");
-        TENT = new DungeonsTent(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tent");
-        ROPE_FENCE = new DungeonsFence(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "rope_fence");
-        DUNGEONS_LANTERN = new DungeonsLantern(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "dungeons_lantern");
-        SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "sack", false);
-        SMALL_SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "small_sack", true);
+        FLOOR_TILE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "floor_tile");
+        DIRTY_FLOOR_TILE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_floor_tile");
+        CRATE = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "crate");
+        RIPPED_BANNER = new DungeonsBanner(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "ripped_banner");
+        TENT = new DungeonsTent(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tent");
+        ROPE_FENCE = new DungeonsFence(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "rope_fence");
+        DUNGEONS_LANTERN = new DungeonsLantern(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "dungeons_lantern");
+        SACK = new DungeonsSack(Material.WOOL, 0.8F, 0.8F, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "sack", false);
+        SMALL_SACK = new DungeonsSack(Material.WOOL, 0.8F, 0.8F, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "small_sack", true);
 
         // food related items
-        BARREL_CLOSED = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "barrel_closed");
-        FISH_BARREL = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_barrel");
-        APPLE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "apple_food_box");
-        ORANGE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "orange_food_box");
-        FISH_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_food_box");
-        CORN_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "corn_food_box");
+        BARREL_CLOSED = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "barrel_closed");
+        FISH_BARREL = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_barrel");
+        APPLE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "apple_food_box");
+        ORANGE_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "orange_food_box");
+        FISH_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "fish_food_box");
+        CORN_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "corn_food_box");
 
         // ground related
-        DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
-        DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
-        DIRT_SLAB = new DungeonsSlab(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
-        ROCKY_DIRT_PATH = new DungeonsPath(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
-        ROCKY_DIRT = new DungeonsPathable(Material.EARTH, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
-        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
-        GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
-        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
-        GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
-        DARK_ROCKY_DIRT = new DungeonsBlock(Material.EARTH, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
+        DIRT_PATH = new DungeonsPath(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
+        DIRT = new DungeonsPathable(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
+        DIRT_SLAB = new DungeonsSlab(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
+        ROCKY_DIRT_PATH = new DungeonsPath(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
+        ROCKY_DIRT = new DungeonsPathable(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
+        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
+        GRASSY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
+        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
+        GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
+        DARK_ROCKY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
 
         // wood related
-        FLOORBOARDS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "floorboards");
-        BOOKSHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "bookshelf");
-        DUSTY_BOOKSHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "dusty_bookshelf");
-        EMPTY_BOOKSHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_bookshelf");
-        BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "bridge_planks");
-        DUNGEONS_PLANKS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "dungeons_planks");
+        FLOORBOARDS = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "floorboards");
+        BOOKSHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "bookshelf");
+        DUSTY_BOOKSHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "dusty_bookshelf");
+        EMPTY_BOOKSHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_bookshelf");
+        BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "bridge_planks");
+        DUNGEONS_PLANKS = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "dungeons_planks");
 
         // stone related
-        STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "stone_tiles", "stone_tiles_slab", "stone_tiles_stairs");
-        DIRTY_STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles", "dirty_stone_tiles_slab", "dirty_stone_tiles_stairs");
-        DIRTY_STONE_TILES_1 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
-        DIRTY_STONE_TILES_2 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
-        DIRTY_STONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone");
+        STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "stone_tiles", "stone_tiles_slab", "stone_tiles_stairs");
+        DIRTY_STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles", "dirty_stone_tiles_slab", "dirty_stone_tiles_stairs");
+        DIRTY_STONE_TILES_1 = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
+        DIRTY_STONE_TILES_2 = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
+        DIRTY_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone");
 
         // andesite related
-        CRACKED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "cracked_andesite");
+        CRACKED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "cracked_andesite");
 
         // plants
-        BERRY_BUSH_BLOCK = new DungeonsLeaves(Material.LEAVES, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "berry_bush_block");
-        SHORT_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
-        FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
-        SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
-        YELLOW_TULIP = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "yellow_tulip");
-        WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
-        HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
+        BERRY_BUSH_BLOCK = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "berry_bush_block");
+        SHORT_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
+        FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
+        SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
+        YELLOW_TULIP = new DungeonsPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "yellow_tulip");
+        WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, 0.0F, 0.0F, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
+        HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
 
         // sanded andesite
-        SANDED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite");
-        SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_tiles");
-        SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "shadowed_sanded_andesite_tiles");
-        MOSSY_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "mossy_sanded_andesite_tiles");
-        MOSSY_SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "mossy_shadowed_sanded_andesite_tiles");
-        SANDED_ANDESITE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_bricks");
-        CHISELED_SANDED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "chiseled_sanded_andesite");
+        SANDED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite");
+        SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_tiles");
+        SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "shadowed_sanded_andesite_tiles");
+        MOSSY_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "mossy_sanded_andesite_tiles");
+        MOSSY_SHADOWED_SANDED_ANDESITE_TILES = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "mossy_shadowed_sanded_andesite_tiles");
+        SANDED_ANDESITE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "sanded_andesite_bricks");
+        CHISELED_SANDED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "chiseled_sanded_andesite");
       
         // glass related
-        GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "glass");
+        GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "glass");
 
-        BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "blue_glass");
-        BROWN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "brown_glass");
-        BLACK_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "black_glass");
-        GREEN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "green_glass");
-        YELLOW_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "yellow_glass");
-        RED_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "red_glass");
-        LIME_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "lime_glass");
-        LIGHT_GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_gray_glass");
-        PINK_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "pink_glass");
-        MAGENTA_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "magenta_glass");
-        LIGHT_BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_blue_glass");
-        ORANGE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "orange_glass");
-        GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "gray_glass");
-        PURPLE_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "purple_glass");
-        CYAN_GLASS = new DungeonsTranslucent(Material.GLASS, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "cyan_glass");
+        BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "blue_glass");
+        BROWN_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "brown_glass");
+        BLACK_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "black_glass");
+        GREEN_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "green_glass");
+        YELLOW_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "yellow_glass");
+        RED_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "red_glass");
+        LIME_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "lime_glass");
+        LIGHT_GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_gray_glass");
+        PINK_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "pink_glass");
+        MAGENTA_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "magenta_glass");
+        LIGHT_BLUE_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "light_blue_glass");
+        ORANGE_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "orange_glass");
+        GRAY_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "gray_glass");
+        PURPLE_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "purple_glass");
+        CYAN_GLASS = new DungeonsTranslucent(Material.GLASS, 0.3F, 0.3F, BlockSoundGroup.GLASS, JavaDungeons.GENERIC, "cyan_glass");
 
         // shelves
-        BEET_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "beet_shelf");
-        BOOK_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "book_shelf");
-        CARROT_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "carrot_shelf");
-        CHEST_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "chest_shelf");
-        EMPTY_SHELF = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_shelf");
+        BEET_SHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "beet_shelf");
+        BOOK_SHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "book_shelf");
+        CARROT_SHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "carrot_shelf");
+        CHEST_SHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "chest_shelf");
+        EMPTY_SHELF = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "empty_shelf");
 
         // braziers
-        UNLIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "unlit", "unlit_brazier");
-        LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "lit", "lit_brazier");
-        GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
+        UNLIT_BRAZIER = new DungeonsBrazier(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "unlit", "unlit_brazier");
+        LIT_BRAZIER = new DungeonsBrazier(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "lit", "lit_brazier");
+        GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_lit", "green_lit_brazier");
 
         // books
-        CLOSED_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");
-        OPEN_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "open_book");
+        CLOSED_BOOK = new DungeonsBook(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");
+        OPEN_BOOK = new DungeonsBook(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "open_book");
 
         // candles
-        CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle", false);
-        GREEN_CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_candle", true);
+        CANDLE = new DungeonsCandle(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle", false);
+        GREEN_CANDLE = new DungeonsCandle(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_candle", true);
 
         // tray
-        TRAY = new DungeonsTray(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tray");
+        TRAY = new DungeonsTray(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tray");
 
         // teapot
-        TEAPOT = new DungeonsTeapot(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "teapot");
+        TEAPOT = new DungeonsTeapot(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "teapot");
 
         // redstone related
-        LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
+        LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, 0.3F, 0.3F, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
 
         // chains
-        CHAINS = new DungeonsChains(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
+        CHAINS = new DungeonsChains(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
     }
 }

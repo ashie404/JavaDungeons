@@ -62,8 +62,8 @@ public class DungeonsFoodBox extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsFoodBox(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds));
+    public DungeonsFoodBox(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

@@ -18,8 +18,8 @@ public class DungeonsStairs extends StairsBlock {
 
     public BlockItem blockItem;
 
-    public DungeonsStairs(Material material, BlockSoundGroup sounds, Block base, ItemGroup group, String id) {
-        super(base.getDefaultState(), FabricBlockSettings.of(material).sounds(sounds));
+    public DungeonsStairs(Material material, float hardness, float resistance, BlockSoundGroup sounds, Block base, ItemGroup group, String id) {
+        super(base.getDefaultState(), FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
