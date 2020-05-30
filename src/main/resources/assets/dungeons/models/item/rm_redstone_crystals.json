@@ -1,0 +1,30 @@
+{
+    "parent": "dungeons:block/redstone_mines/redstone_crystals",
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, -0.5, 0],
+            "scale":[ 0.25, 0.25, 0.25]
+        },
+        "firstperson_righthand": {
+            "rotation": [ -12, 24, 0 ],
+            "translation": [ 1.25, 2.75, 0],
+            "scale":[ 0.5, 0.5, 0.5]
+        },
+        "gui": {
+            "rotation": [ 35, 135, 0 ],
+            "translation": [ 0, -0.5, 0],
+            "scale":[ 0.5, 0.5, 0.5]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale":[ 0.5, 0.5, 0.5]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5]
+        }
+    }
+}
