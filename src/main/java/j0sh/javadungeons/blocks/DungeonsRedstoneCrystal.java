@@ -12,12 +12,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsRedstoneCrystal extends RedstoneBlock {
+public class DungeonsRedstoneCrystal extends Block {
 
     // redstone crystal block
 
@@ -33,5 +34,13 @@ public class DungeonsRedstoneCrystal extends RedstoneBlock {
         super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque().lightLevel(12));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    }
+
+    public boolean emitsRedstonePower(BlockState state) {
+        return true;
+    }
+  
+    public int getWeakRedstonePower(BlockState state, BlockView view, BlockPos pos, Direction facing) {
+        return 8;
     }
 }
