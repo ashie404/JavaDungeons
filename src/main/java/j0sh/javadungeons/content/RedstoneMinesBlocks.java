@@ -26,8 +26,8 @@ public class RedstoneMinesBlocks {
     
     public static void init() {
         // crystals
-        RM_CRYSTALS = new DungeonsCrystal(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_crystals");
-        RM_REDSTONE_CRYSTALS = new DungeonsRedstoneCrystal(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_redstone_crystals");
+        RM_CRYSTALS = new DungeonsCrystal(Material.STONE, 3.0F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_crystals");
+        RM_REDSTONE_CRYSTALS = new DungeonsRedstoneCrystal(Material.STONE, 3.0F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_redstone_crystals");
 
         // dirt related
         RM_SNOWY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.REDSTONE_MINES, "rm_snowy_dirt");
