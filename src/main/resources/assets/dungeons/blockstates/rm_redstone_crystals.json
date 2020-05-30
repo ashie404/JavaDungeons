@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/redstone_mines/redstone_crystals" },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals", "y": 90 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals", "y": 180 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals", "y": 270 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_1" },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_1", "y": 90 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_1", "y": 180 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_1", "y": 270 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_2" },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_2", "y": 90 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_2", "y": 180 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_2", "y": 270 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_3" },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_3", "y": 90 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_3", "y": 180 },
+            { "model": "dungeons:block/redstone_mines/redstone_crystals_3", "y": 270 }
+        ]
+    }
+}

@@ -56,8 +56,6 @@ public final class SoggySwampBiome extends Biome {
         DefaultBiomeFeatures.addMineables(this);
         DefaultBiomeFeatures.addDefaultOres(this);
         DefaultBiomeFeatures.addClay(this);
-        DefaultBiomeFeatures.addSwampFeatures(this);
-        DefaultBiomeFeatures.addDefaultMushrooms(this);
         // add swamp features without swamp trees
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.FLOWER.configure(DefaultBiomeFeatures.BLUE_ORCHID_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_32.configure(new CountDecoratorConfig(1))));
         this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.GRASS_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(5))));
@@ -76,6 +74,8 @@ public final class SoggySwampBiome extends Biome {
                         new TwoLayersFeatureSize(1, 0, 1)
                 )).baseHeight(5).method_27376(ImmutableList.of(new LeaveVineTreeDecorator())).build())
         );
+
+        DefaultBiomeFeatures.addDefaultMushrooms(this);
 
 
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,

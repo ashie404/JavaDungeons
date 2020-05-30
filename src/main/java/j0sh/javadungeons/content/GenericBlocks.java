@@ -18,6 +18,7 @@ public class GenericBlocks {
     public static DungeonsFence ROPE_FENCE;
     public static DungeonsLantern DUNGEONS_LANTERN;
     public static DungeonsSack SACK;
+    public static DungeonsSack SMALL_SACK;
     public static DungeonsLampBase LAMP_BASE;
 
     // food related
@@ -48,20 +49,14 @@ public class GenericBlocks {
     public static DungeonsTopSlab BRIDGE_PLANKS;
     public static DungeonsBlock DUNGEONS_PLANKS;
 
-    // stone-brick related
-    public static DungeonsBlock DARK_STONE_BRICKS;
-    public static DungeonsBlock DIRTY_DARK_STONE_BRICKS;
-    public static DungeonsBlock CHISELED_DARK_STONE;
+    // stone related
     public static DungeonsSlabStairBlock STONE_TILES;
     public static DungeonsSlabStairBlock DIRTY_STONE_TILES;
     public static DungeonsSlabStairBlock DIRTY_STONE_TILES_1;
     public static DungeonsSlabStairBlock DIRTY_STONE_TILES_2;
-
-    // stone related
     public static DungeonsBlock DIRTY_STONE;
 
     // andesite related
-    public static DungeonsBlock EMBLEMED_ANDESITE;
     public static DungeonsBlock CRACKED_ANDESITE;
 
     // generic plants
@@ -142,8 +137,8 @@ public class GenericBlocks {
         TENT = new DungeonsTent(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tent");
         ROPE_FENCE = new DungeonsFence(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "rope_fence");
         DUNGEONS_LANTERN = new DungeonsLantern(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "dungeons_lantern");
-        SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "sack");
-        LAMP_BASE = new DungeonsLampBase();
+        SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "sack", false);
+        SMALL_SACK = new DungeonsSack(Material.WOOL, BlockSoundGroup.WOOL, JavaDungeons.GENERIC, "small_sack", true);
 
         // food related items
         BARREL_CLOSED = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD,false, FabricToolTags.AXES, JavaDungeons.GENERIC, "barrel_closed");
@@ -173,20 +168,14 @@ public class GenericBlocks {
         BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "bridge_planks");
         DUNGEONS_PLANKS = new DungeonsBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "dungeons_planks");
 
-        // stone brick related
-        DARK_STONE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dark_stone_bricks");
-        DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_dark_stone_bricks");
-        CHISELED_DARK_STONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "chiseled_dark_stone");
+        // stone related
         STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "stone_tiles", "stone_tiles_slab", "stone_tiles_stairs");
         DIRTY_STONE_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles", "dirty_stone_tiles_slab", "dirty_stone_tiles_stairs");
         DIRTY_STONE_TILES_1 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
         DIRTY_STONE_TILES_2 = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
-
-        // stone related
         DIRTY_STONE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "dirty_stone");
 
         // andesite related
-        EMBLEMED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "emblemed_andesite");
         CRACKED_ANDESITE = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "cracked_andesite");
 
         // plants
@@ -254,6 +243,7 @@ public class GenericBlocks {
 
         // redstone related
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
+        LAMP_BASE = new DungeonsLampBase();
 
         // chains
         CHAINS = new DungeonsChains(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");

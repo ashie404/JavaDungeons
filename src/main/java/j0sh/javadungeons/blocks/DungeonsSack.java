@@ -34,12 +34,15 @@ public class DungeonsSack extends Block implements Waterloggable {
 
     public BlockItem blockItem;
     public static final BooleanProperty WATERLOGGED;
-    
+
+    public boolean small = false;
+
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    protected static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 11.0D, 14.0D);
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
-		return SHAPE;
+        return small ? SMALL_SHAPE : SHAPE;
     }
     
     @Override
@@ -52,11 +55,11 @@ public class DungeonsSack extends Block implements Waterloggable {
     }
   
     public FluidState getFluidState(BlockState state) {
-       return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+       return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-       if ((Boolean)state.get(WATERLOGGED)) {
+       if (state.get(WATERLOGGED)) {
           world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
        }
 
@@ -65,11 +68,12 @@ public class DungeonsSack extends Block implements Waterloggable {
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8);
+        return this.getDefaultState().with(WATERLOGGED, fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsSack(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsSack(Material material, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
         super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque());
+        this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

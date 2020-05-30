@@ -26,7 +26,7 @@ public class DungeonsBlock extends Block {
     }
 
     public DungeonsBlock(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds).breakByHand(material.canBreakByHand()).breakByTool(FabricToolTags.PICKAXES).strength(1.5F, 6.0F));
+        super(FabricBlockSettings.of(material).sounds(sounds)/*.breakByHand(material.)*/.breakByTool(FabricToolTags.PICKAXES).strength(1.5F, 6.0F));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }

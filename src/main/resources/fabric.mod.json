@@ -6,7 +6,8 @@
   "name": "JavaDungeons",
   "description": "A mod that adds the custom blocks from Minecraft Dungeons into Minecraft: Java Edition.",
   "authors": [
-    "J0SH"
+    "J0SH",
+    "OliviaTheVampire"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/javadungeons",
@@ -33,7 +34,7 @@
   "depends": {
     "fabricloader": ">=0.8.0",
     "fabric": "*",
-    "minecraft": "1.16-alpha.20.21.a"
+    "minecraft": "1.16-alpha.20.22.a"
   },
   "suggests": {
     "flamingo": "*"

@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "dungeons:rope_fence"
+        "dungeons:rope_fence",
+        "dungeons:ss_rope_fence"
     ]
 }

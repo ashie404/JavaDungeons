@@ -1,0 +1,24 @@
+{
+    "credit": "Made with Blockbench",
+    "ambientocclusion": false,
+    "texture_size": [64, 64],
+    "textures": {
+        "0": "dungeons:block/redstone_mines/redstone_crystals",
+        "particle": "dungeons:block/redstone_mines/redstone_crystals"
+    },
+    "elements": [
+        {
+            "from": [4, -3, 3],
+            "to": [12, 2, 11],
+            "rotation": {"angle": 0, "axis": "y", "origin": [12, 5, 11]},
+            "faces": {
+                "north": {"uv": [0, 2, 2, 3.25], "texture": "#0"},
+                "east": {"uv": [6, 2, 8, 3.25], "texture": "#0"},
+                "south": {"uv": [4, 2, 6, 3.25], "texture": "#0"},
+                "west": {"uv": [2, 2, 4, 3.25], "texture": "#0"},
+                "up": {"uv": [2, 0, 4, 2], "texture": "#0"},
+                "down": {"uv": [4, 0, 6, 2], "texture": "#0"}
+            }
+        }
+    ]
+}

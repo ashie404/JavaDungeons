@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "side": "dungeons:block/redstone_mines/dark_quartz_pillar",
+        "end":  "dungeons:block/redstone_mines/dark_quartz_pillar_top"
+    }
+}

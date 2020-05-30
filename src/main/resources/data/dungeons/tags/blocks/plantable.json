@@ -17,6 +17,7 @@
         "dungeons:cc_grassy_dirt",
         "dungeons:cc_dense_grassy_dirt",
         "dungeons:ss_dirt",
-        "dungeons:ss_grass_block"
+        "dungeons:ss_grass_block",
+        "dungeons:rm_snowy_dirt"
     ]
 }

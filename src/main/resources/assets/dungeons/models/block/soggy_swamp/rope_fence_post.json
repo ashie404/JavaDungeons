@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/fence_post",
+    "textures": {
+        "texture": "dungeons:block/soggy_swamp/swamp_planks"
+    }
+}

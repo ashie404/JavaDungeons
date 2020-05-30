@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/redstone_mines/dark_quartz_tiles_slab" },
+        "type=top": { "model":    "dungeons:block/redstone_mines/dark_quartz_tiles_slab_top" },
+        "type=double": { "model": "dungeons:block/redstone_mines/dark_quartz_tiles" }
+    }
+}

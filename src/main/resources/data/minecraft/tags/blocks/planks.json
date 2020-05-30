@@ -1,7 +1,8 @@
 {
     "replace": false,
     "values": [
-        "dungeons:ash_planks",
-        "dungeons:dungeons_planks"
+        "dungeons:pm_charred_planks",
+        "dungeons:dungeons_planks",
+        "dungeons:ss_swamp_planks"
     ]
 }

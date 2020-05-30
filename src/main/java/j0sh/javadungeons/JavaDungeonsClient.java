@@ -1,6 +1,5 @@
 package j0sh.javadungeons;
 
-import j0sh.javadungeons.blocks.BBlocks;
 import j0sh.javadungeons.client.renderer.item.HammerItemRenderer;
 import j0sh.javadungeons.content.*;
 import j0sh.javadungeons.particles.GreenFlameParticle;
@@ -37,8 +36,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
     private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
-
-	private static final RenderLayer SYNTH_BLOCK_LAYER = RenderLayer.getCutout();
 
     private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
         return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
@@ -130,7 +127,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
 			CactiCanyonBlocks.CC_GRASS_BLOCK,
 			CactiCanyonBlocks.CC_GRASSY_DIRT,
 			CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
-			CactiCanyonBlocks.CC_DESERT_GRASS
+			CactiCanyonBlocks.CC_DESERT_GRASS,
+			RedstoneMinesBlocks.RM_SHRUB
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
@@ -162,11 +160,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 				TRANSLUCENT_BLOCK_LAYER,
 				Fluids.SOGGY_SWAMP_WATER_FLOWING,
 				Fluids.SOGGY_SWAMP_WATER_STILL
-		);
-
-		BlockRenderLayerMap.INSTANCE.putBlocks(
-				SYNTH_BLOCK_LAYER,
-				BBlocks.Dimensional_Rectifier
 		);
 
         // set up particles
