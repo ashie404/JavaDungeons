@@ -31,7 +31,7 @@ public class Testing {
 //        }
     }
 
-    public static void materialDebug(Person material) {
+    /*public static void materialDebug(Person material) {
         String text =
                 "\n\nTechnical Material Information" +
                         "\n##########################" +
@@ -50,6 +50,6 @@ public class Testing {
                         "\nHas Ore Flower : " + material.hasOreFlower() +
                         "\nHas Food : " + material.hasFood() + "\n";
         System.out.println(text);
-    }
+    }*/
 
 }

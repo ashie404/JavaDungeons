@@ -1,1 +1,5 @@
+<<<<<<< HEAD:src/main/resources/assets/dungeons/models/block/berry_bush_block.json
 {"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/berry_bush_block"}}
+=======
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/redstone_mines/dark_quartz"}}
+>>>>>>> added a lot of stuff from 1.15.2 version:src/main/resources/assets/dungeons/models/block/redstone_mines/dark_quartz.json

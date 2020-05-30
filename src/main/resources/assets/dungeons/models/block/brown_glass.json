@@ -1,1 +1,5 @@
+<<<<<<< HEAD:src/main/resources/assets/dungeons/models/block/brown_glass.json
 {"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/brown_glass"}}
+=======
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/redstone_mines/dark_quartz_tiles"}}
+>>>>>>> added a lot of stuff from 1.15.2 version:src/main/resources/assets/dungeons/models/block/redstone_mines/dark_quartz_tiles.json

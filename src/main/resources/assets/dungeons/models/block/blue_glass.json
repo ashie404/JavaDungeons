@@ -1,1 +1,5 @@
+<<<<<<< HEAD:src/main/resources/assets/dungeons/models/block/blue_glass.json
 {"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/blue_glass"}}
+=======
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/redstone_mines/snowy_dirt"}}
+>>>>>>> added a lot of stuff from 1.15.2 version:src/main/resources/assets/dungeons/models/block/redstone_mines/snowy_dirt.json
