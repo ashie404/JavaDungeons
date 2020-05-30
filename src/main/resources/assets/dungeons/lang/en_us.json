@@ -284,6 +284,15 @@
     "block.dungeons.rm_crystals": "Crystals",
     "block.dungeons.rm_snowy_dirt": "Snowy Dirt",
     "block.dungeons.rm_shrub": "Shrub",
+    "block.dungeons.rm_dark_quartz": "Dark Quartz",
+    "block.dungeons.rm_dark_quartz_slab": "Dark Quartz Slab",
+    "block.dungeons.rm_dark_quartz_stairs": "Dark Quartz Stairs",
+    "block.dungeons.rm_dark_quartz_tiles": "Dark Quartz Tiles",
+    "block.dungeons.rm_dark_quartz_tiles_slab": "Dark Quartz Tiles Slab",
+    "block.dungeons.rm_dark_quartz_tiles_stairs": "Dark Quartz Tiles Stairs",
+    "block.dungeons.rm_dark_quartz_pillar": "Dark Quartz Pillar",
+    "block.dungeons.rm_chiseled_dark_quartz": "Chiseled Dark Quartz",
+    "block.dungeons.rm_chiseled_dark_quartz_1": "Chiseled Dark Quartz",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 

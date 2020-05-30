@@ -18,6 +18,11 @@ public class RedstoneMinesBlocks {
     public static DungeonsPlant RM_SHRUB;
 
     // dark quartz
+    public static DungeonsSlabStairBlock RM_DARK_QUARTZ;
+    public static DungeonsSlabStairBlock RM_DARK_QUARTZ_TILES;
+    public static DungeonsPillar RM_DARK_QUARTZ_PILLAR;
+    public static DungeonsBlock RM_CHISELED_DARK_QUARTZ;
+    public static DungeonsBlock RM_CHISELED_DARK_QUARTZ_1;
     
     public static void init() {
         // crystals
@@ -31,5 +36,10 @@ public class RedstoneMinesBlocks {
         RM_SHRUB = new DungeonsPlant(Material.PLANT, BlockSoundGroup.GRASS, JavaDungeons.REDSTONE_MINES, "rm_shrub");
 
         // dark quartz
+        RM_DARK_QUARTZ = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_dark_quartz", "rm_dark_quartz_slab", "rm_dark_quartz_stairs");
+        RM_DARK_QUARTZ_TILES = new DungeonsSlabStairBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_dark_quartz_tiles", "rm_dark_quartz_tiles_slab", "rm_dark_quartz_tiles_stairs");
+        RM_DARK_QUARTZ_PILLAR = new DungeonsPillar(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_dark_quartz_pillar");
+        RM_CHISELED_DARK_QUARTZ = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_chiseled_dark_quartz");
+        RM_CHISELED_DARK_QUARTZ_1 = new DungeonsBlock(Material.STONE, BlockSoundGroup.STONE, JavaDungeons.REDSTONE_MINES, "rm_chiseled_dark_quartz_1");
     }
 }

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "dungeons:block/redstone_mines/dark_quartz_pillar" },
+        "axis=z": { "model": "dungeons:block/redstone_mines/dark_quartz_pillar", "x": 90 },
+        "axis=x": { "model": "dungeons:block/redstone_mines/dark_quartz_pillar", "x": 90, "y": 90 }
+    }
+}
