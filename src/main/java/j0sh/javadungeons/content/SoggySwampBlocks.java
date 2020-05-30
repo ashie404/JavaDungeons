@@ -23,6 +23,10 @@ public class SoggySwampBlocks {
     public static DungeonsLeaves SS_SWAMP_LEAVES;
     public static DungeonsSlabStairBlock SS_SWAMP_PLANKS;
 
+    // bridge related
+    public static DungeonsTopSlab SS_BRIDGE_PLANKS;
+    public static DungeonsFence SS_ROPE_FENCE;
+
     public static void init() {
         // ground related
         SS_GRASS_BLOCK = new DungeonsBlock(Material.ORGANIC, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
@@ -39,5 +43,9 @@ public class SoggySwampBlocks {
         SS_SWAMP_LOG = new DungeonsPillar(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_log");
         SS_SWAMP_LEAVES = new DungeonsLeaves(Material.LEAVES, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_leaves");
         SS_SWAMP_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_planks", "ss_swamp_planks_slab", "ss_swamp_planks_stairs");
+
+        // bridge related
+        SS_BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_bridge_planks");
+        SS_ROPE_FENCE = new DungeonsFence(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_rope_fence");
     }
 }
