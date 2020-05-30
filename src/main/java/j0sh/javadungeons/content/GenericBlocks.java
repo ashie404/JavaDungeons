@@ -110,8 +110,9 @@ public class GenericBlocks {
     public static DungeonsBook CLOSED_BOOK;
     public static DungeonsBook OPEN_BOOK;
 
-    // candle
+    // candles
     public static DungeonsCandle CANDLE;
+    public static DungeonsCandle GREEN_CANDLE;
 
     // tray
     public static DungeonsTray TRAY;
@@ -228,8 +229,9 @@ public class GenericBlocks {
         CLOSED_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "closed_book");
         OPEN_BOOK = new DungeonsBook(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "open_book");
 
-        // candle
-        CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle");
+        // candles
+        CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "candle", false);
+        GREEN_CANDLE = new DungeonsCandle(Material.METAL, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "green_candle", true);
 
         // tray
         TRAY = new DungeonsTray(Material.WOOD, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "tray");
