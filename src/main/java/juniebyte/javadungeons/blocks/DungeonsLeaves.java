@@ -1,5 +1,6 @@
 package juniebyte.javadungeons.blocks;
 
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.Material;

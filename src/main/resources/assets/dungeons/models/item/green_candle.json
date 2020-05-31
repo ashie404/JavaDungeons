@@ -1,5 +1,5 @@
 {
-    "parent": "dungeons:block/candle",
+    "parent": "dungeons:block/green_candle",
     "display": {
         "gui": {
             "rotation": [ 35, -45, 0 ],

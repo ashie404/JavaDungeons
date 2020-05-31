@@ -55,11 +55,11 @@ public class DungeonsChains extends Block {
         BlockPos pos = ctx.getBlockPos();
         if (world.getBlockState(pos.up()).getBlock() instanceof DungeonsChains && world.getBlockState(pos.down()).getBlock() instanceof DungeonsChains)
         {
-            return (BlockState)this.getDefaultState().with(ABOVE, false).with(BELOW, false);
+            return this.getDefaultState().with(ABOVE, false).with(BELOW, false);
         } else {
             boolean blockAbove = !world.isAir(pos.up()) && !(world.getBlockState(pos.up()).getBlock() instanceof DungeonsChains);
             boolean blockBelow = !world.isAir(pos.down()) && !(world.getBlockState(pos.down()).getBlock() instanceof DungeonsChains);
-            return (BlockState)this.getDefaultState().with(ABOVE, blockAbove).with(BELOW, blockBelow);
+            return this.getDefaultState().with(ABOVE, blockAbove).with(BELOW, blockBelow);
         }
     }
 

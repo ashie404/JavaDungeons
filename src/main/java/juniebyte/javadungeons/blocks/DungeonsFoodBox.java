@@ -46,11 +46,11 @@ public class DungeonsFoodBox extends Block implements Waterloggable {
     }
   
     public FluidState getFluidState(BlockState state) {
-       return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+       return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-       if ((Boolean)state.get(WATERLOGGED)) {
+       if (state.get(WATERLOGGED)) {
           world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
        }
 

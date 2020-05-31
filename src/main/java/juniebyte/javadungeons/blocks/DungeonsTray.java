@@ -57,7 +57,7 @@ public class DungeonsTray extends Block {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(CONTAINS, Properties.Contains.EMPTY);
+        return this.getDefaultState().with(CONTAINS, Properties.Contains.EMPTY);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/grass_path",
+    "textures": {
+        "particle": "dungeons:block/floor_tile",
+        "top": "dungeons:block/floor_tile",
+        "side": "dungeons:block/floor_tile",
+        "bottom": "dungeons:block/floor_tile"
+    }
+}
