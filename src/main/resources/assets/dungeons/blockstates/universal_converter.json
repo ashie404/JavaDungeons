@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "dungeons:block/universal_converter" },
-        "facing=south": { "model": "dungeons:block/universal_converter", "y": 180 },
-        "facing=west": { "model":  "dungeons:block/universal_converter", "y": 270 },
-        "facing=east": { "model":  "dungeons:block/universal_converter", "y": 90 }
-    }
-}

@@ -13,9 +13,9 @@ import net.minecraft.util.PacketByteBuf;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
-public class UniversalConverterRecipe implements Recipe<Inventory> {
+public class DungeonsTransformerRecipe implements Recipe<Inventory> {
     
-    public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "universal_converter");
+    public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dungeons_transformer");
     public static final Type TYPE = new Type();
     public static final Serializer SERIALIZER = new Serializer();
 
@@ -23,7 +23,7 @@ public class UniversalConverterRecipe implements Recipe<Inventory> {
     private Ingredient input;
     private ItemStack output;
 
-    private UniversalConverterRecipe(Identifier id, Ingredient input, ItemStack output) {
+    private DungeonsTransformerRecipe(Identifier id, Ingredient input, ItemStack output) {
         this.id = id;
         this.input = input;
         this.output = output;
@@ -69,19 +69,19 @@ public class UniversalConverterRecipe implements Recipe<Inventory> {
         return DefaultedList.copyOf(Ingredient.EMPTY, this.input);
     }
 
-    public static class Type implements RecipeType<UniversalConverterRecipe> {
+    public static class Type implements RecipeType<DungeonsTransformerRecipe> {
         @Override
         public String toString() {
             return ID.toString();
         }
     }
 
-    public static class Serializer implements RecipeSerializer<UniversalConverterRecipe> {
+    public static class Serializer implements RecipeSerializer<DungeonsTransformerRecipe> {
 
         public static final Serializer INSTANCE = new Serializer();
 
         @Override
-        public UniversalConverterRecipe read(Identifier id, JsonObject jsonObject) {
+        public DungeonsTransformerRecipe read(Identifier id, JsonObject jsonObject) {
             Ingredient ingredient2;
             if (JsonHelper.hasArray(jsonObject, "ingredient")) {
                 ingredient2 = Ingredient.fromJson(JsonHelper.getArray(jsonObject, "ingredient"));
@@ -92,18 +92,18 @@ public class UniversalConverterRecipe implements Recipe<Inventory> {
             String string2 = JsonHelper.getString(jsonObject, "result");
             int i = JsonHelper.getInt(jsonObject, "count");
             ItemStack itemStack = new ItemStack(Registry.ITEM.get(new Identifier(string2)), i);
-            return new UniversalConverterRecipe(id, ingredient2, itemStack);
+            return new DungeonsTransformerRecipe(id, ingredient2, itemStack);
         }
 
         @Override
-        public UniversalConverterRecipe read(Identifier id, PacketByteBuf packetByteBuf) {
+        public DungeonsTransformerRecipe read(Identifier id, PacketByteBuf packetByteBuf) {
             Ingredient ingredient = Ingredient.fromPacket(packetByteBuf);
             ItemStack itemStack = packetByteBuf.readItemStack();
-            return new UniversalConverterRecipe(id, ingredient, itemStack);
+            return new DungeonsTransformerRecipe(id, ingredient, itemStack);
         }
 
         @Override
-        public void write(PacketByteBuf packetByteBuf, UniversalConverterRecipe recipe) {
+        public void write(PacketByteBuf packetByteBuf, DungeonsTransformerRecipe recipe) {
             recipe.input.write(packetByteBuf);
             packetByteBuf.writeItemStack(recipe.output);
         }

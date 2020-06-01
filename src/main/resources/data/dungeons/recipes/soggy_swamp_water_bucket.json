@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:water_bucket"
+    },
+    "result": "dungeons:soggy_swamp_water_bucket",
+    "count": 1
+  }

@@ -4,8 +4,8 @@ import net.minecraft.client.gui.screen.ingame.*;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.container.UniversalConverterContainer;
-import j0sh.javadungeons.recipe.UniversalConverterRecipe;
+import j0sh.javadungeons.container.DungeonsTransformerContainer;
+import j0sh.javadungeons.recipe.DungeonsTransformerRecipe;
 
 import java.util.List;
 import net.fabricmc.api.EnvType;
@@ -19,14 +19,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 @Environment(EnvType.CLIENT)
-public class UniversalConverterScreen extends ContainerScreen<UniversalConverterContainer> {
-   private static final Identifier TEXTURE = new Identifier(JavaDungeons.MOD_ID, "textures/gui/container/universal_converter.png");
+public class DungeonsTransformerScreen extends ContainerScreen<DungeonsTransformerContainer> {
+   private static final Identifier TEXTURE = new Identifier(JavaDungeons.MOD_ID, "textures/gui/container/dungeons_transformer.png");
    private float scrollAmount;
    private boolean mouseClicked;
    private int scrollOffset;
    private boolean canCraft;
 
-   public UniversalConverterScreen(UniversalConverterContainer container, PlayerInventory inventory, Text title) {
+   public DungeonsTransformerScreen(DungeonsTransformerContainer container, PlayerInventory inventory, Text title) {
       super(container, inventory, title);
       container.setContentsChangedListener(this::onInventoryChange);
    }
@@ -58,13 +58,13 @@ public class UniversalConverterScreen extends ContainerScreen<UniversalConverter
    }
 
    private void renderRecipeBackground(int mouseX, int mouseY, int x, int y, int scrollOffset) {
-      for(int i = this.scrollOffset; i < scrollOffset && i < ((UniversalConverterContainer)this.container).getAvailableRecipeCount(); ++i) {
+      for(int i = this.scrollOffset; i < scrollOffset && i < ((DungeonsTransformerContainer)this.container).getAvailableRecipeCount(); ++i) {
          int j = i - this.scrollOffset;
          int k = x + j % 4 * 16;
          int l = j / 4;
          int m = y + l * 18 + 2;
          int n = this.containerHeight;
-         if (i == ((UniversalConverterContainer)this.container).getSelectedRecipe()) {
+         if (i == ((DungeonsTransformerContainer)this.container).getSelectedRecipe()) {
             n += 18;
          } else if (mouseX >= k && mouseY >= m && mouseX < k + 16 && mouseY < m + 18) {
             n += 36;
@@ -76,14 +76,14 @@ public class UniversalConverterScreen extends ContainerScreen<UniversalConverter
    }
 
    private void renderRecipeIcons(int x, int y, int scrollOffset) {
-      List<UniversalConverterRecipe> list = ((UniversalConverterContainer)this.container).getAvailableRecipes();
+      List<DungeonsTransformerRecipe> list = ((DungeonsTransformerContainer)this.container).getAvailableRecipes();
 
-      for(int i = this.scrollOffset; i < scrollOffset && i < ((UniversalConverterContainer)this.container).getAvailableRecipeCount(); ++i) {
+      for(int i = this.scrollOffset; i < scrollOffset && i < ((DungeonsTransformerContainer)this.container).getAvailableRecipeCount(); ++i) {
          int j = i - this.scrollOffset;
          int k = x + j % 4 * 16;
          int l = j / 4;
          int m = y + l * 18 + 2;
-         this.minecraft.getItemRenderer().renderGuiItem(((UniversalConverterRecipe)list.get(i)).getOutput(), k, m);
+         this.minecraft.getItemRenderer().renderGuiItem(((DungeonsTransformerRecipe)list.get(i)).getOutput(), k, m);
       }
 
    }
@@ -99,9 +99,9 @@ public class UniversalConverterScreen extends ContainerScreen<UniversalConverter
             int m = l - this.scrollOffset;
             double d = mouseX - (double)(i + m % 4 * 16);
             double e = mouseY - (double)(j + m / 4 * 18);
-            if (d >= 0.0D && e >= 0.0D && d < 16.0D && e < 18.0D && ((UniversalConverterContainer)this.container).onButtonClick(this.minecraft.player, l)) {
+            if (d >= 0.0D && e >= 0.0D && d < 16.0D && e < 18.0D && ((DungeonsTransformerContainer)this.container).onButtonClick(this.minecraft.player, l)) {
                MinecraftClient.getInstance().getSoundManager().play(PositionedSoundInstance.master(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
-               this.minecraft.interactionManager.clickButton(((UniversalConverterContainer)this.container).syncId, l);
+               this.minecraft.interactionManager.clickButton(((DungeonsTransformerContainer)this.container).syncId, l);
                return true;
             }
          }
@@ -141,15 +141,15 @@ public class UniversalConverterScreen extends ContainerScreen<UniversalConverter
    }
 
    private boolean shouldScroll() {
-      return this.canCraft && ((UniversalConverterContainer)this.container).getAvailableRecipeCount() > 12;
+      return this.canCraft && ((DungeonsTransformerContainer)this.container).getAvailableRecipeCount() > 12;
    }
 
    protected int getMaxScroll() {
-      return (((UniversalConverterContainer)this.container).getAvailableRecipeCount() + 4 - 1) / 4 - 3;
+      return (((DungeonsTransformerContainer)this.container).getAvailableRecipeCount() + 4 - 1) / 4 - 3;
    }
 
    private void onInventoryChange() {
-      this.canCraft = ((UniversalConverterContainer)this.container).canCraft();
+      this.canCraft = ((DungeonsTransformerContainer)this.container).canCraft();
       if (!this.canCraft) {
          this.scrollAmount = 0.0F;
          this.scrollOffset = 0;

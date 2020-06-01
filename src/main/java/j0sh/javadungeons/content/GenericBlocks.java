@@ -127,7 +127,7 @@ public class GenericBlocks {
     public static DungeonsChains CHAINS;
 
     // custom crafting utility (not in dungeons)
-    public static UniversalConverter UNIVERSAL_CONVERTER;
+    public static DungeonsTransformer DUNGEONS_TRANSFORMER;
 
     public static void init() {
         // dungeons blocks that aren't in mc
@@ -249,6 +249,6 @@ public class GenericBlocks {
         CHAINS = new DungeonsChains(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
 
         // custom crafting utility (not in dungeons)
-        UNIVERSAL_CONVERTER = new UniversalConverter();
+        DUNGEONS_TRANSFORMER = new DungeonsTransformer();
     }
 }

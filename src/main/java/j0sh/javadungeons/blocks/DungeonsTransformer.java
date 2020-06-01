@@ -22,17 +22,18 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import j0sh.javadungeons.JavaDungeons;
-import j0sh.javadungeons.container.UniversalConverterContainer;
+import j0sh.javadungeons.container.DungeonsTransformerContainer;
+import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 
-public class UniversalConverter extends Block {
-   public static final TranslatableText CONTAINER_NAME = new TranslatableText("container.dungeons.universal_converter", new Object[0]);
+public class DungeonsTransformer extends Block {
+   public static final TranslatableText CONTAINER_NAME = new TranslatableText("container.dungeons.dungeons_transformer", new Object[0]);
    public static final DirectionProperty FACING;
-   public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "universal_converter");
+   public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dungeons_transformer");
    public BlockItem blockItem;
 
-   public UniversalConverter() {
+   public DungeonsTransformer() {
       super(FabricBlockSettings.copy(Blocks.OBSIDIAN));
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
       Registry.register(Registry.BLOCK, ID, this);
@@ -47,14 +48,15 @@ public class UniversalConverter extends Block {
       if (world.isClient) {
          return ActionResult.SUCCESS;
       } else {
-         player.openContainer(state.createContainerFactory(world, pos));
+         ContainerProviderRegistry.INSTANCE.openContainer(ID, player, buf -> buf.writeBlockPos(pos));
+         //player.openContainer(state.createContainerFactory(world, pos));
          return ActionResult.SUCCESS;
       }
    }
 
    public NameableContainerFactory createContainerFactory(BlockState state, World world, BlockPos pos) {
       return new SimpleNamedContainerFactory((i, playerInventory, playerEntity) -> {
-         return new UniversalConverterContainer(i, playerInventory, BlockContext.create(world, pos));
+         return new DungeonsTransformerContainer(i, playerInventory, BlockContext.create(world, pos));
       }, CONTAINER_NAME);
    }
 

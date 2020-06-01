@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "dungeons:block/universal_converter_front",
-		"1": "dungeons:block/universal_converter_side",
+		"0": "dungeons:block/dungeons_transformer_front",
+		"1": "dungeons:block/dungeons_transformer_side",
 		"2": "minecraft:block/obsidian",
-		"particle": "dungeons:block/universal_converter_front"
+		"particle": "dungeons:block/dungeons_transformer_front"
 	},
 	"elements": [
 		{

@@ -29,10 +29,10 @@ import net.minecraft.resource.ResourceType;
 
 import java.util.function.Function;
 
-import j0sh.javadungeons.blocks.UniversalConverter;
-import j0sh.javadungeons.container.UniversalConverterContainer;
+import j0sh.javadungeons.blocks.DungeonsTransformer;
+import j0sh.javadungeons.container.DungeonsTransformerContainer;
 import j0sh.javadungeons.content.*;
-import j0sh.javadungeons.gui.UniversalConverterScreen;
+import j0sh.javadungeons.gui.DungeonsTransformerScreen;
 import j0sh.javadungeons.particles.GreenFlameParticle;
 
 public class JavaDungeonsClient implements ClientModInitializer {
@@ -182,10 +182,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
         );
 
         // register containers to screens
-        ScreenProviderRegistry.INSTANCE.<UniversalConverterContainer>registerFactory(UniversalConverter.ID, (container) -> new UniversalConverterScreen(
+        ScreenProviderRegistry.INSTANCE.<DungeonsTransformerContainer>registerFactory(DungeonsTransformer.ID, (container) -> new DungeonsTransformerScreen(
             container, 
             MinecraftClient.getInstance().player.inventory, 
-            UniversalConverter.CONTAINER_NAME
+            DungeonsTransformer.CONTAINER_NAME
         ));
     }    
 

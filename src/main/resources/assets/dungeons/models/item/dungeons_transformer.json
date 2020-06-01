@@ -1,5 +1,5 @@
 {
-    "parent": "dungeons:block/universal_converter",
+    "parent": "dungeons:block/dungeons_transformer",
     "gui_light": "side",
     "display": {
         "gui": {

@@ -4,7 +4,7 @@ import net.minecraft.container.*;
 import com.google.common.collect.Lists;
 
 import j0sh.javadungeons.content.GenericBlocks;
-import j0sh.javadungeons.recipe.UniversalConverterRecipe;
+import j0sh.javadungeons.recipe.DungeonsTransformerRecipe;
 
 import java.util.List;
 import net.fabricmc.api.EnvType;
@@ -21,11 +21,11 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
-public class UniversalConverterContainer extends Container {
+public class DungeonsTransformerContainer extends Container {
    private final BlockContext context;
    private final Property selectedRecipe;
    private final World world;
-   private List<UniversalConverterRecipe> availableRecipes;
+   private List<DungeonsTransformerRecipe> availableRecipes;
    private ItemStack inputStack;
    private long lastTakeTime;
    final Slot inputSlot;
@@ -34,11 +34,11 @@ public class UniversalConverterContainer extends Container {
    public final Inventory inventory;
    private final CraftingResultInventory craftingResultInventory;
 
-   public UniversalConverterContainer(int syncId, PlayerInventory playerInventory) {
+   public DungeonsTransformerContainer(int syncId, PlayerInventory playerInventory) {
       this(syncId, playerInventory, BlockContext.EMPTY);
    }
 
-   public UniversalConverterContainer(int syncId, PlayerInventory playerInventory, final BlockContext blockContext) {
+   public DungeonsTransformerContainer(int syncId, PlayerInventory playerInventory, final BlockContext blockContext) {
       super(null, syncId);
       this.selectedRecipe = Property.create();
       this.availableRecipes = Lists.newArrayList();
@@ -48,8 +48,8 @@ public class UniversalConverterContainer extends Container {
       this.inventory = new BasicInventory(1) {
          public void markDirty() {
             super.markDirty();
-            UniversalConverterContainer.this.onContentChanged(this);
-            UniversalConverterContainer.this.contentsChangedListener.run();
+            DungeonsTransformerContainer.this.onContentChanged(this);
+            DungeonsTransformerContainer.this.contentsChangedListener.run();
          }
       };
       this.craftingResultInventory = new CraftingResultInventory();
@@ -62,17 +62,17 @@ public class UniversalConverterContainer extends Container {
          }
 
          public ItemStack onTakeItem(PlayerEntity player, ItemStack stack) {
-            ItemStack itemStack = UniversalConverterContainer.this.inputSlot.takeStack(1);
+            ItemStack itemStack = DungeonsTransformerContainer.this.inputSlot.takeStack(1);
             if (!itemStack.isEmpty()) {
-               UniversalConverterContainer.this.populateResult();
+               DungeonsTransformerContainer.this.populateResult();
             }
 
             stack.getItem().onCraft(stack, player.world, player);
             blockContext.run((world, blockPos) -> {
                long l = world.getTime();
-               if (UniversalConverterContainer.this.lastTakeTime != l) {
+               if (DungeonsTransformerContainer.this.lastTakeTime != l) {
                   world.playSound((PlayerEntity)null, blockPos, SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                  UniversalConverterContainer.this.lastTakeTime = l;
+                  DungeonsTransformerContainer.this.lastTakeTime = l;
                }
 
             });
@@ -100,7 +100,7 @@ public class UniversalConverterContainer extends Container {
    }
 
    @Environment(EnvType.CLIENT)
-   public List<UniversalConverterRecipe> getAvailableRecipes() {
+   public List<DungeonsTransformerRecipe> getAvailableRecipes() {
       return this.availableRecipes;
    }
 
@@ -115,7 +115,7 @@ public class UniversalConverterContainer extends Container {
    }
 
    public boolean canUse(PlayerEntity player) {
-      return canUse(this.context, player, GenericBlocks.UNIVERSAL_CONVERTER);
+      return canUse(this.context, player, GenericBlocks.DUNGEONS_TRANSFORMER);
    }
 
    public boolean onButtonClick(PlayerEntity player, int id) {
@@ -141,14 +141,14 @@ public class UniversalConverterContainer extends Container {
       this.selectedRecipe.set(-1);
       this.outputSlot.setStack(ItemStack.EMPTY);
       if (!itemStack.isEmpty()) {
-         this.availableRecipes = this.world.getRecipeManager().getAllMatches(UniversalConverterRecipe.TYPE, inventory, this.world);
+         this.availableRecipes = this.world.getRecipeManager().getAllMatches(DungeonsTransformerRecipe.TYPE, inventory, this.world);
       }
 
    }
 
    private void populateResult() {
       if (!this.availableRecipes.isEmpty()) {
-         UniversalConverterRecipe uconvRecipe = (UniversalConverterRecipe)this.availableRecipes.get(this.selectedRecipe.get());
+         DungeonsTransformerRecipe uconvRecipe = (DungeonsTransformerRecipe)this.availableRecipes.get(this.selectedRecipe.get());
          this.outputSlot.setStack(uconvRecipe.craft(this.inventory));
       } else {
          this.outputSlot.setStack(ItemStack.EMPTY);
@@ -158,7 +158,7 @@ public class UniversalConverterContainer extends Container {
    }
 
    public ContainerType<?> getType() {
-      return ContainerType.STONECUTTER;
+      return null;
    }
 
    @Environment(EnvType.CLIENT)
@@ -188,7 +188,7 @@ public class UniversalConverterContainer extends Container {
             if (!this.insertItem(itemStack2, 2, 38, false)) {
                return ItemStack.EMPTY;
             }
-         } else if (this.world.getRecipeManager().getFirstMatch(UniversalConverterRecipe.TYPE, new BasicInventory(new ItemStack[]{itemStack2}), this.world).isPresent()) {
+         } else if (this.world.getRecipeManager().getFirstMatch(DungeonsTransformerRecipe.TYPE, new BasicInventory(new ItemStack[]{itemStack2}), this.world).isPresent()) {
             if (!this.insertItem(itemStack2, 0, 1, false)) {
                return ItemStack.EMPTY;
             }

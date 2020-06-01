@@ -9,7 +9,7 @@
     "itemGroup.dungeons.fiery_forge": "Fiery Forge Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
 
-    "container.dungeons.universal_converter": "Universal Converter",
+    "container.dungeons.dungeons_transformer": "Dungeons Transformer",
 
     "block.dungeons.floor_tile": "Floor Tile",
     "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
@@ -106,7 +106,7 @@
     "block.dungeons.chains": "Chains",
     "block.dungeons.small_sack": "Small Sack",
     "block.dungeons.green_candle": "Green Candle",
-    "block.dungeons.universal_converter": "Universal Converter",
+    "block.dungeons.dungeons_transformer": "Dungeons Transformer",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
     "item.dungeons.soggy_swamp_water_bucket": "Soggy Swamp Water Bucket",
@@ -308,6 +308,7 @@
     "biome.dungeons.dungeons_plains": "Dungeons Plains",
     "biome.dungeons.cacti_canyon": "Cacti Canyon",
     "biome.dungeons.cacti_canyon_desert": "Cacti Canyon Desert",
+    "biome.dungeons.soggy_swamp": "Soggy Swamp",
 
     "item.dungeons.axe": "Axe",
     "item.dungeons.highland_axe": "Highland Axe",
