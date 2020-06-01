@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:bookshelf"
+    },
+    "result": "dungeons:empty_bookshelf",
+    "count": 1
+  }

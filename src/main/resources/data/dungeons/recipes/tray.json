@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "WDW"
+    ],
+    "key": {
+      "W": {
+        "tag": "minecraft:planks"
+      },
+      "D": {
+        "item": "dungeons:dirt"
+      }
+    },
+    "result": {
+      "item": "dungeons:tray",
+      "count": 1
+    }
+  }

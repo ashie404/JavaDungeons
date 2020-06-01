@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:pink_dye"
+      },
+      {
+        "item": "dungeons:glass"
+      }
+    ],
+    "result": {
+      "item": "dungeons:pink_glass",
+      "count": 1
+    }
+  }

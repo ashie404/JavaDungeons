@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " #",
+      "#I"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_block"
+      },
+      "#": {
+        "item": "minecraft:iron_bars"
+      }
+    },
+    "result": {
+      "item": "dungeons:teapot",
+      "count": 1
+    }
+  }

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:lime_dye"
+      },
+      {
+        "item": "dungeons:glass"
+      }
+    ],
+    "result": {
+      "item": "dungeons:lime_glass",
+      "count": 1
+    }
+  }

@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "result": "dungeons:lighthouse_lamp",
+    "count": 1
+  }
