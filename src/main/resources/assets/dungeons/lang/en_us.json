@@ -9,6 +9,8 @@
     "itemGroup.dungeons.fiery_forge": "Fiery Forge Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
 
+    "container.dungeons.universal_converter": "Universal Converter",
+
     "block.dungeons.floor_tile": "Floor Tile",
     "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
     "block.dungeons.crate": "Crate",
@@ -104,6 +106,7 @@
     "block.dungeons.chains": "Chains",
     "block.dungeons.small_sack": "Small Sack",
     "block.dungeons.green_candle": "Green Candle",
+    "block.dungeons.universal_converter": "Universal Converter",
 
     "item.dungeons.dungeons_water_bucket": "Dungeons Water Bucket",
     "item.dungeons.soggy_swamp_water_bucket": "Soggy Swamp Water Bucket",

@@ -36,6 +36,7 @@ public class JavaDungeons implements ModInitializer {
 		Fluids.init();
 		Particles.init();
 		Properties.init();
+		Recipes.init();
 		Paintings.init();
 
 		// blocks

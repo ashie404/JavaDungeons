@@ -126,6 +126,9 @@ public class GenericBlocks {
     // chains
     public static DungeonsChains CHAINS;
 
+    // custom crafting utility (not in dungeons)
+    public static UniversalConverter UNIVERSAL_CONVERTER;
+
     public static void init() {
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "floor_tile");
@@ -244,5 +247,8 @@ public class GenericBlocks {
 
         // chains
         CHAINS = new DungeonsChains(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
+
+        // custom crafting utility (not in dungeons)
+        UNIVERSAL_CONVERTER = new UniversalConverter();
     }
 }

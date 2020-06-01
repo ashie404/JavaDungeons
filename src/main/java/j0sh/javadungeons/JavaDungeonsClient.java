@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
@@ -28,7 +29,10 @@ import net.minecraft.resource.ResourceType;
 
 import java.util.function.Function;
 
+import j0sh.javadungeons.blocks.UniversalConverter;
+import j0sh.javadungeons.container.UniversalConverterContainer;
 import j0sh.javadungeons.content.*;
+import j0sh.javadungeons.gui.UniversalConverterScreen;
 import j0sh.javadungeons.particles.GreenFlameParticle;
 
 public class JavaDungeonsClient implements ClientModInitializer {
@@ -176,6 +180,13 @@ public class JavaDungeonsClient implements ClientModInitializer {
             new Identifier(JavaDungeons.MOD_ID, "soggy_swamp/soggy_swamp_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
         );
+
+        // register containers to screens
+        ScreenProviderRegistry.INSTANCE.<UniversalConverterContainer>registerFactory(UniversalConverter.ID, (container) -> new UniversalConverterScreen(
+            container, 
+            MinecraftClient.getInstance().player.inventory, 
+            UniversalConverter.CONTAINER_NAME
+        ));
     }    
 
     public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color)

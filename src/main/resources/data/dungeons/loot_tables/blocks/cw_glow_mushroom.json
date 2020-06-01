@@ -12,7 +12,7 @@
                 "conditions": [
                   {
                     "condition": "minecraft:block_state_property",
-                    "block": "dungeons:glow_mushroom",
+                    "block": "dungeons:cw_glow_mushroom",
                     "properties": {
                       "pickles": "2"
                     }
@@ -25,7 +25,7 @@
                 "conditions": [
                   {
                     "condition": "minecraft:block_state_property",
-                    "block": "dungeons:glow_mushroom",
+                    "block": "dungeons:cw_glow_mushroom",
                     "properties": {
                       "pickles": "3"
                     }
@@ -38,7 +38,7 @@
                 "conditions": [
                   {
                     "condition": "minecraft:block_state_property",
-                    "block": "dungeons:glow_mushroom",
+                    "block": "dungeons:cw_glow_mushroom",
                     "properties": {
                       "pickles": "4"
                     }
@@ -50,7 +50,7 @@
                 "function": "minecraft:explosion_decay"
               }
             ],
-            "name": "dungeons:glow_mushroom"
+            "name": "dungeons:cw_glow_mushroom"
           }
         ]
       }
