@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-      "item": "minecraft:hay_bale"
+      "item": "minecraft:hay_block"
     },
     "result": "dungeons:pm_dried_haybale",
     "experience": 0.0,
