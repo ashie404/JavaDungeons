@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "dungeons:pm_charred_log"
+        "item": "dungeons:ss_swamp_log"
       }
     ],
     "result": {
-      "item": "dungeons:pm_charred_planks",
+      "item": "dungeons:ss_swamp_planks",
       "count": 4
     }
   }
