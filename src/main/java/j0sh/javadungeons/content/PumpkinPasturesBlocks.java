@@ -45,8 +45,6 @@ public class PumpkinPasturesBlocks {
     public static DungeonsPillar PM_CHARRED_LOG;
     public static DungeonsPillar PM_CHARRED_WOOD;
     public static DungeonsSlabStairBlock PM_CHARRED_PLANKS;
-    public static DungeonsStairs PM_CHARRED_STAIRS;
-    public static DungeonsSlab PM_CHARRED_SLAB;
 
     public static void init() {
         // foliage
