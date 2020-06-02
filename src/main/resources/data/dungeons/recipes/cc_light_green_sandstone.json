@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:lime_terracotta"
+    },
+    "result": "dungeons:cc_light_green_sandstone",
+    "count": 1
+  }

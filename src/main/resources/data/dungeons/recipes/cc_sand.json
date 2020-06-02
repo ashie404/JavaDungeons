@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:sand"
+    },
+    "result": "dungeons:cc_sand",
+    "count": 1
+  }
