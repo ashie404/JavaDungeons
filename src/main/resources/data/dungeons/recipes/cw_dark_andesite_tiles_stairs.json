@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "dungeons:cw_dark_andesite_tiles"
+    },
+    "result": "dungeons:cw_dark_andesite_tiles_stairs",
+    "count": 1
+  }

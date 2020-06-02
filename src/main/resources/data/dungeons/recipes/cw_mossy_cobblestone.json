@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "result": "dungeons:cw_mossy_cobblestone",
+    "count": 1
+  }

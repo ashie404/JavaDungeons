@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:cw_dirt"
+      },
+      {
+        "item": "minecraft:cobweb"
+      }
+    ],
+    "result": {
+      "item": "dungeons:cw_cobwebbed_dirt",
+      "count": 1
+    }
+  }
