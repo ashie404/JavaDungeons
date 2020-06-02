@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "dungeons:rm_dark_quartz"
+    },
+    "result": "dungeons:rm_chiseled_dark_quartz_1",
+    "count": 1
+  }
