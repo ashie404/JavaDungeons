@@ -70,7 +70,7 @@ public class DungeonsTransformerContainer extends Container {
             blockContext.run((world, blockPos) -> {
                long l = world.getTime();
                if (DungeonsTransformerContainer.this.lastTakeTime != l) {
-                  world.playSound((PlayerEntity)null, blockPos, SoundEvents.BLOCK_PORTAL_TRAVEL, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                  world.playSound((PlayerEntity)null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0F, 1.0F);
                   DungeonsTransformerContainer.this.lastTakeTime = l;
                }
 
