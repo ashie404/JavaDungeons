@@ -1,0 +1,1 @@
+{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "dungeons:dt_sandy_andesite_slab"}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

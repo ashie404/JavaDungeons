@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "dungeons:unlit_brazier"
+      }
+    ],
+    "result": {
+      "item": "dungeons:lit_brazier",
+      "count": 1
+    }
+  }

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "dungeons:dt_sandy_andesite"
+    },
+    "result": "dungeons:dt_sandy_andesite_pillar",
+    "count": 1
+  }

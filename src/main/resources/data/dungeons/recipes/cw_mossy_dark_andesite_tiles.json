@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:cw_dark_andesite_tiles"
+      },
+      {
+        "item": "minecraft:vine"
+      }
+    ],
+    "result": {
+      "item": "dungeons:cw_mossy_dark_andesite_tiles",
+      "count": 1
+    }
+  }

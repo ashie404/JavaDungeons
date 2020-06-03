@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/slab_top",
-    "textures": {
-        "top":    "dungeons:block/creeper_woods/dirty_stone_tiles_1",
-        "side":   "dungeons:block/creeper_woods/dirty_stone_tiles_1",
-        "bottom": "dungeons:block/creeper_woods/dirty_stone_tiles_1"
-    }
-}

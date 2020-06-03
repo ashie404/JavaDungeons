@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:cw_dirt"
+      },
+      {
+        "item": "minecraft:snowball"
+      }
+    ],
+    "result": {
+      "item": "dungeons:rm_snowy_dirt",
+      "count": 1
+    }
+  }

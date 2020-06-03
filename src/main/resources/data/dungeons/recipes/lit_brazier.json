@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "|C|",
+      "###"
+    ],
+    "key": {
+      "|": {
+        "item": "minecraft:iron_bars"
+      },
+      "#": {
+          "item": "minecraft:iron_block"
+      },
+      "C": {
+          "item": "minecraft:coal"
+      }
+    },
+    "result": {
+      "item": "dungeons:lit_brazier",
+      "count": 1
+    }
+  }

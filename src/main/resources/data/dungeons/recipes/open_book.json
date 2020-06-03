@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:book"
+    },
+    "result": "dungeons:open_book",
+    "count": 1
+  }

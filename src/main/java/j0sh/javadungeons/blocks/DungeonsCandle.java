@@ -3,9 +3,11 @@ package j0sh.javadungeons.blocks;
 import java.util.Random;
 
 import j0sh.javadungeons.JavaDungeons;
+import j0sh.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -23,8 +25,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
 public class DungeonsCandle extends Block {
 
@@ -34,13 +36,16 @@ public class DungeonsCandle extends Block {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
 
+    public boolean isGreen = false;
+
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
 		return SHAPE;
 	}
 
-    public DungeonsCandle(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque().lightLevel(15));
+    public DungeonsCandle(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean isGreen) {
+        super(FabricBlockSettings.of(new FabricMaterialBuilder(material.getColor()).destroyedByPiston().build()).strength(hardness, resistance).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(15));
+        this.isGreen = isGreen;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
@@ -61,6 +66,6 @@ public class DungeonsCandle extends Block {
         double e = (double)pos.getY() + 1.0D;
         double f = (double)pos.getZ() + 0.5D;
         world.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
-        world.addParticle(ParticleTypes.FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
+        world.addParticle(isGreen ? Particles.GREEN_FLAME : ParticleTypes.FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
     }
 }

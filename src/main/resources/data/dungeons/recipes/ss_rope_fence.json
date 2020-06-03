@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#~#",
+      "#~#"
+    ],
+    "key": {
+      "~": {
+        "item": "minecraft:string"
+      },
+      "#": {
+        "item": "dungeons:ss_swamp_planks"
+      }
+    },
+    "result": {
+      "item": "dungeons:ss_rope_fence",
+      "count": 3
+    }
+  }

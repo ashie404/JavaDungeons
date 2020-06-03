@@ -6,14 +6,10 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.CountDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placer.DoublePlantPlacer;
-import net.minecraft.world.gen.placer.SimpleBlockPlacer;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.MineshaftFeature;
+import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
+import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
@@ -31,13 +27,13 @@ public final class CactiCanyonDesertBiome extends Biome {
               ).parent(null)
       );
 
-      this.addStructureFeature(Feature.VILLAGE.configure(new StructurePoolFeatureConfig("village/desert/town_centers", 6)));
-      this.addStructureFeature(Feature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));
-      this.addStructureFeature(Feature.DESERT_PYRAMID.configure(FeatureConfig.DEFAULT));
-      this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
-      this.addStructureFeature(Feature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
+      this.addStructureFeature(DefaultBiomeFeatures.field_24706);
+      this.addStructureFeature(DefaultBiomeFeatures.field_24687);
+      this.addStructureFeature(DefaultBiomeFeatures.field_24692);
+      this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
+      this.addStructureFeature(DefaultBiomeFeatures.field_24697);
       DefaultBiomeFeatures.addLandCarvers(this);
-      DefaultBiomeFeatures.addDefaultStructures(this);
+      DefaultBiomeFeatures.method_28440(this);
       DefaultBiomeFeatures.addDesertLakes(this);
       DefaultBiomeFeatures.addDungeons(this);
       DefaultBiomeFeatures.addMineables(this);

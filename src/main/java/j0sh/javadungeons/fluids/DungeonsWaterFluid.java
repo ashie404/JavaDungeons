@@ -1,12 +1,13 @@
 package j0sh.javadungeons.fluids;
 
-import j0sh.javadungeons.content.Fluids;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+
+import j0sh.javadungeons.content.Fluids;
 
 public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
    @Override
@@ -28,7 +29,8 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
     }
 
     @Override
-	protected BlockState toBlockState(FluidState fluidState) {
+	protected BlockState toBlockState(FluidState fluidState)
+	{
 		// method_15741 converts the LEVEL_1_8 of the fluid state to the LEVEL_15 the fluid block uses
 		return Fluids.DUNGEONS_WATER.getDefaultState().with(Properties.LEVEL_15, method_15741(fluidState));
 	}
@@ -41,7 +43,7 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
         
         @Override
         public int getLevel(FluidState state) {
-           return state.get(LEVEL);
+           return (Integer)state.get(LEVEL);
         }
         
         @Override

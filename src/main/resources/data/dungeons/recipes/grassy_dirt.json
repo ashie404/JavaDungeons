@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:dirt"
+      },
+      {
+        "item": "minecraft:grass"
+      }
+    ],
+    "result": {
+      "item": "dungeons:grassy_dirt",
+      "count": 1
+    }
+  }

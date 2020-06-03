@@ -24,8 +24,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
 public class DungeonsBrazier extends Block {
 
@@ -42,8 +42,8 @@ public class DungeonsBrazier extends Block {
 		return SHAPE;
 	}
 
-    public DungeonsBrazier(Material material, BlockSoundGroup sounds, ItemGroup group, String type, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque().lightLevel(type != "unlit" ? 15 : 0));
+    public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, String id) {
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(type != "unlit" ? 15 : 0));
         this.type = type;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

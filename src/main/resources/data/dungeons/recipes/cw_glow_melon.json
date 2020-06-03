@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GGG",
+      "GPG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glowstone_dust"
+      },
+      "P": {
+        "item": "minecraft:pumpkin"
+      }
+    },
+    "result": {
+      "item": "dungeons:cw_glow_melon",
+      "count": 1
+    }
+  }

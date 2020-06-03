@@ -1,7 +1,0 @@
-{
-    "parent": "dungeons:block/base/slab_top",
-    "textures": {
-        "2": "dungeons:block/bridge_planks",
-        "1": "dungeons:block/bridge_planks_side"
-    }
-}

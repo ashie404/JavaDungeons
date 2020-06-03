@@ -6,8 +6,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.block.Waterloggable;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItem;
@@ -34,12 +34,14 @@ public class DungeonsSack extends Block implements Waterloggable {
 
     public BlockItem blockItem;
     public static final BooleanProperty WATERLOGGED;
-    
+    public boolean small = false;
+
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    protected static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 11.0D, 14.0D);
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
-		return SHAPE;
+		return small ? SMALL_SHAPE : SHAPE;
     }
     
     @Override
@@ -68,8 +70,9 @@ public class DungeonsSack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsSack(Material material, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).sounds(sounds).nonOpaque());
+    public DungeonsSack(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
+        this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));

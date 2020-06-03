@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:redstone_block"
+    },
+    "result": "dungeons:rm_redstone_crystals",
+    "count": 3
+  }

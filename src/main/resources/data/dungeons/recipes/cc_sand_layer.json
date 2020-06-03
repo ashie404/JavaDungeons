@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "dungeons:cc_sand"
+    },
+    "result": "dungeons:cc_sand_layer",
+    "count": 8
+  }

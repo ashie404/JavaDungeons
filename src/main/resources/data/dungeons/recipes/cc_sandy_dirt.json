@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "dungeons:cc_dirt"
+      },
+      {
+        "item": "dungeons:cc_sand"
+      }
+    ],
+    "result": {
+      "item": "dungeons:cc_sandy_dirt",
+      "count": 1
+    }
+  }

@@ -27,5 +27,4 @@ public class Paintings {
     private static void registerPaintingMotive(String name, int width, int height) {
         Registry.register(Registry.PAINTING_MOTIVE, new Identifier(JavaDungeons.MOD_ID, name), new PaintingMotive(width, height));
     }
-
 }

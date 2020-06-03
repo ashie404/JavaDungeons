@@ -16,5 +16,4 @@ public class Tags {
         PLANTABLE = TagRegistry.block(new Identifier(JavaDungeons.MOD_ID, "plantable"));
         DESERT_PLANTABLE = TagRegistry.block(new Identifier(JavaDungeons.MOD_ID, "desert_plantable"));
     }
-
 }

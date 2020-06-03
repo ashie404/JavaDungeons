@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "SES"
+    ],
+    "key": {
+      "E": {
+        "item": "dungeons:cc_dirt"
+      },
+      "S": {
+        "item": "dungeons:cc_sand"
+      }
+    },
+    "result": {
+      "item": "dungeons:cc_dense_sandy_dirt",
+      "count": 1
+    }
+  }

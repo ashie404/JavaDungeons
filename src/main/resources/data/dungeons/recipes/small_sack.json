@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "~",
+      "#"
+    ],
+    "key": {
+      "~": {
+        "item": "minecraft:string"
+      },
+      "#": {
+        "tag": "minecraft:wool"
+      }
+    },
+    "result": {
+      "item": "dungeons:small_sack",
+      "count": 1
+    }
+  }

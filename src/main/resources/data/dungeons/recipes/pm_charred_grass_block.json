@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "minecraft:grass_block"
+    },
+    "result": "dungeons:pm_charred_grass_block",
+    "experience": 0.0,
+    "cookingtime": 100
+  }

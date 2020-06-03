@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "C",
+      "H",
+      "G"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:coal"
+      },
+      "H": {
+        "item": "minecraft:honeycomb"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "dungeons:candle",
+      "count": 1
+    }
+  }

@@ -2,12 +2,9 @@
     "required": true,
     "package": "j0sh.javadungeons.mixin",
     "compatibilityLevel": "JAVA_8",
-    "plugin": "j0sh.javadungeons.mixin.ToweletteCompatMixinPlugin",
     "mixins": [
       "MixinPlantBlock",
-      "MixinFeature",
-      "CompatMixinFluidloggable",
-      "CompatMixinWaterPlant"
+      "MixinFeature"
     ],
     "injectors": {
       "defaultRequire": 1

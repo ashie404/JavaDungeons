@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+          "item": "minecraft:green_dye"
+      },
+      {
+        "item": "dungeons:unlit_brazier"
+      }
+    ],
+    "result": {
+      "item": "dungeons:green_lit_brazier",
+      "count": 1
+    }
+  }

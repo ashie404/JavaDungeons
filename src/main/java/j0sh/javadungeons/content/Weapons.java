@@ -15,7 +15,6 @@ public class Weapons {
 
     // Pickaxes
     public static DungeonsPickaxe STEEL_PICKAXE;
-    public static DungeonsPickaxe GW_DIAMOND_PICKAXE;
 
     // Swords
     public static DungeonsSword CLAYMORE;
@@ -49,13 +48,13 @@ public class Weapons {
     public static DungeonsSickle SOUL_SCYTHE; 
 
     // Spears
-    public static DungeonsSpear GLAIVE;
-    public static DungeonsSpear GRAVE_BANE;
-    public static DungeonsSpear VENOM_GLAIVE;
+    public static DungeonsSword GLAIVE;
+    public static DungeonsSword GRAVE_BANE; 
+    public static DungeonsSword VENOM_GLAIVE; 
 
-    public static DungeonsSpear SPEAR;
-    public static DungeonsSpear FORTUNE_SPEAR;
-    public static DungeonsSpear WHISPERING_SPEAR;
+    public static DungeonsSword SPEAR;
+    public static DungeonsSword FORTUNE_SPEAR;
+    public static DungeonsSword WHISPERING_SPEAR;
 
     public static void init() {
         // Axes
@@ -68,7 +67,6 @@ public class Weapons {
 
         // Pickaxes
         STEEL_PICKAXE = new DungeonsPickaxe(ToolMaterials.IRON, 2, -2.5F, "steel_pickaxe");
-        GW_DIAMOND_PICKAXE = new DungeonsPickaxe(ToolMaterials.DIAMOND, 2, -2.5F, "gw_diamond_pickaxe");
 
         // Swords
         CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
@@ -102,13 +100,13 @@ public class Weapons {
         SOUL_SCYTHE = new DungeonsSickle(ToolMaterials.DIAMOND, 5, -2.25F, "soul_scythe");
 
         // Spears
-        GLAIVE = new DungeonsSpear("glaive");
-        GRAVE_BANE = new DungeonsSpear("grave_bane");
-        VENOM_GLAIVE = new DungeonsSpear("venom_glaive");
+        GLAIVE = new DungeonsSword(ToolMaterials.IRON, 3, -2.7F, "glaive");
+        GRAVE_BANE = new DungeonsSword(ToolMaterials.GOLD, 4, -2.5F, "grave_bane");
+        VENOM_GLAIVE = new DungeonsSword(ToolMaterials.IRON, 4, -2.7F, "venom_glaive");
 
-        SPEAR = new DungeonsSpear( "spear");
-        FORTUNE_SPEAR = new DungeonsSpear("fortune_spear");
-        WHISPERING_SPEAR = new DungeonsSpear("whispering_spear");
+        SPEAR = new DungeonsSword(ToolMaterials.IRON, 3, -2.5F, "spear");
+        FORTUNE_SPEAR = new DungeonsSword(ToolMaterials.GOLD, 4, -2.35F, "fortune_spear");
+        WHISPERING_SPEAR = new DungeonsSword(ToolMaterials.IRON, 5, -2.5F, "whispering_spear");
     }
 
 }

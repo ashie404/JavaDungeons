@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:gray_terracotta"
+    },
+    "result": "dungeons:cc_gray_sandstone",
+    "count": 1
+  }

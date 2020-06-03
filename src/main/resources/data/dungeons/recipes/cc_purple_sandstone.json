@@ -1,0 +1,8 @@
+{
+    "type": "dungeons:dungeons_transformer",
+    "ingredient": {
+      "item": "minecraft:purple_terracotta"
+    },
+    "result": "dungeons:cc_purple_sandstone",
+    "count": 1
+  }

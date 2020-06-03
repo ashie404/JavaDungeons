@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/inner_stairs",
+    "textures": {
+        "top":    "dungeons:block/fiery_forge/dark_stone_bricks",
+        "side":   "dungeons:block/fiery_forge/dark_stone_bricks",
+        "bottom": "dungeons:block/fiery_forge/dark_stone_bricks"
+    }
+}

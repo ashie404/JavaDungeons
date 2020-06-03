@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "top":    "dungeons:block/fiery_forge/dark_cobblestone",
+        "side":   "dungeons:block/fiery_forge/dark_cobblestone",
+        "bottom": "dungeons:block/fiery_forge/dark_cobblestone"
+    }
+}

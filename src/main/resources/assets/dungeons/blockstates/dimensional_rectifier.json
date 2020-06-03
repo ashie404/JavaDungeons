@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "dungeons:block/dimensional_rectifier" },
-        "facing=south": { "model": "dungeons:block/dimensional_rectifier", "y": 180 },
-        "facing=west": { "model": "dungeons:block/dimensional_rectifier", "y": 270 },
-        "facing=east": { "model": "dungeons:block/dimensional_rectifier", "y": 90 }
-    }
-}
