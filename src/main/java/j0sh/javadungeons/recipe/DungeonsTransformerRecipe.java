@@ -1,6 +1,7 @@
 package j0sh.javadungeons.recipe;
 
 import j0sh.javadungeons.JavaDungeons;
+import j0sh.javadungeons.content.Recipes;
 
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.Inventory;
@@ -17,7 +18,6 @@ public class DungeonsTransformerRecipe implements Recipe<Inventory> {
     
     public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dungeons_transformer");
     public static final Type TYPE = new Type();
-    public static final Serializer SERIALIZER = new Serializer();
 
     private Identifier id;
     private Ingredient input;
@@ -56,7 +56,7 @@ public class DungeonsTransformerRecipe implements Recipe<Inventory> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return SERIALIZER;
+        return Recipes.DUNGEONS_TRANSFORMER_SERIALIZER;
     }
 
     @Override
