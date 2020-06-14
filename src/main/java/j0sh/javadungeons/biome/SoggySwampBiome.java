@@ -68,7 +68,7 @@ public final class SoggySwampBiome extends Biome {
                         new BlobFoliagePlacer(3, 0, 0, 0, 3),
                         new StraightTrunkPlacer(5, 3, 0),
                         new TwoLayersFeatureSize(1, 0, 1)
-                )).baseHeight(5).method_27376(ImmutableList.of(new LeaveVineTreeDecorator())).build())
+                )).decorators(ImmutableList.of(new LeaveVineTreeDecorator())).build())
         );
 
         DefaultBiomeFeatures.addDefaultMushrooms(this);
