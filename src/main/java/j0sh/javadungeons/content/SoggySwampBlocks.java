@@ -29,9 +29,9 @@ public class SoggySwampBlocks {
 
     public static void init() {
         // ground related
-        SS_GRASS_BLOCK = new DungeonsBlock(Material.ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
-        SS_DIRT_PATH = new DungeonsPath(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
-        SS_DIRT = new DungeonsPathable(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
+        SS_GRASS_BLOCK = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
+        SS_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
+        SS_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
 
         // stone related
         SS_MOSSY_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone");

@@ -150,16 +150,16 @@ public class GenericBlocks {
         CORN_FOOD_BOX = new DungeonsFoodBox(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "corn_food_box");
 
         // ground related
-        DIRT_PATH = new DungeonsPath(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
-        DIRT = new DungeonsPathable(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
-        DIRT_SLAB = new DungeonsSlab(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
-        ROCKY_DIRT_PATH = new DungeonsPath(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
-        ROCKY_DIRT = new DungeonsPathable(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
-        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
-        GRASSY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
-        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
-        GRASS_BLOCK = new DungeonsPathable(Material.ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
-        DARK_ROCKY_DIRT = new DungeonsBlock(Material.EARTH, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
+        DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_path");
+        DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, DIRT_PATH, JavaDungeons.GENERIC, "dirt");
+        DIRT_SLAB = new DungeonsSlab(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dirt_slab");
+        ROCKY_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_dirt_path");
+        ROCKY_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH, JavaDungeons.GENERIC, "rocky_dirt");
+        DENSE_GRASSY_DIRT = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "dense_grassy_dirt");
+        GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "grassy_dirt");
+        ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "rocky_grassy_dirt");
+        GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.GENERIC, "grass_block");
+        DARK_ROCKY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.GENERIC, "dark_rocky_dirt");
 
         // wood related
         FLOORBOARDS = new DungeonsBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.GENERIC, "floorboards");
@@ -185,7 +185,7 @@ public class GenericBlocks {
         FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");
         YELLOW_TULIP = new DungeonsPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "yellow_tulip");
-        WATER_PLANT = new DungeonsWaterPlant(Material.SEAGRASS, 0.0F, 0.0F, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
+        WATER_PLANT = new DungeonsWaterPlant(Material.UNDERWATER_PLANT, 0.0F, 0.0F, BlockSoundGroup.WET_GRASS, JavaDungeons.GENERIC, "water_plant");
         HANGING_ROSES = new DungeonsHangingPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "hanging_roses");
 
         // sanded andesite
