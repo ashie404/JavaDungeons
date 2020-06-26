@@ -7,6 +7,7 @@
     "itemGroup.dungeons.cacti_canyon": "Cacti Canyon Blocks",
     "itemGroup.dungeons.redstone_mines": "Redstone Mines Blocks",
     "itemGroup.dungeons.fiery_forge": "Fiery Forge Blocks",
+    "itemGroup.dungeons.creeping_winter": "Creeping Winter",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
 
     "container.dungeons.dungeons_transformer": "Dungeons Transformer",
@@ -300,6 +301,8 @@
     "block.dungeons.rm_dark_quartz_pillar": "Dark Quartz Pillar",
     "block.dungeons.rm_chiseled_dark_quartz": "Chiseled Dark Quartz",
     "block.dungeons.rm_chiseled_dark_quartz_1": "Chiseled Dark Quartz",
+
+    "block.dungeons.ci_ice_bricks": "Ice Bricks",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
 

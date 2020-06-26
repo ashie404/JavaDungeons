@@ -26,6 +26,7 @@ public class JavaDungeons implements ModInitializer {
 	public static final ItemGroup CACTI_CANYON = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "cacti_canyon"), () -> new ItemStack(CactiCanyonBlocks.CC_CACTUS));
 	public static final ItemGroup REDSTONE_MINES = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "redstone_mines"), () -> new ItemStack(RedstoneMinesBlocks.RM_REDSTONE_CRYSTALS));
 	public static final ItemGroup FIERY_FORGE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "fiery_forge"), () -> new ItemStack(FieryForgeBlocks.FF_EMBLEMED_DARK_STONE));
+	public static final ItemGroup CREEPING_WINTER = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "creeping_winter"), () -> new ItemStack(CreepingWinterBlocks.CI_ICE_BRICKS));
 	public static final ItemGroup WEAPONS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "weapons"), () -> new ItemStack(Weapons.FIREBRAND));
 
 	@Override
@@ -49,6 +50,7 @@ public class JavaDungeons implements ModInitializer {
 		CactiCanyonBlocks.init();
 		RedstoneMinesBlocks.init();
 		FieryForgeBlocks.init();
+		CreepingWinterBlocks.init();
 
 		// items
 		Weapons.init();
