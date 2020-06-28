@@ -60,18 +60,18 @@ public class CactiCanyonBlocks {
         CC_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.CACTI_CANYON, "cc_grass_block");
 
         // dirt related
-        CC_DENSE_GRASSY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_grassy_dirt");
-        CC_GRASSY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_grassy_dirt");
-        CC_DIRT_PATH = new DungeonsPath(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_path");
-        CC_DIRT = new DungeonsPathable(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CC_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_dirt");
-        CC_DIRT_SLAB = new DungeonsSlab(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_slab");
-        CC_ROCKY_DIRT_PATH = new DungeonsPath(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt_path");
-        CC_ROCKY_DIRT = new DungeonsPathable(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CC_ROCKY_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt");
+        CC_DENSE_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_grassy_dirt");
+        CC_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_grassy_dirt");
+        CC_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_path");
+        CC_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CC_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_dirt");
+        CC_DIRT_SLAB = new DungeonsSlab(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dirt_slab");
+        CC_ROCKY_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt_path");
+        CC_ROCKY_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CC_ROCKY_DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_rocky_dirt");
 
         // sand related
         CC_SAND = new DungeonsFallingBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand");
-        CC_DENSE_SANDY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_sandy_dirt");
-        CC_SANDY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_sandy_dirt");
+        CC_DENSE_SANDY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_dense_sandy_dirt");
+        CC_SANDY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CACTI_CANYON, "cc_sandy_dirt");
         CC_SAND_LAYER = new DungeonsLayeringBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.SAND, JavaDungeons.CACTI_CANYON, "cc_sand_layer");
         
         // sandstone related

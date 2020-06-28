@@ -1,9 +1,7 @@
 package j0sh.javadungeons.content;
 
-import j0sh.javadungeons.JavaDungeons;
 import j0sh.javadungeons.blocks.DungeonsTransformer;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 

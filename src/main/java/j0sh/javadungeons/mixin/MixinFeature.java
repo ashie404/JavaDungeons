@@ -12,8 +12,8 @@ import j0sh.javadungeons.content.Tags;
 
 @Mixin(Feature.class)
 public class MixinFeature {
-	@Inject(method = "isDirt", at = @At("HEAD"), cancellable = true)
-	private static void hookIsDirt(Block block, CallbackInfoReturnable<Boolean> callback) {
+	@Inject(method = "isSoil", at = @At("HEAD"), cancellable = true)
+	private static void hookIsSoil(Block block, CallbackInfoReturnable<Boolean> callback) {
 		if (block.isIn(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}

@@ -55,7 +55,7 @@ public class PumpkinPasturesBiome extends Biome {
         this.addStructureFeature(StructureFeature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
 
         DefaultBiomeFeatures.addLandCarvers(this);
-        DefaultBiomeFeatures.method_28440(this);
+        DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
 
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
 		    Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
@@ -101,14 +101,14 @@ public class PumpkinPasturesBiome extends Biome {
                                     new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES.getDefaultState()),
                                     new BlobFoliagePlacer(2, 0, 0, 0, 3),
                                     new StraightTrunkPlacer(4, 2, 0),
-                                    new TwoLayersFeatureSize(1, 0, 1))).method_27374().build()
+                                    new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
                     ).withChance(0.2F),
                         Feature.TREE.configure(
                                 (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
                                         new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
                                         new BlobFoliagePlacer(2, 0, 0, 0, 3),
                                         new StraightTrunkPlacer(4, 2, 0),
-                                        new TwoLayersFeatureSize(1, 0, 1))).method_27374().build()
+                                        new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
                         ).withChance(0.2F)
                 ),
                     Feature.TREE.configure(
@@ -116,7 +116,7 @@ public class PumpkinPasturesBiome extends Biome {
                                     new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
                                     new LargeOakFoliagePlacer(2, 0, 4, 0, 4),
                                     new LargeOakTrunkPlacer(3, 11, 0),
-                                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).method_27374().build()
+                                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()
                     )
             )
         ).createDecoratedFeature(Decorator.COUNT_EXTRA_HEIGHTMAP.configure(new CountExtraChanceDecoratorConfig(2, 0.1F, 1))));

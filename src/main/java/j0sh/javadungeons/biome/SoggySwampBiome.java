@@ -47,11 +47,11 @@ public final class SoggySwampBiome extends Biome {
                 ).parent(null)
                 .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
         );
-        this.addStructureFeature(StructureFeature.field_24851.configure(FeatureConfig.DEFAULT));
+        this.addStructureFeature(StructureFeature.SWAMP_HUT.configure(FeatureConfig.DEFAULT));
         this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, Type.NORMAL)));
         this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(net.minecraft.world.gen.feature.RuinedPortalFeature.Type.SWAMP)));
         DefaultBiomeFeatures.addLandCarvers(this);
-        DefaultBiomeFeatures.method_28440(this);
+        DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addMineables(this);
         DefaultBiomeFeatures.addDefaultOres(this);
@@ -72,7 +72,7 @@ public final class SoggySwampBiome extends Biome {
                         new BlobFoliagePlacer(3, 0, 0, 0, 3),
                         new StraightTrunkPlacer(5, 3, 0),
                         new TwoLayersFeatureSize(1, 0, 1)
-                )).baseHeight(5).method_27376(ImmutableList.of(new LeaveVineTreeDecorator())).build())
+                )).maxWaterDepth(1).decorators(ImmutableList.of(new LeaveVineTreeDecorator())).build())
         );
 
         DefaultBiomeFeatures.addDefaultMushrooms(this);

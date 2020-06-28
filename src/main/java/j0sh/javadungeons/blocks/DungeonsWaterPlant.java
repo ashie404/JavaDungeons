@@ -31,7 +31,7 @@ public class DungeonsWaterPlant extends PlantBlock implements FluidFillable {
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return fluidState.matches(FluidTags.WATER) && fluidState.getLevel() == 8 ? super.getPlacementState(ctx) : null;
+        return fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8 ? super.getPlacementState(ctx) : null;
     }
 
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {

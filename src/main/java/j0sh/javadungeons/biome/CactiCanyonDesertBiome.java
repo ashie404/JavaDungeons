@@ -27,13 +27,13 @@ public final class CactiCanyonDesertBiome extends Biome {
               ).parent(null)
       );
 
-      this.addStructureFeature(DefaultBiomeFeatures.field_24706);
-      this.addStructureFeature(DefaultBiomeFeatures.field_24687);
-      this.addStructureFeature(DefaultBiomeFeatures.field_24692);
+      this.addStructureFeature(DefaultBiomeFeatures.PLAINS_VILLAGE);
+      this.addStructureFeature(DefaultBiomeFeatures.PILLAGER_OUTPOST);
+      this.addStructureFeature(DefaultBiomeFeatures.DESERT_PYRAMID);
       this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
-      this.addStructureFeature(DefaultBiomeFeatures.field_24697);
+      this.addStructureFeature(DefaultBiomeFeatures.STRONGHOLD);
       DefaultBiomeFeatures.addLandCarvers(this);
-      DefaultBiomeFeatures.method_28440(this);
+      DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
       DefaultBiomeFeatures.addDesertLakes(this);
       DefaultBiomeFeatures.addDungeons(this);
       DefaultBiomeFeatures.addMineables(this);

@@ -7,14 +7,13 @@ import j0sh.javadungeons.JavaDungeons;
 import java.util.List;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.class_5348;
+import net.minecraft.text.StringRenderable;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ingame.*;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import j0sh.javadungeons.recipe.DungeonsTransformerRecipe;
-import j0sh.javadungeons.gui.DungeonsTransformerScreenHandler;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -31,7 +30,7 @@ public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformer
    public DungeonsTransformerScreen(DungeonsTransformerScreenHandler handler, PlayerInventory inventory, Text title) {
       super(handler, inventory, title);
       handler.setContentsChangedListener(this::onInventoryChange);
-      --this.field_25268;
+      --this.playerInventoryTitleY;
    }
 
    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
@@ -41,8 +40,8 @@ public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformer
 
    @Override
    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
-      this.textRenderer.draw(matrices, (class_5348)this.title, (float)this.field_25267, (float)this.field_25268, 0xFFFFFF);
-      this.textRenderer.draw(matrices, (class_5348)this.playerInventory.getDisplayName(), (float)this.field_25269, (float)this.field_25270, 0xFFFFFF);
+      this.textRenderer.draw(matrices, (StringRenderable)this.title, (float)this.titleX, (float)this.titleY, 0xFFFFFF);
+      this.textRenderer.draw(matrices, (StringRenderable)this.playerInventory.getDisplayName(), (float)this.playerInventoryTitleX, (float)this.playerInventoryTitleY, 0xFFFFFF);
    }
 
    protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
@@ -107,7 +106,7 @@ public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformer
          int k = x + j % 4 * 16;
          int l = j / 4;
          int m = y + l * 18 + 2;
-         this.client.getItemRenderer().renderGuiItem(((DungeonsTransformerRecipe)list.get(i)).getOutput(), k, m);
+         this.client.getItemRenderer().renderGuiItemIcon(((DungeonsTransformerRecipe)list.get(i)).getOutput(), k, m);
       }
 
    }

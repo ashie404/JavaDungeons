@@ -86,15 +86,15 @@ public class CreeperWoodsBlocks {
 
         // ground related
         CW_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
-        CW_GRASSY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_grassy_dirt");
+        CW_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_grassy_dirt");
         CW_DENSE_GRASSY_DIRT = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_dense_grassy_dirt");
-        CW_DIRT_PATH = new DungeonsPath(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
-        CW_DIRT = new DungeonsPathable(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CW_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_dirt");
-        CW_DIRT_SLAB = new DungeonsSlab(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_dirt_slab");
-        CW_ROCKY_DIRT_PATH = new DungeonsPath(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt_path");
-        CW_ROCKY_DIRT = new DungeonsPathable(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CW_ROCKY_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
-        CW_ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_rocky_grassy_dirt");
-        CW_COBWEBBED_DIRT = new DungeonsBlock(Material.SOIL, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_cobwebbed_dirt");
+        CW_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
+        CW_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CW_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_dirt");
+        CW_DIRT_SLAB = new DungeonsSlab(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_dirt_slab");
+        CW_ROCKY_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt_path");
+        CW_ROCKY_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, CW_ROCKY_DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_rocky_dirt");
+        CW_ROCKY_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_rocky_grassy_dirt");
+        CW_COBWEBBED_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_cobwebbed_dirt");
 
         // creeper woods granite variant
         CW_POLISHED_GRANITE = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_polished_granite", "cw_polished_granite_slab", "cw_polished_granite_stairs");

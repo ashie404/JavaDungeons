@@ -41,11 +41,11 @@ public class CactiCanyonBiome extends Biome {
                 ).parent(null)
         );
 
-        this.addStructureFeature(DefaultBiomeFeatures.field_24697);
+        this.addStructureFeature(DefaultBiomeFeatures.STRONGHOLD);
 
         DefaultBiomeFeatures.addLandCarvers(this);
 
-        DefaultBiomeFeatures.method_28440(this);
+        DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
 
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
 		    Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))

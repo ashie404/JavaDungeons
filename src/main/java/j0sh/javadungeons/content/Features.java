@@ -16,9 +16,9 @@ public class Features {
     public static GlowMushroomFeature GLOW_PLANTS;
 
     public static void init() {
-        DUNGEONS_WATER_LAKE = Registry.register(Registry.FEATURE, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_lake"), new LakeFeature(SingleStateFeatureConfig.field_24874));
+        DUNGEONS_WATER_LAKE = Registry.register(Registry.FEATURE, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_lake"), new LakeFeature(SingleStateFeatureConfig.CODEC));
 
-        GLOW_PLANTS = Registry.register(Registry.FEATURE, new Identifier(JavaDungeons.MOD_ID, "glow_plants"), new GlowMushroomFeature(SeaPickleFeatureConfig.field_24878));
+        GLOW_PLANTS = Registry.register(Registry.FEATURE, new Identifier(JavaDungeons.MOD_ID, "glow_plants"), new GlowMushroomFeature(SeaPickleFeatureConfig.CODEC));
     }
 
 }

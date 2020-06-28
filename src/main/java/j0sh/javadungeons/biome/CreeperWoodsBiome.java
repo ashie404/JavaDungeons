@@ -45,7 +45,7 @@ public class CreeperWoodsBiome extends Biome {
         this.addStructureFeature(StructureFeature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
         
         DefaultBiomeFeatures.addLandCarvers(this);
-        DefaultBiomeFeatures.method_28440(this);
+        DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
 
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
 		    Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
