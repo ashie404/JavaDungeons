@@ -31,8 +31,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.8.0",
-    "fabric": "*",
+    "forge": "*",
     "minecraft": "1.15.x"
   },
   "suggests": {
