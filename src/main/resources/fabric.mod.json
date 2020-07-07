@@ -6,12 +6,12 @@
   "name": "JavaDungeons",
   "description": "A mod that adds the custom blocks from Minecraft Dungeons into Minecraft: Java Edition.",
   "authors": [
-    "J0SH"
+    "June (juniebyte)"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/javadungeons",
-    "sources": "https://github.com/TheJSHuA/JavaDungeons",
-    "issues": "https://github.com/TheJSHuA/JavaDungeons/issues"
+    "sources": "https://github.com/juniebyte/JavaDungeons",
+    "issues": "https://github.com/juniebyte/JavaDungeons/issues"
   },
   "license": "MIT",
   "icon": "assets/dungeons/icon.png",
@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "j0sh.javadungeons.JavaDungeons"
+      "juniebyte.javadungeons.JavaDungeons"
     ],
     "client": [
-      "j0sh.javadungeons.JavaDungeonsClient"
+      "juniebyte.javadungeons.JavaDungeonsClient"
     ]
   },
 

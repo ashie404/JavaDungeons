@@ -1,8 +1,8 @@
-package j0sh.javadungeons.biome;
+package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import j0sh.javadungeons.content.*;
+import juniebyte.javadungeons.content.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;

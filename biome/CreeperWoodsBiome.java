@@ -1,4 +1,4 @@
-package j0sh.javadungeons.biome;
+package juniebyte.javadungeons.biome;
 
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.EntityType;
@@ -28,7 +28,7 @@ import net.minecraft.block.Blocks;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
-import j0sh.javadungeons.content.*;
+import juniebyte.javadungeons.content.*;
 
 public class CreeperWoodsBiome extends Biome {
     public CreeperWoodsBiome() {

@@ -1,11 +1,11 @@
-package j0sh.javadungeons.biome;
+package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import j0sh.javadungeons.content.Features;
-import j0sh.javadungeons.content.Fluids;
-import j0sh.javadungeons.content.GenericBlocks;
-import j0sh.javadungeons.content.PumpkinPasturesBlocks;
+import juniebyte.javadungeons.content.Features;
+import juniebyte.javadungeons.content.Fluids;
+import juniebyte.javadungeons.content.GenericBlocks;
+import juniebyte.javadungeons.content.PumpkinPasturesBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;

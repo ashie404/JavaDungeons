@@ -3,13 +3,13 @@
 // (powered by Fernflower decompiler)
 //
 
-package j0sh.javadungeons.biome;
+package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
-import j0sh.javadungeons.content.Features;
-import j0sh.javadungeons.content.Fluids;
-import j0sh.javadungeons.content.SoggySwampBlocks;
-import j0sh.javadungeons.content.SurfaceBuilders;
+import juniebyte.javadungeons.content.Features;
+import juniebyte.javadungeons.content.Fluids;
+import juniebyte.javadungeons.content.SoggySwampBlocks;
+import juniebyte.javadungeons.content.SurfaceBuilders;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EntityType;

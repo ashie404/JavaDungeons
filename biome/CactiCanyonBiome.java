@@ -1,9 +1,9 @@
-package j0sh.javadungeons.biome;
+package juniebyte.javadungeons.biome;
 
-import j0sh.javadungeons.content.CactiCanyonBlocks;
-import j0sh.javadungeons.content.Features;
-import j0sh.javadungeons.content.Fluids;
-import j0sh.javadungeons.content.SurfaceBuilders;
+import juniebyte.javadungeons.content.CactiCanyonBlocks;
+import juniebyte.javadungeons.content.Features;
+import juniebyte.javadungeons.content.Fluids;
+import juniebyte.javadungeons.content.SurfaceBuilders;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.Biome;
