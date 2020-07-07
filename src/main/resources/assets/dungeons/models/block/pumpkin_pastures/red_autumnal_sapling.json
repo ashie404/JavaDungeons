@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/pumpkin_pastures/red_autumnal_sapling"
+    }
+}

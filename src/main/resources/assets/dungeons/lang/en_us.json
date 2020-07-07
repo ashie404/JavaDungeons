@@ -206,6 +206,8 @@
     "block.dungeons.pm_charred_dirt_path": "Charred Dirt Path",
     "block.dungeons.pm_fern": "Fern",
     "block.dungeons.pm_dead_sapling": "Dead Sapling",
+    "block.dungeons.pm_red_autumnal_sapling": "Red Autumnal Sapling",
+    "block.dungeons.pm_yellow_autumnal_sapling": "Yellow Autumnal Sapling",
 
     "block.dungeons.ss_grass_block": "Grass Block",
     "block.dungeons.ss_dirt_path": "Dirt Path",
