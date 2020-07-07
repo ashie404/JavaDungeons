@@ -2,6 +2,7 @@ package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
+import juniebyte.javadungeons.gen.SwampSaplingGenerator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -23,6 +24,7 @@ public class SoggySwampBlocks {
     public static DungeonsPillar SS_SWAMP_LOG;
     public static DungeonsLeaves SS_SWAMP_LEAVES;
     public static DungeonsSlabStairBlock SS_SWAMP_PLANKS;
+    public static DungeonsSapling SS_SWAMP_SAPLING;
 
     // bridge related
     public static DungeonsTopSlab SS_BRIDGE_PLANKS;
@@ -44,6 +46,7 @@ public class SoggySwampBlocks {
         SS_SWAMP_LOG = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_log");
         SS_SWAMP_LEAVES = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_leaves");
         SS_SWAMP_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_planks", "ss_swamp_planks_slab", "ss_swamp_planks_stairs");
+        SS_SWAMP_SAPLING = new DungeonsSapling(new SwampSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_sapling");
 
         // bridge related
         SS_BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_bridge_planks");

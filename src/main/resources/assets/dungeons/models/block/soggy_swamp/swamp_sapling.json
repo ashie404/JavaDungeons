@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/soggy_swamp/swamp_sapling"
+    }
+}
