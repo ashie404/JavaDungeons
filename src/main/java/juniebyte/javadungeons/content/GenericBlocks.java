@@ -246,7 +246,7 @@ public class GenericBlocks {
         LIGHTHOUSE_LAMP = new DungeonsPoweredEmissive(Material.REDSTONE_LAMP, 0.3F, 0.3F, BlockSoundGroup.METAL, JavaDungeons.GENERIC, "lighthouse_lamp");
 
         // chains
-        CHAINS = new DungeonsChains(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.LANTERN, JavaDungeons.GENERIC, "chains");
+        CHAINS = new DungeonsChains(Material.METAL, 5.0F, 6.0F, BlockSoundGroup.CHAIN, JavaDungeons.GENERIC, "chains");
 
         // custom crafting utility (not in dungeons)
         DUNGEONS_TRANSFORMER = new DungeonsTransformer();
