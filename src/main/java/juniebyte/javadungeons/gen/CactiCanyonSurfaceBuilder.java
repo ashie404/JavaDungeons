@@ -1,5 +1,6 @@
 package juniebyte.javadungeons.gen;
 
+import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import juniebyte.javadungeons.content.CactiCanyonBlocks;
 import net.minecraft.block.Block;
@@ -18,28 +19,29 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConfig> {
-   private static final BlockState WHITE_TERACOTTA;
+   private static final BlockState WHITE_TERRACOTTA;
    private static final BlockState ORANGE_TERRACOTTA;
-   private static final BlockState TERACOTTA;
-   private static final BlockState YELLOW_TERACOTTA;
-   private static final BlockState BROWN_TERACOTTA;
-   private static final BlockState RED_TERACOTTA;
-   private static final BlockState LIGHT_GRAY_TERACOTTA;
+   private static final BlockState TERRACOTTA;
+   private static final BlockState YELLOW_TERRACOTTA;
+   private static final BlockState BROWN_TERRACOTTA;
+   private static final BlockState RED_TERRACOTTA;
+   private static final BlockState LIGHT_GRAY_TERRACOTTA;
    protected BlockState[] layerBlocks;
    protected long seed;
    protected OctaveSimplexNoiseSampler heightCutoffNoise;
    protected OctaveSimplexNoiseSampler heightNoise;
    protected OctaveSimplexNoiseSampler layerNoise;
 
-   public CactiCanyonSurfaceBuilder(Codec<TernarySurfaceConfig> function) {
-      super(function);
+   public CactiCanyonSurfaceBuilder(Codec<TernarySurfaceConfig> codec) {
+      super(codec);
    }
 
    public void generate(Random random, Chunk chunk, Biome biome, int i, int j, int k, double d, BlockState blockState, BlockState blockState2, int l, long m, TernarySurfaceConfig ternarySurfaceConfig) {
       double e = 0.0D;
       double f = Math.min(Math.abs(d), this.heightCutoffNoise.sample((double)i * 0.25D, (double)j * 0.25D, false) * 15.0D);
       if (f > 0.0D) {
-         double h = Math.abs(this.heightNoise.sample((double) i * 0.001953125D, (double) j * 0.001953125D, false));
+         double g = 0.001953125D;
+         double h = Math.abs(this.heightNoise.sample((double)i * 0.001953125D, (double)j * 0.001953125D, false));
          e = f * f * 2.5D;
          double n = Math.ceil(h * 50.0D) + 14.0D;
          if (e > n) {
@@ -68,7 +70,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          BlockState blockState5 = chunk.getBlockState(mutable);
          if (blockState5.isAir()) {
             r = -1;
-         } else if (blockState5.getBlock() == blockState.getBlock()) {
+         } else if (blockState5.isOf(blockState.getBlock())) {
             if (r == -1) {
                bl2 = false;
                if (q <= 0) {
@@ -92,7 +94,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
                      BlockState blockState8;
                      if (s >= 64 && s <= 127) {
                         if (bl) {
-                           blockState8 = TERACOTTA;
+                           blockState8 = TERRACOTTA;
                         } else {
                            blockState8 = this.calculateLayerBlockState(i, s, j);
                         }
@@ -129,8 +131,8 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
 
       if (this.seed != seed || this.heightCutoffNoise == null || this.heightNoise == null) {
          ChunkRandom chunkRandom = new ChunkRandom(seed);
-         this.heightCutoffNoise = new OctaveSimplexNoiseSampler(chunkRandom, IntStream.of(3, 0));
-         this.heightNoise = new OctaveSimplexNoiseSampler(chunkRandom, IntStream.of(0, 0));
+         this.heightCutoffNoise = new OctaveSimplexNoiseSampler(chunkRandom, IntStream.rangeClosed(-3, 0));
+         this.heightNoise = new OctaveSimplexNoiseSampler(chunkRandom, ImmutableList.of(0));
       }
 
       this.seed = seed;
@@ -138,9 +140,9 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
 
    protected void initLayerBlocks(long seed) {
       this.layerBlocks = new BlockState[64];
-      Arrays.fill(this.layerBlocks, TERACOTTA);
+      Arrays.fill(this.layerBlocks, TERRACOTTA);
       ChunkRandom chunkRandom = new ChunkRandom(seed);
-      this.layerNoise = new OctaveSimplexNoiseSampler(chunkRandom, IntStream.of(0, 0));
+      this.layerNoise = new OctaveSimplexNoiseSampler(chunkRandom, ImmutableList.of(0));
 
       int j;
       for(j = 0; j < 64; ++j) {
@@ -161,7 +163,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          y = chunkRandom.nextInt(64);
 
          for(z = 0; y + z < 64 && z < t; ++z) {
-            this.layerBlocks[y + z] = YELLOW_TERACOTTA;
+            this.layerBlocks[y + z] = YELLOW_TERRACOTTA;
          }
       }
 
@@ -173,7 +175,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          z = chunkRandom.nextInt(64);
 
          for(w = 0; z + w < 64 && w < y; ++w) {
-            this.layerBlocks[z + w] = BROWN_TERACOTTA;
+            this.layerBlocks[z + w] = BROWN_TERRACOTTA;
          }
       }
 
@@ -184,7 +186,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          w = chunkRandom.nextInt(64);
 
          for(int x = 0; w + x < 64 && x < z; ++x) {
-            this.layerBlocks[w + x] = RED_TERACOTTA;
+            this.layerBlocks[w + x] = RED_TERRACOTTA;
          }
       }
 
@@ -195,13 +197,13 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          z += chunkRandom.nextInt(16) + 4;
 
          for(int ac = 0; z + ac < 64 && ac < 1; ++ac) {
-            this.layerBlocks[z + ac] = WHITE_TERACOTTA;
+            this.layerBlocks[z + ac] = WHITE_TERRACOTTA;
             if (z + ac > 1 && chunkRandom.nextBoolean()) {
-               this.layerBlocks[z + ac - 1] = LIGHT_GRAY_TERACOTTA;
+               this.layerBlocks[z + ac - 1] = LIGHT_GRAY_TERRACOTTA;
             }
 
             if (z + ac < 63 && chunkRandom.nextBoolean()) {
-               this.layerBlocks[z + ac + 1] = LIGHT_GRAY_TERACOTTA;
+               this.layerBlocks[z + ac + 1] = LIGHT_GRAY_TERRACOTTA;
             }
          }
       }
@@ -210,21 +212,16 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
 
    protected BlockState calculateLayerBlockState(int x, int y, int z) {
       int i = (int)Math.round(this.layerNoise.sample((double)x / 512.0D, (double)z / 512.0D, false) * 2.0D);
-      if (this.layerNoise.sample((double)x / 64.0D, (double)z / 64.0D, false) * 2.0D >= 0.65D && (double)Math.random() <= 0.13D)
-      {
-         return CactiCanyonBlocks.CC_DIRT.getDefaultState();
-      } else {
-         return this.layerBlocks[(y + i + 64) % 64];
-      }
+      return this.layerBlocks[(y + i + 64) % 64];
    }
 
    static {
-      WHITE_TERACOTTA = CactiCanyonBlocks.CC_SANDSTONE.getDefaultState();
+      WHITE_TERRACOTTA = CactiCanyonBlocks.CC_SANDSTONE.getDefaultState();
       ORANGE_TERRACOTTA = CactiCanyonBlocks.CC_ORANGE_SANDSTONE.getDefaultState();
-      TERACOTTA = CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState();
-      YELLOW_TERACOTTA = CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState();
-      BROWN_TERACOTTA = CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState();
-      RED_TERACOTTA = CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState();
-      LIGHT_GRAY_TERACOTTA = CactiCanyonBlocks.CC_GRAY_SANDSTONE.getDefaultState();
+      TERRACOTTA = CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState();
+      YELLOW_TERRACOTTA = CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState();
+      BROWN_TERRACOTTA = CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState();
+      RED_TERRACOTTA = CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState();
+      LIGHT_GRAY_TERRACOTTA = CactiCanyonBlocks.CC_GRAY_SANDSTONE.getDefaultState();
    }
 }
