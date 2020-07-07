@@ -2,13 +2,14 @@ package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class SoggySwampBlocks {
 
     // ground related
-    public static DungeonsBlock SS_GRASS_BLOCK;
+    public static DungeonsPathable SS_GRASS_BLOCK;
     public static DungeonsPath SS_DIRT_PATH;
     public static DungeonsPathable SS_DIRT;
 
@@ -29,9 +30,9 @@ public class SoggySwampBlocks {
 
     public static void init() {
         // ground related
-        SS_GRASS_BLOCK = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
+        SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
         SS_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
-        SS_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
+        SS_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
 
         // stone related
         SS_MOSSY_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone");

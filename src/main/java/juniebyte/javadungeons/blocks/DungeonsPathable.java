@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
@@ -28,11 +29,14 @@ public class DungeonsPathable extends Block {
     public BlockItem blockItem;
     public Block pathBlock;
 
-    public DungeonsPathable(Material material, float hardness, float resistance, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
+    public boolean canTill;
+
+    public DungeonsPathable(Material material, float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
         this.pathBlock = pathBlock;
+        this.canTill = canTill;
     }
 
     @Override
@@ -41,12 +45,23 @@ public class DungeonsPathable extends Block {
             world.playSound(
                 null,
                 pos,
-                SoundEvents.BLOCK_GRASS_PLACE,
+                SoundEvents.ITEM_SHOVEL_FLATTEN,
                 SoundCategory.BLOCKS, 
                 1.0f,
                 1.0f
             );
             world.setBlockState(pos, pathBlock.getDefaultState());
+            return ActionResult.SUCCESS;
+        } else if (player.getMainHandStack().getItem().isIn(FabricToolTags.HOES) && world.getBlockState(pos.up()).isAir() && canTill) {
+            world.playSound(
+                null,
+                pos,
+                SoundEvents.ITEM_HOE_TILL,
+                SoundCategory.BLOCKS, 
+                1.0f,
+                1.0f
+            );
+            world.setBlockState(pos, Blocks.FARMLAND.getDefaultState());
             return ActionResult.SUCCESS;
         } else {
             return ActionResult.PASS;
