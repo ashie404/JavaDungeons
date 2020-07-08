@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " S ",
+      " S ",
+      " # "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stone"
+      },
+      "#": {
+        "tag": "dungeons:cw_dirt"
+      }
+    },
+    "result": {
+      "item": "dungeons:cw_gravestone",
+      "count": 1
+    }
+  }

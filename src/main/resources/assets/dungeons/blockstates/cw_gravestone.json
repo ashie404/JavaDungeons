@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/creeper_woods/gravestone" },
+        "facing=south": { "model": "dungeons:block/creeper_woods/gravestone", "y": 180 },
+        "facing=east": { "model":  "dungeons:block/creeper_woods/gravestone", "y": 90 },
+        "facing=west": { "model":  "dungeons:block/creeper_woods/gravestone", "y": 270 }
+    }
+}

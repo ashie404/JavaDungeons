@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " S ",
+      " S ",
+      " # "
+    ],
+    "key": {
+      "S": {
+        "item": "dungeons:cw_mossy_stone"
+      },
+      "#": {
+        "tag": "dungeons:cw_dirt"
+      }
+    },
+    "result": {
+      "item": "dungeons:cw_mossy_gravestone",
+      "count": 1
+    }
+  }

@@ -63,6 +63,10 @@ public class CreeperWoodsBlocks {
     public static DungeonsEmissive CW_GLOW_MELON;
     public static DungeonsBlock CW_GLOW_MELON_ROOTS;
 
+    // gravestones
+    public static DungeonsGravestone CW_GRAVESTONE;
+    public static DungeonsGravestone CW_MOSSY_GRAVESTONE;
+
     public static void init() {
         // stone variants
         CW_MOSSY_COBBLESTONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_mossy_cobblestone");
@@ -118,5 +122,9 @@ public class CreeperWoodsBlocks {
         CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.SLIME, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");
         CW_GLOW_MELON = new DungeonsEmissive(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD, JavaDungeons.CREEPER_WOODS, "cw_glow_melon");
         CW_GLOW_MELON_ROOTS = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_glow_melon_roots");
+
+        // gravestones
+        CW_GRAVESTONE = new DungeonsGravestone(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_gravestone");
+        CW_MOSSY_GRAVESTONE = new DungeonsGravestone(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.CREEPER_WOODS, "cw_mossy_gravestone");
     }
 }
