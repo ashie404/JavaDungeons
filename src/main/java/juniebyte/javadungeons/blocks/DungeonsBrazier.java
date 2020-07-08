@@ -34,17 +34,20 @@ public class DungeonsBrazier extends Block {
     public BlockItem blockItem;
 
     public String type;
+    public boolean soggySwamp;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
+    protected static final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
-		return SHAPE;
+		return soggySwamp ? SS_SHAPE : SHAPE;
 	}
 
-    public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, String id) {
+    public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, boolean soggySwamp, String id) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(type != "unlit" ? 15 : 0));
         this.type = type;
+        this.soggySwamp = soggySwamp;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
@@ -65,7 +68,7 @@ public class DungeonsBrazier extends Block {
             double d = (double)pos.getX() + 0.5D;
             double e = (double)pos.getY() + 0.7D;
             double f = (double)pos.getZ() + 0.5D;
-            world.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
+            world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
             world.addParticle(type != "green_lit" ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
         }
     }

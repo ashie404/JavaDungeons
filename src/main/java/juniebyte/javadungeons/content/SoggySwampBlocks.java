@@ -31,6 +31,11 @@ public class SoggySwampBlocks {
     public static DungeonsTopSlab SS_BRIDGE_PLANKS;
     public static DungeonsFence SS_ROPE_FENCE;
 
+    // braziers
+    public static DungeonsBrazier SS_UNLIT_BRAZIER;
+    public static DungeonsBrazier SS_LIT_BRAZIER;
+    public static DungeonsBrazier SS_GREEN_LIT_BRAZIER;
+
     public static void init() {
         // ground related
         SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
@@ -53,5 +58,10 @@ public class SoggySwampBlocks {
         // bridge related
         SS_BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_bridge_planks");
         SS_ROPE_FENCE = new DungeonsFence(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_rope_fence");
+
+        // braziers
+        SS_UNLIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "unlit", true, "ss_unlit_brazier");
+        SS_LIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "lit", true, "ss_lit_brazier");
+        SS_GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "green_lit", true, "ss_green_lit_brazier");
     }
 }
