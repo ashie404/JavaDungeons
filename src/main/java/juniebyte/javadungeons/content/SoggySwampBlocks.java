@@ -18,6 +18,7 @@ public class SoggySwampBlocks {
     public static DungeonsBlock SS_MOSSY_STONE;
     public static DungeonsBlock SS_MOSSY_COBBLESTONE;
     public static DungeonsBlock SS_MOSSY_STONE_BRICKS;
+    public static DungeonsBlock SS_MOSSY_POLISHED_ANDESITE;
     public static DungeonsBlock SS_MOSSY_CHISELED_STONE_BRICKS;
 
     // swamp tree
@@ -40,6 +41,7 @@ public class SoggySwampBlocks {
         SS_MOSSY_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone");
         SS_MOSSY_COBBLESTONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_cobblestone");
         SS_MOSSY_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone_bricks");
+        SS_MOSSY_POLISHED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_polished_andesite");
         SS_MOSSY_CHISELED_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_chiseled_stone_bricks");
 
         // swamp tree
