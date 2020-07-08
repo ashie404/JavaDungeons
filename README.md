@@ -1,4 +1,4 @@
-<img src="src/main/resources/assets/dungeons/icon.png" align="left" style="border-radius: 50%" width="128px"/>
+<img src="src/main/resources/assets/dungeons/icon.png" align="left" width="128px"/>
 
 # JavaDungeons
 
