@@ -54,26 +54,6 @@ public class CactiCanyonBiome extends Biome {
         DefaultBiomeFeatures.addDungeons(this);
         DefaultBiomeFeatures.addMineables(this);
 
-        // add cacti canyon sandstone hills
-        /*WeightedBlockStateProvider sandstones = new WeightedBlockStateProvider();
-        sandstones.addState(CactiCanyonBlocks.CC_SANDSTONE.getDefaultState(), 30);
-        sandstones.addState(CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_GRAY_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_ORANGE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(), 5);
-        sandstones.addState(CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState(),5);
-
-        this.addFeature(GenerationStep.Feature.SURFACE_STRUCTURES,
-                Feature.BLOCK_PILE.configure(new BlockPileFeatureConfig(sandstones)
-                ).withChance(0.7F).feature
-        );*/
-
         // add cacti canyon dirt
         this.addFeature(
                 GenerationStep.Feature.UNDERGROUND_ORES,
