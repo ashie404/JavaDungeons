@@ -9,7 +9,6 @@ import com.google.common.collect.ImmutableList;
 import juniebyte.javadungeons.content.Features;
 import juniebyte.javadungeons.content.Fluids;
 import juniebyte.javadungeons.content.SoggySwampBlocks;
-import juniebyte.javadungeons.content.SurfaceBuilders;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EntityType;
@@ -25,12 +24,14 @@ import net.minecraft.world.gen.feature.MineshaftFeature.Type;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.feature.RuinedPortalFeature;
 
 public final class SoggySwampBiome extends Biome {
     public SoggySwampBiome() {
-        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilders.SOGGY_SWAMP,
+        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilder.SWAMP,
                 new TernarySurfaceConfig(
                         SoggySwampBlocks.SS_GRASS_BLOCK.getDefaultState(),
                         SoggySwampBlocks.SS_DIRT.getDefaultState(),
@@ -49,7 +50,7 @@ public final class SoggySwampBiome extends Biome {
         );
         this.addStructureFeature(StructureFeature.SWAMP_HUT.configure(FeatureConfig.DEFAULT));
         this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, Type.NORMAL)));
-        this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(net.minecraft.world.gen.feature.RuinedPortalFeature.Type.SWAMP)));
+        this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.SWAMP)));
         DefaultBiomeFeatures.addLandCarvers(this);
         DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
         DefaultBiomeFeatures.addDungeons(this);

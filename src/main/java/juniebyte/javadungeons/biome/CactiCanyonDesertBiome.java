@@ -14,6 +14,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.MineshaftFeature;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
+import net.minecraft.world.gen.feature.RuinedPortalFeatureConfig;
+import net.minecraft.world.gen.feature.RuinedPortalFeature;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.placer.DoublePlantPlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
@@ -40,6 +42,7 @@ public final class CactiCanyonDesertBiome extends Biome {
       this.addStructureFeature(DefaultBiomeFeatures.DESERT_PYRAMID);
       this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
       this.addStructureFeature(DefaultBiomeFeatures.STRONGHOLD);
+      this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.DESERT)));
       DefaultBiomeFeatures.addLandCarvers(this);
       DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
       DefaultBiomeFeatures.addDesertLakes(this);

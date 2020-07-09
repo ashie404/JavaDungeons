@@ -29,6 +29,7 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.feature.RuinedPortalFeature;
 
 import java.util.OptionalInt;
 
@@ -53,6 +54,7 @@ public class PumpkinPasturesBiome extends Biome {
         this.addStructureFeature(StructureFeature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));
         this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
         this.addStructureFeature(StructureFeature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
+        this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.STANDARD)));
 
         DefaultBiomeFeatures.addLandCarvers(this);
         DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
@@ -103,21 +105,21 @@ public class PumpkinPasturesBiome extends Biome {
                                     new StraightTrunkPlacer(4, 2, 0),
                                     new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
                     ).withChance(0.2F),
-                        Feature.TREE.configure(
-                                (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
-                                        new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
-                                        new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                                        new StraightTrunkPlacer(4, 2, 0),
-                                        new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
-                        ).withChance(0.2F)
-                ),
                     Feature.TREE.configure(
                             (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
                                     new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
                                     new LargeOakFoliagePlacer(2, 0, 4, 0, 4),
                                     new LargeOakTrunkPlacer(3, 11, 0),
                                     new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()
-                    )
+                    ).withChance(0.1F)
+                ),
+                Feature.TREE.configure(
+                    (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
+                            new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
+                            new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                            new StraightTrunkPlacer(4, 2, 0),
+                            new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
+                )
             )
         ).createDecoratedFeature(Decorator.COUNT_EXTRA_HEIGHTMAP.configure(new CountExtraChanceDecoratorConfig(2, 0.1F, 1))));
 
