@@ -6,7 +6,7 @@
 
 <br/>
 
-JavaDungeons is a Fabric mod that adds the custom blocks from Minecraft Dungeons into Minecraft: Java Edition. Most textures are not made by me, and they were obtained from Minecraft: Dungeons. 
+JavaDungeons is a Fabric mod that adds content from Minecraft Dungeons into Minecraft: Java Edition. Most textures are not made by me, and they were obtained from Minecraft: Dungeons. 
 
 ### Texture Rights
 
