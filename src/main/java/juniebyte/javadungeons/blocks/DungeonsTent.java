@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.BlockItem;
@@ -13,7 +14,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -64,7 +64,7 @@ public class DungeonsTent extends Block {
     }
 
     static {
-        FACING = Properties.FACING;
+        FACING = HorizontalFacingBlock.FACING;
         SHAPE = Block.createCuboidShape(-16.0D, 0.0D, -16.0D, 32.0D, 24.0D, 32.0D);
     }
 

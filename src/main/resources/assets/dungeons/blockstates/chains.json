@@ -1,6 +1,7 @@
 {
     "variants": {
         "above=false,below=false": {"model": "dungeons:block/chains"},
+        "above=true,below=true": {"model": "dungeons:block/chains"},
         "above=true,below=false": {"model": "dungeons:block/chains_top"},
         "above=false,below=true": {"model": "dungeons:block/chains_bottom"}
     }

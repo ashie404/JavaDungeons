@@ -13,7 +13,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -74,7 +73,7 @@ public class DungeonsGravestone extends Block {
     }
 
     static {
-        FACING = Properties.FACING;
+        FACING = HorizontalFacingBlock.FACING;
         N_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 11.0D, 16.0D, 18.0D, 16.0D);
         S_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 18.0D, 5.0D);
         E_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 5.0D, 18.0D, 16.0D);

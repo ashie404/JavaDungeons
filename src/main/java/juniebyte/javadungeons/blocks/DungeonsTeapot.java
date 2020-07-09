@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.BlockItem;
@@ -19,7 +20,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -64,7 +64,7 @@ public class DungeonsTeapot extends Block {
     }
 
     static {
-        FACING = Properties.FACING;
+        FACING = HorizontalFacingBlock.FACING;
     }
 
 }
