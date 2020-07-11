@@ -40,7 +40,6 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
       double e = 0.0D;
       double f = Math.min(Math.abs(d), this.heightCutoffNoise.sample((double)i * 0.25D, (double)j * 0.25D, false) * 15.0D);
       if (f > 0.0D) {
-         double g = 0.001953125D;
          double h = Math.abs(this.heightNoise.sample((double)i * 0.001953125D, (double)j * 0.001953125D, false));
          e = f * f * 2.5D;
          double n = Math.ceil(h * 50.0D) + 14.0D;
