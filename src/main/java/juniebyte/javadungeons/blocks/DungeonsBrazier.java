@@ -1,7 +1,5 @@
 package juniebyte.javadungeons.blocks;
 
-import java.util.Random;
-
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
@@ -23,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
+import java.util.Random;
+
 public class DungeonsBrazier extends Block {
 
     // brazier block
@@ -41,7 +41,7 @@ public class DungeonsBrazier extends Block {
 	}
 
     public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, boolean soggySwamp, String id) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(type != "unlit" ? 15 : 0));
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(!type.equals("unlit") ? 15 : 0));
         this.type = type;
         this.soggySwamp = soggySwamp;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
@@ -65,7 +65,7 @@ public class DungeonsBrazier extends Block {
             double e = (double)pos.getY() + 0.7D;
             double f = (double)pos.getZ() + 0.5D;
             world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
-            world.addParticle(type != "green_lit" ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
+            world.addParticle(!type.equals("green_lit") ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
         }
     }
 }

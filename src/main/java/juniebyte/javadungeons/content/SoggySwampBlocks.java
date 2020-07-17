@@ -36,6 +36,9 @@ public class SoggySwampBlocks {
     public static DungeonsBrazier SS_LIT_BRAZIER;
     public static DungeonsBrazier SS_GREEN_LIT_BRAZIER;
 
+    //utils
+    public static DungeonsWitchPole SS_WITCH_POLE;
+
     public static void init() {
         // ground related
         SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
@@ -63,5 +66,8 @@ public class SoggySwampBlocks {
         SS_UNLIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "unlit", true, "ss_unlit_brazier");
         SS_LIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "lit", true, "ss_lit_brazier");
         SS_GREEN_LIT_BRAZIER = new DungeonsBrazier(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "green_lit", true, "ss_green_lit_brazier");
+
+        //utils
+        SS_WITCH_POLE = new DungeonsWitchPole(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP);
     }
 }

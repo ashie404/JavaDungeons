@@ -1,4 +1,4 @@
-package juniebyte.javadungeons.mixin;
+/*package juniebyte.javadungeons.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;

@@ -19,7 +19,6 @@ import net.minecraft.world.gen.feature.MineshaftFeature.Type;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
-<<<<<<< HEAD:src/main/java/juniebyte/javadungeons/biome/SoggySwampBiome.java
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
@@ -28,14 +27,6 @@ import net.minecraft.world.gen.feature.RuinedPortalFeature;
 public final class SoggySwampBiome extends Biome {
     public SoggySwampBiome() {
         super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilder.SWAMP,
-=======
-import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-
-public final class SoggySwampBiome extends Biome {
-    public SoggySwampBiome() {
-        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilders.SOGGY_SWAMP,
->>>>>>> some more code:src/main/java/j0sh/javadungeons/biome/SoggySwampBiome.java
                 new TernarySurfaceConfig(
                         SoggySwampBlocks.SS_GRASS_BLOCK.getDefaultState(),
                         SoggySwampBlocks.SS_DIRT.getDefaultState(),
@@ -81,28 +72,6 @@ public final class SoggySwampBiome extends Biome {
         );
 
         DefaultBiomeFeatures.addDefaultMushrooms(this);
-<<<<<<< HEAD:src/main/java/juniebyte/javadungeons/biome/SoggySwampBiome.java
-=======
-        // add swamp features without swamp trees
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.FLOWER.configure(DefaultBiomeFeatures.BLUE_ORCHID_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_32.configure(new CountDecoratorConfig(1))));
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.GRASS_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(5))));
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.DEAD_BUSH_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.LILY_PAD_CONFIG).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(4))));
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.BROWN_MUSHROOM_CONFIG).createDecoratedFeature(Decorator.COUNT_CHANCE_HEIGHTMAP.configure(new CountChanceDecoratorConfig(8, 0.25F))));
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(DefaultBiomeFeatures.RED_MUSHROOM_CONFIG).createDecoratedFeature(Decorator.COUNT_CHANCE_HEIGHTMAP_DOUBLE.configure(new CountChanceDecoratorConfig(8, 0.125F))));
-
-        // swamp trees
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.TREE.configure(
-                (new TreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(SoggySwampBlocks.SS_SWAMP_LOG.getDefaultState()),
-                        new SimpleBlockStateProvider(SoggySwampBlocks.SS_SWAMP_LEAVES.getDefaultState()),
-                        new BlobFoliagePlacer(3, 0, 0, 0, 3),
-                        new StraightTrunkPlacer(5, 3, 0),
-                        new TwoLayersFeatureSize(1, 0, 1)
-                )).baseHeight(5).method_27376(ImmutableList.of(new LeaveVineTreeDecorator())).build())
-        );
->>>>>>> some more code:src/main/java/j0sh/javadungeons/biome/SoggySwampBiome.java
-
 
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
                 Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.SOGGY_SWAMP_WATER.getDefaultState()))
