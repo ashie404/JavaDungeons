@@ -1,40 +1,42 @@
 package juniebyte.javadungeons;
 
-import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
-import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
-import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.client.color.world.GrassColors;
-import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.BlockRenderView;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.texture.Sprite;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.ResourceType;
-import net.minecraft.text.Style;
-
-import java.util.function.Function;
-
 import juniebyte.javadungeons.blocks.DungeonsTransformer;
 import juniebyte.javadungeons.content.*;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreen;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreenHandler;
 import juniebyte.javadungeons.particles.GreenFlameParticle;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
+import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.color.block.BlockColorProvider;
+import net.minecraft.client.color.item.ItemColorProvider;
+import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.GrassColors;
+import net.minecraft.client.gui.DrawableHelper;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.resource.ResourceManager;
+import net.minecraft.resource.ResourceType;
+import net.minecraft.text.Style;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockRenderView;
+
+import java.util.function.Function;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
@@ -49,6 +51,14 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.AXE, (itemStack, mode, matrixStack, vertexConsumerProvider, i, i1) -> {
+			if (mode == ModelTransformation.Mode.GUI) {
+				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe_inventory.png"));
+			} else {
+				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe.png"));
+			}
+			DrawableHelper.drawTexture(matrixStack, 0, 0, 16, 16, 0, 0, 16, 16, 16, 16);
+		});
 
         // register color providers
         ColorProviderRegistry.BLOCK.register(
@@ -179,7 +189,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
         );
 
         setupFluidRendering(
-            Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
+            Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid objectne
             Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
             new Identifier(JavaDungeons.MOD_ID, "soggy_swamp/soggy_swamp_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)

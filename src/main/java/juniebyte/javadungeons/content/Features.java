@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.content;
 
 import net.minecraft.util.Identifier;
@@ -21,4 +22,4 @@ public class Features {
         GLOW_PLANTS = Registry.register(Registry.FEATURE, new Identifier(JavaDungeons.MOD_ID, "glow_plants"), new GlowMushroomFeature(SeaPickleFeatureConfig.CODEC));
     }
 
-}
+}*/

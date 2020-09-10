@@ -53,7 +53,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
       int o = i & 15;
       int p = j & 15;
       BlockState blockState3 = WHITE_TERRACOTTA;
-      BlockState blockState4 = biome.getSurfaceConfig().getUnderMaterial();
+      BlockState blockState4 = biome.getGenerationSettings().getSurfaceConfig().getUnderMaterial();
       int q = (int)(d / 3.0D + 3.0D + random.nextDouble() * 0.25D);
       boolean bl = Math.cos(d / 3.0D * 3.141592653589793D) > 0.0D;
       int r = -1;
@@ -77,7 +77,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
                   blockState4 = blockState;
                } else if (s >= l - 4 && s <= l + 1) {
                   blockState3 = WHITE_TERRACOTTA;
-                  blockState4 = biome.getSurfaceConfig().getUnderMaterial();
+                  blockState4 = biome.getGenerationSettings().getSurfaceConfig().getUnderMaterial();
                }
 
                if (s < l && (blockState3 == null || blockState3.isAir())) {
@@ -87,7 +87,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
                r = q + Math.max(0, s - l);
                if (s >= l - 1) {
                   if (s <= l + 3 + q) {
-                     chunk.setBlockState(mutable, biome.getSurfaceConfig().getTopMaterial(), false);
+                     chunk.setBlockState(mutable, biome.getGenerationSettings().getSurfaceConfig().getTopMaterial(), false);
                      bl2 = true;
                   } else {
                      BlockState blockState8;

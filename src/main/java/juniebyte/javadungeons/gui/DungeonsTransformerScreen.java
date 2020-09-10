@@ -1,23 +1,22 @@
 package juniebyte.javadungeons.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import juniebyte.javadungeons.JavaDungeons;
-
-import java.util.List;
+import juniebyte.javadungeons.recipe.DungeonsTransformerRecipe;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.text.StringRenderable;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.ingame.*;
+import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
-import juniebyte.javadungeons.recipe.DungeonsTransformerRecipe;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
+
+import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformerScreenHandler> {
@@ -40,8 +39,8 @@ public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformer
 
    @Override
    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
-      this.textRenderer.draw(matrices, (StringRenderable)this.title, (float)this.titleX, (float)this.titleY, 0xFFFFFF);
-      this.textRenderer.draw(matrices, (StringRenderable)this.playerInventory.getDisplayName(), (float)this.playerInventoryTitleX, (float)this.playerInventoryTitleY, 0xFFFFFF);
+      this.textRenderer.draw(matrices, (OrderedText) this.title, (float)this.titleX, (float)this.titleY, 0xFFFFFF);
+      this.textRenderer.draw(matrices, (OrderedText)this.playerInventory.getDisplayName(), (float)this.playerInventoryTitleX, (float)this.playerInventoryTitleY, 0xFFFFFF);
    }
 
    protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {

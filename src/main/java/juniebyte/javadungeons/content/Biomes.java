@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.biome.*;
@@ -44,4 +45,4 @@ public class Biomes {
         FabricBiomes.addSpawnBiome(CACTI_CANYON_BIOME);
         FabricBiomes.addSpawnBiome(CACTI_CANYON_DESERT_BIOME);
     }
-}
+}*/

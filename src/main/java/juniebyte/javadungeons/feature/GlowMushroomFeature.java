@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.feature;
 
 import com.mojang.serialization.Codec;
@@ -44,4 +45,4 @@ public class GlowMushroomFeature extends Feature<SeaPickleFeatureConfig> {
 
         return i > 0;
     }
-}
+}*/
