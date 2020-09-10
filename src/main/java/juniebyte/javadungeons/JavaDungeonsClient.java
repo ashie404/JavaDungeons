@@ -51,13 +51,17 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.AXE, (itemStack, mode, matrixStack, vertexConsumerProvider, i, i1) -> {
+		/*BuiltinItemRendererRegistry.INSTANCE.register(Weapons.AXE, (itemStack, mode, matrixStack, vertexConsumerProvider, i, i1) -> {
 			if (mode == ModelTransformation.Mode.GUI) {
 				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe_inventory.png"));
 			} else {
 				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe.png"));
 			}
 			DrawableHelper.drawTexture(matrixStack, 0, 0, 16, 16, 0, 0, 16, 16, 16, 16);
+		});*/
+		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.AXE, (itemStack, matrixStack, vertexConsumerProvider, i, i1) -> {
+			MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe_inventory.png"));
+			DrawableHelper.drawTexture(matrixStack, 0, 0, 16, 16, 0, 0, 16, 16, 512, 512);
 		});
 
         // register color providers
