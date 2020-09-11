@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
@@ -21,9 +20,7 @@ import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.GrassColors;
-import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.fluid.Fluid;
@@ -51,15 +48,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-		BuiltinItemRendererRegistry.INSTANCE.register(Weapons.AXE, (itemStack, mode, matrixStack, vertexConsumerProvider, i, i1) -> {
-			if (mode == ModelTransformation.Mode.GUI) {
-				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe_inventory.png"));
-			} else {
-				MinecraftClient.getInstance().getTextureManager().bindTexture(new Identifier(JavaDungeons.MOD_ID, "textures/item/axe.png"));
-			}
-			DrawableHelper.drawTexture(matrixStack, 0, 0, 16, 16, 0, 0, 16, 16, 16, 16);
-		});
-
         // register color providers
         ColorProviderRegistry.BLOCK.register(
             GRASS_BLOCK_COLORS,

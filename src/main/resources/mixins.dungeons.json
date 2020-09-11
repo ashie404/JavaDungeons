@@ -9,6 +9,7 @@
     "CrossbowItemMixin",
     "HeldItemRendererMixin",
     "ItemMixin",
+    "ItemRendererMixin",
     "MixinCactusBlock",
     "MixinFeature",
     "MixinPlantBlock",
