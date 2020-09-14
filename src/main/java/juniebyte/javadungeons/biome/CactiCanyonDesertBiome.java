@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import juniebyte.javadungeons.content.CactiCanyonBlocks;
@@ -89,4 +90,4 @@ public final class CactiCanyonDesertBiome extends Biome {
       this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.ZOMBIE_VILLAGER, 1, 1, 1));
       this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.HUSK, 80, 4, 4));
    }
-}
+}*/

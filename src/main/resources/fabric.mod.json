@@ -19,16 +19,18 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "juniebyte.javadungeons.JavaDungeons"
+      "net.fabricmc.fabric.api.FabricBiomesEntrypoint",
+      "juniebyte.javadungeons.JavaDungeons",
+      "juniebyte.javadungeons.FabricBiomeTest"
     ],
     "client": [
       "juniebyte.javadungeons.JavaDungeonsClient"
     ]
   },
-
   "mixins": [
     "mixins.dungeons.json"
   ],
+  "accessWidener": "dungeons.aw",
 
   "depends": {
     "fabricloader": ">=0.8.0",

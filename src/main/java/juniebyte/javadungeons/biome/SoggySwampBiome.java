@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
@@ -107,4 +108,4 @@ public final class SoggySwampBiome extends Biome {
         return 0x6c6e4f;
     }
 
-}
+}*/

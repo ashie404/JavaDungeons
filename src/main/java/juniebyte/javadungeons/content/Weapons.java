@@ -15,7 +15,7 @@ public class Weapons {
 
     // Pickaxes
     public static DungeonsPickaxe STEEL_PICKAXE;
-    public static DungeonsPickaxe STEEL_PICKAXE;
+    public static DungeonsPickaxe DIAMOND_PICKAXE;
 
     // Swords
     public static DungeonsSword CLAYMORE;

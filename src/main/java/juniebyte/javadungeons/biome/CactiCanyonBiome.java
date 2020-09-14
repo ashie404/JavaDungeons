@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import juniebyte.javadungeons.content.CactiCanyonBlocks;
@@ -128,4 +129,4 @@ public class CactiCanyonBiome extends Biome {
     public int getFoliageColor() {
         return 0x71B518;
     }
-}
+}*/

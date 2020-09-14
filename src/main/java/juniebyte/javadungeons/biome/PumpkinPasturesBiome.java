@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
@@ -177,4 +178,4 @@ public class PumpkinPasturesBiome extends Biome {
     public int getFoliageColor() {
         return 0xCD934C;
     }
-}
+}*/

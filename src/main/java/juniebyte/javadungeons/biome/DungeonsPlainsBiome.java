@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
@@ -112,4 +113,4 @@ public class DungeonsPlainsBiome extends Biome {
     public int getFoliageColor() {
         return 0x668E38;
     }
-}
+}*/
