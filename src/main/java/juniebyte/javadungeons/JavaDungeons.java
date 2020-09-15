@@ -73,26 +73,26 @@ public class JavaDungeons implements ModInitializer {
 //		SurfaceBuilders.init();
 //		Features.init();
 		Biomes.init();
-		VillagerProfessionBuilder.create()
+		Registry.register(Registry.VILLAGER_PROFESSION, id("gift_wrapper"), VillagerProfessionBuilder.create()
 				.id(id("gift_wrapper"))
 				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("gift_wrapper_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.GLASS), 1, 1)))
-				.build();
-		VillagerProfessionBuilder.create()
+				.build());
+		Registry.register(Registry.VILLAGER_PROFESSION, id("luxury_merchant"), VillagerProfessionBuilder.create()
 				.id(id("luxury_merchant"))
 				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("luxury_merchant_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.BLUE_STAINED_GLASS), 1, 1)))
-				.build();
-		VillagerProfessionBuilder.create()
-				.id(id("mystery_merchant"))
-				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("mystery_merchant_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.PINK_STAINED_GLASS), 1, 1)))
-				.build();
-		VillagerProfessionBuilder.create()
+				.build());
+		Registry.register(Registry.VILLAGER_PROFESSION, id("quest_giver"), VillagerProfessionBuilder.create()
 				.id(id("quest_giver"))
 				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("quest_giver_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.PURPLE_STAINED_GLASS), 1, 1)))
-				.build();
-		VillagerProfessionBuilder.create()
+				.build());
+		Registry.register(Registry.VILLAGER_PROFESSION, id("shop_keeper"), VillagerProfessionBuilder.create()
 				.id(id("shop_keeper"))
 				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("shop_keeper_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.WHITE_STAINED_GLASS), 1, 1)))
-				.build();
+				.build());
+		Registry.register(Registry.VILLAGER_PROFESSION, id("mystery_merchant"), VillagerProfessionBuilder.create()
+				.id(id("mystery_merchant"))
+				.workstation(PointOfInterestRegistry.register(new PointOfInterestTypeCustom("mystery_merchant_poi", PointOfInterestTypeCustom.getAllStatesOf(Blocks.PINK_STAINED_GLASS), 1, 1)))
+				.build());
 
 		//Loop over existing biomes
 //		BuiltinRegistries.BIOME.forEach(this::handleBiome);

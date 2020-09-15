@@ -180,7 +180,7 @@ public class GenericBlocks {
         CRACKED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.GENERIC, "cracked_andesite");
 
         // plants
-        BERRY_BUSH_BLOCK = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "berry_bush_block");
+        BERRY_BUSH_BLOCK = new DungeonsLeaves(JavaDungeons.GENERIC, "berry_bush_block");
         SHORT_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "short_grass");
         FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "fern");
         SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.GENERIC, "shrub");

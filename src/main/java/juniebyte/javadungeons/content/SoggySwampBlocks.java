@@ -54,7 +54,7 @@ public class SoggySwampBlocks {
 
         // swamp tree
         SS_SWAMP_LOG = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_log");
-        SS_SWAMP_LEAVES = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_leaves");
+        SS_SWAMP_LEAVES = new DungeonsLeaves(JavaDungeons.SOGGY_SWAMP, "ss_swamp_leaves");
         SS_SWAMP_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_planks", "ss_swamp_planks_slab", "ss_swamp_planks_stairs");
         SS_SWAMP_SAPLING = new DungeonsSapling(new SwampSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_sapling");
 

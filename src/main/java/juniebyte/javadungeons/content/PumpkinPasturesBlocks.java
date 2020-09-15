@@ -54,8 +54,8 @@ public class PumpkinPasturesBlocks {
 
     public static void init() {
         // foliage
-        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
-        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(Material.LEAVES, 0.2F, 0.2F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
+        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
+        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
         
         // saplings
         PM_RED_AUTUMNAL_SAPLING = new DungeonsSapling(new RedAutumnalSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_sapling");

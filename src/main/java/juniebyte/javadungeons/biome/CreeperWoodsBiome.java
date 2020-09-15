@@ -49,7 +49,7 @@ public class CreeperWoodsBiome extends Biome {
     static final GenerationSettings.Builder GENERATION_SETTINGS = (new GenerationSettings.Builder()).surfaceBuilder(SURFACE_BUILDER);
 
     public CreeperWoodsBiome() {
-        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
+        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0x197862).foliageColor(0x197862).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
     }
 
 
@@ -86,6 +86,18 @@ public class CreeperWoodsBiome extends Biome {
         DefaultBiomeFeatures.addDefaultOres(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addDefaultDisks(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addForestTrees(GENERATION_SETTINGS);
+
+        /*GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_trees"),
+                Feature.RANDOM_SELECTOR.configure(
+                        new RandomFeatureConfig(
+                                ImmutableList.of(
+                                        ConfiguredFeatures.BIRCH_BEES_0002.withChance(0.2F),
+                                        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_fancy_oak_tree"),Feature.TREE.configure(BiomeMisc.CW_FANCY_OAK.setTreeDecorators(ImmutableList.of(ConfiguredFeatures.Decorators.VERY_RARE_BEEHIVES_TREES)))).withChance(0.1F)
+                                ),
+                                Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_oak_tree"), Feature.TREE.configure(BiomeMisc.CW_OAK.setTreeDecorators(ImmutableList.of(ConfiguredFeatures.Decorators.VERY_RARE_BEEHIVES_TREES)))))
+                ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
+                        .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1))))
+        );*/
 
         // glow shrooms
         //TODO
@@ -185,12 +197,12 @@ public class CreeperWoodsBiome extends Biome {
     
     @Override
     public int getGrassColorAt(double x, double z) {
-        return 0x408572;
+        return 0x197862;
     }
   
     @Override
     public int getFoliageColor() {
-        return 0x408572;
+        return 0x197862;
     }
 
 }
