@@ -15,6 +15,13 @@ repositories {
     	name "jitpack"
     	url "https://jitpack.io" 
 	}
+	maven {
+		url = "https://maven.theillusivec4.top"
+	}
+	maven {
+		name = "AdrianTodt's Maven"
+		url = "https://dl.bintray.com/adriantodt/maven"
+	}
 }
 
 minecraft {
@@ -31,8 +38,21 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	implementation 'com.github.javafaker:javafaker:1.0.2'
 
-	// Towelette. Optional dependency, but has to be here for the compat mixins to compile correctly.
-//	modImplementation("com.github.Virtuoel:Towelette:${project.towelette}") { exclude group: "net.fabricmc.fabric-api" }
+	modImplementation ("com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}") {
+		exclude group: "net.fabricmc.fabric-api"
+		exclude group: "io.github.cottonmc"
+	}
+	include ("com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}") {
+		exclude group: "net.fabricmc.fabric-api"
+		exclude group: "io.github.cottonmc"
+	}
+
+	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:${project.fabric_shield_lib_version}"
+
+	modImplementation ("com.github.cottonmc:Jankson-Fabric:1.16-SNAPSHOT") {
+		exclude group: "net.fabricmc.fabric-api"
+		force = true
+	}
 }
 
 processResources {

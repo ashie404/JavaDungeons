@@ -114,7 +114,7 @@ public class BiomeUtils {
         Int2ObjectMap<RegistryKey<Biome>> biomes = BuiltinBiomesAccessor.getBY_RAW_ID();
 
         if (!biomes.containsKey(rawId)) {
-            JavaDungeons.log.debug("Automatically creating layer-related raw-id mapping for biome {}", biomeKey);
+            JavaDungeons.LOGGER.debug("Automatically creating layer-related raw-id mapping for biome {}", biomeKey);
             biomes.put(rawId, biomeKey);
         }
     }
