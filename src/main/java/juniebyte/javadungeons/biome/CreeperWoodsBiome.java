@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableSet;
 import juniebyte.javadungeons.content.CreeperWoodsBlocks;
 import juniebyte.javadungeons.content.Features;
 import juniebyte.javadungeons.content.GenericBlocks;
+import juniebyte.javadungeons.content.JDConfiguredFeatures;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -97,9 +98,9 @@ public class CreeperWoodsBiome extends Biome {
                         new RandomFeatureConfig(
                                 ImmutableList.of(
                                         ConfiguredFeatures.BIRCH_BEES_0002.withChance(0.2F),
-                                        juniebyte.javadungeons.content.ConfiguredFeatures.CW_FANCY_OAK_TREE.withChance(0.1F)
+                                        JDConfiguredFeatures.CW_FANCY_OAK_TREE.withChance(0.1F)
                                 ),
-                                juniebyte.javadungeons.content.ConfiguredFeatures.CW_OAK_TREE
+                                JDConfiguredFeatures.CW_OAK_TREE
                         )
                 ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
                         .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1))))

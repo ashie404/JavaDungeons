@@ -58,9 +58,9 @@ public class JavaDungeons implements ModInitializer {
 		Armors.init();
 
 		// worldgen
-//		SurfaceBuilders.init();
+		SurfaceBuilders.init();
 		Features.init();
-		ConfiguredFeatures.init();
+		JDConfiguredFeatures.init();
 		Biomes.init();
 		Registry.register(Registry.VILLAGER_PROFESSION, id("gift_wrapper"), VillagerProfessionBuilder.create()
 				.id(id("gift_wrapper"))

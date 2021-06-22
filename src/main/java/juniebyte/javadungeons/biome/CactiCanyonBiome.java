@@ -1,17 +1,19 @@
 package juniebyte.javadungeons.biome;
 
-import juniebyte.javadungeons.content.ConfiguredFeatures;
+import juniebyte.javadungeons.content.JDConfiguredFeatures;
 import juniebyte.javadungeons.content.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.CountConfig;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placer.DoublePlantPlacer;
@@ -20,6 +22,7 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
+import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
 import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
 import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
@@ -44,35 +47,25 @@ public class CactiCanyonBiome extends Biome {
 	static final GenerationSettings.Builder GENERATION_SETTINGS = (new GenerationSettings.Builder()).surfaceBuilder(SURFACE_BUILDER);
 
 	public CactiCanyonBiome() {
-		super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0x197862).foliageColor(0x197862).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
-	}
+        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0x197862).foliageColor(0x197862).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
+    }
 
-    static  {
+    static {
 		GENERATION_SETTINGS.structureFeature(ConfiguredStructureFeatures.MINESHAFT);
 		GENERATION_SETTINGS.structureFeature(ConfiguredStructureFeatures.STRONGHOLD);
-		GENERATION_SETTINGS.structureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.STANDARD)));
+		GENERATION_SETTINGS.structureFeature(Registry.register(BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE, new Identifier(MOD_ID, "cc_ruined_portal"), StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.STANDARD))));
 
         DefaultBiomeFeatures.addLandCarvers(GENERATION_SETTINGS);
 
         DefaultBiomeFeatures.addDefaultUndergroundStructures(GENERATION_SETTINGS);
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
-				ConfiguredFeatures.registerConfiguredFeature("dungeons_water_lake",
-						Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
-								.range(net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.BOTTOM_TO_TOP).spreadHorizontally()
-				)
-		);
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, JDConfiguredFeatures.DUNGEONS_WATER_LAKE);
 
         DefaultBiomeFeatures.addDungeons(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addMineables(GENERATION_SETTINGS);
 
         // add cacti canyon dirt
-		GENERATION_SETTINGS.feature(
-                GenerationStep.Feature.UNDERGROUND_ORES,
-				ConfiguredFeatures.registerConfiguredFeature("cc_dirt", Feature.ORE.configure(
-                        new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CactiCanyonBlocks.CC_DIRT.getDefaultState(), 33)
-                ).uniformRange(YOffset.fixed(30), YOffset.getTop()))
-        );
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.UNDERGROUND_ORES, JDConfiguredFeatures.CC_DIRT);
 
         DefaultBiomeFeatures.addDefaultOres(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addDefaultDisks(GENERATION_SETTINGS);
@@ -80,31 +73,29 @@ public class CactiCanyonBiome extends Biome {
         DefaultBiomeFeatures.addDefaultVegetation(GENERATION_SETTINGS);
 
         // add cacti canyon vegatation
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("desert_grass", Feature.RANDOM_PATCH.configure(
-            (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_DESERT_GRASS.getDefaultState()), new SimpleBlockPlacer())).tries(4).build()
-        ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.CC_GRASS);
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("cc_fern", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("cc_fern", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_FERN.getDefaultState()), new SimpleBlockPlacer())).tries(32).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(2)))));
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("cactus", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("cactus", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_CACTUS.getDefaultState()), new SimpleBlockPlacer())).tries(4).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("small_cacti", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("small_cacti", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_SMALL_CACTUS.getDefaultState()), new SimpleBlockPlacer())).tries(2).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("flowers", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("flowers", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_FLOWERS.getDefaultState()), new SimpleBlockPlacer())).tries(8).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("yucca", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("yucca", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_YUCCA.getDefaultState()), new DoublePlantPlacer())).tries(2).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
 
-		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.registerConfiguredFeature("tall_cacti", Feature.RANDOM_PATCH.configure(
+		GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, JDConfiguredFeatures.registerConfiguredFeature("tall_cacti", Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_TALL_CACTUS.getDefaultState()), new DoublePlantPlacer())).tries(1).build()
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1)))));
 
