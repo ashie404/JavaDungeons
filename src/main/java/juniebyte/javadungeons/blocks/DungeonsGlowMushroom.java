@@ -59,7 +59,7 @@ public class DungeonsGlowMushroom extends SeaPickleBlock {
             }
         }
         
-        super.onSteppedOn(world, pos, entity);
+        super.onSteppedOn(world, pos, state, entity);
     }
 
     public DungeonsGlowMushroom(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {

@@ -1,16 +1,27 @@
 {
-    "required": true,
-    "package": "juniebyte.javadungeons.mixin",
-    "compatibilityLevel": "JAVA_8",
-    "plugin": "juniebyte.javadungeons.mixin.ToweletteCompatMixinPlugin",
-    "mixins": [
-      "MixinPlantBlock",
-      "MixinFeature",
-      "MixinCactusBlock",
-      "CompatMixinFluidloggable",
-      "CompatMixinWaterPlant"
-    ],
-    "injectors": {
-      "defaultRequire": 1
-    }
+  "required": true,
+  "package": "juniebyte.javadungeons.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AbstractSkeletonEntityMixin",
+    "HeldItemRendererMixin",
+    "ItemMixin",
+    "ItemRendererMixin",
+    "MixinArmorFeatureRenderer",
+    "MixinCactusBlock",
+    "MixinFeature",
+    "MixinGenerationSettings",
+    "MixinItem",
+    "MixinPlantBlock",
+    "MobEntityCanUseRangedWeapon_Bow",
+    "MobEntityCanUseRangedWeapon_Crossbow",
+    "PlayerEntityRendererMixin",
+    "PlayerListEntryMixin",
+    "ProjectileUtilMixin",
+    "SkeletonEntityModelMixin",
+    "VillagerTypeAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
   }
+}

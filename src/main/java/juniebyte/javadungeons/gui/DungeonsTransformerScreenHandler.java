@@ -1,13 +1,8 @@
 package juniebyte.javadungeons.gui;
 
-import net.minecraft.screen.*;
-
 import com.google.common.collect.Lists;
-
 import juniebyte.javadungeons.content.GenericBlocks;
 import juniebyte.javadungeons.recipe.DungeonsTransformerRecipe;
-
-import java.util.List;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,10 +12,16 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.Property;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class DungeonsTransformerScreenHandler extends ScreenHandler {
    private final ScreenHandlerContext context;
@@ -62,7 +63,7 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
             return false;
          }
 
-         public ItemStack onTakeItem(PlayerEntity player, ItemStack stack) {
+         public void onTakeItem(PlayerEntity player, ItemStack stack) {
             ItemStack itemStack = DungeonsTransformerScreenHandler.this.inputSlot.takeStack(1);
             if (!itemStack.isEmpty()) {
                DungeonsTransformerScreenHandler.this.populateResult();
@@ -72,12 +73,11 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
             context.run((world, blockPos) -> {
                long l = world.getTime();
                if (DungeonsTransformerScreenHandler.this.lastTakeTime != l) {
-                  world.playSound((PlayerEntity)null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                  world.playSound(null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 1.0F, 1.0F);
                   DungeonsTransformerScreenHandler.this.lastTakeTime = l;
                }
 
             });
-            return super.onTakeItem(player, stack);
          }
       });
 
@@ -149,7 +149,7 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
 
    private void populateResult() {
       if (!this.availableRecipes.isEmpty()) {
-         DungeonsTransformerRecipe dungeonsTransformerRecipe = (DungeonsTransformerRecipe)this.availableRecipes.get(this.selectedRecipe.get());
+         DungeonsTransformerRecipe dungeonsTransformerRecipe = this.availableRecipes.get(this.selectedRecipe.get());
          this.outputSlot.setStack(dungeonsTransformerRecipe.craft(this.input));
       } else {
          this.outputSlot.setStack(ItemStack.EMPTY);
@@ -173,7 +173,7 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
 
    public ItemStack transferSlot(PlayerEntity player, int index) {
       ItemStack itemStack = ItemStack.EMPTY;
-      Slot slot = (Slot)this.slots.get(index);
+      Slot slot = this.slots.get(index);
       if (slot != null && slot.hasStack()) {
          ItemStack itemStack2 = slot.getStack();
          Item item = itemStack2.getItem();
@@ -184,12 +184,12 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
                return ItemStack.EMPTY;
             }
 
-            slot.onStackChanged(itemStack2, itemStack);
+            slot.onQuickTransfer(itemStack2, itemStack);
          } else if (index == 0) {
             if (!this.insertItem(itemStack2, 2, 38, false)) {
                return ItemStack.EMPTY;
             }
-         } else if (this.world.getRecipeManager().getFirstMatch(DungeonsTransformerRecipe.TYPE, new SimpleInventory(new ItemStack[]{itemStack2}), this.world).isPresent()) {
+         } else if (this.world.getRecipeManager().getFirstMatch(DungeonsTransformerRecipe.TYPE, new SimpleInventory(itemStack2), this.world).isPresent()) {
             if (!this.insertItem(itemStack2, 0, 1, false)) {
                return ItemStack.EMPTY;
             }
@@ -221,7 +221,7 @@ public class DungeonsTransformerScreenHandler extends ScreenHandler {
       super.close(player);
       this.output.removeStack(1);
       this.context.run((world, blockPos) -> {
-         this.dropInventory(player, player.world, this.input);
+         this.dropInventory(player, this.input);
       });
    }
 }

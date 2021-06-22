@@ -36,11 +36,12 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
       super(codec);
    }
 
-   public void generate(Random random, Chunk chunk, Biome biome, int i, int j, int k, double d, BlockState blockState, BlockState blockState2, int l, long m, TernarySurfaceConfig ternarySurfaceConfig) {
+   @Override
+   public void generate(Random random, Chunk chunk, Biome biome, int x, int z, int height, double noise, BlockState defaultBlock, BlockState defaultFluid, int seaLevel, int i, long m, TernarySurfaceConfig surfaceConfig) {
       double e = 0.0D;
-      double f = Math.min(Math.abs(d), this.heightCutoffNoise.sample((double)i * 0.25D, (double)j * 0.25D, false) * 15.0D);
+      double f = Math.min(Math.abs(noise), this.heightCutoffNoise.sample((double)x * 0.25D, (double)z * 0.25D, false) * 15.0D);
       if (f > 0.0D) {
-         double h = Math.abs(this.heightNoise.sample((double)i * 0.001953125D, (double)j * 0.001953125D, false));
+         double h = Math.abs(this.heightNoise.sample((double)x * 0.001953125D, (double)z * 0.001953125D, false));
          e = f * f * 2.5D;
          double n = Math.ceil(h * 50.0D) + 14.0D;
          if (e > n) {
@@ -50,44 +51,44 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
          e += 64.0D;
       }
 
-      int o = i & 15;
-      int p = j & 15;
+      int o = x & 15;
+      int p = z & 15;
       BlockState blockState3 = WHITE_TERRACOTTA;
-      BlockState blockState4 = biome.getSurfaceConfig().getUnderMaterial();
-      int q = (int)(d / 3.0D + 3.0D + random.nextDouble() * 0.25D);
-      boolean bl = Math.cos(d / 3.0D * 3.141592653589793D) > 0.0D;
+      BlockState blockState4 = biome.getGenerationSettings().getSurfaceConfig().getUnderMaterial();
+      int q = (int)(noise / 3.0D + 3.0D + random.nextDouble() * 0.25D);
+      boolean bl = Math.cos(noise / 3.0D * 3.141592653589793D) > 0.0D;
       int r = -1;
       boolean bl2 = false;
       BlockPos.Mutable mutable = new BlockPos.Mutable();
 
-      for(int s = Math.max(k, (int)e + 1); s >= 0; --s) {
+      for(int s = Math.max(height, (int)e + 1); s >= 0; --s) {
          mutable.set(o, s, p);
          if (chunk.getBlockState(mutable).isAir() && s < (int)e) {
-            chunk.setBlockState(mutable, blockState, false);
+            chunk.setBlockState(mutable, defaultBlock, false);
          }
 
          BlockState blockState5 = chunk.getBlockState(mutable);
          if (blockState5.isAir()) {
             r = -1;
-         } else if (blockState5.isOf(blockState.getBlock())) {
+         } else if (blockState5.isOf(defaultBlock.getBlock())) {
             if (r == -1) {
                bl2 = false;
                if (q <= 0) {
                   blockState3 = Blocks.AIR.getDefaultState();
-                  blockState4 = blockState;
-               } else if (s >= l - 4 && s <= l + 1) {
+                  blockState4 = defaultBlock;
+               } else if (s >= seaLevel - 4 && s <= seaLevel + 1) {
                   blockState3 = WHITE_TERRACOTTA;
-                  blockState4 = biome.getSurfaceConfig().getUnderMaterial();
+                  blockState4 = biome.getGenerationSettings().getSurfaceConfig().getUnderMaterial();
                }
 
-               if (s < l && (blockState3 == null || blockState3.isAir())) {
-                  blockState3 = blockState2;
+               if (s < seaLevel && (blockState3 == null || blockState3.isAir())) {
+                  blockState3 = defaultFluid;
                }
 
-               r = q + Math.max(0, s - l);
-               if (s >= l - 1) {
-                  if (s <= l + 3 + q) {
-                     chunk.setBlockState(mutable, biome.getSurfaceConfig().getTopMaterial(), false);
+               r = q + Math.max(0, s - seaLevel);
+               if (s >= seaLevel - 1) {
+                  if (s <= seaLevel + 3 + q) {
+                     chunk.setBlockState(mutable, biome.getGenerationSettings().getSurfaceConfig().getTopMaterial(), false);
                      bl2 = true;
                   } else {
                      BlockState blockState8;
@@ -95,7 +96,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
                         if (bl) {
                            blockState8 = TERRACOTTA;
                         } else {
-                           blockState8 = this.calculateLayerBlockState(i, s, j);
+                           blockState8 = this.calculateLayerBlockState(x, s, z);
                         }
                      } else {
                         blockState8 = ORANGE_TERRACOTTA;
@@ -115,7 +116,7 @@ public class CactiCanyonSurfaceBuilder extends SurfaceBuilder<TernarySurfaceConf
                if (bl2) {
                   chunk.setBlockState(mutable, ORANGE_TERRACOTTA, false);
                } else {
-                  chunk.setBlockState(mutable, this.calculateLayerBlockState(i, s, j), false);
+                  chunk.setBlockState(mutable, this.calculateLayerBlockState(x, s, z), false);
                }
             }
          }

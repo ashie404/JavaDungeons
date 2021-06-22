@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": {"model": "dungeons:block/candle"}
+        "": {"model": "dungeons:block/green_candle"}
     }
 }

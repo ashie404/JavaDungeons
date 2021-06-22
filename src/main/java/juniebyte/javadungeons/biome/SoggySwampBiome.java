@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
@@ -73,7 +74,6 @@ public final class SoggySwampBiome extends Biome {
 
         DefaultBiomeFeatures.addDefaultMushrooms(this);
 
-
         this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
                 Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.SOGGY_SWAMP_WATER.getDefaultState()))
                         .createDecoratedFeature(Decorator.WATER_LAKE.configure(new ChanceDecoratorConfig(10))));
@@ -108,4 +108,4 @@ public final class SoggySwampBiome extends Biome {
         return 0x6c6e4f;
     }
 
-}
+}*/

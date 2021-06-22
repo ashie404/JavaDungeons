@@ -25,10 +25,10 @@
       "juniebyte.javadungeons.JavaDungeonsClient"
     ]
   },
-
   "mixins": [
     "mixins.dungeons.json"
   ],
+  "accessWidener": "dungeons.aw",
 
   "depends": {
     "fabricloader": ">=0.8.0",

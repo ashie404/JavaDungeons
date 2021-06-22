@@ -57,7 +57,7 @@ public class DungeonsTray extends Block {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(CONTAINS, Properties.Contains.EMPTY);
+        return this.getDefaultState().with(CONTAINS, Properties.Contains.EMPTY);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -82,7 +82,7 @@ public class DungeonsTray extends Block {
                 return ActionResult.PASS;
             }
         } else if (block == GenericBlocks.YELLOW_TULIP) {
-            if (!player.abilities.creativeMode) {
+            if (!player.getAbilities().creativeMode) {
                 itemStack.decrement(1);
             }
             world.setBlockState(pos, state.with(CONTAINS, Properties.Contains.YELLOW_TULIP));

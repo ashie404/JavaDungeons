@@ -1,31 +1,27 @@
 package juniebyte.javadungeons.blocks;
 
-import java.util.Random;
-
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+
+import java.util.Random;
 
 public class DungeonsBrazier extends Block {
 
@@ -45,7 +41,7 @@ public class DungeonsBrazier extends Block {
 	}
 
     public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, boolean soggySwamp, String id) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(type != "unlit" ? 15 : 0));
+        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(!type.equals("unlit") ? 15 : 0));
         this.type = type;
         this.soggySwamp = soggySwamp;
         Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
@@ -64,12 +60,12 @@ public class DungeonsBrazier extends Block {
 
     @Environment(EnvType.CLIENT)
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (type != "unlit") {
+        if (!type.equals("unlit")) {
             double d = (double)pos.getX() + 0.5D;
             double e = (double)pos.getY() + 0.7D;
             double f = (double)pos.getZ() + 0.5D;
             world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
-            world.addParticle(type != "green_lit" ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
+            world.addParticle(!type.equals("green_lit") ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
         }
     }
 }

@@ -46,7 +46,7 @@ public class DungeonsBanner extends Block {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(ROTATION, MathHelper.floor((double)((180.0F + ctx.getPlayerYaw()) * 16.0F / 360.0F) + 0.5D) & 15);
+        return this.getDefaultState().with(ROTATION, MathHelper.floor((double)((180.0F + ctx.getPlayerYaw()) * 16.0F / 360.0F) + 0.5D) & 15);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -54,11 +54,11 @@ public class DungeonsBanner extends Block {
     }
 
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(ROTATION, rotation.rotate((Integer)state.get(ROTATION), 16));
+        return state.with(ROTATION, rotation.rotate(state.get(ROTATION), 16));
     }
   
     public BlockState mirror(BlockState state, BlockMirror mirror) {
-        return (BlockState)state.with(ROTATION, mirror.mirror((Integer)state.get(ROTATION), 16));
+        return state.with(ROTATION, mirror.mirror(state.get(ROTATION), 16));
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

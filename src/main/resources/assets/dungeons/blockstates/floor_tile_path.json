@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": {"model": "dungeons:block/floor_tile_path"}
+    }
+}

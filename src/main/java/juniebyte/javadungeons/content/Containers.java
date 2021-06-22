@@ -11,7 +11,7 @@ public class Containers {
         ContainerProviderRegistry.INSTANCE.registerFactory(DungeonsTransformer.ID, (syncId, identifier, player, buf) -> {
             final World world = player.world;
             final BlockPos pos = buf.readBlockPos();
-            return world.getBlockState(pos).createScreenHandlerFactory(player.world, pos).createMenu(syncId, player.inventory, player);
+            return world.getBlockState(pos).createScreenHandlerFactory(player.world, pos).createMenu(syncId, player.getInventory(), player);
         });
     }
 

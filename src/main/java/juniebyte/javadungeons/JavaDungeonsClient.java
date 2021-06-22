@@ -1,40 +1,39 @@
 package juniebyte.javadungeons;
 
-import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
-import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
-import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.client.color.world.GrassColors;
-import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.BlockRenderView;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.texture.Sprite;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.ResourceType;
-import net.minecraft.text.Style;
-
-import java.util.function.Function;
-
 import juniebyte.javadungeons.blocks.DungeonsTransformer;
 import juniebyte.javadungeons.content.*;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreen;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreenHandler;
 import juniebyte.javadungeons.particles.GreenFlameParticle;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
+import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.color.block.BlockColorProvider;
+import net.minecraft.client.color.item.ItemColorProvider;
+import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.GrassColors;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.texture.Sprite;
+import net.minecraft.client.texture.SpriteAtlasTexture;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.resource.ResourceManager;
+import net.minecraft.resource.ResourceType;
+import net.minecraft.text.Style;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockRenderView;
+
+import java.util.function.Function;
 
 public class JavaDungeonsClient implements ClientModInitializer {
 
@@ -49,7 +48,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
         // register color providers
         ColorProviderRegistry.BLOCK.register(
             GRASS_BLOCK_COLORS,
@@ -167,7 +165,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
         // set up particles
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
-        ClientSpriteRegistryCallback.event(SpriteAtlasTexture.PARTICLE_ATLAS_TEX).register((atlasTexture, registry) -> {
+        ClientSpriteRegistryCallback.event(SpriteAtlasTexture.PARTICLE_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
             registry.register(new Identifier(JavaDungeons.MOD_ID, "particle/green_flame"));
         });
 
@@ -179,7 +177,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
         );
 
         setupFluidRendering(
-            Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
+            Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid objectne
             Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
             new Identifier(JavaDungeons.MOD_ID, "soggy_swamp/soggy_swamp_water"), // texture identifier
             0xFFFFFF // tint color (white because water is colored in its file)
@@ -188,19 +186,44 @@ public class JavaDungeonsClient implements ClientModInitializer {
         // register containers to screens
         ScreenProviderRegistry.INSTANCE.<DungeonsTransformerScreenHandler>registerFactory(DungeonsTransformer.ID, screenHandler -> new DungeonsTransformerScreen(
             screenHandler,
-            MinecraftClient.getInstance().player.inventory, 
+            MinecraftClient.getInstance().player.getInventory(),
             DungeonsTransformer.CONTAINER_NAME.setStyle(Style.EMPTY)
         ));
+
+        //TODO
+		/*ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.PHANTOM_ARMOR, Armors.PHANTOM_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/phantom_armor.png", Armors.PHANTOM_ARMOR, Armors.PHANTOM_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new EvocationRobeModel<>(1.0F, slot, entity), Armors.EVOCATION_ROBE, Armors.EVOCATION_ROBE_HAT);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/evocation_robe.png", Armors.EVOCATION_ROBE, Armors.EVOCATION_ROBE_HAT);
+		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new EvocationRobeModel<>(1.0F, slot, entity), Armors.EMBER_ROBE, Armors.EMBER_ROBE_HAT);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/ember_robe.png", Armors.EMBER_ROBE, Armors.EMBER_ROBE_HAT);*/
+
+		/*ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.SNOW_ARMOR, Armors.SNOW_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/snow_armor.png", Armors.SNOW_ARMOR, Armors.SNOW_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.SNOW_ARMOR, Armors.SNOW_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/frost_armor.png", Armors.FROST_ARMOR, Armors.FROST_ARMOR_HELMET);
+		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.FROST_BITE, Armors.FROST_BITE_HELMET);
+		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
+				JavaDungeons.MOD_ID + ":textures/models/armor/frost_bite.png", Armors.FROST_BITE, Armors.FROST_BITE_HELMET);*/
     }    
 
-    public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color)
-	{
+    public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color) {
 		final Identifier stillSpriteId = new Identifier(textureFluidId.getNamespace(), "block/" + textureFluidId.getPath() + "_still");
 		final Identifier flowingSpriteId = new Identifier(textureFluidId.getNamespace(), "block/" + textureFluidId.getPath() + "_flow");
  
 		// If they're not already present, add the sprites to the block atlas
-		ClientSpriteRegistryCallback.event(SpriteAtlasTexture.BLOCK_ATLAS_TEX).register((atlasTexture, registry) ->
-		{
+		ClientSpriteRegistryCallback.event(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
 			registry.register(stillSpriteId);
 			registry.register(flowingSpriteId);
 		});
@@ -210,8 +233,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
  
 		final Sprite[] fluidSprites = { null, null };
  
-		ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new SimpleSynchronousResourceReloadListener()
-		{
+		ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new SimpleSynchronousResourceReloadListener() {
 			@Override
 			public Identifier getFabricId()
 			{
@@ -222,17 +244,15 @@ public class JavaDungeonsClient implements ClientModInitializer {
 			 * Get the sprites from the block atlas when resources are reloaded
 			 */
 			@Override
-			public void apply(ResourceManager resourceManager)
-			{
-				final Function<Identifier, Sprite> atlas = MinecraftClient.getInstance().getSpriteAtlas(SpriteAtlasTexture.BLOCK_ATLAS_TEX);
+			public void reload(ResourceManager resourceManager) {
+				final Function<Identifier, Sprite> atlas = MinecraftClient.getInstance().getSpriteAtlas(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE);
 				fluidSprites[0] = atlas.apply(stillSpriteId);
 				fluidSprites[1] = atlas.apply(flowingSpriteId);
 			}
 		});
  
 		// The FluidRenderer gets the sprites and color from a FluidRenderHandler during rendering
-		final FluidRenderHandler renderHandler = new FluidRenderHandler()
-		{
+		final FluidRenderHandler renderHandler = new FluidRenderHandler() {
 			@Override
 			public Sprite[] getFluidSprites(BlockRenderView view, BlockPos pos, FluidState state)
 			{
