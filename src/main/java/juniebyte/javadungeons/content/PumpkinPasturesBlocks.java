@@ -2,8 +2,8 @@ package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
-import juniebyte.javadungeons.gen.RedAutumnalSaplingGenerator;
-import juniebyte.javadungeons.gen.YellowAutumnalSaplingGenerator;
+import juniebyte.javadungeons.blocks.saplings.RedAutumnalSaplingGenerator;
+import juniebyte.javadungeons.blocks.saplings.YellowAutumnalSaplingGenerator;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
@@ -58,8 +58,8 @@ public class PumpkinPasturesBlocks {
         PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
         
         // saplings
-        PM_RED_AUTUMNAL_SAPLING = new DungeonsSapling(new RedAutumnalSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_sapling");
-        PM_YELLOW_AUTUMNAL_SAPLING = new DungeonsSapling(new YellowAutumnalSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_sapling");
+        PM_RED_AUTUMNAL_SAPLING = new DungeonsSapling(new RedAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_sapling");
+        PM_YELLOW_AUTUMNAL_SAPLING = new DungeonsSapling(new YellowAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_sapling");
 
         // melons
         PM_BURNT_PUMPKIN = new DungeonsBlock(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");

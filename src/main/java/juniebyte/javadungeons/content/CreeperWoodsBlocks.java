@@ -2,6 +2,8 @@ package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
+import juniebyte.javadungeons.blocks.saplings.CWFancyOakSaplingGenerator;
+import juniebyte.javadungeons.blocks.saplings.CWOakSaplingGenerator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -58,6 +60,8 @@ public class CreeperWoodsBlocks {
     public static DungeonsGlowingPlant CW_POP_FLOWER;
     public static DungeonsPlant CW_FLOWER_PATCH;
     public static DungeonsLeaves CW_OAK_LEAVES;
+    public static DungeonsSapling CW_OAK_SAPLING;
+    public static DungeonsSapling CW_FANCY_OAK_SAPLING;
 
     // custom dungeons blocks
     public static DungeonsGlowMushroom CW_GLOW_MUSHROOM;
@@ -90,7 +94,7 @@ public class CreeperWoodsBlocks {
         CW_DARK_ANDESITE_PILLAR = new DungeonsPillar(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE,  JavaDungeons.CREEPER_WOODS, "cw_dark_andesite_pillar");
 
         // ground related
-        CW_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
+        CW_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, JavaDungeons.CREEPER_WOODS, "cw_grass_block");
         CW_GRASSY_DIRT = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_grassy_dirt");
         CW_DENSE_GRASSY_DIRT = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_dense_grassy_dirt");
         CW_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.CREEPER_WOODS, "cw_dirt_path");
@@ -119,6 +123,8 @@ public class CreeperWoodsBlocks {
         CW_POP_FLOWER = new DungeonsGlowingPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_pop_flower");
         CW_FLOWER_PATCH = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.CREEPER_WOODS, "cw_flower_patch");
         CW_OAK_LEAVES = new DungeonsLeaves(JavaDungeons.CREEPER_WOODS, "cw_oak_leaves");
+        CW_OAK_SAPLING = new DungeonsSapling(new CWOakSaplingGenerator(), JavaDungeons.CREEPER_WOODS, "cw_oak_sapling");
+        CW_FANCY_OAK_SAPLING = new DungeonsSapling(new CWFancyOakSaplingGenerator(), JavaDungeons.CREEPER_WOODS, "cw_fancy_oak_sapling");
 
         // custom dungeons blocks
         CW_GLOW_MUSHROOM = new DungeonsGlowMushroom(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.SLIME, JavaDungeons.CREEPER_WOODS, "cw_glow_mushroom");

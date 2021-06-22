@@ -8,7 +8,6 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.item.BuiltinModelItemRenderer;
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
@@ -25,8 +24,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static net.minecraft.client.render.item.ItemRenderer.getDirectGlintVertexConsumer;
-import static net.minecraft.client.render.item.ItemRenderer.getGlintVertexConsumer;
+import static net.minecraft.client.render.item.ItemRenderer.getDirectItemGlintConsumer;
+import static net.minecraft.client.render.item.ItemRenderer.getItemGlintConsumer;
 
 @Mixin(ItemRenderer.class)
 public abstract class ItemRendererMixin {
@@ -49,7 +48,7 @@ public abstract class ItemRendererMixin {
             model.getTransformation().getTransformation(renderMode).apply(leftHanded, matrices);
             matrices.translate(-0.5D, -0.5D, -0.5D);
             if (model.isBuiltin() || stack.getItem() == Items.TRIDENT && !bl) {
-                BuiltinModelItemRenderer.INSTANCE.render(stack, renderMode, matrices, vertexConsumers, light, overlay);
+                model = this.models.getModelManager().getModel(new ModelIdentifier("minecraft:trident#inventory"));
             } else {
                 boolean bl3;
                 if (renderMode != ModelTransformation.Mode.GUI && !renderMode.isFirstPerson() && stack.getItem() instanceof BlockItem) {
@@ -62,9 +61,9 @@ public abstract class ItemRendererMixin {
                 RenderLayer renderLayer = RenderLayers.getItemLayer(stack, bl3);
                 VertexConsumer vertexConsumer4;
                 if (bl3) {
-                    vertexConsumer4 = getDirectGlintVertexConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
+                    vertexConsumer4 = getDirectItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
                 } else {
-                    vertexConsumer4 = getGlintVertexConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
+                    vertexConsumer4 = getItemGlintConsumer(vertexConsumers, renderLayer, true, stack.hasGlint());
                 }
 
                 this.renderBakedItemModel(model, stack, light, overlay, matrices, vertexConsumer4);

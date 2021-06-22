@@ -2,7 +2,7 @@ package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
-import juniebyte.javadungeons.gen.SwampSaplingGenerator;
+import juniebyte.javadungeons.blocks.saplings.SwampSaplingGenerator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
@@ -41,7 +41,7 @@ public class SoggySwampBlocks {
 
     public static void init() {
         // ground related
-        SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.GRASS_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
+        SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
         SS_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
         SS_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
 
@@ -56,7 +56,7 @@ public class SoggySwampBlocks {
         SS_SWAMP_LOG = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_log");
         SS_SWAMP_LEAVES = new DungeonsLeaves(JavaDungeons.SOGGY_SWAMP, "ss_swamp_leaves");
         SS_SWAMP_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_planks", "ss_swamp_planks_slab", "ss_swamp_planks_stairs");
-        SS_SWAMP_SAPLING = new DungeonsSapling(new SwampSaplingGenerator(), Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.SOGGY_SWAMP, "ss_swamp_sapling");
+        SS_SWAMP_SAPLING = new DungeonsSapling(new SwampSaplingGenerator(), JavaDungeons.SOGGY_SWAMP, "ss_swamp_sapling");
 
         // bridge related
         SS_BRIDGE_PLANKS = new DungeonsTopSlab(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_bridge_planks");

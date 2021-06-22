@@ -1,22 +1,25 @@
 package juniebyte.javadungeons.biome;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import juniebyte.javadungeons.content.CreeperWoodsBlocks;
+import juniebyte.javadungeons.content.Features;
 import juniebyte.javadungeons.content.GenericBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.gen.CountConfig;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountNoiseDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;
@@ -27,6 +30,8 @@ import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
 import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
+import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
+import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
 public class CreeperWoodsBiome extends Biome {
     static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = newConfiguredSurfaceBuilder("plains", new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT,
@@ -44,7 +49,7 @@ public class CreeperWoodsBiome extends Biome {
     static final float DOWNFALL = 0.8F;
     static final int WATER_COLOR = 4159204;
     static final int WATER_FOG_COLOR = 329011;
-    static final Weather WEATHER = new Weather(PRECIPATATION, TEMPERATURE, TemperatureModifier.NONE, DOWNFALL);
+    static final Biome.Weather WEATHER = new Biome.Weather(PRECIPATATION, TEMPERATURE, TemperatureModifier.NONE, DOWNFALL);
     static final SpawnSettings.Builder SPAWN_SETTINGS = new SpawnSettings.Builder();
     static final GenerationSettings.Builder GENERATION_SETTINGS = (new GenerationSettings.Builder()).surfaceBuilder(SURFACE_BUILDER);
 
@@ -87,23 +92,25 @@ public class CreeperWoodsBiome extends Biome {
         DefaultBiomeFeatures.addDefaultDisks(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addForestTrees(GENERATION_SETTINGS);
 
-        /*GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_trees"),
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_trees"),
                 Feature.RANDOM_SELECTOR.configure(
                         new RandomFeatureConfig(
                                 ImmutableList.of(
                                         ConfiguredFeatures.BIRCH_BEES_0002.withChance(0.2F),
-                                        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_fancy_oak_tree"),Feature.TREE.configure(BiomeMisc.CW_FANCY_OAK.setTreeDecorators(ImmutableList.of(ConfiguredFeatures.Decorators.VERY_RARE_BEEHIVES_TREES)))).withChance(0.1F)
+                                        juniebyte.javadungeons.content.ConfiguredFeatures.CW_FANCY_OAK_TREE.withChance(0.1F)
                                 ),
-                                Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "cw_oak_tree"), Feature.TREE.configure(BiomeMisc.CW_OAK.setTreeDecorators(ImmutableList.of(ConfiguredFeatures.Decorators.VERY_RARE_BEEHIVES_TREES)))))
+                                juniebyte.javadungeons.content.ConfiguredFeatures.CW_OAK_TREE
+                        )
                 ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
                         .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1))))
-        );*/
+        );
 
         // glow shrooms
         //TODO
-        /*GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION,
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION,
+                Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "glow_plants"),
                 Features.GLOW_PLANTS.configure(new CountConfig(4))
-                        .decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(3))));*/
+                        .decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(3)))));
 
         // pop flower and flower patches
         GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION,
@@ -181,18 +188,6 @@ public class CreeperWoodsBiome extends Biome {
         SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.SLIME, 100, 4, 4));
         SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 10, 1, 4));
         SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.WITCH, 5, 1, 1));
-    }
-
-    //Vanilla uses this for sky color.
-    public static int calcSkyColor(float f) {
-        float g = f / 3.0F;
-        g = MathHelper.clamp(g, -1.0F, 1.0F);
-        return MathHelper.hsvToRgb(0.62222224F - g * 0.05F, 0.5F + g * 0.1F, 1.0F);
-    }
-
-    public static ConfiguredSurfaceBuilder<?> newConfiguredSurfaceBuilder(String id, ConfiguredSurfaceBuilder<?> configuredSurfaceBuilder) {
-        Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, new Identifier(MOD_ID, id), configuredSurfaceBuilder);
-        return configuredSurfaceBuilder;
     }
     
     @Override

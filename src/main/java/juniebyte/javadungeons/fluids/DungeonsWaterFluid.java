@@ -29,10 +29,9 @@ public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
     }
 
     @Override
-	protected BlockState toBlockState(FluidState fluidState)
-	{
-		// method_15741 converts the LEVEL_1_8 of the fluid state to the LEVEL_15 the fluid block uses
-		return Fluids.DUNGEONS_WATER.getDefaultState().with(Properties.LEVEL_15, method_15741(fluidState));
+	protected BlockState toBlockState(FluidState fluidState) {
+		// getBlockStateLevel converts the LEVEL_1_8 of the fluid state to the LEVEL_15 the fluid block uses
+		return Fluids.DUNGEONS_WATER.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
 	}
     
     public static class Flowing extends DungeonsWaterFluid {

@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.client.renderer.armor.model;
 // Exported for Minecraft version 1.15
 // Paste this class into your mod and generate all required imports
@@ -14,6 +15,7 @@ import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.mob.ZombieVillagerEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.entity.passive.AbstractTraderEntity;
+import net.minecraft.entity.passive.MerchantEntity;
 
 public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<T> {
 	private final EquipmentSlot slot;
@@ -40,7 +42,7 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 		boolean testificate =
 				this.entity instanceof IllagerEntity ||
 						this.entity instanceof ZombieVillagerEntity ||
-						this.entity instanceof AbstractTraderEntity;
+						this.entity instanceof MerchantEntity;
 
 		int testificateHelmetShiftUp = testificate ? 2 : 0;
 
@@ -85,7 +87,7 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 		boolean testificate =
 				this.entity instanceof IllagerEntity ||
 						this.entity instanceof ZombieVillagerEntity ||
-						this.entity instanceof AbstractTraderEntity;
+						this.entity instanceof MerchantEntity;
 
 		boolean piglin =
 				this.entity instanceof PiglinEntity ||
@@ -94,7 +96,8 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 
 
 		if (this.slot == EquipmentSlot.HEAD) {
-		/*
+		*/
+/*
 			if (piglin) {
 				matrixStackIn.push();
 				this.piglin_helmet1.copyModelAngles(this.bipedHead);
@@ -114,9 +117,10 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 				this.illager_helmet1.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
 				matrixStackIn.pop();
 			} else {
-		 */
+		 *//*
+
 			matrixStackIn.push();
-			this.Head.copyPositionAndRotation(this.head);
+			this.Head.copyTransform(this.head);
 			if (this.entity.isBaby()) {
 				matrixStackIn.scale(0.8F, 0.8F, 0.8F);
 				this.Head.setPivot(0.0F, 15.0F, 0.0F);
@@ -129,9 +133,9 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 		if (this.slot == EquipmentSlot.CHEST) {
 			matrixStackIn.push();
 
-			this.Body.copyPositionAndRotation(this.torso);
-			this.LeftArm.copyPositionAndRotation(this.leftArm);
-			this.RightArm.copyPositionAndRotation(this.rightArm);
+			this.Body.copyTransform(this.body);
+			this.LeftArm.copyTransform(this.leftArm);
+			this.RightArm.copyTransform(this.rightArm);
 			if (this.entity.isBaby()) {
 				matrixStackIn.scale(0.5F, 0.5F, 0.5F);
 				this.Body.setPivot(0.0F, 24.0F, 0.0F);
@@ -155,4 +159,4 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 		modelRenderer.pivotY = y;
 		modelRenderer.pivotZ = z;
 	}
-}
+}*/

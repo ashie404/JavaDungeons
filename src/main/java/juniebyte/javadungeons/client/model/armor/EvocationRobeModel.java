@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.client.model.armor;
 
 import net.fabricmc.api.EnvType;
@@ -81,7 +82,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
         Head.addChild(Brim);
         setRotationAngle(Brim, 0.1309F, 0.0F, 0.0F);
         Brim.setTextureOffset(0, 47).addCuboid(-8.0F, -33.7F + 26.0F - testificateHelmetShiftUp, -8.0F, 16.0F, 1.0F, 16.0F, 0.5F, 0.5F, 0.5F);
-        /*
+        */
+/*
 		Everything = new ModelRenderer(this);
 		Everything.setRotationPoint(0.0F, 24.0F, 0.0F);
 		LeftLeg = new ModelRenderer(this);
@@ -113,7 +115,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		Head.addChild(Back);
 		setRotationAngle(Back, 0.7854F, 0.0F, 0.0F);
 		Back.setTextureOffset(42, 25).addBox(-3.95F, -5.4142F + 19.0F, 1.5858F - 19.5F, 7.9F, 8.0F, 4.0F, 0.5F, false);
-         */
+         *//*
+
 	}
 
 	@Override
@@ -130,7 +133,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 
 
 		if (this.slot == EquipmentSlot.HEAD) {
-		/*
+		*/
+/*
 			if (piglin) {
 				matrixStackIn.push();
 				this.piglin_helmet1.copyModelAngles(this.bipedHead);
@@ -150,7 +154,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 				this.illager_helmet1.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
 				matrixStackIn.pop();
 			} else {
-		 */
+		 *//*
+
 			matrixStackIn.push();
 			this.Head.copyPositionAndRotation(this.head);
 			if (this.entity.isBaby()) {
@@ -190,4 +195,4 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		modelRenderer.pivotZ = z;
 	}
 
-}
+}*/

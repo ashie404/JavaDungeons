@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.client.model.armor;
 // Exported for Minecraft version 1.15
 // Paste this class into your mod and generate all required imports
@@ -94,7 +95,8 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 
 
 		if (this.slot == EquipmentSlot.HEAD) {
-		/*
+		*/
+/*
 			if (piglin) {
 				matrixStackIn.push();
 				this.piglin_helmet1.copyModelAngles(this.bipedHead);
@@ -114,7 +116,8 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 				this.illager_helmet1.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
 				matrixStackIn.pop();
 			} else {
-		 */
+		 *//*
+
 			matrixStackIn.push();
 			this.Head.copyPositionAndRotation(this.head);
 			if (this.entity.isBaby()) {
@@ -155,4 +158,4 @@ public class PhantomArmorModel<T extends LivingEntity> extends BipedEntityModel<
 		modelRenderer.pivotY = y;
 		modelRenderer.pivotZ = z;
 	}
-}
+}*/

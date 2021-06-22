@@ -1,3 +1,4 @@
+/*
 package juniebyte.javadungeons.client.renderer.armor.model;
 
 import net.fabricmc.api.EnvType;
@@ -12,7 +13,7 @@ import net.minecraft.entity.mob.IllagerEntity;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.mob.ZombieVillagerEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
-import net.minecraft.entity.passive.AbstractTraderEntity;
+import net.minecraft.entity.passive.MerchantEntity;
 
 @Environment(EnvType.CLIENT)
 public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel<T> {
@@ -61,7 +62,7 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		boolean testificate =
 				this.entity instanceof IllagerEntity ||
 						this.entity instanceof ZombieVillagerEntity ||
-						this.entity instanceof AbstractTraderEntity;
+						this.entity instanceof MerchantEntity;
 
 		int testificateHelmetShiftUp = testificate ? 2 : 0;
 
@@ -81,7 +82,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
         Head.addChild(Brim);
         setRotationAngle(Brim, 0.1309F, 0.0F, 0.0F);
         Brim.setTextureOffset(0, 47).addCuboid(-8.0F, -33.7F + 26.0F - testificateHelmetShiftUp, -8.0F, 16.0F, 1.0F, 16.0F, 0.5F, 0.5F, 0.5F);
-        /*
+        */
+/*
 		Everything = new ModelRenderer(this);
 		Everything.setRotationPoint(0.0F, 24.0F, 0.0F);
 		LeftLeg = new ModelRenderer(this);
@@ -113,7 +115,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		Head.addChild(Back);
 		setRotationAngle(Back, 0.7854F, 0.0F, 0.0F);
 		Back.setTextureOffset(42, 25).addBox(-3.95F, -5.4142F + 19.0F, 1.5858F - 19.5F, 7.9F, 8.0F, 4.0F, 0.5F, false);
-         */
+         *//*
+
 	}
 
 	@Override
@@ -121,7 +124,7 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		boolean testificate =
 				this.entity instanceof IllagerEntity ||
 						this.entity instanceof ZombieVillagerEntity ||
-						this.entity instanceof AbstractTraderEntity;
+						this.entity instanceof MerchantEntity;
 
 		boolean piglin =
 				this.entity instanceof PiglinEntity ||
@@ -130,7 +133,8 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 
 
 		if (this.slot == EquipmentSlot.HEAD) {
-		/*
+		*/
+/*
 			if (piglin) {
 				matrixStackIn.push();
 				this.piglin_helmet1.copyModelAngles(this.bipedHead);
@@ -150,9 +154,10 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 				this.illager_helmet1.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
 				matrixStackIn.pop();
 			} else {
-		 */
+		 *//*
+
 			matrixStackIn.push();
-			this.Head.copyPositionAndRotation(this.head);
+			this.Head.copyTransform(this.head);
 			if (this.entity.isBaby()) {
 				matrixStackIn.scale(0.8F, 0.8F, 0.8F);
 				this.Head.setPivot(0.0F, 15.0F, 0.0F);
@@ -165,9 +170,9 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		if (this.slot == EquipmentSlot.CHEST) {
 			matrixStackIn.push();
 
-			this.Body.copyPositionAndRotation(this.torso);
-			this.LeftArm.copyPositionAndRotation(this.leftArm);
-			this.RightArm.copyPositionAndRotation(this.rightArm);
+			this.Body.copyTransform(this.body);
+			this.LeftArm.copyTransform(this.leftArm);
+			this.RightArm.copyTransform(this.rightArm);
 			if (this.entity.isBaby()) {
 				matrixStackIn.scale(0.5F, 0.5F, 0.5F);
 				this.Body.setPivot(0.0F, 24.0F, 0.0F);
@@ -190,4 +195,4 @@ public class EvocationRobeModel<T extends LivingEntity> extends BipedEntityModel
 		modelRenderer.pivotZ = z;
 	}
 
-}
+}*/

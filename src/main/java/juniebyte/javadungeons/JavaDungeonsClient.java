@@ -1,15 +1,11 @@
 package juniebyte.javadungeons;
 
 import juniebyte.javadungeons.blocks.DungeonsTransformer;
-import juniebyte.javadungeons.client.renderer.armor.model.EvocationRobeModel;
-import juniebyte.javadungeons.client.renderer.armor.model.PhantomArmorModel;
 import juniebyte.javadungeons.content.*;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreen;
 import juniebyte.javadungeons.gui.DungeonsTransformerScreenHandler;
-import juniebyte.javadungeons.items.PhantomArmorItem;
 import juniebyte.javadungeons.particles.GreenFlameParticle;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.ArmorRenderingRegistry;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
@@ -169,7 +165,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
         // set up particles
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
-        ClientSpriteRegistryCallback.event(SpriteAtlasTexture.PARTICLE_ATLAS_TEX).register((atlasTexture, registry) -> {
+        ClientSpriteRegistryCallback.event(SpriteAtlasTexture.PARTICLE_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
             registry.register(new Identifier(JavaDungeons.MOD_ID, "particle/green_flame"));
         });
 
@@ -190,11 +186,12 @@ public class JavaDungeonsClient implements ClientModInitializer {
         // register containers to screens
         ScreenProviderRegistry.INSTANCE.<DungeonsTransformerScreenHandler>registerFactory(DungeonsTransformer.ID, screenHandler -> new DungeonsTransformerScreen(
             screenHandler,
-            MinecraftClient.getInstance().player.inventory, 
+            MinecraftClient.getInstance().player.getInventory(),
             DungeonsTransformer.CONTAINER_NAME.setStyle(Style.EMPTY)
         ));
 
-		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
+        //TODO
+		/*ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
 				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.PHANTOM_ARMOR, Armors.PHANTOM_ARMOR_HELMET);
 		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
 				JavaDungeons.MOD_ID + ":textures/models/armor/phantom_armor.png", Armors.PHANTOM_ARMOR, Armors.PHANTOM_ARMOR_HELMET);
@@ -205,7 +202,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
 		ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
 				new EvocationRobeModel<>(1.0F, slot, entity), Armors.EMBER_ROBE, Armors.EMBER_ROBE_HAT);
 		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
-				JavaDungeons.MOD_ID + ":textures/models/armor/ember_robe.png", Armors.EMBER_ROBE, Armors.EMBER_ROBE_HAT);
+				JavaDungeons.MOD_ID + ":textures/models/armor/ember_robe.png", Armors.EMBER_ROBE, Armors.EMBER_ROBE_HAT);*/
+
 		/*ArmorRenderingRegistry.registerModel((entity, stack, slot, defaultModel) ->
 				new PhantomArmorModel<>(1.0F, slot, entity, ((PhantomArmorItem)stack.getItem()).unique), Armors.SNOW_ARMOR, Armors.SNOW_ARMOR_HELMET);
 		ArmorRenderingRegistry.registerTexture((entity, stack, slot, defaultTexture) ->
@@ -225,7 +223,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 		final Identifier flowingSpriteId = new Identifier(textureFluidId.getNamespace(), "block/" + textureFluidId.getPath() + "_flow");
  
 		// If they're not already present, add the sprites to the block atlas
-		ClientSpriteRegistryCallback.event(SpriteAtlasTexture.BLOCK_ATLAS_TEX).register((atlasTexture, registry) -> {
+		ClientSpriteRegistryCallback.event(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) -> {
 			registry.register(stillSpriteId);
 			registry.register(flowingSpriteId);
 		});
@@ -246,8 +244,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
 			 * Get the sprites from the block atlas when resources are reloaded
 			 */
 			@Override
-			public void apply(ResourceManager resourceManager) {
-				final Function<Identifier, Sprite> atlas = MinecraftClient.getInstance().getSpriteAtlas(SpriteAtlasTexture.BLOCK_ATLAS_TEX);
+			public void reload(ResourceManager resourceManager) {
+				final Function<Identifier, Sprite> atlas = MinecraftClient.getInstance().getSpriteAtlas(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE);
 				fluidSprites[0] = atlas.apply(stillSpriteId);
 				fluidSprites[1] = atlas.apply(flowingSpriteId);
 			}

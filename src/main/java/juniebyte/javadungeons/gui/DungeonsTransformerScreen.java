@@ -11,7 +11,6 @@ import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -39,13 +38,13 @@ public class DungeonsTransformerScreen extends HandledScreen<DungeonsTransformer
 
    @Override
    protected void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
-      this.textRenderer.draw(matrices, (OrderedText) this.title, (float)this.titleX, (float)this.titleY, 0xFFFFFF);
-      this.textRenderer.draw(matrices, (OrderedText)this.playerInventory.getDisplayName(), (float)this.playerInventoryTitleX, (float)this.playerInventoryTitleY, 0xFFFFFF);
+      this.textRenderer.draw(matrices, this.title, (float)this.titleX, (float)this.titleY, 0xFFFFFF);
+      this.textRenderer.draw(matrices, this.playerInventoryTitle, (float)this.playerInventoryTitleX, (float)this.playerInventoryTitleY, 0xFFFFFF);
    }
 
    protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
       this.renderBackground(matrices);
-      RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+      RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
       this.client.getTextureManager().bindTexture(TEXTURE);
       int i = this.x;
       int j = this.y;

@@ -1,26 +1,22 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { 
-    	name "jitpack"
-    	url "https://jitpack.io" 
-	}
+	maven { url="https://raw.githubusercontent.com/vampire-studios/VampireStudiosMaven/main/" }
+	maven { url="https://maven.terraformersmc.com/" }
+	maven { url "https://maven.shedaniel.me/" }
+	maven{ url="https://jitpack.io" }
 	maven {
-		url = "https://maven.theillusivec4.top"
-	}
-	maven {
-		name = "AdrianTodt's Maven"
-		url = "https://dl.bintray.com/adriantodt/maven"
+		url "https://nexus.resourcefulbees.com/repository/maven-public/"
 	}
 }
 
@@ -32,39 +28,42 @@ dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}") {
+		force = true
+	}
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	implementation 'com.github.javafaker:javafaker:1.0.2'
+	modImplementation("me.shedaniel.cloth:cloth-config-fabric:5.0.34") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	include("me.shedaniel.cloth:cloth-config-fabric:5.0.34") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 
-	modImplementation ("com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}") {
+	modImplementation ("io.github.vampirestudios:VampireLib-Fabric:3.0.2+build.3-1.17-pre1") {
 		exclude group: "net.fabricmc.fabric-api"
 		exclude group: "io.github.cottonmc"
 	}
-	include ("com.github.vampire-studios:VampireLib-Fabric:${project.vampirelib_version}") {
+	include ("io.github.vampirestudios:VampireLib-Fabric:3.0.2+build.3-1.17-pre1") {
 		exclude group: "net.fabricmc.fabric-api"
 		exclude group: "io.github.cottonmc"
 	}
-
-	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:${project.fabric_shield_lib_version}"
 
 	modImplementation ("com.github.cottonmc:Jankson-Fabric:1.16-SNAPSHOT") {
 		exclude group: "net.fabricmc.fabric-api"
 		force = true
 	}
+
+	modImplementation "com.terraformersmc:modmenu:2.0.0-beta.7"
+	modImplementation "com.telepathicgrunt:Blame-Fabric:1.17-4.0.0-fabric"
 }
 
 processResources {
 	inputs.property "version", project.version
 
-	from(sourceSets.main.resources.srcDirs) {
-		include "fabric.mod.json"
+	filesMatching("fabric.mod.json") {
 		expand "version": project.version
-	}
-
-	from(sourceSets.main.resources.srcDirs) {
-		exclude "fabric.mod.json"
 	}
 }
 
@@ -79,7 +78,7 @@ tasks.withType(JavaCompile) {
 // if it is present.
 // If you remove this task, sources will not be generated.
 task sourcesJar(type: Jar, dependsOn: classes) {
-	classifier = "sources"
+	archiveClassifier.set("sources")
 	from sourceSets.main.allSource
 }
 

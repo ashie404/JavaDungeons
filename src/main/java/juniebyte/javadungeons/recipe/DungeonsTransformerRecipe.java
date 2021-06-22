@@ -65,7 +65,7 @@ public class DungeonsTransformerRecipe implements Recipe<Inventory> {
     }
 
     @Override
-    public DefaultedList<Ingredient> getPreviewInputs() {
+    public DefaultedList<Ingredient> getIngredients() {
         return DefaultedList.copyOf(Ingredient.EMPTY, this.input);
     }
 

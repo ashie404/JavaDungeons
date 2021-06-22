@@ -28,8 +28,7 @@ public class DungeonsDesertPlant extends PlantBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-        Block block = floor.getBlock();
-        return block.isIn(Tags.DESERT_PLANTABLE) || block.isIn(Tags.PLANTABLE);
+        return floor.isIn(Tags.DESERT_PLANTABLE) || floor.isIn(Tags.PLANTABLE);
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
