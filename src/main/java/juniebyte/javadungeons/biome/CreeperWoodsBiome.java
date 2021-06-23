@@ -190,15 +190,4 @@ public class CreeperWoodsBiome extends Biome {
         SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 10, 1, 4));
         SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.WITCH, 5, 1, 1));
     }
-    
-    @Override
-    public int getGrassColorAt(double x, double z) {
-        return 0x197862;
-    }
-  
-    @Override
-    public int getFoliageColor() {
-        return 0x197862;
-    }
-
 }

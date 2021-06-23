@@ -1,4 +1,3 @@
-/*
 package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
@@ -6,19 +5,25 @@ import com.google.common.collect.ImmutableSet;
 import juniebyte.javadungeons.content.Features;
 import juniebyte.javadungeons.content.Fluids;
 import juniebyte.javadungeons.content.GenericBlocks;
+import juniebyte.javadungeons.content.JDConfiguredFeatures;
 import juniebyte.javadungeons.content.PumpkinPasturesBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
+import net.minecraft.world.biome.GenerationSettings;
+import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.Biome.Category;
+import net.minecraft.world.biome.Biome.Precipitation;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
-import net.minecraft.world.gen.decorator.CountDecoratorConfig;
-import net.minecraft.world.gen.decorator.CountExtraChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
@@ -26,6 +31,7 @@ import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
@@ -34,148 +40,137 @@ import net.minecraft.world.gen.feature.RuinedPortalFeature;
 
 import java.util.OptionalInt;
 
-public class PumpkinPasturesBiome extends Biome {
+import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
+import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
+import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
-    public PumpkinPasturesBiome() {
-        super(new Biome.Settings().configureSurfaceBuilder(SurfaceBuilder.DEFAULT, 
+public class PumpkinPasturesBiome extends Biome {
+    static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = newConfiguredSurfaceBuilder("pumpkin_pastures", new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT,
             new TernarySurfaceConfig(
                 GenericBlocks.GRASS_BLOCK.getDefaultState(), 
                 GenericBlocks.DIRT.getDefaultState(), 
                 GenericBlocks.DIRT.getDefaultState()
             ))
-            .precipitation(Biome.Precipitation.RAIN).category(Biome.Category.PLAINS)
-            .depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder())
-            .waterColor(4159204).waterFogColor(329011).fogColor(12638463)
-            .moodSound(BiomeMoodSound.CAVE).build()).parent((String)null)
-            .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F)))
-            .parent((String)null)
-        );
-        
-        this.addStructureFeature(StructureFeature.VILLAGE.configure(new StructurePoolFeatureConfig(new Identifier("village/plains/town_centers"), 6)));
-        this.addStructureFeature(StructureFeature.PILLAGER_OUTPOST.configure(FeatureConfig.DEFAULT));
-        this.addStructureFeature(StructureFeature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
-        this.addStructureFeature(StructureFeature.STRONGHOLD.configure(FeatureConfig.DEFAULT));
-        this.addStructureFeature(StructureFeature.RUINED_PORTAL.configure(new RuinedPortalFeatureConfig(RuinedPortalFeature.Type.STANDARD)));
+    );
+    static final Precipitation PRECIPATATION = Precipitation.RAIN;
+    static final Category CATEGORY = Category.PLAINS;
+    static final float DEPTH = 0.125F;
+    static final float SCALE = 0.05F;
+    static final float TEMPERATURE = 0.8F;
+    static final float DOWNFALL = 0.4F;
+    static final int WATER_COLOR = 4159204;
+    static final int WATER_FOG_COLOR = 329011;
+    static final Biome.Weather WEATHER = new Biome.Weather(PRECIPATATION, TEMPERATURE, TemperatureModifier.NONE, DOWNFALL);
+    static final SpawnSettings.Builder SPAWN_SETTINGS = new SpawnSettings.Builder();
+    static final GenerationSettings.Builder GENERATION_SETTINGS = (new GenerationSettings.Builder()).surfaceBuilder(SURFACE_BUILDER);
 
-        DefaultBiomeFeatures.addLandCarvers(this);
-        DefaultBiomeFeatures.addDefaultUndergroundStructures(this);
+    public PumpkinPasturesBiome() {
+        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0xCD934C).foliageColor(0xCD934C).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
+    }
 
-        this.addFeature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
-		    Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
-            .createDecoratedFeature(Decorator.WATER_LAKE.configure(new ChanceDecoratorConfig(10))));
+    static {
+        GENERATION_SETTINGS.structureFeature(ConfiguredStructureFeatures.MINESHAFT);
+        GENERATION_SETTINGS.structureFeature(ConfiguredStructureFeatures.STRONGHOLD);
+        GENERATION_SETTINGS.structureFeature(ConfiguredStructureFeatures.RUINED_PORTAL);
 
-        DefaultBiomeFeatures.addDungeons(this);
-        DefaultBiomeFeatures.addPlainsTallGrass(this);
-        DefaultBiomeFeatures.addMineables(this);
-        DefaultBiomeFeatures.addDefaultOres(this);
-        DefaultBiomeFeatures.addDefaultDisks(this);
-        DefaultBiomeFeatures.addDefaultGrass(this);
+        DefaultBiomeFeatures.addLandCarvers(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addDefaultUndergroundStructures(GENERATION_SETTINGS);
+
+        // need to add dungeons water lake feature
+
+        DefaultBiomeFeatures.addDungeons(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addPlainsTallGrass(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addMineables(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addDefaultOres(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addDefaultDisks(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addDefaultGrass(GENERATION_SETTINGS);
 
         // add dungeons vegetation
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pmshort_grass"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(GenericBlocks.SHORT_GRASS.getDefaultState()), new SimpleBlockPlacer())).tries(32).build()
-        ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(2))));
+        ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))));
             
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pmfern"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(GenericBlocks.FERN.getDefaultState()), new SimpleBlockPlacer())).tries(32).build()
-        ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(2))));  
+        ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))));  
             
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_shrub"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_SHRUB.getDefaultState()), new SimpleBlockPlacer())).tries(16).build()
-        ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));    
+        ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(1)))));    
 
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_fern"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_FERN.getDefaultState()), new SimpleBlockPlacer())).tries(16).build()
-        ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));     
+        ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(1)))));     
 
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_PATCH.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_dead_sapling"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_DEAD_SAPLING.getDefaultState()), new SimpleBlockPlacer())).tries(16).build()
-        ).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(1))));    
+        ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(1)))));
 
-        DefaultBiomeFeatures.addDefaultFlowers(this);
-        DefaultBiomeFeatures.addDefaultMushrooms(this);
-
+        DefaultBiomeFeatures.addDefaultMushrooms(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addDefaultFlowers(GENERATION_SETTINGS);
+        
         // autumnal trees
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.configure(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_trees"),
+            Feature.RANDOM_SELECTOR.configure(
             new RandomFeatureConfig(
                 ImmutableList.of(
-                    Feature.TREE.configure(
-                            (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BIRCH_LOG.getDefaultState()),
-                                    new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_LEAVES.getDefaultState()),
-                                    new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                                    new StraightTrunkPlacer(4, 2, 0),
-                                    new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
-                    ).withChance(0.2F),
-                    Feature.TREE.configure(
-                            (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
-                                    new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
-                                    new LargeOakFoliagePlacer(2, 0, 4, 0, 4),
-                                    new LargeOakTrunkPlacer(3, 11, 0),
-                                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))).ignoreVines().build()
-                    ).withChance(0.1F)
+                    JDConfiguredFeatures.PM_YELLOW_AUTUMNAL_TREE.withChance(0.2F),
+                    JDConfiguredFeatures.PM_FANCY_RED_AUTUMNAL_TREE.withChance(0.1F)
                 ),
-                Feature.TREE.configure(
-                    (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
-                            new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES.getDefaultState()),
-                            new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                            new StraightTrunkPlacer(4, 2, 0),
-                            new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()
-                )
+                JDConfiguredFeatures.PM_RED_AUTUMNAL_TREE
             )
-        ).createDecoratedFeature(Decorator.COUNT_EXTRA_HEIGHTMAP.configure(new CountExtraChanceDecoratorConfig(2, 0.1F, 1))));
+        ).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.1F, 1)))));
 
         // pumpkin patches
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_0"),
+                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
                 new SimpleBlockStateProvider(Blocks.PUMPKIN.getDefaultState()),
                 new SimpleBlockPlacer())
             .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(2)))
-        );
+            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))
+        ));
         
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_1"),
+                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
                 new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_BURNT_PUMPKIN.getDefaultState()),
                 new SimpleBlockPlacer())
             .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(8)))
-        );
+            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(8)))
+        ));
 
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_2"),
+                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
                 new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_ROTTED_PUMPKIN.getDefaultState()),
                 new SimpleBlockPlacer())
             .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceDecoratorConfig(4)))
-        );
+            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(4)))
+        ));
 
-        DefaultBiomeFeatures.addSprings(this);
-        DefaultBiomeFeatures.addFrozenTopLayer(this);
+        DefaultBiomeFeatures.addSprings(GENERATION_SETTINGS);
+        DefaultBiomeFeatures.addFrozenTopLayer(GENERATION_SETTINGS);
 
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.SHEEP, 12, 4, 4));
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.PIG, 10, 4, 4));
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.CHICKEN, 10, 4, 4));
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.COW, 8, 4, 4));
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.HORSE, 5, 2, 6));
-        this.addSpawn(SpawnGroup.CREATURE, new Biome.SpawnEntry(EntityType.DONKEY, 1, 1, 3));
-        this.addSpawn(SpawnGroup.AMBIENT, new Biome.SpawnEntry(EntityType.BAT, 10, 8, 8));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.SPIDER, 100, 4, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.ZOMBIE, 95, 4, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.ZOMBIE_VILLAGER, 5, 1, 1));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.SKELETON, 100, 4, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.CREEPER, 100, 4, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.SLIME, 100, 4, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.ENDERMAN, 10, 1, 4));
-        this.addSpawn(SpawnGroup.MONSTER, new Biome.SpawnEntry(EntityType.WITCH, 5, 1, 1));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.SHEEP, 12, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.PIG, 10, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.CHICKEN, 10, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.COW, 8, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.HORSE, 5, 2, 6));
+        SPAWN_SETTINGS.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.DONKEY, 1, 1, 3));
+        SPAWN_SETTINGS.spawn(SpawnGroup.AMBIENT,  new SpawnSettings.SpawnEntry(EntityType.BAT, 10, 8, 8));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.SPIDER, 100, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.ZOMBIE, 95, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.ZOMBIE_VILLAGER, 5, 1, 1));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.SKELETON, 100, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.CREEPER, 100, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.SLIME, 100, 4, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 10, 1, 4));
+        SPAWN_SETTINGS.spawn(SpawnGroup.MONSTER,  new SpawnSettings.SpawnEntry(EntityType.WITCH, 5, 1, 1));
     }
-
-    @Override
-    public int getGrassColorAt(double x, double z) {
-        return 0xCD934C;
-    }
-  
-    @Override
-    public int getFoliageColor() {
-        return 0xCD934C;
-    }
-}*/
+}
