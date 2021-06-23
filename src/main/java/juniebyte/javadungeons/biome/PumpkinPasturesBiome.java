@@ -124,7 +124,8 @@ public class PumpkinPasturesBiome extends Biome {
                 ),
                 JDConfiguredFeatures.PM_RED_AUTUMNAL_TREE
             )
-        ).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.1F, 1)))));
+        ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
+        .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.1F, 1)))));
 
         // pumpkin patches
         GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
