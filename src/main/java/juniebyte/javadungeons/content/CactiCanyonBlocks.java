@@ -55,7 +55,6 @@ public class CactiCanyonBlocks {
     public static DungeonsDesertTallPlant CC_TALL_CACTUS;
     
     public static void init() {
-
         // grass related
         CC_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, JavaDungeons.CACTI_CANYON, "cc_grass_block");
 

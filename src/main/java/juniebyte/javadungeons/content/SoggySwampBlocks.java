@@ -41,16 +41,16 @@ public class SoggySwampBlocks {
 
     public static void init() {
         // ground related
-        SS_GRASS_BLOCK = new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
-        SS_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
-        SS_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
+        SS_GRASS_BLOCK = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPathable(Material.SOLID_ORGANIC, 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_grass_block");
+        SS_DIRT_PATH = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.SOGGY_SWAMP, "ss_dirt_path");
+        SS_DIRT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, JavaDungeons.SOGGY_SWAMP, "ss_dirt");
 
         // stone related
-        SS_MOSSY_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone");
-        SS_MOSSY_COBBLESTONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_cobblestone");
-        SS_MOSSY_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone_bricks");
-        SS_MOSSY_POLISHED_ANDESITE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_polished_andesite");
-        SS_MOSSY_CHISELED_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_chiseled_stone_bricks");
+        SS_MOSSY_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone");
+        SS_MOSSY_COBBLESTONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_cobblestone");
+        SS_MOSSY_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_stone_bricks");
+        SS_MOSSY_POLISHED_ANDESITE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_polished_andesite");
+        SS_MOSSY_CHISELED_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.SOGGY_SWAMP, "ss_mossy_chiseled_stone_bricks");
 
         // swamp tree
         SS_SWAMP_LOG = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.SOGGY_SWAMP, "ss_swamp_log");
