@@ -1,7 +1,12 @@
 package juniebyte.javadungeons.biome;
 
+import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
+import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
+import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
+
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+
 import juniebyte.javadungeons.content.CreeperWoodsBlocks;
 import juniebyte.javadungeons.content.Features;
 import juniebyte.javadungeons.content.GenericBlocks;
@@ -23,16 +28,18 @@ import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountNoiseDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.world.gen.feature.ConfiguredStructureFeatures;
+import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.RandomFeatureConfig;
+import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-
-import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
-import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
-import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
 public class CreeperWoodsBiome extends Biome {
     static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = newConfiguredSurfaceBuilder("plains", new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT,
@@ -55,7 +62,7 @@ public class CreeperWoodsBiome extends Biome {
     static final GenerationSettings.Builder GENERATION_SETTINGS = (new GenerationSettings.Builder()).surfaceBuilder(SURFACE_BUILDER);
 
     public CreeperWoodsBiome() {
-        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0x197862).foliageColor(0x197862).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
+        super(WEATHER, CATEGORY, DEPTH, SCALE, (new BiomeEffects.Builder()).waterColor(WATER_COLOR).waterFogColor(WATER_FOG_COLOR).grassColor(0x197862).foliageColor(0x2bcca6).fogColor(12638463).skyColor(calcSkyColor(0.8F)).moodSound(BiomeMoodSound.CAVE).build(), GENERATION_SETTINGS.build(), SPAWN_SETTINGS.build());
     }
 
 
@@ -69,10 +76,7 @@ public class CreeperWoodsBiome extends Biome {
         DefaultBiomeFeatures.addLandCarvers(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addDefaultUndergroundStructures(GENERATION_SETTINGS);
 
-        //TODO
-        /*GENERATION_SETTINGS.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS,
-                Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
-                        .createDecoratedFeature(Decorator.WATER_LAKE.configure(new ChanceDecoratorConfig(10))));*/
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.LAKES, JDConfiguredFeatures.DUNGEONS_WATER_LAKE);
 
         DefaultBiomeFeatures.addDungeons(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addForestFlowers(GENERATION_SETTINGS);

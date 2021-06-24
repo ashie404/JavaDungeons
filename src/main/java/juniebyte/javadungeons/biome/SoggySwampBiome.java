@@ -1,12 +1,11 @@
 package juniebyte.javadungeons.biome;
 
-import com.google.common.collect.ImmutableList;
-import juniebyte.javadungeons.content.Features;
-import juniebyte.javadungeons.content.Fluids;
+import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
+import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
+import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
+
 import juniebyte.javadungeons.content.JDConfiguredFeatures;
 import juniebyte.javadungeons.content.SoggySwampBlocks;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
@@ -17,25 +16,21 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
-import net.minecraft.world.biome.Biome.Category;
-import net.minecraft.world.biome.Biome.Precipitation;
-import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.*;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
+import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.decorator.WaterDepthThresholdDecoratorConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.MineshaftFeature.Type;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
+import net.minecraft.world.gen.feature.RuinedPortalFeature;
+import net.minecraft.world.gen.feature.RuinedPortalFeatureConfig;
+import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.feature.RuinedPortalFeature;
-
-import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
-import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
-import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
 public final class SoggySwampBiome extends Biome {
 
@@ -93,7 +88,7 @@ public final class SoggySwampBiome extends Biome {
 
         DefaultBiomeFeatures.addDefaultMushrooms(GENERATION_SETTINGS);
 
-        // water lake todo
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.LAKES, JDConfiguredFeatures.SWAMP_WATER_LAKE);
 
         GENERATION_SETTINGS.feature(net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION, ConfiguredFeatures.SEAGRASS_SWAMP);
         

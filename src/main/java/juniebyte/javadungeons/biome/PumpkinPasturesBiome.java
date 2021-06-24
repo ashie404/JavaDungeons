@@ -69,7 +69,7 @@ public class PumpkinPasturesBiome extends Biome {
         DefaultBiomeFeatures.addLandCarvers(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addDefaultUndergroundStructures(GENERATION_SETTINGS);
 
-        // need to add dungeons water lake feature
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.LAKES, JDConfiguredFeatures.DUNGEONS_WATER_LAKE);
 
         DefaultBiomeFeatures.addDungeons(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addPlainsTallGrass(GENERATION_SETTINGS);
