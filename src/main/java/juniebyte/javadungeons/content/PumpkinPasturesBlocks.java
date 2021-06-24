@@ -1,99 +1,114 @@
 package juniebyte.javadungeons.content;
 
+import io.github.vampirestudios.vampirelib.utils.registry.StoneRegistry;
+import io.github.vampirestudios.vampirelib.utils.registry.WoodRegistry;
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
 import juniebyte.javadungeons.blocks.saplings.RedAutumnalSaplingGenerator;
 import juniebyte.javadungeons.blocks.saplings.YellowAutumnalSaplingGenerator;
+import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class PumpkinPasturesBlocks {
 
     // foliage
-    public static DungeonsLeaves PM_YELLOW_AUTUMNAL_LEAVES;
-    public static DungeonsLeaves PM_RED_AUTUMNAL_LEAVES;
+    public static Block PM_YELLOW_AUTUMNAL_LEAVES;
+    public static Block PM_RED_AUTUMNAL_LEAVES;
 
     // saplings
-    public static DungeonsSapling PM_RED_AUTUMNAL_SAPLING;
-    public static DungeonsSapling PM_YELLOW_AUTUMNAL_SAPLING;
+    public static Block PM_RED_AUTUMNAL_SAPLING;
+    public static Block PM_YELLOW_AUTUMNAL_SAPLING;
 
     // plants
-    public static DungeonsPlant PM_SHRUB;
-    public static DungeonsPlant PM_CHARRED_GRASS;
-    public static DungeonsPlant PM_FERN;
-    public static DungeonsPlant PM_DEAD_SAPLING;
+    public static Block PM_SHRUB;
+    public static Block PM_CHARRED_GRASS;
+    public static Block PM_FERN;
+    public static Block PM_DEAD_SAPLING;
 
     // melons
-    public static DungeonsBlock PM_BURNT_PUMPKIN;
-    public static DungeonsBlock PM_ROTTED_PUMPKIN;
+    public static Block PM_BURNT_PUMPKIN;
+    public static Block PM_ROTTED_PUMPKIN;
 
     // haybale
-    public static DungeonsPillar PM_DRIED_HAYBALE;
+    public static Block PM_DRIED_HAYBALE;
 
     // ground related
-    public static DungeonsBlock PM_CHARRED_GRASS_BLOCK;
-    public static DungeonsPath PM_CHARRED_DIRT_PATH;
-    public static DungeonsPathable PM_CHARRED_DIRT;
-    public static DungeonsSlab PM_CHARRED_DIRT_SLAB;
-    public static DungeonsBlock PM_CHARRED_DIRT_EMBERS;
-    public static DungeonsPath PM_CHARRED_FARMLAND;
+    public static Block PM_CHARRED_GRASS_BLOCK;
+    public static Block PM_CHARRED_DIRT_PATH;
+    public static Block PM_CHARRED_DIRT;
+    public static Block PM_CHARRED_DIRT_SLAB;
+    public static Block PM_CHARRED_DIRT_EMBERS;
+    public static Block PM_CHARRED_FARMLAND;
 
     // charred stones
-    public static DungeonsBlock PM_CHARRED_STONE;
-    public static DungeonsSlabStairBlock PM_CHARRED_COBBLESTONE;
-    public static DungeonsSlabStairBlock PM_CHARRED_STONE_BRICKS;
-    public static DungeonsBlock PM_CRACKED_CHARRED_STONE_BRICKS;
+    public static Block PM_CHARRED_STONE;
+    public static Block PM_CHARRED_COBBLESTONE;
+    public static Block PM_CHARRED_STONE_BRICKS;
+    public static Block PM_CRACKED_CHARRED_STONE_BRICKS;
 
     // stone related
-    public static DungeonsBlock PM_MOSSY_STONE_BRICKS;
+    public static Block PM_MOSSY_STONE_BRICKS;
 
     // wood related
-    public static DungeonsPillar PM_CHARRED_LOG;
-    public static DungeonsPillar PM_CHARRED_WOOD;
-    public static DungeonsSlabStairBlock PM_CHARRED_PLANKS;
+    public static Block PM_CHARRED_LOG;
+    public static Block PM_CHARRED_WOOD;
+    public static Block PM_CHARRED_PLANKS;
+    public static Block PM_CHARRED_STAIRS;
+    public static Block PM_CHARRED_SLAB;
 
     public static void init() {
         // foliage
-        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
-        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
+        PM_YELLOW_AUTUMNAL_LEAVES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsLeaves(), "pm_yellow_autumnal_leaves");
+        PM_RED_AUTUMNAL_LEAVES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsLeaves(), "pm_red_autumnal_leaves");
         
         // saplings
-        PM_RED_AUTUMNAL_SAPLING = new DungeonsSapling(new RedAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_sapling");
-        PM_YELLOW_AUTUMNAL_SAPLING = new DungeonsSapling(new YellowAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_sapling");
+        PM_RED_AUTUMNAL_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsSapling(new RedAutumnalSaplingGenerator()), "pm_red_autumnal_sapling", JavaDungeons.PUMPKIN_PASTURES);
+        PM_YELLOW_AUTUMNAL_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsSapling(new YellowAutumnalSaplingGenerator()), "pm_yellow_autumnal_sapling", JavaDungeons.PUMPKIN_PASTURES);
 
         // melons
-        PM_BURNT_PUMPKIN = new DungeonsBlock(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_burnt_pumpkin");
-        PM_ROTTED_PUMPKIN = new DungeonsBlock(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_rotted_pumpkin");
+        PM_BURNT_PUMPKIN = JavaDungeons.REGISTRY_HELPER.registerBlock(new PMBurntPumpkin(), "pm_burnt_pumpkin", JavaDungeons.PUMPKIN_PASTURES);
+        PM_ROTTED_PUMPKIN = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD), "pm_rotted_pumpkin", JavaDungeons.PUMPKIN_PASTURES);
 
         // haybale
-        PM_DRIED_HAYBALE = new DungeonsPillar(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
+        PM_DRIED_HAYBALE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPillar(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "pm_dried_haybale", JavaDungeons.PUMPKIN_PASTURES);
 
         // plants
-        PM_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
-        PM_CHARRED_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
-        PM_FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_fern");
-        PM_DEAD_SAPLING = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dead_sapling");
+        PM_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_shrub", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_GRASS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_charred_grass", JavaDungeons.PUMPKIN_PASTURES);
+        PM_FERN = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_fern", JavaDungeons.PUMPKIN_PASTURES);
+        PM_DEAD_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_dead_sapling", JavaDungeons.PUMPKIN_PASTURES);
 
         // ground related
-        PM_CHARRED_GRASS_BLOCK = new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass_block");
-        PM_CHARRED_DIRT_PATH = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_path");
-        PM_CHARRED_DIRT = new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, PM_CHARRED_DIRT_PATH, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt");
-        PM_CHARRED_DIRT_SLAB = new DungeonsSlab(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_slab");
-        PM_CHARRED_DIRT_EMBERS = new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_dirt_embers");
-        PM_CHARRED_FARMLAND = new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_farmland");
+        PM_CHARRED_GRASS_BLOCK = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "pm_charred_grass_block", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_DIRT_PATH = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "pm_charred_dirt_path", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_DIRT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPathable(Material.AGGREGATE, 0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, PM_CHARRED_DIRT_PATH), "pm_charred_dirt", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_DIRT_SLAB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsSlab(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "pm_charred_dirt_slab", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_DIRT_EMBERS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "pm_charred_dirt_embers", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_FARMLAND = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPath(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "pm_charred_farmland", JavaDungeons.PUMPKIN_PASTURES);
         
         // charred stones
-        PM_CHARRED_STONE = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone");
-        PM_CHARRED_COBBLESTONE = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_cobblestone", "pm_charred_cobblestone_slab", "pm_charred_cobblestone_stairs");
-        PM_CHARRED_STONE_BRICKS = new DungeonsSlabStairBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_stone_bricks", "pm_charred_stone_brick_slab", "pm_charred_stone_brick_stairs");
-        PM_CRACKED_CHARRED_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_cracked_charred_stone_bricks");
+        StoneRegistry stoneRegistry = StoneRegistry.of(new Identifier(JavaDungeons.MOD_ID, "pm_charred_stone"))
+                .raw().stairs().slab().wall()
+                .cobblestone().cobblestoneSlab().cobblestoneStairs().cobblestoneWall()
+                .bricks().brickSlab().brickStairs().brickWall()
+                .crackedBricks().crackedBricksSlab().crackedBricksStairs().crackedBricksWall().build();
+        PM_CHARRED_STONE = stoneRegistry.getRaw();
+        PM_CHARRED_COBBLESTONE = stoneRegistry.getCobblestone();
+        PM_CHARRED_STONE_BRICKS = stoneRegistry.getBricks();
+        PM_CRACKED_CHARRED_STONE_BRICKS = stoneRegistry.getCrackedBricks();
 
         // stone related
-        PM_MOSSY_STONE_BRICKS = new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE, JavaDungeons.PUMPKIN_PASTURES, "pm_mossy_stone_bricks");
+        PM_MOSSY_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "pm_mossy_stone_bricks", JavaDungeons.PUMPKIN_PASTURES);
 
         // wood related
-        PM_CHARRED_LOG = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_log");
-        PM_CHARRED_WOOD = new DungeonsPillar(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_wood");
-        PM_CHARRED_PLANKS = new DungeonsSlabStairBlock(Material.WOOD, 2.0F, 3.0F, BlockSoundGroup.WOOD, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
+        WoodRegistry woodRegistry = WoodRegistry.of(new Identifier(JavaDungeons.MOD_ID, "pm_charred"))
+                .log().wood().strippedLog().strippedWood().planks().stairs().slab().shouldGenerateAssets().build();
+        PM_CHARRED_LOG = woodRegistry.getLog();
+        PM_CHARRED_WOOD = woodRegistry.getWood();
+        PM_CHARRED_PLANKS = woodRegistry.getPlanks();
+        PM_CHARRED_STAIRS = woodRegistry.getStairs();
+        PM_CHARRED_SLAB = woodRegistry.getSlab();
     }
 }

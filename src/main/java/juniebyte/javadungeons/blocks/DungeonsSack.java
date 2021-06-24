@@ -1,40 +1,45 @@
 package juniebyte.javadungeons.blocks;
 
-import juniebyte.javadungeons.JavaDungeons;
+import juniebyte.javadungeons.blocks.entity.DungeonsSackBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.block.Waterloggable;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BarrelBlockEntity;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.mob.PiglinBrain;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.tag.FluidTags;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.Nullable;
 
-public class DungeonsSack extends Block implements Waterloggable {
+import java.util.Random;
+
+public class DungeonsSack extends BlockWithEntity implements Waterloggable {
 
     // sack block
 
     public BlockItem blockItem;
     public static final BooleanProperty WATERLOGGED;
-    public boolean small = false;
+    public boolean small;
+    public int size;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     protected static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 11.0D, 14.0D);
@@ -70,12 +75,38 @@ public class DungeonsSack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsSack(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
+    public DungeonsSack(Material material, float hardness, float resistance, BlockSoundGroup sounds, boolean small, int size) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.small = small;
+        this.size = size;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    }
+
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (world.isClient) {
+            return ActionResult.SUCCESS;
+        } else {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof DungeonsSackBlockEntity) {
+                player.openHandledScreen((DungeonsSackBlockEntity)blockEntity);
+                player.incrementStat(Stats.OPEN_BARREL);
+                PiglinBrain.onGuardedBlockInteracted(player, true);
+            }
+
+            return ActionResult.CONSUME;
+        }
+    }
+
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof BarrelBlockEntity) {
+            ((BarrelBlockEntity)blockEntity).tick();
+        }
+    }
+
+    @Nullable
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new DungeonsSackBlockEntity(pos, state, size);
     }
 
     static {

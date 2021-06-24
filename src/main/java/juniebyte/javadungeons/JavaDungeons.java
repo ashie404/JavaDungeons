@@ -1,5 +1,6 @@
 package juniebyte.javadungeons;
 
+import io.github.vampirestudios.vampirelib.utils.registry.RegistryHelper;
 import juniebyte.javadungeons.content.*;
 import juniebyte.javadungeons.utils.PointOfInterestRegistry;
 import juniebyte.javadungeons.utils.PointOfInterestTypeCustom;
@@ -30,6 +31,8 @@ public class JavaDungeons implements ModInitializer {
 	public static final ItemGroup FIERY_FORGE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "fiery_forge"), () -> new ItemStack(FieryForgeBlocks.FF_EMBLEMED_DARK_STONE));
 	public static final ItemGroup WEAPONS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "weapons"), () -> new ItemStack(Weapons.FIREBRAND));
 	public static final ItemGroup ARMORS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "armors"), () -> new ItemStack(Armors.PHANTOM_ARMOR));
+
+	public static final RegistryHelper REGISTRY_HELPER = RegistryHelper.createRegistryHelper(MOD_ID);
 
 	@Override
 	public void onInitialize() {

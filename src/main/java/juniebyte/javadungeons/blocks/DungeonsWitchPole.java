@@ -1,6 +1,5 @@
 package juniebyte.javadungeons.blocks;
 
-import juniebyte.javadungeons.JavaDungeons;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -9,18 +8,18 @@ import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -30,10 +29,8 @@ public class DungeonsWitchPole extends Block {
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
     public BlockItem blockItem;
 
-    public DungeonsWitchPole(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group) {
+    public DungeonsWitchPole(Material material, float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, "ss_witch_pole"), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, "ss_witch_pole"), blockItem = new BlockItem(this, new Item.Settings().group(group)));
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(HALF, DoubleBlockHalf.LOWER));
     }
 

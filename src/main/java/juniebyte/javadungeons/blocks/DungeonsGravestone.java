@@ -1,19 +1,14 @@
 package juniebyte.javadungeons.blocks;
 
-import juniebyte.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
@@ -58,18 +53,16 @@ public class DungeonsGravestone extends Block {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
-    public DungeonsGravestone(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsGravestone(Material material, float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }
 
     static {
