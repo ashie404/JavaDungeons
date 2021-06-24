@@ -2,7 +2,7 @@
 
 # JavaDungeons
 
-[![](https://img.shields.io/github/license/juniebyte/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/juniebyte/javadungeons)](https://github.com/juniebyte/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.16.1-green) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=conda-forge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons)
+[![](https://img.shields.io/github/license/juniebyte/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/juniebyte/javadungeons)](https://github.com/juniebyte/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.17-green) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=conda-forge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons)
 
 <br/>
 
