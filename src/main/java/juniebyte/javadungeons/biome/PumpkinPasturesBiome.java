@@ -1,5 +1,9 @@
 package juniebyte.javadungeons.biome;
 
+import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
+import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
+import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
+
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import juniebyte.javadungeons.content.GenericBlocks;
@@ -26,10 +30,6 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-
-import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
-import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
-import static juniebyte.javadungeons.content.SurfaceBuilders.newConfiguredSurfaceBuilder;
 
 public class PumpkinPasturesBiome extends Biome {
     static final ConfiguredSurfaceBuilder<?> SURFACE_BUILDER = newConfiguredSurfaceBuilder("pumpkin_pastures", new ConfiguredSurfaceBuilder<>(SurfaceBuilder.DEFAULT,
@@ -63,7 +63,7 @@ public class PumpkinPasturesBiome extends Biome {
         DefaultBiomeFeatures.addLandCarvers(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addDefaultUndergroundStructures(GENERATION_SETTINGS);
 
-        // need to add dungeons water lake feature
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.LAKES, JDConfiguredFeatures.DUNGEONS_WATER_LAKE);
 
         DefaultBiomeFeatures.addDungeons(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addPlainsTallGrass(GENERATION_SETTINGS);

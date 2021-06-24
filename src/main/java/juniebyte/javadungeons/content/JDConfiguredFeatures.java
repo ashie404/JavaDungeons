@@ -34,6 +34,7 @@ public class JDConfiguredFeatures {
     public static ConfiguredFeature<TreeFeatureConfig, ?> SS_SWAMP_TREE;
     public static ConfiguredFeature<?, ?> CC_DIRT;
     public static ConfiguredFeature<?, ?> DUNGEONS_WATER_LAKE;
+    public static ConfiguredFeature<?, ?> SWAMP_WATER_LAKE;
     public static ConfiguredFeature<?, ?> CC_GRASS;
 
     public static void init() {
@@ -112,7 +113,11 @@ public class JDConfiguredFeatures {
         ).uniformRange(YOffset.fixed(30), YOffset.getTop()));
         DUNGEONS_WATER_LAKE = JDConfiguredFeatures.registerConfiguredFeature("dungeons_water_lake",
                 Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.DUNGEONS_WATER.getDefaultState()))
-                        .range(net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.BOTTOM_TO_TOP).spreadHorizontally()
+                        .range(net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.BOTTOM_TO_TOP).spreadHorizontally().applyChance(4)
+        );
+        SWAMP_WATER_LAKE = JDConfiguredFeatures.registerConfiguredFeature("swamp_water_lake",
+                Features.DUNGEONS_WATER_LAKE.configure(new SingleStateFeatureConfig(Fluids.SOGGY_SWAMP_WATER.getDefaultState()))
+                        .range(net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.BOTTOM_TO_TOP).spreadHorizontally().applyChance(4)
         );
         CC_GRASS = JDConfiguredFeatures.registerConfiguredFeature("desert_grass", Feature.RANDOM_PATCH.configure(
                 (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(CactiCanyonBlocks.CC_DESERT_GRASS.getDefaultState()), new SimpleBlockPlacer())).tries(4).build()

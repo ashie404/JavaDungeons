@@ -2,7 +2,7 @@
 
 # JavaDungeons
 
-[![](https://img.shields.io/github/license/juniebyte/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/juniebyte/javadungeons)](https://github.com/juniebyte/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.16.1-green) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=conda-forge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons)
+[![](https://img.shields.io/github/license/juniebyte/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/juniebyte/javadungeons)](https://github.com/juniebyte/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.17-green) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=conda-forge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons)
 
 <br/>
 
@@ -14,8 +14,8 @@ Most textures are ripped from Minecraft: Dungeons. All Dungeons texture rights g
 
 ### Naming of blocks
 
-All blocks are named based on what I think they're closest to in Minecraft, unless they have a name in Dungeons or are just obvious as to what they are. Blocks are categorized under what category they're put under in the game files (so files tagged creeper woods will be put in the creeper woods category, etc.), or where they're most found ingame.
+All blocks are named based on what I think they're closest to in Minecraft, unless they have a name in Dungeons. Blocks are categorized under where they're found most ingame, unless it's found in multiple locations, in which case it'll just be put under a general category.
 
 ### What will be added from Dungeons?
 
-Mostly decoration blocks and weapons. Blocks & weapons with small color variations or shape variations from vanilla blocks will not be added. I have no plans to add in any entities, as getting them functionally similar to their Minecraft: Dungeons counterparts would be extremely difficult. 
+Mostly decoration blocks and weapons. Blocks & weapons with small color variations or shape variations from vanilla blocks will not be added.
