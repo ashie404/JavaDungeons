@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/grass_path",
+    "parent": "minecraft:block/dirt_path",
     "textures": {
         "particle": "dungeons:block/creeper_woods/rocky_dirt_1",
         "top": "dungeons:block/creeper_woods/rocky_dirt_1",
