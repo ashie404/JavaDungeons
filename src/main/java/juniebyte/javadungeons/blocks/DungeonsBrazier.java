@@ -1,20 +1,14 @@
 package juniebyte.javadungeons.blocks;
 
-import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -24,10 +18,6 @@ import net.minecraft.world.WorldView;
 import java.util.Random;
 
 public class DungeonsBrazier extends Block {
-
-    // brazier block
-
-    public BlockItem blockItem;
 
     public String type;
     public boolean soggySwamp;
@@ -40,12 +30,10 @@ public class DungeonsBrazier extends Block {
 		return soggySwamp ? SS_SHAPE : SHAPE;
 	}
 
-    public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, boolean soggySwamp, String id) {
+    public DungeonsBrazier(Material material, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque().lightLevel(!type.equals("unlit") ? 15 : 0));
         this.type = type;
         this.soggySwamp = soggySwamp;
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
     }
 
     @Override

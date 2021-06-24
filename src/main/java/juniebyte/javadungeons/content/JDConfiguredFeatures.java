@@ -42,7 +42,7 @@ public class JDConfiguredFeatures {
                 Feature.TREE.configure(new TreeFeatureConfig.Builder(
                         new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
                         new StraightTrunkPlacer(4, 2, 0),
-                        new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_OAK_LEAVES.getDefaultState()),
+                        new SimpleBlockStateProvider(Blocks.DARK_OAK_LEAVES.getDefaultState()),
                         new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_OAK_SAPLING.getDefaultState()),
                         new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                         new TwoLayersFeatureSize(1, 0, 1)
@@ -52,7 +52,7 @@ public class JDConfiguredFeatures {
                 Feature.TREE.configure(new TreeFeatureConfig.Builder(
                         new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
                         new LargeOakTrunkPlacer(3, 11, 0),
-                        new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_OAK_LEAVES.getDefaultState()),
+                        new SimpleBlockStateProvider(Blocks.DARK_OAK_LEAVES.getDefaultState()),
                         new SimpleBlockStateProvider(CreeperWoodsBlocks.CW_FANCY_OAK_SAPLING.getDefaultState()),
                         new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
                         new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))

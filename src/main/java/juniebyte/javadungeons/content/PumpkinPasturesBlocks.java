@@ -60,25 +60,25 @@ public class PumpkinPasturesBlocks {
 
     public static void init() {
         // foliage
-        PM_YELLOW_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_leaves");
-        PM_RED_AUTUMNAL_LEAVES = new DungeonsLeaves(JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_leaves");
+        PM_YELLOW_AUTUMNAL_LEAVES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsLeaves(), "pm_yellow_autumnal_leaves");
+        PM_RED_AUTUMNAL_LEAVES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsLeaves(), "pm_red_autumnal_leaves");
         
         // saplings
-        PM_RED_AUTUMNAL_SAPLING = new DungeonsSapling(new RedAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_red_autumnal_sapling");
-        PM_YELLOW_AUTUMNAL_SAPLING = new DungeonsSapling(new YellowAutumnalSaplingGenerator(), JavaDungeons.PUMPKIN_PASTURES, "pm_yellow_autumnal_sapling");
+        PM_RED_AUTUMNAL_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsSapling(new RedAutumnalSaplingGenerator()), "pm_red_autumnal_sapling", JavaDungeons.PUMPKIN_PASTURES);
+        PM_YELLOW_AUTUMNAL_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsSapling(new YellowAutumnalSaplingGenerator()), "pm_yellow_autumnal_sapling", JavaDungeons.PUMPKIN_PASTURES);
 
         // melons
         PM_BURNT_PUMPKIN = JavaDungeons.REGISTRY_HELPER.registerBlock(new PMBurntPumpkin(), "pm_burnt_pumpkin", JavaDungeons.PUMPKIN_PASTURES);
         PM_ROTTED_PUMPKIN = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.GOURD, 1.0F, 1.0F, BlockSoundGroup.WOOD), "pm_rotted_pumpkin", JavaDungeons.PUMPKIN_PASTURES);
 
         // haybale
-        PM_DRIED_HAYBALE = new DungeonsPillar(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dried_haybale");
+        PM_DRIED_HAYBALE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPillar(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "pm_dried_haybale", JavaDungeons.PUMPKIN_PASTURES);
 
         // plants
-        PM_SHRUB = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_shrub");
-        PM_CHARRED_GRASS = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_charred_grass");
-        PM_FERN = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_fern");
-        PM_DEAD_SAPLING = new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS, JavaDungeons.PUMPKIN_PASTURES, "pm_dead_sapling");
+        PM_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_shrub", JavaDungeons.PUMPKIN_PASTURES);
+        PM_CHARRED_GRASS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_charred_grass", JavaDungeons.PUMPKIN_PASTURES);
+        PM_FERN = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_fern", JavaDungeons.PUMPKIN_PASTURES);
+        PM_DEAD_SAPLING = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "pm_dead_sapling", JavaDungeons.PUMPKIN_PASTURES);
 
         // ground related
         PM_CHARRED_GRASS_BLOCK = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "pm_charred_grass_block", JavaDungeons.PUMPKIN_PASTURES);
