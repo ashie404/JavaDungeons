@@ -13,8 +13,8 @@ public class DungeonsSlabStairBlock {
     public DungeonsStairs stairs;
 
     public DungeonsSlabStairBlock(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, String slabId, String stairsId) {
-        base = new DungeonsBlock(material, hardness, resistance, sounds, group, id);
-        slab = new DungeonsSlab(material, hardness, resistance, sounds, group, slabId);
+        base = new DungeonsBlock(material, hardness, resistance, sounds);
+        slab = new DungeonsSlab(material, hardness, resistance, sounds);
         stairs = new DungeonsStairs(material, hardness, resistance, sounds, base, group, stairsId);
     }
     
