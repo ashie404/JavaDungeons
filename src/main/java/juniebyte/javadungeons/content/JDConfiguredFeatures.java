@@ -119,7 +119,7 @@ public class JDConfiguredFeatures {
         ).decorate(Decorator.COUNT_MULTILAYER.configure(new CountConfig(1))));
     }
 
-    public static<T extends FeatureConfig> ConfiguredFeature<T, ?> registerConfiguredFeature(String identifier, ConfiguredFeature<T, ?> configuredFeature) {
+    public static <T extends FeatureConfig> ConfiguredFeature<T, ?> registerConfiguredFeature(String identifier, ConfiguredFeature<T, ?> configuredFeature) {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, identifier), configuredFeature);
     }
 }

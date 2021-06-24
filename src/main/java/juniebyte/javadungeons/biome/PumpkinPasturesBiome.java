@@ -2,8 +2,6 @@ package juniebyte.javadungeons.biome;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import juniebyte.javadungeons.content.Features;
-import juniebyte.javadungeons.content.Fluids;
 import juniebyte.javadungeons.content.GenericBlocks;
 import juniebyte.javadungeons.content.JDConfiguredFeatures;
 import juniebyte.javadungeons.content.PumpkinPasturesBlocks;
@@ -18,27 +16,16 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
-import net.minecraft.world.biome.Biome.Category;
-import net.minecraft.world.biome.Biome.Precipitation;
-import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
-import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.feature.RuinedPortalFeature;
-
-import java.util.OptionalInt;
 
 import static juniebyte.javadungeons.JavaDungeons.MOD_ID;
 import static juniebyte.javadungeons.content.Biomes.calcSkyColor;
@@ -87,12 +74,12 @@ public class PumpkinPasturesBiome extends Biome {
 
         // add dungeons vegetation
         GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pmshort_grass"), Feature.RANDOM_PATCH.configure(
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_short_grass"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(GenericBlocks.SHORT_GRASS.getDefaultState()), new SimpleBlockPlacer())).tries(32).build()
         ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))));
             
         GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pmfern"), Feature.RANDOM_PATCH.configure(
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pm_general_fern"), Feature.RANDOM_PATCH.configure(
             (new RandomPatchFeatureConfig.Builder(new SimpleBlockStateProvider(GenericBlocks.FERN.getDefaultState()), new SimpleBlockPlacer())).tries(32).build()
         ).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))));  
             
@@ -128,32 +115,38 @@ public class PumpkinPasturesBiome extends Biome {
         .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.1F, 1)))));
 
         // pumpkin patches
-        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_0"),
-                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
-                new SimpleBlockStateProvider(Blocks.PUMPKIN.getDefaultState()),
-                new SimpleBlockPlacer())
-            .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(2)))
-        ));
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION,
+                Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_0"),
+                        Feature.RANDOM_PATCH.configure(
+                                new RandomPatchFeatureConfig.Builder(
+                                        new SimpleBlockStateProvider(Blocks.PUMPKIN.getDefaultState()),
+                                        SimpleBlockPlacer.INSTANCE
+                                ).tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK)).cannotProject().build()
+                        ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).applyChance(2)
+                )
+        );
         
         GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_1"),
-                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
-                new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_BURNT_PUMPKIN.getDefaultState()),
-                new SimpleBlockPlacer())
-            .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(8)))
-        ));
+                Feature.RANDOM_PATCH.configure(
+                        new RandomPatchFeatureConfig.Builder(
+                                new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_BURNT_PUMPKIN.getDefaultState()),
+                                SimpleBlockPlacer.INSTANCE
+                        ).tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK)).cannotProject().build()
+                ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).applyChance(8)
+            )
+        );
 
-        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION, 
-            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_2"),
-                Feature.RANDOM_PATCH.configure(new RandomPatchFeatureConfig.Builder(
-                new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_ROTTED_PUMPKIN.getDefaultState()),
-                new SimpleBlockPlacer())
-            .tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK))
-            .cannotProject().build()).decorate(Decorator.CHANCE.configure(new ChanceDecoratorConfig(4)))
-        ));
+        GENERATION_SETTINGS.feature(GenerationStep.Feature.VEGETAL_DECORATION,
+                Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(MOD_ID, "pumpkin_patch_2"),
+                        Feature.RANDOM_PATCH.configure(
+                                new RandomPatchFeatureConfig.Builder(
+                                        new SimpleBlockStateProvider(PumpkinPasturesBlocks.PM_ROTTED_PUMPKIN.getDefaultState()),
+                                        SimpleBlockPlacer.INSTANCE
+                                ).tries(16).whitelist(ImmutableSet.of(GenericBlocks.GRASS_BLOCK)).cannotProject().build()
+                        ).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).applyChance(4)
+                )
+        );
 
         DefaultBiomeFeatures.addSprings(GENERATION_SETTINGS);
         DefaultBiomeFeatures.addFrozenTopLayer(GENERATION_SETTINGS);

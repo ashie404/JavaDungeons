@@ -4,6 +4,7 @@ import juniebyte.javadungeons.biome.CactiCanyonBiome;
 import juniebyte.javadungeons.biome.CactiCanyonDesertBiome;
 import juniebyte.javadungeons.biome.CreeperWoodsBiome;
 import juniebyte.javadungeons.biome.PumpkinPasturesBiome;
+import juniebyte.javadungeons.biome.DungeonsPlainsBiome;
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.minecraft.util.Identifier;
@@ -19,7 +20,7 @@ public class Biomes {
 
     public static CreeperWoodsBiome CREEPER_WOODS_BIOME;
     public static PumpkinPasturesBiome PUMPKIN_PASTURES_BIOME;
-//    public static DungeonsPlainsBiome DUNGEONS_PLAINS_BIOME;
+    public static DungeonsPlainsBiome DUNGEONS_PLAINS_BIOME;
     public static CactiCanyonBiome CACTI_CANYON_BIOME;
     public static CactiCanyonDesertBiome CACTI_CANYON_DESERT_BIOME;
 //    public static SoggySwampBiome SOGGY_SWAMP_BIOME;
@@ -35,7 +36,7 @@ public class Biomes {
         // register biomes
         CREEPER_WOODS_BIOME = Registry.register(BuiltinRegistries.BIOME, CREEPER_WOODS_BIOME_KEY.getValue(), new CreeperWoodsBiome());
         PUMPKIN_PASTURES_BIOME = Registry.register(BuiltinRegistries.BIOME, PUMPKIN_PASTURES_BIOME_KEY.getValue(), new PumpkinPasturesBiome());
-//        DUNGEONS_PLAINS_BIOME = Registry.register(BuiltinRegistries.BIOME, DUNGEONS_PLAINS_BIOME_KEY.getValue(), new DungeonsPlainsBiome());
+        DUNGEONS_PLAINS_BIOME = Registry.register(BuiltinRegistries.BIOME, DUNGEONS_PLAINS_BIOME_KEY.getValue(), new DungeonsPlainsBiome());
         CACTI_CANYON_BIOME = Registry.register(BuiltinRegistries.BIOME, CACTI_CANYON_BIOME_KEY.getValue(), new CactiCanyonBiome());
         CACTI_CANYON_DESERT_BIOME = Registry.register(BuiltinRegistries.BIOME, CACTI_CANYON_DESERT_BIOME_KEY.getValue(), new CactiCanyonDesertBiome());
 //        SOGGY_SWAMP_BIOME = Registry.register(BuiltinRegistries.BIOME, SOGGY_SWAMP_BIOME_KEY.getValue(), new SoggySwampBiome());
@@ -43,7 +44,7 @@ public class Biomes {
         // add biomes to worldgen
         OverworldBiomes.addContinentalBiome(CREEPER_WOODS_BIOME_KEY, OverworldClimate.TEMPERATE, 2D);
         OverworldBiomes.addContinentalBiome(PUMPKIN_PASTURES_BIOME_KEY, OverworldClimate.TEMPERATE, 2.25D);
-//        BiomeUtils.addContinentalBiome(DUNGEONS_PLAINS_BIOME_KEY, OverworldClimate.TEMPERATE, 3D);
+        OverworldBiomes.addContinentalBiome(DUNGEONS_PLAINS_BIOME_KEY, OverworldClimate.TEMPERATE, 3D);
 //        BiomeUtils.addContinentalBiome(SOGGY_SWAMP_BIOME_KEY, OverworldClimate.TEMPERATE, 2.25D);
         OverworldBiomes.addContinentalBiome(CACTI_CANYON_BIOME_KEY, OverworldClimate.DRY, 2.5D);
         OverworldBiomes.addBiomeVariant(CACTI_CANYON_BIOME_KEY, CACTI_CANYON_DESERT_BIOME_KEY, 0.6D, OverworldClimate.DRY);
