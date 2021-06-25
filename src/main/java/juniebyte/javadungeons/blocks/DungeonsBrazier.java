@@ -22,7 +22,7 @@ public class DungeonsBrazier extends Block {
     public String type;
     public boolean soggySwamp;
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(-2.0D, 0.0D, -2.0D, 18.0D, 19.0D, 18.0D);
     protected static final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
 
     @Override
@@ -50,7 +50,7 @@ public class DungeonsBrazier extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (!type.equals("unlit")) {
             double d = (double)pos.getX() + 0.5D;
-            double e = (double)pos.getY() + 0.7D;
+            double e = (double)pos.getY() + 1.0D;
             double f = (double)pos.getZ() + 0.5D;
             world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
             world.addParticle(!type.equals("green_lit") ? ParticleTypes.FLAME : Particles.GREEN_FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
