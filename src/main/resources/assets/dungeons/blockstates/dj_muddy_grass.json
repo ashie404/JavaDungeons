@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/muddy_grass" },
+            { "model": "dungeons:block/dingy_jungle/muddy_grass", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/muddy_grass", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/muddy_grass", "y": 270 }
+        ]
+    }
+}

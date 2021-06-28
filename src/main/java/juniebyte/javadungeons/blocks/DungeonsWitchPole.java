@@ -8,7 +8,7 @@ import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
+
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
@@ -27,8 +27,7 @@ import net.minecraft.world.WorldView;
 public class DungeonsWitchPole extends Block {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
-    public BlockItem blockItem;
-
+    
     public DungeonsWitchPole(Material material, float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(HALF, DoubleBlockHalf.LOWER));

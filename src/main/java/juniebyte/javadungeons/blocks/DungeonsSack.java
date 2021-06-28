@@ -9,7 +9,6 @@ import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
@@ -36,7 +35,6 @@ public class DungeonsSack extends BlockWithEntity implements Waterloggable {
 
     // sack block
 
-    public BlockItem blockItem;
     public static final BooleanProperty WATERLOGGED;
     public boolean small;
     public int size;

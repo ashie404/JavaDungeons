@@ -2,7 +2,6 @@ package juniebyte.javadungeons.blocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
@@ -17,8 +16,6 @@ import net.minecraft.world.WorldView;
 public class DungeonsGravestone extends Block {
 
     // gravestone block
-
-    public BlockItem blockItem;
 
     public static final DirectionProperty FACING;
     public static final VoxelShape N_SHAPE;

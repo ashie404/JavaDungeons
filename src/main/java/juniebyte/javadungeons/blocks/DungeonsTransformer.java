@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
@@ -26,7 +25,6 @@ public class DungeonsTransformer extends Block {
    public static final TranslatableText CONTAINER_NAME = new TranslatableText("container.dungeons.dungeons_transformer", new Object[0]);
    public static final DirectionProperty FACING;
    public static final Identifier ID = new Identifier(JavaDungeons.MOD_ID, "dungeons_transformer");
-   public BlockItem blockItem;
 
    public DungeonsTransformer() {
       super(FabricBlockSettings.copy(Blocks.OBSIDIAN));
