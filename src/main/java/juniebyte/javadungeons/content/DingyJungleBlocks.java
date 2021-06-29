@@ -16,6 +16,7 @@ public class DingyJungleBlocks {
     public static Block DJ_MUD;
     public static Block DJ_GRASSY_DIRT;
     public static Block DJ_GRASSY_MUD;
+    public static Block DJ_DENSE_GRASSY_MUD;
     public static Block DJ_ROCKY_DIRT;
 
     // pebbles
@@ -31,7 +32,6 @@ public class DingyJungleBlocks {
     public static Block DJ_DINGY_CHISELED_STONE;
     public static Block DJ_MOSSY_CHISELED_STONE;
     public static Block DJ_STONE_BRICKS;
-    public static Block DJ_CRACKED_STONE_BRICKS;
     public static Block DJ_MOSSY_STONE_BRICKS;
 
     // stone tiles
@@ -73,6 +73,7 @@ public class DingyJungleBlocks {
         DJ_MUD = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dj_mud", JavaDungeons.DINGY_JUNGLE);
         DJ_GRASSY_DIRT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dj_grassy_dirt", JavaDungeons.DINGY_JUNGLE);
         DJ_GRASSY_MUD = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dj_grassy_mud", JavaDungeons.DINGY_JUNGLE);
+        DJ_DENSE_GRASSY_MUD = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "dj_dense_grassy_mud", JavaDungeons.DINGY_JUNGLE);
         DJ_ROCKY_DIRT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.AGGREGATE, 0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dj_rocky_dirt", JavaDungeons.DINGY_JUNGLE);
         
         // pebbles
@@ -88,7 +89,6 @@ public class DingyJungleBlocks {
         DJ_DINGY_CHISELED_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dingy_chiseled_stone", JavaDungeons.DINGY_JUNGLE);
         DJ_MOSSY_CHISELED_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_mossy_chiseled_stone", JavaDungeons.DINGY_JUNGLE);
         DJ_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_stone_bricks", JavaDungeons.DINGY_JUNGLE);
-        DJ_CRACKED_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_cracked_stone_bricks", JavaDungeons.DINGY_JUNGLE);
         DJ_MOSSY_STONE_BRICKS = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_mossy_stone_bricks", JavaDungeons.DINGY_JUNGLE);
 
         // stone tiles

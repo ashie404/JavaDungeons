@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=lower": {"model": "dungeons:block/dingy_jungle/tall_fern_bottom"},
+        "half=upper": {"model": "dungeons:block/dingy_jungle/tall_fern_top"}
+    }
+}
