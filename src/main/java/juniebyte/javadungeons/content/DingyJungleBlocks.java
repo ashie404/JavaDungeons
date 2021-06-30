@@ -1,6 +1,7 @@
 package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.JavaDungeons;
+import juniebyte.javadungeons.JavaDungeonsClient;
 import juniebyte.javadungeons.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -25,8 +26,6 @@ public class DingyJungleBlocks {
     public static Block DJ_GRASSY_PEBBLES;
 
     // stones
-    public static Block DJ_COBBLESTONE;
-    public static Block DJ_MOSSY_COBBLESTONE;
     public static Block DJ_OCELOT_STONE;
     public static Block DJ_CHISELED_STONE;
     public static Block DJ_DINGY_CHISELED_STONE;
@@ -64,6 +63,10 @@ public class DingyJungleBlocks {
     public static Block DJ_DEAD_SHRUB;
     public static Block DJ_BUSH;
 
+    // custom dingy jungle wood & leaves
+    public static Block DJ_JUNGLE_LOG;
+    public static Block DJ_JUNGLE_LEAVES;
+
     public static void init() {
         // grass, dirt & mud
         DJ_GRASS_BLOCK = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.SOLID_ORGANIC, 0.6F, 0.6F, BlockSoundGroup.GRASS), "dj_grass_block", JavaDungeons.DINGY_JUNGLE);
@@ -82,8 +85,6 @@ public class DingyJungleBlocks {
         DJ_GRASSY_PEBBLES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_grassy_pebbles", JavaDungeons.DINGY_JUNGLE);
 
         // stones
-        DJ_COBBLESTONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_cobblestone", JavaDungeons.DINGY_JUNGLE);
-        DJ_MOSSY_COBBLESTONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_mossy_cobblestone", JavaDungeons.DINGY_JUNGLE);
         DJ_OCELOT_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_ocelot_stone", JavaDungeons.DINGY_JUNGLE);
         DJ_CHISELED_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_chiseled_stone", JavaDungeons.DINGY_JUNGLE);
         DJ_DINGY_CHISELED_STONE = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsBlock(Material.STONE, 1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dingy_chiseled_stone", JavaDungeons.DINGY_JUNGLE);
@@ -120,5 +121,9 @@ public class DingyJungleBlocks {
         DJ_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_shrub", JavaDungeons.DINGY_JUNGLE);
         DJ_DEAD_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_dead_shrub", JavaDungeons.DINGY_JUNGLE);
         DJ_BUSH = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_bush", JavaDungeons.DINGY_JUNGLE);
+
+        // custom dingy jungle wood & leaves
+        DJ_JUNGLE_LOG = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPillar(Material.WOOD, 2.0F, 2.0F, BlockSoundGroup.WOOD), "dj_jungle_log", JavaDungeons.DINGY_JUNGLE);
+        DJ_JUNGLE_LEAVES = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsLeaves(), "dj_jungle_leaves", JavaDungeons.DINGY_JUNGLE);
     }
 }
