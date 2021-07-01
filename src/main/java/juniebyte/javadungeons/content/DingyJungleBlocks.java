@@ -62,7 +62,10 @@ public class DingyJungleBlocks {
     public static Block DJ_SHRUB;
     public static Block DJ_DEAD_SHRUB;
     public static Block DJ_BUSH;
-
+    public static Block DJ_LARGE_JUNGLE_PLANT;
+    public static Block DJ_LARGE_JUNGLE_FERN;
+    public static Block DJ_FLOWERING_JUNGLE_PLANT;
+    
     // custom dingy jungle wood & leaves
     public static Block DJ_JUNGLE_LOG;
     public static Block DJ_JUNGLE_LEAVES;
@@ -121,6 +124,9 @@ public class DingyJungleBlocks {
         DJ_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_shrub", JavaDungeons.DINGY_JUNGLE);
         DJ_DEAD_SHRUB = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.REPLACEABLE_PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_dead_shrub", JavaDungeons.DINGY_JUNGLE);
         DJ_BUSH = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_bush", JavaDungeons.DINGY_JUNGLE);
+        DJ_LARGE_JUNGLE_PLANT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsJunglePlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_large_jungle_plant", JavaDungeons.DINGY_JUNGLE);
+        DJ_LARGE_JUNGLE_FERN = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsJunglePlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_large_jungle_fern", JavaDungeons.DINGY_JUNGLE);
+        DJ_FLOWERING_JUNGLE_PLANT = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsJunglePlant(Material.PLANT, 0.0F, 0.0F, BlockSoundGroup.GRASS), "dj_flowering_jungle_plant", JavaDungeons.DINGY_JUNGLE);
 
         // custom dingy jungle wood & leaves
         DJ_JUNGLE_LOG = JavaDungeons.REGISTRY_HELPER.registerBlock(new DungeonsPillar(Material.WOOD, 2.0F, 2.0F, BlockSoundGroup.WOOD), "dj_jungle_log", JavaDungeons.DINGY_JUNGLE);

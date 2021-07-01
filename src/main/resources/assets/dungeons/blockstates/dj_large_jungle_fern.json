@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/large_jungle_fern" },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_fern", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_fern", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_fern", "y": 270 }
+        ]
+    }
+  }
+  

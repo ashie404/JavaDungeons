@@ -139,7 +139,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             DingyJungleBlocks.DJ_DEAD_SHRUB,
             DingyJungleBlocks.DJ_BUSH,
             DingyJungleBlocks.DJ_TALL_FERN,
-            DingyJungleBlocks.DJ_JUNGLE_LEAVES
+            DingyJungleBlocks.DJ_JUNGLE_LEAVES,
+            DingyJungleBlocks.DJ_LARGE_JUNGLE_PLANT,
+            DingyJungleBlocks.DJ_LARGE_JUNGLE_FERN,
+            DingyJungleBlocks.DJ_FLOWERING_JUNGLE_PLANT
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             TRANSLUCENT_BLOCK_LAYER,
