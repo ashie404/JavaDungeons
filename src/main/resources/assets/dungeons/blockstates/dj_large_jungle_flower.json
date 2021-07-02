@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/large_jungle_flower" },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_flower", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_flower", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/large_jungle_flower", "y": 270 }
+        ]
+    }
+  }
