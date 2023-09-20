@@ -3,6 +3,8 @@ package juniebyte.javadungeons;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ItemGroup;
@@ -48,6 +50,17 @@ public class JavaDungeons implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// register item groups
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "generic"), GENERIC);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "creeper_woods"), CREEPER_WOODS);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "desert_temple"), DESERT_TEMPLE);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "pumpkin_pastures"), PUMPKIN_PASTURES);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "soggy_swamp"), SOGGY_SWAMP);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "cacti_canyon"), CACTI_CANYON);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "redstone_mines"), REDSTONE_MINES);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "fiery_forge"), FIERY_FORGE);
+		Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "weapons"), WEAPONS);
+		
 		// other stuff
 		Tags.init();
 		Sounds.init();
