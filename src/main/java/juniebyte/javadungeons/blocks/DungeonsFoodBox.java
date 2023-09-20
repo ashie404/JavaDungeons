@@ -18,12 +18,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.tag.FluidTags;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
@@ -51,7 +52,7 @@ public class DungeonsFoodBox extends Block implements Waterloggable {
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
        if ((Boolean)state.get(WATERLOGGED)) {
-          world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+          world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
        }
 
        return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
@@ -62,8 +63,8 @@ public class DungeonsFoodBox extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsFoodBox(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
+    public DungeonsFoodBox(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

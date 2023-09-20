@@ -24,7 +24,6 @@ public class DungeonsLayeringBlock extends SnowBlock {
     public BlockItem blockItem;
 
     // override to remove melting functionality
-    @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
     }
 
