@@ -1,9 +1,9 @@
 package juniebyte.javadungeons;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ItemGroup;
 
@@ -18,15 +18,33 @@ public class JavaDungeons implements ModInitializer {
 
 	public static final Logger log = LogManager.getLogger(MOD_ID);
 
-	public static final ItemGroup GENERIC = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "generic"), () -> new ItemStack(GenericBlocks.GREEN_LIT_BRAZIER));
-	public static final ItemGroup CREEPER_WOODS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "creeper_woods"), () -> new ItemStack(CreeperWoodsBlocks.CW_MOSSY_STONE_BRICKS));
-	public static final ItemGroup DESERT_TEMPLE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "desert_temple"), () -> new ItemStack(DesertTempleBlocks.DT_CHISELED_SANDY_STONE));
-	public static final ItemGroup PUMPKIN_PASTURES = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "pumpkin_pastures"), () -> new ItemStack(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES));
-	public static final ItemGroup SOGGY_SWAMP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "soggy_swamp"), () -> new ItemStack(SoggySwampBlocks.SS_GRASS_BLOCK));
-	public static final ItemGroup CACTI_CANYON = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "cacti_canyon"), () -> new ItemStack(CactiCanyonBlocks.CC_CACTUS));
-	public static final ItemGroup REDSTONE_MINES = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "redstone_mines"), () -> new ItemStack(RedstoneMinesBlocks.RM_REDSTONE_CRYSTALS));
-	public static final ItemGroup FIERY_FORGE = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "fiery_forge"), () -> new ItemStack(FieryForgeBlocks.FF_EMBLEMED_DARK_STONE));
-	public static final ItemGroup WEAPONS = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "weapons"), () -> new ItemStack(Weapons.FIREBRAND));
+	public static final ItemGroup GENERIC = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(GenericBlocks.GREEN_LIT_BRAZIER))
+		.displayName(Text.translatable("itemGroup.dungeons.generic")).build();
+	public static final ItemGroup CREEPER_WOODS = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(CreeperWoodsBlocks.CW_MOSSY_STONE_BRICKS))
+		.displayName(Text.translatable("itemGroup.dungeons.creeper_woods")).build();
+	public static final ItemGroup DESERT_TEMPLE = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(DesertTempleBlocks.DT_CHISELED_SANDY_STONE))
+		.displayName(Text.translatable("itemGroup.dungeons.desert_temple")).build();
+	public static final ItemGroup PUMPKIN_PASTURES = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES))
+		.displayName(Text.translatable("itemGroup.dungeons.pumpkin_pastures")).build();
+	public static final ItemGroup SOGGY_SWAMP = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(SoggySwampBlocks.SS_GRASS_BLOCK))
+		.displayName(Text.translatable("itemGroup.dungeons.soggy_swamp")).build();
+	public static final ItemGroup CACTI_CANYON = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(CactiCanyonBlocks.CC_CACTUS))
+		.displayName(Text.translatable("itemGroup.dungeons.cacti_canyon")).build();
+	public static final ItemGroup REDSTONE_MINES = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(RedstoneMinesBlocks.RM_REDSTONE_CRYSTALS))
+		.displayName(Text.translatable("itemGroup.dungeons.redstone_mines")).build();
+	public static final ItemGroup FIERY_FORGE = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(FieryForgeBlocks.FF_EMBLEMED_DARK_STONE))
+		.displayName(Text.translatable("itemGroup.dungeons.fiery_forge")).build();
+	public static final ItemGroup WEAPONS = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(Weapons.FIREBRAND))
+		.displayName(Text.translatable("itemGroup.dungeons.weapons")).build();
 
 	@Override
 	public void onInitialize() {
