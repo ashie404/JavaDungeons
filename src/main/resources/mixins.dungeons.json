@@ -2,13 +2,10 @@
     "required": true,
     "package": "juniebyte.javadungeons.mixin",
     "compatibilityLevel": "JAVA_17",
-    "plugin": "juniebyte.javadungeons.mixin.ToweletteCompatMixinPlugin",
     "mixins": [
       "MixinPlantBlock",
       "MixinFeature",
-      "MixinCactusBlock",
-      "CompatMixinFluidloggable",
-      "CompatMixinWaterPlant"
+      "MixinCactusBlock"
     ],
     "injectors": {
       "defaultRequire": 1
