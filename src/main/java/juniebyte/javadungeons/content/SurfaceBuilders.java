@@ -3,7 +3,7 @@ package juniebyte.javadungeons.content;
 import juniebyte.javadungeons.gen.*;
 import juniebyte.javadungeons.JavaDungeons;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 

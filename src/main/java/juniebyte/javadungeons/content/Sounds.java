@@ -2,7 +2,7 @@ package juniebyte.javadungeons.content;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 import juniebyte.javadungeons.JavaDungeons;
 

@@ -2,25 +2,26 @@ package juniebyte.javadungeons.blocks;
 
 import juniebyte.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.GrassPathBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.DirtPathBlock;
+
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class DungeonsPath extends GrassPathBlock {
+public class DungeonsPath extends DirtPathBlock {
 
     // path block
 
     public BlockItem blockItem;
 
-    public DungeonsPath(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    public DungeonsPath(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
+        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
+        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
 }

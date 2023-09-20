@@ -4,7 +4,7 @@ import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
 import juniebyte.javadungeons.gen.RedAutumnalSaplingGenerator;
 import juniebyte.javadungeons.gen.YellowAutumnalSaplingGenerator;
-import net.minecraft.block.Material;
+
 import net.minecraft.sound.BlockSoundGroup;
 
 public class PumpkinPasturesBlocks {

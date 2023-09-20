@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
@@ -17,7 +17,8 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
@@ -70,12 +71,12 @@ public class DungeonsSack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public DungeonsSack(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds).nonOpaque());
+    public DungeonsSack(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean small) {
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
+        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     static {

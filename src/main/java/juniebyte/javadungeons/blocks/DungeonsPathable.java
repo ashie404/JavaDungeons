@@ -2,11 +2,11 @@ package juniebyte.javadungeons.blocks;
 
 import juniebyte.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -18,7 +18,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.World;
 
@@ -31,17 +33,17 @@ public class DungeonsPathable extends Block {
 
     public boolean canTill;
 
-    public DungeonsPathable(Material material, float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
-        super(FabricBlockSettings.of(material).strength(hardness, resistance).sounds(sounds));
-        Registry.register(Registry.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registry.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings().group(group)));
+    public DungeonsPathable(float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
+        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
+        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
         this.pathBlock = pathBlock;
         this.canTill = canTill;
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (player.getMainHandStack().getItem().isIn(FabricToolTags.SHOVELS) && world.getBlockState(pos.up()).isAir()) {
+        if (player.getMainHandStack().getItem().getDefaultStack().isIn(ItemTags.SHOVELS) && world.getBlockState(pos.up()).isAir()) {
             world.playSound(
                 null,
                 pos,
@@ -52,7 +54,7 @@ public class DungeonsPathable extends Block {
             );
             world.setBlockState(pos, pathBlock.getDefaultState());
             return ActionResult.SUCCESS;
-        } else if (player.getMainHandStack().getItem().isIn(FabricToolTags.HOES) && world.getBlockState(pos.up()).isAir() && canTill) {
+        } else if (player.getMainHandStack().getItem().getDefaultStack().isIn(ItemTags.HOES) && world.getBlockState(pos.up()).isAir() && canTill) {
             world.playSound(
                 null,
                 pos,

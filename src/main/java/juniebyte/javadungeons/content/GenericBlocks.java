@@ -1,7 +1,7 @@
 package juniebyte.javadungeons.content;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+
 import net.minecraft.sound.BlockSoundGroup;
 import juniebyte.javadungeons.blocks.*;
 import juniebyte.javadungeons.JavaDungeons;

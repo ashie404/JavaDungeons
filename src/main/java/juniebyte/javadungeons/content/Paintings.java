@@ -3,7 +3,7 @@ package juniebyte.javadungeons.content;
 import juniebyte.javadungeons.JavaDungeons;
 import net.minecraft.entity.decoration.painting.PaintingMotive;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class Paintings {
 

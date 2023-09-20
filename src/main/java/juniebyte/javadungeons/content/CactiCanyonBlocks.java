@@ -3,7 +3,7 @@ package juniebyte.javadungeons.content;
 import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+
 import net.minecraft.sound.BlockSoundGroup;
 
 public class CactiCanyonBlocks {

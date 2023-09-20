@@ -1,6 +1,6 @@
 package juniebyte.javadungeons.blocks;
 
-import net.minecraft.block.Material;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 
@@ -12,10 +12,10 @@ public class DungeonsSlabStairBlock {
     public DungeonsSlab slab;
     public DungeonsStairs stairs;
 
-    public DungeonsSlabStairBlock(Material material, float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, String slabId, String stairsId) {
-        base = new DungeonsBlock(material, hardness, resistance, sounds, group, id);
-        slab = new DungeonsSlab(material, hardness, resistance, sounds, group, slabId);
-        stairs = new DungeonsStairs(material, hardness, resistance, sounds, base, group, stairsId);
+    public DungeonsSlabStairBlock(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, String slabId, String stairsId) {
+        base = new DungeonsBlock(hardness, resistance, sounds, group, id);
+        slab = new DungeonsSlab(hardness, resistance, sounds, group, slabId);
+        stairs = new DungeonsStairs(hardness, resistance, sounds, base, group, stairsId);
     }
     
 }
