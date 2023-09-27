@@ -6,8 +6,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import juniebyte.javadungeons.content.*;
+import terrablender.api.TerraBlenderApi;
 
-public class JavaDungeons implements ModInitializer {
+public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
 	public static final String MOD_ID = "dungeons";
 
@@ -45,5 +46,10 @@ public class JavaDungeons implements ModInitializer {
 		Biomes.init();
 
 		log.info("JavaDungeons initialized!");
+	}
+
+	@Override
+	public void onTerraBlenderInitialized() {
+		
 	}
 }
