@@ -57,7 +57,7 @@ public class DungeonsTeapot extends Block {
         return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
-    public DungeonsTeapot(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsTeapot(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

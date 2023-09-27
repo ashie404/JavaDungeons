@@ -66,7 +66,7 @@ public class DungeonsGravestone extends Block {
         builder.add(FACING);
     }
 
-    public DungeonsGravestone(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsGravestone(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

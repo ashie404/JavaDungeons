@@ -69,7 +69,7 @@ public class DungeonsChains extends Block {
         builder.add(BELOW);
     }
 
-    public DungeonsChains(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsChains(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
         this.setDefaultState(this.stateManager.getDefaultState().with(ABOVE, false).with(BELOW, false));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

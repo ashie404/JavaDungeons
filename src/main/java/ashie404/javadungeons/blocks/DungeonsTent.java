@@ -34,7 +34,7 @@ public class DungeonsTent extends Block {
 
     public BlockItem blockItem;
 
-    public DungeonsTent(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsTent(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).nonOpaque());
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

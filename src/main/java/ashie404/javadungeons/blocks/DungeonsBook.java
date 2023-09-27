@@ -44,7 +44,7 @@ public class DungeonsBook extends Block {
         return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
-    public DungeonsBook(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsBook(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().noCollision());
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/grass_path",
+    "parent": "minecraft:block/dirt_path",
     "textures": {
         "particle": "dungeons:block/soggy_swamp/dirt",
         "top": "dungeons:block/soggy_swamp/dirt_top",

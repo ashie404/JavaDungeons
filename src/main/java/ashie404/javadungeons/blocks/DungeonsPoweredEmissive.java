@@ -26,7 +26,7 @@ public class DungeonsPoweredEmissive extends RedstoneLampBlock {
         return (blockState) -> { return blockState.get(Properties.LIT) ? 15 : 0; };
     }
 
-    public DungeonsPoweredEmissive(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsPoweredEmissive(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(getLightLevel()));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

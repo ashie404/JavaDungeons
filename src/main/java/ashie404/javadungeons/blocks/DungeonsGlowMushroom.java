@@ -63,7 +63,7 @@ public class DungeonsGlowMushroom extends SeaPickleBlock {
         super.onSteppedOn(world, pos, state, entity);
     }
 
-    public DungeonsGlowMushroom(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsGlowMushroom(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).luminance(12));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

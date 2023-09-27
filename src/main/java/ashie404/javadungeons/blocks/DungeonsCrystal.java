@@ -30,7 +30,7 @@ public class DungeonsCrystal extends Block {
         return SHAPE;
     }
 
-    public DungeonsCrystal(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsCrystal(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(12));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

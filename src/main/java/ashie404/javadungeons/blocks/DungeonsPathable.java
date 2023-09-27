@@ -33,7 +33,7 @@ public class DungeonsPathable extends Block {
 
     public boolean canTill;
 
-    public DungeonsPathable(float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, ItemGroup group, String id) {
+    public DungeonsPathable(float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

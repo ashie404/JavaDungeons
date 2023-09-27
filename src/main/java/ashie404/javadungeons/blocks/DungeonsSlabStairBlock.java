@@ -1,7 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-
-import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class DungeonsSlabStairBlock {
@@ -12,10 +10,10 @@ public class DungeonsSlabStairBlock {
     public DungeonsSlab slab;
     public DungeonsStairs stairs;
 
-    public DungeonsSlabStairBlock(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, String slabId, String stairsId) {
-        base = new DungeonsBlock(hardness, resistance, sounds, group, id);
-        slab = new DungeonsSlab(hardness, resistance, sounds, group, slabId);
-        stairs = new DungeonsStairs(hardness, resistance, sounds, base, group, stairsId);
+    public DungeonsSlabStairBlock(float hardness, float resistance, BlockSoundGroup sounds, String id, String slabId, String stairsId) {
+        base = new DungeonsBlock(hardness, resistance, sounds, id);
+        slab = new DungeonsSlab(hardness, resistance, sounds, slabId);
+        stairs = new DungeonsStairs(hardness, resistance, sounds, base, stairsId);
     }
     
 }

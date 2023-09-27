@@ -44,7 +44,7 @@ public class DungeonsCandle extends Block {
 		return SHAPE;
 	}
 
-    public DungeonsCandle(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id, boolean isGreen) {
+    public DungeonsCandle(float hardness, float resistance, BlockSoundGroup sounds, String id, boolean isGreen) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15));
         this.isGreen = isGreen;
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);

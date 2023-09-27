@@ -30,7 +30,7 @@ public class DungeonsGlowingPlant extends PlantBlock {
         return SHAPE;
     }
 
-    public DungeonsGlowingPlant(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String id) {
+    public DungeonsGlowingPlant(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(12).nonOpaque().collidable(false));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));

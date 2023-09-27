@@ -44,7 +44,7 @@ public class DungeonsBrazier extends Block {
 		return soggySwamp ? SS_SHAPE : SHAPE;
 	}
 
-    public DungeonsBrazier(float hardness, float resistance, BlockSoundGroup sounds, ItemGroup group, String type, boolean soggySwamp, String id) {
+    public DungeonsBrazier(float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0));
         this.type = type;
         this.soggySwamp = soggySwamp;

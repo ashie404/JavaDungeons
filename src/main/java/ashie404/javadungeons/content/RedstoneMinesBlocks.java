@@ -24,20 +24,20 @@ public class RedstoneMinesBlocks {
     
     public static void init() {
         // crystals
-        RM_CRYSTALS = new DungeonsCrystal(3.0F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_crystals");
-        RM_REDSTONE_CRYSTALS = new DungeonsRedstoneCrystal(3.0F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_redstone_crystals");
+        RM_CRYSTALS = new DungeonsCrystal(3.0F, 6.0F, BlockSoundGroup.STONE, "rm_crystals");
+        RM_REDSTONE_CRYSTALS = new DungeonsRedstoneCrystal(3.0F, 6.0F, BlockSoundGroup.STONE, "rm_redstone_crystals");
 
         // dirt related
-        RM_SNOWY_DIRT = new DungeonsBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, ItemGroups.REDSTONE_MINES, "rm_snowy_dirt");
+        RM_SNOWY_DIRT = new DungeonsBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "rm_snowy_dirt");
 
         // plants
-        RM_SHRUB = new DungeonsPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, ItemGroups.REDSTONE_MINES, "rm_shrub");
+        RM_SHRUB = new DungeonsPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "rm_shrub");
 
         // dark quartz
-        RM_DARK_QUARTZ = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_dark_quartz", "rm_dark_quartz_slab", "rm_dark_quartz_stairs");
-        RM_DARK_QUARTZ_TILES = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_dark_quartz_tiles", "rm_dark_quartz_tiles_slab", "rm_dark_quartz_tiles_stairs");
-        RM_DARK_QUARTZ_PILLAR = new DungeonsPillar(1.5F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_dark_quartz_pillar");
-        RM_CHISELED_DARK_QUARTZ = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_chiseled_dark_quartz");
-        RM_CHISELED_DARK_QUARTZ_1 = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, ItemGroups.REDSTONE_MINES, "rm_chiseled_dark_quartz_1");
+        RM_DARK_QUARTZ = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_dark_quartz", "rm_dark_quartz_slab", "rm_dark_quartz_stairs");
+        RM_DARK_QUARTZ_TILES = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_dark_quartz_tiles", "rm_dark_quartz_tiles_slab", "rm_dark_quartz_tiles_stairs");
+        RM_DARK_QUARTZ_PILLAR = new DungeonsPillar(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_dark_quartz_pillar");
+        RM_CHISELED_DARK_QUARTZ = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz");
+        RM_CHISELED_DARK_QUARTZ_1 = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz_1");
     }
 }
