@@ -32,7 +32,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
     public void onInitializeClient() {
 
         // register color providers
-        ColorProviderRegistries.BLOCK.register(
+        ColorProviderRegistry.BLOCK.register(
             GRASS_BLOCK_COLORS,
             GenericBlocks.SHORT_GRASS,
             GenericBlocks.FERN,
@@ -49,7 +49,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT
         );
 
-        ColorProviderRegistries.ITEM.register(
+        ColorProviderRegistry.ITEM.register(
             GRASS_ITEM_COLORS,
             GenericBlocks.SHORT_GRASS.blockItem,
             GenericBlocks.FERN.blockItem,

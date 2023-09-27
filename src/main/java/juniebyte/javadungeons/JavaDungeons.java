@@ -23,8 +23,6 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		Fluids.init();
 		Particles.init();
 		Properties.init();
-		Recipes.init();
-		Containers.init();
 		Paintings.init();
 
 		// blocks
@@ -41,9 +39,9 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		Weapons.init();
 
 		// worldgen
-		SurfaceBuilders.init();
-		Features.init();
-		Biomes.init();
+		//SurfaceBuilders.init();
+		//Features.init();
+		//Biomes.init();
 
 		log.info("JavaDungeons initialized!");
 	}
