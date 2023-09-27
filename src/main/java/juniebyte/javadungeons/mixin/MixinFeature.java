@@ -14,7 +14,7 @@ import juniebyte.javadungeons.content.Tags;
 public class MixinFeature {
 	@Inject(method = "isSoil", at = @At("HEAD"), cancellable = true)
 	private static void hookIsSoil(Block block, CallbackInfoReturnable<Boolean> callback) {
-		if (block.isIn(Tags.PLANTABLE)) {
+		if (block.getDefaultState().isIn(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}
 	}

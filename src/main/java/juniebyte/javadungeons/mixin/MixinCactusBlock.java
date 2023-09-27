@@ -21,7 +21,7 @@ public class MixinCactusBlock {
 	public void hookCanPlaceAt(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> callback) {
 		BlockState blockState = world.getBlockState(pos.down());
 
-		if ((blockState.isOf(Blocks.CACTUS) || blockState.isOf(CactiCanyonBlocks.CC_SAND)) && !world.getBlockState(pos.up()).getMaterial().isLiquid()) {
+		if ((blockState.isOf(Blocks.CACTUS) || blockState.isOf(CactiCanyonBlocks.CC_SAND)) && !world.getBlockState(pos.up()).isLiquid()) {
 			callback.setReturnValue(true);
 		}
 	}

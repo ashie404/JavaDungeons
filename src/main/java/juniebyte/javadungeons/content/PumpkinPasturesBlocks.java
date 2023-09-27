@@ -1,9 +1,7 @@
 package juniebyte.javadungeons.content;
 
 import juniebyte.javadungeons.blocks.*;
-import juniebyte.javadungeons.gen.RedAutumnalSaplingGenerator;
-import juniebyte.javadungeons.gen.YellowAutumnalSaplingGenerator;
-
+import juniebyte.javadungeons.gen.*;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class PumpkinPasturesBlocks {

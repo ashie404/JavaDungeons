@@ -1,8 +1,6 @@
 package juniebyte.javadungeons.content;
 
-import juniebyte.javadungeons.JavaDungeons;
 import juniebyte.javadungeons.blocks.*;
-
 import net.minecraft.sound.BlockSoundGroup;
 
 public class FieryForgeBlocks {

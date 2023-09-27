@@ -40,7 +40,7 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
 		// worldgen
 		//SurfaceBuilders.init();
-		//Features.init();
+		Features.init();
 		//Biomes.init();
 
 		log.info("JavaDungeons initialized!");
