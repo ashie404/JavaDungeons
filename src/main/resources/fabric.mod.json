@@ -10,8 +10,8 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/javadungeons",
-    "sources": "https://github.com/juniebyte/JavaDungeons",
-    "issues": "https://github.com/juniebyte/JavaDungeons/issues"
+    "sources": "https://github.com/ashie404/JavaDungeons",
+    "issues": "https://github.com/ashie404/JavaDungeons/issues"
   },
   "license": "MIT",
   "icon": "assets/dungeons/icon.png",
@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "juniebyte.javadungeons.JavaDungeons"
+      "ashie404.javadungeons.JavaDungeons"
     ],
     "client": [
-      "juniebyte.javadungeons.JavaDungeonsClient"
+      "ashie404.javadungeons.JavaDungeonsClient"
     ]
   },
 
