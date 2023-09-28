@@ -1,9 +1,14 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.gen.SwampSaplingGenerator;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class SoggySwampBlocks {
 
@@ -61,5 +66,27 @@ public class SoggySwampBlocks {
         SS_UNLIT_BRAZIER = new DungeonsBrazier(1.5F, 6.0F, BlockSoundGroup.STONE, "unlit", true, "ss_unlit_brazier");
         SS_LIT_BRAZIER = new DungeonsBrazier(1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true, "ss_lit_brazier");
         SS_GREEN_LIT_BRAZIER = new DungeonsBrazier(1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true, "ss_green_lit_brazier");
+
+        // add to item group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "redstone_mines"))).register(content -> {
+            content.add(SS_GRASS_BLOCK.blockItem);
+            content.add(SS_DIRT_PATH.blockItem);
+            content.add(SS_DIRT.blockItem);
+            content.add(SS_MOSSY_STONE.blockItem);
+            content.add(SS_MOSSY_COBBLESTONE.blockItem);
+            content.add(SS_MOSSY_STONE_BRICKS.blockItem);
+            content.add(SS_MOSSY_CHISELED_STONE_BRICKS.blockItem);
+            content.add(SS_SWAMP_LOG.blockItem);
+            content.add(SS_SWAMP_LEAVES.blockItem);
+            content.add(SS_SWAMP_PLANKS.base.blockItem);
+            content.add(SS_SWAMP_PLANKS.slab.blockItem);
+            content.add(SS_SWAMP_PLANKS.stairs.blockItem);
+            content.add(SS_SWAMP_SAPLING.blockItem);
+            content.add(SS_BRIDGE_PLANKS.blockItem);
+            content.add(SS_ROPE_FENCE.blockItem);
+            content.add(SS_UNLIT_BRAZIER.blockItem);
+            content.add(SS_LIT_BRAZIER.blockItem);
+            content.add(SS_GREEN_LIT_BRAZIER.blockItem);
+        });
     }
 }

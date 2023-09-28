@@ -45,7 +45,7 @@ public class RedstoneMinesBlocks {
         RM_CHISELED_DARK_QUARTZ = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz");
         RM_CHISELED_DARK_QUARTZ_1 = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz_1");
 
-        // add to item groups
+        // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "redstone_mines"))).register(content -> {
             content.add(RM_CRYSTALS.blockItem);
             content.add(RM_REDSTONE_CRYSTALS.blockItem);
