@@ -1,7 +1,12 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class RedstoneMinesBlocks {
 
@@ -39,5 +44,22 @@ public class RedstoneMinesBlocks {
         RM_DARK_QUARTZ_PILLAR = new DungeonsPillar(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_dark_quartz_pillar");
         RM_CHISELED_DARK_QUARTZ = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz");
         RM_CHISELED_DARK_QUARTZ_1 = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "rm_chiseled_dark_quartz_1");
+
+        // add to item groups
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "redstone_mines"))).register(content -> {
+            content.add(RM_CRYSTALS.blockItem);
+            content.add(RM_REDSTONE_CRYSTALS.blockItem);
+            content.add(RM_SNOWY_DIRT.blockItem);
+            content.add(RM_SHRUB.blockItem);
+            content.add(RM_DARK_QUARTZ.base.blockItem);
+            content.add(RM_DARK_QUARTZ.slab.blockItem);
+            content.add(RM_DARK_QUARTZ.stairs.blockItem);
+            content.add(RM_DARK_QUARTZ_TILES.base.blockItem);
+            content.add(RM_DARK_QUARTZ_TILES.slab.blockItem);
+            content.add(RM_DARK_QUARTZ_TILES.stairs.blockItem);
+            content.add(RM_DARK_QUARTZ_PILLAR.blockItem);
+            content.add(RM_CHISELED_DARK_QUARTZ.blockItem);
+            content.add(RM_CHISELED_DARK_QUARTZ_1.blockItem);
+        });
     }
 }
