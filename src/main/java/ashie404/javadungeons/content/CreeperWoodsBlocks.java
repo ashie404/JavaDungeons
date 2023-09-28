@@ -1,8 +1,13 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class CreeperWoodsBlocks {
 
@@ -124,5 +129,60 @@ public class CreeperWoodsBlocks {
         // gravestones
         CW_GRAVESTONE = new DungeonsGravestone(1.5F, 6.0F, BlockSoundGroup.STONE, "cw_gravestone");
         CW_MOSSY_GRAVESTONE = new DungeonsGravestone(1.5F, 6.0F, BlockSoundGroup.STONE, "cw_mossy_gravestone");
+
+        // add blockitems to item group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "creeper_woods"))).register(content -> {
+            content.add(CW_MOSSY_COBBLESTONE.blockItem);
+            content.add(CW_MOSSY_STONE.blockItem);
+            content.add(CW_MOSSY_STONE_BRICKS.blockItem);
+            content.add(CW_MOSSY_CHISELED_STONE_BRICKS.blockItem);
+            content.add(CW_SLOTTED_STONE.blockItem);
+            content.add(CW_MOSSY_ANDESITE.blockItem);
+            content.add(CW_CRACKED_ANDESITE.blockItem);
+            content.add(CW_DARK_POLISHED_ANDESITE.base.blockItem);
+            content.add(CW_DARK_POLISHED_ANDESITE.slab.blockItem);
+            content.add(CW_DARK_POLISHED_ANDESITE.stairs.blockItem);
+            content.add(CW_MOSSY_DARK_ANDESITE.blockItem);
+            content.add(CW_MOSSY_DARK_ANDESITE_TILES.blockItem);
+            content.add(CW_DARK_ANDESITE_TILES.base.blockItem);
+            content.add(CW_DARK_ANDESITE_TILES.slab.blockItem);
+            content.add(CW_DARK_ANDESITE_TILES.stairs.blockItem);
+            content.add(CW_DARK_CHISELED_ANDESITE.blockItem);
+            content.add(CW_DARK_CHISELED_ANDESITE_2.blockItem);
+            content.add(CW_DARK_ANDESITE_PILLAR.blockItem);
+            content.add(CW_GRASS_BLOCK.blockItem);
+            content.add(CW_GRASSY_DIRT.blockItem);
+            content.add(CW_DENSE_GRASSY_DIRT.blockItem);
+            content.add(CW_DIRT.blockItem);
+            content.add(CW_DIRT_SLAB.blockItem);
+            content.add(CW_DIRT_PATH.blockItem);
+            content.add(CW_ROCKY_DIRT.blockItem);
+            content.add(CW_ROCKY_DIRT_PATH.blockItem);
+            content.add(CW_ROCKY_GRASSY_DIRT.blockItem);
+            content.add(CW_COBWEBBED_DIRT.blockItem);
+            content.add(CW_POLISHED_GRANITE.base.blockItem);
+            content.add(CW_POLISHED_GRANITE.slab.blockItem);
+            content.add(CW_POLISHED_GRANITE.stairs.blockItem);
+            content.add(CW_DIRTY_GRANITE.blockItem);
+            content.add(CW_CHISELED_GRANITE.blockItem);
+            content.add(CW_DIRTY_STONE_TILES.base.blockItem);
+            content.add(CW_DIRTY_STONE_TILES.slab.blockItem);
+            content.add(CW_DIRTY_STONE_TILES.stairs.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_1.base.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_1.slab.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_1.stairs.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_2.base.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_2.slab.blockItem);
+            content.add(CW_DIRTY_STONE_TILES_2.stairs.blockItem);
+            content.add(CW_DIRTY_FLOOR_TILE.blockItem);
+            content.add(CW_SHRUB.blockItem);
+            content.add(CW_POP_FLOWER.blockItem);
+            content.add(CW_FLOWER_PATCH.blockItem);
+            content.add(CW_GLOW_MUSHROOM.blockItem);
+            content.add(CW_GLOW_MELON.blockItem);
+            content.add(CW_GLOW_MELON_ROOTS.blockItem);
+            content.add(CW_GRAVESTONE.blockItem);
+            content.add(CW_MOSSY_GRAVESTONE.blockItem);
+        });
     }
 }
