@@ -1,8 +1,13 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.gen.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class PumpkinPasturesBlocks {
 
@@ -92,5 +97,40 @@ public class PumpkinPasturesBlocks {
         PM_CHARRED_LOG = new DungeonsPillar(2.0F, 3.0F, BlockSoundGroup.WOOD, "pm_charred_log");
         PM_CHARRED_WOOD = new DungeonsPillar(2.0F, 3.0F, BlockSoundGroup.WOOD, "pm_charred_wood");
         PM_CHARRED_PLANKS = new DungeonsSlabStairBlock(2.0F, 3.0F, BlockSoundGroup.WOOD, "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
+
+        // add all blockitems to group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"))).register(content -> {
+            content.add(PM_YELLOW_AUTUMNAL_LEAVES.blockItem);
+            content.add(PM_RED_AUTUMNAL_LEAVES.blockItem);
+            content.add(PM_RED_AUTUMNAL_SAPLING.blockItem);
+            content.add(PM_YELLOW_AUTUMNAL_SAPLING.blockItem);
+            content.add(PM_SHRUB.blockItem);
+            content.add(PM_CHARRED_GRASS.blockItem);
+            content.add(PM_FERN.blockItem);
+            content.add(PM_DEAD_SAPLING.blockItem);
+            content.add(PM_BURNT_PUMPKIN.blockItem);
+            content.add(PM_ROTTED_PUMPKIN.blockItem);
+            content.add(PM_DRIED_HAYBALE.blockItem);
+            content.add(PM_CHARRED_GRASS_BLOCK.blockItem);
+            content.add(PM_CHARRED_DIRT_PATH.blockItem);
+            content.add(PM_CHARRED_DIRT.blockItem);
+            content.add(PM_CHARRED_DIRT_SLAB.blockItem);
+            content.add(PM_CHARRED_DIRT_EMBERS.blockItem);
+            content.add(PM_CHARRED_FARMLAND.blockItem);
+            content.add(PM_CHARRED_STONE.blockItem);
+            content.add(PM_CHARRED_COBBLESTONE.base.blockItem);
+            content.add(PM_CHARRED_COBBLESTONE.slab.blockItem);
+            content.add(PM_CHARRED_COBBLESTONE.stairs.blockItem);
+            content.add(PM_CHARRED_STONE_BRICKS.base.blockItem);
+            content.add(PM_CHARRED_STONE_BRICKS.slab.blockItem);
+            content.add(PM_CHARRED_STONE_BRICKS.stairs.blockItem);
+            content.add(PM_CRACKED_CHARRED_STONE_BRICKS.blockItem);
+            content.add(PM_MOSSY_STONE_BRICKS.blockItem);
+            content.add(PM_CHARRED_LOG.blockItem);
+            content.add(PM_CHARRED_WOOD.blockItem);
+            content.add(PM_CHARRED_PLANKS.base.blockItem);
+            content.add(PM_CHARRED_PLANKS.slab.blockItem);
+            content.add(PM_CHARRED_PLANKS.stairs.blockItem);
+        });
     }
 }

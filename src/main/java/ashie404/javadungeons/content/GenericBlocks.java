@@ -251,7 +251,7 @@ public class GenericBlocks {
         CHAINS = new DungeonsChains(5.0F, 6.0F, BlockSoundGroup.CHAIN, "chains");
 
         // Add all blocks to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("dungeons", "generic"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "generic"))).register(content -> {
             content.add(FLOOR_TILE.blockItem);
             content.add(DIRTY_FLOOR_TILE.blockItem);
             content.add(CRATE.blockItem);
