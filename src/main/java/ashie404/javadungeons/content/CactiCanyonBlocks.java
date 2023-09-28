@@ -1,8 +1,13 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class CactiCanyonBlocks {
 
@@ -99,6 +104,51 @@ public class CactiCanyonBlocks {
         CC_FLOWERS = new DungeonsDesertPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "cc_flowers");
         CC_YUCCA = new DungeonsDesertTallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "cc_yucca");
         CC_TALL_CACTUS = new DungeonsDesertTallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "cc_tall_cactus");
+
+        // add all blockitems to group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"))).register(content -> {
+            content.add(CC_GRASS_BLOCK.blockItem);
+            content.add(CC_DENSE_GRASSY_DIRT.blockItem);
+            content.add(CC_GRASSY_DIRT.blockItem);
+            content.add(CC_DIRT_PATH.blockItem);
+            content.add(CC_DIRT.blockItem);
+            content.add(CC_DIRT_SLAB.blockItem);
+            content.add(CC_ROCKY_DIRT_PATH.blockItem);
+            content.add(CC_ROCKY_DIRT.blockItem);
+            content.add(CC_SAND.blockItem);
+            content.add(CC_DENSE_SANDY_DIRT.blockItem);
+            content.add(CC_SANDY_DIRT.blockItem);
+            content.add(CC_SAND_LAYER.blockItem);
+            content.add(CC_SANDSTONE.blockItem);
+            content.add(CC_BLUE_SANDSTONE.blockItem);
+            content.add(CC_BROWN_SANDSTONE.blockItem);
+            content.add(CC_DARK_BROWN_SANDSTONE.blockItem);
+            content.add(CC_GRAY_SANDSTONE.blockItem);
+            content.add(CC_GREEN_SANDSTONE.blockItem);
+            content.add(CC_LIGHT_GREEN_SANDSTONE.blockItem);
+            content.add(CC_ORANGE_SANDSTONE.blockItem);
+            content.add(CC_PINK_SANDSTONE.blockItem);
+            content.add(CC_PURPLE_SANDSTONE.blockItem);
+            content.add(CC_RED_SANDSTONE.blockItem);
+            content.add(CC_YELLOW_SANDSTONE.blockItem);
+            content.add(CC_NORMAL_SANDSTONE.base.blockItem);
+            content.add(CC_NORMAL_SANDSTONE.slab.blockItem);
+            content.add(CC_NORMAL_SANDSTONE.stairs.blockItem);
+            content.add(CC_CUT_SANDSTONE.base.blockItem);
+            content.add(CC_CUT_SANDSTONE.slab.blockItem);
+            content.add(CC_CUT_SANDSTONE.stairs.blockItem);
+            content.add(CC_SMOOTH_SANDSTONE.base.blockItem);
+            content.add(CC_SMOOTH_SANDSTONE.slab.blockItem);
+            content.add(CC_SMOOTH_SANDSTONE.stairs.blockItem);
+            content.add(CC_CHISELED_SANDSTONE.blockItem);
+            content.add(CC_DESERT_GRASS.blockItem);
+            content.add(CC_CACTUS.blockItem);
+            content.add(CC_SMALL_CACTUS.blockItem);
+            content.add(CC_FERN.blockItem);
+            content.add(CC_FLOWERS.blockItem);
+            content.add(CC_YUCCA.blockItem);
+            content.add(CC_TALL_CACTUS.blockItem);
+        });
     }
 
 }
