@@ -1,7 +1,12 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 public class DesertTempleBlocks {
 
@@ -35,5 +40,24 @@ public class DesertTempleBlocks {
 
         // stone related
         DT_SANDY_COBBLESTONE = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_cobblestone");
+
+        // add blocks to item group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "creeper_woods"))).register(content -> {
+            content.add(DT_SANDY_ANDESITE.base.blockItem);
+            content.add(DT_SANDY_ANDESITE.slab.blockItem);
+            content.add(DT_SANDY_ANDESITE.stairs.blockItem);
+            content.add(DT_CHISELED_SANDY_ANDESITE.blockItem);
+            content.add(DT_CHISELED_SANDY_ANDESITE_2.blockItem);
+            content.add(DT_SANDY_ANDESITE_PILLAR.blockItem);
+            content.add(DT_SANDY_STONE_BRICKS.base.blockItem);
+            content.add(DT_SANDY_STONE_BRICKS.slab.blockItem);
+            content.add(DT_SANDY_STONE_BRICKS.stairs.blockItem);
+            content.add(DT_CRACKED_SANDY_STONE_BRICKS.blockItem);
+            content.add(DT_SANDY_STONE_TILES.base.blockItem);
+            content.add(DT_SANDY_STONE_TILES.slab.blockItem);
+            content.add(DT_SANDY_STONE_TILES.stairs.blockItem);
+            content.add(DT_CHISELED_SANDY_STONE.blockItem);
+            content.add(DT_SANDY_COBBLESTONE.blockItem);
+        });
     }
 }
