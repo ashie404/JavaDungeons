@@ -3,6 +3,9 @@
     "package": "ashie404.javadungeons.mixin",
     "compatibilityLevel": "JAVA_17",
     "mixins": [
+      "MixinCactusBlock",
+      "MixinFeature",
+      "MixinPlantBlock"
     ],
     "injectors": {
       "defaultRequire": 1

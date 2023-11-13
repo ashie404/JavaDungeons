@@ -1,5 +1,5 @@
 package ashie404.javadungeons.biome;
 
-public class SurfaceRules {
+public class DungeonsPlains {
     
 }

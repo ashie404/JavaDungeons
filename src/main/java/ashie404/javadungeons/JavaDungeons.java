@@ -1,17 +1,17 @@
 package ashie404.javadungeons;
 
 import net.fabricmc.api.ModInitializer;
+import terrablender.api.TerraBlenderApi;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import ashie404.javadungeons.content.*;
-import terrablender.api.TerraBlenderApi;
+import ashie404.javadungeons.biome.Biomes;
 
 public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
 	public static final String MOD_ID = "dungeons";
-
 	public static final Logger log = LogManager.getLogger(MOD_ID);
 
 	@Override
@@ -47,7 +47,8 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 	}
 
 	@Override
-	public void onTerraBlenderInitialized() {
-		
-	}
+    public void onTerraBlenderInitialized() {
+		Biomes.init();
+        log.info("JavaDungeons worldgen initalized!");
+    }
 }
