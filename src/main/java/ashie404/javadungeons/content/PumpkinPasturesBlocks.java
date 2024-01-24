@@ -4,6 +4,7 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -24,6 +25,11 @@ public class PumpkinPasturesBlocks {
     public static Plant PM_CHARRED_GRASS;
     public static Plant PM_FERN;
     public static Plant PM_DEAD_SAPLING;
+    
+    // tall plants
+    public static TallPlant PM_TALL_FERN;
+    public static TallPlant PM_DRY_TALL_GRASS;
+    public static TallPlant PM_CHARRED_TALL_GRASS;
 
     // melons
     public static BaseBlock PM_BURNT_PUMPKIN;
@@ -76,6 +82,11 @@ public class PumpkinPasturesBlocks {
         PM_FERN = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_fern");
         PM_DEAD_SAPLING = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_dead_sapling");
 
+        // tall plants
+        PM_TALL_FERN = new TallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_tall_fern");
+        PM_DRY_TALL_GRASS = new TallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_dry_tall_grass");
+        PM_CHARRED_TALL_GRASS = new TallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_charred_tall_grass");
+
         // ground related
         PM_CHARRED_GRASS_BLOCK = new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS, "pm_charred_grass_block");
         PM_CHARRED_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "pm_charred_dirt_path");
@@ -108,6 +119,9 @@ public class PumpkinPasturesBlocks {
             content.add(PM_CHARRED_GRASS.blockItem);
             content.add(PM_FERN.blockItem);
             content.add(PM_DEAD_SAPLING.blockItem);
+            content.add(PM_TALL_FERN.blockItem);
+            content.add(PM_DRY_TALL_GRASS.blockItem);
+            content.add(PM_CHARRED_TALL_GRASS.blockItem);
             content.add(PM_BURNT_PUMPKIN.blockItem);
             content.add(PM_ROTTED_PUMPKIN.blockItem);
             content.add(PM_DRIED_HAYBALE.blockItem);

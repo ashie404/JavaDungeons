@@ -210,6 +210,10 @@
     "block.dungeons.pm_dead_sapling": "Dead Sapling",
     "block.dungeons.pm_red_autumnal_sapling": "Red Autumnal Sapling",
     "block.dungeons.pm_yellow_autumnal_sapling": "Yellow Autumnal Sapling",
+    "block.dungeons.pm_tall_fern": "Tall Fern",
+    "block.dungeons.pm_dry_tall_grass": "Dry Tall Grass",
+    "block.dungeons.pm_charred_tall_grass": "Charred Tall Grass",
+
 
     "block.dungeons.ss_grass_block": "Grass Block",
     "block.dungeons.ss_dirt_path": "Dirt Path",

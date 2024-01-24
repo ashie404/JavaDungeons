@@ -1,0 +1,10 @@
+{
+    "variants": {
+      "half=lower": {
+        "model": "dungeons:block/pumpkin_pastures/dry_tall_grass_bottom"
+      },
+      "half=upper": {
+        "model": "dungeons:block/pumpkin_pastures/dry_tall_grass_top"
+      }
+    }
+  }

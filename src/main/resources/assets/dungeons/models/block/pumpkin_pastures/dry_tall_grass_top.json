@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/pumpkin_pastures/dry_tall_grass_top"
+    }
+}
