@@ -2,8 +2,11 @@ package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import io.netty.handler.codec.marshalling.DefaultUnmarshallerProvider;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -229,9 +232,9 @@ public class GenericBlocks {
         EMPTY_SHELF = new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD, "empty_shelf");
 
         // braziers
-        UNLIT_BRAZIER = new Brazier(5.0F, 6.0F, BlockSoundGroup.LANTERN, "unlit", false, "unlit_brazier");
-        LIT_BRAZIER = new Brazier(5.0F, 6.0F, BlockSoundGroup.LANTERN, "lit", false, "lit_brazier");
-        GREEN_LIT_BRAZIER = new Brazier(5.0F, 6.0F, BlockSoundGroup.LANTERN, "green_lit", false, "green_lit_brazier");
+        UNLIT_BRAZIER = new Brazier(null, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "unlit", false, "unlit_brazier");
+        LIT_BRAZIER = new Brazier(ParticleTypes.SMALL_FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "lit", false, "lit_brazier");
+        GREEN_LIT_BRAZIER = new Brazier(Particles.GREEN_FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "green_lit", false, "green_lit_brazier");
 
         // books
         CLOSED_BOOK = new Book(2.0F, 3.0F, BlockSoundGroup.WOOD, "closed_book");

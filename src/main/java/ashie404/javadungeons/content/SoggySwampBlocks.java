@@ -5,6 +5,7 @@ import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -63,9 +64,9 @@ public class SoggySwampBlocks {
         SS_ROPE_FENCE = new Fence(2.0F, 3.0F, BlockSoundGroup.WOOD, "ss_rope_fence");
 
         // braziers
-        SS_UNLIT_BRAZIER = new Brazier(1.5F, 6.0F, BlockSoundGroup.STONE, "unlit", true, "ss_unlit_brazier");
-        SS_LIT_BRAZIER = new Brazier(1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true, "ss_lit_brazier");
-        SS_GREEN_LIT_BRAZIER = new Brazier(1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true, "ss_green_lit_brazier");
+        SS_UNLIT_BRAZIER = new Brazier(null, 1.5F, 6.0F, BlockSoundGroup.STONE, "unlit", true, "ss_unlit_brazier");
+        SS_LIT_BRAZIER = new Brazier(ParticleTypes.SMALL_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true, "ss_lit_brazier");
+        SS_GREEN_LIT_BRAZIER = new Brazier(Particles.GREEN_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true, "ss_green_lit_brazier");
 
         // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"))).register(content -> {

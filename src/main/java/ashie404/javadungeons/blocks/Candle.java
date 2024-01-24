@@ -16,6 +16,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -36,8 +37,7 @@ public class Candle extends Block {
     public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
-
-    public boolean isGreen = false;
+    public DefaultParticleType particle;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
@@ -46,7 +46,7 @@ public class Candle extends Block {
 
     public Candle(float hardness, float resistance, BlockSoundGroup sounds, String id, boolean isGreen) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15));
-        this.isGreen = isGreen;
+        this.particle = isGreen ? Particles.GREEN_FLAME : ParticleTypes.SMALL_FLAME;
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
     }
@@ -67,6 +67,6 @@ public class Candle extends Block {
         double e = (double)pos.getY() + 1.0D;
         double f = (double)pos.getZ() + 0.5D;
         world.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
-        world.addParticle(isGreen ? Particles.GREEN_FLAME : ParticleTypes.FLAME, d, e, f, 0.0D, 0.0D, 0.0D);
+        world.addParticle(particle, d, e, f, 0.0D, 0.0D, 0.0D);
     }
 }
