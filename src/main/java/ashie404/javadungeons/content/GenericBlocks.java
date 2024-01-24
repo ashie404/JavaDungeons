@@ -131,6 +131,9 @@ public class GenericBlocks {
     // chains
     public static Chains CHAINS;
 
+    // vine
+    public static Vine VINE;
+
     public static void init() {
         // dungeons blocks that aren't in mc
         FLOOR_TILE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "floor_tile");
@@ -250,6 +253,9 @@ public class GenericBlocks {
         // chains
         CHAINS = new Chains(5.0F, 6.0F, BlockSoundGroup.CHAIN, "chains");
 
+        // vine
+        VINE = new Vine(0.2F, 0.2F, BlockSoundGroup.GRASS, "vine");
+
         // Add all blocks to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "generic"))).register(content -> {
             content.add(FLOOR_TILE.blockItem);
@@ -343,6 +349,7 @@ public class GenericBlocks {
             content.add(TEAPOT.blockItem);
             content.add(LIGHTHOUSE_LAMP.blockItem);
             content.add(CHAINS.blockItem);
+            content.add(VINE.blockItem);
         });
     }
 }
