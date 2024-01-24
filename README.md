@@ -2,7 +2,7 @@
 
 # JavaDungeons
 
-[![](https://img.shields.io/github/license/ashie404/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/ashie404/javadungeons)](https://github.com/ashie404/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.20-purple)
+[![](https://img.shields.io/github/license/ashie404/JavaDungeons.svg)](LICENSE) [![](https://img.shields.io/github/v/release/ashie404/javadungeons)](https://github.com/ashie404/JavaDungeons/releases) ![](https://img.shields.io/badge/Minecraft-1.20.4-purple)
 
 <br/>
 

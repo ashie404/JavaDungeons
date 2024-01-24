@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public abstract class DungeonsBaseFluid extends FlowableFluid {
+public abstract class BaseFluid extends FlowableFluid {
    	/**
 	 * @return whether the given fluid an instance of this fluid
 	 */

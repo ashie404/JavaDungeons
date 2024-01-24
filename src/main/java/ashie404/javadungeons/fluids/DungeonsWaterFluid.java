@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 
-public abstract class DungeonsWaterFluid extends DungeonsBaseFluid {
+public abstract class DungeonsWaterFluid extends BaseFluid {
    @Override
 	public Fluid getStill()
 	{

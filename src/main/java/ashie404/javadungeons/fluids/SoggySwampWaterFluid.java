@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 
-public abstract class SoggySwampWaterFluid extends DungeonsBaseFluid {
+public abstract class SoggySwampWaterFluid extends BaseFluid {
    @Override
 	public Fluid getStill()
 	{
