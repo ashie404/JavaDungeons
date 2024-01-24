@@ -11,29 +11,29 @@ import net.minecraft.util.Identifier;
 public class FieryForgeBlocks {
 
     // dark stone
-    public static DungeonsSlabStairBlock FF_DARK_STONE;
-    public static DungeonsSlabStairBlock FF_DARK_COBBLESTONE;
-    public static DungeonsSlabStairBlock FF_DARK_STONE_BRICKS;
-    public static DungeonsBlock FF_DIRTY_DARK_STONE_BRICKS;
-    public static DungeonsBlock FF_CRACKED_DARK_STONE_BRICKS;
-    public static DungeonsBlock FF_CHISELED_DARK_STONE_BRICKS;
-    public static DungeonsSlabStairBlock FF_DARK_STONE_TILES;
-    public static DungeonsSlabStairBlock FF_DIRTY_DARK_STONE_TILES;
-    public static DungeonsSlabStairBlock FF_DIRTY_DARK_STONE_TILES_1;
-    public static DungeonsBlock FF_EMBLEMED_DARK_STONE;
+    public static SlabStairBlock FF_DARK_STONE;
+    public static SlabStairBlock FF_DARK_COBBLESTONE;
+    public static SlabStairBlock FF_DARK_STONE_BRICKS;
+    public static BaseBlock FF_DIRTY_DARK_STONE_BRICKS;
+    public static BaseBlock FF_CRACKED_DARK_STONE_BRICKS;
+    public static BaseBlock FF_CHISELED_DARK_STONE_BRICKS;
+    public static SlabStairBlock FF_DARK_STONE_TILES;
+    public static SlabStairBlock FF_DIRTY_DARK_STONE_TILES;
+    public static SlabStairBlock FF_DIRTY_DARK_STONE_TILES_1;
+    public static BaseBlock FF_EMBLEMED_DARK_STONE;
 
     public static void init() {
         // dark stone
-        FF_DARK_STONE = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone", "ff_dark_stone_slab", "ff_dark_stone_stairs");
-        FF_DARK_COBBLESTONE = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_cobblestone", "ff_dark_cobblestone_slab", "ff_dark_cobblestone_stairs");
-        FF_DARK_STONE_BRICKS = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone_bricks", "ff_dark_stone_brick_slab", "ff_dark_stone_brick_stairs");
-        FF_DIRTY_DARK_STONE_BRICKS = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_bricks");
-        FF_CRACKED_DARK_STONE_BRICKS = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_cracked_dark_stone_bricks");
-        FF_CHISELED_DARK_STONE_BRICKS = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_chiseled_dark_stone_bricks");
-        FF_DARK_STONE_TILES = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone_tiles", "ff_dark_stone_tiles_slab", "ff_dark_stone_tiles_stairs");
-        FF_DIRTY_DARK_STONE_TILES = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_tiles", "ff_dirty_dark_stone_tiles_slab", "ff_dirty_dark_stone_tiles_stairs");
-        FF_DIRTY_DARK_STONE_TILES_1 = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_tiles_1", "ff_dirty_dark_stone_tiles_slab_1", "ff_dirty_dark_stone_tiles_stairs_1");
-        FF_EMBLEMED_DARK_STONE = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_emblemed_dark_stone");
+        FF_DARK_STONE = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone", "ff_dark_stone_slab", "ff_dark_stone_stairs");
+        FF_DARK_COBBLESTONE = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_cobblestone", "ff_dark_cobblestone_slab", "ff_dark_cobblestone_stairs");
+        FF_DARK_STONE_BRICKS = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone_bricks", "ff_dark_stone_brick_slab", "ff_dark_stone_brick_stairs");
+        FF_DIRTY_DARK_STONE_BRICKS = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_bricks");
+        FF_CRACKED_DARK_STONE_BRICKS = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_cracked_dark_stone_bricks");
+        FF_CHISELED_DARK_STONE_BRICKS = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_chiseled_dark_stone_bricks");
+        FF_DARK_STONE_TILES = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dark_stone_tiles", "ff_dark_stone_tiles_slab", "ff_dark_stone_tiles_stairs");
+        FF_DIRTY_DARK_STONE_TILES = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_tiles", "ff_dirty_dark_stone_tiles_slab", "ff_dirty_dark_stone_tiles_stairs");
+        FF_DIRTY_DARK_STONE_TILES_1 = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_dirty_dark_stone_tiles_1", "ff_dirty_dark_stone_tiles_slab_1", "ff_dirty_dark_stone_tiles_stairs_1");
+        FF_EMBLEMED_DARK_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_emblemed_dark_stone");
 
         // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "fiery_forge"))).register(content -> {

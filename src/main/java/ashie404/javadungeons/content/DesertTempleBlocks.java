@@ -11,35 +11,35 @@ import net.minecraft.util.Identifier;
 public class DesertTempleBlocks {
 
     // andesite related
-    public static DungeonsSlabStairBlock DT_SANDY_ANDESITE;
-    public static DungeonsBlock DT_CHISELED_SANDY_ANDESITE;
-    public static DungeonsBlock DT_CHISELED_SANDY_ANDESITE_2;
-    public static DungeonsPillar DT_SANDY_ANDESITE_PILLAR;
+    public static SlabStairBlock DT_SANDY_ANDESITE;
+    public static BaseBlock DT_CHISELED_SANDY_ANDESITE;
+    public static BaseBlock DT_CHISELED_SANDY_ANDESITE_2;
+    public static Pillar DT_SANDY_ANDESITE_PILLAR;
 
     // stone brick related
-    public static DungeonsSlabStairBlock DT_SANDY_STONE_BRICKS;
-    public static DungeonsBlock DT_CRACKED_SANDY_STONE_BRICKS;
-    public static DungeonsSlabStairBlock DT_SANDY_STONE_TILES;
-    public static DungeonsBlock DT_CHISELED_SANDY_STONE;
+    public static SlabStairBlock DT_SANDY_STONE_BRICKS;
+    public static BaseBlock DT_CRACKED_SANDY_STONE_BRICKS;
+    public static SlabStairBlock DT_SANDY_STONE_TILES;
+    public static BaseBlock DT_CHISELED_SANDY_STONE;
 
     // stone related
-    public static DungeonsBlock DT_SANDY_COBBLESTONE;
+    public static BaseBlock DT_SANDY_COBBLESTONE;
 
     public static void init() {
         // andesite related
-        DT_SANDY_ANDESITE = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite", "dt_sandy_andesite_slab", "dt_sandy_andesite_stairs");
-        DT_CHISELED_SANDY_ANDESITE = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite");
-        DT_CHISELED_SANDY_ANDESITE_2 = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite_2");
-        DT_SANDY_ANDESITE_PILLAR = new DungeonsPillar(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite_pillar");
+        DT_SANDY_ANDESITE = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite", "dt_sandy_andesite_slab", "dt_sandy_andesite_stairs");
+        DT_CHISELED_SANDY_ANDESITE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite");
+        DT_CHISELED_SANDY_ANDESITE_2 = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite_2");
+        DT_SANDY_ANDESITE_PILLAR = new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite_pillar");
 
         // stone brick related
-        DT_SANDY_STONE_BRICKS = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
-        DT_CRACKED_SANDY_STONE_BRICKS = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_cracked_sandy_stone_bricks");
-        DT_SANDY_STONE_TILES = new DungeonsSlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_tiles", "dt_sandy_stone_tiles_slab", "dt_sandy_stone_tiles_stairs");
-        DT_CHISELED_SANDY_STONE = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_stone");
+        DT_SANDY_STONE_BRICKS = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
+        DT_CRACKED_SANDY_STONE_BRICKS = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_cracked_sandy_stone_bricks");
+        DT_SANDY_STONE_TILES = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_tiles", "dt_sandy_stone_tiles_slab", "dt_sandy_stone_tiles_stairs");
+        DT_CHISELED_SANDY_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_stone");
 
         // stone related
-        DT_SANDY_COBBLESTONE = new DungeonsBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_cobblestone");
+        DT_SANDY_COBBLESTONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_cobblestone");
 
         // add blocks to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "desert_temple"))).register(content -> {
