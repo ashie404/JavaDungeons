@@ -1,5 +1,7 @@
 package ashie404.javadungeons.blocks;
 
+import com.mojang.serialization.MapCodec;
+
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Tags;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -10,7 +12,6 @@ import net.minecraft.block.PlantBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.registry.Registry;
@@ -26,6 +27,9 @@ public class DungeonsDesertPlant extends PlantBlock {
     public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
+
+    // why mojang, why..
+    protected MapCodec<? extends DungeonsDesertPlant> getCodec() { return null; }
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {

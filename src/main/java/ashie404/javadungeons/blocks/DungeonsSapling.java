@@ -4,7 +4,7 @@ import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
 import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.sapling.SaplingGenerator;
+import net.minecraft.block.SaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

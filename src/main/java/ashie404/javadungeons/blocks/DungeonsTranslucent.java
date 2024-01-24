@@ -2,17 +2,16 @@ package ashie404.javadungeons.blocks;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.GlassBlock;
+import net.minecraft.block.TranslucentBlock;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
 
-public class DungeonsTranslucent extends GlassBlock {
+public class DungeonsTranslucent extends TranslucentBlock {
 
     // generic translucent block
 

@@ -1,5 +1,7 @@
 package ashie404.javadungeons.blocks;
 
+import com.mojang.serialization.MapCodec;
+
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -25,6 +27,8 @@ public class DungeonsGlowingPlant extends PlantBlock {
     public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
+
+    protected MapCodec<? extends DungeonsGlowingPlant> getCodec() { return null; }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;

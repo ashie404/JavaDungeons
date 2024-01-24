@@ -1,5 +1,7 @@
 package ashie404.javadungeons.blocks;
 
+import com.mojang.serialization.MapCodec;
+
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
@@ -11,6 +13,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.block.enums.BlockHalf;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -31,6 +34,8 @@ public class DungeonsWaterPlant extends PlantBlock implements FluidFillable {
 
     public BlockItem blockItem;
 
+    protected MapCodec<? extends DungeonsWaterPlant> getCodec() { return null; }
+
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         return fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8 ? super.getPlacementState(ctx) : null;
@@ -46,7 +51,7 @@ public class DungeonsWaterPlant extends PlantBlock implements FluidFillable {
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
-    public boolean canFillWithFluid(BlockView view, BlockPos pos, BlockState state, Fluid fluid) {
+    public boolean canFillWithFluid(PlayerEntity entity, BlockView view, BlockPos pos, BlockState state, Fluid fluid) {
         return false;
     }
   
