@@ -1,7 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.content.Sounds;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 
@@ -20,6 +18,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.world.World;
 
 import java.util.Random;
+
+import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.content.Sounds;
 
 public class GlowMushroom extends SeaPickleBlock {
 

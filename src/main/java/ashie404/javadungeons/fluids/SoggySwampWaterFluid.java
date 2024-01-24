@@ -1,13 +1,12 @@
 package ashie404.javadungeons.fluids;
 
+import ashie404.javadungeons.content.Fluids;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
-
-import ashie404.javadungeons.content.Fluids;
 
 public abstract class SoggySwampWaterFluid extends DungeonsBaseFluid {
    @Override

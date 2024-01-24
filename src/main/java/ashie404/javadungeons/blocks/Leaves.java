@@ -9,9 +9,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.BlockSoundGroup;
-
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import ashie404.javadungeons.JavaDungeons;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
 public class Leaves extends LeavesBlock {
 

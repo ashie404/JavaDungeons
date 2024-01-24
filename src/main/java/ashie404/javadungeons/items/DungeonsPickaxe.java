@@ -1,13 +1,12 @@
 package ashie404.javadungeons.items;
 
 import net.minecraft.item.PickaxeItem;
+import ashie404.javadungeons.JavaDungeons;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ToolMaterial;
-
-import ashie404.javadungeons.JavaDungeons;
 
 public class DungeonsPickaxe extends PickaxeItem {
 

@@ -2,10 +2,9 @@ package ashie404.javadungeons.content;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.SoundEvent;
+import ashie404.javadungeons.JavaDungeons;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-
-import ashie404.javadungeons.JavaDungeons;
 
 public class Sounds {
     public static SoundEvent CW_GLOW_MUSHROOM_STEP;

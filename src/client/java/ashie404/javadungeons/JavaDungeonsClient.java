@@ -1,5 +1,7 @@
 package ashie404.javadungeons;
 
+import ashie404.javadungeons.content.*;
+import ashie404.javadungeons.particles.GreenFlameParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -14,22 +16,14 @@ import net.minecraft.util.Identifier;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 
-import ashie404.javadungeons.content.*;
-import ashie404.javadungeons.particles.GreenFlameParticle;
-
 public class JavaDungeonsClient implements ClientModInitializer {
-
-    private static final RenderLayer CUTOUT_BLOCK_LAYER = RenderLayer.getCutout();
-    private static final RenderLayer TRANSLUCENT_BLOCK_LAYER = RenderLayer.getTranslucent();
-
-    private static final BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
-        return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
-    };
-
-    private static final ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
-
     @Override
     public void onInitializeClient() {
+        BlockColorProvider GRASS_BLOCK_COLORS = (state, view, pos, tintIndex) -> {
+            return view != null && pos != null ? BiomeColors.getGrassColor(view, pos) : GrassColors.getColor(0.5D, 1.0D);
+        };
+
+        ItemColorProvider GRASS_ITEM_COLORS = (item, layer) -> GrassColors.getColor(0.5D, 1.0D);
 
         // register color providers
         ColorProviderRegistry.BLOCK.register(
@@ -68,7 +62,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
 
         // register render layers
         BlockRenderLayerMap.INSTANCE.putBlocks(
-            CUTOUT_BLOCK_LAYER,
+            RenderLayer.getCutout(),
             GenericBlocks.SHORT_GRASS,
             GenericBlocks.FERN,
             GenericBlocks.BERRY_BUSH_BLOCK,
@@ -118,7 +112,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             SoggySwampBlocks.SS_SWAMP_SAPLING
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
-            TRANSLUCENT_BLOCK_LAYER,
+            RenderLayer.getTranslucent(),
             GenericBlocks.GLASS,
             GenericBlocks.BLUE_GLASS,
             GenericBlocks.BROWN_GLASS,
@@ -139,7 +133,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
         );
         // set up fluid rendering
         BlockRenderLayerMap.INSTANCE.putFluids(
-            TRANSLUCENT_BLOCK_LAYER,
+            RenderLayer.getTranslucent(),
             Fluids.DUNGEONS_WATER_FLOWING,
             Fluids.DUNGEONS_WATER_STILL,
             Fluids.SOGGY_SWAMP_WATER_FLOWING,

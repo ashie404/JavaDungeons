@@ -2,10 +2,9 @@ package ashie404.javadungeons.content;
 
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
+import ashie404.javadungeons.JavaDungeons;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
-
-import ashie404.javadungeons.JavaDungeons;
 
 public class Tags {
     public static TagKey<Block> PLANTABLE;

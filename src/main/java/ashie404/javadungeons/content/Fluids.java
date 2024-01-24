@@ -1,5 +1,7 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.fluids.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
@@ -16,9 +18,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.Registries;
-
-import ashie404.javadungeons.fluids.*;
-import ashie404.javadungeons.JavaDungeons;
 
 public class Fluids {
 

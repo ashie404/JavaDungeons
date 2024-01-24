@@ -1,13 +1,13 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.blocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import ashie404.javadungeons.blocks.*;
-import ashie404.javadungeons.JavaDungeons;
 
 public class GenericBlocks {
 

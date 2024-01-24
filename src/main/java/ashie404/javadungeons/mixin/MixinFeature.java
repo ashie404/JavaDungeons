@@ -1,6 +1,6 @@
 package ashie404.javadungeons.mixin;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.world.gen.feature.Feature;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,8 +13,8 @@ import ashie404.javadungeons.content.Tags;
 @Mixin(Feature.class)
 public class MixinFeature {
 	@Inject(method = "isSoil", at = @At("HEAD"), cancellable = true)
-	private static void hookIsSoil(Block block, CallbackInfoReturnable<Boolean> callback) {
-		if (block.getDefaultState().isIn(Tags.PLANTABLE)) {
+	private static void hookIsSoil(BlockState blockState, CallbackInfoReturnable<Boolean> callback) {
+		if (blockState.isIn(Tags.PLANTABLE)) {
 			callback.setReturnValue(true);
 		}
 	}
