@@ -8,7 +8,6 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.math.MathHelper;
 
-@Environment(EnvType.CLIENT)
 public class GreenFlameParticle extends AbstractSlowingParticle {
    private GreenFlameParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
       super(world, x, y, z, velocityX, velocityY, velocityZ);
@@ -42,7 +41,6 @@ public class GreenFlameParticle extends AbstractSlowingParticle {
       return j | k << 16;
    }
 
-   @Environment(EnvType.CLIENT)
    public static class Factory implements ParticleFactory<DefaultParticleType> {
       private final SpriteProvider spriteProvider;
 
