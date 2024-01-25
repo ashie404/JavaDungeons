@@ -42,6 +42,7 @@ public class PumpkinPasturesBlocks {
     public static BaseBlock PM_CHARRED_GRASS_BLOCK;
     public static PathBlock PM_CHARRED_DIRT_PATH;
     public static PathableBlock PM_CHARRED_DIRT;
+    public static BaseBlock PM_ASHY_DIRT;
     public static Slab PM_CHARRED_DIRT_SLAB;
     public static BaseBlock PM_CHARRED_DIRT_EMBERS;
     public static PathBlock PM_CHARRED_FARMLAND;
@@ -90,6 +91,7 @@ public class PumpkinPasturesBlocks {
         // ground related
         PM_CHARRED_GRASS_BLOCK = new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS, "pm_charred_grass_block");
         PM_CHARRED_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "pm_charred_dirt_path");
+        PM_ASHY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "pm_ashy_dirt");
         PM_CHARRED_DIRT = new PathableBlock(0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, PM_CHARRED_DIRT_PATH, "pm_charred_dirt");
         PM_CHARRED_DIRT_SLAB = new Slab(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "pm_charred_dirt_slab");
         PM_CHARRED_DIRT_EMBERS = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "pm_charred_dirt_embers");
@@ -127,6 +129,7 @@ public class PumpkinPasturesBlocks {
             content.add(PM_DRIED_HAYBALE.blockItem);
             content.add(PM_CHARRED_GRASS_BLOCK.blockItem);
             content.add(PM_CHARRED_DIRT_PATH.blockItem);
+            content.add(PM_ASHY_DIRT.blockItem);
             content.add(PM_CHARRED_DIRT.blockItem);
             content.add(PM_CHARRED_DIRT_SLAB.blockItem);
             content.add(PM_CHARRED_DIRT_EMBERS.blockItem);
