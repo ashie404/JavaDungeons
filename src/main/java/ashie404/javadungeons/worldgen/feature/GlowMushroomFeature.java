@@ -1,4 +1,4 @@
-package ashie404.javadungeons.worldgen;
+package ashie404.javadungeons.worldgen.feature;
 
 import com.mojang.serialization.Codec;
 

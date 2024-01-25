@@ -1,6 +1,8 @@
 package ashie404.javadungeons.worldgen;
 
 import java.util.Optional;
+
+import ashie404.javadungeons.worldgen.feature.DungeonsWorldgenFeatures;
 import net.minecraft.block.SaplingGenerator;
 
 public class SaplingGenerators {

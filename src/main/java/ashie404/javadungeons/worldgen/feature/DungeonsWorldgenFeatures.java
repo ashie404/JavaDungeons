@@ -1,4 +1,4 @@
-package ashie404.javadungeons.worldgen;
+package ashie404.javadungeons.worldgen.feature;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.minecraft.registry.RegistryKey;
