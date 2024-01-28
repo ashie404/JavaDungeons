@@ -3,21 +3,21 @@
     "config": {
       "features": [
         {
-          "chance": 0.33333334,
+          "chance": 0.66666667,
           "feature": {
             "feature": "dungeons:red_autumnal_tree",
             "placement": []
           }
         },
         {
-            "chance": 0.154444,
+            "chance": 0.333333334,
             "feature": {
               "feature": "dungeons:red_autumnal_tree_big",
               "placement": []
             }
         },
         {
-            "chance": 0.154444,
+            "chance": 0.333333334,
             "feature": {
               "feature": "dungeons:yellow_autumnal_tree_big",
               "placement": []

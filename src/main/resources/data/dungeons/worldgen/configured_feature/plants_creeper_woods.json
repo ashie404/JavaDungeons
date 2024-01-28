@@ -1,0 +1,53 @@
+{
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.16666666666,
+          "feature": {
+            "feature": "dungeons:patch_pop_flower",
+            "placement": []
+          }
+        },
+        {
+            "chance": 0.16666666666,
+            "feature": {
+              "feature": "dungeons:flower_patch",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.3,
+            "feature": {
+              "feature": "dungeons:patch_berry_bush_block",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.5,
+            "feature": {
+              "feature": "dungeons:patch_short_grass",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.35,
+            "feature": {
+              "feature": "dungeons:patch_fern",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.45,
+            "feature": {
+              "feature": "dungeons:patch_shrub_cw",
+              "placement": []
+            }
+        }
+      ],
+      "default": {
+        "feature": "dungeons:flower_patch",
+        "placement": []
+      }
+    }
+  }
