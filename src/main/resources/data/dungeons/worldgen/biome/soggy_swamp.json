@@ -9,9 +9,8 @@
     "downfall": 0.9,
     "effects": {
       "fog_color": 12638463,
-      "foliage_color": 7106127,
-      "grass_color": 7106127,
-      "grass_color_modifier": "swamp",
+      "foliage_color": 6976869,
+      "grass_color": 6976869,
       "mood_sound": {
         "block_search_extent": 8,
         "offset": 2.0,
@@ -80,7 +79,7 @@
       ],
       [
         "minecraft:glow_lichen",
-        "minecraft:trees_swamp",
+        "dungeons:trees_soggy_swamp",
         "minecraft:flower_swamp",
         "minecraft:patch_grass_normal",
         "minecraft:patch_dead_bush",
