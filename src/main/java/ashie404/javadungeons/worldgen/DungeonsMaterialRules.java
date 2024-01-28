@@ -1,5 +1,7 @@
 package ashie404.javadungeons.worldgen;
 
+import com.mojang.serialization.MapCodec;
+
 import ashie404.javadungeons.biome.Biomes;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
 import ashie404.javadungeons.content.CreeperWoodsBlocks;
@@ -8,6 +10,7 @@ import ashie404.javadungeons.content.SoggySwampBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.util.dynamic.CodecHolder;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.noise.NoiseParametersKeys;
@@ -15,7 +18,7 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules.MaterialCondition;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules.MaterialRule;
 
-public class DungeonsSurfaceRuleData {
+public class DungeonsMaterialRules {
     // Vanilla Block Material Rules
     private static final MaterialRule STONE = makeStateRule(Blocks.STONE);
     private static final MaterialRule GRAVEL = makeStateRule(Blocks.GRAVEL);
@@ -56,7 +59,8 @@ public class DungeonsSurfaceRuleData {
                             MaterialRules.sequence(
                                 MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), SANDSTONE),
                                 MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.1818), SANDSTONE),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.909, 0.5454), SANDSTONE)
+                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.909, 0.5454), SANDSTONE),
+                                MaterialRules.terracottaBands()
                         )),
                         MaterialRules.condition(atOrAboveWaterLvl, MaterialRules.sequence(
                             MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, RED_SANDSTONE),
@@ -72,7 +76,8 @@ public class DungeonsSurfaceRuleData {
                 ),
                 MaterialRules.condition(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(63), -1), MaterialRules.sequence(
                     MaterialRules.condition(MaterialRules.aboveY(YOffset.fixed(63), 0), 
-                        MaterialRules.condition(MaterialRules.not(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1)), YELLOW_SANDSTONE))
+                        MaterialRules.condition(MaterialRules.not(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1)), YELLOW_SANDSTONE)),
+                        MaterialRules.terracottaBands()
                 )),
                 MaterialRules.condition(MaterialRules.stoneDepth(0, true, VerticalSurfaceType.FLOOR), 
                     MaterialRules.condition(MaterialRules.waterWithStoneDepth(-6, -1), GRAY_SANDSTONE)

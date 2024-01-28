@@ -11,7 +11,8 @@ import org.apache.logging.log4j.Logger;
 import ashie404.javadungeons.biome.Biomes;
 import ashie404.javadungeons.biome.DungeonsOverworldRegion;
 import ashie404.javadungeons.content.*;
-import ashie404.javadungeons.worldgen.DungeonsSurfaceRuleData;
+import ashie404.javadungeons.worldgen.DungeonsMaterialRules;
+import ashie404.javadungeons.worldgen.feature.DungeonsFeatures;
 
 public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
@@ -43,15 +44,14 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		Weapons.init();
 
 		// add surface rules
-		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, JavaDungeons.MOD_ID, DungeonsSurfaceRuleData.makeRules());
+		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, JavaDungeons.MOD_ID, DungeonsMaterialRules.makeRules());
 
 		log.info("JavaDungeons initialized!");
 	}
 
 	@Override
     public void onTerraBlenderInitialized() {
-		// worldgen init
-		Features.init();
+		DungeonsFeatures.init();
 
 		// register terrablender regions
 		Regions.register(new DungeonsOverworldRegion(4));
