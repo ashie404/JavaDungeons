@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.33333334,
+          "feature": {
+            "feature": "dungeons:red_autumnal_tree",
+            "placement": []
+          }
+        },
+        {
+            "chance": 0.154444,
+            "feature": {
+              "feature": "dungeons:red_autumnal_tree_big",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.154444,
+            "feature": {
+              "feature": "dungeons:yellow_autumnal_tree_big",
+              "placement": []
+            }
+        }
+      ],
+      "default": {
+        "feature": "dungeons:yellow_autumnal_tree",
+        "placement": []
+      }
+    }
+  }
