@@ -48,7 +48,14 @@ public class DungeonsMaterialRules {
     public static MaterialRule makeRules() {
         MaterialCondition atOrAboveWaterLvl = MaterialRules.water(-1, 0);
 
-        MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, GRASS), DIRT);
+        // Determine surface material
+        MaterialRule grassSurface = MaterialRules.sequence(
+            MaterialRules.condition(MaterialRules.biome(Biomes.SOGGY_SWAMP), 
+                MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, SS_GRASS), SS_DIRT)), 
+            MaterialRules.condition(MaterialRules.biome(Biomes.CREEPER_WOODS), 
+                MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, CW_GRASS), CW_DIRT)), 
+            MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, GRASS), DIRT)
+        );
 
         return MaterialRules.sequence(
             MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(Biomes.CACTI_CANYON), MaterialRules.sequence(
