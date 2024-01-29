@@ -29,16 +29,16 @@ public class PathableBlock extends Block {
     // path-able block
 
     public BlockItem blockItem;
-    public Block pathBlock;
 
-    public boolean canTill;
+    private Block pathVariant;
+    private boolean canTill;
 
-    public PathableBlock(float hardness, float resistance, boolean canTill, BlockSoundGroup sounds, Block pathBlock, String id) {
+    public PathableBlock(float hardness, float resistance, boolean tillable, BlockSoundGroup sounds, Block pathVariant, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
         Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
-        this.pathBlock = pathBlock;
-        this.canTill = canTill;
+        this.pathVariant = pathVariant;
+        this.canTill = tillable;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class PathableBlock extends Block {
                 1.0f,
                 1.0f
             );
-            world.setBlockState(pos, pathBlock.getDefaultState());
+            world.setBlockState(pos, pathVariant.getDefaultState());
             return ActionResult.SUCCESS;
         } else if (player.getMainHandStack().getItem().getDefaultStack().isIn(ItemTags.HOES) && world.getBlockState(pos.up()).isAir() && canTill) {
             world.playSound(

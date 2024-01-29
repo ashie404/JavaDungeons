@@ -32,7 +32,7 @@ public class CreeperWoodsBlocks {
     public static Pillar CW_DARK_ANDESITE_PILLAR;
     
     // ground related
-    public static PathableBlock CW_GRASS_BLOCK;
+    public static GrassBlock CW_GRASS_BLOCK;
     public static BaseBlock CW_GRASSY_DIRT;
     public static BaseBlock CW_DENSE_GRASSY_DIRT;
     public static PathableBlock CW_DIRT;
@@ -92,12 +92,12 @@ public class CreeperWoodsBlocks {
         CW_DARK_ANDESITE_PILLAR = new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE,  "cw_dark_andesite_pillar");
 
         // ground related
-        CW_GRASS_BLOCK = new PathableBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, "cw_grass_block");
         CW_GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cw_grassy_dirt");
         CW_DENSE_GRASSY_DIRT = new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS, "cw_dense_grassy_dirt");
         CW_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cw_dirt_path");
         CW_DIRT = new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, CW_DIRT_PATH, "cw_dirt");
         CW_DIRT_SLAB = new Slab(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cw_dirt_slab");
+        CW_GRASS_BLOCK = new GrassBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, CW_DIRT, "cw_grass_block");
         CW_ROCKY_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cw_rocky_dirt_path");
         CW_ROCKY_DIRT = new PathableBlock(0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, CW_ROCKY_DIRT_PATH, "cw_rocky_dirt");
         CW_ROCKY_GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cw_rocky_grassy_dirt");

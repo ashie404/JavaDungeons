@@ -11,10 +11,8 @@ import net.minecraft.util.Identifier;
 
 public class CactiCanyonBlocks {
 
-    // grass related
-    public static PathableBlock CC_GRASS_BLOCK;
-
-    // dirt related
+    // earth blocks
+    public static GrassBlock CC_GRASS_BLOCK;
     public static BaseBlock CC_DENSE_GRASSY_DIRT;
     public static BaseBlock CC_GRASSY_DIRT;
     public static PathBlock CC_DIRT_PATH;
@@ -23,13 +21,13 @@ public class CactiCanyonBlocks {
     public static PathBlock CC_ROCKY_DIRT_PATH;
     public static PathableBlock CC_ROCKY_DIRT;
 
-    // sand related
+    // sand blocks
     public static FallingBlock CC_SAND;
     public static BaseBlock CC_DENSE_SANDY_DIRT;
     public static BaseBlock CC_SANDY_DIRT;
     public static LayeringBlock CC_SAND_LAYER;
 
-    // sandstone related
+    // sandstone blocks
     public static BaseBlock CC_SANDSTONE;
     public static BaseBlock CC_BLUE_SANDSTONE;
     public static BaseBlock CC_BROWN_SANDSTONE;
@@ -48,7 +46,7 @@ public class CactiCanyonBlocks {
     public static SlabStairBlock CC_SMOOTH_SANDSTONE;
     public static BaseBlock CC_CHISELED_SANDSTONE;
 
-    // plant related
+    // plant blocks
     public static DesertPlant CC_DESERT_GRASS;
     public static DesertPlant CC_CACTUS;
     public static DesertPlant CC_SMALL_CACTUS;
@@ -59,15 +57,13 @@ public class CactiCanyonBlocks {
     
     public static void init() {
 
-        // grass related
-        CC_GRASS_BLOCK = new PathableBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, "cc_grass_block");
-
-        // dirt related
+        // earth blocks
         CC_DENSE_GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cc_dense_grassy_dirt");
         CC_GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cc_grassy_dirt");
         CC_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cc_dirt_path");
         CC_DIRT = new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, CC_DIRT_PATH, "cc_dirt");
         CC_DIRT_SLAB = new Slab(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cc_dirt_slab");
+        CC_GRASS_BLOCK = new GrassBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, CC_DIRT, "cc_grass_block");
         CC_ROCKY_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "cc_rocky_dirt_path");
         CC_ROCKY_DIRT = new PathableBlock(0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, CC_ROCKY_DIRT_PATH, "cc_rocky_dirt");
 

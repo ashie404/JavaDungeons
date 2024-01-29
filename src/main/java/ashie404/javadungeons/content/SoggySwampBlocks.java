@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class SoggySwampBlocks {
 
     // ground related
-    public static PathableBlock SS_GRASS_BLOCK;
+    public static GrassBlock SS_GRASS_BLOCK;
     public static PathBlock SS_DIRT_PATH;
     public static PathableBlock SS_DIRT;
 
@@ -42,9 +42,9 @@ public class SoggySwampBlocks {
 
     public static void init() {
         // ground related
-        SS_GRASS_BLOCK = new PathableBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, "ss_grass_block");
         SS_DIRT_PATH = new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "ss_dirt_path");
         SS_DIRT = new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH, "ss_dirt");
+        SS_GRASS_BLOCK = new GrassBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, SS_DIRT, "ss_grass_block");
 
         // stone related
         SS_MOSSY_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ss_mossy_stone");

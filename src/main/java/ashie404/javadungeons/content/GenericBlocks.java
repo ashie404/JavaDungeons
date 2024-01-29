@@ -36,6 +36,7 @@ public class GenericBlocks {
     public static FoodBox CORN_FOOD_BOX;
 
     // ground related
+    public static GrassBlock GRASS_BLOCK;
     public static PathableBlock DIRT;
     public static Slab DIRT_SLAB;
     public static PathBlock DIRT_PATH;
@@ -44,7 +45,6 @@ public class GenericBlocks {
     public static BaseBlock DENSE_GRASSY_DIRT;
     public static BaseBlock GRASSY_DIRT;
     public static BaseBlock ROCKY_GRASSY_DIRT;
-    public static PathableBlock GRASS_BLOCK;
     public static BaseBlock DARK_ROCKY_DIRT;
 
     // wood related
@@ -166,7 +166,7 @@ public class GenericBlocks {
         DENSE_GRASSY_DIRT = new BaseBlock( 0.6F, 0.6F, BlockSoundGroup.GRASS, "dense_grassy_dirt");
         GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "grassy_dirt");
         ROCKY_GRASSY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "rocky_grassy_dirt");
-        GRASS_BLOCK = new PathableBlock( 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, "grass_block");
+        GRASS_BLOCK = new GrassBlock( 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, DIRT, "grass_block");
         DARK_ROCKY_DIRT = new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL, "dark_rocky_dirt");
 
         // wood related
