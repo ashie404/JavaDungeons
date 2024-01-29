@@ -57,6 +57,13 @@
               "feature": "dungeons:patch_charred_tall_grass",
               "placement": []
             }
+          },
+          {
+            "chance": 0.01,
+            "feature": {
+              "feature": "dungeons:patch_charred_grass",
+              "placement": []
+            }
           }
       ],
       "default": {

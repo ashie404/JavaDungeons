@@ -5,19 +5,19 @@
         {
           "chance": 0.05,
           "feature": {
-            "feature": "dungeons:patch_pop_flower",
+            "feature": "dungeons:patch_shrub",
             "placement": []
           }
         },
         {
-            "chance": 0.05,
+            "chance": 0.1,
             "feature": {
-              "feature": "dungeons:flower_patch",
+              "feature": "dungeons:patch_fern",
               "placement": []
             }
         },
         {
-            "chance": 0.1,
+            "chance": 0.2,
             "feature": {
               "feature": "dungeons:patch_berry_bush_block",
               "placement": []
@@ -27,20 +27,6 @@
             "chance": 0.6,
             "feature": {
               "feature": "dungeons:patch_short_grass",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.25,
-            "feature": {
-              "feature": "dungeons:patch_fern",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.1,
-            "feature": {
-              "feature": "dungeons:patch_shrub_cw",
               "placement": []
             }
         }

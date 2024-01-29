@@ -11,7 +11,7 @@ public class Biomes {
     public static final RegistryKey<Biome> CACTI_CANYON_DESERT = register("cacti_canyon_desert");
     public static final RegistryKey<Biome> CACTI_CANYON = register("cacti_canyon");
     public static final RegistryKey<Biome> CREEPER_WOODS = register("creeper_woods");
-    public static final RegistryKey<Biome> DUNGEONS_PLAINS = register("dungeons_plains");
+    public static final RegistryKey<Biome> SQUID_COAST = register("squid_coast");
     public static final RegistryKey<Biome> PUMPKIN_PASTURES = register("pumpkin_pastures");
     public static final RegistryKey<Biome> SOGGY_SWAMP = register("soggy_swamp");
 
