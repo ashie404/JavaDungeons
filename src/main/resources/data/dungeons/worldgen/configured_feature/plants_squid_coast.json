@@ -10,6 +10,13 @@
           }
         },
         {
+            "chance": 0.4,
+            "feature": {
+              "feature": "dungeons:patch_yellow_tulip",
+              "placement": []
+            }
+        },
+        {
             "chance": 0.1,
             "feature": {
               "feature": "dungeons:patch_fern",
@@ -24,7 +31,7 @@
             }
         },
         {
-            "chance": 0.6,
+            "chance": 0.4,
             "feature": {
               "feature": "dungeons:patch_short_grass",
               "placement": []

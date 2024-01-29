@@ -30,7 +30,7 @@ public class DungeonsOverworldRegion extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.ERODED_BADLANDS, Biomes.CACTI_CANYON);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BADLANDS, Biomes.CACTI_CANYON_DESERT);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, Biomes.CREEPER_WOODS);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BEACH, Biomes.SQUID_COAST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, Biomes.SQUID_COAST);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.MEADOW, Biomes.PUMPKIN_PASTURES);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SWAMP, Biomes.SOGGY_SWAMP);
         });
