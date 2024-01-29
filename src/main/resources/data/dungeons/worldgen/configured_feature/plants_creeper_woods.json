@@ -1,53 +1,82 @@
-{
-    "type": "minecraft:random_selector",
+  {
+    "type": "minecraft:random_patch",
     "config": {
-      "features": [
-        {
-          "chance": 0.05,
-          "feature": {
-            "feature": "dungeons:patch_pop_flower",
-            "placement": []
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 2,
+                  "data": {
+                    "Name": "dungeons:cw_pop_flower"
+                  }
+                },
+                {
+                  "weight": 5,
+                  "data": {
+                    "Name": "dungeons:cw_flower_patch"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:berry_bush_block",
+                    "Properties": {
+                      "persistent": true
+                    }
+                  }
+                },
+                {
+                  "weight": 20,
+                  "data": {
+                    "Name": "dungeons:short_grass"
+                  }
+                },
+                {
+                  "weight": 10,
+                  "data": {
+                    "Name": "dungeons:fern"
+                  }
+                },
+                {
+                  "weight": 6,
+                  "data": {
+                    "Name": "dungeons:cw_shrub"
+                  }
+                }
+              ]
+            }
           }
         },
-        {
-            "chance": 0.05,
-            "feature": {
-              "feature": "dungeons:flower_patch",
-              "placement": []
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                },
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:oak_sapling",
+                    "Properties": {
+                      "stage": "0"
+                    }
+                  }
+                }
+              ]
             }
-        },
-        {
-            "chance": 0.1,
-            "feature": {
-              "feature": "dungeons:patch_berry_bush_block",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.6,
-            "feature": {
-              "feature": "dungeons:patch_short_grass",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.25,
-            "feature": {
-              "feature": "dungeons:patch_fern",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.1,
-            "feature": {
-              "feature": "dungeons:patch_shrub_cw",
-              "placement": []
-            }
-        }
-      ],
-      "default": {
-        "feature": "dungeons:patch_short_grass",
-        "placement": []
-      }
+          }
+        ]
+      },
+      "tries": 50,
+      "xz_spread": 32,
+      "y_spread": 3
     }
-  }
+}

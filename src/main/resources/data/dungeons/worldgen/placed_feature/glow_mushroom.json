@@ -14,15 +14,24 @@
       },
       {
         "type": "minecraft:block_predicate_filter",
-        "predicate": {
-          "type": "minecraft:would_survive",
-          "state": {
-            "Name": "minecraft:oak_sapling",
-            "Properties": {
-              "stage": "0"
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                },
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:oak_sapling",
+                    "Properties": {
+                      "stage": "0"
+                    }
+                  }
+                }
+              ]
             }
-          }
-        }
       },
       {
         "type": "minecraft:biome"

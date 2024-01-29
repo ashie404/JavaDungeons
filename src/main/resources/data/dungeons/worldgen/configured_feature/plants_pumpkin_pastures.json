@@ -1,74 +1,106 @@
 {
-    "type": "minecraft:random_selector",
+    "type": "minecraft:random_patch",
     "config": {
-      "features": [
-        {
-          "chance": 0.05,
-          "feature": {
-            "feature": "dungeons:patch_dead_sapling",
-            "placement": []
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_dead_sapling"
+                  }
+                },
+                {
+                  "weight": 4,
+                  "data": {
+                    "Name": "dungeons:pm_fern"
+                  }
+                },
+                {
+                  "weight": 10,
+                  "data": {
+                    "Name": "dungeons:fern"
+                  }
+                },
+                {
+                  "weight": 20,
+                  "data": {
+                    "Name": "dungeons:short_grass"
+                  }
+                },
+                {
+                  "weight": 6,
+                  "data": {
+                    "Name": "dungeons:pm_shrub"
+                  }
+                },
+                {
+                  "weight": 2,
+                  "data": {
+                    "Name": "dungeons:pm_tall_fern",
+                    "Properties": {
+                      "half": "lower"
+                    }
+                  }
+                },
+                {
+                  "weight": 15,
+                  "data": {
+                    "Name": "dungeons:pm_dry_tall_grass",
+                    "Properties": {
+                      "half": "lower"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_charred_tall_grass",
+                    "Properties": {
+                      "half": "lower"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_charred_grass"
+                  }
+                } 
+              ]
+            }
           }
         },
-        {
-            "chance": 0.12,
-            "feature": {
-              "feature": "dungeons:patch_fern_pm",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.15,
-            "feature": {
-              "feature": "dungeons:patch_fern",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.33,
-            "feature": {
-              "feature": "dungeons:patch_short_grass",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.1,
-            "feature": {
-              "feature": "dungeons:patch_shrub_pm",
-              "placement": []
-            }
-        },
-        {
-            "chance": 0.05,
-            "feature": {
-              "feature": "dungeons:patch_tall_fern_pm",
-              "placement": []
-            }
-          },
+        "placement": [
           {
-            "chance": 0.66,
-            "feature": {
-              "feature": "dungeons:patch_dry_tall_grass",
-              "placement": []
-            }
-          },
-          {
-            "chance": 0.01,
-            "feature": {
-              "feature": "dungeons:patch_charred_tall_grass",
-              "placement": []
-            }
-          },
-          {
-            "chance": 0.01,
-            "feature": {
-              "feature": "dungeons:patch_charred_grass",
-              "placement": []
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                },
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:oak_sapling",
+                    "Properties": {
+                      "stage": "0"
+                    }
+                  }
+                }
+              ]
             }
           }
-      ],
-      "default": {
-        "feature": "dungeons:patch_short_grass",
-        "placement": []
-      }
+        ]
+      },
+      "tries": 32,
+      "xz_spread": 24,
+      "y_spread": 3
     }
-  }
+}
