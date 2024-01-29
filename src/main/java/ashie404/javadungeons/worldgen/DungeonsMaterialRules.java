@@ -47,50 +47,26 @@ public class DungeonsMaterialRules {
 
     public static MaterialRule makeRules() {
         MaterialCondition atOrAboveWaterLvl = MaterialRules.water(-1, 0);
+        MaterialCondition surfaceBlock = MaterialRules.surface();
+        MaterialCondition isGrass = MaterialRules.stoneDepth(0, false, VerticalSurfaceType.FLOOR);
 
-        // Determine surface material
-        MaterialRule grassSurface = MaterialRules.sequence(
-            MaterialRules.condition(MaterialRules.biome(Biomes.SOGGY_SWAMP), 
-                MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, SS_GRASS), SS_DIRT)), 
-            MaterialRules.condition(MaterialRules.biome(Biomes.CREEPER_WOODS), 
-                MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, CW_GRASS), CW_DIRT)), 
-            MaterialRules.sequence(MaterialRules.condition(atOrAboveWaterLvl, GRASS), DIRT)
-        );
-
-        return MaterialRules.sequence(
-            MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(Biomes.CACTI_CANYON), MaterialRules.sequence(
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, 
-                    MaterialRules.sequence(
-                        MaterialRules.condition(MaterialRules.aboveY(YOffset.fixed(256), 0), ORANGE_SANDSTONE),
-                        MaterialRules.condition(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1), 
-                            MaterialRules.sequence(
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), SANDSTONE),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.1818), SANDSTONE),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.909, 0.5454), SANDSTONE),
-                                MaterialRules.terracottaBands()
-                        )),
-                        MaterialRules.condition(atOrAboveWaterLvl, MaterialRules.sequence(
-                            MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, RED_SANDSTONE),
-                            SAND
-                        )),
-                        MaterialRules.condition(MaterialRules.not(MaterialRules.hole()), ORANGE_SANDSTONE),
-                        MaterialRules.condition(MaterialRules.waterWithStoneDepth(-6, -1), PINK_SANDSTONE),
-                        MaterialRules.sequence(
-                            MaterialRules.condition(MaterialRules.stoneDepth(0, false, VerticalSurfaceType.CEILING), STONE),
-                            GRAVEL
-                        )
-                    )
-                ),
-                MaterialRules.condition(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(63), -1), MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.aboveY(YOffset.fixed(63), 0), 
-                        MaterialRules.condition(MaterialRules.not(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1)), YELLOW_SANDSTONE)),
-                        MaterialRules.terracottaBands()
-                )),
-                MaterialRules.condition(MaterialRules.stoneDepth(0, true, VerticalSurfaceType.FLOOR), 
-                    MaterialRules.condition(MaterialRules.waterWithStoneDepth(-6, -1), GRAY_SANDSTONE)
-                )
-            )),
-            MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
+        return MaterialRules.condition(surfaceBlock, MaterialRules.sequence(
+            MaterialRules.condition(MaterialRules.biome(Biomes.SOGGY_SWAMP), MaterialRules.sequence(
+                MaterialRules.condition(atOrAboveWaterLvl, 
+                    MaterialRules.condition(isGrass, SS_GRASS)
+                ), 
+                SS_DIRT 
+            )), 
+            MaterialRules.condition(MaterialRules.biome(Biomes.CREEPER_WOODS), MaterialRules.sequence(
+                MaterialRules.condition(atOrAboveWaterLvl, 
+                    MaterialRules.condition(isGrass, CW_GRASS)
+                ), 
+                CW_DIRT
+            )), 
+            MaterialRules.condition(atOrAboveWaterLvl, 
+                MaterialRules.condition(isGrass, GRASS)
+            ),
+            DIRT
         ));
     }
 
