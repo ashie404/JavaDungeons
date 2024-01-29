@@ -24,14 +24,14 @@
             }
         },
         {
-            "chance": 0.22,
+            "chance": 0.66,
             "feature": {
               "feature": "dungeons:patch_short_grass",
               "placement": []
             }
         },
         {
-            "chance": 0.17,
+            "chance": 0.25,
             "feature": {
               "feature": "dungeons:patch_fern",
               "placement": []
