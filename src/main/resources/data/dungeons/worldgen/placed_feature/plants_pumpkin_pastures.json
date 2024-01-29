@@ -1,9 +1,9 @@
 {
-    "feature": "dungeons:plants_creeper_woods",
+    "feature": "dungeons:plants_pumpkin_pastures",
     "placement":  [
         {
-          "type": "minecraft:count",
-          "count": 3
+            "type": "minecraft:count",
+            "count": 3
           },
           {
             "type": "minecraft:in_square"

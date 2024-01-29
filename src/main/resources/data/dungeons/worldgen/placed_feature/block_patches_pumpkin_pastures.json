@@ -1,9 +1,11 @@
 {
-    "feature": "dungeons:plants_creeper_woods",
+    "feature": "dungeons:block_patches_pumpkin_pastures",
     "placement":  [
         {
-          "type": "minecraft:count",
-          "count": 3
+            "type": "minecraft:noise_threshold_count",
+            "noise_level": 2,
+            "below_noise": 1,
+            "above_noise": 2
           },
           {
             "type": "minecraft:in_square"

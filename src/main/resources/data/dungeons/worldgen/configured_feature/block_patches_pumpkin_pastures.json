@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.33,
+          "feature": {
+            "feature": "dungeons:patch_burnt_pumpkin",
+            "placement": []
+          }
+        },
+        {
+            "chance": 0.33,
+            "feature": {
+              "feature": "dungeons:patch_rotted_pumpkin",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.33,
+            "feature": {
+              "feature": "dungeons:patch_dry_hay",
+              "placement": []
+            }
+        }
+      ],
+      "default": {
+        "feature": "dungeons:patch_dry_hay",
+        "placement": []
+      }
+    }
+  }

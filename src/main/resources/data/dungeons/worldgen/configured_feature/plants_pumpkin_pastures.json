@@ -1,0 +1,67 @@
+{
+    "type": "minecraft:random_selector",
+    "config": {
+      "features": [
+        {
+          "chance": 0.05,
+          "feature": {
+            "feature": "dungeons:patch_dead_sapling",
+            "placement": []
+          }
+        },
+        {
+            "chance": 0.12,
+            "feature": {
+              "feature": "dungeons:patch_fern_pm",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.15,
+            "feature": {
+              "feature": "dungeons:patch_fern",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.25,
+            "feature": {
+              "feature": "dungeons:patch_short_grass",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.1,
+            "feature": {
+              "feature": "dungeons:patch_shrub_pm",
+              "placement": []
+            }
+        },
+        {
+            "chance": 0.05,
+            "feature": {
+              "feature": "dungeons:patch_tall_fern_pm",
+              "placement": []
+            }
+          },
+          {
+            "chance": 0.33,
+            "feature": {
+              "feature": "dungeons:patch_dry_tall_grass",
+              "placement": []
+            }
+          },
+          {
+            "chance": 0.01,
+            "feature": {
+              "feature": "dungeons:patch_charred_tall_grass",
+              "placement": []
+            }
+          }
+      ],
+      "default": {
+        "feature": "dungeons:patch_short_grass",
+        "placement": []
+      }
+    }
+  }
