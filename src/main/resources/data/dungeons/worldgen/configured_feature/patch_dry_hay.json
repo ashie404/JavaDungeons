@@ -5,12 +5,36 @@
         "feature": {
           "type": "minecraft:simple_block",
           "config": {
-            "to_place": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "dungeons:pm_dried_haybale"
-              }
-            }
+            "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_dried_haybale",
+                    "Properties": {
+                      "axis": "x"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_dried_haybale",
+                    "Properties": {
+                      "axis": "y"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:pm_dried_haybale",
+                    "Properties": {
+                      "axis": "z"
+                    }
+                  }
+                }
+              ]
           }
         },
         "placement": [

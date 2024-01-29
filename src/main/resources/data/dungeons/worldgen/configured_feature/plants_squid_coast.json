@@ -3,14 +3,14 @@
     "config": {
       "features": [
         {
-          "chance": 0.05,
+          "chance": 0.1,
           "feature": {
             "feature": "dungeons:patch_shrub",
             "placement": []
           }
         },
         {
-            "chance": 0.4,
+            "chance": 0.05,
             "feature": {
               "feature": "dungeons:patch_yellow_tulip",
               "placement": []
@@ -24,7 +24,7 @@
             }
         },
         {
-            "chance": 0.2,
+            "chance": 0.22,
             "feature": {
               "feature": "dungeons:patch_berry_bush_block",
               "placement": []
