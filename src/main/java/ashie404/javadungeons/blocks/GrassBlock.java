@@ -29,7 +29,7 @@ import net.minecraft.server.world.ServerWorld;
 
 public class GrassBlock extends SnowyBlock {
 
-    // generic block
+    // spreadable grass block
 
     public BlockItem blockItem;
     public Block dirtVariant;
@@ -73,7 +73,7 @@ public class GrassBlock extends SnowyBlock {
 
     private static boolean canSpread(BlockState state, WorldView world, BlockPos pos) {
         BlockPos blockPos = pos.up();
-        return GrassBlock.canSurvive(state, world, pos) && !world.getFluidState(blockPos).isIn(FluidTags.WATER);
+        return canSurvive(state, world, pos) && !world.getFluidState(blockPos).isIn(FluidTags.WATER);
     }
 
     @Override
