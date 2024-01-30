@@ -42,7 +42,7 @@ public class Candle extends Block {
 	}
 
     public Candle(float hardness, float resistance, BlockSoundGroup sounds, String id, boolean isGreen) {
-        super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15).ticksRandomly());
+        super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15).ticksRandomly());
         this.particle = isGreen ? Particles.GREEN_FLAME : ParticleTypes.FLAME;
         Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
         Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
