@@ -10,8 +10,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

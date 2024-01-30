@@ -20,9 +20,5 @@ public class Properties {
         }
     }
 
-    public static EnumProperty<Contains> CONTAINS;
-
-    public static void init() {
-        CONTAINS = EnumProperty.of("contains", Contains.class);
-    }
+    public static final EnumProperty<Contains> CONTAINS = EnumProperty.of("contains", Contains.class);
 }

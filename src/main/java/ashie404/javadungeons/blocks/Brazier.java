@@ -3,7 +3,6 @@ package ashie404.javadungeons.blocks;
 import java.util.Random;
 
 import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -13,10 +12,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
@@ -48,7 +45,7 @@ public class Brazier extends Block {
     public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0));
         this.particle = p;
-        this.SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
+        SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
         Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
         Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }

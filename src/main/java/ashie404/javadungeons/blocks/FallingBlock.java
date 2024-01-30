@@ -6,7 +6,6 @@ import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;

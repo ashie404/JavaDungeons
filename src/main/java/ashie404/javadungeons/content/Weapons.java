@@ -1,112 +1,103 @@
 package ashie404.javadungeons.content;
 
+import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.items.*;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ToolMaterials;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 
 public class Weapons {
 
     // Axes
-    public static DungeonsAxe AXE;
-    public static DungeonsAxe HIGHLAND_AXE;
-    public static DungeonsAxe CURSED_AXE;
-    public static DungeonsAxe WHIRLWIND;
-    public static DungeonsAxe FIREBRAND;
-    public static DungeonsAxe DOUBLE_AXE;
+    public static final DungeonsAxe AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "axe");
+    public static final DungeonsAxe HIGHLAND_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "highland_axe");
+    public static final DungeonsAxe CURSED_AXE = new DungeonsAxe(ToolMaterials.IRON, 7.0F, -3.4F, "cursed_axe");
+    public static final DungeonsAxe WHIRLWIND = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -2.9F, "whirlwind");
+    public static final DungeonsAxe FIREBRAND = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "firebrand");
+    public static final DungeonsAxe DOUBLE_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "double_axe");
 
     // Pickaxes
-    public static DungeonsPickaxe STEEL_PICKAXE;
+    public static final DungeonsPickaxe STEEL_PICKAXE = new DungeonsPickaxe(ToolMaterials.IRON, 2, -2.5F, "steel_pickaxe");
 
     // Swords
-    public static DungeonsSword CLAYMORE;
-    public static DungeonsSword HEARTSTEALER;
-    public static DungeonsSword CUTLASS;
-    public static DungeonsSword NAMELESS_BLADE;
-    public static DungeonsSword BROADSWORD;
-    public static DungeonsSword KATANA;
-    public static DungeonsSword MASTERS_KATANA;
-    public static DungeonsSword DARK_KATANA;
-    public static DungeonsSword STEEL_SWORD;
-    public static DungeonsSword TRUTHSEEKER;
+    public static final DungeonsSword CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
+    public static final DungeonsSword HEARTSTEALER = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "heartstealer");
+    public static final DungeonsSword CUTLASS = new DungeonsSword(ToolMaterials.IRON, 3, -2.1F, "cutlass");
+    public static final DungeonsSword NAMELESS_BLADE = new DungeonsSword(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
+    public static final DungeonsSword BROADSWORD = new DungeonsSword(ToolMaterials.IRON, 5, -3.4F, "broadsword");
+    public static final DungeonsSword KATANA = new DungeonsSword(ToolMaterials.IRON, 2, -1.5F, "katana");
+    public static final DungeonsSword MASTERS_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "masters_katana");
+    public static final DungeonsSword DARK_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 5, -1.15F, "dark_katana");
+    public static final DungeonsSword STEEL_SWORD = new DungeonsSword(ToolMaterials.IRON, 4, -2.4F, "steel_sword");
+    public static final DungeonsSword TRUTHSEEKER = new DungeonsSword(ToolMaterials.IRON, 5, -1.5F, "truthseeker");
 
     // Hammers
-    public static DungeonsPickaxe STONE_HAMMER;
+    public static final DungeonsPickaxe STONE_HAMMER = new DungeonsPickaxe(ToolMaterials.STONE, 6, -3.5F, "stone_hammer");
 
     // Daggers/Knives
-    public static DungeonsSword DAGGER;
-    public static DungeonsSword FANGS_OF_FROST;
-    public static DungeonsSword MOON_DAGGER;
+    public static final DungeonsSword DAGGER = new DungeonsSword(ToolMaterials.IRON, 2, -1.3F, "dagger");
+    public static final DungeonsSword FANGS_OF_FROST = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "fangs_of_frost");
+    public static final DungeonsSword MOON_DAGGER = new DungeonsSword(ToolMaterials.IRON, 4, -1.3F, "moon_dagger");
 
-    public static DungeonsSword SOUL_KNIFE;
-    public static DungeonsSword ETERNAL_KNIFE;
+    public static final DungeonsSword SOUL_KNIFE = new DungeonsSword(ToolMaterials.IRON, 5, -1.1F, "soul_knife");
+    public static final DungeonsSword ETERNAL_KNIFE = new DungeonsSword(ToolMaterials.DIAMOND, 5, -0.9F, "eternal_knife");
 
     // Sickles/Scythes
-    public static DungeonsSickle SICKLE;
-    public static DungeonsSickle NIGHTMARES_BITE;
+    public static final DungeonsSickle SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
+    public static final DungeonsSickle NIGHTMARES_BITE = new DungeonsSickle(ToolMaterials.IRON, 3, -2.0F, "nightmares_bite");
 
-    public static DungeonsSickle FROST_SCYTHE; 
-    public static DungeonsSickle JAILORS_SCYTHE; 
-    public static DungeonsSickle SOUL_SCYTHE; 
+    public static final DungeonsSickle FROST_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.5F, "frost_scythe");
+    public static final DungeonsSickle JAILORS_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.25F, "jailors_scythe");
+    public static final DungeonsSickle SOUL_SCYTHE = new DungeonsSickle(ToolMaterials.DIAMOND, 5, -2.25F, "soul_scythe");
 
     // Spears
-    public static DungeonsSword GLAIVE;
-    public static DungeonsSword GRAVE_BANE; 
-    public static DungeonsSword VENOM_GLAIVE; 
+    public static final DungeonsSword GLAIVE = new DungeonsSword(ToolMaterials.IRON, 3, -2.7F, "glaive");
+    public static final DungeonsSword GRAVE_BANE = new DungeonsSword(ToolMaterials.GOLD, 4, -2.5F, "grave_bane");
+    public static final DungeonsSword VENOM_GLAIVE = new DungeonsSword(ToolMaterials.IRON, 4, -2.7F, "venom_glaive");
 
-    public static DungeonsSword SPEAR;
-    public static DungeonsSword FORTUNE_SPEAR;
-    public static DungeonsSword WHISPERING_SPEAR;
+    public static final DungeonsSword SPEAR = new DungeonsSword(ToolMaterials.IRON, 3, -2.5F, "spear");
+    public static final DungeonsSword FORTUNE_SPEAR = new DungeonsSword(ToolMaterials.GOLD, 4, -2.35F, "fortune_spear");
+    public static final DungeonsSword WHISPERING_SPEAR = new DungeonsSword(ToolMaterials.IRON, 5, -2.5F, "whispering_spear");
 
     public static void init() {
-        // Axes
-        AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "axe");
-        HIGHLAND_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "highland_axe");
-        CURSED_AXE = new DungeonsAxe(ToolMaterials.IRON, 7.0F, -3.4F, "cursed_axe");
-        WHIRLWIND = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -2.9F, "whirlwind");
-        FIREBRAND = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "firebrand");
-        DOUBLE_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "double_axe");
-
-        // Pickaxes
-        STEEL_PICKAXE = new DungeonsPickaxe(ToolMaterials.IRON, 2, -2.5F, "steel_pickaxe");
-
-        // Swords
-        CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
-        HEARTSTEALER = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "heartstealer");
-        CUTLASS = new DungeonsSword(ToolMaterials.IRON, 3, -2.1F, "cutlass");
-        NAMELESS_BLADE = new DungeonsSword(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
-        BROADSWORD = new DungeonsSword(ToolMaterials.IRON, 5, -3.4F, "broadsword");
-        KATANA = new DungeonsSword(ToolMaterials.IRON, 2, -1.5F, "katana");
-        MASTERS_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "masters_katana");
-        DARK_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 5, -1.15F, "dark_katana");
-        STEEL_SWORD = new DungeonsSword(ToolMaterials.IRON, 4, -2.4F, "steel_sword");
-        TRUTHSEEKER = new DungeonsSword(ToolMaterials.IRON, 5, -1.5F, "truthseeker");
-
-        // Hammers
-        STONE_HAMMER = new DungeonsPickaxe(ToolMaterials.STONE, 6, -3.5F, "stone_hammer");
-
-        // Daggers/Knives
-        DAGGER = new DungeonsSword(ToolMaterials.IRON, 2, -1.3F, "dagger");
-        FANGS_OF_FROST = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "fangs_of_frost");
-        MOON_DAGGER = new DungeonsSword(ToolMaterials.IRON, 4, -1.3F, "moon_dagger");
-
-        SOUL_KNIFE = new DungeonsSword(ToolMaterials.IRON, 5, -1.1F, "soul_knife");
-        ETERNAL_KNIFE = new DungeonsSword(ToolMaterials.DIAMOND, 5, -0.9F, "eternal_knife");
-
-        // Sickles/Scythes
-        SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
-        NIGHTMARES_BITE = new DungeonsSickle(ToolMaterials.IRON, 3, -2.0F, "nightmares_bite");
-
-        FROST_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.5F, "frost_scythe");
-        JAILORS_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.25F, "jailors_scythe");
-        SOUL_SCYTHE = new DungeonsSickle(ToolMaterials.DIAMOND, 5, -2.25F, "soul_scythe");
-
-        // Spears
-        GLAIVE = new DungeonsSword(ToolMaterials.IRON, 3, -2.7F, "glaive");
-        GRAVE_BANE = new DungeonsSword(ToolMaterials.GOLD, 4, -2.5F, "grave_bane");
-        VENOM_GLAIVE = new DungeonsSword(ToolMaterials.IRON, 4, -2.7F, "venom_glaive");
-
-        SPEAR = new DungeonsSword(ToolMaterials.IRON, 3, -2.5F, "spear");
-        FORTUNE_SPEAR = new DungeonsSword(ToolMaterials.GOLD, 4, -2.35F, "fortune_spear");
-        WHISPERING_SPEAR = new DungeonsSword(ToolMaterials.IRON, 5, -2.5F, "whispering_spear");
+        // add items to item group
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("weapons"))).register(content -> {
+            content.add(AXE);
+            content.add(HIGHLAND_AXE);
+            content.add(CURSED_AXE);
+            content.add(WHIRLWIND);
+            content.add(FIREBRAND);
+            content.add(DOUBLE_AXE);
+            content.add(STEEL_PICKAXE);
+            content.add(CLAYMORE);
+            content.add(HEARTSTEALER);
+            content.add(CUTLASS);
+            content.add(NAMELESS_BLADE);
+            content.add(BROADSWORD);
+            content.add(KATANA);
+            content.add(MASTERS_KATANA);
+            content.add(DARK_KATANA);
+            content.add(STEEL_SWORD);
+            content.add(TRUTHSEEKER);
+            content.add(STONE_HAMMER);
+            content.add(DAGGER);
+            content.add(FANGS_OF_FROST);
+            content.add(MOON_DAGGER);
+            content.add(SOUL_KNIFE);
+            content.add(ETERNAL_KNIFE);
+            content.add(SICKLE);
+            content.add(NIGHTMARES_BITE);
+            content.add(FROST_SCYTHE);
+            content.add(JAILORS_SCYTHE);
+            content.add(SOUL_SCYTHE);
+            content.add(GLAIVE);
+            content.add(GRAVE_BANE);
+            content.add(VENOM_GLAIVE);
+            content.add(SPEAR);
+            content.add(FORTUNE_SPEAR);
+            content.add(WHISPERING_SPEAR);
+        });
     }
 
 }

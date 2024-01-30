@@ -13,9 +13,6 @@ import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
-import terrablender.api.VanillaParameterOverlayBuilder;
-
-import static terrablender.api.ParameterUtils.*;
 
 public class DungeonsOverworldRegion extends Region {
     public static final Identifier LOCATION = JavaDungeons.ID("overworld");
@@ -26,6 +23,7 @@ public class DungeonsOverworldRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
+        // TODO : make dungeons biomes have actual worldgen settings and not just modify vanilla biomes
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.ERODED_BADLANDS, Biomes.CACTI_CANYON);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BADLANDS, Biomes.CACTI_CANYON_DESERT);

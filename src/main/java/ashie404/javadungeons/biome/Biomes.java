@@ -3,7 +3,6 @@ package ashie404.javadungeons.biome;
 import ashie404.javadungeons.JavaDungeons;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 
 

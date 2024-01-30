@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 public class ItemGroups {
     public static final ItemGroup GENERIC = FabricItemGroup.builder()
@@ -49,7 +48,5 @@ public class ItemGroups {
 		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("redstone_mines"), REDSTONE_MINES);
 		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("fiery_forge"), FIERY_FORGE);
 		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("weapons"), WEAPONS);
-
-        // add items to item groups
     }
 }
