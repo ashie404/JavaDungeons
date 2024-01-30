@@ -70,7 +70,7 @@
         "minecraft:ore_lapis_buried",
         "minecraft:ore_copper",
         "minecraft:underwater_magma",
-        "minecraft:disk_clay"
+        "dungeons:disk_clay"
       ],
       [],
       [
