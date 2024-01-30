@@ -135,42 +135,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.CYAN_GLASS,
             CreeperWoodsBlocks.CW_GLOW_MUSHROOM
         );
-        // set up fluid rendering
-        BlockRenderLayerMap.INSTANCE.putFluids(
-            RenderLayer.getTranslucent(),
-            Fluids.DUNGEONS_WATER_FLOWING,
-            Fluids.DUNGEONS_WATER_STILL,
-            Fluids.SOGGY_SWAMP_WATER_FLOWING,
-            Fluids.SOGGY_SWAMP_WATER_STILL
-        );
 
         // set up particles
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
-
-        setupFluidRendering(
-            Fluids.DUNGEONS_WATER_STILL, // still fluid object
-            Fluids.DUNGEONS_WATER_FLOWING, // flowing fluid object
-            JavaDungeons.ID("dungeons_water"), // texture identifier
-            0xFFFFFF // tint color (white because water is colored in its file)
-        );
-
-        setupFluidRendering(
-            Fluids.SOGGY_SWAMP_WATER_STILL, // still fluid object
-            Fluids.SOGGY_SWAMP_WATER_FLOWING, // flowing fluid object
-            JavaDungeons.ID("soggy_swamp/soggy_swamp_water"), // texture identifier
-            0xFFFFFF // tint color (white because water is colored in its file)
-        );
-    }    
-
-    public static void setupFluidRendering(final Fluid still, final Fluid flowing, final Identifier textureFluidId, final int color)
-	{
-		final Identifier stillSpriteId = new Identifier(textureFluidId.getNamespace(), "block/" + textureFluidId.getPath() + "_still");
-		final Identifier flowingSpriteId = new Identifier(textureFluidId.getNamespace(), "block/" + textureFluidId.getPath() + "_flow");
-        
-        FluidRenderHandlerRegistry.INSTANCE.register(still, flowing, new SimpleFluidRenderHandler(
-				stillSpriteId,
-				flowingSpriteId,
-				0xFFFFFF
-		));
-	}
+    }
 }
