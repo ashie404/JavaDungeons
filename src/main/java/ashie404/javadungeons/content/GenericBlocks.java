@@ -106,7 +106,7 @@ public class GenericBlocks {
 
     // braziers
     public static final Brazier UNLIT_BRAZIER = new Brazier(null, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "unlit", false, "unlit_brazier");
-    public static final Brazier LIT_BRAZIER = new Brazier(ParticleTypes.SMALL_FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "lit", false, "lit_brazier");
+    public static final Brazier LIT_BRAZIER = new Brazier(ParticleTypes.FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "lit", false, "lit_brazier");
     public static final Brazier GREEN_LIT_BRAZIER = new Brazier(Particles.GREEN_FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "green_lit", false, "green_lit_brazier");
 
     // books

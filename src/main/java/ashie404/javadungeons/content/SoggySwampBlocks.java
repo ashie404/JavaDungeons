@@ -36,7 +36,7 @@ public class SoggySwampBlocks {
 
     // braziers
     public static final Brazier SS_UNLIT_BRAZIER = new Brazier(null, 1.5F, 6.0F, BlockSoundGroup.STONE, "unlit", true, "ss_unlit_brazier");
-    public static final Brazier SS_LIT_BRAZIER = new Brazier(ParticleTypes.SMALL_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true, "ss_lit_brazier");
+    public static final Brazier SS_LIT_BRAZIER = new Brazier(ParticleTypes.FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true, "ss_lit_brazier");
     public static final Brazier SS_GREEN_LIT_BRAZIER = new Brazier(Particles.GREEN_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true, "ss_green_lit_brazier");
 
     public static void init() {
