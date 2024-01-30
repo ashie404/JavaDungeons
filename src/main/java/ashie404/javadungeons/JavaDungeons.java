@@ -28,6 +28,9 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		// other stuff
 		ItemGroups.init();
 		Fluids.init();
+		Sounds.init();
+		Tags.init();
+		Particles.init();
 		Paintings.init();
 
 		// blocks

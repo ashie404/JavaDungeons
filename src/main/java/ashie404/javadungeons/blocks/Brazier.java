@@ -33,7 +33,7 @@ public class Brazier extends Block {
 
     public DefaultParticleType particle;
 
-    protected static VoxelShape SHAPE;
+    protected VoxelShape SHAPE;
     protected static final VoxelShape REG_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
     protected static final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
 
@@ -43,9 +43,9 @@ public class Brazier extends Block {
 	}
 
     public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp, String id) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0));
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly());
         this.particle = p;
-        SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
+        this.SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
         Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
         Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }

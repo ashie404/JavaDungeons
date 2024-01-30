@@ -8,4 +8,8 @@ import net.minecraft.block.Block;
 public class Tags {
     public static final TagKey<Block> PLANTABLE = TagKey.of(RegistryKeys.BLOCK, JavaDungeons.ID("plantable"));
     public static final TagKey<Block> DESERT_PLANTABLE = TagKey.of(RegistryKeys.BLOCK, JavaDungeons.ID("desert_plantable"));
+
+    public static void init() {
+        // Unused
+    }
 }

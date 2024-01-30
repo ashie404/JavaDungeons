@@ -9,6 +9,10 @@ import net.minecraft.registry.Registry;
 public class Sounds {
     public static final SoundEvent CW_GLOW_MUSHROOM_STEP = register(JavaDungeons.ID("cw_glow_mushroom_step"));
 
+    public static void init() {
+        // Unused
+    }
+
     public static SoundEvent register(Identifier id) {
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
