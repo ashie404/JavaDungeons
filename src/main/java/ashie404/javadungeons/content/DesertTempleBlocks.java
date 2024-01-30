@@ -42,7 +42,7 @@ public class DesertTempleBlocks {
         DT_SANDY_COBBLESTONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_cobblestone");
 
         // add blocks to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "desert_temple"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("desert_temple"))).register(content -> {
             content.add(DT_SANDY_ANDESITE.base.blockItem);
             content.add(DT_SANDY_ANDESITE.slab.blockItem);
             content.add(DT_SANDY_ANDESITE.stairs.blockItem);

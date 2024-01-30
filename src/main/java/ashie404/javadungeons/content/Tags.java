@@ -11,7 +11,7 @@ public class Tags {
     public static TagKey<Block> DESERT_PLANTABLE;
 
     public static void init() {
-        PLANTABLE = TagKey.of(RegistryKeys.BLOCK, new Identifier(JavaDungeons.MOD_ID, "plantable"));
-        DESERT_PLANTABLE = TagKey.of(RegistryKeys.BLOCK, new Identifier(JavaDungeons.MOD_ID, "desert_plantable"));
+        PLANTABLE = TagKey.of(RegistryKeys.BLOCK, JavaDungeons.ID("plantable"));
+        DESERT_PLANTABLE = TagKey.of(RegistryKeys.BLOCK, JavaDungeons.ID("desert_plantable"));
     }
 }

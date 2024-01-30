@@ -20,6 +20,6 @@ public class Paintings {
     }
 
     private static void registerPaintingVariant(String name, int width, int height) {
-        Registry.register(Registries.PAINTING_VARIANT, new Identifier(JavaDungeons.MOD_ID, name), new PaintingVariant(width, height));
+        Registry.register(Registries.PAINTING_VARIANT, JavaDungeons.ID(name), new PaintingVariant(width, height));
     }
 }

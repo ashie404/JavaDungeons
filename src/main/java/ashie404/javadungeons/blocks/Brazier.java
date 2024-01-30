@@ -49,8 +49,8 @@ public class Brazier extends Block {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0));
         this.particle = p;
         this.SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
-        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
+        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
+        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     @Override

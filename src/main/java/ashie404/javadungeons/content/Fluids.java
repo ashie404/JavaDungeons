@@ -38,21 +38,21 @@ public class Fluids {
     public static Block SOGGY_SWAMP_WATER;
 
     public static void init() {
-        DUNGEONS_WATER_STILL = Registry.register(Registries.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new DungeonsWaterFluid.Still());
-        DUNGEONS_WATER_FLOWING = Registry.register(Registries.FLUID, new Identifier(JavaDungeons.MOD_ID, "dungeons_flowing_water"), new DungeonsWaterFluid.Flowing());
-        DUNGEONS_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(JavaDungeons.MOD_ID, "dungeons_water_bucket"), new BucketItem(DUNGEONS_WATER_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
-        DUNGEONS_WATER = Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, "dungeons_water"), new FluidBlock(DUNGEONS_WATER_STILL, FabricBlockSettings.create().liquid()){});
+        DUNGEONS_WATER_STILL = Registry.register(Registries.FLUID, JavaDungeons.ID("dungeons_water"), new DungeonsWaterFluid.Still());
+        DUNGEONS_WATER_FLOWING = Registry.register(Registries.FLUID, JavaDungeons.ID("dungeons_flowing_water"), new DungeonsWaterFluid.Flowing());
+        DUNGEONS_WATER_BUCKET = Registry.register(Registries.ITEM, JavaDungeons.ID("dungeons_water_bucket"), new BucketItem(DUNGEONS_WATER_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+        DUNGEONS_WATER = Registry.register(Registries.BLOCK, JavaDungeons.ID("dungeons_water"), new FluidBlock(DUNGEONS_WATER_STILL, FabricBlockSettings.create().liquid()){});
 
-        SOGGY_SWAMP_WATER_STILL = Registry.register(Registries.FLUID, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water"), new SoggySwampWaterFluid.Still());
-        SOGGY_SWAMP_WATER_FLOWING = Registry.register(Registries.FLUID, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_flowing_water"), new SoggySwampWaterFluid.Flowing());
-        SOGGY_SWAMP_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water_bucket"), new BucketItem(SOGGY_SWAMP_WATER_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
-        SOGGY_SWAMP_WATER = Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp_water"), new FluidBlock(SOGGY_SWAMP_WATER_STILL, FabricBlockSettings.create().liquid()){});
+        SOGGY_SWAMP_WATER_STILL = Registry.register(Registries.FLUID, JavaDungeons.ID("soggy_swamp_water"), new SoggySwampWaterFluid.Still());
+        SOGGY_SWAMP_WATER_FLOWING = Registry.register(Registries.FLUID, JavaDungeons.ID("soggy_swamp_flowing_water"), new SoggySwampWaterFluid.Flowing());
+        SOGGY_SWAMP_WATER_BUCKET = Registry.register(Registries.ITEM, JavaDungeons.ID("soggy_swamp_water_bucket"), new BucketItem(SOGGY_SWAMP_WATER_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+        SOGGY_SWAMP_WATER = Registry.register(Registries.BLOCK, JavaDungeons.ID("soggy_swamp_water"), new FluidBlock(SOGGY_SWAMP_WATER_STILL, FabricBlockSettings.create().liquid()){});
 
         // add water bucket items to their respective groups
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "generic"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("generic"))).register(content -> {
             content.add(DUNGEONS_WATER_BUCKET);
         });
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("soggy_swamp"))).register(content -> {
             content.add(SOGGY_SWAMP_WATER_BUCKET);
         });
     }

@@ -54,8 +54,8 @@ public class GrassBlock extends SnowyBlock {
     public GrassBlock(float hardness, float resistance, BlockSoundGroup sounds, Block dirtBlock, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).ticksRandomly());
         dirtVariant = dirtBlock;
-        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
+        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
+        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     // Pathable/tillable constructor

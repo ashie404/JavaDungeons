@@ -10,7 +10,7 @@ public class Sounds {
     public static SoundEvent CW_GLOW_MUSHROOM_STEP;
 
     public static void init() {
-        CW_GLOW_MUSHROOM_STEP = register(new Identifier(JavaDungeons.MOD_ID, "cw_glow_mushroom_step"));
+        CW_GLOW_MUSHROOM_STEP = register(JavaDungeons.ID("cw_glow_mushroom_step"));
     }
 
     public static SoundEvent register(Identifier id) {

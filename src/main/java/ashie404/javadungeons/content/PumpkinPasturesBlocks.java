@@ -112,7 +112,7 @@ public class PumpkinPasturesBlocks {
         PM_CHARRED_PLANKS = new SlabStairBlock(2.0F, 3.0F, BlockSoundGroup.WOOD, "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
 
         // add all blockitems to group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("pumpkin_pastures"))).register(content -> {
             content.add(PM_YELLOW_AUTUMNAL_LEAVES.blockItem);
             content.add(PM_RED_AUTUMNAL_LEAVES.blockItem);
             content.add(PM_RED_AUTUMNAL_SAPLING.blockItem);

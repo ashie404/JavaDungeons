@@ -11,6 +11,6 @@ public class Particles {
     public static DefaultParticleType GREEN_FLAME;
 
     public static void init() {
-        GREEN_FLAME = Registry.register(Registries.PARTICLE_TYPE, new Identifier(JavaDungeons.MOD_ID, "green_flame"), FabricParticleTypes.simple(true));
+        GREEN_FLAME = Registry.register(Registries.PARTICLE_TYPE, JavaDungeons.ID("green_flame"), FabricParticleTypes.simple(true));
     }
 }

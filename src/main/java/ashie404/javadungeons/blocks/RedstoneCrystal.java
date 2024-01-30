@@ -33,8 +33,8 @@ public class RedstoneCrystal extends Block {
 
     public RedstoneCrystal(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(12));
-        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
+        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
+        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     public boolean emitsRedstonePower(BlockState state) {

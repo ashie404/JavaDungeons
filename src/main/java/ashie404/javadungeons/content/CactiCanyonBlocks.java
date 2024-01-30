@@ -102,7 +102,7 @@ public class CactiCanyonBlocks {
         CC_TALL_CACTUS = new DesertTallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "cc_tall_cactus");
 
         // add all blockitems to group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("cacti_canyon"))).register(content -> {
             content.add(CC_GRASS_BLOCK.blockItem);
             content.add(CC_DENSE_GRASSY_DIRT.blockItem);
             content.add(CC_GRASSY_DIRT.blockItem);

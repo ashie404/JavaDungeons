@@ -17,6 +17,6 @@ public class Biomes {
 
     private static RegistryKey<Biome> register(String name)
     {
-        return RegistryKey.of(RegistryKeys.BIOME, new Identifier(JavaDungeons.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.BIOME, JavaDungeons.ID(name));
     }
 }

@@ -37,8 +37,8 @@ public class Tent extends Block {
     public Tent(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).nonOpaque());
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
-        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
+        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
+        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {

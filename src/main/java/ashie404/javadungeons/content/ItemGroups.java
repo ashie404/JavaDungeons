@@ -40,15 +40,15 @@ public class ItemGroups {
 
     public static void init() {
         // register item groups
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "generic"), GENERIC);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "creeper_woods"), CREEPER_WOODS);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "desert_temple"), DESERT_TEMPLE);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "pumpkin_pastures"), PUMPKIN_PASTURES);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"), SOGGY_SWAMP);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "cacti_canyon"), CACTI_CANYON);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "redstone_mines"), REDSTONE_MINES);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "fiery_forge"), FIERY_FORGE);
-		Registry.register(Registries.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "weapons"), WEAPONS);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("generic"), GENERIC);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("creeper_woods"), CREEPER_WOODS);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("desert_temple"), DESERT_TEMPLE);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("pumpkin_pastures"), PUMPKIN_PASTURES);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("soggy_swamp"), SOGGY_SWAMP);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("cacti_canyon"), CACTI_CANYON);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("redstone_mines"), REDSTONE_MINES);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("fiery_forge"), FIERY_FORGE);
+		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("weapons"), WEAPONS);
 
         // add items to item groups
     }

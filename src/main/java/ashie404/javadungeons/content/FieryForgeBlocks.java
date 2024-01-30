@@ -36,7 +36,7 @@ public class FieryForgeBlocks {
         FF_EMBLEMED_DARK_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "ff_emblemed_dark_stone");
 
         // add to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "fiery_forge"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("fiery_forge"))).register(content -> {
             content.add(FF_DARK_STONE.base.blockItem);
             content.add(FF_DARK_STONE.slab.blockItem);
             content.add(FF_DARK_STONE.stairs.blockItem);

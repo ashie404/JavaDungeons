@@ -36,8 +36,8 @@ public class GlowingPlant extends PlantBlock {
 
     public GlowingPlant(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(12).nonOpaque().collidable(false));
-        Registry.register(Registries.BLOCK, new Identifier(JavaDungeons.MOD_ID, id), this);
-        Registry.register(Registries.ITEM,new Identifier(JavaDungeons.MOD_ID, id), blockItem = new BlockItem(this, new Item.Settings()));
+        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
+        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
 }

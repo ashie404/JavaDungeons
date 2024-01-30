@@ -69,7 +69,7 @@ public class SoggySwampBlocks {
         SS_GREEN_LIT_BRAZIER = new Brazier(Particles.GREEN_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true, "ss_green_lit_brazier");
 
         // add to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "soggy_swamp"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("soggy_swamp"))).register(content -> {
             content.add(SS_GRASS_BLOCK.blockItem);
             content.add(SS_DIRT_PATH.blockItem);
             content.add(SS_DIRT.blockItem);

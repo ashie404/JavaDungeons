@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 public class GenericBlocks {
 
-    private static final Identifier GROUP_ID = new Identifier(JavaDungeons.MOD_ID, "generic");
+    private static final Identifier GROUP_ID = JavaDungeons.ID("generic");
 
     // generic blocks that aren't in mc
     public static BaseBlock FLOOR_TILE;
@@ -260,7 +260,7 @@ public class GenericBlocks {
         VINE = new Vine(0.2F, 0.2F, BlockSoundGroup.GRASS, "vine");
 
         // Add all blocks to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "generic"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("generic"))).register(content -> {
             content.add(FLOOR_TILE.blockItem);
             content.add(DIRTY_FLOOR_TILE.blockItem);
             content.add(CRATE.blockItem);

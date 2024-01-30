@@ -1,6 +1,7 @@
 package ashie404.javadungeons;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;
@@ -18,6 +19,10 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
 	public static final String MOD_ID = "dungeons";
 	public static final Logger log = LogManager.getLogger(MOD_ID);
+
+	public static Identifier ID(String id) {
+		return new Identifier(MOD_ID, id);
+	}
 
 	@Override
 	public void onInitialize() {

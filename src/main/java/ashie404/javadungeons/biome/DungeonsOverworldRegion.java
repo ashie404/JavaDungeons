@@ -18,7 +18,7 @@ import terrablender.api.VanillaParameterOverlayBuilder;
 import static terrablender.api.ParameterUtils.*;
 
 public class DungeonsOverworldRegion extends Region {
-    public static final Identifier LOCATION = new Identifier(JavaDungeons.MOD_ID, "overworld");
+    public static final Identifier LOCATION = JavaDungeons.ID("overworld");
 
     public DungeonsOverworldRegion(int weight) {
         super(LOCATION, RegionType.OVERWORLD, weight);

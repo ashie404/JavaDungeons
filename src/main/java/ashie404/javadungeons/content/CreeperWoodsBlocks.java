@@ -131,7 +131,7 @@ public class CreeperWoodsBlocks {
         CW_MOSSY_GRAVESTONE = new Gravestone(1.5F, 6.0F, BlockSoundGroup.STONE, "cw_mossy_gravestone");
 
         // add blockitems to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(JavaDungeons.MOD_ID, "creeper_woods"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("creeper_woods"))).register(content -> {
             content.add(CW_MOSSY_COBBLESTONE.blockItem);
             content.add(CW_MOSSY_STONE.blockItem);
             content.add(CW_MOSSY_STONE_BRICKS.blockItem);
