@@ -1,7 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import java.util.Random;
-
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Particles;
 import net.fabricmc.api.EnvType;
@@ -19,6 +17,7 @@ import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
@@ -59,7 +58,7 @@ public class Candle extends Block {
         return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
-    @Environment(EnvType.CLIENT)
+    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         double d = (double)pos.getX() + 0.5D;
         double e = (double)pos.getY() + 1.0D;

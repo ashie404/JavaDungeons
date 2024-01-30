@@ -1,7 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import java.util.Random;
-
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -16,6 +14,7 @@ import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -34,8 +33,6 @@ public class Brazier extends Block {
     public DefaultParticleType particle;
 
     protected VoxelShape SHAPE;
-    protected static final VoxelShape REG_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
-    protected static final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
@@ -45,7 +42,9 @@ public class Brazier extends Block {
     public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly());
         this.particle = p;
-        this.SHAPE = soggySwamp ? SS_SHAPE : REG_SHAPE;
+        this.SHAPE = soggySwamp ? 
+            Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D): 
+            Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
         Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
         Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
@@ -60,7 +59,7 @@ public class Brazier extends Block {
         return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
-    @Environment(EnvType.CLIENT)
+    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (particle != null) {
             double d = (double)pos.getX() + 0.5;
