@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-      "item": "minecraft:blue_ice"
-    },
-    "result": "dungeons:rm_crystals",
-    "count": 3
-  }

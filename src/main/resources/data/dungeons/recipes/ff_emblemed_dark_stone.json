@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-      "item": "dungeons:ff_dark_stone"
-    },
-    "result": "dungeons:ff_emblemed_dark_stone",
-    "count": 1
-  }

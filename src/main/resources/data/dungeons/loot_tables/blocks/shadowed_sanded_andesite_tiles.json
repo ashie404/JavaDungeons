@@ -1,1 +1,0 @@
-{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "dungeons:shadowed_sanded_andesite_tiles"}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

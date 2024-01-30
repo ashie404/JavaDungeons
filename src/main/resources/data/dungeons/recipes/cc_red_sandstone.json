@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:red_terracotta"
-    },
-    "result": "dungeons:cc_red_sandstone",
-    "count": 1
-  }

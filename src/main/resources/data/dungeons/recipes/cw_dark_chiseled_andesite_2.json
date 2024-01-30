@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-      "item": "dungeons:cw_dark_polished_andesite"
-    },
-    "result": "dungeons:cw_dark_chiseled_andesite_2",
-    "count": 1
-  }

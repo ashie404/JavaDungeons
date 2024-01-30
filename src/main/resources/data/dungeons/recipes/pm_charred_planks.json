@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smelting",
-    "ingredient": {
-      "tag": "minecraft:planks"
-    },
-    "result": "dungeons:pm_charred_planks",
-    "experience": 0.02,
-    "cookingtime": 80
-  }

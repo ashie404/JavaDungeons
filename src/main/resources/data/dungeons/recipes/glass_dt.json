@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:glass"
-    },
-    "result": "dungeons:glass",
-    "count": 1
-  }

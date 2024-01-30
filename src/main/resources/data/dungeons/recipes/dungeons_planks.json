@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "tag": "minecraft:planks"
-    },
-    "result": "dungeons:dungeons_planks",
-    "count": 1
-  }

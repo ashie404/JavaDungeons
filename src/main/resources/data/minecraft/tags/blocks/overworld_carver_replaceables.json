@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "dungeons:grass_block",
+        "dungeons:dirt",
+        "dungeons:cw_grass_block",
+        "dungeons:cw_dirt",
+        "dungeons:ss_grass_block",
+        "dungeons:ss_dirt",
+        "dungeons:cc_grass_block",
+        "dungeons:cc_dirt"
+    ]
+  }

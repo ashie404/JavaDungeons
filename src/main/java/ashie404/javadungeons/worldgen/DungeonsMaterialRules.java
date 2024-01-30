@@ -41,24 +41,27 @@ public class DungeonsMaterialRules {
 
     public static MaterialRule makeRules() {
         MaterialCondition atOrAboveWaterLvl = MaterialRules.water(-1, 0);
-        MaterialCondition surfaceBlock = MaterialRules.surface();
-        MaterialCondition isGrass = MaterialRules.stoneDepth(0, false, VerticalSurfaceType.FLOOR);
+        MaterialCondition stoneDepthFloor = MaterialRules.stoneDepth(0, false, VerticalSurfaceType.FLOOR);
+        MaterialCondition stoneDepthCeiling = MaterialRules.stoneDepth(0, false, VerticalSurfaceType.CEILING);
 
-        return MaterialRules.condition(surfaceBlock, MaterialRules.sequence(
+        return MaterialRules.condition(MaterialRules.surface(), MaterialRules.sequence(
             MaterialRules.condition(MaterialRules.biome(Biomes.SOGGY_SWAMP), MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthCeiling, STONE),
                 MaterialRules.condition(atOrAboveWaterLvl, 
-                    MaterialRules.condition(isGrass, SS_GRASS)
+                    MaterialRules.condition(stoneDepthFloor, SS_GRASS)
                 ), 
                 SS_DIRT 
             )), 
             MaterialRules.condition(MaterialRules.biome(Biomes.CREEPER_WOODS), MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthCeiling, STONE),
                 MaterialRules.condition(atOrAboveWaterLvl, 
-                    MaterialRules.condition(isGrass, CW_GRASS)
+                    MaterialRules.condition(stoneDepthFloor, CW_GRASS)
                 ), 
                 CW_DIRT
             )), 
+            MaterialRules.condition(stoneDepthCeiling, STONE),
             MaterialRules.condition(atOrAboveWaterLvl, 
-                MaterialRules.condition(isGrass, GRASS)
+                MaterialRules.condition(stoneDepthFloor, GRASS)
             ),
             DIRT
         ));

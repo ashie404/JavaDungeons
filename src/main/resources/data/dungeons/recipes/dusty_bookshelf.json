@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:bookshelf"
-    },
-    "result": "dungeons:dusty_bookshelf",
-    "count": 1
-  }

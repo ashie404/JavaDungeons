@@ -1,1 +1,0 @@
-{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "dungeons:rm_dark_quartz_tiles_slab"}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

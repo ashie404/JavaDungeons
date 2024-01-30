@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:pink_terracotta"
-    },
-    "result": "dungeons:cc_pink_sandstone",
-    "count": 1
-  }

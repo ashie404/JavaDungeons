@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:stone"
-    },
-    "result": "dungeons:ss_mossy_stone",
-    "count": 1
-  }

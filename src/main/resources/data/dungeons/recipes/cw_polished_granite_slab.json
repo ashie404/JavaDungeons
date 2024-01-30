@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-      "item": "dungeons:cw_polished_granite"
-    },
-    "result": "dungeons:cw_polished_granite_slab",
-    "count": 2
-  }

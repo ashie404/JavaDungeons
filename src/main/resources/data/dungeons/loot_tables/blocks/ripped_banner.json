@@ -1,1 +1,0 @@
-{"type": "minecraft:block", "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": "dungeons:ripped_banner"}], "conditions": [{"condition": "minecraft:survives_explosion"}]}]}

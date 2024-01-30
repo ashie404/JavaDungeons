@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:seagrass"
-    },
-    "result": "dungeons:water_plant",
-    "count": 1
-  }

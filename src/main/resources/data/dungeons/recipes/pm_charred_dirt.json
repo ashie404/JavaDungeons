@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smelting",
-    "ingredient": {
-      "item": "dungeons:dirt"
-    },
-    "result": "dungeons:pm_charred_dirt",
-    "experience": 0.0,
-    "cookingtime": 100
-  }

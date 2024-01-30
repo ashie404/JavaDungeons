@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-      "item": "dungeons:cc_normal_sandstone"
-    },
-    "result": "dungeons:cc_smooth_sandstone",
-    "count": 1
-  }

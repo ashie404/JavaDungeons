@@ -1,8 +1,0 @@
-{
-    "type": "dungeons:dungeons_transformer",
-    "ingredient": {
-      "item": "minecraft:polished_granite"
-    },
-    "result": "dungeons:cw_polished_granite",
-    "count": 1
-  }
