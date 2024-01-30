@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "JavaDungeons",
-  "description": "A mod that adds the custom blocks from Minecraft Dungeons into Minecraft: Java Edition.",
+  "description": "A mod that adds the blocks from Minecraft Dungeons into Minecraft: Java Edition.",
   "authors": [
     "Ash (ashie404)"
   ],
