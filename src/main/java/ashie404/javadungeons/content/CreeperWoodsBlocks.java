@@ -62,7 +62,7 @@ public class CreeperWoodsBlocks {
 
     // custom dungeons blocks
     public static final GlowMushroom CW_GLOW_MUSHROOM = new GlowMushroom(0.0F, 0.0F, BlockSoundGroup.SLIME, "cw_glow_mushroom");
-    public static final EmissiveBlock CW_GLOW_MELON = new EmissiveBlock(1.0F, 1.0F, BlockSoundGroup.WOOD, "cw_glow_melon");
+    public static final EmissiveBlock CW_GLOW_MELON = new EmissiveBlock(14, 1.0F, 1.0F, BlockSoundGroup.WOOD, "cw_glow_melon");
     public static final BaseBlock CW_GLOW_MELON_ROOTS = new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS, "cw_glow_melon_roots");
 
     // gravestones

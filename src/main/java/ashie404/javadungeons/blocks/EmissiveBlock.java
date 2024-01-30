@@ -16,8 +16,8 @@ public class EmissiveBlock extends Block {
 
     public BlockItem blockItem;
 
-    public EmissiveBlock(float hardness, float resistance, BlockSoundGroup sounds, String id) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(14));
+    public EmissiveBlock(int lightLevel, float hardness, float resistance, BlockSoundGroup sounds, String id) {
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(lightLevel));
         Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
         Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }

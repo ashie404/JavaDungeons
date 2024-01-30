@@ -11,10 +11,6 @@ import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.util.Identifier;
-import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 
 public class JavaDungeonsClient implements ClientModInitializer {
     @Override

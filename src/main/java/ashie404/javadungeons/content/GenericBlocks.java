@@ -124,7 +124,7 @@ public class GenericBlocks {
     public static final Teapot TEAPOT = new Teapot(5.0F, 6.0F, BlockSoundGroup.LANTERN, "teapot");
 
     // redstone related
-    public static final PoweredEmissive LIGHTHOUSE_LAMP = new PoweredEmissive( 0.3F, 0.3F, BlockSoundGroup.METAL, "lighthouse_lamp");
+    public static final PoweredEmissive LIGHTHOUSE_LAMP = new PoweredEmissive(15, 0.3F, 0.3F, BlockSoundGroup.METAL, "lighthouse_lamp");
 
     // chains
     public static final Chains CHAINS = new Chains(5.0F, 6.0F, BlockSoundGroup.CHAIN, "chains");
