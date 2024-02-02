@@ -25,6 +25,8 @@ sourceSets {
 }
 
 loom {
+	accessWidenerPath = file("src/main/resources/dungeons.accesswidener")
+
     splitEnvironmentSourceSets()
 
 	mods {

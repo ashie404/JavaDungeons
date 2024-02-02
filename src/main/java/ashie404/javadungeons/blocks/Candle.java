@@ -2,8 +2,6 @@ package ashie404.javadungeons.blocks;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Particles;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -34,7 +32,7 @@ public class Candle extends Block {
     public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
-    public DefaultParticleType particle;
+    private DefaultParticleType particle;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {

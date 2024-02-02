@@ -1,8 +1,6 @@
 package ashie404.javadungeons.blocks;
 
 import ashie404.javadungeons.JavaDungeons;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,8 +28,7 @@ public class Brazier extends Block {
 
     public BlockItem blockItem;
 
-    public DefaultParticleType particle;
-
+    private DefaultParticleType particle;
     protected VoxelShape SHAPE;
 
     @Override

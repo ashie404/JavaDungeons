@@ -11,8 +11,8 @@ import org.apache.logging.log4j.Logger;
 
 import ashie404.javadungeons.biome.DungeonsOverworldRegion;
 import ashie404.javadungeons.content.*;
-import ashie404.javadungeons.worldgen.DungeonsMaterialRules;
 import ashie404.javadungeons.worldgen.feature.DungeonsFeatures;
+import ashie404.javadungeons.worldgen.surfacebuilder.DungeonsMaterialRules;
 
 public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
