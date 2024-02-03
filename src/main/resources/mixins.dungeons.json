@@ -5,8 +5,7 @@
     "mixins": [
       "MixinCactusBlock",
       "MixinFeature",
-      "MixinPlantBlock",
-      "MixinSurfaceBuilder"
+      "MixinPlantBlock"
     ],
     "injectors": {
       "defaultRequire": 1
