@@ -62,6 +62,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
             GenericBlocks.SHORT_GRASS,
             GenericBlocks.FERN,
             GenericBlocks.BERRY_BUSH_BLOCK,
+            GenericBlocks.SQUID_COAST_LEAVES,
+            GenericBlocks.FLOWERING_SQUID_COAST_LEAVES,
             GenericBlocks.WATER_PLANT,
             GenericBlocks.DENSE_GRASSY_DIRT,
             GenericBlocks.GRASSY_DIRT,

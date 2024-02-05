@@ -62,6 +62,8 @@ public class GenericBlocks {
 
     // generic plants
     public static final Leaves BERRY_BUSH_BLOCK = new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS, "berry_bush_block");
+    public static final Leaves SQUID_COAST_LEAVES = new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS, "squid_coast_leaves");
+    public static final Leaves FLOWERING_SQUID_COAST_LEAVES = new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS, "flowering_squid_coast_leaves");
     public static final Plant SHORT_GRASS = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "short_grass");
     public static final Plant FERN = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "fern");
     public static final Plant SHRUB = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "shrub");
@@ -181,6 +183,8 @@ public class GenericBlocks {
             content.add(DIRTY_STONE.blockItem);
             content.add(CRACKED_ANDESITE.blockItem);
             content.add(BERRY_BUSH_BLOCK.blockItem);
+            content.add(SQUID_COAST_LEAVES.blockItem);
+            content.add(FLOWERING_SQUID_COAST_LEAVES.blockItem);
             content.add(SHORT_GRASS.blockItem);
             content.add(FERN.blockItem);
             content.add(SHRUB.blockItem);

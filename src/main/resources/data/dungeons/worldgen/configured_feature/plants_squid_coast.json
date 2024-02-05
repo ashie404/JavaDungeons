@@ -25,7 +25,7 @@
                   "data": {
                     "Name": "dungeons:berry_bush_block",
                     "Properties": {
-                        "persistent": true
+                        "persistent": "true"
                       }
                   }
                 },
