@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/slab_top", "textures": {"top": "dungeons:block/bridge_planks", "bottom": "dungeons:block/bridge_planks", "side": "dungeons:block/bridge_planks_side"}}

@@ -6,12 +6,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.world.gen.CountConfig;
-import net.minecraft.world.gen.feature.BasaltColumnsFeatureConfig;
-import net.minecraft.world.gen.feature.BlockColumnFeatureConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 
 public class DungeonsFeatures {
     // Configured feature registry keys

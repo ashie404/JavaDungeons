@@ -4,26 +4,20 @@ import org.joml.Math;
 
 import com.mojang.serialization.Codec;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
 import ashie404.javadungeons.worldgen.noise.FastNoiseLite;
-import ashie404.javadungeons.worldgen.noise.FastNoiseLite.CellularDistanceFunction;
 import ashie404.javadungeons.worldgen.noise.FastNoiseLite.FractalType;
 import ashie404.javadungeons.worldgen.noise.FastNoiseLite.NoiseType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
-import net.minecraft.util.math.MathConstants;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.Heightmap.Type;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.chunk.BlockColumn;
-import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.feature.BasaltColumnsFeatureConfig;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;

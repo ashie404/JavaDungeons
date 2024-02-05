@@ -1,1 +1,7 @@
-{"variants": {"": {"model": "dungeons:block/bridge_planks"}}}
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/bridge_planks" },
+        "type=top": { "model":    "dungeons:block/bridge_planks_top" },
+        "type=double": { "model": "dungeons:block/bridge_planks_double" }
+    }
+}

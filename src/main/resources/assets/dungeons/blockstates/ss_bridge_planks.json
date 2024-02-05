@@ -1,5 +1,7 @@
 {
     "variants": {
-        "": {"model": "dungeons:block/soggy_swamp/bridge_planks"}
+        "type=bottom": { "model": "dungeons:block/soggy_swamp/bridge_planks" },
+        "type=top": { "model":    "dungeons:block/soggy_swamp/bridge_planks_top" },
+        "type=double": { "model": "dungeons:block/soggy_swamp/bridge_planks_double" }
     }
 }
