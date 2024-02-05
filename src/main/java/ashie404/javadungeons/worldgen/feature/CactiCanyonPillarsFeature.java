@@ -40,8 +40,7 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(),
         CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(),
         CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(),
-        CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(),
-        CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState()
+        CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState()
     };
 
     private double getNoiseSampleAt(double x, double y, double z) {
@@ -122,7 +121,20 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         }
         for (k = j; k >= chunk.getBottomY() && col.getState(k).isAir(); k--) {
             col.setState(k, SANDSTONES[
-                k >= 68 ? k >= 72 ? k >= 75 ? k <= 110 ? k <= 105 ? k <= 100 ? k <= 98 ? k <= 97 ? k <= 94 ? k <= 93 ? k <= 92 ? k <= 87 ? k <= 84 ? k <= 81 ? k <= 79 ? 3 : 1 : 3 : 1 : 2 : 0 : 3 : 4 : 0 : 5 : 6 : 2 : 0 : 8 : 7 : 6
+                k > 109 ? 2 :
+                k > 104 ? 6 :
+                k > 99 ? 5 :
+                k > 97 ? 0 :
+                k > 93 ? 3 :
+                k > 92 ? 4 :
+                k > 91 ? 0 :
+                k > 86 ? 2 :
+                k > 83 ? 3 :
+                k > 80 ? 3 :
+                k > 79 ? 7 :
+                k > 78 ? 1 :
+                k > 74 ? 4 :
+                k > 71 ? 5 : 6
             ]);
         }
     }

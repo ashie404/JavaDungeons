@@ -28,13 +28,11 @@ public class DungeonsMaterialRules {
     private static final MaterialRule CW_DIRT = makeStateRule(CreeperWoodsBlocks.CW_DIRT);
 
     // Cacti Canyon Material Rules
+    private static final MaterialRule CC_GRASS = makeStateRule(CactiCanyonBlocks.CC_GRASS_BLOCK);
+    private static final MaterialRule CC_DIRT = makeStateRule(CactiCanyonBlocks.CC_DIRT);
     private static final MaterialRule SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_SANDSTONE);
-    private static final MaterialRule ORANGE_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_ORANGE_SANDSTONE);
-    private static final MaterialRule PINK_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_PINK_SANDSTONE);
     private static final MaterialRule YELLOW_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_YELLOW_SANDSTONE);
-    private static final MaterialRule BROWN_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_BROWN_SANDSTONE);
     private static final MaterialRule RED_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_RED_SANDSTONE);
-    private static final MaterialRule GRAY_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_GRAY_SANDSTONE);
     private static final MaterialRule SAND = makeStateRule(CactiCanyonBlocks.CC_SAND);
 
     // Soggy Swamp Material Rules
@@ -113,17 +111,19 @@ public class DungeonsMaterialRules {
             // Above water surface builder
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.aboveY(YOffset.fixed(256), 0), ORANGE_SANDSTONE),
                     MaterialRules.condition(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1), MaterialRules.sequence(
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), SANDSTONE),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), RED_SANDSTONE),
                         MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.1818), SANDSTONE),
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.5454, 0.909), SANDSTONE)
-                    ))
-                ))
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.5454, 0.909), YELLOW_SANDSTONE)
+                    )),
+                    CC_GRASS
+                )),
+                MaterialRules.condition(stoneDepthFloorSurface1, CC_DIRT),
+                SANDSTONE
             )),
             // Underwater surface builder
             MaterialRules.sequence(
-                MaterialRules.condition(stoneDepthFloorSurface1, SAND),
+                MaterialRules.condition(stoneDepthFloorSurface1, CC_DIRT),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, SANDSTONE),
                 STONE
             )
