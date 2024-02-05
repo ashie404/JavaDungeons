@@ -34,7 +34,7 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
 
     private double getNoiseSampleAt(double x, double y, double z) {
         x *= 0.6; y *= 0.6; z *= 0.6; // transform coords
-        return noise.GetNoise((float)x, (float)y, (float)z);
+        return noise.GetNoise(x, y, z);
     }
 
     public CactiCanyonPillarsFeature(Codec<DefaultFeatureConfig> codec) {
