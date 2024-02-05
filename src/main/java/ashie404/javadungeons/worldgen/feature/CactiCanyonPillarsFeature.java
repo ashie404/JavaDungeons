@@ -32,6 +32,18 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
 
     private final FastNoiseLite noise = new FastNoiseLite();
 
+    private final BlockState[] SANDSTONES = {
+        CactiCanyonBlocks.CC_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_ORANGE_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState()
+    };
+
     private double getNoiseSampleAt(double x, double y, double z) {
         x *= 0.6; y *= 0.6; z *= 0.6; // transform coords
         return noise.GetNoise(x, y, z);
@@ -83,32 +95,35 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
                 mutable.setX(cx).setZ(cz);
 
                 int x = current.getX();
-                int y = current.getY();
                 int z = current.getZ();
-
-                BlockState state;
-                int k;
-
-                double e = Math.min(Math.abs(getNoiseSampleAt(x, 0.0, z) * 4.75), getNoiseSampleAt(x * 0.2, 64.0, z * 0.2) * 8.0);
-                if (e <= 0.0) {
-                    return false;
-                }
-                double h = Math.abs(getNoiseSampleAt(x * 0.75, 128.0, z * 0.75) * 1.5);
-
-                double i = 64.0 + Math.min(e * e * 2.5, Math.ceil(h * 50.0) + 24.0);
-                int canyonPillar = MathHelper.floor(i);
-                int canyonPillarClamped = chunk.getHeightmap(Type.OCEAN_FLOOR_WG).get(cx, cz)+(canyonPillar/4);
-                int j = Math.min(canyonPillar, canyonPillarClamped);
-                for (k = j; k >= heightLimitView.getBottomY() && !(state = blockColumn.getState(k)).isOf(Blocks.STONE); --k) {
-                    if (!state.isOf(Blocks.WATER)) continue;
-                    return false;
-                }
-                for (k = j; k >= heightLimitView.getBottomY() && blockColumn.getState(k).isAir(); k--) {
-                    blockColumn.setState(k, CactiCanyonBlocks.CC_SANDSTONE.getDefaultState());
-                }
+                placePillar(blockColumn, x, chunk.getHeightmap(Type.WORLD_SURFACE).get(cx, cz), z, heightLimitView);
             }
         }
 
         return false;
+    }
+
+    private void placePillar(BlockColumn col, int x, int surfaceY, int z, HeightLimitView chunk) {
+        BlockState state;
+        int k;
+
+        double e = Math.min(Math.abs(getNoiseSampleAt(x, 0.0, z) * 4.75), getNoiseSampleAt(x * 0.2, 64.0, z * 0.2) * 8.0);
+        if (e <= 0.0) return;
+        double h = Math.abs(getNoiseSampleAt(x * 0.75, 128.0, z * 0.75) * 1.5);
+
+        double i = 64.0 + Math.min(e * e * 2.5, Math.ceil(h * 50.0) + 24.0);
+        int canyonPillar = MathHelper.floor(i);
+        int canyonPillarClamped = surfaceY+(canyonPillar/4);
+        int j = Math.min(canyonPillar, canyonPillarClamped);
+        if (surfaceY > j) return;
+        for (k = j; k >= chunk.getBottomY() && !(state = col.getState(k)).isOf(Blocks.STONE); --k) {
+            if (!state.isOf(Blocks.WATER)) continue;
+            return;
+        }
+        for (k = j; k >= chunk.getBottomY() && col.getState(k).isAir(); k--) {
+            col.setState(k, SANDSTONES[
+                k >= 68 ? k >= 72 ? k >= 75 ? k <= 110 ? k <= 105 ? k <= 100 ? k <= 98 ? k <= 97 ? k <= 94 ? k <= 93 ? k <= 92 ? k <= 87 ? k <= 84 ? k <= 81 ? k <= 79 ? 3 : 1 : 3 : 1 : 2 : 0 : 3 : 4 : 0 : 5 : 6 : 2 : 0 : 8 : 7 : 6
+            ]);
+        }
     }
 }
