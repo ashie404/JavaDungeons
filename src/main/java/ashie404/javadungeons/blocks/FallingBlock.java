@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -16,7 +17,11 @@ public class FallingBlock extends net.minecraft.block.FallingBlock {
 
     public BlockItem blockItem;
 
-    protected MapCodec<? extends FallingBlock> getCodec() { return null; }
+    protected MapCodec<? extends FallingBlock> getCodec() { return createCodec(FallingBlock::new); }
+
+    private FallingBlock(AbstractBlock.Settings settings) {
+        super(settings);
+    }
 
     public FallingBlock(float hardness, float resistance, BlockSoundGroup sounds, String id) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));

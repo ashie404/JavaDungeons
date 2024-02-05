@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -26,10 +27,14 @@ public class GlowingPlant extends PlantBlock {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
-    protected MapCodec<? extends GlowingPlant> getCodec() { return null; }
+    protected MapCodec<? extends GlowingPlant> getCodec() { return createCodec(GlowingPlant::new); }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    private GlowingPlant(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     public GlowingPlant(float hardness, float resistance, BlockSoundGroup sounds, String id) {

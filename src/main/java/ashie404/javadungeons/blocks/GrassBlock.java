@@ -6,6 +6,7 @@ import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -41,8 +42,10 @@ public class GrassBlock extends SnowyBlock {
     private boolean canTill = false;
     private boolean canPath = false;
 
-    public MapCodec<GrassBlock> getCodec() {
-        return null;
+    public MapCodec<GrassBlock> getCodec() { return createCodec(GrassBlock::new); }
+
+    private GrassBlock(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     // Non-pathable/tillable constructor

@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidFillable;
@@ -31,7 +32,7 @@ public class WaterPlant extends PlantBlock implements FluidFillable {
 
     public BlockItem blockItem;
 
-    protected MapCodec<? extends WaterPlant> getCodec() { return null; }
+    protected MapCodec<? extends WaterPlant> getCodec() { return createCodec(WaterPlant::new); }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
@@ -40,6 +41,10 @@ public class WaterPlant extends PlantBlock implements FluidFillable {
 
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
         return floor.isSideSolidFullSquare(view, pos, Direction.UP) && floor.getBlock() != Blocks.MAGMA_BLOCK;
+    }
+
+    private WaterPlant(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     public WaterPlant(float hardness, float resistance, BlockSoundGroup sounds, String id) {

@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 
 import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -25,10 +26,14 @@ public class Plant extends PlantBlock {
     public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-    protected MapCodec<? extends Plant> getCodec() { return null; }
+    protected MapCodec<? extends Plant> getCodec() { return createCodec(Plant::new); }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    private Plant(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     public Plant(float hardness, float resistance, BlockSoundGroup sounds, String id) {

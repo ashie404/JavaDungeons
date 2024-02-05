@@ -5,6 +5,7 @@ import com.mojang.serialization.MapCodec;
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Tags;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -27,8 +28,7 @@ public class DesertPlant extends PlantBlock {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
-    // why mojang, why..
-    protected MapCodec<? extends DesertPlant> getCodec() { return null; }
+    protected MapCodec<? extends DesertPlant> getCodec() { return createCodec(DesertPlant::new); }
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
@@ -38,6 +38,10 @@ public class DesertPlant extends PlantBlock {
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    private DesertPlant(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     public DesertPlant(float hardness, float resistance, BlockSoundGroup sounds, String id) {
