@@ -110,7 +110,5 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         }
 
         return false;
-
-        // TODO: implement cacti canyon land features
     }
 }
