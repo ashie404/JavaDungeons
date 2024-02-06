@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/pumpkin_pastures/lavender_3"
+    }
+}

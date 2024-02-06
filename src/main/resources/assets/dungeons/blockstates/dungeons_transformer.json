@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "dungeons:block/dungeons_transformer" },
-        "facing=south": { "model": "dungeons:block/dungeons_transformer", "y": 180 },
-        "facing=west": { "model":  "dungeons:block/dungeons_transformer", "y": 270 },
-        "facing=east": { "model":  "dungeons:block/dungeons_transformer", "y": 90 }
-    }
-}

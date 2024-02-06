@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            {"model": "dungeons:block/pumpkin_pastures/lavender"},
+            {"model": "dungeons:block/pumpkin_pastures/lavender_1"},
+            {"model": "dungeons:block/pumpkin_pastures/lavender_2"},
+            {"model": "dungeons:block/pumpkin_pastures/lavender_3"}
+        ]
+    }
+}
