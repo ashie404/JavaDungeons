@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "": [
+            {"model": "dungeons:block/daisy_patch"},
+            {"model": "dungeons:block/daisy_patch", "y": 90},
+            {"model": "dungeons:block/daisy_patch", "y": 180},
+            {"model": "dungeons:block/daisy_patch", "y": 270},
+            {"model": "dungeons:block/daisy_patch_sparse"},
+            {"model": "dungeons:block/daisy_patch_sparse", "y": 90},
+            {"model": "dungeons:block/daisy_patch_sparse", "y": 180},
+            {"model": "dungeons:block/daisy_patch_sparse", "y": 270}
+        ]
+    }
+}

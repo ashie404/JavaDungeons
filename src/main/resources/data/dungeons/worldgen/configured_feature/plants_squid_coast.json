@@ -27,6 +27,12 @@
                   }
                 },
                 {
+                  "weight": 3,
+                  "data": {
+                    "Name": "dungeons:daisy_patch"
+                  }
+                },
+                {
                   "weight": 1,
                   "data": {
                     "Name": "dungeons:berry_bush_block",

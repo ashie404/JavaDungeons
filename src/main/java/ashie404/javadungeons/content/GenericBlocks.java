@@ -69,6 +69,7 @@ public class GenericBlocks {
     public static final Plant SHRUB = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "shrub");
     public static final Plant YELLOW_TULIP = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "yellow_tulip");
     public static final Plant FLOWER_PATCH = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "flower_patch");
+    public static final Plant DAISY_PATCH = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "daisy_patch");
     public static final WaterPlant WATER_PLANT = new WaterPlant( 0.0F, 0.0F, BlockSoundGroup.WET_GRASS, "water_plant");
     public static final HangingPlant HANGING_ROSES = new HangingPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "hanging_roses");
 
@@ -191,6 +192,7 @@ public class GenericBlocks {
             content.add(SHRUB.blockItem);
             content.add(YELLOW_TULIP.blockItem);
             content.add(FLOWER_PATCH.blockItem);
+            content.add(DAISY_PATCH.blockItem);
             content.add(WATER_PLANT.blockItem);
             content.add(HANGING_ROSES.blockItem);
             content.add(SANDED_ANDESITE.blockItem);
