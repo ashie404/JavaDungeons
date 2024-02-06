@@ -190,6 +190,7 @@ public class GenericBlocks {
             content.add(FERN.blockItem);
             content.add(SHRUB.blockItem);
             content.add(YELLOW_TULIP.blockItem);
+            content.add(FLOWER_PATCH.blockItem);
             content.add(WATER_PLANT.blockItem);
             content.add(HANGING_ROSES.blockItem);
             content.add(SANDED_ANDESITE.blockItem);
