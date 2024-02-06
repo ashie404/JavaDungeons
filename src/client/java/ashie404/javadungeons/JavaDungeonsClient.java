@@ -97,7 +97,6 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_SHRUB,
             PumpkinPasturesBlocks.PM_DEAD_SAPLING,
             PumpkinPasturesBlocks.PM_SAPLING,
-            PumpkinPasturesBlocks.PM_FERN,
             PumpkinPasturesBlocks.PM_LAVENDER,
             PumpkinPasturesBlocks.PM_RED_AUTUMNAL_SAPLING,
             PumpkinPasturesBlocks.PM_YELLOW_AUTUMNAL_SAPLING,

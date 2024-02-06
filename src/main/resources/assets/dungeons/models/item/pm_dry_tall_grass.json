@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "dungeons:block/pumpkin_pastures/dry_tall_grass_bottom"
+        "layer0": "dungeons:item/pumpkin_pastures/dry_tall_grass_held"
     }
 }

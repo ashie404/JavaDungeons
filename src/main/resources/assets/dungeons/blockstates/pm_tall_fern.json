@@ -4,7 +4,7 @@
         "model": "dungeons:block/pumpkin_pastures/tall_fern_bottom"
       },
       "half=upper": {
-        "model": "dungeons:block/pumpkin_pastures/fern"
+        "model": "dungeons:block/pumpkin_pastures/tall_fern_top"
       }
     }
   }
