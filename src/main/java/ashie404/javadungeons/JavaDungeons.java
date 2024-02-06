@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 
 import ashie404.javadungeons.biome.DungeonsOverworldRegion;
 import ashie404.javadungeons.content.*;
-import ashie404.javadungeons.worldgen.feature.DungeonsFeatures;
 import ashie404.javadungeons.worldgen.surfacebuilder.DungeonsMaterialRules;
 
 public class JavaDungeons implements ModInitializer, TerraBlenderApi {
@@ -30,6 +29,7 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		Sounds.init();
 		Tags.init();
 		Particles.init();
+		Features.init();
 		Paintings.init();
 
 		// blocks
@@ -50,9 +50,6 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 
 	@Override
     public void onTerraBlenderInitialized() {
-		// init worldgen features
-		DungeonsFeatures.init();
-
 		// add surface rules
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, JavaDungeons.MOD_ID, DungeonsMaterialRules.makeRules());
 

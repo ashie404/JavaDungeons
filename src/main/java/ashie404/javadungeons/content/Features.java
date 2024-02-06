@@ -1,6 +1,8 @@
-package ashie404.javadungeons.worldgen.feature;
+package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.worldgen.feature.CactiCanyonPillarsFeature;
+import ashie404.javadungeons.worldgen.feature.GlowMushroomFeature;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -10,7 +12,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 
-public class DungeonsFeatures {
+public class Features {
     // Configured feature registry keys
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_AUTUMNAL_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("red_autumnal_tree"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_AUTUMNAL_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("yellow_autumnal_tree"));

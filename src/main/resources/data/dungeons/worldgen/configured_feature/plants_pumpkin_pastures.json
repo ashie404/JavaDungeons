@@ -17,6 +17,12 @@
                 {
                   "weight": 4,
                   "data": {
+                    "Name": "dungeons:pm_sapling"
+                  }
+                },
+                {
+                  "weight": 4,
+                  "data": {
                     "Name": "dungeons:pm_fern"
                   }
                 },

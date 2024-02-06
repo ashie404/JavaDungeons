@@ -32,13 +32,14 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         CactiCanyonBlocks.CC_PINK_SANDSTONE.getDefaultState(),
         CactiCanyonBlocks.CC_YELLOW_SANDSTONE.getDefaultState(),
         CactiCanyonBlocks.CC_RED_SANDSTONE.getDefaultState(),
-        CactiCanyonBlocks.CC_DARK_BROWN_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_BROWN_SANDSTONE.getDefaultState(),
         CactiCanyonBlocks.CC_PURPLE_SANDSTONE.getDefaultState(),
-        CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState()
+        CactiCanyonBlocks.CC_GREEN_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_BLUE_SANDSTONE.getDefaultState(),
+        CactiCanyonBlocks.CC_LIGHT_GREEN_SANDSTONE.getDefaultState(),
     };
 
     private double getNoiseSampleAt(double x, double y, double z) {
-        x *= 0.6; y *= 0.6; z *= 0.6; // transform coords
         return noise.GetNoise(x, y, z);
     }
 
@@ -47,7 +48,6 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         // configure noise
         noise.SetNoiseType(NoiseType.OpenSimplex2S);
         noise.SetFractalOctaves(4);
-        noise.SetFractalGain(2.5f);
         noise.SetFractalType(FractalType.Ridged);
     }
 
@@ -98,37 +98,46 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
 
     private void placePillar(BlockColumn col, int x, int surfaceY, int z, HeightLimitView chunk) {
         BlockState state;
-        int k;
+        int y;
 
-        double e = Math.min(Math.abs(getNoiseSampleAt(x, 0.0, z) * 4.75), getNoiseSampleAt(x * 0.2, 64.0, z * 0.2) * 8.0);
-        if (e <= 0.0) return;
-        double h = Math.abs(getNoiseSampleAt(x * 0.75, 128.0, z * 0.75) * 1.5);
+        double pillarNoise = Math.min(Math.abs(getNoiseSampleAt(x, 0.0, z) * 4.75), getNoiseSampleAt(x * 0.2, 38.4, z * 0.2) * 8.0);
+        double pillarNoise2 = Math.abs(getNoiseSampleAt(x * 0.75, 76.8, z * 0.75) * 1.5);
+        if (pillarNoise <= 0.0) return;
 
-        double i = 64.0 + Math.min(e * e * 2.5, Math.ceil(h * 50.0) + 24.0);
-        int canyonPillar = MathHelper.floor(i);
-        int canyonPillarClamped = surfaceY+(canyonPillar/4);
-        int j = Math.min(canyonPillar, canyonPillarClamped);
-        if (surfaceY > j) return;
-        for (k = j; k >= chunk.getBottomY() && !(state = col.getState(k)).isOf(Blocks.STONE); --k) {
+        int canyonPillar = MathHelper.floor(64.0 + Math.min(pillarNoise * pillarNoise * 2.5, Math.ceil(pillarNoise2 * 50.0) + 24.0));
+        int canyonPillar2 = surfaceY+(canyonPillar/2);
+        int pillar = Math.min(canyonPillar, canyonPillar2);
+        if (surfaceY > pillar) return;
+
+        for (y = pillar; y >= chunk.getBottomY() && !(state = col.getState(y)).isOf(Blocks.STONE); --y) {
             if (!state.isOf(Blocks.WATER)) continue;
             return;
         }
-        for (k = j; k >= chunk.getBottomY() && col.getState(k).isAir(); k--) {
-            col.setState(k, SANDSTONES[
-                k > 109 ? 2 :
-                k > 104 ? 6 :
-                k > 99 ? 5 :
-                k > 97 ? 0 :
-                k > 93 ? 3 :
-                k > 92 ? 4 :
-                k > 91 ? 0 :
-                k > 86 ? 2 :
-                k > 83 ? 3 :
-                k > 80 ? 3 :
-                k > 79 ? 7 :
-                k > 78 ? 1 :
-                k > 74 ? 4 :
-                k > 71 ? 5 : 6
+        for (y = pillar; y >= chunk.getBottomY() && col.getState(y).isAir(); y--) {
+            col.setState(y, SANDSTONES[
+                // Select sandstone color based on y level
+                y > 109 ? 0 :
+                y > 104 ? 2 :
+                y > 102 ? 1 :
+                y > 101 ? 4 :
+                y > 99 ? 1 :
+                y > 97 ? 0 :
+                y > 95 ? 3 :
+                y > 92 ? 4 :
+                y > 91 ? 0 :
+                y > 89 ? 2 :
+                y > 88 ? 3 :
+                y > 87 ? 8 :
+                y > 86 ? 9 :
+                y > 85 ? 3 :
+                y > 83 ? 0 :
+                y > 80 ? 3 :
+                y > 79 ? 7 :
+                y > 78 ? 4 :
+                y > 74 ? 3 :
+                y > 71 ? 1 :
+                y > 70 ? 8 :
+                y > 66 ? 6 : 5
             ]);
         }
     }

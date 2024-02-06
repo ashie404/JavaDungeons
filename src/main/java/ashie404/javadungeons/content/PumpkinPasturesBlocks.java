@@ -23,6 +23,7 @@ public class PumpkinPasturesBlocks {
     public static final Plant PM_CHARRED_GRASS = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_charred_grass");
     public static final Plant PM_FERN = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_fern");
     public static final Plant PM_DEAD_SAPLING = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_dead_sapling");
+    public static final Plant PM_SAPLING = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_sapling");
     
     // tall plants
     public static final TallPlant PM_TALL_FERN = new TallPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "pm_tall_fern");
@@ -70,6 +71,7 @@ public class PumpkinPasturesBlocks {
             content.add(PM_CHARRED_GRASS.blockItem);
             content.add(PM_FERN.blockItem);
             content.add(PM_DEAD_SAPLING.blockItem);
+            content.add(PM_SAPLING.blockItem);
             content.add(PM_TALL_FERN.blockItem);
             content.add(PM_DRY_TALL_GRASS.blockItem);
             content.add(PM_CHARRED_TALL_GRASS.blockItem);
