@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:ore",
+    "config": {
+      "discard_chance_on_air_exposure": 0.0,
+      "size": 25,
+      "targets": [
+        {
+          "state": {
+            "Name": "dungeons:cw_grassy_dirt"
+          },
+          "target": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "dungeons:cw_dirt",
+            "probability": 0.8
+          }
+        },
+        {
+            "state": {
+              "Name": "dungeons:cw_rocky_grassy_dirt"
+            },
+            "target": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "dungeons:cw_dirt",
+              "probability": 0.4
+            }
+        },
+        {
+            "state": {
+              "Name": "dungeons:cw_cobwebbed_dirt"
+            },
+            "target": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "dungeons:cw_dirt",
+              "probability": 0.2
+            }
+        }
+      ]
+    }
+  }
