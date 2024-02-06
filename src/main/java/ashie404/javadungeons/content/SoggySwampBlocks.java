@@ -31,7 +31,7 @@ public class SoggySwampBlocks {
     public static final Sapling SS_SWAMP_SAPLING = new Sapling(SaplingGenerators.SWAMP, 0.0F, 0.0F, BlockSoundGroup.GRASS, "ss_swamp_sapling");
 
     // bridge related
-    public static final TopSlab SS_BRIDGE_PLANKS = new TopSlab(2.0F, 3.0F, BlockSoundGroup.WOOD, "ss_bridge_planks");
+    public static final Slab SS_BRIDGE_PLANKS = new Slab(2.0F, 3.0F, BlockSoundGroup.WOOD, "ss_bridge_planks");
     public static final Fence SS_ROPE_FENCE = new Fence(2.0F, 3.0F, BlockSoundGroup.WOOD, "ss_rope_fence");
 
     // braziers
