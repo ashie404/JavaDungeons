@@ -55,7 +55,6 @@ public class GenericBlocks {
     public static final SlabStairBlock DIRTY_STONE_TILES = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dirty_stone_tiles", "dirty_stone_tiles_slab", "dirty_stone_tiles_stairs");
     public static final SlabStairBlock DIRTY_STONE_TILES_1 = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock DIRTY_STONE_TILES_2 = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
-    public static final BaseBlock DIRTY_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dirty_stone");
 
     // andesite related
     public static final BaseBlock CRACKED_ANDESITE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "cracked_andesite");
@@ -182,7 +181,6 @@ public class GenericBlocks {
             content.add(DIRTY_STONE_TILES_2.base.blockItem);
             content.add(DIRTY_STONE_TILES_2.slab.blockItem);
             content.add(DIRTY_STONE_TILES_2.stairs.blockItem);
-            content.add(DIRTY_STONE.blockItem);
             content.add(CRACKED_ANDESITE.blockItem);
             content.add(BERRY_BUSH_BLOCK.blockItem);
             content.add(SQUID_COAST_LEAVES.blockItem);

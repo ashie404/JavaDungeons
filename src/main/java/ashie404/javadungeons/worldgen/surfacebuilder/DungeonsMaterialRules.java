@@ -4,6 +4,7 @@ import ashie404.javadungeons.biome.Biomes;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
 import ashie404.javadungeons.content.CreeperWoodsBlocks;
 import ashie404.javadungeons.content.GenericBlocks;
+import ashie404.javadungeons.content.PumpkinPasturesBlocks;
 import ashie404.javadungeons.content.SoggySwampBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -27,6 +28,10 @@ public class DungeonsMaterialRules {
     private static final MaterialRule CW_GRASS = makeStateRule(CreeperWoodsBlocks.CW_GRASS_BLOCK);
     private static final MaterialRule CW_DIRT = makeStateRule(CreeperWoodsBlocks.CW_DIRT);
 
+    // Pumpkin Pastures Material Rules
+    private static final MaterialRule PM_GRASS = makeStateRule(PumpkinPasturesBlocks.PM_GRASS_BLOCK);
+    private static final MaterialRule PM_DIRT = makeStateRule(PumpkinPasturesBlocks.PM_DIRT);
+
     // Cacti Canyon Material Rules
     private static final MaterialRule CC_GRASS = makeStateRule(CactiCanyonBlocks.CC_GRASS_BLOCK);
     private static final MaterialRule CC_DIRT = makeStateRule(CactiCanyonBlocks.CC_DIRT);
@@ -48,6 +53,7 @@ public class DungeonsMaterialRules {
         return MaterialRules.sequence(
             SoggySwampSurfaceRule(),
             CreeperWoodsSurfaceRule(),
+            PumpkinPasturesSurfaceRule(),
             CactiCanyonSurfaceRule(),
             CactiCanyonDesertSurfaceRule(),
             DungeonsSurfaceRule()
@@ -101,6 +107,23 @@ public class DungeonsMaterialRules {
             // Underwater surface builder
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, CW_DIRT),
+                STONE
+            )
+        ));
+    }
+
+    private static MaterialRule PumpkinPasturesSurfaceRule() {
+        return MaterialRules.condition(MaterialRules.biome(Biomes.PUMPKIN_PASTURES), MaterialRules.sequence(
+            // Above water surface builder
+            MaterialRules.condition(aboveWater, MaterialRules.sequence(
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, PM_GRASS),
+                MaterialRules.condition(stoneDepthFloorSurface1, PM_DIRT),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, STONE),
+                STONE
+            )),
+            // Underwater surface builder
+            MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthFloorSurface1, PM_DIRT),
                 STONE
             )
         ));

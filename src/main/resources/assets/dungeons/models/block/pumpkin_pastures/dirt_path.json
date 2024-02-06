@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/dirt_path",
+    "textures": {
+        "particle": "dungeons:block/pumpkin_pastures/dirt",
+        "top": "dungeons:block/pumpkin_pastures/dirt",
+        "side": "dungeons:block/pumpkin_pastures/dirt",
+        "bottom": "dungeons:block/pumpkin_pastures/dirt"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/pumpkin_pastures/grass_block" },
+            { "model": "dungeons:block/pumpkin_pastures/grass_block", "y": 90 },
+            { "model": "dungeons:block/pumpkin_pastures/grass_block", "y": 180 },
+            { "model": "dungeons:block/pumpkin_pastures/grass_block", "y": 270 }
+        ]
+    }
+}

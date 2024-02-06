@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": [ 
+           { "model": "dungeons:block/pumpkin_pastures/dark_rocky_dirt" },
+           { "model": "dungeons:block/pumpkin_pastures/dark_rocky_dirt_1" },
+           { "model": "dungeons:block/pumpkin_pastures/dark_rocky_dirt_2" }
+        ]
+    }
+}

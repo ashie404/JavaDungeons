@@ -36,16 +36,19 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT,
             CactiCanyonBlocks.CC_GRASS_BLOCK,
             CactiCanyonBlocks.CC_GRASSY_DIRT,
-            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT
+            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
+            PumpkinPasturesBlocks.PM_GRASS_BLOCK,
+            PumpkinPasturesBlocks.PM_DENSE_GRASSY_DIRT,
+            PumpkinPasturesBlocks.PM_GRASSY_DIRT
         );
 
         ColorProviderRegistry.ITEM.register(
             GRASS_ITEM_COLORS,
-            GenericBlocks.SHORT_GRASS.blockItem,
-            GenericBlocks.FERN.blockItem,
-            GenericBlocks.DENSE_GRASSY_DIRT.blockItem,
-            GenericBlocks.GRASSY_DIRT.blockItem,
-            GenericBlocks.GRASS_BLOCK.blockItem,
+            GenericBlocks.SHORT_GRASS,
+            GenericBlocks.FERN,
+            GenericBlocks.DENSE_GRASSY_DIRT,
+            GenericBlocks.GRASSY_DIRT,
+            GenericBlocks.GRASS_BLOCK,
             GenericBlocks.ROCKY_GRASSY_DIRT.blockItem,
             CreeperWoodsBlocks.CW_GRASS_BLOCK.blockItem,
             CreeperWoodsBlocks.CW_GRASSY_DIRT.blockItem,
@@ -53,7 +56,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT.blockItem,
             CactiCanyonBlocks.CC_GRASS_BLOCK.blockItem,
             CactiCanyonBlocks.CC_GRASSY_DIRT.blockItem,
-            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT.blockItem
+            CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT.blockItem,
+            PumpkinPasturesBlocks.PM_GRASS_BLOCK,
+            PumpkinPasturesBlocks.PM_DENSE_GRASSY_DIRT,
+            PumpkinPasturesBlocks.PM_GRASSY_DIRT
         );
 
         // register render layers
@@ -103,6 +109,9 @@ public class JavaDungeonsClient implements ClientModInitializer {
             PumpkinPasturesBlocks.PM_TALL_FERN,
             PumpkinPasturesBlocks.PM_DRY_TALL_GRASS,
             PumpkinPasturesBlocks.PM_CHARRED_TALL_GRASS,
+            PumpkinPasturesBlocks.PM_GRASS_BLOCK,
+            PumpkinPasturesBlocks.PM_DENSE_GRASSY_DIRT,
+            PumpkinPasturesBlocks.PM_GRASSY_DIRT,
             CactiCanyonBlocks.CC_CACTUS,
             CactiCanyonBlocks.CC_SMALL_CACTUS,
             CactiCanyonBlocks.CC_FERN,

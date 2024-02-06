@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "top":    "dungeons:block/pumpkin_pastures/dirt",
+        "side":   "dungeons:block/pumpkin_pastures/dirt",
+        "bottom": "dungeons:block/pumpkin_pastures/dirt"
+    }
+}
