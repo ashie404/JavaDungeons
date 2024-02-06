@@ -92,6 +92,10 @@ public class GenericBlocks {
         RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock DIRTY_STONE_TILES_2 = 
         RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
+    public static final SlabStairBlock COBBLESTONE =
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cobblestone");
+    public static final Block MOSSY_COBBLESTONE =
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "mossy_cobblestone");
 
     // andesite related
     public static final Block CRACKED_ANDESITE = 
@@ -290,6 +294,10 @@ public class GenericBlocks {
             content.add(MOSSY_SHADOWED_SANDED_ANDESITE_TILES);
             content.add(SANDED_ANDESITE_BRICKS);
             content.add(CHISELED_SANDED_ANDESITE);
+            content.add(COBBLESTONE.base);
+            content.add(COBBLESTONE.slab);
+            content.add(COBBLESTONE.stairs);
+            content.add(MOSSY_COBBLESTONE);
             content.add(GLASS);
             content.add(BLUE_GLASS);
             content.add(BROWN_GLASS);
