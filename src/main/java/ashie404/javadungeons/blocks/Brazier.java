@@ -12,6 +12,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -30,11 +31,12 @@ public class Brazier extends Block {
 	}
 
     public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly());
+        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly().solid());
         this.particle = p;
         this.SHAPE = soggySwamp ? 
             Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D): 
-            Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 13.0D, 15.0D);
+            VoxelShapes.union(Block.createCuboidShape(-4.0D, 0.0D, -4.0D, 20.0D, 4.0D, 20.0D),
+            Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 20.0D, 16.0D));
     }
 
     @Override
@@ -51,7 +53,7 @@ public class Brazier extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (particle != null) {
             double d = (double)pos.getX() + 0.5;
-            double e = (double)pos.getY() + 0.7;
+            double e = (double)pos.getY() + 1.3;
             double f = (double)pos.getZ() + 0.5;
             world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0, 0.0, 0.0);
             world.addParticle(particle, d, e, f, 0.0, 0.0, 0.0);
