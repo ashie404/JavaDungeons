@@ -1,18 +1,13 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
@@ -21,8 +16,6 @@ import net.minecraft.world.WorldView;
 public class Gravestone extends Block {
 
     // gravestone block
-
-    public BlockItem blockItem;
 
     public static final DirectionProperty FACING;
     public static final VoxelShape N_SHAPE;
@@ -65,11 +58,10 @@ public class Gravestone extends Block {
         builder.add(FACING);
     }
 
-    public Gravestone(float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public Gravestone(float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
+        
     }
 
     static {

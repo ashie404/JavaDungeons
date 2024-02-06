@@ -2,7 +2,9 @@ package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.items.*;
+import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -10,57 +12,92 @@ import net.minecraft.registry.RegistryKeys;
 public class Weapons {
 
     // Axes
-    public static final DungeonsAxe AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "axe");
-    public static final DungeonsAxe HIGHLAND_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "highland_axe");
-    public static final DungeonsAxe CURSED_AXE = new DungeonsAxe(ToolMaterials.IRON, 7.0F, -3.4F, "cursed_axe");
-    public static final DungeonsAxe WHIRLWIND = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -2.9F, "whirlwind");
-    public static final DungeonsAxe FIREBRAND = new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F, "firebrand");
-    public static final DungeonsAxe DOUBLE_AXE = new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F, "double_axe");
+    public static final Item AXE = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F), "axe");
+    public static final Item HIGHLAND_AXE = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F), "highland_axe");
+    public static final Item CURSED_AXE = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.IRON, 7.0F, -3.4F), "cursed_axe");
+    public static final Item WHIRLWIND = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.IRON, 6.0F, -2.9F), "whirlwind");
+    public static final Item FIREBRAND = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.DIAMOND, 5.0F, -3.0F), "firebrand");
+    public static final Item DOUBLE_AXE = 
+        RegistryHelper.registerItem(new DungeonsAxe(ToolMaterials.IRON, 6.0F, -3.1F), "double_axe");
 
     // Pickaxes
-    public static final DungeonsPickaxe STEEL_PICKAXE = new DungeonsPickaxe(ToolMaterials.IRON, 2, -2.5F, "steel_pickaxe");
+    public static final Item STEEL_PICKAXE = 
+        RegistryHelper.registerItem(new DungeonsPickaxe(ToolMaterials.IRON, 2, -2.5F), "steel_pickaxe");
 
     // Swords
-    public static final DungeonsSword CLAYMORE = new DungeonsSword(ToolMaterials.IRON, 3, -2.4F, "claymore");
-    public static final DungeonsSword HEARTSTEALER = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F, "heartstealer");
-    public static final DungeonsSword CUTLASS = new DungeonsSword(ToolMaterials.IRON, 3, -2.1F, "cutlass");
-    public static final DungeonsSword NAMELESS_BLADE = new DungeonsSword(ToolMaterials.DIAMOND, 2, -1.7F, "nameless_blade");
-    public static final DungeonsSword BROADSWORD = new DungeonsSword(ToolMaterials.IRON, 5, -3.4F, "broadsword");
-    public static final DungeonsSword KATANA = new DungeonsSword(ToolMaterials.IRON, 2, -1.5F, "katana");
-    public static final DungeonsSword MASTERS_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F, "masters_katana");
-    public static final DungeonsSword DARK_KATANA = new DungeonsSword(ToolMaterials.DIAMOND, 5, -1.15F, "dark_katana");
-    public static final DungeonsSword STEEL_SWORD = new DungeonsSword(ToolMaterials.IRON, 4, -2.4F, "steel_sword");
-    public static final DungeonsSword TRUTHSEEKER = new DungeonsSword(ToolMaterials.IRON, 5, -1.5F, "truthseeker");
+    public static final Item CLAYMORE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 3, -2.4F), "claymore");
+    public static final Item HEARTSTEALER = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.8F), "heartstealer");
+    public static final Item CUTLASS = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 3, -2.1F), "cutlass");
+    public static final Item NAMELESS_BLADE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.DIAMOND, 2, -1.7F), "nameless_blade");
+    public static final Item BROADSWORD = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 5, -3.4F), "broadsword");
+    public static final Item KATANA = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 2, -1.5F), "katana");
+    public static final Item MASTERS_KATANA = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.DIAMOND, 4, -1.35F), "masters_katana");
+    public static final Item DARK_KATANA = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.DIAMOND, 5, -1.15F), "dark_katana");
+    public static final Item STEEL_SWORD = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 4, -2.4F), "steel_sword");
+    public static final Item TRUTHSEEKER = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 5, -1.5F), "truthseeker");
 
     // Hammers
-    public static final DungeonsPickaxe STONE_HAMMER = new DungeonsPickaxe(ToolMaterials.STONE, 6, -3.5F, "stone_hammer");
+    public static final Item STONE_HAMMER = 
+        RegistryHelper.registerItem(new DungeonsPickaxe(ToolMaterials.STONE, 6, -3.5F), "stone_hammer");
 
     // Daggers/Knives
-    public static final DungeonsSword DAGGER = new DungeonsSword(ToolMaterials.IRON, 2, -1.3F, "dagger");
-    public static final DungeonsSword FANGS_OF_FROST = new DungeonsSword(ToolMaterials.IRON, 3, -1.3F, "fangs_of_frost");
-    public static final DungeonsSword MOON_DAGGER = new DungeonsSword(ToolMaterials.IRON, 4, -1.3F, "moon_dagger");
+    public static final Item DAGGER = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 2, -1.3F), "dagger");
+    public static final Item FANGS_OF_FROST = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 3, -1.3F), "fangs_of_frost");
+    public static final Item MOON_DAGGER = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 4, -1.3F), "moon_dagger");
 
-    public static final DungeonsSword SOUL_KNIFE = new DungeonsSword(ToolMaterials.IRON, 5, -1.1F, "soul_knife");
-    public static final DungeonsSword ETERNAL_KNIFE = new DungeonsSword(ToolMaterials.DIAMOND, 5, -0.9F, "eternal_knife");
+    public static final Item SOUL_KNIFE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 5, -1.1F), "soul_knife");
+    public static final Item ETERNAL_KNIFE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.DIAMOND, 5, -0.9F), "eternal_knife");
 
     // Sickles/Scythes
-    public static final DungeonsSickle SICKLE = new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F, "sickle");
-    public static final DungeonsSickle NIGHTMARES_BITE = new DungeonsSickle(ToolMaterials.IRON, 3, -2.0F, "nightmares_bite");
+    public static final Item SICKLE = 
+        RegistryHelper.registerItem(new DungeonsSickle(ToolMaterials.IRON, 1, -2.0F), "sickle");
+    public static final Item NIGHTMARES_BITE = 
+        RegistryHelper.registerItem(new DungeonsSickle(ToolMaterials.IRON, 3, -2.0F), "nightmares_bite");
 
-    public static final DungeonsSickle FROST_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.5F, "frost_scythe");
-    public static final DungeonsSickle JAILORS_SCYTHE = new DungeonsSickle(ToolMaterials.IRON, 4, -2.25F, "jailors_scythe");
-    public static final DungeonsSickle SOUL_SCYTHE = new DungeonsSickle(ToolMaterials.DIAMOND, 5, -2.25F, "soul_scythe");
+    public static final Item FROST_SCYTHE = 
+        RegistryHelper.registerItem(new DungeonsSickle(ToolMaterials.IRON, 4, -2.5F), "frost_scythe");
+    public static final Item JAILORS_SCYTHE = 
+        RegistryHelper.registerItem(new DungeonsSickle(ToolMaterials.IRON, 4, -2.25F), "jailors_scythe");
+    public static final Item SOUL_SCYTHE = 
+        RegistryHelper.registerItem(new DungeonsSickle(ToolMaterials.DIAMOND, 5, -2.25F), "soul_scythe");
 
     // Spears
-    public static final DungeonsSword GLAIVE = new DungeonsSword(ToolMaterials.IRON, 3, -2.7F, "glaive");
-    public static final DungeonsSword GRAVE_BANE = new DungeonsSword(ToolMaterials.GOLD, 4, -2.5F, "grave_bane");
-    public static final DungeonsSword VENOM_GLAIVE = new DungeonsSword(ToolMaterials.IRON, 4, -2.7F, "venom_glaive");
+    public static final Item GLAIVE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 3, -2.7F), "glaive");
+    public static final Item GRAVE_BANE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.GOLD, 4, -2.5F), "grave_bane");
+    public static final Item VENOM_GLAIVE = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 4, -2.7F), "venom_glaive");
 
-    public static final DungeonsSword SPEAR = new DungeonsSword(ToolMaterials.IRON, 3, -2.5F, "spear");
-    public static final DungeonsSword FORTUNE_SPEAR = new DungeonsSword(ToolMaterials.GOLD, 4, -2.35F, "fortune_spear");
-    public static final DungeonsSword WHISPERING_SPEAR = new DungeonsSword(ToolMaterials.IRON, 5, -2.5F, "whispering_spear");
+    public static final Item SPEAR = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 3, -2.5F), "spear");
+    public static final Item FORTUNE_SPEAR = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.GOLD, 4, -2.35F), "fortune_spear");
+    public static final Item WHISPERING_SPEAR = 
+        RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 5, -2.5F), "whispering_spear");
 
     public static void init() {
+        JavaDungeons.log.info("Registering Weapons!");
         // add items to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("weapons"))).register(content -> {
             content.add(AXE);

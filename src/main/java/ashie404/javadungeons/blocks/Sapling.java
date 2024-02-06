@@ -1,26 +1,18 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SaplingGenerator;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 
 public class Sapling extends SaplingBlock {
 
-    // generic block
+    // sapling block
 
-    public BlockItem blockItem;
-
-    public Sapling(SaplingGenerator generator, float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public Sapling(SaplingGenerator generator, float hardness, float resistance, BlockSoundGroup sounds) {
         super(generator, FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
+        
     }
 
 }

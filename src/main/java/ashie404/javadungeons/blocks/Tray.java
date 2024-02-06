@@ -1,8 +1,6 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.GenericBlocks;
-import ashie404.javadungeons.content.Properties;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,8 +18,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -33,8 +29,6 @@ import net.minecraft.state.property.EnumProperty;
 public class Tray extends Block {
 
     // tray block
-
-    public BlockItem blockItem;
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 4.0D, 13.0D);
 
@@ -91,11 +85,9 @@ public class Tray extends Block {
         }
     }
 
-    public Tray(float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public Tray(float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(CONTAINS, Properties.Contains.EMPTY)));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     static {

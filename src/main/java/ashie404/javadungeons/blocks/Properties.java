@@ -1,4 +1,4 @@
-package ashie404.javadungeons.content;
+package ashie404.javadungeons.blocks;
 
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.StringIdentifiable;

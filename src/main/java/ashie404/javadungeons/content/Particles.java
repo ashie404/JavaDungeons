@@ -10,6 +10,6 @@ public class Particles {
     public static final DefaultParticleType GREEN_FLAME = Registry.register(Registries.PARTICLE_TYPE, JavaDungeons.ID("green_flame"), FabricParticleTypes.simple());
 
     public static void init() {
-        // Unused
+        JavaDungeons.log.info("Registering Particles!");
     }
 }

@@ -1,6 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,13 +9,9 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
@@ -31,7 +26,6 @@ public class Sack extends Block implements Waterloggable {
 
     // sack block
 
-    public BlockItem blockItem;
     public static final BooleanProperty WATERLOGGED;
     public boolean small = false;
 
@@ -69,12 +63,10 @@ public class Sack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public Sack(float hardness, float resistance, BlockSoundGroup sounds, String id, boolean small) {
+    public Sack(float hardness, float resistance, BlockSoundGroup sounds, boolean small) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque());
         this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     static {

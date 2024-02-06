@@ -1,11 +1,10 @@
 package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 
 public class ItemGroups {
@@ -38,15 +37,16 @@ public class ItemGroups {
 		.displayName(Text.translatable("itemGroup.dungeons.weapons")).build();
 
     public static void init() {
+		JavaDungeons.log.info("Registering Item Groups!");
         // register item groups
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("generic"), GENERIC);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("creeper_woods"), CREEPER_WOODS);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("desert_temple"), DESERT_TEMPLE);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("pumpkin_pastures"), PUMPKIN_PASTURES);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("soggy_swamp"), SOGGY_SWAMP);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("cacti_canyon"), CACTI_CANYON);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("redstone_mines"), REDSTONE_MINES);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("fiery_forge"), FIERY_FORGE);
-		Registry.register(Registries.ITEM_GROUP, JavaDungeons.ID("weapons"), WEAPONS);
+		RegistryHelper.registerItemGroup("generic", GENERIC);
+		RegistryHelper.registerItemGroup("creeper_woods", CREEPER_WOODS);
+		RegistryHelper.registerItemGroup("desert_temple", DESERT_TEMPLE);
+		RegistryHelper.registerItemGroup("pumpkin_pastures", PUMPKIN_PASTURES);
+		RegistryHelper.registerItemGroup("soggy_swamp", SOGGY_SWAMP);
+		RegistryHelper.registerItemGroup("cacti_canyon", CACTI_CANYON);
+		RegistryHelper.registerItemGroup("redstone_mines", REDSTONE_MINES);
+		RegistryHelper.registerItemGroup("fiery_forge", FIERY_FORGE);
+		RegistryHelper.registerItemGroup("weapons", WEAPONS);
     }
 }

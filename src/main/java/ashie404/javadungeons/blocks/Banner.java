@@ -1,15 +1,11 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -19,7 +15,6 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
@@ -31,8 +26,6 @@ public class Banner extends Block {
 
     public static final IntProperty ROTATION;
     protected static final VoxelShape SHAPE;
-
-    public BlockItem blockItem;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
@@ -63,11 +56,9 @@ public class Banner extends Block {
        builder.add(ROTATION);
     }
 
-    public Banner(float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public Banner(float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false));
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(ROTATION, 0));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 
     static {

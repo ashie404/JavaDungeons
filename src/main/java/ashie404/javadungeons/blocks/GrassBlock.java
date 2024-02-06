@@ -2,10 +2,7 @@ package ashie404.javadungeons.blocks;
 
 import com.mojang.serialization.MapCodec;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,8 +22,6 @@ import net.minecraft.world.chunk.light.ChunkLightProvider;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
@@ -35,7 +30,7 @@ public class GrassBlock extends SnowyBlock {
 
     // spreadable grass block
 
-    public BlockItem blockItem;
+    
 
     private Block dirtVariant;
     private Block pathVariant;
@@ -49,16 +44,14 @@ public class GrassBlock extends SnowyBlock {
     }
 
     // Non-pathable/tillable constructor
-    public GrassBlock(float hardness, float resistance, BlockSoundGroup sounds, Block dirtBlock, String id) {
+    public GrassBlock(float hardness, float resistance, BlockSoundGroup sounds, Block dirtBlock) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).ticksRandomly());
-        dirtVariant = dirtBlock;
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
+        dirtVariant = dirtBlock; 
     }
 
     // Pathable/tillable constructor
-    public GrassBlock(float hardness, float resistance, boolean tillable, BlockSoundGroup sounds, Block pathBlock, Block dirtBlock, String id) {
-        this(hardness, resistance, sounds, dirtBlock, id);
+    public GrassBlock(float hardness, float resistance, boolean tillable, BlockSoundGroup sounds, Block pathBlock, Block dirtBlock) {
+        this(hardness, resistance, sounds, dirtBlock);
         canPath = true;
         canTill = tillable;
         pathVariant = pathBlock;

@@ -48,6 +48,7 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         // configure noise
         noise.SetNoiseType(NoiseType.OpenSimplex2S);
         noise.SetFractalOctaves(4);
+        noise.SetFractalGain(2.5F);
         noise.SetFractalType(FractalType.Ridged);
     }
 

@@ -5,26 +5,20 @@ import net.minecraft.block.BlockState;
 
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Sounds;
 
 public class GlowMushroom extends SeaPickleBlock {
 
     // glow mushroom block block
-    public BlockItem blockItem;
-    
+
     int soundsPlayed = 0;
     int waitCounter = 0;
 
@@ -62,9 +56,7 @@ public class GlowMushroom extends SeaPickleBlock {
         super.onSteppedOn(world, pos, state, entity);
     }
 
-    public GlowMushroom(float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public GlowMushroom(float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).luminance(12));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
     }
 }

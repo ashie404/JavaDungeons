@@ -1,6 +1,7 @@
 package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
+import ashie404.javadungeons.registry.RegistryHelper;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -8,18 +9,15 @@ import net.minecraft.registry.Registry;
 public class Paintings {
 
     public static void init() {
+        JavaDungeons.log.info("Registering Painting Variants!");
         // register dungeons painting variants
-        registerPaintingVariant("arch_illager_cool_guy", 32, 32);
-        registerPaintingVariant("arch_illager_portrait", 32, 32);
-        registerPaintingVariant("crocodile", 32, 32);
-        registerPaintingVariant("tropical", 32, 32);
-        registerPaintingVariant("redstone_mines", 32, 16);
-        registerPaintingVariant("blue_fields", 16, 16);
-        registerPaintingVariant("creeper", 16, 16);
-        registerPaintingVariant("cacti_canyon", 32, 64);
-    }
-
-    private static void registerPaintingVariant(String name, int width, int height) {
-        Registry.register(Registries.PAINTING_VARIANT, JavaDungeons.ID(name), new PaintingVariant(width, height));
+        RegistryHelper.registerPainting("arch_illager_cool_guy", 32, 32);
+        RegistryHelper.registerPainting("arch_illager_portrait", 32, 32);
+        RegistryHelper.registerPainting("crocodile", 32, 32);
+        RegistryHelper.registerPainting("tropical", 32, 32);
+        RegistryHelper.registerPainting("redstone_mines", 32, 16);
+        RegistryHelper.registerPainting("blue_fields", 16, 16);
+        RegistryHelper.registerPainting("creeper", 16, 16);
+        RegistryHelper.registerPainting("cacti_canyon", 32, 64);
     }
 }

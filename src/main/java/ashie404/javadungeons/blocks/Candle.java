@@ -1,6 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -9,16 +8,12 @@ import net.minecraft.block.Blocks;
 
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -29,7 +24,7 @@ public class Candle extends Block {
 
     // candle block
 
-    public BlockItem blockItem;
+    
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
     private DefaultParticleType particle;
@@ -39,11 +34,10 @@ public class Candle extends Block {
 		return SHAPE;
 	}
 
-    public Candle(float hardness, float resistance, BlockSoundGroup sounds, String id, boolean isGreen) {
+    public Candle(float hardness, float resistance, BlockSoundGroup sounds, boolean isGreen) {
         super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15).ticksRandomly());
         this.particle = isGreen ? Particles.GREEN_FLAME : ParticleTypes.FLAME;
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
+        
     }
 
     @Override

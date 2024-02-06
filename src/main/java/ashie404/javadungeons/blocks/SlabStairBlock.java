@@ -10,10 +10,10 @@ public class SlabStairBlock {
     public Slab slab;
     public Stairs stairs;
 
-    public SlabStairBlock(float hardness, float resistance, BlockSoundGroup sounds, String id, String slabId, String stairsId) {
-        base = new BaseBlock(hardness, resistance, sounds, id);
-        slab = new Slab(hardness, resistance, sounds, slabId);
-        stairs = new Stairs(hardness, resistance, sounds, base, stairsId);
+    public SlabStairBlock(float hardness, float resistance, BlockSoundGroup sounds) {
+        base = new BaseBlock(hardness, resistance, sounds);
+        slab = new Slab(hardness, resistance, sounds);
+        stairs = new Stairs(hardness, resistance, sounds, base);
     }
     
 }

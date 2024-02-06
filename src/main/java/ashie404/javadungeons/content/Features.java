@@ -23,6 +23,7 @@ public class Features {
     public static final Feature<DefaultFeatureConfig> CACTI_CANYON_PILLARS = new CactiCanyonPillarsFeature(DefaultFeatureConfig.CODEC);
 
     public static void init() {
+        JavaDungeons.log.info("Registering Features!");
         // Register mod features
         Registry.register(Registries.FEATURE, JavaDungeons.ID("glow_mushroom"), GLOW_MUSHROOM);
         Registry.register(Registries.FEATURE, JavaDungeons.ID("cacti_canyon_pillars"), CACTI_CANYON_PILLARS);

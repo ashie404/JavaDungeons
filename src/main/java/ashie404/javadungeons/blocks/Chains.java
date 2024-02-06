@@ -1,21 +1,16 @@
 package ashie404.javadungeons.blocks;
 
-import ashie404.javadungeons.JavaDungeons;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
 import net.minecraft.block.ShapeContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -25,7 +20,7 @@ public class Chains extends Block {
 
     // chains block
 
-    public BlockItem blockItem;
+    
     public static final BooleanProperty ABOVE;
     public static final BooleanProperty BELOW;
 
@@ -67,11 +62,10 @@ public class Chains extends Block {
         builder.add(BELOW);
     }
 
-    public Chains(float hardness, float resistance, BlockSoundGroup sounds, String id) {
+    public Chains(float hardness, float resistance, BlockSoundGroup sounds) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
         this.setDefaultState(this.stateManager.getDefaultState().with(ABOVE, false).with(BELOW, false));
-        Registry.register(Registries.BLOCK, JavaDungeons.ID(id), this);
-        Registry.register(Registries.ITEM,JavaDungeons.ID(id), blockItem = new BlockItem(this, new Item.Settings()));
+        
     }
 
     static {

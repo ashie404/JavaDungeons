@@ -2,7 +2,9 @@ package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
+import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -10,38 +12,49 @@ import net.minecraft.sound.BlockSoundGroup;
 public class DesertTempleBlocks {
 
     // andesite related
-    public static final SlabStairBlock DT_SANDY_ANDESITE = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite", "dt_sandy_andesite_slab", "dt_sandy_andesite_stairs");
-    public static final BaseBlock DT_CHISELED_SANDY_ANDESITE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite");
-    public static final BaseBlock DT_CHISELED_SANDY_ANDESITE_2 = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_andesite_2");
-    public static final Pillar DT_SANDY_ANDESITE_PILLAR = new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_andesite_pillar");
+    public static final SlabStairBlock DT_SANDY_ANDESITE = 
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_andesite");
+    public static final Block DT_CHISELED_SANDY_ANDESITE = 
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_andesite");
+    public static final Block DT_CHISELED_SANDY_ANDESITE_2 = 
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_andesite_2");
+    public static final Block DT_SANDY_ANDESITE_PILLAR = 
+        RegistryHelper.registerBlock(new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_andesite_pillar");
 
     // stone brick related
-    public static final SlabStairBlock DT_SANDY_STONE_BRICKS = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
-    public static final SlabStairBlock DT_SANDY_STONE_TILES = new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_stone_tiles", "dt_sandy_stone_tiles_slab", "dt_sandy_stone_tiles_stairs");
-    public static final BaseBlock DT_CRACKED_SANDY_STONE_BRICKS = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_cracked_sandy_stone_bricks");
-    public static final BaseBlock DT_CHISELED_SANDY_STONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_chiseled_sandy_stone");
+    public static final SlabStairBlock DT_SANDY_STONE_BRICKS = 
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
+    public static final SlabStairBlock DT_SANDY_STONE_TILES = 
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_stone_tiles");
+    public static final Block DT_CRACKED_SANDY_STONE_BRICKS = 
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_cracked_sandy_stone_bricks");
+    public static final Block DT_CHISELED_SANDY_STONE = 
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_stone");
 
     // stone related
-    public static final BaseBlock DT_SANDY_COBBLESTONE = new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE, "dt_sandy_cobblestone");
+    public static final Block DT_SANDY_COBBLESTONE = 
+        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_cobblestone");
 
     public static void init() {
+        JavaDungeons.log.info("Registering Desert Temple Blocks!");
+        
         // add blocks to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("desert_temple"))).register(content -> {
-            content.add(DT_SANDY_ANDESITE.base.blockItem);
-            content.add(DT_SANDY_ANDESITE.slab.blockItem);
-            content.add(DT_SANDY_ANDESITE.stairs.blockItem);
-            content.add(DT_CHISELED_SANDY_ANDESITE.blockItem);
-            content.add(DT_CHISELED_SANDY_ANDESITE_2.blockItem);
-            content.add(DT_SANDY_ANDESITE_PILLAR.blockItem);
-            content.add(DT_SANDY_STONE_BRICKS.base.blockItem);
-            content.add(DT_SANDY_STONE_BRICKS.slab.blockItem);
-            content.add(DT_SANDY_STONE_BRICKS.stairs.blockItem);
-            content.add(DT_CRACKED_SANDY_STONE_BRICKS.blockItem);
-            content.add(DT_SANDY_STONE_TILES.base.blockItem);
-            content.add(DT_SANDY_STONE_TILES.slab.blockItem);
-            content.add(DT_SANDY_STONE_TILES.stairs.blockItem);
-            content.add(DT_CHISELED_SANDY_STONE.blockItem);
-            content.add(DT_SANDY_COBBLESTONE.blockItem);
+            content.add(DT_SANDY_ANDESITE.base);
+            content.add(DT_SANDY_ANDESITE.slab);
+            content.add(DT_SANDY_ANDESITE.stairs);
+            content.add(DT_CHISELED_SANDY_ANDESITE);
+            content.add(DT_CHISELED_SANDY_ANDESITE_2);
+            content.add(DT_SANDY_ANDESITE_PILLAR);
+            content.add(DT_SANDY_STONE_BRICKS.base);
+            content.add(DT_SANDY_STONE_BRICKS.slab);
+            content.add(DT_SANDY_STONE_BRICKS.stairs);
+            content.add(DT_CRACKED_SANDY_STONE_BRICKS);
+            content.add(DT_SANDY_STONE_TILES.base);
+            content.add(DT_SANDY_STONE_TILES.slab);
+            content.add(DT_SANDY_STONE_TILES.stairs);
+            content.add(DT_CHISELED_SANDY_STONE);
+            content.add(DT_SANDY_COBBLESTONE);
         });
     }
 }
