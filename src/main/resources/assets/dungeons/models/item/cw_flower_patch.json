@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "dungeons:item/flower_patch"
+        "layer0": "dungeons:item/creeper_woods/flower_patch"
     }
 }

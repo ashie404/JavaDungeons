@@ -21,6 +21,12 @@
                   }
                 },
                 {
+                  "weight": 4,
+                  "data": {
+                    "Name": "dungeons:flower_patch"
+                  }
+                },
+                {
                   "weight": 1,
                   "data": {
                     "Name": "dungeons:berry_bush_block",

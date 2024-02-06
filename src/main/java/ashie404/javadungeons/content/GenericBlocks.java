@@ -68,6 +68,7 @@ public class GenericBlocks {
     public static final Plant FERN = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "fern");
     public static final Plant SHRUB = new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS, "shrub");
     public static final Plant YELLOW_TULIP = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "yellow_tulip");
+    public static final Plant FLOWER_PATCH = new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS, "flower_patch");
     public static final WaterPlant WATER_PLANT = new WaterPlant( 0.0F, 0.0F, BlockSoundGroup.WET_GRASS, "water_plant");
     public static final HangingPlant HANGING_ROSES = new HangingPlant(0.0F, 0.0F, BlockSoundGroup.GRASS, "hanging_roses");
 

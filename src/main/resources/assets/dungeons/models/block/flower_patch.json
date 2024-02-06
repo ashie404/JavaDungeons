@@ -1,0 +1,7 @@
+{
+    "parent": "dungeons:block/base/flower_patch",
+    "textures": {
+        "base": "dungeons:block/flower_patch",
+        "particle": "dungeons:block/flower_patch"
+    }
+}
