@@ -1,5 +1,6 @@
-{
-    "variants": {
-        "": {"model": "dungeons:block/cacti_canyon/dirt_path"}
-    }
-}
+{"variants": {"": [
+    {"model": "dungeons:block/cacti_canyon/dirt_path"},
+    {"model": "dungeons:block/cacti_canyon/dirt_path", "y": 90},
+    {"model": "dungeons:block/cacti_canyon/dirt_path", "y": 180},
+    {"model": "dungeons:block/cacti_canyon/dirt_path", "y": 270}
+]}}

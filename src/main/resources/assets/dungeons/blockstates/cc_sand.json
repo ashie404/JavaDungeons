@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/cacti_canyon/sand"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/cacti_canyon/sand"},
+    {"model": "dungeons:block/cacti_canyon/sand", "y": 90},
+    {"model": "dungeons:block/cacti_canyon/sand", "y": 180},
+    {"model": "dungeons:block/cacti_canyon/sand", "y": 270}
+]}}

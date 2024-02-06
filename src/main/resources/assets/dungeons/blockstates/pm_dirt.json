@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/pumpkin_pastures/dirt"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/pumpkin_pastures/dirt"},
+    {"model": "dungeons:block/pumpkin_pastures/dirt", "y": 90},
+    {"model": "dungeons:block/pumpkin_pastures/dirt", "y": 180},
+    {"model": "dungeons:block/pumpkin_pastures/dirt", "y": 270}
+]}}

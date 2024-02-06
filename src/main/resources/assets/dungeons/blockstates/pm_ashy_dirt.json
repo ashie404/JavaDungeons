@@ -2,7 +2,13 @@
     "variants": {
         "": [
             {"model": "dungeons:block/pumpkin_pastures/ashy_dirt"},
-            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt_1"}
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt_1"},
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt", "y": 90 },
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt_1", "y": 90 },
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt","y": 180 },
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt_1", "y": 180 },
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt", "y": 270 },
+            {"model": "dungeons:block/pumpkin_pastures/ashy_dirt_1", "y": 270 }
         ]
     }
 }

@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/dirt"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/dirt"},
+    {"model": "dungeons:block/dirt", "y": 90},
+    {"model": "dungeons:block/dirt", "y": 180},
+    {"model": "dungeons:block/dirt", "y": 270}
+]}}

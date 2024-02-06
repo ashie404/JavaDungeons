@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/rocky_dirt"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/rocky_dirt"},
+    {"model": "dungeons:block/rocky_dirt", "y": 90},
+    {"model": "dungeons:block/rocky_dirt", "y": 180},
+    {"model": "dungeons:block/rocky_dirt", "y": 270}
+]}}

@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/creeper_woods/dirt"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/creeper_woods/dirt"},
+    {"model": "dungeons:block/creeper_woods/dirt", "y": 90},
+    {"model": "dungeons:block/creeper_woods/dirt", "y": 180},
+    {"model": "dungeons:block/creeper_woods/dirt", "y": 270}
+]}}

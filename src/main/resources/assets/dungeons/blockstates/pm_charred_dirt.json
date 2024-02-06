@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/pumpkin_pastures/charred_dirt"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/pumpkin_pastures/charred_dirt"},
+    {"model": "dungeons:block/pumpkin_pastures/charred_dirt", "y": 90},
+    {"model": "dungeons:block/pumpkin_pastures/charred_dirt", "y": 180},
+    {"model": "dungeons:block/pumpkin_pastures/charred_dirt", "y": 270}
+]}}
