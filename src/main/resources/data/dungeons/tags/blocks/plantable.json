@@ -22,6 +22,12 @@
         "dungeons:cc_dense_grassy_dirt",
         "dungeons:ss_dirt",
         "dungeons:ss_grass_block",
-        "dungeons:rm_snowy_dirt"
+        "dungeons:rm_snowy_dirt",
+        "dungeons:dj_grass_block",
+        "dungeons:dj_grassy_dirt",
+        "dungeons:dj_grassy_mud",
+        "dungeons:dj_muddy_grass",
+        "dungeons:dj_dirt",
+        "dungeons:dj_dirty_mud"
     ]
 }
