@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "particle": "dungeons:block/dingy_jungle/mud",
+        "bottom": "dungeons:block/dingy_jungle/mud",
+        "top": "dungeons:block/dingy_jungle/grass_block_top",
+        "side": "dungeons:block/dingy_jungle/muddy_grass_side"
+    }
+}

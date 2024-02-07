@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/flowering_jungle_plant" },
+            { "model": "dungeons:block/dingy_jungle/flowering_jungle_plant", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/flowering_jungle_plant", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/flowering_jungle_plant", "y": 270 }
+        ]
+    }
+  }
+  

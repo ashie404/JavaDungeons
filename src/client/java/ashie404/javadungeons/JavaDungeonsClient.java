@@ -123,7 +123,19 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CactiCanyonBlocks.CC_DENSE_GRASSY_DIRT,
             CactiCanyonBlocks.CC_DESERT_GRASS,
             RedstoneMinesBlocks.RM_SHRUB,
-            SoggySwampBlocks.SS_SWAMP_SAPLING
+            SoggySwampBlocks.SS_SWAMP_SAPLING,
+            DingyJungleBlocks.DJ_RED_FERN,
+            DingyJungleBlocks.DJ_GRASS,
+            DingyJungleBlocks.DJ_TALL_GRASS,
+            DingyJungleBlocks.DJ_SHRUB,
+            DingyJungleBlocks.DJ_DEAD_SHRUB,
+            DingyJungleBlocks.DJ_BUSH,
+            DingyJungleBlocks.DJ_TALL_FERN,
+            DingyJungleBlocks.DJ_JUNGLE_LEAVES,
+            DingyJungleBlocks.DJ_LARGE_JUNGLE_PLANT,
+            DingyJungleBlocks.DJ_LARGE_JUNGLE_FERN,
+            DingyJungleBlocks.DJ_FLOWERING_JUNGLE_PLANT,
+            DingyJungleBlocks.DJ_LARGE_JUNGLE_FLOWER
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             RenderLayer.getTranslucent(),
