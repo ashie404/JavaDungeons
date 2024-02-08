@@ -23,7 +23,10 @@ public class Brazier extends Block {
     // brazier block
 
     private DefaultParticleType particle;
-    protected VoxelShape SHAPE;
+    protected final VoxelShape SHAPE;
+    private final VoxelShape DEFAULT_SHAPE = VoxelShapes.union(Block.createCuboidShape(-4.0D, 0.0D, -4.0D, 20.0D, 4.0D, 20.0D),Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 20.0D, 16.0D));
+    private final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
+    private final boolean TYPE;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
@@ -33,15 +36,18 @@ public class Brazier extends Block {
     public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp) {
         super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly().solid());
         this.particle = p;
-        this.SHAPE = soggySwamp ? 
-            Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D): 
-            VoxelShapes.union(Block.createCuboidShape(-4.0D, 0.0D, -4.0D, 20.0D, 4.0D, 20.0D),
-            Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 20.0D, 16.0D));
+        this.TYPE = soggySwamp;
+        this.SHAPE = soggySwamp ? SS_SHAPE : DEFAULT_SHAPE;
     }
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return sideCoversSmallSquare(world, pos.down(), Direction.UP);
+        // If TYPE is true (Soggy Swamp brazier) then only check for block below current. 
+        // If TYPE is false (default brazier) then check for block below current, and non-diagonal adjacents. (due to its shape being larger than 1 block)
+        return TYPE ? sideCoversSmallSquare(world, pos.down(), Direction.UP) :
+            sideCoversSmallSquare(world, pos.down(), Direction.UP) && 
+            sideCoversSmallSquare(world, pos.add(1, 0, 0).down(), Direction.UP) && sideCoversSmallSquare(world, pos.add(0, 0, 1).down(), Direction.UP) &&
+            sideCoversSmallSquare(world, pos.add(-1, 0, 0).down(), Direction.UP) && sideCoversSmallSquare(world, pos.add(0, 0, -1).down(), Direction.UP);
     }
 
     @Override
@@ -53,7 +59,7 @@ public class Brazier extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (particle != null) {
             double d = (double)pos.getX() + 0.5;
-            double e = (double)pos.getY() + 1.3;
+            double e = (double)pos.getY() + 1.0;
             double f = (double)pos.getZ() + 0.5;
             world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0, 0.0, 0.0);
             world.addParticle(particle, d, e, f, 0.0, 0.0, 0.0);
