@@ -13,6 +13,7 @@ public class Biomes {
     public static final RegistryKey<Biome> SQUID_COAST = register("squid_coast");
     public static final RegistryKey<Biome> PUMPKIN_PASTURES = register("pumpkin_pastures");
     public static final RegistryKey<Biome> SOGGY_SWAMP = register("soggy_swamp");
+    public static final RegistryKey<Biome> DINGY_JUNGLE = register("dingy_jungle");
 
     private static RegistryKey<Biome> register(String name)
     {

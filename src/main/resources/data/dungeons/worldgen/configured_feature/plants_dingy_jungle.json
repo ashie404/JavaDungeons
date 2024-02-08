@@ -1,0 +1,109 @@
+{
+    "type": "minecraft:random_patch",
+    "config": {
+      "feature": {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "config": {
+            "to_place": {
+              "type": "minecraft:weighted_state_provider",
+              "entries": [
+                {
+                  "weight": 15,
+                  "data": {
+                    "Name": "dungeons:fern"
+                  }
+                },
+                {
+                  "weight": 7,
+                  "data": {
+                    "Name": "dungeons:dj_red_fern"
+                  }
+                },
+                {
+                  "weight": 5,
+                  "data": {
+                    "Name": "dungeons:dj_bush"
+                  }
+                },
+                {
+                  "weight": 30,
+                  "data": {
+                    "Name": "dungeons:dj_grass"
+                  }
+                },
+                {
+                    "weight": 3,
+                    "data": {
+                      "Name": "dungeons:dj_tall_fern"
+                    }
+                },
+                {
+                    "weight": 15,
+                    "data": {
+                      "Name": "dungeons:dj_tall_grass"
+                    }
+                },
+                {
+                  "weight": 6,
+                  "data": {
+                    "Name": "dungeons:dj_shrub"
+                  }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                      "Name": "dungeons:dj_large_jungle_fern"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                      "Name": "dungeons:dj_large_jungle_flower"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                      "Name": "dungeons:dj_large_jungle_plant"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "data": {
+                      "Name": "dungeons:dj_flowering_jungle_plant"
+                    }
+                }
+              ]
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:air"
+                },
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "Name": "minecraft:oak_sapling",
+                    "Properties": {
+                      "stage": "0"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "tries": 32,
+      "xz_spread": 15,
+      "y_spread": 3
+    }
+}

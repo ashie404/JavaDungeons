@@ -3,6 +3,7 @@ package ashie404.javadungeons.worldgen.surfacebuilder;
 import ashie404.javadungeons.biome.Biomes;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
 import ashie404.javadungeons.content.CreeperWoodsBlocks;
+import ashie404.javadungeons.content.DingyJungleBlocks;
 import ashie404.javadungeons.content.GenericBlocks;
 import ashie404.javadungeons.content.PumpkinPasturesBlocks;
 import ashie404.javadungeons.content.SoggySwampBlocks;
@@ -44,6 +45,11 @@ public class DungeonsMaterialRules {
     private static final MaterialRule SS_GRASS = makeStateRule(SoggySwampBlocks.SS_GRASS_BLOCK);
     private static final MaterialRule SS_DIRT = makeStateRule(SoggySwampBlocks.SS_DIRT);
 
+    // Dingy Jungle Material Rules
+    private static final MaterialRule DJ_GRASS = makeStateRule(DingyJungleBlocks.DJ_GRASS_BLOCK);
+    private static final MaterialRule DJ_PEBBLES = makeStateRule(DingyJungleBlocks.DJ_PEBBLES);
+    private static final MaterialRule DJ_DIRTY_PEBBLES = makeStateRule(DingyJungleBlocks.DJ_DIRTY_PEBBLES);
+
     // Globally used material conditions
     private static final MaterialCondition aboveWater = MaterialRules.water(-1, 0);
     private static final MaterialCondition stoneDepthFloorSurface1 = MaterialRules.stoneDepth(1, true, VerticalSurfaceType.FLOOR);
@@ -56,6 +62,7 @@ public class DungeonsMaterialRules {
             PumpkinPasturesSurfaceRule(),
             CactiCanyonSurfaceRule(),
             CactiCanyonDesertSurfaceRule(),
+            DingyJungleSurfaceRule(),
             DungeonsSurfaceRule()
         );
     }
@@ -165,6 +172,28 @@ public class DungeonsMaterialRules {
                 MaterialRules.condition(stoneDepthFloorSurface1, SAND),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, SANDSTONE),
                 STONE
+            )
+        ));
+    }
+
+    private static MaterialRule DingyJungleSurfaceRule() {
+        return MaterialRules.condition(MaterialRules.biome(Biomes.DINGY_JUNGLE), MaterialRules.sequence(
+            // Above water surface builder
+            MaterialRules.condition(aboveWater, MaterialRules.sequence(
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, DJ_GRASS),
+                MaterialRules.condition(stoneDepthFloorSurface1, DJ_PEBBLES),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.ORE_VEIN_A, -0.672, -0.215), DJ_DIRTY_PEBBLES),
+                    DJ_PEBBLES
+                ))
+            )),
+            // Underwater surface builder
+            MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthFloorSurface1, DJ_PEBBLES),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.ORE_VEIN_A, -0.672, -0.215), DJ_DIRTY_PEBBLES),
+                    DJ_PEBBLES
+                ))
             )
         ));
     }
