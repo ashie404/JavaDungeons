@@ -51,16 +51,20 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_stone_bricks");
     public static final Block DJ_MOSSY_STONE_BRICKS =
         RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_mossy_stone_bricks");
+
+    // metals
+    public static final Block DJ_GOLD_BLOCK =
+        RegistryHelper.registerBlock(new BaseBlock(3.0F, 6.0F, BlockSoundGroup.METAL), "dj_gold_block");
     
     // stone tiles
-    public static final Block DJ_STONE_TILES =
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_stone_tiles");
-    public static final Block DJ_DIRTY_STONE_TILES =
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles");
-    public static final Block DJ_DIRTY_STONE_TILES_1 =
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles_1");
-    public static final Block DJ_DIRTY_STONE_TILES_2 =
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles_2");
+    public static final SlabStairBlock DJ_STONE_TILES =
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_stone_tiles");
+    public static final SlabStairBlock DJ_DIRTY_STONE_TILES =
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles");
+    public static final SlabStairBlock DJ_DIRTY_STONE_TILES_1 =
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles_1", "dj_dirty_stone_tiles_slab_1", "dj_dirty_stone_tiles_stairs_1");
+    public static final SlabStairBlock DJ_DIRTY_STONE_TILES_2 =
+        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dj_dirty_stone_tiles_2", "dj_dirty_stone_tiles_slab_2", "dj_dirty_stone_tiles_stairs_2");
     
     // bricks
     public static final Block DJ_BRICKS = 
@@ -140,14 +144,23 @@ public class DingyJungleBlocks {
             content.add(DJ_MOSSY_CHISELED_STONE);
             content.add(DJ_STONE_BRICKS);
             content.add(DJ_MOSSY_STONE_BRICKS);
-            content.add(DJ_STONE_TILES);
-            content.add(DJ_DIRTY_STONE_TILES);
-            content.add(DJ_DIRTY_STONE_TILES_1);
-            content.add(DJ_DIRTY_STONE_TILES_2);
+            content.add(DJ_STONE_TILES.base);
+            content.add(DJ_STONE_TILES.slab);
+            content.add(DJ_STONE_TILES.stairs);
+            content.add(DJ_DIRTY_STONE_TILES.base);
+            content.add(DJ_DIRTY_STONE_TILES.slab);
+            content.add(DJ_DIRTY_STONE_TILES.stairs);
+            content.add(DJ_DIRTY_STONE_TILES_1.base);
+            content.add(DJ_DIRTY_STONE_TILES_1.slab);
+            content.add(DJ_DIRTY_STONE_TILES_1.stairs);
+            content.add(DJ_DIRTY_STONE_TILES_2.base);
+            content.add(DJ_DIRTY_STONE_TILES_2.slab);
+            content.add(DJ_DIRTY_STONE_TILES_2.stairs);
             content.add(DJ_BRICKS);
             content.add(DJ_SLIGHTLY_MOSSY_BRICKS);
             content.add(DJ_MOSSY_BRICKS);
             content.add(DJ_LARGE_BRICKS);
+            content.add(DJ_GOLD_BLOCK);
             content.add(DJ_BLUE_GLAZED_STONE_FLOOR);
             content.add(DJ_DIRTY_BLUE_GLAZED_STONE_FLOOR);
             content.add(DJ_YELLOW_GLAZED_STONE_FLOOR);

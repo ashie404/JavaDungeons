@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/dingy_jungle/dirty_stone_tiles_slab_2" },
+        "type=top": { "model":    "dungeons:block/dingy_jungle/dirty_stone_tiles_slab_2_top" },
+        "type=double": { "model": "dungeons:block/dingy_jungle/dirty_stone_tiles_2" }
+    }
+}
