@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -90,39 +91,41 @@ public class DingyJungleBlocks {
     public static final Block DJ_TILE =
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_tile");
     public static final Block DJ_CRACKED_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_cracked_tile");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_cracked_tile");
+    public static final Block DJ_DIRTY_CRACKED_TILE =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_dirty_cracked_tile");
     public static final Block DJ_GOLD_EMBEDDED_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_gold_embedded_tile");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_gold_embedded_tile");
     
     // plants
     public static final Block DJ_GRASS =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_grass");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_grass");
     public static final Block DJ_RED_FERN =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_red_fern");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_red_fern");
     public static final Block DJ_TALL_FERN =
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_tall_fern");
+        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_tall_fern");
     public static final Block DJ_TALL_GRASS =
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_tall_grass");
+        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_tall_grass");
     public static final Block DJ_SHRUB =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_shrub");
     public static final Block DJ_DEAD_SHRUB =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_dead_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_dead_shrub");
     public static final Block DJ_BUSH =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_bush");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_bush");
     public static final Block DJ_LARGE_JUNGLE_PLANT =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_large_jungle_plant");
+        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FERN =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_large_jungle_fern");
+        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_fern");
     public static final Block DJ_FLOWERING_JUNGLE_PLANT =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_flowering_jungle_plant");
+        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_flowering_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FLOWER =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_large_jungle_flower");
+        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_flower");
     
     // custom dingy jungle wood & leaves
     public static final Block DJ_JUNGLE_LOG =
         RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F, 2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_log");
     public static final Block DJ_JUNGLE_LEAVES =
-        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
 
     public static void init() {
         JavaDungeons.log.info("Registering Dingy Jungle Blocks!");
@@ -168,6 +171,7 @@ public class DingyJungleBlocks {
             content.add(DJ_YELLOW_GLAZED_STONE_FLOOR);
             content.add(DJ_TILE);
             content.add(DJ_CRACKED_TILE);
+            content.add(DJ_DIRTY_CRACKED_TILE);
             content.add(DJ_GOLD_EMBEDDED_TILE);
             content.add(DJ_GRASS);
             content.add(DJ_TALL_GRASS);

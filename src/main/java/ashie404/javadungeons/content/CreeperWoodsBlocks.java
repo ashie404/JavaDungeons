@@ -10,6 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -94,11 +95,11 @@ public class CreeperWoodsBlocks {
 
     // plants
     public static final Block CW_SHRUB = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cw_shrub");
     public static final Block CW_FLOWER_PATCH = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_flower_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "cw_flower_patch");
     public static final Block CW_POP_FLOWER = 
-        RegistryHelper.registerBlock(new GlowingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_pop_flower");
+        RegistryHelper.registerBlock(new GlowingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cw_pop_flower");
 
     // custom dungeons blocks
     public static final Block CW_GLOW_MUSHROOM = 

@@ -5,6 +5,7 @@ import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
@@ -92,11 +93,11 @@ public class GenericBlocks {
     public static final SlabStairBlock STONE_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "stone_tiles");
     public static final SlabStairBlock DIRTY_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.copy(STONE_TILES.base)), "dirty_stone_tiles");
     public static final SlabStairBlock DIRTY_STONE_TILES_1 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.copy(STONE_TILES.base)), "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock DIRTY_STONE_TILES_2 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.copy(STONE_TILES.base)), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
     public static final SlabStairBlock COBBLESTONE =
         RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cobblestone");
     public static final Block MOSSY_COBBLESTONE =
@@ -114,21 +115,21 @@ public class GenericBlocks {
     public static final Block FLOWERING_SQUID_COAST_LEAVES = 
         RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "flowering_squid_coast_leaves");
     public static final Block SHORT_GRASS = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "short_grass");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "short_grass");
     public static final Block FERN = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "fern");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "fern");
     public static final Block SHRUB = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "shrub");
     public static final Block YELLOW_TULIP = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "yellow_tulip");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "yellow_tulip");
     public static final Block FLOWER_PATCH = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "flower_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "flower_patch");
     public static final Block DAISY_PATCH = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "daisy_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "daisy_patch");
     public static final Block WATER_PLANT = 
-        RegistryHelper.registerBlock(new WaterPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.WET_GRASS)), "water_plant");
+        RegistryHelper.registerBlock(new WaterPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.WET_GRASS).breakInstantly()), "water_plant");
     public static final Block HANGING_ROSES = 
-        RegistryHelper.registerBlock(new HangingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "hanging_roses");
+        RegistryHelper.registerBlock(new HangingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "hanging_roses");
 
     // sanded andesite
     public static final Block SANDED_ANDESITE = 

@@ -6,6 +6,7 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
@@ -25,29 +26,29 @@ public class PumpkinPasturesBlocks {
 
     // saplings
     public static final Block PM_RED_AUTUMNAL_SAPLING = 
-        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.RED_AUTUMNAL, FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_red_autumnal_sapling");
+        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.RED_AUTUMNAL, FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "pm_red_autumnal_sapling");
     public static final Block PM_YELLOW_AUTUMNAL_SAPLING = 
-        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.YELLOW_AUTUMNAL, FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_yellow_autumnal_sapling");
+        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.YELLOW_AUTUMNAL, FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "pm_yellow_autumnal_sapling");
 
     // plants
     public static final Block PM_SHRUB = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_shrub");
     public static final Block PM_CHARRED_GRASS = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_charred_grass");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_charred_grass");
     public static final Block PM_DEAD_SAPLING = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_dead_sapling");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_dead_sapling");
     public static final Block PM_SAPLING = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_sapling");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_sapling");
     public static final Block PM_LAVENDER = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_lavender");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_lavender");
     
     // tall plants
     public static final Block PM_TALL_FERN = 
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_tall_fern");
+        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_tall_fern");
     public static final Block PM_DRY_TALL_GRASS = 
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_dry_tall_grass");
+        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_dry_tall_grass");
     public static final Block PM_CHARRED_TALL_GRASS = 
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "pm_charred_tall_grass");
+        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "pm_charred_tall_grass");
 
     // melons
     public static final Block PM_BURNT_PUMPKIN = 

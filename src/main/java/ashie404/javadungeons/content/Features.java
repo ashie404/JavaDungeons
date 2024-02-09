@@ -17,6 +17,9 @@ public class Features {
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_AUTUMNAL_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("red_autumnal_tree"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_AUTUMNAL_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("yellow_autumnal_tree"));
     public static final RegistryKey<ConfiguredFeature<?, ?>> SOGGY_SWAMP_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("soggy_swamp_tree"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> JUNGLE_OAK = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("fancy_jungle_oak"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> JUNGLE_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("jungle_tree"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MEGA_JUNGLE_TREE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, JavaDungeons.ID("mega_jungle_tree"));
     
     // Mod features
     public static final Feature<CountConfig> GLOW_MUSHROOM = new GlowMushroomFeature(CountConfig.CODEC);

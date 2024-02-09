@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -80,19 +81,19 @@ public class CactiCanyonBlocks {
 
     // plant blocks
     public static final Block CC_DESERT_GRASS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_desert_grass");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_desert_grass");
     public static final Block CC_CACTUS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_cactus");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_cactus");
     public static final Block CC_SMALL_CACTUS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_small_cactus");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_small_cactus");
     public static final Block CC_FERN = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_fern");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_fern");
     public static final Block CC_FLOWERS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_flowers");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_flowers");
     public static final Block CC_YUCCA = 
-        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_yucca");
+        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_yucca");
     public static final Block CC_TALL_CACTUS = 
-        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_tall_cactus");
+        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "cc_tall_cactus");
     
     public static void init() {
         JavaDungeons.log.info("Registering Cacti Canyon Blocks!");
