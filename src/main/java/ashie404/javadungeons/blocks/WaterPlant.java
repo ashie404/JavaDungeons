@@ -3,7 +3,6 @@ package ashie404.javadungeons.blocks;
 import com.mojang.serialization.MapCodec;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidFillable;
@@ -14,7 +13,6 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -24,8 +22,6 @@ import net.minecraft.world.WorldAccess;
 public class WaterPlant extends PlantBlock implements FluidFillable {
 
     // water plant block
-
-    
 
     protected MapCodec<? extends WaterPlant> getCodec() { return createCodec(WaterPlant::new); }
 
@@ -38,12 +34,8 @@ public class WaterPlant extends PlantBlock implements FluidFillable {
         return floor.isSideSolidFullSquare(view, pos, Direction.UP) && floor.getBlock() != Blocks.MAGMA_BLOCK;
     }
 
-    private WaterPlant(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    public WaterPlant(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
+    public WaterPlant(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
     }
 
     public boolean canFillWithFluid(PlayerEntity entity, BlockView view, BlockPos pos, BlockState state, Fluid fluid) {

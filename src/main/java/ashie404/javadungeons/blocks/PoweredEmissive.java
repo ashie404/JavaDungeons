@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 
 import net.minecraft.block.RedstoneLampBlock;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 
 public class PoweredEmissive extends RedstoneLampBlock {
@@ -19,10 +18,9 @@ public class PoweredEmissive extends RedstoneLampBlock {
         return (blockState) -> { return blockState.get(Properties.LIT) ? lightLvl : 0; };
     }
 
-    public PoweredEmissive(int lightLevel, float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).luminance(getLightLevel()));
-        lightLvl = lightLevel;
-        
+    public PoweredEmissive(Settings settings, int lightLevel) {
+        super(FabricBlockSettings.copyOf(settings).luminance(getLightLevel()));
+        lightLvl = lightLevel;       
     }
 
 }

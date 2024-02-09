@@ -10,7 +10,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -22,7 +21,7 @@ public class Brazier extends Block {
 
     // brazier block
 
-    private DefaultParticleType particle;
+    private final DefaultParticleType particle;
     protected final VoxelShape SHAPE;
     private final VoxelShape DEFAULT_SHAPE = VoxelShapes.union(Block.createCuboidShape(-4.0D, 0.0D, -4.0D, 20.0D, 4.0D, 20.0D),Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 20.0D, 16.0D));
     private final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
@@ -33,8 +32,8 @@ public class Brazier extends Block {
 		return SHAPE;
 	}
 
-    public Brazier(DefaultParticleType p, float hardness, float resistance, BlockSoundGroup sounds, String type, boolean soggySwamp) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(type != "unlit" ? 15 : 0).ticksRandomly().solid());
+    public Brazier(Settings settings, DefaultParticleType p, boolean soggySwamp) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().ticksRandomly().solid());
         this.particle = p;
         this.TYPE = soggySwamp;
         this.SHAPE = soggySwamp ? SS_SHAPE : DEFAULT_SHAPE;

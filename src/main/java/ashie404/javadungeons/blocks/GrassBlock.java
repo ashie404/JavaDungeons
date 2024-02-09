@@ -3,7 +3,6 @@ package ashie404.javadungeons.blocks;
 import com.mojang.serialization.MapCodec;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,7 +18,6 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.registry.tag.FluidTags;
@@ -30,8 +28,6 @@ public class GrassBlock extends SnowyBlock {
 
     // spreadable grass block
 
-    
-
     private Block dirtVariant;
     private Block pathVariant;
     private boolean canTill = false;
@@ -39,19 +35,19 @@ public class GrassBlock extends SnowyBlock {
 
     public MapCodec<GrassBlock> getCodec() { return createCodec(GrassBlock::new); }
 
-    private GrassBlock(AbstractBlock.Settings settings) {
+    private GrassBlock(Settings settings) {
         super(settings);
     }
 
     // Non-pathable/tillable constructor
-    public GrassBlock(float hardness, float resistance, BlockSoundGroup sounds, Block dirtBlock) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).ticksRandomly());
+    public GrassBlock(Settings settings, Block dirtBlock) {
+        super(FabricBlockSettings.copyOf(settings).ticksRandomly());
         dirtVariant = dirtBlock; 
     }
 
     // Pathable/tillable constructor
-    public GrassBlock(float hardness, float resistance, boolean tillable, BlockSoundGroup sounds, Block pathBlock, Block dirtBlock) {
-        this(hardness, resistance, sounds, dirtBlock);
+    public GrassBlock(Settings settings, boolean tillable, Block pathBlock, Block dirtBlock) {
+        this(settings, dirtBlock);
         canPath = true;
         canTill = tillable;
         pathVariant = pathBlock;

@@ -10,7 +10,6 @@ import net.minecraft.block.TallPlantBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class DesertTallPlant extends TallPlantBlock {
 
@@ -28,7 +27,7 @@ public class DesertTallPlant extends TallPlantBlock {
         return SHAPE;
     }
 
-    public DesertTallPlant(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
+    public DesertTallPlant(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
     }
 }

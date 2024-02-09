@@ -22,8 +22,8 @@ public class RedstoneCrystal extends Block {
         return SHAPE;
     }
 
-    public RedstoneCrystal(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(12));
+    public RedstoneCrystal(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(12));
     }
 
     public boolean emitsRedstonePower(BlockState state) {

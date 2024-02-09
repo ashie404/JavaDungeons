@@ -12,7 +12,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class HangingPlant extends Block {
 
@@ -24,8 +23,8 @@ public class HangingPlant extends Block {
         return SHAPE;
     }
 
-    public HangingPlant(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
+    public HangingPlant(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {

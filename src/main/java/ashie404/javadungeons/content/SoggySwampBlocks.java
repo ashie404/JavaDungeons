@@ -5,8 +5,14 @@ import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.DirtPathBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.PillarBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -16,47 +22,47 @@ public class SoggySwampBlocks {
 
     // ground related
     public static final Block SS_DIRT_PATH = 
-        RegistryHelper.registerBlock(new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "ss_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "ss_dirt_path");
     public static final Block SS_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, SS_DIRT_PATH), "ss_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), true, SS_DIRT_PATH), "ss_dirt");
     public static final Block SS_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, SS_DIRT), "ss_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, SS_DIRT), "ss_grass_block");
 
     // stone related
     public static final Block SS_MOSSY_STONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "ss_mossy_stone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ss_mossy_stone");
     public static final Block SS_MOSSY_COBBLESTONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "ss_mossy_cobblestone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ss_mossy_cobblestone");
     public static final Block SS_MOSSY_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "ss_mossy_stone_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ss_mossy_stone_bricks");
     public static final Block SS_MOSSY_POLISHED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "ss_mossy_polished_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ss_mossy_polished_andesite");
     public static final Block SS_MOSSY_CHISELED_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "ss_mossy_chiseled_stone_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ss_mossy_chiseled_stone_bricks");
 
     // swamp tree
     public static final Block SS_SWAMP_LOG = 
-        RegistryHelper.registerBlock(new Pillar(2.0F, 3.0F, BlockSoundGroup.WOOD), "ss_swamp_log");
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_swamp_log");
     public static final Block SS_SWAMP_LEAVES = 
-        RegistryHelper.registerBlock(new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS), "ss_swamp_leaves");
+        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "ss_swamp_leaves");
     public static final SlabStairBlock SS_SWAMP_PLANKS = 
-        RegistryHelper.registerBSS(new SlabStairBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "ss_swamp_planks");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_swamp_planks");
     public static final Block SS_SWAMP_SAPLING = 
-        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.SWAMP, 0.0F, 0.0F, BlockSoundGroup.GRASS), "ss_swamp_sapling");
+        RegistryHelper.registerBlock(new Sapling(SaplingGenerators.SWAMP, FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "ss_swamp_sapling");
 
     // bridge related
     public static final Block SS_BRIDGE_PLANKS = 
-        RegistryHelper.registerBlock(new Slab(2.0F, 3.0F, BlockSoundGroup.WOOD), "ss_bridge_planks");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_bridge_planks");
     public static final Block SS_ROPE_FENCE = 
-        RegistryHelper.registerBlock(new Fence(2.0F, 3.0F, BlockSoundGroup.WOOD), "ss_rope_fence");
+        RegistryHelper.registerBlock(new FenceBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_rope_fence");
 
     // braziers
     public static final Block SS_UNLIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(null, 1.5F, 6.0F, BlockSoundGroup.STONE, "unlit", true), "ss_unlit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE), null, true), "ss_unlit_brazier");
     public static final Block SS_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(ParticleTypes.FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "lit", true), "ss_lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE).luminance(15), ParticleTypes.FLAME, true), "ss_lit_brazier");
     public static final Block SS_GREEN_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Particles.GREEN_FLAME, 1.5F, 6.0F, BlockSoundGroup.STONE, "green_lit", true), "ss_green_lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE).luminance(15), Particles.GREEN_FLAME, true), "ss_green_lit_brazier");
 
     public static void init() {
         // add to item group

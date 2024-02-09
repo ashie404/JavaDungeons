@@ -9,13 +9,10 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class Crystal extends Block {
 
     // crystal block
-
-    
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
@@ -23,8 +20,8 @@ public class Crystal extends Block {
         return SHAPE;
     }
 
-    public Crystal(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(12));
+    public Crystal(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(12));
         
     }
 }

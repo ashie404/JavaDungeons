@@ -2,9 +2,6 @@ package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.registry.RegistryHelper;
-import net.minecraft.entity.decoration.painting.PaintingVariant;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 
 public class Paintings {
 

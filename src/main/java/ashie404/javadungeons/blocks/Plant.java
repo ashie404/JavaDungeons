@@ -3,7 +3,6 @@ package ashie404.javadungeons.blocks;
 import com.mojang.serialization.MapCodec;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -12,7 +11,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class Plant extends PlantBlock {
 
@@ -25,11 +23,7 @@ public class Plant extends PlantBlock {
         return SHAPE;
     }
 
-    private Plant(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    public Plant(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
+    public Plant(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
     }
 }

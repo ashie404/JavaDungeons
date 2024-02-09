@@ -16,7 +16,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class Tent extends Block {
 
@@ -25,8 +24,8 @@ public class Tent extends Block {
     public static final DirectionProperty FACING;
     public static final VoxelShape SHAPE;
 
-    public Tent(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).nonOpaque());
+    public Tent(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).collidable(false).nonOpaque());
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
     }
 

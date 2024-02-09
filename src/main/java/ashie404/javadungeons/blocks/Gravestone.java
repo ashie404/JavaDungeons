@@ -1,11 +1,9 @@
 package ashie404.javadungeons.blocks;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.shape.VoxelShape;
@@ -58,18 +56,17 @@ public class Gravestone extends Block {
         builder.add(FACING);
     }
 
-    public Gravestone(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
+    public Gravestone(Settings settings) {
+        super(settings);
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
-        
     }
 
     static {
         FACING = HorizontalFacingBlock.FACING;
-        N_SHAPE = BaseBlock.createCuboidShape(0.0D, 0.0D, 11.0D, 16.0D, 18.0D, 16.0D);
-        S_SHAPE = BaseBlock.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 18.0D, 5.0D);
-        E_SHAPE = BaseBlock.createCuboidShape(0.0D, 0.0D, 0.0D, 5.0D, 18.0D, 16.0D);
-        W_SHAPE = BaseBlock.createCuboidShape(11.0D, 0.0D, 0.0D, 16.0D, 18.0D, 16.0D);
+        N_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 11.0D, 16.0D, 18.0D, 16.0D);
+        S_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 18.0D, 5.0D);
+        E_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 5.0D, 18.0D, 16.0D);
+        W_SHAPE = Block.createCuboidShape(11.0D, 0.0D, 0.0D, 16.0D, 18.0D, 16.0D);
     }
 
 }

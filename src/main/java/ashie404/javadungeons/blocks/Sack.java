@@ -13,7 +13,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -63,8 +62,8 @@ public class Sack extends Block implements Waterloggable {
         return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
     }
 
-    public Sack(float hardness, float resistance, BlockSoundGroup sounds, boolean small) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque());
+    public Sack(Settings settings, boolean small) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque());
         this.small = small;
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
     }

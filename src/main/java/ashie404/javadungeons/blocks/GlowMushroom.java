@@ -5,7 +5,6 @@ import net.minecraft.block.BlockState;
 
 import net.minecraft.block.SeaPickleBlock;
 import net.minecraft.entity.Entity;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -56,7 +55,7 @@ public class GlowMushroom extends SeaPickleBlock {
         super.onSteppedOn(world, pos, state, entity);
     }
 
-    public GlowMushroom(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).collidable(false).luminance(12));
+    public GlowMushroom(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).collidable(false).luminance(12));
     }
 }

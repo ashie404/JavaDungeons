@@ -4,7 +4,9 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -13,27 +15,27 @@ public class DesertTempleBlocks {
 
     // andesite related
     public static final SlabStairBlock DT_SANDY_ANDESITE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_andesite");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_sandy_andesite");
     public static final Block DT_CHISELED_SANDY_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_chiseled_sandy_andesite");
     public static final Block DT_CHISELED_SANDY_ANDESITE_2 = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_andesite_2");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_chiseled_sandy_andesite_2");
     public static final Block DT_SANDY_ANDESITE_PILLAR = 
-        RegistryHelper.registerBlock(new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_andesite_pillar");
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_sandy_andesite_pillar");
 
     // stone brick related
     public static final SlabStairBlock DT_SANDY_STONE_BRICKS = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
     public static final SlabStairBlock DT_SANDY_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_sandy_stone_tiles");
     public static final Block DT_CRACKED_SANDY_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_cracked_sandy_stone_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_cracked_sandy_stone_bricks");
     public static final Block DT_CHISELED_SANDY_STONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_chiseled_sandy_stone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_chiseled_sandy_stone");
 
     // stone related
     public static final Block DT_SANDY_COBBLESTONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dt_sandy_cobblestone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dt_sandy_cobblestone");
 
     public static void init() {
         JavaDungeons.log.info("Registering Desert Temple Blocks!");

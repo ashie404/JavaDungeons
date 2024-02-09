@@ -4,8 +4,12 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.registry.RegistryHelper;
 import ashie404.javadungeons.blocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.DirtPathBlock;
+import net.minecraft.block.PillarBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -14,101 +18,101 @@ public class CreeperWoodsBlocks {
 
     // stone variants
     public static final Block CW_MOSSY_COBBLESTONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_cobblestone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_cobblestone");
     public static final Block CW_MOSSY_STONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_stone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_stone");
     public static final Block CW_MOSSY_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_stone_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_stone_bricks");
     public static final Block CW_MOSSY_CHISELED_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_chiseled_stone_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_chiseled_stone_bricks");
     public static final Block CW_SLOTTED_STONE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_slotted_stone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_slotted_stone");
 
     // andesite variants
     public static final Block CW_MOSSY_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_andesite");
     public static final Block CW_CRACKED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_cracked_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_cracked_andesite");
 
     // dark andesite
     public static final SlabStairBlock CW_DARK_POLISHED_ANDESITE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dark_polished_andesite", "cw_dark_andesite_slab", "cw_dark_andesite_stairs");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_polished_andesite", "cw_dark_andesite_slab", "cw_dark_andesite_stairs");
     public static final Block CW_MOSSY_DARK_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_dark_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_dark_andesite");
     public static final Block CW_MOSSY_DARK_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_dark_andesite_tiles");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_dark_andesite_tiles");
     public static final SlabStairBlock CW_DARK_ANDESITE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dark_andesite_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_andesite_tiles");
     public static final Block CW_DARK_CHISELED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE ), "cw_dark_chiseled_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_chiseled_andesite");
     public static final Block CW_DARK_CHISELED_ANDESITE_2 = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dark_chiseled_andesite_2");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_chiseled_andesite_2");
     public static final Block CW_DARK_ANDESITE_PILLAR = 
-        RegistryHelper.registerBlock(new Pillar(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dark_andesite_pillar");
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_andesite_pillar");
     
     // ground related
     public static final Block CW_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_grassy_dirt");
     public static final Block CW_DENSE_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS), "cw_dense_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "cw_dense_grassy_dirt");
     public static final Block CW_DIRT_PATH = 
-        RegistryHelper.registerBlock(new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_path");
     public static final Block CW_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, CW_DIRT_PATH), "cw_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), true, CW_DIRT_PATH), "cw_dirt");
     public static final Block CW_DIRT_SLAB = 
-        RegistryHelper.registerBlock(new Slab(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_dirt_slab");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_slab");
     public static final Block CW_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, CW_DIRT), "cw_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, CW_DIRT), "cw_grass_block");
     public static final Block CW_ROCKY_DIRT_PATH = 
-        RegistryHelper.registerBlock(new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_rocky_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_dirt_path");
     public static final Block CW_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, CW_ROCKY_DIRT_PATH), "cw_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), false, CW_ROCKY_DIRT_PATH), "cw_rocky_dirt");
     public static final Block CW_ROCKY_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_rocky_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_grassy_dirt");
     public static final Block CW_COBWEBBED_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "cw_cobwebbed_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_cobwebbed_dirt");
     
     // creeper woods granite variant
     public static final SlabStairBlock CW_POLISHED_GRANITE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_polished_granite");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_polished_granite");
     public static final Block CW_CHISELED_GRANITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_chiseled_granite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_chiseled_granite");
     public static final Block CW_DIRTY_GRANITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dirty_granite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dirty_granite");
 
     // stone tiles
     public static final SlabStairBlock CW_DIRTY_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dirty_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dirty_stone_tiles");
     public static final SlabStairBlock CW_DIRTY_STONE_TILES_1 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dirty_stone_tiles_1", "cw_dirty_stone_tiles_slab_1", "cw_dirty_stone_tiles_stairs_1");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dirty_stone_tiles_1", "cw_dirty_stone_tiles_slab_1", "cw_dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock CW_DIRTY_STONE_TILES_2 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dirty_stone_tiles_2", "cw_dirty_stone_tiles_slab_2", "cw_dirty_stone_tiles_stairs_2");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dirty_stone_tiles_2", "cw_dirty_stone_tiles_slab_2", "cw_dirty_stone_tiles_stairs_2");
 
     // floor tiles
     public static final Block CW_DIRTY_FLOOR_TILE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_dirty_floor_tile");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dirty_floor_tile");
 
     // plants
     public static final Block CW_SHRUB = 
-        RegistryHelper.registerBlock(new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS), "cw_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_shrub");
     public static final Block CW_FLOWER_PATCH = 
-        RegistryHelper.registerBlock(new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS), "cw_flower_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_flower_patch");
     public static final Block CW_POP_FLOWER = 
-        RegistryHelper.registerBlock(new GlowingPlant(0.0F, 0.0F, BlockSoundGroup.GRASS), "cw_pop_flower");
+        RegistryHelper.registerBlock(new GlowingPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_pop_flower");
 
     // custom dungeons blocks
     public static final Block CW_GLOW_MUSHROOM = 
-        RegistryHelper.registerBlock(new GlowMushroom(0.0F, 0.0F, BlockSoundGroup.SLIME), "cw_glow_mushroom");
+        RegistryHelper.registerBlock(new GlowMushroom(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.SLIME)), "cw_glow_mushroom");
     public static final Block CW_GLOW_MELON = 
-        RegistryHelper.registerBlock(new EmissiveBlock(14, 1.0F, 1.0F, BlockSoundGroup.WOOD), "cw_glow_melon");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.0F, 1.0F).sounds(BlockSoundGroup.WOOD).luminance(14)), "cw_glow_melon");
     public static final Block CW_GLOW_MELON_ROOTS = 
-        RegistryHelper.registerBlock(new BaseBlock(0.6F, 0.6F, BlockSoundGroup.GRASS), "cw_glow_melon_roots");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "cw_glow_melon_roots");
 
     // gravestones
     public static final Block CW_GRAVESTONE = 
-        RegistryHelper.registerBlock(new Gravestone(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_gravestone");
+        RegistryHelper.registerBlock(new Gravestone(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_gravestone");
     public static final Block CW_MOSSY_GRAVESTONE = 
-        RegistryHelper.registerBlock(new Gravestone(1.5F, 6.0F, BlockSoundGroup.STONE), "cw_mossy_gravestone");
+        RegistryHelper.registerBlock(new Gravestone(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_gravestone");
 
     public static void init() {
         JavaDungeons.log.info("Registering Creeper Woods Blocks!");

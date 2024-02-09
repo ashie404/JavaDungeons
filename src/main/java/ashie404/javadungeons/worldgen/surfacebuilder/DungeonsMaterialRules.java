@@ -19,7 +19,6 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules.MaterialRule;
 public class DungeonsMaterialRules {
     // Vanilla Block Material Rules
     private static final MaterialRule STONE = makeStateRule(Blocks.STONE);
-    private static final MaterialRule GRAVEL = makeStateRule(Blocks.GRAVEL);
 
     // Generic Material Rules
     private static final MaterialRule GRASS = makeStateRule(GenericBlocks.GRASS_BLOCK);
@@ -183,7 +182,7 @@ public class DungeonsMaterialRules {
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, DJ_GRASS),
                 MaterialRules.condition(stoneDepthFloorSurface1, DJ_PEBBLES),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.ORE_VEIN_A, -0.672, -0.215), DJ_DIRTY_PEBBLES),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
                     DJ_PEBBLES
                 ))
             )),
@@ -191,7 +190,7 @@ public class DungeonsMaterialRules {
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, DJ_PEBBLES),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.ORE_VEIN_A, -0.672, -0.215), DJ_DIRTY_PEBBLES),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
                     DJ_PEBBLES
                 ))
             )

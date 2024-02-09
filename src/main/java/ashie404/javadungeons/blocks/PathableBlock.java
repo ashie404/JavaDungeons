@@ -1,6 +1,5 @@
 package ashie404.javadungeons.blocks;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -13,7 +12,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.world.World;
 
 public class PathableBlock extends Block {
@@ -23,8 +21,8 @@ public class PathableBlock extends Block {
     private Block pathVariant;
     private boolean canTill;
 
-    public PathableBlock(float hardness, float resistance, boolean tillable, BlockSoundGroup sounds, Block pathVariant) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds));
+    public PathableBlock(Settings settings, boolean tillable, Block pathVariant) {
+        super(settings);
         
         this.pathVariant = pathVariant;
         this.canTill = tillable;

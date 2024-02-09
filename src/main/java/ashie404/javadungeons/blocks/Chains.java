@@ -8,7 +8,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.shape.VoxelShape;
@@ -20,7 +19,6 @@ public class Chains extends Block {
 
     // chains block
 
-    
     public static final BooleanProperty ABOVE;
     public static final BooleanProperty BELOW;
 
@@ -62,10 +60,9 @@ public class Chains extends Block {
         builder.add(BELOW);
     }
 
-    public Chains(float hardness, float resistance, BlockSoundGroup sounds) {
-        super(FabricBlockSettings.create().strength(hardness, resistance).sounds(sounds).nonOpaque().collidable(false));
+    public Chains(Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
         this.setDefaultState(this.stateManager.getDefaultState().with(ABOVE, false).with(BELOW, false));
-        
     }
 
     static {

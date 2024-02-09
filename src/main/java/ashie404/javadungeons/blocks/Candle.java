@@ -13,7 +13,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -34,8 +33,8 @@ public class Candle extends Block {
 		return SHAPE;
 	}
 
-    public Candle(float hardness, float resistance, BlockSoundGroup sounds, boolean isGreen) {
-        super(FabricBlockSettings.create().pistonBehavior(PistonBehavior.DESTROY).strength(hardness, resistance).sounds(sounds).nonOpaque().luminance(15).ticksRandomly());
+    public Candle(Settings settings, boolean isGreen) {
+        super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(15).ticksRandomly());
         this.particle = isGreen ? Particles.GREEN_FLAME : ParticleTypes.FLAME;
         
     }

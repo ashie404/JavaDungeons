@@ -4,8 +4,14 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.DirtPathBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.LanternBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -15,218 +21,218 @@ public class GenericBlocks {
 
     // generic blocks that aren't in mc
     public static final Block FLOOR_TILE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "floor_tile");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "floor_tile");
     public static final Block DIRTY_FLOOR_TILE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_floor_tile");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_floor_tile");
     public static final Block CRATE = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "crate");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "crate");
     public static final Block RIPPED_BANNER = 
-        RegistryHelper.registerBlock(new Banner(2.0F, 3.0F, BlockSoundGroup.WOOD), "ripped_banner");
+        RegistryHelper.registerBlock(new Banner(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ripped_banner");
     public static final Block TENT = 
-        RegistryHelper.registerBlock(new Tent(2.0F, 3.0F, BlockSoundGroup.WOOD), "tent");
+        RegistryHelper.registerBlock(new Tent(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "tent");
     public static final Block ROPE_FENCE = 
-        RegistryHelper.registerBlock(new Fence(2.0F, 3.0F, BlockSoundGroup.WOOD), "rope_fence");
+        RegistryHelper.registerBlock(new FenceBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "rope_fence");
     public static final Block DUNGEONS_LANTERN = 
-        RegistryHelper.registerBlock(new Lantern(5.0F, 6.0F, BlockSoundGroup.LANTERN), "dungeons_lantern");
+        RegistryHelper.registerBlock(new LanternBlock(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN).luminance(15)), "dungeons_lantern");
     public static final Block SACK = 
-        RegistryHelper.registerBlock(new Sack(0.8F, 0.8F, BlockSoundGroup.WOOL, false), "sack");
+        RegistryHelper.registerBlock(new Sack(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.WOOL), false), "sack");
     public static final Block SMALL_SACK = 
-        RegistryHelper.registerBlock(new Sack(0.8F, 0.8F, BlockSoundGroup.WOOL, true), "small_sack");
+        RegistryHelper.registerBlock(new Sack(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.WOOL), true), "small_sack");
 
     // food related
     public static final Block BARREL_CLOSED = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "barrel_closed");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "barrel_closed");
     public static final Block FISH_BARREL = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "fish_barrel");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "fish_barrel");
     public static final Block APPLE_FOOD_BOX = 
-        RegistryHelper.registerBlock(new FoodBox(2.0F, 3.0F, BlockSoundGroup.WOOD), "apple_food_box");
+        RegistryHelper.registerBlock(new FoodBox(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "apple_food_box");
     public static final Block ORANGE_FOOD_BOX = 
-        RegistryHelper.registerBlock(new FoodBox(2.0F, 3.0F, BlockSoundGroup.WOOD), "orange_food_box");
+        RegistryHelper.registerBlock(new FoodBox(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "orange_food_box");
     public static final Block FISH_FOOD_BOX = 
-        RegistryHelper.registerBlock(new FoodBox(2.0F, 3.0F, BlockSoundGroup.WOOD), "fish_food_box");
+        RegistryHelper.registerBlock(new FoodBox(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "fish_food_box");
     public static final Block CORN_FOOD_BOX = 
-        RegistryHelper.registerBlock(new FoodBox(2.0F, 3.0F, BlockSoundGroup.WOOD), "corn_food_box");
+        RegistryHelper.registerBlock(new FoodBox(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "corn_food_box");
 
     // ground related
     public static final Block DIRT_SLAB = 
-        RegistryHelper.registerBlock(new Slab(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dirt_slab");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "dirt_slab");
     public static final Block DIRT_PATH = 
-        RegistryHelper.registerBlock(new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "dirt_path");
     public static final Block ROCKY_DIRT_PATH = 
-        RegistryHelper.registerBlock(new PathBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "rocky_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "rocky_dirt_path");
     public static final Block DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(0.5F, 0.5F, true, BlockSoundGroup.GRAVEL, DIRT_PATH), "dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), true, DIRT_PATH), "dirt");
     public static final Block ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(0.5F, 0.5F, false, BlockSoundGroup.GRAVEL, ROCKY_DIRT_PATH), "rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), false, ROCKY_DIRT_PATH), "rocky_dirt");
     public static final Block GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock( 0.6F, 0.6F, true, BlockSoundGroup.GRASS, Blocks.DIRT_PATH, DIRT), "grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, DIRT), "grass_block");
     public static final Block DENSE_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock( 0.6F, 0.6F, BlockSoundGroup.GRASS), "dense_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS)), "dense_grassy_dirt");
     public static final Block GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "grassy_dirt");
     public static final Block ROCKY_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "rocky_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "rocky_grassy_dirt");
     public static final Block DARK_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new BaseBlock(0.5F, 0.5F, BlockSoundGroup.GRAVEL), "dark_rocky_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "dark_rocky_dirt");
 
     // wood related
     public static final Block FLOORBOARDS = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "floorboards");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "floorboards");
     public static final Block BOOKSHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "bookshelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "bookshelf");
     public static final Block DUSTY_BOOKSHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "dusty_bookshelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "dusty_bookshelf");
     public static final Block EMPTY_BOOKSHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "empty_bookshelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "empty_bookshelf");
     public static final Block BRIDGE_PLANKS = 
-        RegistryHelper.registerBlock(new Slab(2.0F, 3.0F, BlockSoundGroup.WOOD), "bridge_planks");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "bridge_planks");
     public static final Block DUNGEONS_PLANKS = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "dungeons_planks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "dungeons_planks");
 
     // stone related
     public static final SlabStairBlock STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "stone_tiles");
     public static final SlabStairBlock DIRTY_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles");
     public static final SlabStairBlock DIRTY_STONE_TILES_1 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles_1", "dirty_stone_tiles_slab_1", "dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock DIRTY_STONE_TILES_2 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
     public static final SlabStairBlock COBBLESTONE =
-        RegistryHelper.registerBSS(new SlabStairBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cobblestone");
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cobblestone");
     public static final Block MOSSY_COBBLESTONE =
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "mossy_cobblestone");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "mossy_cobblestone");
 
     // andesite related
     public static final Block CRACKED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "cracked_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cracked_andesite");
 
     // generic plants
     public static final Block BERRY_BUSH_BLOCK = 
-        RegistryHelper.registerBlock(new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS), "berry_bush_block");
+        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "berry_bush_block");
     public static final Block SQUID_COAST_LEAVES = 
-        RegistryHelper.registerBlock(new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS), "squid_coast_leaves");
+        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "squid_coast_leaves");
     public static final Block FLOWERING_SQUID_COAST_LEAVES = 
-        RegistryHelper.registerBlock(new Leaves(0.2F, 0.2F, BlockSoundGroup.GRASS), "flowering_squid_coast_leaves");
+        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "flowering_squid_coast_leaves");
     public static final Block SHORT_GRASS = 
-        RegistryHelper.registerBlock(new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS), "short_grass");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "short_grass");
     public static final Block FERN = 
-        RegistryHelper.registerBlock(new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS), "fern");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "fern");
     public static final Block SHRUB = 
-        RegistryHelper.registerBlock(new Plant( 0.0F, 0.0F, BlockSoundGroup.GRASS), "shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "shrub");
     public static final Block YELLOW_TULIP = 
-        RegistryHelper.registerBlock(new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS), "yellow_tulip");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "yellow_tulip");
     public static final Block FLOWER_PATCH = 
-        RegistryHelper.registerBlock(new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS), "flower_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "flower_patch");
     public static final Block DAISY_PATCH = 
-        RegistryHelper.registerBlock(new Plant(0.0F, 0.0F, BlockSoundGroup.GRASS), "daisy_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "daisy_patch");
     public static final Block WATER_PLANT = 
-        RegistryHelper.registerBlock(new WaterPlant( 0.0F, 0.0F, BlockSoundGroup.WET_GRASS), "water_plant");
+        RegistryHelper.registerBlock(new WaterPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.WET_GRASS)), "water_plant");
     public static final Block HANGING_ROSES = 
-        RegistryHelper.registerBlock(new HangingPlant(0.0F, 0.0F, BlockSoundGroup.GRASS), "hanging_roses");
+        RegistryHelper.registerBlock(new HangingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "hanging_roses");
 
     // sanded andesite
     public static final Block SANDED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "sanded_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "sanded_andesite");
     public static final Block SANDED_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "sanded_andesite_tiles");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "sanded_andesite_tiles");
     public static final Block SHADOWED_SANDED_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "shadowed_sanded_andesite_tiles");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "shadowed_sanded_andesite_tiles");
     public static final Block MOSSY_SANDED_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "mossy_sanded_andesite_tiles");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "mossy_sanded_andesite_tiles");
     public static final Block MOSSY_SHADOWED_SANDED_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "mossy_shadowed_sanded_andesite_tiles");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "mossy_shadowed_sanded_andesite_tiles");
     public static final Block SANDED_ANDESITE_BRICKS = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "sanded_andesite_bricks");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "sanded_andesite_bricks");
     public static final Block CHISELED_SANDED_ANDESITE = 
-        RegistryHelper.registerBlock(new BaseBlock(1.5F, 6.0F, BlockSoundGroup.STONE), "chiseled_sanded_andesite");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "chiseled_sanded_andesite");
 
     // glass related
     public static final Block GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "glass");
 
     public static final Block BLUE_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "blue_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "blue_glass");
     public static final Block BROWN_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "brown_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "brown_glass");
     public static final Block BLACK_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "black_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "black_glass");
     public static final Block GREEN_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "green_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "green_glass");
     public static final Block YELLOW_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "yellow_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "yellow_glass");
     public static final Block RED_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "red_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "red_glass");
     public static final Block LIME_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "lime_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "lime_glass");
     public static final Block LIGHT_GRAY_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "light_gray_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "light_gray_glass");
     public static final Block PINK_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "pink_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "pink_glass");
     public static final Block MAGENTA_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "magenta_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "magenta_glass");
     public static final Block LIGHT_BLUE_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "light_blue_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "light_blue_glass");
     public static final Block ORANGE_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "orange_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "orange_glass");
     public static final Block GRAY_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "gray_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "gray_glass");
     public static final Block PURPLE_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "purple_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "purple_glass");
     public static final Block CYAN_GLASS = 
-        RegistryHelper.registerBlock(new Translucent(0.3F, 0.3F, BlockSoundGroup.GLASS), "cyan_glass");
+        RegistryHelper.registerBlock(new Translucent(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.GLASS)), "cyan_glass");
 
     // shelves
     public static final Block BEET_SHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "beet_shelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "beet_shelf");
     public static final Block BOOK_SHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "book_shelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "book_shelf");
     public static final Block CARROT_SHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "carrot_shelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "carrot_shelf");
     public static final Block CHEST_SHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "chest_shelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "chest_shelf");
     public static final Block EMPTY_SHELF = 
-        RegistryHelper.registerBlock(new BaseBlock(2.0F, 3.0F, BlockSoundGroup.WOOD), "empty_shelf");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "empty_shelf");
 
     // braziers
     public static final Block UNLIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(null, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "unlit", false), "unlit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN), null, false), "unlit_brazier");
     public static final Block LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(ParticleTypes.FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "lit", false), "lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN).luminance(15), ParticleTypes.FLAME, false), "lit_brazier");
     public static final Block GREEN_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Particles.GREEN_FLAME, 5.0F, 6.0F, BlockSoundGroup.LANTERN, "green_lit", false), "green_lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN).luminance(15), Particles.GREEN_FLAME, false), "green_lit_brazier");
 
     // books
     public static final Block CLOSED_BOOK = 
-        RegistryHelper.registerBlock(new Book(2.0F, 3.0F, BlockSoundGroup.WOOD), "closed_book");
+        RegistryHelper.registerBlock(new Book(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "closed_book");
     public static final Block OPEN_BOOK = 
-        RegistryHelper.registerBlock(new Book(2.0F, 3.0F, BlockSoundGroup.WOOD), "open_book");
+        RegistryHelper.registerBlock(new Book(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "open_book");
 
     // candles
     public static final Block CANDLE = 
-        RegistryHelper.registerBlock(new Candle(5.0F, 6.0F, BlockSoundGroup.LANTERN, false), "candle");
+        RegistryHelper.registerBlock(new Candle(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN), false), "candle");
     public static final Block GREEN_CANDLE = 
-        RegistryHelper.registerBlock(new Candle(5.0F, 6.0F, BlockSoundGroup.LANTERN, true), "green_candle");
+        RegistryHelper.registerBlock(new Candle(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN), true), "green_candle");
 
     // tray
     public static final Block TRAY = 
-        RegistryHelper.registerBlock(new Tray(2.0F, 3.0F, BlockSoundGroup.WOOD), "tray");
+        RegistryHelper.registerBlock(new Tray(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "tray");
 
     // teapot
     public static final Block TEAPOT = 
-        RegistryHelper.registerBlock(new Teapot(5.0F, 6.0F, BlockSoundGroup.LANTERN), "teapot");
+        RegistryHelper.registerBlock(new Teapot(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN)), "teapot");
 
     // redstone related
     public static final Block LIGHTHOUSE_LAMP = 
-        RegistryHelper.registerBlock(new PoweredEmissive(15, 0.3F, 0.3F, BlockSoundGroup.METAL), "lighthouse_lamp");
+        RegistryHelper.registerBlock(new PoweredEmissive(FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.METAL), 15), "lighthouse_lamp");
 
     // chains
     public static final Block CHAINS = 
-        RegistryHelper.registerBlock(new Chains(5.0F, 6.0F, BlockSoundGroup.CHAIN), "chains");
+        RegistryHelper.registerBlock(new Chains(FabricBlockSettings.create().strength(5.0F, 6.0F).sounds(BlockSoundGroup.CHAIN)), "chains");
 
     // vine
     public static final Block VINE = 
-        RegistryHelper.registerBlock(new Vine(0.2F, 0.2F, BlockSoundGroup.GRASS), "vine");
+        RegistryHelper.registerBlock(new Vine(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "vine");
 
     public static void init() {
         JavaDungeons.log.info("Registering Generic Blocks!");
