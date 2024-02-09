@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.registry.RegistryKey;
@@ -20,9 +19,9 @@ public class PumpkinPasturesBlocks {
 
     // foliage
     public static final Block PM_YELLOW_AUTUMNAL_LEAVES = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "pm_yellow_autumnal_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "pm_yellow_autumnal_leaves");
     public static final Block PM_RED_AUTUMNAL_LEAVES = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "pm_red_autumnal_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "pm_red_autumnal_leaves");
 
     // saplings
     public static final Block PM_RED_AUTUMNAL_SAPLING = 

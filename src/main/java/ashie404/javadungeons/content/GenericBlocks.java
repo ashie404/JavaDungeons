@@ -10,7 +10,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.LanternBlock;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
@@ -109,11 +108,11 @@ public class GenericBlocks {
 
     // generic plants
     public static final Block BERRY_BUSH_BLOCK = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "berry_bush_block");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "berry_bush_block");
     public static final Block SQUID_COAST_LEAVES = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "squid_coast_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "squid_coast_leaves");
     public static final Block FLOWERING_SQUID_COAST_LEAVES = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "flowering_squid_coast_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "flowering_squid_coast_leaves");
     public static final Block SHORT_GRASS = 
         RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "short_grass");
     public static final Block FERN = 

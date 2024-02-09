@@ -6,7 +6,6 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -123,7 +122,7 @@ public class DingyJungleBlocks {
     public static final Block DJ_JUNGLE_LOG =
         RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F, 2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_log");
     public static final Block DJ_JUNGLE_LEAVES =
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
 
     public static void init() {
         JavaDungeons.log.info("Registering Dingy Jungle Blocks!");

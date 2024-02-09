@@ -10,7 +10,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.FenceBlock;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.particle.ParticleTypes;
@@ -44,7 +43,7 @@ public class SoggySwampBlocks {
     public static final Block SS_SWAMP_LOG = 
         RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_swamp_log");
     public static final Block SS_SWAMP_LEAVES = 
-        RegistryHelper.registerBlock(new LeavesBlock(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "ss_swamp_leaves");
+        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "ss_swamp_leaves");
     public static final SlabStairBlock SS_SWAMP_PLANKS = 
         RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD)), "ss_swamp_planks");
     public static final Block SS_SWAMP_SAPLING = 
