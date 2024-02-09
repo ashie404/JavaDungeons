@@ -52,25 +52,25 @@ public class CreeperWoodsBlocks {
     
     // ground related
     public static final Block CW_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_grassy_dirt");
     public static final Block CW_DENSE_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "cw_dense_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS)), "cw_dense_grassy_dirt");
     public static final Block CW_DIRT_PATH = 
-        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_path");
     public static final Block CW_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), true, CW_DIRT_PATH), "cw_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), true, CW_DIRT_PATH), "cw_dirt");
     public static final Block CW_DIRT_SLAB = 
-        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_slab");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_dirt_slab");
     public static final Block CW_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, CW_DIRT), "cw_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, CW_DIRT), "cw_grass_block");
     public static final Block CW_ROCKY_DIRT_PATH = 
-        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_dirt_path");
     public static final Block CW_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), false, CW_ROCKY_DIRT_PATH), "cw_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), false, CW_ROCKY_DIRT_PATH), "cw_rocky_dirt");
     public static final Block CW_ROCKY_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_rocky_grassy_dirt");
     public static final Block CW_COBWEBBED_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_cobwebbed_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cw_cobwebbed_dirt");
     
     // creeper woods granite variant
     public static final SlabStairBlock CW_POLISHED_GRANITE = 
@@ -94,19 +94,19 @@ public class CreeperWoodsBlocks {
 
     // plants
     public static final Block CW_SHRUB = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_shrub");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_shrub");
     public static final Block CW_FLOWER_PATCH = 
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_flower_patch");
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_flower_patch");
     public static final Block CW_POP_FLOWER = 
-        RegistryHelper.registerBlock(new GlowingPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cw_pop_flower");
+        RegistryHelper.registerBlock(new GlowingPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cw_pop_flower");
 
     // custom dungeons blocks
     public static final Block CW_GLOW_MUSHROOM = 
-        RegistryHelper.registerBlock(new GlowMushroom(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.SLIME)), "cw_glow_mushroom");
+        RegistryHelper.registerBlock(new GlowMushroom(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.SLIME)), "cw_glow_mushroom");
     public static final Block CW_GLOW_MELON = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.0F, 1.0F).sounds(BlockSoundGroup.WOOD).luminance(14)), "cw_glow_melon");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.0F).sounds(BlockSoundGroup.WOOD).luminance(14)), "cw_glow_melon");
     public static final Block CW_GLOW_MELON_ROOTS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "cw_glow_melon_roots");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS)), "cw_glow_melon_roots");
 
     // gravestones
     public static final Block CW_GRAVESTONE = 

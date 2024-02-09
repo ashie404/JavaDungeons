@@ -17,31 +17,31 @@ public class CactiCanyonBlocks {
 
     // earth blocks
     public static final Block CC_DENSE_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dense_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dense_grassy_dirt");
     public static final Block CC_GRASSY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_grassy_dirt");
     public static final Block CC_DIRT_PATH = 
-        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dirt_path");
     public static final Block CC_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), true, CC_DIRT_PATH), "cc_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), true, CC_DIRT_PATH), "cc_dirt");
     public static final Block CC_DIRT_SLAB = 
-        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dirt_slab");
+        RegistryHelper.registerBlock(new SlabBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dirt_slab");
     public static final Block CC_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, CC_DIRT), "cc_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS), true, Blocks.DIRT_PATH, CC_DIRT), "cc_grass_block");
     public static final Block CC_ROCKY_DIRT_PATH = 
-        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_rocky_dirt_path");
+        RegistryHelper.registerBlock(new DirtPathBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_rocky_dirt_path");
     public static final Block CC_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL), false, CC_ROCKY_DIRT_PATH), "cc_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL), false, CC_ROCKY_DIRT_PATH), "cc_rocky_dirt");
 
     // sand blocks
     public static final Block CC_SAND = 
-        RegistryHelper.registerBlock(new FallingBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.SAND)), "cc_sand");
+        RegistryHelper.registerBlock(new FallingBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.SAND)), "cc_sand");
     public static final Block CC_DENSE_SANDY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dense_sandy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_dense_sandy_dirt");
     public static final Block CC_SANDY_DIRT = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_sandy_dirt");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "cc_sandy_dirt");
     public static final Block CC_SAND_LAYER = 
-        RegistryHelper.registerBlock(new LayeringBlock(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.SAND)), "cc_sand_layer");
+        RegistryHelper.registerBlock(new LayeringBlock(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.SAND)), "cc_sand_layer");
 
     // sandstone blocks
     public static final Block CC_SANDSTONE = 
@@ -80,19 +80,19 @@ public class CactiCanyonBlocks {
 
     // plant blocks
     public static final Block CC_DESERT_GRASS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_desert_grass");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_desert_grass");
     public static final Block CC_CACTUS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_cactus");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_cactus");
     public static final Block CC_SMALL_CACTUS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_small_cactus");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_small_cactus");
     public static final Block CC_FERN = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_fern");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_fern");
     public static final Block CC_FLOWERS = 
-        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_flowers");
+        RegistryHelper.registerBlock(new DesertPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_flowers");
     public static final Block CC_YUCCA = 
-        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_yucca");
+        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_yucca");
     public static final Block CC_TALL_CACTUS = 
-        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F, 0.0F).sounds(BlockSoundGroup.GRASS)), "cc_tall_cactus");
+        RegistryHelper.registerBlock(new DesertTallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "cc_tall_cactus");
     
     public static void init() {
         JavaDungeons.log.info("Registering Cacti Canyon Blocks!");
