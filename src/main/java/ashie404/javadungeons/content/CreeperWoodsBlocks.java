@@ -35,21 +35,21 @@ public class CreeperWoodsBlocks {
     public static final Block CW_CRACKED_ANDESITE = 
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_cracked_andesite");
 
-    // dark andesite
-    public static final SlabStairBlock CW_DARK_POLISHED_ANDESITE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_polished_andesite", "cw_dark_andesite_slab", "cw_dark_andesite_stairs");
-    public static final Block CW_MOSSY_DARK_ANDESITE = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_dark_andesite");
-    public static final Block CW_MOSSY_DARK_ANDESITE_TILES = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_dark_andesite_tiles");
-    public static final SlabStairBlock CW_DARK_ANDESITE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_andesite_tiles");
-    public static final Block CW_DARK_CHISELED_ANDESITE = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_chiseled_andesite");
-    public static final Block CW_DARK_CHISELED_ANDESITE_2 = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_chiseled_andesite_2");
-    public static final Block CW_DARK_ANDESITE_PILLAR = 
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_dark_andesite_pillar");
+    // smoky quartz
+    public static final SlabStairBlock CW_SMOKY_QUARTZ_TILE = 
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_smoky_quartz_tile", "cw_smoky_quartz_slab", "cw_smoky_quartz_stairs");
+    public static final Block CW_MOSSY_SMOKY_QUARTZ_TILE = 
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_smoky_quartz");
+    public static final Block CW_MOSSY_SMOKY_QUARTZ_TILES = 
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_smoky_quartz_tiles");
+    public static final SlabStairBlock CW_SMOKY_QUARTZ_TILES = 
+        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_smoky_quartz_tiles");
+    public static final Block CW_CHISELED_SMOKY_QUARTZ = 
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_chiseled_smoky_quartz");
+    public static final Block CW_CHISELED_SMOKY_QUARTZ_EYE = 
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_chiseled_smoky_quartz_eye");
+    public static final Block CW_SMOKY_QUARTZ_PILLAR = 
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_smoky_quartz_pillar");
     
     // ground related
     public static final Block CW_GRASSY_DIRT = 
@@ -127,17 +127,17 @@ public class CreeperWoodsBlocks {
             content.add(CW_SLOTTED_STONE);
             content.add(CW_MOSSY_ANDESITE);
             content.add(CW_CRACKED_ANDESITE);
-            content.add(CW_DARK_POLISHED_ANDESITE.base);
-            content.add(CW_DARK_POLISHED_ANDESITE.slab);
-            content.add(CW_DARK_POLISHED_ANDESITE.stairs);
-            content.add(CW_MOSSY_DARK_ANDESITE);
-            content.add(CW_MOSSY_DARK_ANDESITE_TILES);
-            content.add(CW_DARK_ANDESITE_TILES.base);
-            content.add(CW_DARK_ANDESITE_TILES.slab);
-            content.add(CW_DARK_ANDESITE_TILES.stairs);
-            content.add(CW_DARK_CHISELED_ANDESITE);
-            content.add(CW_DARK_CHISELED_ANDESITE_2);
-            content.add(CW_DARK_ANDESITE_PILLAR);
+            content.add(CW_SMOKY_QUARTZ_TILE.base);
+            content.add(CW_SMOKY_QUARTZ_TILE.slab);
+            content.add(CW_SMOKY_QUARTZ_TILE.stairs);
+            content.add(CW_MOSSY_SMOKY_QUARTZ_TILE);
+            content.add(CW_MOSSY_SMOKY_QUARTZ_TILES);
+            content.add(CW_SMOKY_QUARTZ_TILES.base);
+            content.add(CW_SMOKY_QUARTZ_TILES.slab);
+            content.add(CW_SMOKY_QUARTZ_TILES.stairs);
+            content.add(CW_CHISELED_SMOKY_QUARTZ);
+            content.add(CW_CHISELED_SMOKY_QUARTZ_EYE);
+            content.add(CW_SMOKY_QUARTZ_PILLAR);
             content.add(CW_GRASS_BLOCK);
             content.add(CW_GRASSY_DIRT);
             content.add(CW_DENSE_GRASSY_DIRT);
