@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/dingy_jungle/carved_stone_top",
+        "side": "dungeons:block/dingy_jungle/carved_stone"
+    }
+}

@@ -40,6 +40,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_pebbles");
     public static final Block DJ_GRASSY_PEBBLES =
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_grassy_pebbles");
+    public static final Block DJ_SMOLDERING_PEBBLES =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_smoldering_pebbles");
     
     // stones
     public static final Block DJ_OCELOT_STONE =
@@ -54,6 +56,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_stone_bricks");
     public static final Block DJ_MOSSY_STONE_BRICKS =
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_mossy_stone_bricks");
+    public static final Block DJ_CARVED_STONE =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_carved_stone");
 
     // metals
     public static final Block DJ_GOLD_BLOCK =
@@ -96,6 +100,16 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_dirty_cracked_tile");
     public static final Block DJ_GOLD_EMBEDDED_TILE =
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_gold_embedded_tile");
+    
+    // dingy quartz blocks
+    public static final Block DJ_DINGY_QUARTZ_TILE =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_tile");
+    public static final Block DJ_DINGY_QUARTZ_TILES =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_tiles");
+    public static final Block DJ_DINGY_QUARTZ_PILLAR =
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_pillar");
+    public static final Block DJ_CHISELED_DINGY_QUARTZ =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_chiseled_dingy_quartz");
     
     // plants
     public static final Block DJ_GRASS =
@@ -143,12 +157,14 @@ public class DingyJungleBlocks {
             content.add(DJ_PEBBLES);
             content.add(DJ_DIRTY_PEBBLES);
             content.add(DJ_GRASSY_PEBBLES);
+            content.add(DJ_SMOLDERING_PEBBLES);
             content.add(DJ_OCELOT_STONE);
             content.add(DJ_CHISELED_STONE);
             content.add(DJ_DINGY_CHISELED_STONE);
             content.add(DJ_MOSSY_CHISELED_STONE);
             content.add(DJ_STONE_BRICKS);
             content.add(DJ_MOSSY_STONE_BRICKS);
+            content.add(DJ_CARVED_STONE);
             content.add(DJ_STONE_TILES.base);
             content.add(DJ_STONE_TILES.slab);
             content.add(DJ_STONE_TILES.stairs);
@@ -173,6 +189,10 @@ public class DingyJungleBlocks {
             content.add(DJ_CRACKED_TILE);
             content.add(DJ_DIRTY_CRACKED_TILE);
             content.add(DJ_GOLD_EMBEDDED_TILE);
+            content.add(DJ_DINGY_QUARTZ_TILE);
+            content.add(DJ_DINGY_QUARTZ_TILES);
+            content.add(DJ_DINGY_QUARTZ_PILLAR);
+            content.add(DJ_CHISELED_DINGY_QUARTZ);
             content.add(DJ_GRASS);
             content.add(DJ_TALL_GRASS);
             content.add(DJ_RED_FERN);
