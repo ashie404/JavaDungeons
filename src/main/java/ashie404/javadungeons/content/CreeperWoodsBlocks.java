@@ -34,12 +34,14 @@ public class CreeperWoodsBlocks {
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_andesite");
     public static final Block CW_CRACKED_ANDESITE = 
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_cracked_andesite");
+    public static final Block CW_CHISELED_ANDESITE_SKULL =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_chiseled_andesite_skull");
 
     // smoky quartz
     public static final SlabStairBlock CW_SMOKY_QUARTZ_TILE = 
         RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_smoky_quartz_tile", "cw_smoky_quartz_slab", "cw_smoky_quartz_stairs");
     public static final Block CW_MOSSY_SMOKY_QUARTZ_TILE = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_smoky_quartz");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_smoky_quartz_tile");
     public static final Block CW_MOSSY_SMOKY_QUARTZ_TILES = 
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "cw_mossy_smoky_quartz_tiles");
     public static final SlabStairBlock CW_SMOKY_QUARTZ_TILES = 

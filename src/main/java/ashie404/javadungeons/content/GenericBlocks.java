@@ -142,10 +142,6 @@ public class GenericBlocks {
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "mossy_sanded_andesite_tiles");
     public static final Block MOSSY_SHADOWED_SANDED_ANDESITE_TILES = 
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "mossy_shadowed_sanded_andesite_tiles");
-    public static final Block SANDED_ANDESITE_BRICKS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "sanded_andesite_bricks");
-    public static final Block CHISELED_SANDED_ANDESITE = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "chiseled_sanded_andesite");
 
     // glass related
     public static final Block GLASS = 
@@ -298,8 +294,6 @@ public class GenericBlocks {
             content.add(SHADOWED_SANDED_ANDESITE_TILES);
             content.add(MOSSY_SANDED_ANDESITE_TILES);
             content.add(MOSSY_SHADOWED_SANDED_ANDESITE_TILES);
-            content.add(SANDED_ANDESITE_BRICKS);
-            content.add(CHISELED_SANDED_ANDESITE);
             content.add(COBBLESTONE.base);
             content.add(COBBLESTONE.slab);
             content.add(COBBLESTONE.stairs);

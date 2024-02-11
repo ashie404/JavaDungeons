@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "top":    "dungeons:block/creeper_woods/smoky_quartz_tiles",
+        "side":   "dungeons:block/creeper_woods/smoky_quartz_tiles",
+        "bottom": "dungeons:block/creeper_woods/smoky_quartz_tiles"
+    }
+}

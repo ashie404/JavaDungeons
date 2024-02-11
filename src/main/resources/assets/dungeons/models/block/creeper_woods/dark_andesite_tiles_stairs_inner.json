@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/inner_stairs",
-    "textures": {
-        "bottom": "dungeons:block/creeper_woods/dark_andesite_tiles",
-        "top":    "dungeons:block/creeper_woods/dark_andesite_tiles",
-        "side":   "dungeons:block/creeper_woods/dark_andesite_tiles"
-    }
-}

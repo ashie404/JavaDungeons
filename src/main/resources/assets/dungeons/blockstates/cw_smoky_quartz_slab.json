@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/creeper_woods/smoky_quartz_slab" },
+        "type=top": { "model":    "dungeons:block/creeper_woods/smoky_quartz_slab_top" },
+        "type=double": { "model": "dungeons:block/creeper_woods/smoky_quartz_tile" }
+    }
+}
