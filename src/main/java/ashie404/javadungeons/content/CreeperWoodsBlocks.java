@@ -129,6 +129,7 @@ public class CreeperWoodsBlocks {
             content.add(CW_SLOTTED_STONE);
             content.add(CW_MOSSY_ANDESITE);
             content.add(CW_CRACKED_ANDESITE);
+            content.add(CW_CHISELED_ANDESITE_SKULL);
             content.add(CW_SMOKY_QUARTZ_TILE.base);
             content.add(CW_SMOKY_QUARTZ_TILE.slab);
             content.add(CW_SMOKY_QUARTZ_TILE.stairs);

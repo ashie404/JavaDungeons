@@ -339,6 +339,8 @@
     "block.dungeons.rm_dark_quartz_pillar": "Dark Quartz Pillar",
     "block.dungeons.rm_chiseled_dark_quartz": "Chiseled Dark Quartz",
     "block.dungeons.rm_chiseled_dark_quartz_1": "Chiseled Dark Quartz",
+    "block.dungeons.rm_dark_floor_tile": "Dark Floor Tile",
+    "block.dungeons.rm_dirty_dark_floor_tile": "Dirty Dark Floor Tile",
 
     "block.dungeons.dj_grass_block": "Grass Block",
     "block.dungeons.dj_muddy_grass": "Muddy Grass Block",

@@ -27,6 +27,12 @@ public class RedstoneMinesBlocks {
     public static final Block RM_SHRUB = 
     RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "rm_shrub");
 
+    // floor tiles
+    public static final Block RM_DARK_FLOOR_TILE =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_floor_tile");
+    public static final Block RM_DIRTY_DARK_FLOOR_TILE =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dirty_dark_floor_tile");
+
     // dark quartz
     public static final SlabStairBlock RM_DARK_QUARTZ = 
     RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_quartz");
@@ -47,6 +53,8 @@ public class RedstoneMinesBlocks {
             content.add(RM_REDSTONE_CRYSTALS);
             content.add(RM_SNOWY_DIRT);
             content.add(RM_SHRUB);
+            content.add(RM_DARK_FLOOR_TILE);
+            content.add(RM_DIRTY_DARK_FLOOR_TILE);
             content.add(RM_DARK_QUARTZ.base);
             content.add(RM_DARK_QUARTZ.slab);
             content.add(RM_DARK_QUARTZ.stairs);
