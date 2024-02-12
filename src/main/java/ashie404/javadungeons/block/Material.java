@@ -39,5 +39,7 @@ public class Material {
 
     public static final Settings SOFT_METAL = FabricBlockSettings.create().strength(0.3F).sounds(BlockSoundGroup.METAL).mapColor(MapColor.IRON_GRAY);
 
+    public static final Settings COBWEB = FabricBlockSettings.create().requiresTool().strength(4.0f).solid().noCollision().mapColor(MapColor.LIGHT_GRAY);
+
     public static final Settings GLASS = FabricBlockSettings.create().instrument(Instrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS);
 }

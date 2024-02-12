@@ -4,12 +4,10 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class RedstoneMinesBlocks {
 

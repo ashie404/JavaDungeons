@@ -6,12 +6,16 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.CobwebBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class DingyJungleBlocks {
+    // TODO: add tiki torch, layering dirt, jungle moss, glowing jungle oak logs, mossy jungle oak log, jungle planks, oak jungle planks, leafy mud, dingy cobblestone, embossed stone, smooth large bricks, mossy gold block
+
     // grass, dirt & mud 
     public static final Block DJ_GRASS_BLOCK = 
         RegistryHelper.registerBlock(new Block(Material.GRASS), "dj_grass_block");
@@ -37,6 +41,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_pebbles");
     public static final Block DJ_DIRTY_PEBBLES =
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_dirty_pebbles");
+    public static final Block DJ_MUDDY_PEBBLES =
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_muddy_pebbles");
     public static final Block DJ_GRASSY_PEBBLES =
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_grassy_pebbles");
     public static final Block DJ_SMOLDERING_PEBBLES =
@@ -125,6 +131,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_dead_shrub");
     public static final Block DJ_BUSH =
         RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_bush");
+    public static final Block DJ_GLOWING_MUSHROOMS =
+        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.copyOf(Material.OFFSET_XZ_PLANT).sounds(BlockSoundGroup.WET_GRASS)), "dj_glowing_mushrooms");
     public static final Block DJ_LARGE_JUNGLE_PLANT =
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FERN =
@@ -133,6 +141,10 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_flowering_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FLOWER =
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_flower");
+    
+    // cobweb
+    public static final Block DJ_COBWEB =
+        RegistryHelper.registerBlock(new CobwebBlock(Material.COBWEB), "dj_cobweb");
     
     // custom dingy jungle wood & leaves
     public static final Block DJ_JUNGLE_LOG =
@@ -159,6 +171,7 @@ public class DingyJungleBlocks {
             content.add(DJ_ROCKY_DIRT);
             content.add(DJ_PEBBLES);
             content.add(DJ_DIRTY_PEBBLES);
+            content.add(DJ_MUDDY_PEBBLES);
             content.add(DJ_GRASSY_PEBBLES);
             content.add(DJ_SMOLDERING_PEBBLES);
             content.add(DJ_OCELOT_STONE);
@@ -203,6 +216,7 @@ public class DingyJungleBlocks {
             content.add(DJ_SHRUB);
             content.add(DJ_DEAD_SHRUB);
             content.add(DJ_BUSH);
+            content.add(DJ_COBWEB);
             content.add(DJ_LARGE_JUNGLE_PLANT);
             content.add(DJ_LARGE_JUNGLE_FERN);
             content.add(DJ_FLOWERING_JUNGLE_PLANT);
