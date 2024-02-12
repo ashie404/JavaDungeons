@@ -4,35 +4,33 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class FieryForgeBlocks {
 
     // dark stone
     public static final SlabStairBlock FF_DARK_STONE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dark_stone");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dark_stone");
     public static final SlabStairBlock FF_DARK_COBBLESTONE = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dark_cobblestone");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dark_cobblestone");
     public static final SlabStairBlock FF_DARK_STONE_BRICKS = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dark_stone_bricks", "ff_dark_stone_brick_slab", "ff_dark_stone_brick_stairs");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dark_stone_bricks", "ff_dark_stone_brick_slab", "ff_dark_stone_brick_stairs");
     public static final Block FF_DIRTY_DARK_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dirty_dark_stone_bricks");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "ff_dirty_dark_stone_bricks");
     public static final Block FF_CRACKED_DARK_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_cracked_dark_stone_bricks");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "ff_cracked_dark_stone_bricks");
     public static final Block FF_CHISELED_DARK_STONE_BRICKS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_chiseled_dark_stone_bricks");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "ff_chiseled_dark_stone_bricks");
     public static final SlabStairBlock FF_DARK_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dark_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dark_stone_tiles");
     public static final SlabStairBlock FF_DIRTY_DARK_STONE_TILES = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dirty_dark_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dirty_dark_stone_tiles");
     public static final SlabStairBlock FF_DIRTY_DARK_STONE_TILES_1 = 
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_dirty_dark_stone_tiles_1", "ff_dirty_dark_stone_tiles_slab_1", "ff_dirty_dark_stone_tiles_stairs_1");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "ff_dirty_dark_stone_tiles_1", "ff_dirty_dark_stone_tiles_slab_1", "ff_dirty_dark_stone_tiles_stairs_1");
     public static final Block FF_EMBLEMED_DARK_STONE = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "ff_emblemed_dark_stone");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "ff_emblemed_dark_stone");
 
     public static void init() {
         JavaDungeons.log.info("Registering Fiery Forge Blocks!");

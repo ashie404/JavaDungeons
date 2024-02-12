@@ -15,35 +15,35 @@ public class RedstoneMinesBlocks {
 
     // crystals
     public static final Block RM_CRYSTALS = 
-    RegistryHelper.registerBlock(new Crystal(FabricBlockSettings.create().strength(3.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_crystals");
+        RegistryHelper.registerBlock(new Crystal(Material.CRYSTAL), "rm_crystals");
     public static final Block RM_REDSTONE_CRYSTALS = 
-    RegistryHelper.registerBlock(new RedstoneCrystal(FabricBlockSettings.create().strength(3.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_redstone_crystals");
+        RegistryHelper.registerBlock(new RedstoneCrystal(Material.CRYSTAL), "rm_redstone_crystals");
 
     // dirt related
     public static final Block RM_SNOWY_DIRT = 
-    RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL)), "rm_snowy_dirt");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "rm_snowy_dirt");
 
     // plants
     public static final Block RM_SHRUB = 
-    RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS)), "rm_shrub");
+        RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "rm_shrub");
 
     // floor tiles
     public static final Block RM_DARK_FLOOR_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_floor_tile");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "rm_dark_floor_tile");
     public static final Block RM_DIRTY_DARK_FLOOR_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dirty_dark_floor_tile");
+        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "rm_dirty_dark_floor_tile");
 
     // dark quartz
     public static final SlabStairBlock RM_DARK_QUARTZ = 
-    RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_quartz");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_QUARTZ), "rm_dark_quartz");
     public static final SlabStairBlock RM_DARK_QUARTZ_TILES = 
-    RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_quartz_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_QUARTZ), "rm_dark_quartz_tiles");
     public static final Block RM_DARK_QUARTZ_PILLAR = 
-    RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_dark_quartz_pillar");
+        RegistryHelper.registerBlock(new PillarBlock(Material.DARK_QUARTZ), "rm_dark_quartz_pillar");
     public static final Block RM_CHISELED_DARK_QUARTZ = 
-    RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_chiseled_dark_quartz");
+        RegistryHelper.registerBlock(new Block(Material.DARK_QUARTZ), "rm_chiseled_dark_quartz");
     public static final Block RM_CHISELED_DARK_QUARTZ_1 = 
-    RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "rm_chiseled_dark_quartz_1");
+        RegistryHelper.registerBlock(new Block(Material.DARK_QUARTZ), "rm_chiseled_dark_quartz_1");
     
     public static void init() {
         JavaDungeons.log.info("Registering Redstone Mines Blocks!");

@@ -6,144 +6,143 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
-import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 
 public class DingyJungleBlocks {
     // grass, dirt & mud 
     public static final Block DJ_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "dj_grass_block");
+        RegistryHelper.registerBlock(new Block(Material.GRASS), "dj_grass_block");
     public static final Block DJ_MUDDY_GRASS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "dj_muddy_grass");
+        RegistryHelper.registerBlock(new Block(Material.GRASS), "dj_muddy_grass");
     public static final Block DJ_DIRT =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_dirt");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_dirt");
     public static final Block DJ_DIRTY_MUD =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_dirty_mud");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_dirty_mud");
     public static final Block DJ_MUD =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_mud");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_mud");
     public static final Block DJ_GRASSY_DIRT =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_grassy_dirt");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_grassy_dirt");
     public static final Block DJ_GRASSY_MUD =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_grassy_mud");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_grassy_mud");
     public static final Block DJ_DENSE_GRASSY_MUD =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.6F, 0.6F).sounds(BlockSoundGroup.GRASS)), "dj_dense_grassy_mud");
+        RegistryHelper.registerBlock(new Block(Material.GRASS), "dj_dense_grassy_mud");
     public static final Block DJ_ROCKY_DIRT =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.5F, 0.5F).sounds(BlockSoundGroup.GRAVEL)), "dj_rocky_dirt");
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_rocky_dirt");
     
     // pebbles
     public static final Block DJ_PEBBLES =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_pebbles");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_pebbles");
     public static final Block DJ_DIRTY_PEBBLES =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_pebbles");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_dirty_pebbles");
     public static final Block DJ_GRASSY_PEBBLES =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_grassy_pebbles");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_grassy_pebbles");
     public static final Block DJ_SMOLDERING_PEBBLES =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_smoldering_pebbles");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_smoldering_pebbles");
     
     // stones
     public static final Block DJ_OCELOT_STONE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_ocelot_stone");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_ocelot_stone");
     public static final Block DJ_CHISELED_STONE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_chiseled_stone");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_chiseled_stone");
     public static final Block DJ_DINGY_CHISELED_STONE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dingy_chiseled_stone");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_dingy_chiseled_stone");
     public static final Block DJ_MOSSY_CHISELED_STONE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_mossy_chiseled_stone");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_mossy_chiseled_stone");
     public static final Block DJ_STONE_BRICKS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_stone_bricks");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_stone_bricks");
     public static final Block DJ_MOSSY_STONE_BRICKS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_mossy_stone_bricks");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_mossy_stone_bricks");
     public static final Block DJ_CARVED_STONE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_carved_stone");
+        RegistryHelper.registerBlock(new Block(Material.STONE), "dj_carved_stone");
 
     // metals
     public static final Block DJ_GOLD_BLOCK =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(3.0F, 6.0F).sounds(BlockSoundGroup.METAL)), "dj_gold_block");
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copyOf(Material.METAL).mapColor(MapColor.YELLOW)), "dj_gold_block");
     
     // stone tiles
     public static final SlabStairBlock DJ_STONE_TILES =
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_stone_tiles");
     public static final SlabStairBlock DJ_DIRTY_STONE_TILES =
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_stone_tiles");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_dirty_stone_tiles");
     public static final SlabStairBlock DJ_DIRTY_STONE_TILES_1 =
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_stone_tiles_1", "dj_dirty_stone_tiles_slab_1", "dj_dirty_stone_tiles_stairs_1");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_dirty_stone_tiles_1", "dj_dirty_stone_tiles_slab_1", "dj_dirty_stone_tiles_stairs_1");
     public static final SlabStairBlock DJ_DIRTY_STONE_TILES_2 =
-        RegistryHelper.registerBSS(new SlabStairBlock(FabricBlockSettings.create().strength(1.5F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_stone_tiles_2", "dj_dirty_stone_tiles_slab_2", "dj_dirty_stone_tiles_stairs_2");
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_dirty_stone_tiles_2", "dj_dirty_stone_tiles_slab_2", "dj_dirty_stone_tiles_stairs_2");
     
     // bricks
     public static final Block DJ_BRICKS = 
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_bricks");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_bricks");
     public static final Block DJ_SLIGHTLY_MOSSY_BRICKS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_slightly_mossy_bricks");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_slightly_mossy_bricks");
     public static final Block DJ_MOSSY_BRICKS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_mossy_bricks");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_mossy_bricks");
     public static final Block DJ_LARGE_BRICKS =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_large_bricks");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_large_bricks");
     
     // stone floors
     public static final Block DJ_BLUE_GLAZED_STONE_FLOOR =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_blue_glazed_stone_floor");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_blue_glazed_stone_floor");
     public static final Block DJ_DIRTY_BLUE_GLAZED_STONE_FLOOR =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_dirty_blue_glazed_stone_floor");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_dirty_blue_glazed_stone_floor");
     public static final Block DJ_YELLOW_GLAZED_STONE_FLOOR =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_yellow_glazed_stone_floor");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_yellow_glazed_stone_floor");
     
     // tiles
     public static final Block DJ_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(2.0F, 6.0F).sounds(BlockSoundGroup.STONE)), "dj_tile");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_tile");
     public static final Block DJ_CRACKED_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_cracked_tile");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_cracked_tile");
     public static final Block DJ_DIRTY_CRACKED_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_dirty_cracked_tile");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_dirty_cracked_tile");
     public static final Block DJ_GOLD_EMBEDDED_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copy(DJ_TILE)), "dj_gold_embedded_tile");
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_gold_embedded_tile");
     
     // dingy quartz blocks
     public static final Block DJ_DINGY_QUARTZ_TILE =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_tile");
+        RegistryHelper.registerBlock(new Block(Material.QUARTZ), "dj_dingy_quartz_tile");
     public static final Block DJ_DINGY_QUARTZ_TILES =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_tiles");
+        RegistryHelper.registerBlock(new Block(Material.QUARTZ), "dj_dingy_quartz_tiles");
     public static final Block DJ_DINGY_QUARTZ_PILLAR =
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_dingy_quartz_pillar");
+        RegistryHelper.registerBlock(new PillarBlock(Material.QUARTZ), "dj_dingy_quartz_pillar");
     public static final Block DJ_CHISELED_DINGY_QUARTZ =
-        RegistryHelper.registerBlock(new Block(FabricBlockSettings.create().strength(0.8F).sounds(BlockSoundGroup.STONE)), "dj_chiseled_dingy_quartz");
+        RegistryHelper.registerBlock(new Block(Material.QUARTZ), "dj_chiseled_dingy_quartz");
     
     // plants
     public static final Block DJ_GRASS =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_grass");
+        RegistryHelper.registerBlock(new Plant(Material.REPLACABLE_PLANT), "dj_grass");
     public static final Block DJ_RED_FERN =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_red_fern");
+        RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_red_fern");
     public static final Block DJ_TALL_FERN =
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_tall_fern");
+        RegistryHelper.registerBlock(new TallPlant(Material.REPLACABLE_PLANT), "dj_tall_fern");
     public static final Block DJ_TALL_GRASS =
-        RegistryHelper.registerBlock(new TallPlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_tall_grass");
+        RegistryHelper.registerBlock(new TallPlant(Material.REPLACABLE_PLANT), "dj_tall_grass");
     public static final Block DJ_SHRUB =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_shrub");
+        RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_shrub");
     public static final Block DJ_DEAD_SHRUB =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_dead_shrub");
+        RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_dead_shrub");
     public static final Block DJ_BUSH =
-        RegistryHelper.registerBlock(new Plant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly().offset(OffsetType.XZ)), "dj_bush");
+        RegistryHelper.registerBlock(new Plant(Material.OFFSET_XZ_PLANT), "dj_bush");
     public static final Block DJ_LARGE_JUNGLE_PLANT =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_plant");
+        RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FERN =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_fern");
+        RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_fern");
     public static final Block DJ_FLOWERING_JUNGLE_PLANT =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_flowering_jungle_plant");
+        RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_flowering_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FLOWER =
-        RegistryHelper.registerBlock(new JunglePlant(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly()), "dj_large_jungle_flower");
+        RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_flower");
     
     // custom dingy jungle wood & leaves
     public static final Block DJ_JUNGLE_LOG =
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_log");
+        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_log");
     public static final Block DJ_JUNGLE_ROOT =
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_root");
+        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_root");
     public static final Block DJ_JUNGLE_OAK_LOG =
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_oak_log");
+        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_oak_log");
     public static final Block DJ_JUNGLE_LEAVES =
-        RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
+        RegistryHelper.registerBlock(new Leaves(Material.LEAVES), "dj_jungle_leaves");
 
     public static void init() {
         JavaDungeons.log.info("Registering Dingy Jungle Blocks!");

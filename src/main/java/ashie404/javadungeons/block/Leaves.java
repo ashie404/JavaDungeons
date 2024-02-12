@@ -8,7 +8,7 @@ public class Leaves extends LeavesBlock {
     // leaves block
 
     public Leaves(Settings settings) {
-        super(FabricBlockSettings.copyOf(settings).nonOpaque()); 
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().ticksRandomly()); 
     }
 
 }
