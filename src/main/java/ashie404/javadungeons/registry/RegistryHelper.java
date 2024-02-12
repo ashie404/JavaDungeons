@@ -1,7 +1,7 @@
 package ashie404.javadungeons.registry;
 
 import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.blocks.SlabStairBlock;
+import ashie404.javadungeons.block.SlabStairBlock;
 import net.minecraft.block.Block;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.BlockItem;

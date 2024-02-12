@@ -1,7 +1,7 @@
 package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.blocks.*;
+import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

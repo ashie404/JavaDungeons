@@ -1,9 +1,8 @@
 package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.blocks.*;
+import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
-import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
