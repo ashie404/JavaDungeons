@@ -3,6 +3,7 @@ package ashie404.javadungeons.content;
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.blocks.*;
 import ashie404.javadungeons.registry.RegistryHelper;
+import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -137,7 +138,11 @@ public class DingyJungleBlocks {
     
     // custom dingy jungle wood & leaves
     public static final Block DJ_JUNGLE_LOG =
-        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F, 2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_log");
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_log");
+    public static final Block DJ_JUNGLE_ROOT =
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_root");
+    public static final Block DJ_JUNGLE_OAK_LOG =
+        RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.create().strength(2.0F).sounds(BlockSoundGroup.WOOD)), "dj_jungle_oak_log");
     public static final Block DJ_JUNGLE_LEAVES =
         RegistryHelper.registerBlock(new Leaves(FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS)), "dj_jungle_leaves");
 
@@ -205,7 +210,9 @@ public class DingyJungleBlocks {
             content.add(DJ_FLOWERING_JUNGLE_PLANT);
             content.add(DJ_LARGE_JUNGLE_FLOWER);
             content.add(DJ_JUNGLE_LOG);
+            content.add(DJ_JUNGLE_ROOT);
             content.add(DJ_JUNGLE_LEAVES);
+            content.add(DJ_JUNGLE_OAK_LOG);
         });
     }
 }

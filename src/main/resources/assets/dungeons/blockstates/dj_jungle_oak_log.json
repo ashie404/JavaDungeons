@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "dungeons:block/dingy_jungle/jungle_oak_log" },
+        "axis=z": { "model": "dungeons:block/dingy_jungle/jungle_oak_log", "x": 90 },
+        "axis=x": { "model": "dungeons:block/dingy_jungle/jungle_oak_log", "x": 90, "y": 90 }
+    }
+}
