@@ -1,0 +1,6 @@
+{"variants": {"": [
+    {"model": "dungeons:block/dingy_jungle/leafy_dirt"},
+    {"model": "dungeons:block/dingy_jungle/leafy_dirt", "y": 90},
+    {"model": "dungeons:block/dingy_jungle/leafy_dirt", "y": 180},
+    {"model": "dungeons:block/dingy_jungle/leafy_dirt", "y": 270}
+]}}

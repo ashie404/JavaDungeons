@@ -10,6 +10,7 @@ import net.minecraft.sound.BlockSoundGroup;
 public class Material {
     // Basic material definitions that all blocks use
 
+    public static final Settings MOSS = FabricBlockSettings.create().strength(0.1F).sounds(BlockSoundGroup.MOSS_BLOCK).mapColor(MapColor.GREEN);
     public static final Settings GRASS = FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.PALE_GREEN);
     public static final Settings EARTH = FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL).mapColor(MapColor.DIRT_BROWN);
         public static final Settings SAND = FabricBlockSettings.copyOf(EARTH).sounds(BlockSoundGroup.SAND).mapColor(MapColor.PALE_YELLOW);

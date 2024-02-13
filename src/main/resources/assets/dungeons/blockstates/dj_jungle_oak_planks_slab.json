@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "type=bottom": [
+            { "model": "dungeons:block/dingy_jungle/jungle_oak_planks_slab", "weight": 5 },
+            { "model": "dungeons:block/dingy_jungle/jungle_oak_planks_slab_1", "weight": 2 }
+        ],
+        "type=top": [
+            { "model":    "dungeons:block/dingy_jungle/jungle_oak_planks_slab_top", "weight": 5 },
+            { "model": "dungeons:block/dingy_jungle/jungle_oak_planks_slab_top_1", "weight": 2 }
+        ],
+        "type=double": [
+             { "model": "dungeons:block/dingy_jungle/jungle_oak_planks", "weight": 5 },
+             { "model": "dungeons:block/dingy_jungle/jungle_oak_planks_1", "weight": 2 }
+        ]
+    }
+}

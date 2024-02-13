@@ -1,1 +1,6 @@
-{"variants": {"": {"model": "dungeons:block/dingy_jungle/mud"}}}
+{"variants": {"": [
+    {"model": "dungeons:block/dingy_jungle/mud"},
+    {"model": "dungeons:block/dingy_jungle/mud", "y": 90},
+    {"model": "dungeons:block/dingy_jungle/mud", "y": 180},
+    {"model": "dungeons:block/dingy_jungle/mud", "y": 270}
+]}}

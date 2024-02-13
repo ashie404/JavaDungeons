@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "dungeons:block/dingy_jungle/jungle_oak_log_top",
+        "side": "dungeons:block/dingy_jungle/glowing_jungle_oak_log_1"
+    }
+}

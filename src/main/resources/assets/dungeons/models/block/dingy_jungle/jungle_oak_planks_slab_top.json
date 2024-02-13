@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab_top",
+    "textures": {
+        "top":    "dungeons:block/dingy_jungle/jungle_oak_planks",
+        "side":   "dungeons:block/dingy_jungle/jungle_oak_planks",
+        "bottom": "dungeons:block/dingy_jungle/jungle_oak_planks"
+    }
+}

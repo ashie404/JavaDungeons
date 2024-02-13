@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=y": [
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log" },
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log_1" }
+        ],
+        "axis=z": [
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log", "x": 90 },
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log_1", "x": 90 }
+        ],
+        "axis=x": [
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log", "x": 90, "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/glowing_jungle_oak_log_1", "x": 90, "y": 90 }
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/jungle_planks", "weight": 5 },
+            { "model": "dungeons:block/dingy_jungle/jungle_planks_1", "weight": 2 }
+        ]
+    }
+}
