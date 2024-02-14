@@ -40,16 +40,16 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
     };
 
     private double getNoiseSampleAt(double x, double y, double z) {
-        return noise.GetNoise(x, y, z);
+        return noise.GetNoise(x*0.3, y, z*0.3);
     }
 
     public CactiCanyonPillarsFeature(Codec<DefaultFeatureConfig> codec) {
         super(codec);
         // configure noise
         noise.SetNoiseType(NoiseType.OpenSimplex2S);
-        noise.SetFractalOctaves(4);
-        noise.SetFractalGain(2.5F);
         noise.SetFractalType(FractalType.Ridged);
+        noise.SetFractalOctaves(4);
+        noise.SetFractalGain(2.7F);
     }
 
     @Override
@@ -90,7 +90,7 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
 
                 int x = current.getX();
                 int z = current.getZ();
-                placePillar(blockColumn, x, chunk.getHeightmap(Type.WORLD_SURFACE).get(cx, cz), z, heightLimitView);
+                placePillar(blockColumn, x, chunk.getHeightmap(Type.WORLD_SURFACE_WG).get(cx, cz) + 1, z, heightLimitView);
             }
         }
 
@@ -101,12 +101,12 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         BlockState state;
         int y;
 
-        double pillarNoise = Math.min(Math.abs(getNoiseSampleAt(x, 0.0, z) * 4.75), getNoiseSampleAt(x * 0.2, 38.4, z * 0.2) * 8.0);
-        double pillarNoise2 = Math.abs(getNoiseSampleAt(x * 0.75, 76.8, z * 0.75) * 1.5);
+        double pillarNoise = Math.min(Math.abs(getNoiseSampleAt(x * 1.5, 0.0, z * 1.5) * 4.75), getNoiseSampleAt(x * 0.2, 64.0, z * 0.2) * 8.0);
+        double pillarNoise2 = Math.abs(getNoiseSampleAt(x * 0.5, 128.0, z * 0.5) * 2.5);
         if (pillarNoise <= 0.0) return;
 
-        int canyonPillar = MathHelper.floor(64.0 + Math.min(pillarNoise * pillarNoise * 2.5, Math.ceil(pillarNoise2 * 50.0) + 24.0));
-        int canyonPillar2 = surfaceY+(canyonPillar/2);
+        int canyonPillar = MathHelper.floor(64.0 + Math.min(pillarNoise * pillarNoise * 2.5, Math.ceil(pillarNoise2 * 25.0) + 32.0));
+        int canyonPillar2 = surfaceY+canyonPillar;
         int pillar = Math.min(canyonPillar, canyonPillar2);
         if (surfaceY > pillar) return;
 
@@ -117,6 +117,10 @@ public class CactiCanyonPillarsFeature extends Feature<DefaultFeatureConfig>  {
         for (y = pillar; y >= chunk.getBottomY() && col.getState(y).isAir(); y--) {
             col.setState(y, SANDSTONES[
                 // Select sandstone color based on y level
+                y > 117 ? 0 :
+                y > 116 ? 3 : 
+                y > 113 ? 0 :
+                y > 112 ? 3 :
                 y > 109 ? 0 :
                 y > 104 ? 2 :
                 y > 102 ? 1 :

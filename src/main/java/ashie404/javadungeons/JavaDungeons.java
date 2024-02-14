@@ -56,7 +56,7 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, JavaDungeons.MOD_ID, DungeonsMaterialRules.makeRules());
 
 		// register terrablender regions
-		Regions.register(new DungeonsOverworldRegion(4));
+		Regions.register(new DungeonsOverworldRegion(5));
 
         log.info("JavaDungeons worldgen initalized!");
     }

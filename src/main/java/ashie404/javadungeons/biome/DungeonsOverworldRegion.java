@@ -23,10 +23,9 @@ public class DungeonsOverworldRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-        // TODO : make dungeons biomes have actual worldgen settings and not just modify vanilla biomes
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.ERODED_BADLANDS, Biomes.CACTI_CANYON);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BADLANDS, Biomes.CACTI_CANYON_DESERT);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DESERT, Biomes.CACTI_CANYON_DESERT);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, Biomes.CREEPER_WOODS);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, Biomes.SQUID_COAST);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.MEADOW, Biomes.PUMPKIN_PASTURES);
@@ -34,5 +33,4 @@ public class DungeonsOverworldRegion extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JUNGLE, Biomes.DINGY_JUNGLE);
         });
     }
-    
 }
