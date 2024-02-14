@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/dingy_jungle/glowing_mushrooms"
+    }
+}

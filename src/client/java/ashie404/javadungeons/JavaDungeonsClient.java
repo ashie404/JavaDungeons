@@ -137,7 +137,8 @@ public class JavaDungeonsClient implements ClientModInitializer {
             DingyJungleBlocks.DJ_FLOWERING_JUNGLE_PLANT,
             DingyJungleBlocks.DJ_LARGE_JUNGLE_FLOWER,
             DingyJungleBlocks.DJ_PINK_JUNGLE_FLOWER,
-            DingyJungleBlocks.DJ_COBWEB
+            DingyJungleBlocks.DJ_COBWEB,
+            DingyJungleBlocks.DJ_GLOWING_MUSHROOMS
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             RenderLayer.getTranslucent(),
