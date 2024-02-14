@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower" },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower", "y": 270 },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower_1" },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower_1", "y": 90 },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower_1", "y": 180 },
+            { "model": "dungeons:block/dingy_jungle/pink_jungle_flower_1", "y": 270 }
+        ]
+    }
+  }

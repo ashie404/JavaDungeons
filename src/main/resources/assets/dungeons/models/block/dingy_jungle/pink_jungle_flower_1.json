@@ -1,0 +1,7 @@
+{
+    "parent": "dungeons:block/dingy_jungle/large_jungle_flower_1",
+    "textures": {
+		"0": "dungeons:block/dingy_jungle/pink_jungle_flower",
+		"particle": "dungeons:block/dingy_jungle/pink_jungle_flower"
+	}
+}

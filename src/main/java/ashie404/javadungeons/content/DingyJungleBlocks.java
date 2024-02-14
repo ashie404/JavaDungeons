@@ -14,7 +14,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class DingyJungleBlocks {
-    // TODO: add tiki torch, layering dirt, mossy jungle oak log, dingy cobblestone, mossy gold block
+    // TODO: add tiki torch
 
     // grass, dirt & mud 
     public static final Block DJ_GRASS_BLOCK = 
@@ -23,6 +23,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(Material.GRASS), "dj_muddy_grass");
     public static final Block DJ_DIRT =
         RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_dirt");
+    public static final Block DJ_DIRT_LAYER =
+        RegistryHelper.registerBlock(new LayeringBlock(Material.EARTH), "dj_dirt_layer");
     public static final Block DJ_DIRTY_MUD =
         RegistryHelper.registerBlock(new Block(Material.EARTH), "dj_dirty_mud");
     public static final Block DJ_MUD =
@@ -73,6 +75,8 @@ public class DingyJungleBlocks {
     // metals
     public static final Block DJ_GOLD_BLOCK =
         RegistryHelper.registerBlock(new Block(FabricBlockSettings.copyOf(Material.METAL).mapColor(MapColor.YELLOW)), "dj_gold_block");
+    public static final Block DJ_MOSSY_GOLD_BLOCK =
+        RegistryHelper.registerBlock(new Block(FabricBlockSettings.copyOf(Material.METAL).mapColor(MapColor.YELLOW)), "dj_mossy_gold_block");
     
     // stone tiles
     public static final SlabStairBlock DJ_STONE_TILES =
@@ -148,6 +152,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_flowering_jungle_plant");
     public static final Block DJ_LARGE_JUNGLE_FLOWER =
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_flower");
+    public static final Block DJ_PINK_JUNGLE_FLOWER =
+        RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_pink_jungle_flower");
     
     // cobweb
     public static final Block DJ_COBWEB =
@@ -173,9 +179,11 @@ public class DingyJungleBlocks {
 
     // Jungle Oak
     public static final Block DJ_JUNGLE_OAK_LOG =
-        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_oak_log");
+        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_oak_log"); 
     public static final Block DJ_JUNGLE_OAK_WOOD =
         RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_oak_wood");
+    public static final Block DJ_MOSSY_JUNGLE_OAK_WOOD =
+        RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_mossy_jungle_oak_wood");
     public static final Block DJ_GLOWING_JUNGLE_OAK_LOG =
         RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.copyOf(Material.LOG).luminance(6)), "dj_glowing_jungle_oak_log");
     public static final SlabStairBlock DJ_JUNGLE_OAK_PLANKS =
@@ -194,6 +202,7 @@ public class DingyJungleBlocks {
             content.add(DJ_GRASS_BLOCK); 
             content.add(DJ_MUDDY_GRASS);
             content.add(DJ_DIRT);
+            content.add(DJ_DIRT_LAYER);
             content.add(DJ_DIRTY_MUD);
             content.add(DJ_MUD);
             content.add(DJ_GRASSY_DIRT);
@@ -232,6 +241,7 @@ public class DingyJungleBlocks {
             content.add(DJ_MOSSY_BRICKS);
             content.add(DJ_LARGE_BRICKS);
             content.add(DJ_GOLD_BLOCK);
+            content.add(DJ_MOSSY_GOLD_BLOCK);
             content.add(DJ_BLUE_GLAZED_STONE_FLOOR);
             content.add(DJ_DIRTY_BLUE_GLAZED_STONE_FLOOR);
             content.add(DJ_YELLOW_GLAZED_STONE_FLOOR);
@@ -256,6 +266,7 @@ public class DingyJungleBlocks {
             content.add(DJ_LARGE_JUNGLE_FERN);
             content.add(DJ_FLOWERING_JUNGLE_PLANT);
             content.add(DJ_LARGE_JUNGLE_FLOWER);
+            content.add(DJ_PINK_JUNGLE_FLOWER);
             content.add(DJ_JUNGLE_LOG);
             content.add(DJ_JUNGLE_WOOD);
             content.add(DJ_GLOWING_JUNGLE_LOG);
@@ -269,6 +280,7 @@ public class DingyJungleBlocks {
             content.add(DJ_JUNGLE_LEAVES);
             content.add(DJ_JUNGLE_OAK_LOG);
             content.add(DJ_JUNGLE_OAK_WOOD);
+            content.add(DJ_MOSSY_JUNGLE_OAK_WOOD);
             content.add(DJ_GLOWING_JUNGLE_OAK_LOG);
             content.add(DJ_JUNGLE_OAK_PLANKS.base);
             content.add(DJ_JUNGLE_OAK_PLANKS.slab);

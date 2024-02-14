@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "layers=1":  { "model": "dungeons:block/dingy_jungle/dirt_height2" },
+        "layers=2":  { "model": "dungeons:block/dingy_jungle/dirt_height4" },
+        "layers=3":  { "model": "dungeons:block/dingy_jungle/dirt_height6" },
+        "layers=4":  { "model": "dungeons:block/dingy_jungle/dirt_height8" },
+        "layers=5":  { "model": "dungeons:block/dingy_jungle/dirt_height10" },
+        "layers=6":  { "model": "dungeons:block/dingy_jungle/dirt_height12" },
+        "layers=7":  { "model": "dungeons:block/dingy_jungle/dirt_height14" },
+        "layers=8":  { "model": "dungeons:block/dingy_jungle/dirt" }
+    }
+}
