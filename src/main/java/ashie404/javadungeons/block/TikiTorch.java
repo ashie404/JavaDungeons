@@ -1,11 +1,9 @@
 package ashie404.javadungeons.block;
 
-import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.particle.DefaultParticleType;
@@ -19,22 +17,21 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class Candle extends Block {
+public class TikiTorch extends Block {
 
-    // candle block
+    // tiki torch block
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
-    private DefaultParticleType particle;
+    private final DefaultParticleType particle;
+    protected final VoxelShape SHAPE = Block.createCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 24.0D, 9.0D);
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
 		return SHAPE;
 	}
 
-    public Candle(Settings settings, boolean isGreen) {
-        super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(15).ticksRandomly());
-        this.particle = isGreen ? Particles.CANDLE_GREEN_FLAME : Particles.CANDLE_FLAME;
-        
+    public TikiTorch(Settings settings, DefaultParticleType p) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().ticksRandomly().solid().pistonBehavior(PistonBehavior.DESTROY));
+        this.particle = p;
     }
 
     @Override
@@ -49,10 +46,12 @@ public class Candle extends Block {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        double d = (double)pos.getX() + 0.5D;
-        double e = (double)pos.getY() + 1.0D;
-        double f = (double)pos.getZ() + 0.5D;
-        world.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
-        world.addParticle(particle, d, e, f, 0.0D, 0.0D, 0.0D);
+        if (particle != null) {
+            double d = (double)pos.getX() + 0.5;
+            double e = (double)pos.getY() + 6.0;
+            double f = (double)pos.getZ() + 0.5;
+            world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0, 0.0, 0.0);
+            world.addParticle(particle, d, e, f, 0.0, 0.0, 0.0);
+        }
     }
 }

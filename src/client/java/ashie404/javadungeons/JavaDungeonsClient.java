@@ -1,7 +1,7 @@
 package ashie404.javadungeons;
 
 import ashie404.javadungeons.content.*;
-import ashie404.javadungeons.particles.GreenFlameParticle;
+import ashie404.javadungeons.particle.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -161,7 +161,10 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CreeperWoodsBlocks.CW_GLOW_MUSHROOM
         );
 
-        // set up particles
-        ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, GreenFlameParticle.Factory::new);
+        // register particle factories
+        ParticleFactoryRegistry.getInstance().register(Particles.FLAME, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_FLAME, SmallFlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_GREEN_FLAME, SmallFlameParticle.Factory::new);
     }
 }

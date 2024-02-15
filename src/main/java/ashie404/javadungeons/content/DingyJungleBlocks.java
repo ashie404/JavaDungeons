@@ -9,12 +9,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class DingyJungleBlocks {
-    // TODO: add tiki torch
 
     // grass, dirt & mud 
     public static final Block DJ_GRASS_BLOCK = 
@@ -194,6 +194,10 @@ public class DingyJungleBlocks {
     // Leaf variants
     public static final Block DJ_JUNGLE_LEAVES =
         RegistryHelper.registerBlock(new Leaves(Material.LEAVES), "dj_jungle_leaves");
+
+    // Other
+    public static final Block DJ_TIKI_TORCH =
+        RegistryHelper.registerBlock(new TikiTorch(FabricBlockSettings.copyOf(Material.WOOD).breakInstantly().luminance(14).pistonBehavior(PistonBehavior.DESTROY), Particles.FLAME), "dj_tiki_torch");
 
     public static void init() {
         JavaDungeons.log.info("Registering Dingy Jungle Blocks!");

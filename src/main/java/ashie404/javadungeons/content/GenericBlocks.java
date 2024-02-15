@@ -193,7 +193,7 @@ public class GenericBlocks {
     public static final Block UNLIT_BRAZIER = 
         RegistryHelper.registerBlock(new Brazier(Material.CAST_IRON, null, false), "unlit_brazier");
     public static final Block LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15), ParticleTypes.FLAME, false), "lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15), Particles.FLAME, false), "lit_brazier");
     public static final Block GREEN_LIT_BRAZIER = 
         RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15), Particles.GREEN_FLAME, false), "green_lit_brazier");
 

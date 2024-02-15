@@ -58,10 +58,14 @@ public class Brazier extends Block {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (particle != null) {
             double d = (double)pos.getX() + 0.5;
-            double e = (double)pos.getY() + 1.0;
+            double e = (double)pos.getY() + 1.15;
             double f = (double)pos.getZ() + 0.5;
-            world.addParticle(ParticleTypes.LARGE_SMOKE, d, e, f, 0.0, 0.0, 0.0);
-            world.addParticle(particle, d, e, f, 0.0, 0.0, 0.0);
+            double rd1 = random.nextDouble();
+            double rd2 = random.nextDouble();
+            double g = random.nextBoolean() ? (0.1*rd1) : (-0.1*rd2);
+            double h = random.nextBoolean() ? (0.1*rd2) : (-0.1*rd1);
+            world.addParticle(particle, d, e, f, 0.0, 0.04*Math.abs(rd1), 0.0);
+            world.addParticle(particle, d+g, e, f+h, 0.0, 0.03*Math.abs(rd2), 0.0);
         }
     }
 }

@@ -58,7 +58,7 @@ public class SoggySwampBlocks {
     public static final Block SS_UNLIT_BRAZIER = 
         RegistryHelper.registerBlock(new Brazier(Material.STONE, null, true), "ss_unlit_brazier");
     public static final Block SS_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.STONE).luminance(15), ParticleTypes.FLAME, true), "ss_lit_brazier");
+        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.STONE).luminance(15), Particles.FLAME, true), "ss_lit_brazier");
     public static final Block SS_GREEN_LIT_BRAZIER = 
         RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.STONE).luminance(15), Particles.GREEN_FLAME, true), "ss_green_lit_brazier");
 
