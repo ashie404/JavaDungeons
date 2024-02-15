@@ -197,7 +197,7 @@ public class DingyJungleBlocks {
 
     // Other
     public static final Block DJ_TIKI_TORCH =
-        RegistryHelper.registerBlock(new TikiTorch(FabricBlockSettings.copyOf(Material.WOOD).breakInstantly().luminance(14).pistonBehavior(PistonBehavior.DESTROY), Particles.FLAME), "dj_tiki_torch");
+        RegistryHelper.registerBlock(new TikiTorch(FabricBlockSettings.copyOf(Material.WOOD).luminance(14)), "dj_tiki_torch");
 
     public static void init() {
         JavaDungeons.log.info("Registering Dingy Jungle Blocks!");
@@ -272,6 +272,7 @@ public class DingyJungleBlocks {
             content.add(DJ_FLOWERING_JUNGLE_PLANT);
             content.add(DJ_LARGE_JUNGLE_FLOWER);
             content.add(DJ_PINK_JUNGLE_FLOWER);
+            content.add(DJ_TIKI_TORCH);
             content.add(DJ_JUNGLE_LOG);
             content.add(DJ_JUNGLE_WOOD);
             content.add(DJ_GLOWING_JUNGLE_LOG);
