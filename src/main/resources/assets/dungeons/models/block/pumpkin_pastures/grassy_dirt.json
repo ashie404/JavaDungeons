@@ -2,6 +2,7 @@
     "parent": "dungeons:block/base/grassy_dirt",
     "textures": {
         "base": "dungeons:block/pumpkin_pastures/dirt",
-        "overlay": "dungeons:block/grassy_dirt_overlay"
+        "overlay": "dungeons:block/grassy_dirt_overlay",
+        "particle": "dungeons:block/pumpkin_pastures/dirt"
     }
 }
