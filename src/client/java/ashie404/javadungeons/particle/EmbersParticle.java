@@ -38,7 +38,7 @@ public class EmbersParticle extends AscendingParticle {
     }
 
     protected EmbersParticle(ClientWorld world, float[] tint, double x, double y, double z, double velocityX, double velocityY, double velocityZ, float scaleMultiplier, SpriteProvider spriteProvider) {
-        super(world, x, y, z, 0.1f, 0.5f, 0.1f, velocityX, velocityY, velocityZ, scaleMultiplier, spriteProvider, 0.0f, 20, 0.0f, true);
+        super(world, x, y, z, 0.1f, 0.2f, 0.1f, velocityX, velocityY, velocityZ, scaleMultiplier, spriteProvider, 0.0f, 20, 0.0f, true);
         this.red = tint[0];
         this.green = tint[1];
         this.blue = tint[2];
@@ -109,7 +109,7 @@ public class EmbersParticle extends AscendingParticle {
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
             Random random = clientWorld.random;
             double j = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
-            double k = (double)random.nextFloat() * 0.5 * (double)random.nextFloat() * 0.1 * 0.6;
+            double k = (double)random.nextFloat() * 0.25 * (double)random.nextFloat() * 0.5;
             double l = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
             int palIndex = random.nextBetween(0, 3);
             return new EmbersParticle(clientWorld, getRGBFfromInt(CANDLE_EMBERS_PALETTE[palIndex]), d, e, f, j, k, l, 0.9f, this.spriteProvider);
@@ -128,7 +128,7 @@ public class EmbersParticle extends AscendingParticle {
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
             Random random = clientWorld.random;
             double j = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
-            double k = (double)random.nextFloat() * 0.5 * (double)random.nextFloat() * 0.1 * 0.6;
+            double k = (double)random.nextFloat() * 0.25 * (double)random.nextFloat() * 0.5;
             double l = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
             int palIndex = random.nextBetween(0, 3);
             return new EmbersParticle(clientWorld, getRGBFfromInt(GREEN_EMBERS_PALETTE[palIndex]), d, e, f, j, k, l, 0.9f, this.spriteProvider);
