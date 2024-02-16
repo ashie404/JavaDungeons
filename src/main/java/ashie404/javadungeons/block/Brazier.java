@@ -1,5 +1,6 @@
 package ashie404.javadungeons.block;
 
+import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -66,6 +67,7 @@ public class Brazier extends Block {
             double h = random.nextBoolean() ? (0.1*rd2) : (-0.1*rd1);
             world.addParticle(particle, d, e, f, 0.0, 0.04*Math.abs(rd1), 0.0);
             world.addParticle(particle, d+g, e, f+h, 0.0, 0.03*Math.abs(rd2), 0.0);
+            world.addParticle(particle == Particles.GREEN_FLAME ? Particles.GREEN_EMBERS : Particles.EMBERS, d, e, f, 0.0, 0.0, 0.0);
         }
     }
 }

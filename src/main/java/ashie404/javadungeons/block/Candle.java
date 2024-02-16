@@ -25,14 +25,16 @@ public class Candle extends Block {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
     private DefaultParticleType particle;
+    private boolean isGreen;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
 		return SHAPE;
 	}
 
-    public Candle(Settings settings, boolean isGreen) {
+    public Candle(Settings settings, boolean green) {
         super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(15).ticksRandomly());
+        this.isGreen = green;
         this.particle = isGreen ? Particles.CANDLE_GREEN_FLAME : Particles.CANDLE_FLAME;
         
     }
@@ -52,7 +54,7 @@ public class Candle extends Block {
         double d = (double)pos.getX() + 0.5D;
         double e = (double)pos.getY() + 1.0D;
         double f = (double)pos.getZ() + 0.5D;
-        world.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, 0.0D, 0.0D);
+        world.addParticle(isGreen ? Particles.GREEN_CANDLE_EMBERS : Particles.CANDLE_EMBERS, d, e, f, 0.0D, 0.0D, 0.0D);
         world.addParticle(particle, d, e, f, 0.0D, 0.0D, 0.0D);
     }
 }
