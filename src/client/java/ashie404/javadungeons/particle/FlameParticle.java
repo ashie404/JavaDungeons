@@ -11,11 +11,39 @@ import net.minecraft.util.math.MathHelper;
 
 public class FlameParticle extends AbstractSlowingParticle {
     protected boolean flip_h = false;
+    private final SpriteProvider spriteProvider;
 
-    protected FlameParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, float defaultScale) {
+    protected FlameParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, float defaultScale, boolean flip, SpriteProvider spriteProvider) {
         super(world, x, y, z, velocityX, velocityY, velocityZ);
-        scale = defaultScale;
-        flip_h = random.nextBoolean();
+        this.spriteProvider = spriteProvider;
+        this.scale = defaultScale;
+        this.flip_h = flip;
+        this.maxAge = 10+(int)Math.floor(random.nextFloat()*4);
+    }
+
+    @Override
+    public void tick() {
+        this.prevPosX = this.x;
+        this.prevPosY = this.y;
+        this.prevPosZ = this.z;
+        if (this.age++ >= this.maxAge) {
+            this.markDead();
+            return;
+        }
+        this.velocityY -= 0.04 * (double)this.gravityStrength;
+        this.move(this.velocityX, this.velocityY, this.velocityZ);
+        if (this.ascending && this.y == this.prevPosY) {
+            this.velocityX *= 1.1;
+            this.velocityZ *= 1.1;
+        }
+        this.velocityX *= (double)this.velocityMultiplier;
+        this.velocityY *= (double)this.velocityMultiplier;
+        this.velocityZ *= (double)this.velocityMultiplier;
+        if (this.onGround) {
+            this.velocityX *= (double)0.7f;
+            this.velocityZ *= (double)0.7f;
+        }
+        this.setSpriteForAge(this.spriteProvider);
     }
 
     @Override
@@ -57,12 +85,14 @@ public class FlameParticle extends AbstractSlowingParticle {
     }
 
     public static class BigFlameFactory implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider spriteProvider;    
+        private final SpriteProvider spriteProvider;  
+        boolean flip = false;  
         public BigFlameFactory(SpriteProvider spriteProvider) {
            this.spriteProvider = spriteProvider;
         }   
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-           FlameParticle flameParticle = new FlameParticle(clientWorld, d, e, f, g, h, i, 0.6F);
+            flip = !flip;
+           FlameParticle flameParticle = new FlameParticle(clientWorld, d, e, f, g, h, i, 0.6F, flip, spriteProvider);
            flameParticle.setSprite(this.spriteProvider);
            return flameParticle;
         }
@@ -70,11 +100,13 @@ public class FlameParticle extends AbstractSlowingParticle {
 
     public static class SmallFlameFactory implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider spriteProvider;    
+        boolean flip = false;
         public SmallFlameFactory(SpriteProvider spriteProvider) {
            this.spriteProvider = spriteProvider;
         }   
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-           FlameParticle flameParticle = new FlameParticle(clientWorld, d, e, f, g, h, i, 0.2F);
+           flip = !flip;
+           FlameParticle flameParticle = new FlameParticle(clientWorld, d, e, f, g, h, i, 0.2F, flip, spriteProvider);
            flameParticle.setSprite(this.spriteProvider);
            return flameParticle;
         }

@@ -1,5 +1,12 @@
 {
-    "textures": [
-      "dungeons:green_flame"
-    ]
-  }
+  "textures": [
+    "dungeons:green_flame1",
+    "dungeons:green_flame2",
+    "dungeons:green_flame3",
+    "dungeons:green_flame4",
+    "dungeons:green_flame5",
+    "dungeons:green_flame6",
+    "dungeons:green_flame7",
+    "dungeons:green_flame8"
+  ]
+}

@@ -38,7 +38,7 @@ public class EmbersParticle extends AscendingParticle {
     }
 
     protected EmbersParticle(ClientWorld world, float[] tint, double x, double y, double z, double velocityX, double velocityY, double velocityZ, float scaleMultiplier, SpriteProvider spriteProvider) {
-        super(world, x, y, z, 0.1f, 0.2f, 0.1f, velocityX, velocityY, velocityZ, scaleMultiplier, spriteProvider, 0.0f, 20, 0.0f, true);
+        super(world, x, y, z, 0.1f, 0.2f, 0.1f, velocityX, velocityY, velocityZ, scaleMultiplier, spriteProvider, 0.0f, 20, 0.01f, true);
         this.red = tint[0];
         this.green = tint[1];
         this.blue = tint[2];
@@ -53,7 +53,7 @@ public class EmbersParticle extends AscendingParticle {
     public void tick() {
         super.tick();
         if (!this.dead) {
-            this.setAlpha(MathHelper.lerp((float)0.02f, (float)this.alpha, (float)0.0f));
+            this.setAlpha(MathHelper.lerp((float)0.03f, (float)this.alpha, (float)0.0f));
         }
     }
 

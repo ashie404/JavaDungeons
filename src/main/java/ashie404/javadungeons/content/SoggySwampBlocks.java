@@ -12,7 +12,6 @@ import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 

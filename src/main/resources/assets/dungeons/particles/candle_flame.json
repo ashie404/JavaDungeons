@@ -1,5 +1,12 @@
 {
     "textures": [
-      "dungeons:candle_flame"
+      "dungeons:candle_flame1",
+      "dungeons:candle_flame2",
+      "dungeons:candle_flame3",
+      "dungeons:candle_flame4",
+      "dungeons:candle_flame5",
+      "dungeons:candle_flame6",
+      "dungeons:candle_flame7",
+      "dungeons:candle_flame8"
     ]
   }
