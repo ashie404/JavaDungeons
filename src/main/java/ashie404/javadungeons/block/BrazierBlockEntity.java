@@ -18,7 +18,7 @@ public class BrazierBlockEntity extends BlockEntity {
     public static void particleTick(World world, BlockPos pos, BlockState state, BrazierBlockEntity be) {
         Random random = world.getRandom();
         LitVariant variant = state.get(Brazier.LIT_VARIANT);
-        if (variant == LitVariant.LIT) {
+        if (variant != LitVariant.UNLIT) {
             if (random.nextBoolean()) {
                 double d = (double)pos.getX() + 0.5;
                 double e = (double)pos.getY() + 1.2;
