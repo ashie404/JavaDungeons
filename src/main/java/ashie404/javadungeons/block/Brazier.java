@@ -1,7 +1,10 @@
 package ashie404.javadungeons.block;
 
+import java.util.function.ToIntFunction;
+
 import com.mojang.serialization.MapCodec;
 
+import ashie404.javadungeons.block.Properties.LitVariant;
 import ashie404.javadungeons.content.BlockEntities;
 import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -14,7 +17,10 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -29,11 +35,11 @@ public class Brazier extends BlockWithEntity {
 
     // brazier block
 
-    private final DefaultParticleType particle;
     protected final VoxelShape SHAPE;
     private final VoxelShape DEFAULT_SHAPE = VoxelShapes.union(Block.createCuboidShape(-4.0D, 0.0D, -4.0D, 20.0D, 4.0D, 20.0D),Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 20.0D, 16.0D));
     private final VoxelShape SS_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 17.0D, 16.0D);
     private final boolean TYPE;
+    public static final EnumProperty<Properties.LitVariant> LIT_VARIANT = Properties.LIT_VARIANT;
 
     protected MapCodec<? extends Brazier> getCodec() { return null; }
 
@@ -42,32 +48,22 @@ public class Brazier extends BlockWithEntity {
 		return SHAPE;
 	}
 
-    public Brazier(Settings settings, DefaultParticleType p, boolean soggySwamp) {
-        super(FabricBlockSettings.copyOf(settings).nonOpaque().ticksRandomly().solid());
-        this.particle = p;
+    private static ToIntFunction<BlockState> getLightLevel() {
+        return (blockState) -> { return blockState.get(LIT_VARIANT) != LitVariant.UNLIT ? 15 : 0; };
+    }
+
+    public Brazier(Settings settings, boolean soggySwamp) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().ticksRandomly().solid().luminance(getLightLevel()));
         this.TYPE = soggySwamp;
         this.SHAPE = soggySwamp ? SS_SHAPE : DEFAULT_SHAPE;
     }
 
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new BrazierBlockEntity(pos, state);
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return (BlockState)this.getDefaultState().with(LIT_VARIANT, Properties.LitVariant.UNLIT);
     }
 
-    @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        // With inheriting from BlockWithEntity this defaults to INVISIBLE, so we need to change that!
-        return BlockRenderType.MODEL;
-    }
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        if (world.isClient) {
-            if (particle == Particles.GREEN_FLAME) {
-                return validateTicker(type, BlockEntities.BRAZIER, BrazierBlockEntity::greenFlameTick);
-            }
-            return validateTicker(type, BlockEntities.BRAZIER, BrazierBlockEntity::flameTick);
-        }
-        return null;
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(LIT_VARIANT);
     }
 
     @Override
@@ -87,14 +83,32 @@ public class Brazier extends BlockWithEntity {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (particle != null) {
+        LitVariant variant = state.get(LIT_VARIANT);
+        if (variant != LitVariant.UNLIT) {
             double d = (double)pos.getX() + 0.5;
             double e = (double)pos.getY() + 1.15;
             double f = (double)pos.getZ() + 0.5;
-            
-            //world.addParticle(particle, d, e, f, 0.0, 0.02*Math.abs(rd1), 0.0);
-            //world.addParticle(particle, d+g, e, f+h, 0.0, 0.03*Math.abs(rd2), 0.0);
-            world.addParticle(particle == Particles.GREEN_FLAME ? Particles.GREEN_EMBERS : Particles.EMBERS, d, e, f, 0.0, 0.0, 0.0);
+            world.addParticle(variant == LitVariant.LIT_GREEN ? Particles.GREEN_EMBERS : Particles.EMBERS, d, e, f, 0.0, 0.0, 0.0);
         }
+    }
+
+    /// Block entity functionality
+
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new BrazierBlockEntity(pos, state);
+    }
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state) {
+        // With inheriting from BlockWithEntity this defaults to INVISIBLE, so we need to change that!
+        return BlockRenderType.MODEL;
+    }
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if (world.isClient) {
+            return validateTicker(type, BlockEntities.BRAZIER, BrazierBlockEntity::particleTick);
+        }
+        return null;
     }
 }

@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 
 public class ItemGroups {
     public static final ItemGroup GENERIC = FabricItemGroup.builder()
-		.icon(() -> new ItemStack(GenericBlocks.GREEN_LIT_BRAZIER))
+		.icon(() -> new ItemStack(GenericBlocks.BRAZIER))
 		.displayName(Text.translatable("itemGroup.dungeons.generic")).build();
 	public static final ItemGroup CREEPER_WOODS = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(CreeperWoodsBlocks.CW_MOSSY_STONE_BRICKS))

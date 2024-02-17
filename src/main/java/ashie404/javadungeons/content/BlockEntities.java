@@ -14,8 +14,7 @@ public class BlockEntities {
         Registries.BLOCK_ENTITY_TYPE,
         JavaDungeons.ID("brazier"),
         FabricBlockEntityTypeBuilder.create(BrazierBlockEntity::new, 
-            GenericBlocks.GREEN_LIT_BRAZIER, GenericBlocks.LIT_BRAZIER,
-            SoggySwampBlocks.SS_GREEN_LIT_BRAZIER, SoggySwampBlocks.SS_LIT_BRAZIER).build()
+            GenericBlocks.BRAZIER, SoggySwampBlocks.SS_BRAZIER).build()
     );
     
     public static void init() {

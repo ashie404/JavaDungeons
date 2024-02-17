@@ -189,12 +189,8 @@ public class GenericBlocks {
         RegistryHelper.registerBlock(new Block(Material.WOOD), "empty_shelf");
 
     // braziers
-    public static final Block UNLIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Material.CAST_IRON, null, false), "unlit_brazier");
-    public static final Block LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15), Particles.FLAME, false), "lit_brazier");
-    public static final Block GREEN_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15), Particles.GREEN_FLAME, false), "green_lit_brazier");
+    public static final Block BRAZIER = 
+        RegistryHelper.registerBlock(new Brazier(Material.CAST_IRON, false), "brazier");
 
     // books
     public static final Block CLOSED_BOOK = 
@@ -317,9 +313,7 @@ public class GenericBlocks {
             content.add(CARROT_SHELF);
             content.add(CHEST_SHELF);
             content.add(EMPTY_SHELF);
-            content.add(UNLIT_BRAZIER);
-            content.add(LIT_BRAZIER);
-            content.add(GREEN_LIT_BRAZIER);
+            content.add(BRAZIER);
             content.add(CLOSED_BOOK);
             content.add(OPEN_BOOK);
             content.add(CANDLE);

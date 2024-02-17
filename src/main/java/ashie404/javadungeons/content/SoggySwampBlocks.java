@@ -54,12 +54,8 @@ public class SoggySwampBlocks {
         RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "ss_rope_fence");
 
     // braziers
-    public static final Block SS_UNLIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Material.STONE, null, true), "ss_unlit_brazier");
-    public static final Block SS_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.STONE).luminance(15), Particles.FLAME, true), "ss_lit_brazier");
-    public static final Block SS_GREEN_LIT_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(FabricBlockSettings.copyOf(Material.STONE).luminance(15), Particles.GREEN_FLAME, true), "ss_green_lit_brazier");
+    public static final Block SS_BRAZIER = 
+        RegistryHelper.registerBlock(new Brazier(Material.STONE, true), "ss_brazier");
 
     public static void init() {
         // add to item group
@@ -79,9 +75,7 @@ public class SoggySwampBlocks {
             content.add(SS_SWAMP_SAPLING);
             content.add(SS_BRIDGE_PLANKS);
             content.add(SS_ROPE_FENCE);
-            content.add(SS_UNLIT_BRAZIER);
-            content.add(SS_LIT_BRAZIER);
-            content.add(SS_GREEN_LIT_BRAZIER);
+        content.add(SS_BRAZIER);
         });
     }
 }
