@@ -17,8 +17,9 @@ public class GlowingPlant extends PlantBlock {
     // glowing plant block
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-
-    protected MapCodec<? extends GlowingPlant> getCodec() { return createCodec(GlowingPlant::new); }
+    
+    protected static final MapCodec<? extends GlowingPlant> CODEC = createCodec(GlowingPlant::new);
+    protected MapCodec<? extends GlowingPlant> getCodec() { return CODEC; }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;

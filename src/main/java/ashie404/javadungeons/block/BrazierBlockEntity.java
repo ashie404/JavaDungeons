@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 
 public class BrazierBlockEntity extends BlockEntity {
 
+    // Brazier block entity
+    
     public BrazierBlockEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.BRAZIER, pos, state);
     }

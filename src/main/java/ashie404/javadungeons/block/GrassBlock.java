@@ -1,7 +1,6 @@
 package ashie404.javadungeons.block;
 
 import com.mojang.serialization.MapCodec;
-
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -33,7 +32,9 @@ public class GrassBlock extends SnowyBlock {
     private boolean canTill = false;
     private boolean canPath = false;
 
-    public MapCodec<GrassBlock> getCodec() { return createCodec(GrassBlock::new); }
+    protected static final MapCodec<GrassBlock> CODEC = createCodec(GrassBlock::new);
+    
+    protected MapCodec<GrassBlock> getCodec() { return CODEC; }
 
     private GrassBlock(Settings settings) {
         super(settings);

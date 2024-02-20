@@ -18,8 +18,9 @@ public class DesertPlant extends PlantBlock {
     // desert plant block
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
+    protected static final MapCodec<? extends DesertPlant> CODEC = createCodec(DesertPlant::new);
 
-    protected MapCodec<? extends DesertPlant> getCodec() { return createCodec(DesertPlant::new); }
+    protected MapCodec<? extends DesertPlant> getCodec() { return CODEC; }
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {

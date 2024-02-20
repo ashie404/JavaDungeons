@@ -190,7 +190,7 @@ public class GenericBlocks {
 
     // braziers
     public static final Block BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Material.CAST_IRON, false), "brazier");
+        RegistryHelper.registerBlock(new Brazier(false, Material.CAST_IRON), "brazier");
 
     // books
     public static final Block CLOSED_BOOK = 

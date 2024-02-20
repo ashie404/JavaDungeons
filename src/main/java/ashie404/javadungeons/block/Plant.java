@@ -17,7 +17,9 @@ public class Plant extends PlantBlock {
     // plant block
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-    protected MapCodec<? extends Plant> getCodec() { return createCodec(Plant::new); }
+
+    protected static final MapCodec<? extends Plant> CODEC = createCodec(Plant::new);
+    protected MapCodec<? extends Plant> getCodec() { return CODEC; }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return SHAPE;

@@ -7,18 +7,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import ashie404.javadungeons.block.Brazier;
 import ashie404.javadungeons.block.Properties.LitVariant;
-import ashie404.javadungeons.content.Tags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.CampfireBlock;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-// mixin so that plants can be planted on custom soil blocks
+// mixin for shovel extinguishing logic for the brazier
 
 @Mixin(ShovelItem.class)
 public class MixinShovelItem {
@@ -28,7 +26,9 @@ public class MixinShovelItem {
         BlockPos blockPos = context.getBlockPos();
         BlockState blockState = world.getBlockState(blockPos);
         if (blockState.getBlock() instanceof Brazier && blockState.get(Brazier.LIT_VARIANT) != LitVariant.UNLIT) {
-            Brazier.extinguish(world, blockPos, blockState);
+            Brazier.extinguish((Entity)context.getPlayer(), world, blockPos, blockState);
+            world.setBlockState(blockPos, (BlockState)blockState.with(Brazier.LIT_VARIANT, LitVariant.UNLIT), Block.NOTIFY_ALL_AND_REDRAW);
+            callback.setReturnValue(ActionResult.SUCCESS);
         }
 	}
 }

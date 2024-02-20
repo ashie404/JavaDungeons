@@ -55,7 +55,7 @@ public class SoggySwampBlocks {
 
     // braziers
     public static final Block SS_BRAZIER = 
-        RegistryHelper.registerBlock(new Brazier(Material.STONE, true), "ss_brazier");
+        RegistryHelper.registerBlock(new Brazier(true, Material.STONE), "ss_brazier");
 
     public static void init() {
         // add to item group
@@ -75,7 +75,7 @@ public class SoggySwampBlocks {
             content.add(SS_SWAMP_SAPLING);
             content.add(SS_BRIDGE_PLANKS);
             content.add(SS_ROPE_FENCE);
-        content.add(SS_BRAZIER);
+            content.add(SS_BRAZIER);
         });
     }
 }

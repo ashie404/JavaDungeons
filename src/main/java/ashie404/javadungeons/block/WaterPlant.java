@@ -23,7 +23,8 @@ public class WaterPlant extends PlantBlock implements FluidFillable {
 
     // water plant block
 
-    protected MapCodec<? extends WaterPlant> getCodec() { return createCodec(WaterPlant::new); }
+    protected static final MapCodec<? extends WaterPlant> CODEC = createCodec(WaterPlant::new);
+    protected MapCodec<? extends WaterPlant> getCodec() { return CODEC; }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());

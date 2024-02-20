@@ -6,7 +6,9 @@ public class FallingBlock extends net.minecraft.block.FallingBlock {
 
     // generic falling block
 
-    protected MapCodec<? extends FallingBlock> getCodec() { return createCodec(FallingBlock::new); }
+    protected static final MapCodec<? extends FallingBlock> CODEC = createCodec(FallingBlock::new);
+
+    protected MapCodec<? extends FallingBlock> getCodec() { return CODEC; }
 
     public FallingBlock(Settings settings) {
         super(settings);
