@@ -5,7 +5,6 @@ import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
 import ashie404.javadungeons.worldgen.SaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;

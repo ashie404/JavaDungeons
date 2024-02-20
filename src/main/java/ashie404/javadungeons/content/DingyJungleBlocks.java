@@ -9,7 +9,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
