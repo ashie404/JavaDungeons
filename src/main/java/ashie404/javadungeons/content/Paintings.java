@@ -1,12 +1,10 @@
 package ashie404.javadungeons.content;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.registry.RegistryHelper;
 
 public class Paintings {
 
     public static void init() {
-        JavaDungeons.log.info("Registering Painting Variants!");
         // register dungeons painting variants
         RegistryHelper.registerPainting("arch_illager_cool_guy", 32, 32);
         RegistryHelper.registerPainting("arch_illager_portrait", 32, 32);

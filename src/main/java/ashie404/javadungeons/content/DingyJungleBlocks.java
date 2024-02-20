@@ -201,7 +201,6 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new TikiTorch(FabricBlockSettings.copyOf(Material.WOOD).luminance(14)), "dj_tiki_torch");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Dingy Jungle Blocks!");
         // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("dingy_jungle"))).register(content -> {
             content.add(DJ_GRASS_BLOCK); 

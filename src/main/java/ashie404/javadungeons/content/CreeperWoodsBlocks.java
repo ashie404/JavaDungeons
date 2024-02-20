@@ -117,8 +117,6 @@ public class CreeperWoodsBlocks {
         RegistryHelper.registerBlock(new Gravestone(Material.STONE), "cw_mossy_gravestone");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Creeper Woods Blocks!");
-
         // add blockitems to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("creeper_woods"))).register(content -> {
             content.add(CW_MOSSY_COBBLESTONE);

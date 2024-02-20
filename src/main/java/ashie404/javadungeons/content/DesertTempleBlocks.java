@@ -36,8 +36,6 @@ public class DesertTempleBlocks {
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dt_sandy_cobblestone");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Desert Temple Blocks!");
-        
         // add blocks to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("desert_temple"))).register(content -> {
             content.add(DT_SANDY_ANDESITE.base);

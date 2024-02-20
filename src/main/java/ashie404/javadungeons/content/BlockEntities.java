@@ -25,6 +25,6 @@ public class BlockEntities {
     );
     
     public static void init() {
-        JavaDungeons.log.info("Registering block entities!");
+        // stub to load class into memory/init static fields
     }
 }

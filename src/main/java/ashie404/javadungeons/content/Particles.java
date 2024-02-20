@@ -17,6 +17,6 @@ public class Particles {
     public static final DefaultParticleType GREEN_CANDLE_EMBERS = Registry.register(Registries.PARTICLE_TYPE, JavaDungeons.ID("green_candle_embers"), FabricParticleTypes.simple());
 
     public static void init() {
-        JavaDungeons.log.info("Registering Particles!");
+        // stub to load class into memory/init static fields
     }
 }

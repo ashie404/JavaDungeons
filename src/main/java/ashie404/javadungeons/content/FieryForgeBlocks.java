@@ -33,7 +33,6 @@ public class FieryForgeBlocks {
         RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "ff_emblemed_dark_stone");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Fiery Forge Blocks!");
         // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("fiery_forge"))).register(content -> {
             content.add(FF_DARK_STONE.base);

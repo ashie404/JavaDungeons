@@ -1,6 +1,5 @@
 package ashie404.javadungeons.content;
 
-import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -40,7 +39,6 @@ public class ItemGroups {
 		.displayName(Text.translatable("itemGroup.dungeons.weapons")).build();
 
     public static void init() {
-		JavaDungeons.log.info("Registering Item Groups!");
         // register item groups
 		RegistryHelper.registerItemGroup("generic", GENERIC);
 		RegistryHelper.registerItemGroup("creeper_woods", CREEPER_WOODS);

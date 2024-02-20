@@ -95,8 +95,6 @@ public class CactiCanyonBlocks {
         RegistryHelper.registerBlock(new DesertTallPlant(Material.OFFSET_XZ_PLANT), "cc_tall_cactus");
     
     public static void init() {
-        JavaDungeons.log.info("Registering Cacti Canyon Blocks!");
-
         // add all blockitems to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("cacti_canyon"))).register(content -> {
             content.add(CC_GRASS_BLOCK);

@@ -225,7 +225,6 @@ public class GenericBlocks {
         RegistryHelper.registerBlock(new Vine(Material.LEAVES), "vine");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Generic Blocks!");
         // Add all blocks to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("generic"))).register(content -> {
             content.add(FLOOR_TILE);

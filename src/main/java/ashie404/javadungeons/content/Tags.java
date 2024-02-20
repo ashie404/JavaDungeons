@@ -10,6 +10,6 @@ public class Tags {
     public static final TagKey<Block> DESERT_PLANTABLE = TagKey.of(RegistryKeys.BLOCK, JavaDungeons.ID("desert_plantable"));
 
     public static void init() {
-        JavaDungeons.log.info("Registering Tags!");
+        // stub to load class into memory/init static fields
     }
 }

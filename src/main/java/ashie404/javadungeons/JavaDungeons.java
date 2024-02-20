@@ -19,7 +19,6 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 	public static final Logger log = LogManager.getLogger(MOD_ID);
 
 	public static final Identifier ID(String id) {
-		log.debug("modRegistry ID {}", id);
 		return new Identifier(MOD_ID, id);
 	}
 

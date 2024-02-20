@@ -44,7 +44,6 @@ public class RedstoneMinesBlocks {
         RegistryHelper.registerBlock(new Block(Material.DARK_QUARTZ), "rm_chiseled_dark_quartz_1");
     
     public static void init() {
-        JavaDungeons.log.info("Registering Redstone Mines Blocks!");
         // add to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("redstone_mines"))).register(content -> {
             content.add(RM_CRYSTALS);

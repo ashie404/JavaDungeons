@@ -97,7 +97,6 @@ public class Weapons {
         RegistryHelper.registerItem(new DungeonsSword(ToolMaterials.IRON, 5, -2.5F), "whispering_spear");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Weapons!");
         // add items to item group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("weapons"))).register(content -> {
             content.add(AXE);

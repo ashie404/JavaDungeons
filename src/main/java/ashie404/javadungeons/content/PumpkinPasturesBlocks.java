@@ -126,8 +126,6 @@ public class PumpkinPasturesBlocks {
         RegistryHelper.registerBSS(new SlabStairBlock(Material.WOOD), "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
 
     public static void init() {
-        JavaDungeons.log.info("Registering Pumpkin Pastures Blocks!");
-
         // add all blockitems to group
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("pumpkin_pastures"))).register(content -> {
             content.add(PM_YELLOW_AUTUMNAL_LEAVES);
