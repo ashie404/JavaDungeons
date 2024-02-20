@@ -96,6 +96,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_mossy_bricks");
     public static final Block DJ_LARGE_BRICKS =
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_large_bricks");
+    public static final Block DJ_SMOOTH_LARGE_BRICKS =
+        RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "dj_smooth_large_bricks");
     
     // stone floors
     public static final Block DJ_BLUE_GLAZED_STONE_FLOOR =
@@ -243,6 +245,7 @@ public class DingyJungleBlocks {
             content.add(DJ_SLIGHTLY_MOSSY_BRICKS);
             content.add(DJ_MOSSY_BRICKS);
             content.add(DJ_LARGE_BRICKS);
+            content.add(DJ_SMOOTH_LARGE_BRICKS);
             content.add(DJ_GOLD_BLOCK);
             content.add(DJ_MOSSY_GOLD_BLOCK);
             content.add(DJ_BLUE_GLAZED_STONE_FLOOR);
