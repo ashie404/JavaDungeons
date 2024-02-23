@@ -2,11 +2,13 @@ package ashie404.javadungeons.registry;
 
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.block.SlabStairBlock;
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.block.Block;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
@@ -24,9 +26,13 @@ public class RegistryHelper {
     }
     
     // Registers a sound event
-    public static SoundEvent registerSound(String idString) {
-        Identifier id = JavaDungeons.ID(idString);
-        return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
+    public static SoundEvent registerSound(String id) {
+        return Registry.register(Registries.SOUND_EVENT, JavaDungeons.ID(id), SoundEvent.of(JavaDungeons.ID(id)));
+    }
+
+    // Registers a simple particle
+    public static DefaultParticleType registerSimpleParticle(String id) {
+        return Registry.register(Registries.PARTICLE_TYPE, JavaDungeons.ID(id), FabricParticleTypes.simple());
     }
 
     // Registers a block and corresponding block item for it.
