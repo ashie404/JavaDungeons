@@ -482,6 +482,8 @@
 
     "item.dungeons.spear": "Spear",
     "item.dungeons.fortune_spear": "Fortune Spear",
-    "item.dungeons.whispering_spear": "Whispering Spear"
-    
+    "item.dungeons.whispering_spear": "Whispering Spear",
+
+    "container.dungeons.sack": "Sack",
+    "container.dungeons.small_sack": "Small Sack"
 }

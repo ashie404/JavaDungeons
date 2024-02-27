@@ -1,8 +1,7 @@
 package ashie404.javadungeons.content;
 
 import ashie404.javadungeons.JavaDungeons;
-import ashie404.javadungeons.block.BrazierBlockEntity;
-import ashie404.javadungeons.block.TikiTorchBlockEntity;
+import ashie404.javadungeons.block.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
@@ -22,6 +21,13 @@ public class BlockEntities {
         JavaDungeons.ID("tiki_torch"),
         FabricBlockEntityTypeBuilder.create(TikiTorchBlockEntity::new, 
             DingyJungleBlocks.DJ_TIKI_TORCH).build()
+    );
+
+    public static final BlockEntityType<SackBlockEntity> SACK = Registry.register(
+        Registries.BLOCK_ENTITY_TYPE,
+        JavaDungeons.ID("sack"),
+        FabricBlockEntityTypeBuilder.create(SackBlockEntity::new, 
+            GenericBlocks.SACK, GenericBlocks.SMALL_SACK).build()
     );
     
     public static void init() {

@@ -42,13 +42,13 @@ public class KitchenUtensil extends Block implements Waterloggable {
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
-        if (isPan) { switch (blockState.get(FACING)) {
+        if (isPan) switch (blockState.get(FACING)) {
             case NORTH: return PAN_SHAPE_N;
             case EAST: return PAN_SHAPE_E;
             case SOUTH: return PAN_SHAPE_S;
             case WEST: return PAN_SHAPE_W;
             default: return PAN_SHAPE_N;
-        }}
+        };
 		return POT_SHAPE;
     }
     

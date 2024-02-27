@@ -9,6 +9,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import ashie404.javadungeons.block.Properties.LitVariant;
+import ashie404.javadungeons.block.entity.BrazierBlockEntity;
 import ashie404.javadungeons.content.BlockEntities;
 import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

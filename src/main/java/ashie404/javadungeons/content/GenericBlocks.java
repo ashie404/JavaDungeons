@@ -33,9 +33,9 @@ public class GenericBlocks {
     public static final Block DUNGEONS_LANTERN = 
         RegistryHelper.registerBlock(new LanternBlock(FabricBlockSettings.copyOf(Material.CAST_IRON).luminance(15)), "dungeons_lantern");
     public static final Block SACK = 
-        RegistryHelper.registerBlock(new Sack(Material.FABRIC, false), "sack");
+        RegistryHelper.registerBlock(new Sack(false, Material.FABRIC), "sack");
     public static final Block SMALL_SACK = 
-        RegistryHelper.registerBlock(new Sack(Material.FABRIC, true), "small_sack");
+        RegistryHelper.registerBlock(new Sack(true, Material.FABRIC), "small_sack");
 
     // food related
     public static final Block BARREL_CLOSED = 

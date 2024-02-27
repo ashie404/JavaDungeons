@@ -1,5 +1,6 @@
-package ashie404.javadungeons.block;
+package ashie404.javadungeons.block.entity;
 
+import ashie404.javadungeons.block.Brazier;
 import ashie404.javadungeons.block.Properties.LitVariant;
 import ashie404.javadungeons.content.BlockEntities;
 import ashie404.javadungeons.content.Particles;
