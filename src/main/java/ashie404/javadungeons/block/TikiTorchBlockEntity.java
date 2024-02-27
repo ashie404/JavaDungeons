@@ -1,6 +1,5 @@
 package ashie404.javadungeons.block;
 
-import ashie404.javadungeons.block.Properties.LitVariant;
 import ashie404.javadungeons.content.BlockEntities;
 import ashie404.javadungeons.content.Particles;
 import net.minecraft.block.BlockState;
