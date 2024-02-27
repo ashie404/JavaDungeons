@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/cooking_pot" },
+        "facing=south": { "model": "dungeons:block/cooking_pot", "y": 180 },
+        "facing=east": { "model":  "dungeons:block/cooking_pot", "y": 90 },
+        "facing=west": { "model":  "dungeons:block/cooking_pot", "y": 270 }
+    }
+}

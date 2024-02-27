@@ -208,14 +208,18 @@ public class GenericBlocks {
     public static final Block TRAY = 
         RegistryHelper.registerBlock(new Tray(Material.WOOD), "tray");
 
-    // teapot
+    // kitchen utensils
+    public static final Block COOKING_POT =
+        RegistryHelper.registerBlock(new KitchenUtensil(false, Material.CAST_IRON), "cooking_pot");
+    public static final Block FRYING_PAN =
+        RegistryHelper.registerBlock(new KitchenUtensil(true, Material.CAST_IRON), "frying_pan");
     public static final Block TEAPOT = 
         RegistryHelper.registerBlock(new Teapot(Material.CAST_IRON), "teapot");
 
     // redstone related
     public static final Block LIGHTHOUSE_LAMP = 
         RegistryHelper.registerBlock(new PoweredEmissive(Material.SOFT_METAL, 15), "lighthouse_lamp");
-
+ 
     // chains
     public static final Block CHAINS = 
         RegistryHelper.registerBlock(new Chains(FabricBlockSettings.copyOf(Material.CAST_IRON).sounds(BlockSoundGroup.CHAIN)), "chains");
@@ -318,6 +322,8 @@ public class GenericBlocks {
             content.add(CANDLE);
             content.add(GREEN_CANDLE);
             content.add(TRAY);
+            content.add(COOKING_POT);
+            content.add(FRYING_PAN);
             content.add(TEAPOT);
             content.add(LIGHTHOUSE_LAMP);
             content.add(CHAINS);

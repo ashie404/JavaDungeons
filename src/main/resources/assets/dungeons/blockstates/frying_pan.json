@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/frying_pan" },
+        "facing=south": { "model": "dungeons:block/frying_pan", "y": 180 },
+        "facing=east": { "model":  "dungeons:block/frying_pan", "y": 90 },
+        "facing=west": { "model":  "dungeons:block/frying_pan", "y": 270 }
+    }
+}
