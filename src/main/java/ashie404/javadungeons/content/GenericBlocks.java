@@ -59,11 +59,11 @@ public class GenericBlocks {
     public static final Block ROCKY_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "rocky_dirt_path");
     public static final Block DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, true, DIRT_PATH), "dirt");
+        RegistryHelper.registerBlock(new PathableBlock(true, DIRT_PATH, Material.EARTH), "dirt");
     public static final Block ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, false, ROCKY_DIRT_PATH), "rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(false, ROCKY_DIRT_PATH, Material.EARTH), "rocky_dirt");
     public static final Block GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(Material.GRASS, true, Blocks.DIRT_PATH, DIRT), "grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(true, Blocks.DIRT_PATH, DIRT, Material.GRASS), "grass_block");
     public static final Block DENSE_GRASSY_DIRT = 
         RegistryHelper.registerBlock(new Block(Material.GRASS), "dense_grassy_dirt");
     public static final Block GRASSY_DIRT = 
@@ -200,9 +200,9 @@ public class GenericBlocks {
 
     // candles
     public static final Block CANDLE = 
-        RegistryHelper.registerBlock(new Candle(Material.CAST_IRON, false), "candle");
+        RegistryHelper.registerBlock(new Candle(false, Material.CAST_IRON), "candle");
     public static final Block GREEN_CANDLE = 
-        RegistryHelper.registerBlock(new Candle(Material.CAST_IRON, true), "green_candle");
+        RegistryHelper.registerBlock(new Candle(true, Material.CAST_IRON), "green_candle");
 
     // tray
     public static final Block TRAY = 
@@ -218,7 +218,7 @@ public class GenericBlocks {
 
     // redstone related
     public static final Block LIGHTHOUSE_LAMP = 
-        RegistryHelper.registerBlock(new PoweredEmissive(Material.SOFT_METAL, 15), "lighthouse_lamp");
+        RegistryHelper.registerBlock(new PoweredEmissive(15, Material.SOFT_METAL), "lighthouse_lamp");
  
     // chains
     public static final Block CHAINS = 

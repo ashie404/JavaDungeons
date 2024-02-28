@@ -60,15 +60,15 @@ public class CreeperWoodsBlocks {
     public static final Block CW_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "cw_dirt_path");
     public static final Block CW_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, true, CW_DIRT_PATH), "cw_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(true, CW_DIRT_PATH, Material.EARTH), "cw_dirt");
     public static final Block CW_DIRT_SLAB = 
         RegistryHelper.registerBlock(new SlabBlock(Material.EARTH), "cw_dirt_slab");
     public static final Block CW_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(Material.GRASS, true, Blocks.DIRT_PATH, CW_DIRT), "cw_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(true, Blocks.DIRT_PATH, CW_DIRT, Material.GRASS), "cw_grass_block");
     public static final Block CW_ROCKY_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "cw_rocky_dirt_path");
     public static final Block CW_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, false, CW_ROCKY_DIRT_PATH), "cw_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(false, CW_ROCKY_DIRT_PATH, Material.EARTH), "cw_rocky_dirt");
     public static final Block CW_ROCKY_GRASSY_DIRT = 
         RegistryHelper.registerBlock(new Block(Material.EARTH), "cw_rocky_grassy_dirt");
     public static final Block CW_COBWEBBED_DIRT = 

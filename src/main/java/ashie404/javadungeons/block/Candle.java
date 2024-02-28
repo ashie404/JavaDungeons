@@ -31,7 +31,7 @@ public class Candle extends Block {
 		return SHAPE;
 	}
 
-    public Candle(Settings settings, boolean green) {
+    public Candle(boolean green, Settings settings) {
         super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(15).ticksRandomly());
         this.isGreen = green;
         this.particle = isGreen ? Particles.CANDLE_GREEN_FLAME : Particles.CANDLE_FLAME;

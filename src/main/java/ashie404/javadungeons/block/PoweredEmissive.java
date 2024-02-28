@@ -18,7 +18,7 @@ public class PoweredEmissive extends RedstoneLampBlock {
         return (blockState) -> { return blockState.get(Properties.LIT) ? lightLvl : 0; };
     }
 
-    public PoweredEmissive(Settings settings, int lightLevel) {
+    public PoweredEmissive(int lightLevel, Settings settings) {
         super(FabricBlockSettings.copyOf(settings).luminance(getLightLevel()));
         lightLvl = lightLevel;       
     }

@@ -67,11 +67,11 @@ public class PumpkinPasturesBlocks {
     public static final Block PM_ROCKY_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "pm_rocky_dirt_path");
     public static final Block PM_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, true, PM_DIRT_PATH), "pm_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(true, PM_DIRT_PATH, Material.EARTH), "pm_dirt");
     public static final Block PM_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, false, PM_ROCKY_DIRT_PATH), "pm_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(false, PM_ROCKY_DIRT_PATH, Material.EARTH), "pm_rocky_dirt");
     public static final Block PM_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(Material.GRASS, true, Blocks.DIRT_PATH, PM_DIRT), "pm_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(true, Blocks.DIRT_PATH, PM_DIRT, Material.GRASS), "pm_grass_block");
     public static final Block PM_DENSE_GRASSY_DIRT = 
         RegistryHelper.registerBlock(new Block(Material.GRASS), "pm_dense_grassy_dirt");
     public static final Block PM_GRASSY_DIRT = 
@@ -83,7 +83,7 @@ public class PumpkinPasturesBlocks {
     public static final Block PM_CHARRED_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "pm_charred_dirt_path");
     public static final Block PM_CHARRED_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, false, PM_CHARRED_DIRT_PATH), "pm_charred_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(false, PM_CHARRED_DIRT_PATH, Material.EARTH), "pm_charred_dirt");
     public static final Block PM_ASHY_DIRT = 
         RegistryHelper.registerBlock(new Block(Material.EARTH), "pm_ashy_dirt");
     public static final Block PM_CHARRED_DIRT_SLAB = 

@@ -23,15 +23,15 @@ public class CactiCanyonBlocks {
     public static final Block CC_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "cc_dirt_path");
     public static final Block CC_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, true, CC_DIRT_PATH), "cc_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(true, CC_DIRT_PATH, Material.EARTH), "cc_dirt");
     public static final Block CC_DIRT_SLAB = 
         RegistryHelper.registerBlock(new SlabBlock(Material.EARTH), "cc_dirt_slab");
     public static final Block CC_GRASS_BLOCK = 
-        RegistryHelper.registerBlock(new GrassBlock(Material.GRASS, true, Blocks.DIRT_PATH, CC_DIRT), "cc_grass_block");
+        RegistryHelper.registerBlock(new GrassBlock(true, Blocks.DIRT_PATH, CC_DIRT, Material.GRASS), "cc_grass_block");
     public static final Block CC_ROCKY_DIRT_PATH = 
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "cc_rocky_dirt_path");
     public static final Block CC_ROCKY_DIRT = 
-        RegistryHelper.registerBlock(new PathableBlock(Material.EARTH, false, CC_ROCKY_DIRT_PATH), "cc_rocky_dirt");
+        RegistryHelper.registerBlock(new PathableBlock(false, CC_ROCKY_DIRT_PATH, Material.EARTH), "cc_rocky_dirt");
 
     // sand blocks
     public static final Block CC_SAND = 

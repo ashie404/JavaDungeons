@@ -41,14 +41,14 @@ public class GrassBlock extends SnowyBlock {
     }
 
     // Non-pathable/tillable constructor
-    public GrassBlock(Settings settings, Block dirtBlock) {
+    public GrassBlock(Block dirtBlock, Settings settings) {
         super(FabricBlockSettings.copyOf(settings).ticksRandomly());
         dirtVariant = dirtBlock; 
     }
 
     // Pathable/tillable constructor
-    public GrassBlock(Settings settings, boolean tillable, Block pathBlock, Block dirtBlock) {
-        this(settings, dirtBlock);
+    public GrassBlock(boolean tillable, Block pathBlock, Block dirtBlock, Settings settings) {
+        this(dirtBlock, settings);
         canPath = true;
         canTill = tillable;
         pathVariant = pathBlock;

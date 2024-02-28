@@ -21,7 +21,7 @@ public class PathableBlock extends Block {
     private Block pathVariant;
     private boolean canTill;
 
-    public PathableBlock(Settings settings, boolean tillable, Block pathVariant) {
+    public PathableBlock(boolean tillable, Block pathVariant, Settings settings) {
         super(settings);
         
         this.pathVariant = pathVariant;
