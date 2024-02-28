@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "dungeons:block/cacti_canyon/tall_desert_grass_top"
+    }
+}

@@ -91,6 +91,8 @@ public class CactiCanyonBlocks {
         RegistryHelper.registerBlock(new DesertPlant(Material.OFFSET_XZ_PLANT), "cc_flowers");
     public static final Block CC_YUCCA = 
         RegistryHelper.registerBlock(new DesertTallPlant(Material.OFFSET_XZ_PLANT), "cc_yucca");
+    public static final Block CC_TALL_DESERT_GRASS =
+        RegistryHelper.registerBlock(new DesertTallPlant(Material.OFFSET_XZ_PLANT), "cc_tall_desert_grass");
     public static final Block CC_TALL_CACTUS = 
         RegistryHelper.registerBlock(new DesertTallPlant(Material.OFFSET_XZ_PLANT), "cc_tall_cactus");
     

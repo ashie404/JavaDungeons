@@ -29,6 +29,12 @@
                 {
                   "weight": 1,
                   "data": {
+                      "Name": "dungeons:cc_tall_desert_grass"
+                  }
+              },
+                {
+                  "weight": 1,
+                  "data": {
                     "Name": "dungeons:cc_tall_cactus"
                   }
                 },

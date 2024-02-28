@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=lower": {"model": "dungeons:block/cacti_canyon/tall_desert_grass_bottom"},
+        "half=upper": {"model": "dungeons:block/cacti_canyon/tall_desert_grass_top"}
+    }
+}

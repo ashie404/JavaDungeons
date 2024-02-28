@@ -27,7 +27,7 @@
                   }
                 },
                 {
-                  "weight": 30,
+                  "weight": 35,
                   "data": {
                     "Name": "dungeons:dj_grass"
                   }
@@ -39,10 +39,16 @@
                     }
                 },
                 {
-                    "weight": 15,
+                    "weight": 25,
                     "data": {
                       "Name": "dungeons:dj_tall_grass"
                     }
+                },
+                {
+                  "weight": 2,
+                  "data": {
+                    "Name": "dungeons:dj_glowing_mushrooms"
+                  }
                 },
                 {
                   "weight": 6,
