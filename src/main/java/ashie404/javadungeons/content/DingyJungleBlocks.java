@@ -155,6 +155,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_large_jungle_flower");
     public static final Block DJ_PINK_JUNGLE_FLOWER =
         RegistryHelper.registerBlock(new JunglePlant(Material.PLANT), "dj_pink_jungle_flower");
+    public static final Block DJ_GLOW_MUSHROOM = 
+        RegistryHelper.registerBlock(new GlowMushroom(FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.SLIME)), "dj_glow_mushroom");
     
     // cobweb
     public static final Block DJ_COBWEB =
@@ -267,6 +269,7 @@ public class DingyJungleBlocks {
             content.add(DJ_DEAD_SHRUB);
             content.add(DJ_BUSH);
             content.add(DJ_GLOWING_MUSHROOMS);
+            content.add(DJ_GLOW_MUSHROOM);
             content.add(DJ_COBWEB);
             content.add(DJ_LARGE_JUNGLE_PLANT);
             content.add(DJ_LARGE_JUNGLE_FERN);
