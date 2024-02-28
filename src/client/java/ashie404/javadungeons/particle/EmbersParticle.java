@@ -24,6 +24,12 @@ public class EmbersParticle extends AscendingParticle {
         9961373,
         9230912
     };
+    protected static final int[] SOUL_EMBERS_PALETTE = {
+        6619127,
+        49151,
+        4185343,
+        33791
+    };
     protected static final int[] CANDLE_EMBERS_PALETTE = {
         16630528,
         16772420,
@@ -97,6 +103,25 @@ public class EmbersParticle extends AscendingParticle {
         }
     }
 
+    public static class SoulEmbersFactory
+    implements ParticleFactory<DefaultParticleType> {
+        private final SpriteProvider spriteProvider;
+
+        public SoulEmbersFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            Random random = clientWorld.random;
+            double j = (double)(random.nextFloat() - random.nextFloat()) * 0.025;
+            double k = (double)random.nextFloat() * 0.5 * (double)random.nextFloat() * 0.1 * 3.0;
+            double l = (double)(random.nextFloat() - random.nextFloat()) * 0.025;
+            int palIndex = random.nextBetween(0, 3);
+            return new EmbersParticle(clientWorld, getRGBFfromInt(SOUL_EMBERS_PALETTE[palIndex]), d, e, f, j, k, l, 1.25f, this.spriteProvider);
+        }
+    }
+
     public static class CandleEmbersFactory
     implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider spriteProvider;
@@ -132,6 +157,25 @@ public class EmbersParticle extends AscendingParticle {
             double l = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
             int palIndex = random.nextBetween(0, 3);
             return new EmbersParticle(clientWorld, getRGBFfromInt(GREEN_EMBERS_PALETTE[palIndex]), d, e, f, j, k, l, 0.9f, this.spriteProvider);
+        }
+    }
+
+    public static class SoulCandleEmbersFactory
+    implements ParticleFactory<DefaultParticleType> {
+        private final SpriteProvider spriteProvider;
+
+        public SoulCandleEmbersFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            Random random = clientWorld.random;
+            double j = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
+            double k = (double)random.nextFloat() * 0.25 * (double)random.nextFloat() * 0.5;
+            double l = (double)(random.nextFloat() - random.nextFloat()) * 0.015;
+            int palIndex = random.nextBetween(0, 3);
+            return new EmbersParticle(clientWorld, getRGBFfromInt(SOUL_EMBERS_PALETTE[palIndex]), d, e, f, j, k, l, 0.9f, this.spriteProvider);
         }
     }
 }

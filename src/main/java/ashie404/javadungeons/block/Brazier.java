@@ -78,6 +78,9 @@ public class Brazier extends BlockWithEntity implements Waterloggable {
             if (state.get(LIT_VARIANT) == LitVariant.LIT_GREEN) {
                 // if brazier is green lit (contains emerald), then spawn out emerald when extinguished
                 world.spawnEntity(new ItemEntity((World)world, pos.getX(), pos.getY()+1.0D, pos.getZ(), new ItemStack(Items.EMERALD, 1)));
+            } else if (state.get(LIT_VARIANT) == LitVariant.LIT_SOUL) {
+                // if brazier is soul lit (contains soul sand), then spawn out soul sand when extinguished
+                world.spawnEntity(new ItemEntity((World)world, pos.getX(), pos.getY()+1.0D, pos.getZ(), new ItemStack(Items.SOUL_SAND, 1)));
             }
             // play extinguished sound and emit block change event
             world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.BLOCKS, 1.0f, 1.0f);
@@ -161,10 +164,27 @@ public class Brazier extends BlockWithEntity implements Waterloggable {
             }
             world.emitGameEvent((Entity)player, GameEvent.BLOCK_CHANGE, pos);
             return ActionResult.SUCCESS;
+        } else if (item == Items.SOUL_SAND && currentVariant == LitVariant.LIT) {
+            // turn brazier fire into soul fire when soul sand is used and fire is lit
+            world.setBlockState(pos, state.with(LIT_VARIANT, LitVariant.LIT_SOUL), Block.NOTIFY_ALL_AND_REDRAW);
+            world.playSound(player, pos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.BLOCKS, 1.0f, world.getRandom().nextFloat() * 0.4f + 0.8f);
+            if (!player.isCreative()) {
+                itemStack.decrement(1);
+            }
+            world.emitGameEvent((Entity)player, GameEvent.BLOCK_CHANGE, pos);
+            return ActionResult.SUCCESS;
         } else if (itemStack.isEmpty() && currentVariant == LitVariant.LIT_GREEN) {
+            // if player has nothing in hand or offhand, allow player to grab emerald back from brazier.
             player.setStackInHand(hand, new ItemStack(Items.EMERALD, 1));
             world.setBlockState(pos, state.with(LIT_VARIANT, LitVariant.LIT), Block.NOTIFY_ALL_AND_REDRAW);
             world.playSound(player, pos, SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, SoundCategory.BLOCKS, 1.0f, world.getRandom().nextFloat() * 0.4f + 0.8f);
+            world.emitGameEvent((Entity)player, GameEvent.BLOCK_CHANGE, pos);
+            return ActionResult.SUCCESS;
+        } else if (itemStack.isEmpty() && currentVariant == LitVariant.LIT_SOUL) {
+            // if player has nothing in hand or offhand, allow player to grab soul sand back from brazier.
+            player.setStackInHand(hand, new ItemStack(Items.SOUL_SAND, 1));
+            world.setBlockState(pos, state.with(LIT_VARIANT, LitVariant.LIT), Block.NOTIFY_ALL_AND_REDRAW);
+            world.playSound(player, pos, SoundEvents.BLOCK_SOUL_SAND_BREAK, SoundCategory.BLOCKS, 1.0f, world.getRandom().nextFloat() * 0.4f + 0.8f);
             world.emitGameEvent((Entity)player, GameEvent.BLOCK_CHANGE, pos);
             return ActionResult.SUCCESS;
         }
@@ -183,11 +203,14 @@ public class Brazier extends BlockWithEntity implements Waterloggable {
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         LitVariant variant = state.get(LIT_VARIANT);
-        if (variant != LitVariant.UNLIT) {
-            double d = (double)pos.getX() + 0.5;
-            double e = (double)pos.getY() + 1.15;
-            double f = (double)pos.getZ() + 0.5;
-            world.addParticle(variant == LitVariant.LIT_GREEN ? Particles.GREEN_EMBERS : Particles.EMBERS, d, e, f, 0.0, 0.0, 0.0);
+        double d = (double)pos.getX() + 0.5;
+        double e = (double)pos.getY() + 1.15;
+        double f = (double)pos.getZ() + 0.5;
+        switch (variant) {
+            case LIT: world.addParticle(Particles.EMBERS, d, e, f, 0.0, 0.0, 0.0); break;
+            case LIT_GREEN: world.addParticle(Particles.GREEN_EMBERS, d, e, f, 0.0, 0.0, 0.0); break;
+            case LIT_SOUL: world.addParticle(Particles.SOUL_EMBERS, d, e, f, 0.0, 0.0, 0.0); break;
+            default: return;
         }
     }
 

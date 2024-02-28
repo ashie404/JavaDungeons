@@ -30,7 +30,11 @@ public class BrazierBlockEntity extends BlockEntity {
                 double rd2 = random.nextDouble();
                 double g = random.nextBoolean() ? (0.1*rd1) : (-0.1*rd2);
                 double h = random.nextBoolean() ? (0.1*rd2) : (-0.1*rd1);
-                world.addParticle(variant == LitVariant.LIT_GREEN ? Particles.GREEN_FLAME : Particles.FLAME, true, d+g, e, f+h, h*0.1, 0.03*random.nextDouble(), g*0.1);
+                switch (variant) {
+                    case LIT_GREEN: world.addParticle(Particles.GREEN_FLAME, true, d+g, e, f+h, h*0.1, 0.03*random.nextDouble(), g*0.1); break;
+                    case LIT_SOUL: world.addParticle(Particles.SOUL_FLAME, true, d+g, e, f+h, h*0.1, 0.03*random.nextDouble(), g*0.1); break;
+                    default: world.addParticle(Particles.FLAME, true, d+g, e, f+h, h*0.1, 0.03*random.nextDouble(), g*0.1); break;
+                }
             }
         }
     }

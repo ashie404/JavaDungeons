@@ -23,7 +23,8 @@ public class Properties {
     public static enum LitVariant implements StringIdentifiable {
         UNLIT("unlit"),
         LIT("lit"),
-        LIT_GREEN("lit_green");
+        LIT_GREEN("lit_green"),
+        LIT_SOUL("lit_soul");
 
         private final String name;
 

@@ -2,6 +2,7 @@
     "variants": {
         "lit_variant=unlit": {"model": "dungeons:block/brazier/unlit"},
         "lit_variant=lit": {"model": "dungeons:block/brazier/lit"},
-        "lit_variant=lit_green": {"model": "dungeons:block/brazier/green_lit"}
+        "lit_variant=lit_green": {"model": "dungeons:block/brazier/green_lit"},
+        "lit_variant=lit_soul": {"model": "dungeons:block/brazier/soul_lit"}
     }
 }

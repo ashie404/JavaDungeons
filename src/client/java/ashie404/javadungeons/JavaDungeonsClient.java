@@ -163,11 +163,15 @@ public class JavaDungeonsClient implements ClientModInitializer {
         // register particle factories
         ParticleFactoryRegistry.getInstance().register(Particles.FLAME, FlameParticle.BigFlameFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_FLAME, FlameParticle.BigFlameFactory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.SOUL_FLAME, FlameParticle.BigFlameFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_FLAME, FlameParticle.SmallFlameFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_GREEN_FLAME, FlameParticle.SmallFlameFactory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_SOUL_FLAME, FlameParticle.SmallFlameFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.EMBERS, EmbersParticle.DefaultFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_EMBERS, EmbersParticle.GreenEmbersFactory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.SOUL_EMBERS, EmbersParticle.SoulEmbersFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.CANDLE_EMBERS, EmbersParticle.CandleEmbersFactory::new);
         ParticleFactoryRegistry.getInstance().register(Particles.GREEN_CANDLE_EMBERS, EmbersParticle.GreenCandleEmbersFactory::new);
+        ParticleFactoryRegistry.getInstance().register(Particles.SOUL_CANDLE_EMBERS, EmbersParticle.SoulCandleEmbersFactory::new);
     }
 }

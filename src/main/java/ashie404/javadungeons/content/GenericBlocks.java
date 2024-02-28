@@ -1,5 +1,7 @@
 package ashie404.javadungeons.content;
 
+import com.ibm.icu.text.MessagePattern.Part;
+
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;
@@ -200,9 +202,11 @@ public class GenericBlocks {
 
     // candles
     public static final Block CANDLE = 
-        RegistryHelper.registerBlock(new Candle(false, Material.CAST_IRON), "candle");
+        RegistryHelper.registerBlock(new Candle(Particles.CANDLE_FLAME, Particles.CANDLE_EMBERS, Material.CAST_IRON), "candle");
     public static final Block GREEN_CANDLE = 
-        RegistryHelper.registerBlock(new Candle(true, Material.CAST_IRON), "green_candle");
+        RegistryHelper.registerBlock(new Candle(Particles.CANDLE_GREEN_FLAME, Particles.GREEN_CANDLE_EMBERS, Material.CAST_IRON), "green_candle");
+    public static final Block SOUL_CANDLE = 
+        RegistryHelper.registerBlock(new Candle(Particles.CANDLE_SOUL_FLAME, Particles.SOUL_CANDLE_EMBERS, Material.CAST_IRON), "soul_candle");
 
     // tray
     public static final Block TRAY = 
@@ -321,6 +325,7 @@ public class GenericBlocks {
             content.add(OPEN_BOOK);
             content.add(CANDLE);
             content.add(GREEN_CANDLE);
+            content.add(SOUL_CANDLE);
             content.add(TRAY);
             content.add(COOKING_POT);
             content.add(FRYING_PAN);
