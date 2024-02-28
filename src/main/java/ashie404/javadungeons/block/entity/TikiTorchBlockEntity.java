@@ -22,7 +22,11 @@ public class TikiTorchBlockEntity extends BlockEntity {
             double d = (double)pos.getX() + 0.5;
             double e = (double)pos.getY() + 1.85;
             double f = (double)pos.getZ() + 0.5;
-            world.addParticle(Particles.FLAME, d, e, f, 0.0, 0.0, 0.0);
+            double rd1 = random.nextDouble();
+            double rd2 = random.nextDouble();
+            double g = random.nextBoolean() ? (0.1*rd1) : (-0.1*rd2);
+            double h = random.nextBoolean() ? (0.1*rd2) : (-0.1*rd1);
+            world.addParticle(Particles.FLAME, d+g, e, f+h,  h*0.1, 0.03*random.nextDouble(), g*0.1);
         }
     }
 }
