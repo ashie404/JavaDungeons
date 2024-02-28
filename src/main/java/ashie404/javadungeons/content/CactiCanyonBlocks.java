@@ -139,6 +139,7 @@ public class CactiCanyonBlocks {
             content.add(CC_FERN);
             content.add(CC_FLOWERS);
             content.add(CC_YUCCA);
+            content.add(CC_TALL_DESERT_GRASS);
             content.add(CC_TALL_CACTUS);
         });
     }
