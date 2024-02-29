@@ -34,6 +34,9 @@ public class ItemGroups {
 	public static final ItemGroup DINGY_JUNGLE = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(DingyJungleBlocks.DJ_FLOWERING_JUNGLE_PLANT))
 		.displayName(Text.translatable("itemGroup.dungeons.dingy_jungle")).build();
+	public static final ItemGroup CORAL_RISE = FabricItemGroup.builder()
+		.icon(() -> new ItemStack(GenericBlocks.BRAZIER))
+		.displayName(Text.translatable("itemGroup.dungeons.coral_rise")).build();
 	public static final ItemGroup WEAPONS = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(Weapons.FIREBRAND))
 		.displayName(Text.translatable("itemGroup.dungeons.weapons")).build();
@@ -49,6 +52,7 @@ public class ItemGroups {
 		RegistryHelper.registerItemGroup("redstone_mines", REDSTONE_MINES);
 		RegistryHelper.registerItemGroup("fiery_forge", FIERY_FORGE);
 		RegistryHelper.registerItemGroup("dingy_jungle", DINGY_JUNGLE);
+		RegistryHelper.registerItemGroup("coral_rise", CORAL_RISE);
 		RegistryHelper.registerItemGroup("weapons", WEAPONS);
     }
 }

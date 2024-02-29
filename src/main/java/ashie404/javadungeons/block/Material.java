@@ -14,6 +14,7 @@ public class Material {
     public static final Settings GRASS = FabricBlockSettings.create().strength(0.6F).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.PALE_GREEN);
     public static final Settings EARTH = FabricBlockSettings.create().strength(0.5F).sounds(BlockSoundGroup.GRAVEL).mapColor(MapColor.DIRT_BROWN);
         public static final Settings SAND = FabricBlockSettings.copyOf(EARTH).sounds(BlockSoundGroup.SAND).mapColor(MapColor.PALE_YELLOW);
+    public static final Settings CORAL = FabricBlockSettings.create().instrument(Instrument.BASEDRUM).requiresTool().strength(1.5f, 6.0f).sounds(BlockSoundGroup.CORAL);
 
     public static final Settings LEAVES = FabricBlockSettings.create().strength(0.2F).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.DARK_GREEN);
     public static final Settings PLANT = FabricBlockSettings.create().strength(0.0F).sounds(BlockSoundGroup.GRASS).breakInstantly();

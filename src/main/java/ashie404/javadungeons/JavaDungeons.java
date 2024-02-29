@@ -42,6 +42,7 @@ public class JavaDungeons implements ModInitializer, TerraBlenderApi {
 		RedstoneMinesBlocks.init();
 		FieryForgeBlocks.init();
 		DingyJungleBlocks.init();
+		CoralRiseBlocks.init();
 		BlockEntities.init();
 
 		// items
