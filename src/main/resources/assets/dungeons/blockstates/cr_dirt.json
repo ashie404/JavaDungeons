@@ -1,0 +1,6 @@
+{"variants": {"": [
+    {"model": "dungeons:block/coral_rise/dirt"},
+    {"model": "dungeons:block/coral_rise/dirt", "y": 90},
+    {"model": "dungeons:block/coral_rise/dirt", "y": 180},
+    {"model": "dungeons:block/coral_rise/dirt", "y": 270}
+]}}

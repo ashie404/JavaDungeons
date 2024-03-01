@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/coral_rise/dead_tube_coral_grass" },
+            { "model": "dungeons:block/coral_rise/dead_tube_coral_grass", "y": 90 },
+            { "model": "dungeons:block/coral_rise/dead_tube_coral_grass", "y": 180 },
+            { "model": "dungeons:block/coral_rise/dead_tube_coral_grass", "y": 270 }
+        ]
+    }
+}

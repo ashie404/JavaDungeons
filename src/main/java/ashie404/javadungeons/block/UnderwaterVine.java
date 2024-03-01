@@ -24,7 +24,7 @@ public class UnderwaterVine extends VineBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED);
+        builder.add(UP, NORTH, EAST, SOUTH, WEST, WATERLOGGED);
     }
   
     public FluidState getFluidState(BlockState state) {

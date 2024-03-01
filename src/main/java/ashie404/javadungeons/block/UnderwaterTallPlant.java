@@ -24,7 +24,7 @@ public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED);
+        builder.add(HALF, WATERLOGGED);
     }
   
     public FluidState getFluidState(BlockState state) {

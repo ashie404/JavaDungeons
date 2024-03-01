@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/coral_rise/sandy_andesite" },
+            { "model": "dungeons:block/coral_rise/sandy_andesite", "y": 90 },
+            { "model": "dungeons:block/coral_rise/sandy_andesite", "y": 180 },
+            { "model": "dungeons:block/coral_rise/sandy_andesite", "y": 270 }
+        ]
+    }
+}

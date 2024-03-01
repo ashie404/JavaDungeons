@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top", 
+    "textures": {
+        "side": "dungeons:block/coral_rise/fire_coral_grass",
+        "bottom": "dungeons:block/coral_rise/dirt",
+        "top": "dungeons:block/coral_rise/fire_coral_block"
+    }
+}

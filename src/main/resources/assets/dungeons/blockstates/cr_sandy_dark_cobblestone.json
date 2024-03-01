@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "": [
+            { "model": "dungeons:block/coral_rise/sandy_dark_cobblestone" },
+            { "model": "dungeons:block/coral_rise/sandy_dark_cobblestone_1" }
+        ] 
+    }
+}

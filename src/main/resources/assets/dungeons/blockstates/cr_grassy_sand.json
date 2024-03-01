@@ -1,0 +1,10 @@
+{"variants": {"": [
+    {"model": "dungeons:block/coral_rise/grassy_sand"},
+    {"model": "dungeons:block/coral_rise/grassy_sand", "y": 90},
+    {"model": "dungeons:block/coral_rise/grassy_sand", "y": 180},
+    {"model": "dungeons:block/coral_rise/grassy_sand", "y": 270},
+    {"model": "dungeons:block/coral_rise/grassy_sand_1"},
+    {"model": "dungeons:block/coral_rise/grassy_sand_1", "y": 90},
+    {"model": "dungeons:block/coral_rise/grassy_sand_1", "y": 180},
+    {"model": "dungeons:block/coral_rise/grassy_sand_1", "y": 270}
+]}}

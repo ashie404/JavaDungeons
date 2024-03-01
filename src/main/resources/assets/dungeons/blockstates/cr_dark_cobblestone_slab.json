@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "dungeons:block/coral_rise/dark_cobblestone_slab" },
+        "type=top": { "model":    "dungeons:block/coral_rise/dark_cobblestone_slab_top" },
+        "type=double": { "model": "dungeons:block/coral_rise/dark_cobblestone" }
+    }
+}
