@@ -41,11 +41,12 @@ public class UnderwaterVine extends VineBlock implements Waterloggable {
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
+        boolean wl = fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8;
+        return super.getPlacementState(ctx).with(WATERLOGGED, wl);
     }
 
     public UnderwaterVine(Settings settings) {
         super(FabricBlockSettings.copyOf(settings).nonOpaque());
-        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(UP, false).with(NORTH, false).with(EAST, false).with(SOUTH, false).with(WEST, false));
     }
 }
