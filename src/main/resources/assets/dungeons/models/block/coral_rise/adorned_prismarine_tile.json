@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/cube_bottom_top", "textures": {"side": "dungeons:block/coral_rise/adorned_prismarine_tile", "bottom": "dungeons:block/coral_rise/granite_tiles", "top": "dungeons:block/coral_rise/adorned_prismarine_tile_top"}}

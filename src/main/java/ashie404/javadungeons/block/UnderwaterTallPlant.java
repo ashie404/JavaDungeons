@@ -1,11 +1,16 @@
 package ashie404.javadungeons.block;
 
+import org.jetbrains.annotations.Nullable;
+
+import com.mojang.serialization.MapCodec;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.block.Waterloggable;
+import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -15,6 +20,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
 public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable {
@@ -23,8 +29,19 @@ public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
+    public static final MapCodec<UnderwaterTallPlant> CODEC = createCodec(UnderwaterTallPlant::new);
+
+    public MapCodec<UnderwaterTallPlant> getCodec() {
+        return CODEC;
+    }
+
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(HALF, WATERLOGGED);
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isSideSolidFullSquare(world, pos, Direction.UP) && !floor.isOf(Blocks.MAGMA_BLOCK);
     }
   
     public FluidState getFluidState(BlockState state) {
@@ -35,19 +52,23 @@ public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable
        if ((Boolean)state.get(WATERLOGGED)) {
           world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
        }
-
-       return facing == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
+       return super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
     }
 
+    @Override
+    @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8);
+        FluidState fluidState;
+        BlockState blockState = super.getPlacementState(ctx);
+        if (blockState != null && (fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos().up())).isIn(FluidTags.WATER) && fluidState.getLevel() == 8)
+            return blockState.with(WATERLOGGED, true);
+        else if (blockState != null) return blockState.with(WATERLOGGED, false);
+        return null;
     }
-
 
     public UnderwaterTallPlant(Settings settings) {
         super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
-        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(HALF, DoubleBlockHalf.LOWER).with(WATERLOGGED, false));
     }
 
 }

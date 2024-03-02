@@ -137,7 +137,25 @@ public class JavaDungeonsClient implements ClientModInitializer {
             DingyJungleBlocks.DJ_LARGE_JUNGLE_FLOWER,
             DingyJungleBlocks.DJ_PINK_JUNGLE_FLOWER,
             DingyJungleBlocks.DJ_COBWEB,
-            DingyJungleBlocks.DJ_GLOWING_MUSHROOMS
+            DingyJungleBlocks.DJ_GLOWING_MUSHROOMS,
+            CoralRiseBlocks.CR_SEA_VINE,            
+            CoralRiseBlocks.CR_WATER_SHRUB,
+            CoralRiseBlocks.CR_SEAWEED,            
+            CoralRiseBlocks.CR_TALL_SEAWEED,
+            CoralRiseBlocks.CR_BUBBLE_WEED,
+            CoralRiseBlocks.CR_FIRE_CORAL,
+            CoralRiseBlocks.CR_TUBE_CORAL,
+            CoralRiseBlocks.CR_TALL_TUBE_CORAL,
+            CoralRiseBlocks.CR_BLUE_CORAL_FAN,
+            CoralRiseBlocks.CR_YELLOW_CORAL_FAN,
+            CoralRiseBlocks.CR_LARGE_CORAL_COLONY,
+            CoralRiseBlocks.CR_RED_LUMINOUS_MUSHROOMS,
+            CoralRiseBlocks.CR_ORANGE_LUMINOUS_MUSHROOMS,
+            CoralRiseBlocks.CR_LUMINOUS_CRYSTALS,
+            CoralRiseBlocks.CR_SHORT_RED_BUBBLE_CORAL,
+            CoralRiseBlocks.CR_TALL_RED_BUBBLE_CORAL,
+            CoralRiseBlocks.CR_SHORT_YELLOW_BUBBLE_CORAL,
+            CoralRiseBlocks.CR_TALL_YELLOW_BUBBLE_CORAL
         );
         BlockRenderLayerMap.INSTANCE.putBlocks(
             RenderLayer.getTranslucent(),

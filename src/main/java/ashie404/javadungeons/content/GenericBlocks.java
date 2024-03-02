@@ -1,7 +1,5 @@
 package ashie404.javadungeons.content;
 
-import com.ibm.icu.text.MessagePattern.Part;
-
 import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.block.*;
 import ashie404.javadungeons.registry.RegistryHelper;

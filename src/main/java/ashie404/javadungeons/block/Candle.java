@@ -1,6 +1,5 @@
 package ashie404.javadungeons.block;
 
-import ashie404.javadungeons.content.Particles;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,7 +24,6 @@ public class Candle extends Block {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 15.0D, 10.5D);
     private DefaultParticleType flame;
     private DefaultParticleType embers;
-    private boolean isGreen;
 
     @Override
     public VoxelShape getOutlineShape(BlockState blockState, BlockView blockView, BlockPos blockPos, ShapeContext entityCtx) {
@@ -35,8 +33,7 @@ public class Candle extends Block {
     public Candle(DefaultParticleType flame, DefaultParticleType embers, Settings settings) {
         super(FabricBlockSettings.copyOf(settings).pistonBehavior(PistonBehavior.DESTROY).nonOpaque().luminance(15).ticksRandomly());
         this.flame = flame;
-        this.embers = embers;
-        
+        this.embers = embers;      
     }
 
     @Override

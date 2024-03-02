@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/cube_bottom_top", "textures": {"side": "dungeons:block/coral_rise/prismarine_brick_pillar", "bottom": "dungeons:block/coral_rise/prismarine_brick_pillar_top", "top": "dungeons:block/coral_rise/prismarine_brick_pillar_top"}}
