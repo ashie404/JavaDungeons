@@ -322,8 +322,12 @@ public class CoralRiseBlocks {
             content.add(CR_TUBE_CORAL);
             content.add(CR_TALL_TUBE_CORAL);
             content.add(CR_BLUE_CORAL_FAN);
-            content.add(CR_YELLOW_CORAL_FAN);
-            content.add(CR_LARGE_CORAL_COLONY);
+            content.add(CR_TEAL_CORAL_FAN);
+            content.add(CR_PURPLE_CORAL_FAN);
+            content.add(CR_RED_LARGE_CORAL_FAN);
+            content.add(CR_PURPLE_LARGE_CORAL_FAN);
+            content.add(CR_GREEN_LARGE_CORAL_COLONY);
+            content.add(CR_PURPLE_LARGE_CORAL_COLONY);
             content.add(CR_RED_LUMINOUS_MUSHROOMS);
             content.add(CR_ORANGE_LUMINOUS_MUSHROOMS);
             content.add(CR_LUMINOUS_CRYSTALS);
