@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/coral_rise/polished_granite_fossil.json"}}
+{"parent": "minecraft:block/cube_all", "textures": {"all": "dungeons:block/coral_rise/polished_granite_fossil"}}
