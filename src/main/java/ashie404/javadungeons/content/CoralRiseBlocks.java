@@ -199,13 +199,13 @@ public class CoralRiseBlocks {
     public static final Block CR_LUMINOUS_CRYSTALS =
         RegistryHelper.registerBlock(new UnderwaterPlant(0, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.LARGE_AMETHYST_BUD)), "cr_luminous_crystals");
     public static final Block CR_SHORT_RED_BUBBLE_CORAL =
-        RegistryHelper.registerBlock(new UnderwaterTallPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_short_red_bubble_coral");
+        RegistryHelper.registerBlock(new UnderwaterTallPlant(1, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_short_red_bubble_coral");
     public static final Block CR_TALL_RED_BUBBLE_CORAL =
-        RegistryHelper.registerBlock(new UnderwaterTallPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_tall_red_bubble_coral");
+        RegistryHelper.registerBlock(new UnderwaterTallPlant(0, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_tall_red_bubble_coral");
     public static final Block CR_SHORT_YELLOW_BUBBLE_CORAL =
-        RegistryHelper.registerBlock(new UnderwaterTallPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_short_yellow_bubble_coral");
+        RegistryHelper.registerBlock(new UnderwaterTallPlant(1, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_short_yellow_bubble_coral");
     public static final Block CR_TALL_YELLOW_BUBBLE_CORAL =
-        RegistryHelper.registerBlock(new UnderwaterTallPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_tall_yellow_bubble_coral");
+        RegistryHelper.registerBlock(new UnderwaterTallPlant(0, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_tall_yellow_bubble_coral");
 
     public static void init() {
         // add to item group

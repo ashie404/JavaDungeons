@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.block.enums.DoubleBlockHalf;
@@ -20,6 +21,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
@@ -29,10 +31,22 @@ public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
+    public static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    public static final VoxelShape SHAPE_SHORT = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 6.0D, 14.0D);
+
+    public int shapeIndex = 0;
+
     public static final MapCodec<UnderwaterTallPlant> CODEC = createCodec(UnderwaterTallPlant::new);
 
     public MapCodec<UnderwaterTallPlant> getCodec() {
         return CODEC;
+    }
+
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+        if (shapeIndex == 1 && state.get(HALF) == DoubleBlockHalf.UPPER) {
+            return SHAPE_SHORT;
+        }
+        return SHAPE;
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -69,6 +83,12 @@ public class UnderwaterTallPlant extends TallPlantBlock implements Waterloggable
     public UnderwaterTallPlant(Settings settings) {
         super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
         this.setDefaultState(this.stateManager.getDefaultState().with(HALF, DoubleBlockHalf.LOWER).with(WATERLOGGED, false));
+    }
+
+    public UnderwaterTallPlant(int shape_index, Settings settings) {
+        super(FabricBlockSettings.copyOf(settings).nonOpaque().collidable(false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(HALF, DoubleBlockHalf.LOWER).with(WATERLOGGED, false));
+        this.shapeIndex = shape_index;
     }
 
 }
