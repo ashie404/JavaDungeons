@@ -32,7 +32,6 @@ public class UnderwaterPlant extends PlantBlock implements Waterloggable {
 
     protected static final VoxelShape[] SHAPES = {
         Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D), // regular underwater plant
-        Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 38.0D, 14.0D), // bubble weed
         Block.createCuboidShape(-12.0D, 0.0D, 2.0D, 20.0D, 13.0D, 14.0D),  // wide coral
         Block.createCuboidShape(-12.0D, 0.0D, -12.0D, 20.0D, 30.0D, 20.0D) // large coral
     };
