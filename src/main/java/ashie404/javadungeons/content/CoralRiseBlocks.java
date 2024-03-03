@@ -199,9 +199,11 @@ public class CoralRiseBlocks {
     public static final Block CR_PURPLE_LARGE_CORAL_FAN =
         RegistryHelper.registerBlock(new UnderwaterPlant(2, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_purple_large_coral_fan");
     public static final Block CR_GREEN_LARGE_CORAL_COLONY =
-        RegistryHelper.registerBlock(new UnderwaterPlant(2, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_green_large_coral_colony");
+        RegistryHelper.registerBlock(new UnderwaterPlant(3, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_green_large_coral_colony");
     public static final Block CR_PURPLE_LARGE_CORAL_COLONY =
-        RegistryHelper.registerBlock(new UnderwaterPlant(2, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_purple_large_coral_colony");
+        RegistryHelper.registerBlock(new UnderwaterPlant(3, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_purple_large_coral_colony");
+    public static final Block CR_TEAL_LARGE_CORAL_COLONY =
+        RegistryHelper.registerBlock(new UnderwaterPlant(3, FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "cr_teal_large_coral_colony");
     public static final Block CR_RED_LUMINOUS_MUSHROOMS =
         RegistryHelper.registerBlock(new UnderwaterPlant(0, Material.PLANT), "cr_red_luminous_mushrooms");
     public static final Block CR_ORANGE_LUMINOUS_MUSHROOMS =

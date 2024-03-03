@@ -33,7 +33,8 @@ public class UnderwaterPlant extends PlantBlock implements Waterloggable {
     protected static final VoxelShape[] SHAPES = {
         Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D), // regular underwater plant
         Block.createCuboidShape(2.0D, 0.0D, -8.0D, 14.0D, 13.0D, 24.0D),  // wide coral
-        Block.createCuboidShape(-8.0D, 0.0D, -8.0D, 24.0D, 28.0D, 24.0D) // large coral
+        Block.createCuboidShape(-8.0D, 0.0D, -8.0D, 24.0D, 20.0D, 24.0D), // large coral short
+        Block.createCuboidShape(-8.0D, 0.0D, -8.0D, 24.0D, 28.0D, 24.0D) // large coral tall
     };
     protected static final MapCodec<? extends UnderwaterPlant> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group((Codec.INT.fieldOf("shape_index")).forGetter(block -> block.shapeIndex), UnderwaterPlant.createSettingsCodec()).apply(instance, UnderwaterPlant::new));
 
