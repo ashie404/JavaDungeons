@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "dungeons:item/coral_rise/bubble_weed_top"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "dungeons:block/coral_rise/bubble_weed_top"}}
