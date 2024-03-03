@@ -143,6 +143,7 @@ public class JavaDungeonsClient implements ClientModInitializer {
             CoralRiseBlocks.CR_SEAWEED,            
             CoralRiseBlocks.CR_TALL_SEAWEED,
             CoralRiseBlocks.CR_BUBBLE_WEED,
+            CoralRiseBlocks.CR_SHORT_BUBBLE_WEED,
             CoralRiseBlocks.CR_FIRE_CORAL,
             CoralRiseBlocks.CR_TUBE_CORAL,
             CoralRiseBlocks.CR_TALL_TUBE_CORAL,
