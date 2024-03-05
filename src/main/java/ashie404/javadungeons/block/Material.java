@@ -1,6 +1,7 @@
 package ashie404.javadungeons.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.AbstractBlock.OffsetType;
 import net.minecraft.block.AbstractBlock.Settings;
@@ -33,6 +34,8 @@ public class Material {
         public static final Settings DARK_STONE = FabricBlockSettings.copyOf(STONE).mapColor(MapColor.DEEPSLATE_GRAY);
         public static final Settings QUARTZ = FabricBlockSettings.copyOf(STONE).strength(0.8F).mapColor(MapColor.OFF_WHITE);
         public static final Settings DARK_QUARTZ = FabricBlockSettings.copyOf(QUARTZ).mapColor(MapColor.DEEPSLATE_GRAY);
+    
+    public static final Settings BUBBLY_STONE = FabricBlockSettings.create().instrument(Instrument.BASEDRUM).strength(0.5F).sounds(BlockSoundGroup.SHROOMLIGHT).mapColor(MapColor.GRAY).luminance(3).emissiveLighting(Blocks::always);
 
     public static final Settings METAL = FabricBlockSettings.create().requiresTool().strength(3.0F, 6.0F).sounds(BlockSoundGroup.METAL).mapColor(MapColor.IRON_GRAY);
     public static final Settings CAST_IRON = FabricBlockSettings.create().requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN).mapColor(MapColor.IRON_GRAY);

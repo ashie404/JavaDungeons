@@ -6,7 +6,8 @@
       "MixinCactusBlock",
       "MixinFeature",
       "MixinPlantBlock",
-      "MixinShovelItem"
+      "MixinShovelItem",
+      "MixinBubbleColumnBlock"
     ],
     "injectors": {
       "defaultRequire": 1

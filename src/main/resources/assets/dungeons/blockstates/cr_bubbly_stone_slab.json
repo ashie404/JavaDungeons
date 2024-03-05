@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "facing=north,type=bottom": { "model": "dungeons:block/coral_rise/bubbly_stone_slab" },
+        "facing=north,type=top": { "model":    "dungeons:block/coral_rise/bubbly_stone_slab_top" },
+        "facing=south,type=bottom": { "model": "dungeons:block/coral_rise/bubbly_stone_slab", "y": 180 },
+        "facing=south,type=top": { "model":    "dungeons:block/coral_rise/bubbly_stone_slab_top", "y": 180 },
+        "facing=east,type=bottom": { "model": "dungeons:block/coral_rise/bubbly_stone_slab", "y": 90 },
+        "facing=east,type=top": { "model":    "dungeons:block/coral_rise/bubbly_stone_slab_top", "y": 180 },
+        "facing=west,type=bottom": { "model": "dungeons:block/coral_rise/bubbly_stone_slab", "y": 270 },
+        "facing=west,type=top": { "model":    "dungeons:block/coral_rise/bubbly_stone_slab_top", "y": 270 },
+        "type=double": { "model": "dungeons:block/coral_rise/bubbly_stone" }
+    }
+}

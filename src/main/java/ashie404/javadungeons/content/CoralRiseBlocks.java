@@ -63,6 +63,12 @@ public class CoralRiseBlocks {
     public static final Block CR_GRASSY_FIRE_CORAL_BLOCK =
         RegistryHelper.registerBlock(new Block(Material.CORAL), "cr_grassy_fire_coral_block");
 
+    // bubble column blocks
+    public static final Block CR_BUBBLY_STONE =
+        RegistryHelper.registerBlock(new BubblyStone(Material.BUBBLY_STONE), "cr_bubbly_stone");
+    public static final Block CR_BUBBLY_STONE_SLAB =
+        RegistryHelper.registerBlock(new BubblyStoneSlab(Material.BUBBLY_STONE), "cr_bubbly_stone_slab");
+
     // stone blocks
     public static final SlabStairBlock CR_COBBLESTONE =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.COBBLESTONE), "cr_cobblestone");
