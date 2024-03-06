@@ -35,7 +35,7 @@ public class Material {
         public static final Settings QUARTZ = FabricBlockSettings.copyOf(STONE).strength(0.8F).mapColor(MapColor.OFF_WHITE);
         public static final Settings DARK_QUARTZ = FabricBlockSettings.copyOf(QUARTZ).mapColor(MapColor.DEEPSLATE_GRAY);
     
-    public static final Settings BUBBLY_STONE = FabricBlockSettings.create().instrument(Instrument.BASEDRUM).strength(0.5F).sounds(BlockSoundGroup.SHROOMLIGHT).mapColor(MapColor.GRAY).luminance(3).emissiveLighting(Blocks::always);
+    public static final Settings BUBBLY_STONE = FabricBlockSettings.create().instrument(Instrument.BASEDRUM).strength(0.5F).sounds(BlockSoundGroup.SHROOMLIGHT).mapColor(MapColor.GRAY);
 
     public static final Settings METAL = FabricBlockSettings.create().requiresTool().strength(3.0F, 6.0F).sounds(BlockSoundGroup.METAL).mapColor(MapColor.IRON_GRAY);
     public static final Settings CAST_IRON = FabricBlockSettings.create().requiresTool().strength(5.0F, 6.0F).sounds(BlockSoundGroup.LANTERN).mapColor(MapColor.IRON_GRAY);
