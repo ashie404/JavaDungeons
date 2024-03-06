@@ -11,7 +11,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BubbleColumnBlock;
 import net.minecraft.state.property.Properties;
 
-// mixin so that the cactus can be planted on cacti canyon sand.
+// mixin so that bubbly stone bubble columns work
 
 @Mixin(BubbleColumnBlock.class)
 public class MixinBubbleColumnBlock {

@@ -9,6 +9,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class BubblyStone extends Block {
@@ -16,7 +17,12 @@ public class BubblyStone extends Block {
     // bubbly stone
 
     public BubblyStone(Settings settings) {
-        super(FabricBlockSettings.copyOf(settings));
+        super(FabricBlockSettings.copyOf(settings).ticksRandomly());
+    }
+
+    @Override
+    public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
+        world.scheduleBlockTick(pos, this, 20);
     }
     
     @Override
