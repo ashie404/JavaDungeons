@@ -9,9 +9,7 @@
     "itemGroup.dungeons.fiery_forge": "Fiery Forge Blocks",
     "itemGroup.dungeons.dingy_jungle": "Dingy Jungle Blocks",
     "itemGroup.dungeons.weapons": "Dungeons Weapons",
-
     "container.dungeons.dungeons_transformer": "Dungeons Transformer",
-
     "block.dungeons.floor_tile": "Floor Tile",
     "block.dungeons.dirty_floor_tile": "Dirty Floor Tile",
     "block.dungeons.crate": "Crate",
@@ -114,7 +112,6 @@
     "block.dungeons.frying_pan": "Frying Pan",
     "block.dungeons.cooking_pot": "Cooking Pot",
     "block.dungeons.soul_candle": "Soul Candle",
-
     "block.dungeons.cw_mossy_stone_bricks": "Mossy Stone Bricks",
     "block.dungeons.cw_mossy_chiseled_stone_bricks": "Mossy Chiseled Stone Bricks",
     "block.dungeons.cw_mossy_andesite": "Mossy Andesite",
@@ -167,7 +164,6 @@
     "block.dungeons.cw_dirty_stone_tiles_stairs_2": "Heavily Dirty Stone Tiles Stairs",
     "block.dungeons.cw_gravestone": "Gravestone",
     "block.dungeons.cw_mossy_gravestone": "Mossy Gravestone",
-
     "block.dungeons.dt_sandy_andesite": "Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite": "Chiseled Sandy Andesite",
     "block.dungeons.dt_chiseled_sandy_andesite_2": "Chiseled Sandy Andesite",
@@ -183,7 +179,6 @@
     "block.dungeons.dt_sandy_stone_brick_stairs": "Sandy Stone Brick Stairs",
     "block.dungeons.dt_sandy_stone_tiles_slab": "Sandy Stone Tiles Slab",
     "block.dungeons.dt_sandy_stone_tiles_stairs": "Sandy Stone Tiles Stairs",
-
     "block.dungeons.pm_yellow_autumnal_leaves": "Yellow Autumnal Leaves",
     "block.dungeons.pm_red_autumnal_leaves": "Red Autumnal Leaves",
     "block.dungeons.pm_burnt_pumpkin": "Burnt Pumpkin",
@@ -240,8 +235,6 @@
     "block.dungeons.pm_tall_fern": "Tall Fern",
     "block.dungeons.pm_dry_tall_grass": "Dry Tall Grass",
     "block.dungeons.pm_charred_tall_grass": "Charred Tall Grass",
-
-
     "block.dungeons.ss_grass_block": "Grass Block",
     "block.dungeons.ss_dirt_path": "Dirt Path",
     "block.dungeons.ss_dirt": "Dirt",
@@ -259,7 +252,6 @@
     "block.dungeons.ss_rope_fence": "Rope Fence",
     "block.dungeons.ss_swamp_sapling": "Swamp Sapling",
     "block.dungeons.ss_brazier": "Stone Brazier",
-
     "block.dungeons.cc_sand": "Sand",
     "block.dungeons.cc_dense_sandy_dirt": "Dense Sandy Dirt",
     "block.dungeons.cc_sandy_dirt": "Sandy Dirt",
@@ -302,7 +294,6 @@
     "block.dungeons.cc_smooth_sandstone_stairs": "Smooth Sandstone Stairs",
     "block.dungeons.cc_smooth_sandstone_slab": "Smooth Sandstone Slab",
     "block.dungeons.cc_chiseled_sandstone": "Chiseled Sandstone",
-
     "block.dungeons.ff_dark_stone": "Dark Stone",
     "block.dungeons.ff_dark_stone_slab": "Dark Stone Slab",
     "block.dungeons.ff_dark_stone_stairs": "Dark Stone Stairs",
@@ -325,7 +316,6 @@
     "block.dungeons.ff_dirty_dark_stone_tiles_slab_1": "Dirty Dark Stone Tiles Slab",
     "block.dungeons.ff_dirty_dark_stone_tiles_stairs_1": "Dirty Dark Stone Tiles Stairs",
     "block.dungeons.ff_emblemed_dark_stone": "Emblemed Dark Stone",
-
     "block.dungeons.rm_redstone_crystals": "Redstone Crystals",
     "block.dungeons.rm_crystals": "Crystals",
     "block.dungeons.rm_snowy_dirt": "Snowy Dirt",
@@ -341,7 +331,6 @@
     "block.dungeons.rm_chiseled_dark_quartz_1": "Chiseled Dark Quartz",
     "block.dungeons.rm_dark_floor_tile": "Dark Floor Tile",
     "block.dungeons.rm_dirty_dark_floor_tile": "Dirty Dark Floor Tile",
-
     "block.dungeons.dj_grass_block": "Grass Block",
     "block.dungeons.dj_muddy_grass": "Muddy Grass Block",
     "block.dungeons.dj_dirt": "Dirt",
@@ -432,9 +421,12 @@
     "block.dungeons.dj_glowing_mushrooms": "Glowing Mushrooms",
     "block.dungeons.dj_tiki_torch": "Tiki Torch",
     "block.dungeons.dj_glow_mushroom": "Glow Mushroom",
+    "block.dungeons.cr_sandy_fire_coral_block": "Sandy Fire Coral Block",
+    "block.dungeons.cr_dirt": "Dirt",
+    "block.dungeons.cr_grassy_dirt": "Grassy Dirt",
+    "block.dungeons.cr_grass_block": "Grass Block",
 
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
-
     "biome.dungeons.creeper_woods": "Creeper Woods",
     "biome.dungeons.pumpkin_pastures": "Pumpkin Pastures",
     "biome.dungeons.squid_coast": "Squid Coast",
@@ -442,16 +434,13 @@
     "biome.dungeons.cacti_canyon_desert": "Cacti Canyon Desert",
     "biome.dungeons.soggy_swamp": "Soggy Swamp",
     "biome.dungeons.dingy_jungle": "Dingy Jungle",
-
     "item.dungeons.axe": "Axe",
     "item.dungeons.highland_axe": "Highland Axe",
     "item.dungeons.cursed_axe": "Cursed Axe",
     "item.dungeons.whirlwind": "Whirlwind",
     "item.dungeons.firebrand": "Firebrand",
     "item.dungeons.double_axe": "Double Axe",
-
     "item.dungeons.steel_pickaxe": "Steel Pickaxe",
-
     "item.dungeons.claymore": "Claymore",
     "item.dungeons.heartstealer": "Heartstealer",
     "item.dungeons.cutlass": "Cutlass",
@@ -462,31 +451,23 @@
     "item.dungeons.dark_katana": "Dark Katana",
     "item.dungeons.steel_sword": "Steel Sword",
     "item.dungeons.truthseeker": "Truthseeker",
-
     "item.dungeons.stone_hammer": "Stone Hammer",
-
     "item.dungeons.dagger": "Dagger",
     "item.dungeons.moon_dagger": "Moon Dagger",
     "item.dungeons.fangs_of_frost": "Fangs of Frost",
-
     "item.dungeons.soul_knife": "Soul Knife",
     "item.dungeons.eternal_knife": "Eternal Knife",
-
     "item.dungeons.sickle": "Sickle",
     "item.dungeons.nightmares_bite": "Nightmare's Bite",
-    
     "item.dungeons.frost_scythe": "Frost Scythe",
     "item.dungeons.jailors_scythe": "Jailor's Scythe",
     "item.dungeons.soul_scythe": "Soul Scythe",
-
     "item.dungeons.glaive": "Glaive",
     "item.dungeons.grave_bane": "Grave Bane",
     "item.dungeons.venom_glaive": "Venom Glaive",
-
     "item.dungeons.spear": "Spear",
     "item.dungeons.fortune_spear": "Fortune Spear",
     "item.dungeons.whispering_spear": "Whispering Spear",
-
     "container.dungeons.sack": "Sack",
     "container.dungeons.small_sack": "Small Sack"
 }
