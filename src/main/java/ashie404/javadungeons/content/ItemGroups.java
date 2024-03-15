@@ -35,7 +35,7 @@ public class ItemGroups {
 		.icon(() -> new ItemStack(DingyJungleBlocks.DJ_FLOWERING_JUNGLE_PLANT))
 		.displayName(Text.translatable("itemGroup.dungeons.dingy_jungle")).build();
 	public static final ItemGroup CORAL_RISE = FabricItemGroup.builder()
-		.icon(() -> new ItemStack(CoralRiseBlocks.CR_POLISHED_GRANITE_FOSSIL))
+		.icon(() -> new ItemStack(CoralRiseBlocks.CR_PURPLE_LARGE_CORAL_COLONY))
 		.displayName(Text.translatable("itemGroup.dungeons.coral_rise")).build();
 	public static final ItemGroup WEAPONS = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(Weapons.FIREBRAND))
