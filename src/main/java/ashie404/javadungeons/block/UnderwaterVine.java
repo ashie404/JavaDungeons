@@ -41,8 +41,11 @@ public class UnderwaterVine extends VineBlock implements Waterloggable {
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        BlockState placement = super.getPlacementState(ctx);
         boolean wl = fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8;
-        return super.getPlacementState(ctx).with(WATERLOGGED, wl);
+        if (placement != null) {
+            return placement.with(WATERLOGGED, wl);
+        } else return null;
     }
 
     public UnderwaterVine(Settings settings) {
