@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "dungeons:block/bedroll" },
+        "facing=south": { "model": "dungeons:block/bedroll", "y": 180 },
+        "facing=east": { "model": "dungeons:block/bedroll", "y": 90 },
+        "facing=west": { "model": "dungeons:block/bedroll", "y": 270 }
+    }
+}

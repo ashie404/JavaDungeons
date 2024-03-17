@@ -28,6 +28,8 @@ public class GenericBlocks {
         RegistryHelper.registerBlock(new Banner(Material.WOOD), "ripped_banner");
     public static final Block TENT = 
         RegistryHelper.registerBlock(new Tent(Material.WOOD), "tent");
+    public static final Block BEDROLL =
+        RegistryHelper.registerBlock(new Bedroll(Material.FABRIC), "bedroll");
     public static final Block ROPE_FENCE = 
         RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "rope_fence");
     public static final Block DUNGEONS_LANTERN = 
@@ -238,6 +240,7 @@ public class GenericBlocks {
             content.add(CRATE);
             content.add(RIPPED_BANNER);
             content.add(TENT);
+            content.add(BEDROLL);
             content.add(ROPE_FENCE);
             content.add(DUNGEONS_LANTERN);
             content.add(SACK);
