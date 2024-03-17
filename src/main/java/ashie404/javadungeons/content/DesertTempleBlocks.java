@@ -37,7 +37,7 @@ public class DesertTempleBlocks {
 
     public static void init() {
         // add blocks to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("desert_temple"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("cacti_canyon"))).register(content -> {
             content.add(DT_SANDY_ANDESITE.base);
             content.add(DT_SANDY_ANDESITE.slab);
             content.add(DT_SANDY_ANDESITE.stairs);

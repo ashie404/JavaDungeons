@@ -13,9 +13,6 @@ public class ItemGroups {
 	public static final ItemGroup CREEPER_WOODS = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(CreeperWoodsBlocks.CW_MOSSY_STONE_BRICKS))
 		.displayName(Text.translatable("itemGroup.dungeons.creeper_woods")).build();
-	public static final ItemGroup DESERT_TEMPLE = FabricItemGroup.builder()
-		.icon(() -> new ItemStack(DesertTempleBlocks.DT_CHISELED_SANDY_STONE))
-		.displayName(Text.translatable("itemGroup.dungeons.desert_temple")).build();
 	public static final ItemGroup PUMPKIN_PASTURES = FabricItemGroup.builder()
 		.icon(() -> new ItemStack(PumpkinPasturesBlocks.PM_RED_AUTUMNAL_LEAVES))
 		.displayName(Text.translatable("itemGroup.dungeons.pumpkin_pastures")).build();
@@ -45,7 +42,6 @@ public class ItemGroups {
         // register item groups
 		RegistryHelper.registerItemGroup("generic", GENERIC);
 		RegistryHelper.registerItemGroup("creeper_woods", CREEPER_WOODS);
-		RegistryHelper.registerItemGroup("desert_temple", DESERT_TEMPLE);
 		RegistryHelper.registerItemGroup("pumpkin_pastures", PUMPKIN_PASTURES);
 		RegistryHelper.registerItemGroup("soggy_swamp", SOGGY_SWAMP);
 		RegistryHelper.registerItemGroup("cacti_canyon", CACTI_CANYON);
