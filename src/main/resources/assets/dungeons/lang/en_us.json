@@ -61,6 +61,7 @@
     "block.dungeons.dirty_stone_tiles_slab_1": "Dirty Stone Tiles Slab",
     "block.dungeons.ripped_banner": "Ripped Banner",
     "block.dungeons.tent": "Tent",
+    "block.dungeons.bedroll": "Bedroll",
     "block.dungeons.rope_fence": "Rope Fence",
     "block.dungeons.dungeons_planks": "Dungeons Planks",
     "block.dungeons.dungeons_lantern": "Dungeons Lantern",
@@ -542,7 +543,6 @@
     "block.dungeons.cr_blue_large_bubble_coral": "Blue Large Bubble Coral",
     "block.dungeons.cr_short_bubble_coral": "Short Bubble Coral",
     "block.dungeons.cr_tall_bubble_coral": "Tall Bubble Coral",
-
     "subtitles.dungeons.cw_glow_mushroom_step": "Glowing Mushroom Disturbed",
     "biome.dungeons.creeper_woods": "Creeper Woods",
     "biome.dungeons.pumpkin_pastures": "Pumpkin Pastures",
