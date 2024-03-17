@@ -57,19 +57,25 @@
                   }
                 },
                 {
-                    "weight": 1,
+                    "weight": 3,
                     "data": {
                       "Name": "dungeons:dj_large_jungle_fern"
                     }
                 },
                 {
-                    "weight": 1,
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:dj_large_jungle_flower"
                     }
                 },
                 {
-                    "weight": 1,
+                  "weight": 1,
+                  "data": {
+                    "Name": "dungeons:dj_pink_jungle_flower"
+                  }
+              },
+                {
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:dj_large_jungle_plant"
                     }
