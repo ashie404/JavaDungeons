@@ -2,6 +2,9 @@
     "replace": false,
     "values": [
         "dungeons:rope_fence",
-        "dungeons:ss_rope_fence"
+        "dungeons:ss_rope_fence",
+        "dungeons:dj_jungle_fence",
+        "dungeons:dj_jungle_oak_fence",
+        "dungeons:pm_charred_fence"
     ]
 }

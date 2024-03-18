@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
+import net.minecraft.block.FenceBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
@@ -129,6 +130,8 @@ public class PumpkinPasturesBlocks {
         RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "pm_charred_wood");
     public static final SlabStairBlock PM_CHARRED_PLANKS = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.WOOD), "pm_charred_planks", "pm_charred_slab", "pm_charred_stairs");
+    public static final Block PM_CHARRED_FENCE =
+        RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "pm_charred_fence");
 
     public static void init() {
         // add all blockitems to group
@@ -193,6 +196,7 @@ public class PumpkinPasturesBlocks {
             content.add(PM_CHARRED_PLANKS.base);
             content.add(PM_CHARRED_PLANKS.slab);
             content.add(PM_CHARRED_PLANKS.stairs);
+            content.add(PM_CHARRED_FENCE);
         });
     }
 }

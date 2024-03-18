@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.CobwebBlock;
+import net.minecraft.block.FenceBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.WallBlock;
@@ -176,6 +177,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new PillarBlock(Material.LOG), "dj_jungle_root");
     public static final SlabStairBlock DJ_JUNGLE_PLANKS =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.WOOD), "dj_jungle_planks");
+    public static final Block DJ_JUNGLE_FENCE =
+        RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "dj_jungle_fence");
     public static final Block DJ_MOSSY_JUNGLE_PLANKS =
         RegistryHelper.registerBlock(new Block(Material.WOOD), "dj_mossy_jungle_planks");
     public static final Block DJ_DIRTY_JUNGLE_PLANKS =
@@ -194,6 +197,8 @@ public class DingyJungleBlocks {
         RegistryHelper.registerBlock(new PillarBlock(FabricBlockSettings.copyOf(Material.LOG).luminance(6)), "dj_glowing_jungle_oak_log");
     public static final SlabStairBlock DJ_JUNGLE_OAK_PLANKS =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.WOOD), "dj_jungle_oak_planks");
+    public static final Block DJ_JUNGLE_OAK_FENCE =
+        RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "dj_jungle_oak_fence");
     public static final Block DJ_DIRTY_JUNGLE_OAK_PLANKS =
         RegistryHelper.registerBlock(new Block(Material.WOOD), "dj_dirty_jungle_oak_planks");
 
@@ -288,6 +293,7 @@ public class DingyJungleBlocks {
             content.add(DJ_JUNGLE_PLANKS.base);
             content.add(DJ_JUNGLE_PLANKS.slab);
             content.add(DJ_JUNGLE_PLANKS.stairs);
+            content.add(DJ_JUNGLE_FENCE);
             content.add(DJ_MOSSY_JUNGLE_PLANKS);
             content.add(DJ_MUDDY_JUNGLE_PLANKS);
             content.add(DJ_DIRTY_JUNGLE_PLANKS);
@@ -299,6 +305,7 @@ public class DingyJungleBlocks {
             content.add(DJ_JUNGLE_OAK_PLANKS.base);
             content.add(DJ_JUNGLE_OAK_PLANKS.slab);
             content.add(DJ_JUNGLE_OAK_PLANKS.stairs);
+            content.add(DJ_JUNGLE_OAK_FENCE);
             content.add(DJ_DIRTY_JUNGLE_OAK_PLANKS);
         });
     }

@@ -601,5 +601,8 @@
     "block.dungeons.cr_stone_bricks_wall": "Stone Bricks Wall",
     "block.dungeons.cr_granite_bricks_wall": "Granite Bricks Wall",
     "block.dungeons.cr_granite_tiles_wall": "Granite Tiles Wall",
-    "block.dungeons.cr_granite_shingles_wall": "Granite Shingles Wall"
+    "block.dungeons.cr_granite_shingles_wall": "Granite Shingles Wall",
+    "block.dungeons.dj_jungle_oak_fence": "Jungle Oak Fence",
+    "block.dungeons.dj_jungle_fence": "Jungle Fence",
+    "block.dungeons.pm_charred_fence": "Charred Fence"
 }
