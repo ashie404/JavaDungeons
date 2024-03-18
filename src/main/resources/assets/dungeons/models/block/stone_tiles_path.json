@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/dirt_path", "textures": {"particle": "dungeons:block/dirty_stone_tiles", "side": "dungeons:block/dirty_stone_tiles", "top": "dungeons:block/dirty_stone_tiles", "bottom": "dungeons:block/dirty_stone_tiles"}}

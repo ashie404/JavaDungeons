@@ -93,6 +93,8 @@ public class GenericBlocks {
     // stone related
     public static final SlabStairBlock STONE_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "stone_tiles");
+    public static final Block STONE_TILES_PATH =
+        RegistryHelper.registerBlock(new DirtPathBlock(Material.STONE), "stone_tiles_path");
     public static final Block STONE_TILES_WALL =
         RegistryHelper.registerBlock(new WallBlock(Material.STONE), "stone_tiles_wall");
     public static final SlabStairBlock DIRTY_STONE_TILES = 
@@ -276,6 +278,7 @@ public class GenericBlocks {
             content.add(STONE_TILES.slab);
             content.add(STONE_TILES.stairs);
             content.add(STONE_TILES_WALL);
+            content.add(STONE_TILES_PATH);
             content.add(DIRTY_STONE_TILES.base);
             content.add(DIRTY_STONE_TILES.slab);
             content.add(DIRTY_STONE_TILES.stairs);

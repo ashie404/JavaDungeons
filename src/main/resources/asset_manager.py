@@ -168,6 +168,17 @@ def model_solid(tex):
     }
     return data
 
+def model_path(side, top, bottom):
+    data = {}
+    data['parent'] = "minecraft:block/dirt_path"
+    data['textures'] = {
+        "particle": side,
+        "side": side,
+        "top": top,
+        "bottom": bottom
+    }
+    return data
+
 def model_pillar(side, top, bottom):
     data = {}
     data['parent'] = "minecraft:block/cube_bottom_top"
@@ -366,6 +377,20 @@ match args.action:
     case 'cube':
         # Generic cube
         block = model_solid(sidetex)
+        item = item_model(id_zone)
+        state = blockstate_solid(id_zone, args.rotate)
+        # open files
+        blockf = open("assets/dungeons/models/block/{}{}.json".format(zone, args.id), "w")
+        itemf = open("assets/dungeons/models/item/{}{}.json".format(zone_short, args.id), "w")
+        statef = open("assets/dungeons/blockstates/{}{}.json".format(zone_short, args.id), "w")
+        # write json
+        json.dump(block, blockf)
+        json.dump(item, itemf)
+        json.dump(state, statef) 
+
+    case 'path':
+        # Path
+        block = model_path(sidetex, toptex, bottomtex)
         item = item_model(id_zone)
         state = blockstate_solid(id_zone, args.rotate)
         # open files
