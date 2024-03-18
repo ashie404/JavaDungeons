@@ -49,6 +49,73 @@ def blockstate_stairs(model_id):
     }
     return data
 
+def blockstate_wall(model_id):
+    post = model_id + "_post"
+    side = model_id + "_side"
+    side_tall = model_id + "_side_tall"
+    data = {"multipart": [
+    {
+        "apply": {"model": post},
+        "when": {"up": "true"}
+    },
+    {
+        "apply": {"model": side, "uvlock": True},
+        "when": {"north": "low"}
+    },
+    {
+        "apply": {"model": side,"uvlock": True,"y": 90},
+        "when": {"east": "low"}
+    },
+    {
+        "apply": {"model": side,"uvlock": True,"y": 180},
+        "when": { "south": "low"}
+    },
+    {
+        "apply": {"model": side,"uvlock": True,"y": 270},
+        "when": { "west": "low"}
+    },
+    {
+        "apply": {"model": side_tall,"uvlock": True},
+        "when": {"north": "tall"}
+    },
+    {
+        "apply": {"model": side_tall,"uvlock": True,"y": 90},
+        "when": {"east": "tall"}
+    },
+    {
+        "apply": {"model":side_tall,"uvlock": True,"y": 180},
+        "when": {"south": "tall"}
+    },
+    {
+        "apply": {"model": side_tall,"uvlock": True,"y": 270},
+        "when": {"west": "tall"}
+    }
+    ]}
+    return data
+
+def blockstate_fence(model_id):
+    post = model_id + "_post"
+    side = model_id + "_side"
+    data = {"multipart": [
+    {"apply": {"model": post}},
+    {
+    "apply": {"model": side,"uvlock": True},
+    "when": {"north": "true"}
+    },
+    {
+    "apply": {"model": side,"uvlock": True,"y": 90},
+    "when": {"east": "true"}
+    },
+    {
+    "apply": {"model": side,"uvlock": True,"y": 180},
+    "when": {"south": "true"}
+    },
+    {
+    "apply": {"model": side,"uvlock": True,"y": 270},
+    "when": {"west": "true"}
+    }]}
+    return data
+
 def blockstate_slab(model_id):
     data = {}
     data['variants'] = {
@@ -140,6 +207,42 @@ def model_stairs(side, top, bottom, stairtype):
     }
     return data
 
+def model_wall(wall, walltype):
+    data = {}
+    match walltype:
+        case 'post':
+            data['parent'] = "minecraft:block/template_wall_post"
+        case 'side':
+            data['parent'] = "minecraft:block/template_wall_side"
+        case 'side_tall':
+            data['parent'] = "minecraft:block/template_wall_side_tall"
+        case 'inv':
+            data['parent'] = "minecraft:block/wall_inventory"
+        case _:
+            return 'Invalid wall type'
+    
+    data['textures'] = {
+        "wall": wall
+    }
+    return data
+
+def model_fence(texture, fencetype):
+    data = {}
+    match fencetype:
+        case 'post':
+            data['parent'] = "minecraft:block/fence_post"
+        case 'side':
+            data['parent'] = "minecraft:block/fence_side"
+        case 'inv':
+            data['parent'] = "minecraft:block/fence_inventory"
+        case _:
+            return 'Invalid fence type'
+        
+    data['textures'] = {
+        "texture": texture
+    }
+    return data
+
 def model_cross(tex):
     data = {}
     data['parent'] = 'minecraft:block/cross'
@@ -166,7 +269,7 @@ block_pre = "dungeons:block/"
 item_pre = "dungeons:item/"
 
 parser = argparse.ArgumentParser(description="Basic asset management script for JSON model/blockstate files.")
-parser.add_argument('action', metavar="action", help="Action to perform\n * str - Creates resource files for stairs.\n * slb - Creates resource files for slabs.\n * cube - Creates resource files for generic full cubes.\n * plr - Creates resource files for pillar blocks.\n * plx - Creates resource files for pillar blocks (solid blockstate).\n * x - Creates resource files for cross blocks.\n * xx - Creates resource files for double plant cross blocks.\n * bss - Creates resource files for base, slab, stair blocks.\n * ib - Creates item model based on block model.\n * ig - Creates item model based on item texture.\n * s - Creates generic blockstate file.")
+parser.add_argument('action', metavar="action", help="Action to perform\n * str - Creates resource files for stairs.\n * slb - Creates resource files for slabs.\n * cube - Creates resource files for generic full cubes.\n * plr - Creates resource files for pillar blocks.\n * plx - Creates resource files for pillar blocks (solid blockstate).\n * x - Creates resource files for cross blocks.\n * xx - Creates resource files for double plant cross blocks.\n * w - Creates resource files for wall blocks\n * f - creates resource files for fence blocks\n * bss - Creates resource files for base, slab, stair blocks.\n * ib - Creates item model based on block model.\n * ig - Creates item model based on item texture.\n * s - Creates generic blockstate file.\n * w - Creates resource files for walls\n * f - Creates resource files for fences")
 parser.add_argument('-r', '--rotate', action='store_true', help='Whether to have random Y rotation in the blockstate or not. Only applies for solid blocks.')
 parser.add_argument('area', metavar='zone', help='Zone of model\n * none: No zone/generic block\n * cw: Creeper Woods\n * dt: Desert Temple\n * pm: Pumpkin Pastures\n * cc: Cacti Canyon\n ss: Soggy Swamp\n rm: Redstone Mines\n ff: Fiery Forge\n dj: Dingy Jungle\n cr: Coral Rise')
 parser.add_argument('-i', '--id', metavar='id', help='ID of block, without area affix.', required=True)
@@ -386,6 +489,59 @@ match args.action:
         json.dump(item, itemf)
         json.dump(state, statef) 
 
+    case 'w':
+        # Wall
+
+        # generate json
+        post = model_wall(sidetex, 'post')
+        side = model_wall(sidetex, 'side')
+        side_tall = model_wall(sidetex, 'side_tall')
+        inv = model_wall(sidetex, 'inv')
+
+        item = item_model(id_zone + "_inventory")
+        state = blockstate_wall(id_zone)
+
+        # open all files
+        blockf = open("assets/dungeons/models/block/{}{}_post.json".format(zone, args.id), "w")
+        block1f = open("assets/dungeons/models/block/{}{}_side.json".format(zone, args.id), "w")
+        block2f = open("assets/dungeons/models/block/{}{}_side_tall.json".format(zone, args.id), "w")
+        block3f = open("assets/dungeons/models/block/{}{}_inventory.json".format(zone, args.id), "w")
+        itemf = open("assets/dungeons/models/item/{}{}.json".format(zone_short, args.id), "w")
+        statef = open("assets/dungeons/blockstates/{}{}.json".format(zone_short, args.id), "w")
+
+        # write json
+        json.dump(post, blockf)
+        json.dump(side, block1f)
+        json.dump(side_tall, block2f)
+        json.dump(inv, block3f)
+        json.dump(item, itemf)
+        json.dump(state, statef)
+
+    case 'f':
+        # Fence
+
+        # generate json
+        post = model_fence(sidetex, 'post')
+        side = model_fence(sidetex, 'side')
+        inv = model_fence(sidetex, 'inv')
+
+        item = item_model(id_zone + "_inventory")
+        state = blockstate_fence(id_zone)
+
+        # open all files
+        blockf = open("assets/dungeons/models/block/{}{}_post.json".format(zone, args.id), "w")
+        block1f = open("assets/dungeons/models/block/{}{}_side.json".format(zone, args.id), "w")
+        block2f = open("assets/dungeons/models/block/{}{}_inventory.json".format(zone, args.id), "w")
+        itemf = open("assets/dungeons/models/item/{}{}.json".format(zone_short, args.id), "w")
+        statef = open("assets/dungeons/blockstates/{}{}.json".format(zone_short, args.id), "w")
+
+        # write json
+        json.dump(post, blockf)
+        json.dump(side, block1f)
+        json.dump(inv, block2f)
+        json.dump(item, itemf)
+        json.dump(state, statef)
+
     case 'bss':
         # Base Slab Stair
 
@@ -451,17 +607,6 @@ match args.action:
 
         statef = open("assets/dungeons/blockstates/{}{}.json".format(zone_short, args.id), "w")
         json.dump(state, statef)
-
-    case 'lb':
-        # Langfile block updating shortcut
-        langf = open("assets/dungeons/lang/en_us.json", "r")
-        lang_raw = json.load(langf)
-        langf.close()
-        langf = open("assets/dungeons/lang/en_us.json", "w")
-
-        lang_raw["block.dungeons." + zone_short + args.id] = args.sidetex
-
-        json.dump(lang_raw, langf, indent=4)
 
     case _:
         print("Invalid action input.")
