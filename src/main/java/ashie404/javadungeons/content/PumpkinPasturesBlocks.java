@@ -12,6 +12,7 @@ import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
@@ -94,12 +95,16 @@ public class PumpkinPasturesBlocks {
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "pm_charred_farmland");
 
     // charred stones
-    public static final Block PM_CHARRED_STONE = 
-        RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "pm_charred_stone");
+    public static final SlabStairBlock PM_CHARRED_STONE = 
+        RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "pm_charred_stone");
     public static final SlabStairBlock PM_CHARRED_COBBLESTONE = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.COBBLESTONE), "pm_charred_cobblestone");
+    public static final Block PM_CHARRED_COBBLESTONE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "pm_charred_cobblestone_wall");
     public static final SlabStairBlock PM_CHARRED_STONE_BRICKS = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_STONE), "pm_charred_stone_bricks", "pm_charred_stone_brick_slab", "pm_charred_stone_brick_stairs");
+    public static final Block PM_CHARRED_STONE_BRICK_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.DARK_STONE), "pm_charred_stone_brick_wall");
     public static final Block PM_CRACKED_CHARRED_STONE_BRICKS = 
         RegistryHelper.registerBlock(new Block(Material.DARK_STONE), "pm_cracked_charred_stone_bricks");
 
@@ -159,13 +164,17 @@ public class PumpkinPasturesBlocks {
             content.add(PM_CHARRED_DIRT_SLAB);
             content.add(PM_CHARRED_DIRT_EMBERS);
             content.add(PM_CHARRED_FARMLAND);
-            content.add(PM_CHARRED_STONE);
+            content.add(PM_CHARRED_STONE.base);
+            content.add(PM_CHARRED_STONE.slab);
+            content.add(PM_CHARRED_STONE.stairs);
             content.add(PM_CHARRED_COBBLESTONE.base);
             content.add(PM_CHARRED_COBBLESTONE.slab);
             content.add(PM_CHARRED_COBBLESTONE.stairs);
+            content.add(PM_CHARRED_COBBLESTONE_WALL);
             content.add(PM_CHARRED_STONE_BRICKS.base);
             content.add(PM_CHARRED_STONE_BRICKS.slab);
             content.add(PM_CHARRED_STONE_BRICKS.stairs);
+            content.add(PM_CHARRED_STONE_BRICK_WALL);
             content.add(PM_CRACKED_CHARRED_STONE_BRICKS);
             content.add(PM_MOSSY_STONE_BRICKS);
             content.add(PM_DIRTY_STONE);

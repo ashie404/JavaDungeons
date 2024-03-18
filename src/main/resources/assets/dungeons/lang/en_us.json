@@ -588,5 +588,12 @@
     "item.dungeons.fortune_spear": "Fortune Spear",
     "item.dungeons.whispering_spear": "Whispering Spear",
     "container.dungeons.sack": "Sack",
-    "container.dungeons.small_sack": "Small Sack"
+    "container.dungeons.small_sack": "Small Sack",
+    "block.dungeons.dj_stone_tiles_wall": "Stone Tile Wall",
+    "block.dungeons.pm_charred_cobblestone_wall": "Charred Cobblestone Wall",
+    "block.dungeons.pm_charred_stone_brick_wall": "Charred Stone Brick Wall",
+    "block.dungeons.pm_charred_stone_slab": "Charred Stone Slab",
+    "block.dungeons.pm_charred_stone_stairs": "Charred Stone Stairs",
+    "block.dungeons.rm_dark_quartz_tiles_wall": "Dark Quartz Tile Wall",
+    "block.dungeons.rm_dark_quartz_wall": "Dark Quartz Wall"
 }

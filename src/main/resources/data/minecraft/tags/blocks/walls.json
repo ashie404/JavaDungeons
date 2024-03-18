@@ -9,6 +9,11 @@
         "dungeons:ff_dark_stone_wall",
         "dungeons:ff_dark_cobblestone_wall",
         "dungeons:ff_dark_stone_brick_wall",
-        "dungeons:ff_dark_stone_tiles_wall"
+        "dungeons:ff_dark_stone_tiles_wall",
+        "dungeons:rm_dark_quartz_wall",
+        "dungeons:rm_dark_quartz_tiles_wall",
+        "dungeons:dj_stone_tiles_wall",
+        "dungeons:pm_charred_cobblestone_wall",
+        "dungeons:pm_charred_stone_brick_wall"
     ]
   }

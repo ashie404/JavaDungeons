@@ -64,6 +64,8 @@ processResources {
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
 	}
+
+	exclude("asset_manager.py")
 }
 
 tasks.withType(JavaCompile).configureEach {

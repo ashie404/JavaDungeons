@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -80,6 +81,8 @@ public class DingyJungleBlocks {
     // stone tiles
     public static final SlabStairBlock DJ_STONE_TILES =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_stone_tiles");
+    public static final Block DJ_STONE_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "dj_stone_tiles_wall");
     public static final SlabStairBlock DJ_DIRTY_STONE_TILES =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dj_dirty_stone_tiles");
     public static final SlabStairBlock DJ_DIRTY_STONE_TILES_1 =
@@ -233,6 +236,7 @@ public class DingyJungleBlocks {
             content.add(DJ_STONE_TILES.base);
             content.add(DJ_STONE_TILES.slab);
             content.add(DJ_STONE_TILES.stairs);
+            content.add(DJ_STONE_TILES_WALL);
             content.add(DJ_DIRTY_STONE_TILES.base);
             content.add(DJ_DIRTY_STONE_TILES.slab);
             content.add(DJ_DIRTY_STONE_TILES.stairs);

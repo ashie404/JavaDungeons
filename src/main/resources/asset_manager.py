@@ -608,5 +608,16 @@ match args.action:
         statef = open("assets/dungeons/blockstates/{}{}.json".format(zone_short, args.id), "w")
         json.dump(state, statef)
 
+    case 'lb':
+        # Langfile block updating shortcut
+        langf = open("assets/dungeons/lang/en_us.json", "r")
+        lang_raw = json.load(langf)
+        langf.close()
+        langf = open("assets/dungeons/lang/en_us.json", "w")
+
+        lang_raw["block.dungeons." + zone_short + args.id] = args.sidetex
+
+        json.dump(lang_raw, langf, indent=4)
+
     case _:
         print("Invalid action input.")

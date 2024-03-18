@@ -6,6 +6,7 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
@@ -34,8 +35,12 @@ public class RedstoneMinesBlocks {
     // dark quartz
     public static final SlabStairBlock RM_DARK_QUARTZ = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_QUARTZ), "rm_dark_quartz");
+    public static final Block RM_DARK_QUARTZ_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.DARK_QUARTZ), "rm_dark_quartz_wall");
     public static final SlabStairBlock RM_DARK_QUARTZ_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.DARK_QUARTZ), "rm_dark_quartz_tiles");
+    public static final Block RM_DARK_QUARTZ_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.DARK_QUARTZ), "rm_dark_quartz_tiles_wall");
     public static final Block RM_DARK_QUARTZ_PILLAR = 
         RegistryHelper.registerBlock(new PillarBlock(Material.DARK_QUARTZ), "rm_dark_quartz_pillar");
     public static final Block RM_CHISELED_DARK_QUARTZ = 
@@ -55,9 +60,11 @@ public class RedstoneMinesBlocks {
             content.add(RM_DARK_QUARTZ.base);
             content.add(RM_DARK_QUARTZ.slab);
             content.add(RM_DARK_QUARTZ.stairs);
+            content.add(RM_DARK_QUARTZ_WALL);
             content.add(RM_DARK_QUARTZ_TILES.base);
             content.add(RM_DARK_QUARTZ_TILES.slab);
             content.add(RM_DARK_QUARTZ_TILES.stairs);
+            content.add(RM_DARK_QUARTZ_TILES_WALL);
             content.add(RM_DARK_QUARTZ_PILLAR);
             content.add(RM_CHISELED_DARK_QUARTZ);
             content.add(RM_CHISELED_DARK_QUARTZ_1);
