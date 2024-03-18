@@ -14,6 +14,12 @@
         "dungeons:rm_dark_quartz_tiles_wall",
         "dungeons:dj_stone_tiles_wall",
         "dungeons:pm_charred_cobblestone_wall",
-        "dungeons:pm_charred_stone_brick_wall"
+        "dungeons:pm_charred_stone_brick_wall",
+        "dungeons:cr_cobblestone_wall",
+        "dungeons:cr_dark_cobblestone_wall",
+        "dungeons:cr_stone_bricks_wall",
+        "dungeons:cr_granite_bricks_wall",
+        "dungeons:cr_granite_tiles_wall",
+        "dungeons:cr_granite_shingles_wall"
     ]
   }

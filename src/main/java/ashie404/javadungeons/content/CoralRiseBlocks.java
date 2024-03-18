@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -73,8 +74,12 @@ public class CoralRiseBlocks {
     // stone blocks
     public static final SlabStairBlock CR_COBBLESTONE =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.COBBLESTONE), "cr_cobblestone");
+    public static final Block CR_COBBLESTONE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "cr_cobblestone_wall");
     public static final SlabStairBlock CR_DARK_COBBLESTONE =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.COBBLESTONE), "cr_dark_cobblestone");
+    public static final Block CR_DARK_COBBLESTONE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "cr_dark_cobblestone_wall");
     public static final Block CR_DIRTY_DARK_COBBLESTONE =
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "cr_dirty_dark_cobblestone");
     public static final Block CR_MOSSY_DARK_COBBLESTONE =
@@ -89,6 +94,8 @@ public class CoralRiseBlocks {
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_sandy_andesite");
     public static final SlabStairBlock CR_STONE_BRICKS =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "cr_stone_bricks");
+    public static final Block CR_STONE_BRICKS_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "cr_stone_bricks_wall");
     public static final Block CR_MOSSY_STONE_BRICKS =
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_mossy_stone_bricks");
     public static final Block CR_CHISELED_STONE_BRICKS =
@@ -109,6 +116,8 @@ public class CoralRiseBlocks {
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_sandy_polished_granite");
     public static final SlabStairBlock CR_GRANITE_BRICKS =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "cr_granite_bricks");
+    public static final Block CR_GRANITE_BRICKS_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "cr_granite_bricks_wall");
     public static final Block CR_CRACKED_GRANITE_BRICKS =
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_cracked_granite_bricks");
     public static final Block CR_SANDY_GRANITE_BRICKS =
@@ -117,6 +126,8 @@ public class CoralRiseBlocks {
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_chiseled_granite");
     public static final SlabStairBlock CR_GRANITE_TILES =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "cr_granite_tiles");
+    public static final Block CR_GRANITE_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "cr_granite_tiles_wall");
     public static final Block CR_DIRTY_GRANITE_TILES =
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_dirty_granite_tiles");
     public static final Block CR_SANDY_GRANITE_TILES =
@@ -125,6 +136,8 @@ public class CoralRiseBlocks {
         RegistryHelper.registerBlock(new Block(Material.STONE), "cr_grassy_granite_tiles");
     public static final SlabStairBlock CR_GRANITE_SHINGLES =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "cr_granite_shingles");
+        public static final Block CR_GRANITE_SHINGLES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "cr_granite_shingles_wall");
     public static final Block CR_PRISMARINE_GRANITE_PILLAR =
         RegistryHelper.registerBlock(new PillarBlock(Material.STONE), "cr_prismarine_granite_pillar");
 
@@ -259,9 +272,11 @@ public class CoralRiseBlocks {
             content.add(CR_COBBLESTONE.base);
             content.add(CR_COBBLESTONE.slab);
             content.add(CR_COBBLESTONE.stairs);
+            content.add(CR_COBBLESTONE_WALL);
             content.add(CR_DARK_COBBLESTONE.base);
             content.add(CR_DARK_COBBLESTONE.slab);
             content.add(CR_DARK_COBBLESTONE.stairs);
+            content.add(CR_DARK_COBBLESTONE_WALL);
             content.add(CR_DIRTY_DARK_COBBLESTONE);
             content.add(CR_MOSSY_DARK_COBBLESTONE);
             content.add(CR_GRAVELLY_DARK_COBBLESTONE);
@@ -271,6 +286,7 @@ public class CoralRiseBlocks {
             content.add(CR_STONE_BRICKS.base);
             content.add(CR_STONE_BRICKS.slab);
             content.add(CR_STONE_BRICKS.stairs);
+            content.add(CR_STONE_BRICKS_WALL);
             content.add(CR_MOSSY_STONE_BRICKS);
             content.add(CR_CHISELED_STONE_BRICKS);
             content.add(CR_MOSSY_CHISELED_STONE_BRICKS);
@@ -282,18 +298,21 @@ public class CoralRiseBlocks {
             content.add(CR_GRANITE_BRICKS.base);
             content.add(CR_GRANITE_BRICKS.slab);
             content.add(CR_GRANITE_BRICKS.stairs);
+            content.add(CR_GRANITE_BRICKS_WALL);
             content.add(CR_CRACKED_GRANITE_BRICKS);
             content.add(CR_SANDY_GRANITE_BRICKS );
             content.add(CR_CHISELED_GRANITE);
             content.add(CR_GRANITE_TILES.base);
             content.add(CR_GRANITE_TILES.slab);
             content.add(CR_GRANITE_TILES.stairs);
+            content.add(CR_GRANITE_TILES_WALL);
             content.add(CR_DIRTY_GRANITE_TILES);
             content.add(CR_SANDY_GRANITE_TILES);
             content.add(CR_GRASSY_GRANITE_TILES);
             content.add(CR_GRANITE_SHINGLES.base);
             content.add(CR_GRANITE_SHINGLES.slab);
             content.add(CR_GRANITE_SHINGLES.stairs);
+            content.add(CR_GRANITE_SHINGLES_WALL);
             content.add(CR_PRISMARINE_GRANITE_PILLAR);
             content.add(CR_PRISMARINE_BOOKSHELF);
             content.add(CR_PRISMARINE_PILLAR);

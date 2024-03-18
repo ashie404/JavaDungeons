@@ -595,5 +595,11 @@
     "block.dungeons.pm_charred_stone_slab": "Charred Stone Slab",
     "block.dungeons.pm_charred_stone_stairs": "Charred Stone Stairs",
     "block.dungeons.rm_dark_quartz_tiles_wall": "Dark Quartz Tile Wall",
-    "block.dungeons.rm_dark_quartz_wall": "Dark Quartz Wall"
+    "block.dungeons.rm_dark_quartz_wall": "Dark Quartz Wall",
+    "block.dungeons.cr_cobblestone_wall": "Cobblestone Wall",
+    "block.dungeons.cr_dark_cobblestone_wall": "Dark Cobblestone Wall",
+    "block.dungeons.cr_stone_bricks_wall": "Stone Bricks Wall",
+    "block.dungeons.cr_granite_bricks_wall": "Granite Bricks Wall",
+    "block.dungeons.cr_granite_tiles_wall": "Granite Tiles Wall",
+    "block.dungeons.cr_granite_shingles_wall": "Granite Shingles Wall"
 }
