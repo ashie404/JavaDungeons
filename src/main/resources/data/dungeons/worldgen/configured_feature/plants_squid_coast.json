@@ -15,7 +15,7 @@
                   }
                 },
                 {
-                  "weight": 6,
+                  "weight": 2,
                   "data": {
                     "Name": "dungeons:yellow_tulip"
                   }
@@ -45,6 +45,12 @@
                   "weight": 20,
                   "data": {
                     "Name": "dungeons:short_grass"
+                  }
+                },
+                {
+                  "weight": 16,
+                  "data": {
+                    "Name": "dungeons:fern"
                   }
                 }
               ]
