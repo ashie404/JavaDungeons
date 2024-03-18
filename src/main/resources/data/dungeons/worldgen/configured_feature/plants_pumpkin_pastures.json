@@ -21,6 +21,12 @@
                   }
                 },
                 {
+                  "weight": 7,
+                  "data": {
+                    "Name": "dungeons:pm_lavender"
+                  }
+                },
+                {
                   "weight": 4,
                   "data": {
                     "Name": "dungeons:pm_fern"

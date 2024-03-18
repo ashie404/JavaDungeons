@@ -6,16 +6,15 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 
 import net.minecraft.block.RedstoneLampBlock;
-import net.minecraft.state.property.Properties;
 
 public class PoweredEmissive extends RedstoneLampBlock {
 
     // redstone emissive block
 
-    private static int lightLvl;
+    private static int lightLvl = 15;
 
     private static ToIntFunction<BlockState> getLightLevel() {
-        return (blockState) -> { return blockState.get(Properties.LIT) ? lightLvl : 0; };
+        return (blockState) -> { return blockState.get(LIT) ? lightLvl : 0; };
     }
 
     public PoweredEmissive(int lightLevel, Settings settings) {
