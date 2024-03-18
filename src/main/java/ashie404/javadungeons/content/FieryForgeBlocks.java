@@ -43,7 +43,7 @@ public class FieryForgeBlocks {
 
     public static void init() {
         // add to item group
-        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("fiery_forge"))).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, JavaDungeons.ID("redstone_mines"))).register(content -> {
             content.add(FF_DARK_STONE.base);
             content.add(FF_DARK_STONE.slab);
             content.add(FF_DARK_STONE.stairs);
