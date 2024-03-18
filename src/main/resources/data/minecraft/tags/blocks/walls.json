@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "dungeons:stone_tiles_wall",
+        "dungeons:cobblestone_wall"
+    ]
+  }

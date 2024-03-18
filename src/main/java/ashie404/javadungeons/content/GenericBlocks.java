@@ -11,6 +11,7 @@ import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.LanternBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -92,6 +93,8 @@ public class GenericBlocks {
     // stone related
     public static final SlabStairBlock STONE_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "stone_tiles");
+    public static final Block STONE_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "stone_tiles_wall");
     public static final SlabStairBlock DIRTY_STONE_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dirty_stone_tiles");
     public static final SlabStairBlock DIRTY_STONE_TILES_1 = 
@@ -100,6 +103,8 @@ public class GenericBlocks {
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dirty_stone_tiles_2", "dirty_stone_tiles_slab_2", "dirty_stone_tiles_stairs_2");
     public static final SlabStairBlock COBBLESTONE =
         RegistryHelper.registerBSS(new SlabStairBlock(Material.COBBLESTONE), "cobblestone");
+    public static final Block COBBLESTONE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "cobblestone_wall");
     public static final Block MOSSY_COBBLESTONE =
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "mossy_cobblestone");
 
@@ -270,6 +275,7 @@ public class GenericBlocks {
             content.add(STONE_TILES.base);
             content.add(STONE_TILES.slab);
             content.add(STONE_TILES.stairs);
+            content.add(STONE_TILES_WALL);
             content.add(DIRTY_STONE_TILES.base);
             content.add(DIRTY_STONE_TILES.slab);
             content.add(DIRTY_STONE_TILES.stairs);
@@ -299,6 +305,7 @@ public class GenericBlocks {
             content.add(COBBLESTONE.base);
             content.add(COBBLESTONE.slab);
             content.add(COBBLESTONE.stairs);
+            content.add(COBBLESTONE_WALL);
             content.add(MOSSY_COBBLESTONE);
             content.add(GLASS);
             content.add(BLUE_GLASS);
