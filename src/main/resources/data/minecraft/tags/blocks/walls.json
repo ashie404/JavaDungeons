@@ -2,6 +2,13 @@
     "replace": false,
     "values": [
         "dungeons:stone_tiles_wall",
-        "dungeons:cobblestone_wall"
+        "dungeons:cobblestone_wall",
+        "dungeons:cw_smoky_quartz_wall",
+        "dungeons:cw_smoky_quartz_tiles_wall",
+        "dungeons:cw_polished_granite_wall",
+        "dungeons:ff_dark_stone_wall",
+        "dungeons:ff_dark_cobblestone_wall",
+        "dungeons:ff_dark_stone_brick_wall",
+        "dungeons:ff_dark_stone_tiles_wall"
     ]
   }

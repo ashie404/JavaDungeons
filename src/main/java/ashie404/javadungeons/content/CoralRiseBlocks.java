@@ -68,7 +68,7 @@ public class CoralRiseBlocks {
     public static final Block CR_BUBBLY_STONE =
         RegistryHelper.registerBlock(new BubblyStone(FabricBlockSettings.copyOf(Material.BUBBLY_STONE).luminance(15)), "cr_bubbly_stone");
     public static final Block CR_BUBBLY_STONE_SLAB =
-        RegistryHelper.registerBlock(new BubblyStoneSlab(Material.BUBBLY_STONE), "cr_bubbly_stone_slab");
+        RegistryHelper.registerBlock(new DirectionalSlab(Material.BUBBLY_STONE), "cr_bubbly_stone_slab");
 
     // stone blocks
     public static final SlabStairBlock CR_COBBLESTONE =

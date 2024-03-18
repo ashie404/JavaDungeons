@@ -10,6 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SlabBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -39,12 +40,16 @@ public class CreeperWoodsBlocks {
     // smoky quartz
     public static final SlabStairBlock CW_SMOKY_QUARTZ_TILE = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.QUARTZ), "cw_smoky_quartz_tile", "cw_smoky_quartz_slab", "cw_smoky_quartz_stairs");
+    public static final Block CW_SMOKY_QUARTZ_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.QUARTZ), "cw_smoky_quartz_wall");
     public static final Block CW_MOSSY_SMOKY_QUARTZ_TILE = 
         RegistryHelper.registerBlock(new Block(Material.QUARTZ), "cw_mossy_smoky_quartz_tile");
     public static final Block CW_MOSSY_SMOKY_QUARTZ_TILES = 
         RegistryHelper.registerBlock(new Block(Material.QUARTZ), "cw_mossy_smoky_quartz_tiles");
     public static final SlabStairBlock CW_SMOKY_QUARTZ_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.QUARTZ), "cw_smoky_quartz_tiles");
+    public static final Block CW_SMOKY_QUARTZ_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.QUARTZ), "cw_smoky_quartz_tiles_wall");
     public static final Block CW_CHISELED_SMOKY_QUARTZ = 
         RegistryHelper.registerBlock(new Block(Material.QUARTZ), "cw_chiseled_smoky_quartz");
     public static final Block CW_CHISELED_SMOKY_QUARTZ_EYE = 
@@ -77,6 +82,8 @@ public class CreeperWoodsBlocks {
     // creeper woods granite variant
     public static final SlabStairBlock CW_POLISHED_GRANITE = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "cw_polished_granite");
+    public static final Block CW_POLISHED_GRANITE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.QUARTZ), "cw_polished_granite_wall");
     public static final Block CW_CHISELED_GRANITE = 
         RegistryHelper.registerBlock(new Block(Material.STONE), "cw_chiseled_granite");
     public static final Block CW_DIRTY_GRANITE = 
@@ -130,11 +137,13 @@ public class CreeperWoodsBlocks {
             content.add(CW_SMOKY_QUARTZ_TILE.base);
             content.add(CW_SMOKY_QUARTZ_TILE.slab);
             content.add(CW_SMOKY_QUARTZ_TILE.stairs);
+            content.add(CW_SMOKY_QUARTZ_WALL);
             content.add(CW_MOSSY_SMOKY_QUARTZ_TILE);
             content.add(CW_MOSSY_SMOKY_QUARTZ_TILES);
             content.add(CW_SMOKY_QUARTZ_TILES.base);
             content.add(CW_SMOKY_QUARTZ_TILES.slab);
             content.add(CW_SMOKY_QUARTZ_TILES.stairs);
+            content.add(CW_SMOKY_QUARTZ_TILES_WALL);
             content.add(CW_CHISELED_SMOKY_QUARTZ);
             content.add(CW_CHISELED_SMOKY_QUARTZ_EYE);
             content.add(CW_SMOKY_QUARTZ_PILLAR);
@@ -151,6 +160,7 @@ public class CreeperWoodsBlocks {
             content.add(CW_POLISHED_GRANITE.base);
             content.add(CW_POLISHED_GRANITE.slab);
             content.add(CW_POLISHED_GRANITE.stairs);
+            content.add(CW_POLISHED_GRANITE_WALL);
             content.add(CW_DIRTY_GRANITE);
             content.add(CW_CHISELED_GRANITE);
             content.add(CW_DIRTY_STONE_TILES.base);

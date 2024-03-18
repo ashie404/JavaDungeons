@@ -11,13 +11,13 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 
-public class BubblyStoneSlab extends SlabBlock {
+public class DirectionalSlab extends SlabBlock {
 
-    // bubbly stone slab 
+    // directional slab 
 
     public static final DirectionProperty FACING = Properties.FACING;
 
-    public BubblyStoneSlab(Settings settings) {
+    public DirectionalSlab(Settings settings) {
         super(FabricBlockSettings.copyOf(settings));
         this.setDefaultState((BlockState)this.stateManager.getDefaultState().with(WATERLOGGED, false).with(TYPE, SlabType.BOTTOM).with(FACING, Direction.NORTH));
     }
