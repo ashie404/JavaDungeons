@@ -25,7 +25,7 @@ public class DesertPlant extends PlantBlock {
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
         BlockState blockState = floor.getBlock().getDefaultState();
-        return blockState.isIn(Tags.DESERT_PLANTABLE) || blockState.isIn(Tags.PLANTABLE);
+        return super.canPlantOnTop(floor, view, pos) ? true : (blockState.isIn(Tags.DESERT_PLANTABLE) || blockState.isIn(Tags.PLANTABLE));
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
