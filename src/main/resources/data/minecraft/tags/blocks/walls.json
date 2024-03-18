@@ -20,6 +20,7 @@
         "dungeons:cr_stone_bricks_wall",
         "dungeons:cr_granite_bricks_wall",
         "dungeons:cr_granite_tiles_wall",
-        "dungeons:cr_granite_shingles_wall"
+        "dungeons:cr_granite_shingles_wall",
+        "dungeons:ss_mossy_cobblestone_wall"
     ]
   }

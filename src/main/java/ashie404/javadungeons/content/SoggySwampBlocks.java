@@ -10,7 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.DirtPathBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.PillarBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
@@ -29,6 +29,8 @@ public class SoggySwampBlocks {
         RegistryHelper.registerBlock(new Block(Material.STONE), "ss_mossy_stone");
     public static final Block SS_MOSSY_COBBLESTONE = 
         RegistryHelper.registerBlock(new Block(Material.COBBLESTONE), "ss_mossy_cobblestone");
+    public static final Block SS_MOSSY_COBBLESTONE_WALL = 
+        RegistryHelper.registerBlock(new WallBlock(Material.COBBLESTONE), "ss_mossy_cobblestone_wall");
     public static final Block SS_MOSSY_STONE_BRICKS = 
         RegistryHelper.registerBlock(new Block(Material.STONE), "ss_mossy_stone_bricks");
     public static final Block SS_MOSSY_POLISHED_ANDESITE = 
@@ -64,6 +66,7 @@ public class SoggySwampBlocks {
             content.add(SS_DIRT);
             content.add(SS_MOSSY_STONE);
             content.add(SS_MOSSY_COBBLESTONE);
+            content.add(SS_MOSSY_COBBLESTONE_WALL);
             content.add(SS_MOSSY_STONE_BRICKS);
             content.add(SS_MOSSY_CHISELED_STONE_BRICKS);
             content.add(SS_SWAMP_LOG);
