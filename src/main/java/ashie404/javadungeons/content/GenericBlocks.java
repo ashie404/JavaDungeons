@@ -86,7 +86,7 @@ public class GenericBlocks {
     public static final Block EMPTY_BOOKSHELF = 
         RegistryHelper.registerBlock(new Block(Material.WOOD), "empty_bookshelf");
     public static final Block BRIDGE_PLANKS = 
-        RegistryHelper.registerBlock(new SlabBlock(Material.WOOD), "bridge_planks");
+        RegistryHelper.registerBlock(new DirectionalSlab(Material.WOOD), "bridge_planks");
     public static final Block DUNGEONS_PLANKS = 
         RegistryHelper.registerBlock(new Block(Material.WOOD), "dungeons_planks");
 

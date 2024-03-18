@@ -1,1 +1,1 @@
-{"parent": "minecraft:block/slab", "textures": {"top": "dungeons:block/soggy_swamp/bridge_planks", "bottom": "dungeons:block/soggy_swamp/bridge_planks", "side": "dungeons:block/soggy_swamp/bridge_planks_side"}}
+{"parent": "dungeons:block/bridge_planks", "textures": {"bottom": "dungeons:block/soggy_swamp/bridge_planks", "side": "dungeons:block/soggy_swamp/bridge_planks_side"}}

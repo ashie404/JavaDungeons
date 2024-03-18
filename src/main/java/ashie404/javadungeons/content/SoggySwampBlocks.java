@@ -48,7 +48,7 @@ public class SoggySwampBlocks {
 
     // bridge related
     public static final Block SS_BRIDGE_PLANKS = 
-        RegistryHelper.registerBlock(new SlabBlock(Material.WOOD), "ss_bridge_planks");
+        RegistryHelper.registerBlock(new DirectionalSlab(Material.WOOD), "ss_bridge_planks");
     public static final Block SS_ROPE_FENCE = 
         RegistryHelper.registerBlock(new FenceBlock(Material.WOOD), "ss_rope_fence");
 

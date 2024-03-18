@@ -1,1 +1,22 @@
-{"parent": "minecraft:block/slab", "textures": {"top": "dungeons:block/bridge_planks", "bottom": "dungeons:block/bridge_planks", "side": "dungeons:block/bridge_planks_side"}}
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"bottom": "dungeons:block/bridge_planks",
+		"side": "dungeons:block/bridge_planks_side",
+		"particle": "#bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#bottom"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#bottom"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#bottom"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+			}
+		}
+	]
+}

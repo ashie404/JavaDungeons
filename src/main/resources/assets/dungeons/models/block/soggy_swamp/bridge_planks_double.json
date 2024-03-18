@@ -1,7 +1,1 @@
-{
-    "parent": "minecraft:block/cube_column",
-    "textures": {
-        "side": "dungeons:block/soggy_swamp/bridge_planks_side",
-        "end":  "dungeons:block/soggy_swamp/bridge_planks"
-    }
-}
+{"parent": "dungeons:block/bridge_planks_double", "textures": {"bottom": "dungeons:block/soggy_swamp/bridge_planks", "side": "dungeons:block/soggy_swamp/bridge_planks_side"}}
