@@ -38,8 +38,8 @@ extends Feature<ProbabilityConfig> {
         if (structureWorldAccess.getBlockState(blockPos2).isOf(Blocks.WATER)) {
             boolean bl2 = random.nextDouble() < (double)probabilityConfig.probability;
             boolean bl3 = random.nextDouble()*2.0 < (double)probabilityConfig.probability;
-            BlockState blockState = bl3 ? CoralRiseBlocks.CR_TALL_TUBE_CORAL.getDefaultState() : bl2 ? CoralRiseBlocks.CR_TALL_SEAWEED.getDefaultState() : CoralRiseBlocks.CR_SEAWEED.getDefaultState();
-            if (bl3 && random.nextBoolean() && !bl2) {
+            BlockState blockState = bl3 && bl2 ? CoralRiseBlocks.CR_TALL_TUBE_CORAL.getDefaultState() : bl2 ? CoralRiseBlocks.CR_TALL_SEAWEED.getDefaultState() : CoralRiseBlocks.CR_SEAWEED.getDefaultState();
+            if (random.nextBoolean() && !bl2) {
                 BlockState below = structureWorldAccess.getBlockState(blockPos2.down());
                 if (below.isOf(CoralRiseBlocks.CR_TUBE_CORAL_GRASS)) {
                     blockState = CoralRiseBlocks.CR_TUBE_CORAL.getDefaultState();
