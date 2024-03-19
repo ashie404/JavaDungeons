@@ -2,6 +2,7 @@ package ashie404.javadungeons.worldgen.surfacebuilder;
 
 import ashie404.javadungeons.biome.Biomes;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
+import ashie404.javadungeons.content.CoralRiseBlocks;
 import ashie404.javadungeons.content.CreeperWoodsBlocks;
 import ashie404.javadungeons.content.DingyJungleBlocks;
 import ashie404.javadungeons.content.GenericBlocks;
@@ -11,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.densityfunction.DensityFunction.Noise;
 import net.minecraft.world.gen.noise.NoiseParametersKeys;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules.MaterialCondition;
@@ -19,6 +21,7 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules.MaterialRule;
 public class DungeonsMaterialRules {
     // Vanilla Block Material Rules
     private static final MaterialRule STONE = makeStateRule(Blocks.STONE);
+    private static final MaterialRule SAND = makeStateRule(Blocks.SAND); 
 
     // Generic Material Rules
     private static final MaterialRule GRASS = makeStateRule(GenericBlocks.GRASS_BLOCK);
@@ -35,10 +38,10 @@ public class DungeonsMaterialRules {
     // Cacti Canyon Material Rules
     private static final MaterialRule CC_GRASS = makeStateRule(CactiCanyonBlocks.CC_GRASS_BLOCK);
     private static final MaterialRule CC_DIRT = makeStateRule(CactiCanyonBlocks.CC_DIRT);
-    private static final MaterialRule SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_SANDSTONE);
-    private static final MaterialRule YELLOW_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_YELLOW_SANDSTONE);
-    private static final MaterialRule RED_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_RED_SANDSTONE);
-    private static final MaterialRule SAND = makeStateRule(CactiCanyonBlocks.CC_SAND);
+    private static final MaterialRule CC_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_SANDSTONE);
+    private static final MaterialRule CC_YELLOW_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_YELLOW_SANDSTONE);
+    private static final MaterialRule CC_RED_SANDSTONE = makeStateRule(CactiCanyonBlocks.CC_RED_SANDSTONE);
+    private static final MaterialRule CC_SAND = makeStateRule(CactiCanyonBlocks.CC_SAND);
 
     // Soggy Swamp Material Rules
     private static final MaterialRule SS_GRASS = makeStateRule(SoggySwampBlocks.SS_GRASS_BLOCK);
@@ -49,6 +52,16 @@ public class DungeonsMaterialRules {
     private static final MaterialRule DJ_PEBBLES = makeStateRule(DingyJungleBlocks.DJ_PEBBLES);
     private static final MaterialRule DJ_DIRTY_PEBBLES = makeStateRule(DingyJungleBlocks.DJ_DIRTY_PEBBLES);
 
+    // Coral Reef Material Rules
+    private static final MaterialRule CR_DIRT = makeStateRule(CoralRiseBlocks.CR_DIRT);
+    private static final MaterialRule CR_SANDY_DIRT = makeStateRule(CoralRiseBlocks.CR_SANDY_DIRT);
+    private static final MaterialRule CR_TUBE_GRASS = makeStateRule(CoralRiseBlocks.CR_TUBE_CORAL_GRASS);
+    private static final MaterialRule CR_FIRE_GRASS = makeStateRule(CoralRiseBlocks.CR_FIRE_CORAL_GRASS);
+    private static final MaterialRule CR_SANDY_TUBE = makeStateRule(CoralRiseBlocks.CR_SANDY_TUBE_CORAL_BLOCK);
+    private static final MaterialRule CR_SANDY_FIRE = makeStateRule(CoralRiseBlocks.CR_SANDY_FIRE_CORAL_BLOCK);
+    private static final MaterialRule CR_DIRTY_TUBE = makeStateRule(CoralRiseBlocks.CR_DIRTY_TUBE_CORAL_BLOCK);
+    private static final MaterialRule CR_DIRTY_FIRE = makeStateRule(CoralRiseBlocks.CR_DIRTY_FIRE_CORAL_BLOCK);
+
     // Globally used material conditions
     private static final MaterialCondition aboveWater = MaterialRules.water(-1, 0);
     private static final MaterialCondition stoneDepthFloorSurface1 = MaterialRules.stoneDepth(1, true, VerticalSurfaceType.FLOOR);
@@ -56,12 +69,13 @@ public class DungeonsMaterialRules {
     // Construct final surface rule
     public static MaterialRule makeRules() {
         return MaterialRules.sequence(
-            SoggySwampSurfaceRule(),
+            SoggySwampSurfaceRule(),     
             CreeperWoodsSurfaceRule(),
             PumpkinPasturesSurfaceRule(),
             CactiCanyonSurfaceRule(),
             CactiCanyonDesertSurfaceRule(),
             DingyJungleSurfaceRule(),
+            CoralReefSurfaceRule(),
             DungeonsSurfaceRule()
         );
     }
@@ -141,19 +155,19 @@ public class DungeonsMaterialRules {
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
                     MaterialRules.condition(MaterialRules.aboveYWithStoneDepth(YOffset.fixed(74), 1), MaterialRules.sequence(
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), RED_SANDSTONE),
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.1818), SANDSTONE),
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.5454, 0.909), YELLOW_SANDSTONE)
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.909, -0.5454), CC_RED_SANDSTONE),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.1818), CC_SANDSTONE),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.5454, 0.909), CC_YELLOW_SANDSTONE)
                     )),
                     CC_GRASS
                 )),
                 MaterialRules.condition(stoneDepthFloorSurface1, CC_DIRT),
-                SANDSTONE
+                CC_SANDSTONE
             )),
             // Underwater surface builder
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, CC_DIRT),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, SANDSTONE),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, CC_SANDSTONE),
                 STONE
             )
         ));
@@ -163,13 +177,13 @@ public class DungeonsMaterialRules {
         return MaterialRules.condition(MaterialRules.biome(Biomes.CACTI_CANYON_DESERT), MaterialRules.sequence(
             // Above water surface builder
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
-                MaterialRules.condition(stoneDepthFloorSurface1, SAND),
-                SANDSTONE
+                MaterialRules.condition(stoneDepthFloorSurface1, CC_SAND),
+                CC_SANDSTONE
             )),
             // Underwater surface builder
             MaterialRules.sequence(
-                MaterialRules.condition(stoneDepthFloorSurface1, SAND),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, SANDSTONE),
+                MaterialRules.condition(stoneDepthFloorSurface1, CC_SAND),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, CC_SANDSTONE),
                 STONE
             )
         ));
@@ -193,6 +207,43 @@ public class DungeonsMaterialRules {
                     MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
                     DJ_PEBBLES
                 ))
+            )
+        ));
+    }
+
+    private static MaterialRule CoralReefSurfaceRule() {
+        return MaterialRules.condition(MaterialRules.biome(Biomes.CORAL_REEF), MaterialRules.sequence(
+            // Above water surface builder
+            MaterialRules.condition(aboveWater, MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthFloorSurface1, SAND),
+                STONE
+            )),
+            // Underwater surface builder
+            MaterialRules.sequence(
+                MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.4747, -0.2727), MaterialRules.sequence(
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.4545, -0.3232), CR_TUBE_GRASS),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.0507), CR_DIRTY_TUBE),
+                            CR_SANDY_TUBE
+                        )),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, 0.2727, 0.4747), MaterialRules.sequence(
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, 0.3232, 0.4545), CR_FIRE_GRASS),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.0507), CR_DIRTY_FIRE),
+                            CR_SANDY_FIRE
+                        ))
+                    )),
+                    // dirt below coral grass blocks
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.4545, -0.3232), CR_DIRT),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, 0.3232, 0.4545), CR_DIRT),
+                    // dirt patches and sandy dirt surrounding dirt
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.2020, -0.1818), CR_SANDY_DIRT),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1818, 0.0507), CR_DIRT),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, 0.0507, 0.1313), CR_SANDY_DIRT),
+                    // default block
+                    SAND
+                )),
+                STONE
             )
         ));
     }

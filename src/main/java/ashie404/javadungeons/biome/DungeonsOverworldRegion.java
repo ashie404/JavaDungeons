@@ -31,6 +31,7 @@ public class DungeonsOverworldRegion extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.MEADOW, Biomes.PUMPKIN_PASTURES);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SWAMP, Biomes.SOGGY_SWAMP);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JUNGLE, Biomes.DINGY_JUNGLE);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.WARM_OCEAN, Biomes.CORAL_REEF);
         });
     }
 }
