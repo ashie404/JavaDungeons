@@ -7,8 +7,8 @@
         "facing=south,type=top": { "model":    "dungeons:block/bridge_planks_top", "y": 180 },
         "facing=south,type=double": { "model":    "dungeons:block/bridge_planks_double", "y": 180 },
         "facing=east,type=bottom": { "model": "dungeons:block/bridge_planks", "y": 90 },
-        "facing=east,type=top": { "model":    "dungeons:block/bridge_planks_top", "y": 180 },
-        "facing=east,type=double": { "model":    "dungeons:block/bridge_planks_double", "y": 180 },
+        "facing=east,type=top": { "model":    "dungeons:block/bridge_planks_top", "y": 90 },
+        "facing=east,type=double": { "model":    "dungeons:block/bridge_planks_double", "y": 90 },
         "facing=west,type=bottom": { "model": "dungeons:block/bridge_planks", "y": 270 },
         "facing=west,type=top": { "model":    "dungeons:block/bridge_planks_top", "y": 270 },
         "facing=west,type=double": { "model":    "dungeons:block/bridge_planks_double", "y": 270 }
