@@ -73,6 +73,7 @@
       [
         "dungeons:large_coral_plants",
         "dungeons:plants_coral_reef",
+        "dungeons:corals_coral_reef",
         "minecraft:glow_lichen",
         "minecraft:trees_water",
         "minecraft:flower_default",
@@ -81,7 +82,7 @@
         "minecraft:red_mushroom_normal",
         "minecraft:patch_sugar_cane",
         "minecraft:patch_pumpkin",
-        "minecraft:kelp_warm",
+        "dungeons:kelp_coral_reef",
         "minecraft:sea_pickle",
         "dungeons:seaweed"
       ],
