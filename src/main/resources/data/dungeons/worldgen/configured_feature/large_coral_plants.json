@@ -1,0 +1,151 @@
+{
+    "type": "minecraft:random_patch",
+    "config": {
+        "feature": {
+            "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                    "to_place": {
+                        "type": "minecraft:weighted_state_provider",
+                        "entries": [
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_red_large_coral_fan",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_purple_large_coral_fan",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_green_large_coral_colony",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_purple_large_coral_colony",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_blue_coral_fan",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_teal_coral_fan",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "data": {
+                                    "Name": "dungeons:cr_purple_coral_fan",
+                                    "Properties": {
+                                        "waterlogged": "true"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "placement": [
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water"
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    1,
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    0,
+                                    0,
+                                    -1
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    0,
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    -1,
+                                    0,
+                                    -1
+                                ]
+                            },
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:water",
+                                "offset": [
+                                    1,
+                                    0,
+                                    1
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "tries": 64,
+        "xz_spread": 15,
+        "y_spread": 3
+    }
+}

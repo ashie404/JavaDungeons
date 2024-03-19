@@ -9,26 +9,7 @@
               "type": "minecraft:weighted_state_provider",
               "entries": [
                 {
-                  "weight": 20,
-                  "data": {
-                    "Name": "dungeons:cr_seaweed",
-                    "Properties": {
-                        "waterlogged": "true"
-                      }
-                  }
-                },
-                {
-                  "weight": 16,
-                  "data": {
-                    "Name": "dungeons:cr_tall_seaweed",
-                    "Properties": {
-                        "half": "lower",
-                        "waterlogged": "true"
-                      }
-                  }
-                },
-                {
-                    "weight": 4,
+                    "weight": 6,
                     "data": {
                       "Name": "dungeons:cr_water_shrub",
                       "Properties": {
@@ -37,63 +18,28 @@
                     }
                   },
                   {
-                    "weight": 1,
+                    "weight": 6,
                     "data": {
-                      "Name": "dungeons:cr_red_large_coral_fan",
+                      "Name": "dungeons:cr_tube_coral",
                       "Properties": {
                           "waterlogged": "true"
                         }
                     }
                   },
                   {
-                    "weight": 1,
+                    "weight": 3,
                     "data": {
-                      "Name": "dungeons:cr_purple_large_coral_fan",
+                      "Name": "dungeons:cr_tall_tube_coral",
                       "Properties": {
+                          "half": "lower",
                           "waterlogged": "true"
                         }
                     }
                   },
                   {
-                    "weight": 1,
+                    "weight": 6,
                     "data": {
-                      "Name": "dungeons:cr_green_large_coral_colony",
-                      "Properties": {
-                          "waterlogged": "true"
-                        }
-                    }
-                  },
-                  {
-                    "weight": 1,
-                    "data": {
-                      "Name": "dungeons:cr_purple_large_coral_colony",
-                      "Properties": {
-                          "waterlogged": "true"
-                        }
-                    }
-                  },
-                  {
-                    "weight": 1,
-                    "data": {
-                      "Name": "dungeons:cr_blue_coral_fan",
-                      "Properties": {
-                          "waterlogged": "true"
-                        }
-                    }
-                  },
-                  {
-                    "weight": 1,
-                    "data": {
-                      "Name": "dungeons:cr_teal_coral_fan",
-                      "Properties": {
-                          "waterlogged": "true"
-                        }
-                    }
-                  },
-                  {
-                    "weight": 1,
-                    "data": {
-                      "Name": "dungeons:cr_purple_coral_fan",
+                      "Name": "dungeons:cr_fire_coral",
                       "Properties": {
                           "waterlogged": "true"
                         }
@@ -104,6 +50,13 @@
           }
         },
         "placement": [
+          {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:water"
+          }
+          }
         ]
       },
       "tries": 64,

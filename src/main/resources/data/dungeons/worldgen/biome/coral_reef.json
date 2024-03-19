@@ -71,6 +71,7 @@
         "minecraft:spring_lava"
       ],
       [
+        "dungeons:large_coral_plants",
         "dungeons:plants_coral_reef",
         "minecraft:glow_lichen",
         "minecraft:trees_water",
@@ -80,8 +81,8 @@
         "minecraft:red_mushroom_normal",
         "minecraft:patch_sugar_cane",
         "minecraft:patch_pumpkin",
-        "minecraft:seagrass_warm",
-        "minecraft:sea_pickle"
+        "minecraft:sea_pickle",
+        "dungeons:seaweed"
       ],
       [
         "minecraft:freeze_top_layer"

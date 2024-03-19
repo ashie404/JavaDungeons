@@ -4,11 +4,13 @@ import ashie404.javadungeons.JavaDungeons;
 import ashie404.javadungeons.worldgen.feature.CactiCanyonPillarsFeature;
 import ashie404.javadungeons.worldgen.feature.GlowMushroomFeature;
 import ashie404.javadungeons.worldgen.feature.JungleGlowMushroomFeature;
+import ashie404.javadungeons.worldgen.feature.SeaweedFeature;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.world.gen.CountConfig;
+import net.minecraft.world.gen.ProbabilityConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
@@ -26,12 +28,14 @@ public class Features {
     public static final Feature<CountConfig> GLOW_MUSHROOM = new GlowMushroomFeature(CountConfig.CODEC);
     public static final Feature<CountConfig> JUNGLE_GLOW_MUSHROOM = new JungleGlowMushroomFeature(CountConfig.CODEC);
     public static final Feature<DefaultFeatureConfig> CACTI_CANYON_PILLARS = new CactiCanyonPillarsFeature(DefaultFeatureConfig.CODEC);
+    public static final Feature<ProbabilityConfig> SEAWEED = new SeaweedFeature(ProbabilityConfig.CODEC);
 
     public static void init() {
         // Register mod features
         Registry.register(Registries.FEATURE, JavaDungeons.ID("glow_mushroom"), GLOW_MUSHROOM);
         Registry.register(Registries.FEATURE, JavaDungeons.ID("jungle_glow_mushroom"), JUNGLE_GLOW_MUSHROOM);
         Registry.register(Registries.FEATURE, JavaDungeons.ID("cacti_canyon_pillars"), CACTI_CANYON_PILLARS);
+        Registry.register(Registries.FEATURE, JavaDungeons.ID("seaweed"), SEAWEED);
     }
 }
  
