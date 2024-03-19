@@ -34,6 +34,42 @@
                           "waterlogged": "true"
                         }
                     }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "Name": "dungeons:cr_purple_large_bubble_coral",
+                      "Properties": {
+                          "waterlogged": "true"
+                        }
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "Name": "dungeons:cr_red_large_bubble_coral",
+                      "Properties": {
+                          "waterlogged": "true"
+                        }
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "Name": "dungeons:cr_blue_large_bubble_coral",
+                      "Properties": {
+                          "waterlogged": "true"
+                        }
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "Name": "dungeons:cr_green_large_bubble_coral",
+                      "Properties": {
+                          "waterlogged": "true"
+                        }
+                    }
                   }
               ]
             }
