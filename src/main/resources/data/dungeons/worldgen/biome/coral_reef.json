@@ -71,6 +71,7 @@
         "minecraft:spring_lava"
       ],
       [
+        "dungeons:plants_coral_reef",
         "minecraft:glow_lichen",
         "minecraft:trees_water",
         "minecraft:flower_default",
