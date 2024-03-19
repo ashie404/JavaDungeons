@@ -27,16 +27,6 @@
                     }
                   },
                   {
-                    "weight": 3,
-                    "data": {
-                      "Name": "dungeons:cr_tall_tube_coral",
-                      "Properties": {
-                          "half": "lower",
-                          "waterlogged": "true"
-                        }
-                    }
-                  },
-                  {
                     "weight": 6,
                     "data": {
                       "Name": "dungeons:cr_fire_coral",
