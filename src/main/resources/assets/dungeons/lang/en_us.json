@@ -613,5 +613,8 @@
     "block.dungeons.ff_dark_stone_wall": "Dark Stone Wall",
     "block.dungeons.cw_smoky_quartz_tiles_wall": "Smoky Quartz Tiles Wall",
     "block.dungeons.cw_polished_granite_wall": "Polished Granite Wall",
-    "block.dungeons.cw_smoky_quartz_wall": "Smoky Quartz Wall"
+    "block.dungeons.cw_smoky_quartz_wall": "Smoky Quartz Wall",
+    "block.dungeons.dt_sandy_andesite_wall": "Sandy Andesite Wall",
+    "block.dungeons.dt_sandy_stone_tiles_wall": "Sandy Stone Tiles Wall",
+    "block.dungeons.dt_sandy_stone_brick_wall": "Sandy Stone Brick Wall"
 }

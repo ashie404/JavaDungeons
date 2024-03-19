@@ -6,6 +6,7 @@ import ashie404.javadungeons.registry.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
@@ -14,6 +15,8 @@ public class DesertTempleBlocks {
     // andesite related
     public static final SlabStairBlock DT_SANDY_ANDESITE = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dt_sandy_andesite");
+    public static final Block DT_SANDY_ANDESITE_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "dt_sandy_andesite_wall");
     public static final Block DT_CHISELED_SANDY_ANDESITE = 
         RegistryHelper.registerBlock(new Block(Material.STONE), "dt_chiseled_sandy_andesite");
     public static final Block DT_CHISELED_SANDY_ANDESITE_2 = 
@@ -24,8 +27,12 @@ public class DesertTempleBlocks {
     // stone brick related
     public static final SlabStairBlock DT_SANDY_STONE_BRICKS = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dt_sandy_stone_bricks", "dt_sandy_stone_brick_slab", "dt_sandy_stone_brick_stairs");
+    public static final Block DT_SANDY_STONE_BRICK_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "dt_sandy_stone_brick_wall");
     public static final SlabStairBlock DT_SANDY_STONE_TILES = 
         RegistryHelper.registerBSS(new SlabStairBlock(Material.STONE), "dt_sandy_stone_tiles");
+    public static final Block DT_SANDY_STONE_TILES_WALL =
+        RegistryHelper.registerBlock(new WallBlock(Material.STONE), "dt_sandy_stone_tiles_wall");
     public static final Block DT_CRACKED_SANDY_STONE_BRICKS = 
         RegistryHelper.registerBlock(new Block(Material.STONE), "dt_cracked_sandy_stone_bricks");
     public static final Block DT_CHISELED_SANDY_STONE = 
@@ -41,16 +48,19 @@ public class DesertTempleBlocks {
             content.add(DT_SANDY_ANDESITE.base);
             content.add(DT_SANDY_ANDESITE.slab);
             content.add(DT_SANDY_ANDESITE.stairs);
+            content.add(DT_SANDY_ANDESITE_WALL);
             content.add(DT_CHISELED_SANDY_ANDESITE);
             content.add(DT_CHISELED_SANDY_ANDESITE_2);
             content.add(DT_SANDY_ANDESITE_PILLAR);
             content.add(DT_SANDY_STONE_BRICKS.base);
             content.add(DT_SANDY_STONE_BRICKS.slab);
             content.add(DT_SANDY_STONE_BRICKS.stairs);
+            content.add(DT_SANDY_STONE_BRICK_WALL);
             content.add(DT_CRACKED_SANDY_STONE_BRICKS);
             content.add(DT_SANDY_STONE_TILES.base);
             content.add(DT_SANDY_STONE_TILES.slab);
             content.add(DT_SANDY_STONE_TILES.stairs);
+            content.add(DT_SANDY_STONE_TILES_WALL);
             content.add(DT_CHISELED_SANDY_STONE);
             content.add(DT_SANDY_COBBLESTONE);
         });
