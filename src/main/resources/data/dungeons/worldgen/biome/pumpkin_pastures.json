@@ -74,7 +74,9 @@
       [
         "minecraft:glow_lichen",
         "dungeons:trees_pumpkin_pastures",
+        "dungeons:trees_charred_pumpkin_pastures",
         "dungeons:plants_pumpkin_pastures",
+        "dungeons:plants_charred_pumpkin_pastures",
         "minecraft:patch_grass_plain",
         "minecraft:brown_mushroom_normal",
         "minecraft:red_mushroom_normal",
