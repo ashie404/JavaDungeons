@@ -152,7 +152,7 @@ public class DungeonsMaterialRules {
                             MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.05, 0.0), MaterialRules.sequence(
                                 MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.025, 0.0), PM_ROCKY_DIRT_PATH),
                                 MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.345, -0.305), PM_ROCKY_DIRT_PATH),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.4, -0.215), PM_CHAR_DIRT_PATH),
+                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.NOODLE_RIDGE_A, -0.3, -0.215), PM_CHAR_DIRT_PATH),
                                 PM_DIRT_PATH
                             ))
                         )),
@@ -162,9 +162,9 @@ public class DungeonsMaterialRules {
                             MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.025, 0.0), PM_ROCKY_DIRT),
                             MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.125, -0.075), PM_ROCKY_DIRT),
                             // Ashy/ember dirt
-                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.45,-0.15), MaterialRules.sequence(
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.375, -0.175), PM_DIRT_EMBERS),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.4, -0.215), PM_CHAR_DIRT),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.NOODLE_RIDGE_A, -0.35,-0.15), MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.NOODLE_RIDGE_A, -0.205, -0.195), PM_DIRT_EMBERS),
+                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.NOODLE_RIDGE_A, -0.3, -0.235), PM_CHAR_DIRT),
                                 PM_ASHY_DIRT
                             )),
                             PM_DIRT
