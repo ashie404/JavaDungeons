@@ -3,7 +3,7 @@
     "placement": [
       {
         "type": "minecraft:rarity_filter",
-        "chance": 4
+        "chance": 2
       },
       {
         "type": "minecraft:in_square"
@@ -20,7 +20,22 @@
                 {
                   "type": "minecraft:matching_blocks",
                   "blocks": "minecraft:air"
-                }
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "dungeons:dj_mud",
+                    "dungeons:dj_dirty_mud",
+                    "dungeons:dj_grassy_mud",
+                    "dungeons:dj_dense_grassy_mud",
+                    "dungeons:dj_dirt"
+                  ]
+              }
               ]
             }
       },
