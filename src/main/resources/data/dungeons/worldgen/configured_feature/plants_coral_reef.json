@@ -36,7 +36,7 @@
                     }
                   },
                   {
-                    "weight": 3,
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:cr_purple_large_bubble_coral",
                       "Properties": {
@@ -45,7 +45,7 @@
                     }
                   },
                   {
-                    "weight": 3,
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:cr_red_large_bubble_coral",
                       "Properties": {
@@ -54,7 +54,7 @@
                     }
                   },
                   {
-                    "weight": 3,
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:cr_blue_large_bubble_coral",
                       "Properties": {
@@ -63,7 +63,7 @@
                     }
                   },
                   {
-                    "weight": 3,
+                    "weight": 2,
                     "data": {
                       "Name": "dungeons:cr_green_large_bubble_coral",
                       "Properties": {

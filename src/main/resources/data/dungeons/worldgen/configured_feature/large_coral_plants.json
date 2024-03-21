@@ -9,7 +9,7 @@
                         "type": "minecraft:weighted_state_provider",
                         "entries": [
                             {
-                                "weight": 1,
+                                "weight": 2,
                                 "data": {
                                     "Name": "dungeons:cr_red_large_coral_fan",
                                     "Properties": {
@@ -18,7 +18,7 @@
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 2,
                                 "data": {
                                     "Name": "dungeons:cr_purple_large_coral_fan",
                                     "Properties": {
@@ -45,7 +45,7 @@
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 3,
                                 "data": {
                                     "Name": "dungeons:cr_blue_coral_fan",
                                     "Properties": {
@@ -54,7 +54,7 @@
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 3,
                                 "data": {
                                     "Name": "dungeons:cr_teal_coral_fan",
                                     "Properties": {
@@ -63,7 +63,7 @@
                                 }
                             },
                             {
-                                "weight": 1,
+                                "weight": 3,
                                 "data": {
                                     "Name": "dungeons:cr_purple_coral_fan",
                                     "Properties": {
