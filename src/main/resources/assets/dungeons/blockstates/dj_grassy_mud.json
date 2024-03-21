@@ -1,1 +1,1 @@
-{"variants": {"": {"model": "dungeons:block/dingy_jungle/grassy_mud"}}}
+{"variants": {"": [{"model": "dungeons:block/dingy_jungle/grassy_mud"}, {"model": "dungeons:block/dingy_jungle/grassy_mud", "y": 90}, {"model": "dungeons:block/dingy_jungle/grassy_mud", "y": 180}, {"model": "dungeons:block/dingy_jungle/grassy_mud", "y": 270}]}}

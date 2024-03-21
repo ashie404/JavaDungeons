@@ -108,6 +108,21 @@
                       "stage": "0"
                     }
                   }
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": [
+                      "dungeons:dj_dirt",
+                      "dungeons:dj_dirty_mud"
+                    ]
+                  }
                 }
               ]
             }
