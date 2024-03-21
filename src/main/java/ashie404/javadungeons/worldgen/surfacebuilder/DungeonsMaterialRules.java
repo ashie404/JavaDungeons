@@ -237,37 +237,37 @@ public class DungeonsMaterialRules {
             // Above water surface builder
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.2020, 0.1010), MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1010, 0.1010), MaterialRules.sequence(
                         // Mud
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1315, 0.0500), MaterialRules.sequence(
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0305, 0.0500), MaterialRules.sequence(
                             // dirt patches
-                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.1, 0.1), DJ_DIRT),
-                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.125, 0.125), DJ_DIRTY_MUD),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, 0.0, 0.1), DJ_DIRT),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.025, 0.125), DJ_DIRTY_MUD),
                             DJ_MUD
                         )),
                         // Grassy mud transition to mud
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1717, 0.0750), DJ_GRASSY_MUD),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0707, 0.0750), DJ_GRASSY_MUD),
                         DJ_DENSE_GRASSY_MUD
                     )),
                     DJ_GRASS
                 )),
                 MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.252, -0.151), DJ_DIRTY_PEBBLES),
                     // Mud/dirt patches below surface (no grass transition)
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1315, 0.0500), MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0305, 0.0500), MaterialRules.sequence(
                         // dirt patches
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.1, 0.1), DJ_DIRT),
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.125, 0.125), DJ_DIRTY_MUD),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, 0.0, 0.1), DJ_DIRT),
+                            MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.025, 0.125), DJ_DIRTY_MUD),
                         DJ_MUD
                     )),
                     DJ_PEBBLES
                 )),
-                DJ_PEBBLES
+                STONE
             )),
             // Underwater surface builder
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.252, -0.151), DJ_DIRTY_PEBBLES),
                     // Mud/dirt patches below surface (no grass transition)
                     MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1315, 0.0500), MaterialRules.sequence(
                         // dirt patches
@@ -278,8 +278,7 @@ public class DungeonsMaterialRules {
                     DJ_PEBBLES
                 )),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, MaterialRules.sequence(
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.672, -0.151), DJ_DIRTY_PEBBLES),
-                    DJ_PEBBLES
+                    STONE
                 ))
             )
         ));
