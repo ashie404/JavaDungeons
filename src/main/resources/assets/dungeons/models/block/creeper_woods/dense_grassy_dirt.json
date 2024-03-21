@@ -2,7 +2,7 @@
     "parent": "dungeons:block/base/grassy_dirt",
     "textures": {
         "base": "dungeons:block/creeper_woods/dirt",
-        "overlay": "dungeons:block/dense_grassy_dirt_overlay",
+        "overlay": "dungeons:block/creeper_woods/dense_grassy_dirt_overlay",
         "particle": "dungeons:block/creeper_woods/dirt"
     }
 }

@@ -2,7 +2,7 @@
     "parent": "dungeons:block/base/grassy_dirt",
     "textures": {
         "base": "dungeons:block/cacti_canyon/dirt",
-        "overlay": "dungeons:block/grassy_dirt_overlay",
+        "overlay": "dungeons:block/cacti_canyon/grassy_dirt_overlay",
         "particle": "dungeons:block/cacti_canyon/dirt"
     }
 }
