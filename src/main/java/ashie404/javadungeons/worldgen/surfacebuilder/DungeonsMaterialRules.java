@@ -193,7 +193,7 @@ public class DungeonsMaterialRules {
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, PM_DIRT),
                 STONE
-            )
+            ) 
         ));
     }
 
@@ -203,7 +203,7 @@ public class DungeonsMaterialRules {
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
                     // dirt/sand patches
-                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.2020, 0.1010), MaterialRules.sequence(
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0909, 0.1010), MaterialRules.sequence(
                         // Sand patches
                         MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.15, 0.15), MaterialRules.sequence(
                             // Sand
@@ -213,9 +213,9 @@ public class DungeonsMaterialRules {
                             CC_SANDY_DIRT
                         )),
                         // Dirt
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1315, 0.0500), CC_DIRT),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0250, 0.0500), CC_DIRT),
                         // Grassy dirt
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1717, 0.0750), CC_GRASSY_DIRT),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0645, 0.0750), CC_GRASSY_DIRT),
                         CC_DENSE_GRASSY_DIRT
                     )),
                     // Sandstone patches
@@ -233,7 +233,7 @@ public class DungeonsMaterialRules {
             MaterialRules.sequence(
                 MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
                      // dirt/sand patches
-                     MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.2020, 0.1010), MaterialRules.sequence(
+                     MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0909, 0.1010), MaterialRules.sequence(
                         // Sand patches
                         MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.15, 0.15), MaterialRules.sequence(
                             // Sand
@@ -243,9 +243,9 @@ public class DungeonsMaterialRules {
                             CC_SANDY_DIRT
                         )),
                         // Dirt
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1315, 0.0500), CC_DIRT),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0250, 0.0500), CC_DIRT),
                         // Grassy dirt
-                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1717, 0.0750), CC_GRASSY_DIRT),
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0645, 0.0750), CC_GRASSY_DIRT),
                         CC_DENSE_GRASSY_DIRT
                     ))
                 )),
@@ -259,12 +259,32 @@ public class DungeonsMaterialRules {
         return MaterialRules.condition(MaterialRules.biome(Biomes.CACTI_CANYON_DESERT), MaterialRules.sequence(
             // Above water surface builder
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
-                MaterialRules.condition(stoneDepthFloorSurface1, CC_SAND),
+                MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
+                    // dirt patches
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1010, 0.1010), MaterialRules.sequence(
+                        // Dirt
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0315, 0.0500), CC_DIRT),
+                        // Grassy dirt
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0717, 0.0750), CC_SANDY_DIRT),
+                        CC_DENSE_SANDY_DIRT
+                    )),
+                    CC_SAND
+                )),
                 CC_SANDSTONE
             )),
             // Underwater surface builder
             MaterialRules.sequence(
-                MaterialRules.condition(stoneDepthFloorSurface1, CC_SAND),
+                MaterialRules.condition(stoneDepthFloorSurface1, MaterialRules.sequence(
+                    // dirt patches
+                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.1010, 0.1010), MaterialRules.sequence(
+                        // Dirt
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0315, 0.0500), CC_DIRT),
+                        // Grassy dirt
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0717, 0.0750), CC_SANDY_DIRT),
+                        CC_DENSE_SANDY_DIRT
+                    )),
+                    CC_SAND
+                )),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, CC_SANDSTONE),
                 STONE
             )
