@@ -34,8 +34,6 @@ public class DungeonsMaterialRules {
     private static final MaterialRule CW_DENSE_GRASSY_DIRT = makeStateRule(CreeperWoodsBlocks.CW_DENSE_GRASSY_DIRT);
     private static final MaterialRule CW_GRASSY_DIRT = makeStateRule(CreeperWoodsBlocks.CW_GRASSY_DIRT);
     private static final MaterialRule CW_ROCKY_GRASSY_DIRT = makeStateRule(CreeperWoodsBlocks.CW_ROCKY_GRASSY_DIRT);
-    private static final MaterialRule CW_DIRT_PATH = makeStateRule(CreeperWoodsBlocks.CW_DIRT_PATH);
-    private static final MaterialRule CW_ROCKY_DIRT_PATH = makeStateRule(CreeperWoodsBlocks.CW_ROCKY_DIRT_PATH);
 
     // Pumpkin Pastures Material Rules
     private static final MaterialRule PM_GRASS = makeStateRule(PumpkinPasturesBlocks.PM_GRASS_BLOCK);
@@ -147,13 +145,6 @@ public class DungeonsMaterialRules {
             MaterialRules.condition(aboveWater, MaterialRules.sequence(
                     MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, MaterialRules.sequence(
                         MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0707, 0.0707), MaterialRules.sequence(
-                            // Dirt path
-                            MaterialRules.condition(MaterialRules.not(MaterialRules.steepSlope()), MaterialRules.condition(MaterialRules.not(MaterialRules.hole()),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.05, 0.0105), MaterialRules.sequence(
-                                    MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.345, -0.305), CW_ROCKY_DIRT_PATH),
-                                    CW_DIRT_PATH
-                                ))
-                            )),
                             // Dirt
                             MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0150, 0.0150), MaterialRules.sequence( 
                                 // Rocky dirt
