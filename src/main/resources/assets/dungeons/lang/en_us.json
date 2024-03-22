@@ -616,5 +616,7 @@
     "block.dungeons.cw_smoky_quartz_wall": "Smoky Quartz Wall",
     "block.dungeons.dt_sandy_andesite_wall": "Sandy Andesite Wall",
     "block.dungeons.dt_sandy_stone_tiles_wall": "Sandy Stone Tiles Wall",
-    "block.dungeons.dt_sandy_stone_brick_wall": "Sandy Stone Brick Wall"
+    "block.dungeons.dt_sandy_stone_brick_wall": "Sandy Stone Brick Wall",
+    "block.dungeons.ss_dense_grassy_dirt": "Dense Grassy Dirt",
+    "block.dungeons.ss_grassy_dirt": "Grassy Dirt"
 }

@@ -21,6 +21,10 @@ public class SoggySwampBlocks {
         RegistryHelper.registerBlock(new DirtPathBlock(Material.EARTH), "ss_dirt_path");
     public static final Block SS_DIRT = 
         RegistryHelper.registerBlock(new PathableBlock(true, SS_DIRT_PATH, Material.EARTH), "ss_dirt");
+    public static final Block SS_DENSE_GRASSY_DIRT =
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "ss_dense_grassy_dirt");
+    public static final Block SS_GRASSY_DIRT =
+        RegistryHelper.registerBlock(new Block(Material.EARTH), "ss_grassy_dirt");
     public static final Block SS_GRASS_BLOCK = 
         RegistryHelper.registerBlock(new GrassBlock(true, Blocks.DIRT_PATH, SS_DIRT, Material.GRASS), "ss_grass_block");
 
@@ -64,6 +68,8 @@ public class SoggySwampBlocks {
             content.add(SS_GRASS_BLOCK);
             content.add(SS_DIRT_PATH);
             content.add(SS_DIRT);
+            content.add(SS_DENSE_GRASSY_DIRT);
+            content.add(SS_GRASSY_DIRT);
             content.add(SS_MOSSY_STONE);
             content.add(SS_MOSSY_COBBLESTONE);
             content.add(SS_MOSSY_COBBLESTONE_WALL);
