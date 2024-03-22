@@ -149,7 +149,7 @@ public class DungeonsMaterialRules {
                         MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.0707, 0.0707), MaterialRules.sequence(
                             // Dirt path
                             MaterialRules.condition(MaterialRules.not(MaterialRules.steepSlope()), MaterialRules.condition(MaterialRules.not(MaterialRules.hole()),
-                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.025, 0.0055), MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE_SECONDARY, -0.05, 0.0105), MaterialRules.sequence(
                                     MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.PATCH, -0.345, -0.305), CW_ROCKY_DIRT_PATH),
                                     CW_DIRT_PATH
                                 ))
