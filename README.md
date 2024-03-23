@@ -2,7 +2,7 @@
 
 # JavaDungeons
 
-[![](https://img.shields.io/github/license/ashie404/JavaDungeons.svg)](LICENSE) ![](https://img.shields.io/badge/Minecraft-1.20-8A2BE2) [![](https://img.shields.io/github/v/release/ashie404/javadungeons)](https://github.com/ashie404/JavaDungeons/releases) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons) [![](https://img.shields.io/badge/Modrinth-JavaDungeons-1ec865?logo=modrinth)](https://modrinth.com/mod/javadungeons)
+[![](https://img.shields.io/github/license/ashie404/JavaDungeons.svg)](LICENSE) ![](https://img.shields.io/badge/Minecraft-1.20-8A2BE2) [![](https://img.shields.io/github/v/release/ashie404/javadungeons?include_prereleases)](https://github.com/ashie404/JavaDungeons/releases) [![](https://img.shields.io/badge/Curseforge-JavaDungeons-orange?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/javadungeons) [![](https://img.shields.io/badge/Modrinth-JavaDungeons-1ec865?logo=modrinth)](https://modrinth.com/mod/javadungeons)
 
 <br/>
 
