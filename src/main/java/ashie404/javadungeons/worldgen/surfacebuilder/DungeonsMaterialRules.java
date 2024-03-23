@@ -1,7 +1,6 @@
 package ashie404.javadungeons.worldgen.surfacebuilder;
 
 import ashie404.javadungeons.biome.Biomes;
-import ashie404.javadungeons.block.Material;
 import ashie404.javadungeons.content.CactiCanyonBlocks;
 import ashie404.javadungeons.content.CoralRiseBlocks;
 import ashie404.javadungeons.content.CreeperWoodsBlocks;
