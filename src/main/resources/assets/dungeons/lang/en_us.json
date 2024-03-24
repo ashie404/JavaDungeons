@@ -620,5 +620,6 @@
     "block.dungeons.ss_dense_grassy_dirt": "Dense Grassy Dirt",
     "block.dungeons.ss_grassy_dirt": "Grassy Dirt",
     "block.dungeons.cc_dark_rocky_dirt": "Dark Rocky Dirt",
-    "block.dungeons.cc_dark_rocky_dirt_path": "Dark Rocky Dirt Path"
+    "block.dungeons.cc_dark_rocky_dirt_path": "Dark Rocky Dirt Path",
+    "block.dungeons.reeds": "Reeds"
 }

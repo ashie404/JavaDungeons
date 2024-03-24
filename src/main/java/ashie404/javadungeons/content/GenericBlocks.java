@@ -135,6 +135,8 @@ public class GenericBlocks {
         RegistryHelper.registerBlock(new Plant(Material.PLANT), "daisy_patch");
     public static final Block WATER_PLANT = 
         RegistryHelper.registerBlock(new WaterPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "water_plant");
+    public static final Block REEDS =
+        RegistryHelper.registerBlock(new WaterPlant(FabricBlockSettings.copyOf(Material.PLANT).sounds(BlockSoundGroup.WET_GRASS)), "reeds");
     public static final Block HANGING_ROSES = 
         RegistryHelper.registerBlock(new HangingPlant(Material.PLANT), "hanging_roses");
 
@@ -299,6 +301,7 @@ public class GenericBlocks {
             content.add(FLOWER_PATCH);
             content.add(DAISY_PATCH);
             content.add(WATER_PLANT);
+            content.add(REEDS);
             content.add(HANGING_ROSES);
             content.add(SANDED_ANDESITE);
             content.add(SANDED_ANDESITE_TILES);
